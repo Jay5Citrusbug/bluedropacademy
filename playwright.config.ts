@@ -34,9 +34,12 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
    //globalSetup: require.resolve('./globalsetup.ts'), // Path to your global setup file
+   globalSetup: './tests/Config/globalSetup.ts', // Path to your global setup file
 
   use: {
-    storageState: 'state.json', // This applies to all tests
+  //  storageState: 'storageState.json', // This applies to all tests
+    baseURL: 'https://www.bluedropacademy.com', // optional
+    storageState: 'storageState.json',
 
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',

@@ -13,6 +13,7 @@ export class ChatbotLoginPage {
 
   async goto() {
     await this.page.goto('https://www.bluedropacademy.com/chatbot');
+    
   }
 
   async login(email: string, password: string) {

@@ -7,3 +7,4 @@ node_modules/
 /playwright/.cache/
 /Playwright/bluedrop_academy/allure-results
 /Playwright/bluedrop_academy/tests/Config/credentials.ts
+/Playwright/bluedrop_academy/storageState.json
