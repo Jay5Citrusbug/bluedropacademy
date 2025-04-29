@@ -5,3 +5,5 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/Playwright/bluedrop_academy/allure-results
+/Playwright/bluedrop_academy/tests/Config/credentials.ts

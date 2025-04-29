@@ -1,0 +1,45 @@
+{
+  "cookies": [
+    {
+      "name": "ssr-caching",
+      "value": "cache#desc=hit#varnish=hit#dc#desc=sea1_g",
+      "domain": "bluedropacademy.wixsite.com",
+      "path": "/website-1",
+      "expires": 1745828932.275152,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "server-session-bind",
+      "value": "794d722f-bf26-43c1-a321-7a79428157c4",
+      "domain": "bluedropacademy.wixsite.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "XSRF-TOKEN",
+      "value": "1745828912|b5L6qQdXqSiy",
+      "domain": ".bluedropacademy.wixsite.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://bluedropacademy.wixsite.com",
+      "localStorage": [
+        {
+          "name": "fedops.logger.sessionId",
+          "value": "a79d6fe8-7821-44c4-9f9e-71e864868399"
+        }
+      ]
+    }
+  ]
+}

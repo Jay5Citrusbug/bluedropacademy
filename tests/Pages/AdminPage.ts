@@ -36,7 +36,7 @@ export class AdminPage {
     await this.page.locator('.ant-card-body').waitFor();
     await this.page.getByRole('cell', { name: testUserData.email }).waitFor();
 
-    const usageCell = this.page.getByRole('cell', { name: '0', exact: true });
+    const usageCell = this.page.locator(adminPageLocators.PlanUsagevalue.xpath)
     await expect(usageCell).toBeVisible()
     await expect(usageCell).toHaveText('0');
     await this.page.close();

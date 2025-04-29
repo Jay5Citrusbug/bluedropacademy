@@ -1,0 +1,50 @@
+# Test info
+
+- Name: Login Test Suite >> Login to chatbot and answer questions
+- Location: D:\Playwright\Bluedrop_academy\tests\Main.spec.ts:27:7
+
+# Error details
+
+```
+Error: Error reading storage state from state.json:
+ENOENT: no such file or directory, open 'D:\Playwright\Bluedrop_academy\state.json'
+    at D:\Playwright\Bluedrop_academy\tests\Main.spec.ts:13:21
+```
+
+# Test source
+
+```ts
+   1 | // tests/loginTest.spec.ts
+   2 | import { test, expect } from '@playwright/test';
+   3 | import { AdminPage } from './Pages/AdminPage';
+   4 | import { ChatbotLoginPage } from './Pages/LoginChatbot';
+   5 | import { chatbotCredentials,adminCredentials } from './Config/credentials'; 
+   6 | import { testUserData } from './Utils/testData';
+   7 |
+   8 | let adminPage: AdminPage;
+   9 |
+  10 | test.describe('Login Test Suite', () => {
+  11 |   
+  12 |   test.beforeAll(async ({ browser }) => {
+> 13 |     const context = await browser.newContext();
+     |                     ^ Error: Error reading storage state from state.json:
+  14 |     const page = await context.newPage();
+  15 |     adminPage = new AdminPage(page);
+  16 |
+  17 |     await adminPage.goto();
+  18 |     await adminPage.login(adminCredentials.email,adminCredentials.password);
+  19 |     await adminPage.resetUserData(testUserData.email);
+  20 |   });
+  21 |  
+  22 |   test('TC_01: Navigate to the bluedrop page.', async ({ page }) => {
+  23 |     const chatbot = new ChatbotLoginPage(page);
+  24 |     await chatbot.goto();
+  25 |    
+  26 |   }); 
+  27 |   test('Login to chatbot and answer questions', async ({ page }) => {
+  28 |     const chatbot = new ChatbotLoginPage(page)
+  29 |     await chatbot.login(chatbotCredentials.email, chatbotCredentials.password);
+  30 |     await chatbot.fillPersonalInfo(testUserData.name,testUserData.gender);
+  31 |   });
+  32 | });
+```
