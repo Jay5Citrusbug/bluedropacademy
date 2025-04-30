@@ -37,6 +37,8 @@ const targetRow = cardBody.getByRole('cell', { name: 'Reset' });
     await this.page.locator('.ant-card-body').waitFor();
     await this.page.getByRole('cell', { name: testUserData.email }).waitFor();
     await this.page.locator(adminPageLocators.resetButton.xpath).click();
+    await this.page.locator(adminPageLocators.resetButtonClick.xpath).click();
+    
     const usageCell = this.page.locator(adminPageLocators.PlanUsagevalue.xpath)
     await expect(usageCell).toBeVisible()
     await expect(usageCell).toHaveText('0');

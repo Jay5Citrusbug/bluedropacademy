@@ -42,17 +42,38 @@ test.describe('Login Test Suite (Post-login session)', () => {
   });
 
 
-  test('TC_01: Submit form with invalid data', async () => {
+  test('TC_01: Verify Form Submission by without entering the required value.', async () => {
     await form.fillinvalidPersonalInfo(testUserData.name, testUserData.gender);
   });
 
-  test('TC_02: Submit form with valid data', async () => {
+  test('TC_02: Verify Form Submission valid data', async () => {
     await form.fillPersonalInfo(testUserData.name, testUserData.gender);
 
   });
 
-  test('TC_03: Verify chatbot confirmation screen', async () => {
+  test('TC_03: Verify chatbot screen', async () => {
     await chatbotscreen.verifyConfirmationElements();
 
   });
-});
+
+  test('TC_04: Verify chatbot screen', async () => {
+
+    await chatbotscreen.InitialbotMessage();
+  });
+
+
+  test('TC_05: Verify the Sumit button disable.', async () => {
+    await chatbotscreen.SubmitbtnNotActive();
+  }
+  );
+  test('TC_06: Verify the Sumit button enable.', async () => {
+    await chatbotscreen.SubmitbtnActive();
+  }
+  );
+  
+test('TC_0: Verify the Sumit button.', async () => {
+  await chatbotscreen.Submitquery();
+}
+);
+
+} )
