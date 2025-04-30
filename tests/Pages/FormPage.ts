@@ -1,6 +1,6 @@
 import { Page, expect, FrameLocator } from '@playwright/test';
 import { FormLocator } from '../Locators/FormLocator';
-import {chatbotLocators } from '../Locators/Login_chatbotLocator';
+import { Chatbotlocator } from '../Locators/chatbotLocator';
 
 
 export class FillPersonalInfopage {
@@ -14,22 +14,22 @@ export class FillPersonalInfopage {
 
   async fillPersonalInfo(name: string, gender: string) {
    
+    const frame = this.page.frameLocator(Chatbotlocator.iframeName);
+
     const iframe = this.page.frameLocator('iframe[name="htmlComp-iframe"]');
     await this.frameLocator.locator(FormLocator.usernameField).fill(name);
     // Gender radio button
     await this.frameLocator.getByRole(FormLocator.genderRadio(gender).role as "radio", {
       name: FormLocator.genderRadio(gender).name,
     }).check();
-    await this.frameLocator.getByRole('button', {
-      name: FormLocator.startButton.name,
-    }).click();
-
     // Start button
     const startButton = this.frameLocator.getByRole('button', {
       name: FormLocator.startButton.name,
     });
     await expect(startButton).toBeVisible();
-    //await startButton.click();
+    await startButton.click();
+   // await expect(frame.getByRole('img', { name: Chatbotlocator.iconName })).toBeVisible();
+    
   }
 
   async fillinvalidPersonalInfo(name: string, gender: string) {

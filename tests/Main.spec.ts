@@ -1,56 +1,51 @@
-import { test } from '@playwright/test';
+
+import { BrowserContext, Page, test, expect } from '@playwright/test';
 import { ChatbotLoginPage } from './Pages/LoginChatbot';
 import { FillPersonalInfopage } from './Pages/FormPage';
 import { testUserData } from './Utils/testData';
-import { adminCredentials } from './Config/credentials'
+import { adminCredentials, chatbotCredentials } from './Config/credentials';
 import { AdminPage } from './Pages/AdminPage';
+import { chatbotPage } from './Pages/chatbotPage';
 
+let page: Page;
+let context: BrowserContext;
+let chatbot: ChatbotLoginPage;
+let form: FillPersonalInfopage;
+let chatbotscreen: chatbotPage;
 
 test.describe('Login Test Suite (Post-login session)', () => {
-
-  let adminPage: AdminPage;
-
-test.describe('Login Test Suite', () => {
-
   test.beforeAll(async ({ browser }) => {
-    const context = await browser.newContext();
-    const page = await context.newPage();
-   adminPage = new AdminPage(page);
-   await ChatbotLoginPage
-   const chatbot = new ChatbotLoginPage(page);
+    context = await browser.newContext();
+    page = await context.newPage();
+
     
+//     // await adminPage.goto();
+//     // await adminPage.login(adminCredentials.email, adminCredentials.password);
+//     // await adminPage.resetUserData(testUserData.email);
+    chatbot = new ChatbotLoginPage(page);
+    form = new FillPersonalInfopage(page);
+    chatbotscreen = new chatbotPage(page);
 
-    // await adminPage.goto();
-    // await adminPage.login(adminCredentials.email, adminCredentials.password);
-    // await adminPage.resetUserData(testUserData.email);
-
+    await chatbot.goto();
+    await chatbot.login(chatbotCredentials.email, chatbotCredentials.password);
   });
 
-    test.beforeEach(async ({ page }) => {
-    const chatbot = new ChatbotLoginPage(page);
-   await chatbot.goto();
+  test.afterAll(async () => {
+    await context.close();
   });
 
-  test('TC_01: Navigate to the chatbot page', async ({ page }) => {
-   await page.close(); // Close the page after the test
-  });
 
-  test('TC_02: Verify Form Submission by without entering the required value.', async ({ page }) => {
-    const chatbot = new ChatbotLoginPage(page);
-
-    const form = new FillPersonalInfopage(page);
+  test('TC_01: Submit form with invalid data', async () => {
     await form.fillinvalidPersonalInfo(testUserData.name, testUserData.gender);
   });
 
-  test('TC_03: Verify Form Submission', async ({ page }) => {
-    const chatbot = new ChatbotLoginPage(page);
-    const form = new FillPersonalInfopage(page);
+  test('TC_02: Submit form with valid data', async () => {
     await form.fillPersonalInfo(testUserData.name, testUserData.gender);
+
   });
 
-  test('TC_04: Verify chatbot screen.', async ({ page }) => {
-  
+  test('TC_03: Verify chatbot confirmation screen', async () => {
+    await chatbotscreen.verifyConfirmationElements();
+
   });
-});
-  
 });
