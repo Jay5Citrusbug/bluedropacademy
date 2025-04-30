@@ -12,26 +12,33 @@ let context: BrowserContext;
 let chatbot: ChatbotLoginPage;
 let form: FillPersonalInfopage;
 let chatbotscreen: chatbotPage;
+let adminPage: AdminPage
+
 
 test.describe('Login Test Suite (Post-login session)', () => {
   test.beforeAll(async ({ browser }) => {
+   // Step 1: Admin context and login
+    const adminContext = await browser.newContext();
+    const adminPageInstance = await adminContext.newPage();
+    const adminPage = new AdminPage(adminPageInstance);
+  
+    await adminPage.goto();
+    await adminPage.login(adminCredentials.email, adminCredentials.password);
+    await adminPage.resetUserData(testUserData.email);
+    await adminContext.close(); // Close admin session
+  
+    // Step 2: Chatbot context and login
     context = await browser.newContext();
     page = await context.newPage();
-
-    
-//     // await adminPage.goto();
-//     // await adminPage.login(adminCredentials.email, adminCredentials.password);
-//     // await adminPage.resetUserData(testUserData.email);
     chatbot = new ChatbotLoginPage(page);
     form = new FillPersonalInfopage(page);
     chatbotscreen = new chatbotPage(page);
-
+  
     await chatbot.goto();
     await chatbot.login(chatbotCredentials.email, chatbotCredentials.password);
   });
-
   test.afterAll(async () => {
-    await context.close();
+   await context.close();
   });
 
 

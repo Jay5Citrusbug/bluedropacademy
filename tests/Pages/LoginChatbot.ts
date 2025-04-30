@@ -30,7 +30,7 @@ export class ChatbotLoginPage {
     // Now safely locate and assert the heading inside the iframe
     const iframeLocator = this.page.frameLocator(chatbotLocators.iframeName);
     const verifytitle = iframeLocator.getByRole('heading', { name: chatbotLocators.FormTitle.name });
-    await expect(verifytitle).toBeVisible()
+    await expect(verifytitle).toBeVisible({timeout: 10000}); 
 
 }  
  

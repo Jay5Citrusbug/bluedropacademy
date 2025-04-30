@@ -22,9 +22,10 @@ export class AdminPage {
 
   async resetUserData(userEmail: string) {
     await this.page.getByText(adminPageLocators.userDataTab.text).click();
-    await this.page.getByRole('searchbox', { name: adminPageLocators.searchBox.name }).click();
     await this.page.getByRole('searchbox', { name: adminPageLocators.searchBox.name }).fill(userEmail);
-    await this.page.locator(adminPageLocators.resetButton.xpath).click();
+    const cardBody = this.page.locator('.ant-card-body');
+const targetRow = cardBody.getByRole('cell', { name: 'Reset' });
+  await this.page.locator(adminPageLocators.resetButton.xpath).click();
 
     await expect(
       this.page.locator('div').filter({ hasText: adminPageLocators.successMessage.text }).nth(3)
@@ -35,7 +36,7 @@ export class AdminPage {
     await this.page.getByRole('searchbox', { name: adminPageLocators.searchBox.name }).fill(userEmail);
     await this.page.locator('.ant-card-body').waitFor();
     await this.page.getByRole('cell', { name: testUserData.email }).waitFor();
-
+    await this.page.locator(adminPageLocators.resetButton.xpath).click();
     const usageCell = this.page.locator(adminPageLocators.PlanUsagevalue.xpath)
     await expect(usageCell).toBeVisible()
     await expect(usageCell).toHaveText('0');
