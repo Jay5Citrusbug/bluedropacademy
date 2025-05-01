@@ -9,6 +9,8 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
+    "@types/jest": "^29.5.14",
+    "@types/mocha": "^10.0.10",
     "@types/node": "^22.15.2",
     "allure-playwright": "^3.2.1"
   },

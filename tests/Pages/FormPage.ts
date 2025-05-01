@@ -28,7 +28,6 @@ export class FillPersonalInfopage {
     });
     await expect(startButton).toBeVisible();
     await startButton.click();
-   // await expect(frame.getByRole('img', { name: Chatbotlocator.iconName })).toBeVisible();
     
   }
 
