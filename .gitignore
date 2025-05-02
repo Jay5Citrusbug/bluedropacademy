@@ -8,3 +8,6 @@ node_modules/
 /Playwright/bluedrop_academy/allure-results
 /Playwright/bluedrop_academy/tests/Config/credentials.ts
 /Playwright/bluedrop_academy/storageState.json
+/Playwright/bluedrop_academy/allure-results
+/Playwright/bluedrop_academy/screenshots
+/Playwright/bluedrop_academy/test-results

@@ -32,14 +32,20 @@ export default defineConfig({
   //   ['allure-playwright']
   // ],
   // // 
-  reporter: 'html',
+  reporter:[
+   ['html'],
+   ['allure-playwright']
+
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
    //globalSetup: require.resolve('./globalsetup.ts'), // Path to your global setup file
 
   use: {
   //  storageState: 'storageState.json', // This applies to all tests
-    baseURL: 'https://www.bluedropacademy.com', // optional
     screenshot: 'only-on-failure', // Automatically take screenshot on test failure
+    video: 'on', // 👈 Record video for every test
+
+
 
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
@@ -53,6 +59,14 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      testMatch: ['**/tests/!(No_Activity).spec.ts'], // all tests except inactivity
+
+    },
+
+    {
+      name: 'long-wait',
+      timeout: 700_000, // 10+ minutes
+      testMatch: ['**/tests/No_Activity.spec.ts'], // only the inactivity test
     },
 
     // {
@@ -85,6 +99,7 @@ export default defineConfig({
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
   ],
+
 
   /* Run your local dev server before starting the tests */
   // webServer: {

@@ -1,0 +1,1 @@
+✅ Verified: Bot responses are cleared after reload.
