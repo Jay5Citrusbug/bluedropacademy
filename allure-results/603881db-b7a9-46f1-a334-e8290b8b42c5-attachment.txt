@@ -1,0 +1,10 @@
+❌ Error during login: Error: Timed out 30000ms waiting for expect(locator).toBeVisible()
+
+Locator: locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('heading', { name: 'תכירו את "בלו"' })
+Expected: visible
+Received: <element(s) not found>
+Call log:
+  - expect.toBeVisible with timeout 30000ms
+  - waiting for locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('heading', { name: 'תכירו את "בלו"' })
+
+Test failed due to timeout after 30000 ms - check network/API/browser performance.

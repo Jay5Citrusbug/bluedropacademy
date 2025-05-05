@@ -13,9 +13,9 @@ export const Chatbotlocator = {
     NewsessionBtn: '[data-testid="new-session-click"]',
     LoadMoreBtn: 'button[data-testid="load-more-click"]',
     Searchbar: 'input[placeholder="חפש"]',
-    HamburgerMenu: 'button[data-testid="hamburger-menu"]',
+    hamburgerMenuBtn: 'button[data-testid="hamburger-click"]',
     LikeBtn:'[data-testid="like-thumb"]',
     DisLikeBtn:'[data-testid="dislike-thumb"]',
-    Copybtn : 'button[data-testid="copy-response"]',
+    Copybtn : '[data-testid="copy-response"]',
     
     };  

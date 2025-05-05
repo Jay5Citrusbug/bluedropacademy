@@ -1,0 +1,5 @@
+❌ Error during resetUserData: Error: locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for getByText('User Data')
+
+Test failed due to timeout after 30000 ms - check network/API/browser performance.

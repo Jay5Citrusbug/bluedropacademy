@@ -1,2 +1,0 @@
-✅ Verified: Bot responses are cleared after reload.
-Screenshot saved: screenshots/TC_11:_Reload_hides_old_chat.png
