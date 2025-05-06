@@ -1,15 +1,10 @@
 
 # Playwright
 node_modules/
-/test-results/
-/playwright-report/
 /blob-report/
 /playwright/.cache/
 /Playwright/bluedrop_academy/allure-results
 /Playwright/bluedrop_academy/tests/Config/credentials.ts
 /Playwright/bluedrop_academy/storageState.json
-/Playwright/bluedrop_academy/screenshots
-/Playwright/bluedrop_academy/test-results
 D:\Playwright/Bluedrop_academy/tests/Videos
-D:\Playwright/Bluedrop_academy/playwright-report
 D:\Playwright\Bluedrop_academy\allure-results
