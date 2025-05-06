@@ -13,115 +13,112 @@ let form: FillPersonalInfopage;
 let chatbotscreen: chatbotPage;
 let adminPage: AdminPage;
 
-test.describe('BlueDrop test cases', () => {
+test.describe('BlueDrop Chatbot Test Suite', () => {
 
   test.beforeAll(async ({ browser }) => {
+    console.log('🔧 Setting up environment...');
     const adminContext = await browser.newContext();
     const adminPageInstance = await adminContext.newPage();
-    const adminPage = new AdminPage(adminPageInstance);
-    await adminPage.goto();
-    await adminPage.login(adminCredentials.email, adminCredentials.password);
-    await adminPage.resetUserData(testUserData.email);
+    const admin = new AdminPage(adminPageInstance);
+
+    await admin.goto();
+    await admin.login(adminCredentials.email, adminCredentials.password);
+    await admin.resetUserData(testUserData.email);
     await adminContext.close();
+    console.log('✅ User reset complete');
 
     context = await browser.newContext();
     page = await context.newPage();
     chatbot = new ChatbotLoginPage(page);
     form = new FillPersonalInfopage(page);
     chatbotscreen = new chatbotPage(page);
-      
-      await chatbot.goto();
-      await chatbot.login(chatbotCredentials.email, chatbotCredentials.password);
-      await form.fillinvalidPersonalInfo(testUserData.name, testUserData.gender);
-      await form.fillPersonalInfo(testUserData.name, testUserData.gender);
 
-
-    });  
+    await chatbot.goto();
+    await chatbot.login(chatbotCredentials.email, chatbotCredentials.password);
+    await form.fillinvalidPersonalInfo(testUserData.name, testUserData.gender);
+    await form.fillPersonalInfo(testUserData.name, testUserData.gender);
+    console.log('✅ Chatbot login and form submitted');
+  });
 
   test.afterAll(async () => {
+    console.log('🧹 Closing context');
     await context.close();
   });
 
-  test.describe('Chatbot Screen', () => {
-    test('TC_02: Confirm chatbot screen elements', async () => {
+  test.describe('💬 Chatbot Screen', () => {
+
+    test('TC_01: ✅ Confirm chatbot screen elements are visible', async () => {
       await chatbotscreen.verifyConfirmationElements();
     });
 
-    test('TC_04: Initial chatbot message', async () => {
+    test('TC_02: 🧠 Initial chatbot message is displayed', async () => {
       await chatbotscreen.InitialbotMessage();
     });
 
-    test('TC_05: Predefined buttons are not active', async () => {
+    test('TC_03: 🚫 Predefined buttons are not active', async () => {
       await chatbotscreen.PredefinebuttonNotActive();
     });
 
-    test('TC_06: Submit button is disabled', async () => {
+    test('TC_04: 🚫 Submit button is disabled initially', async () => {
       await chatbotscreen.SubmitbtnNotActive();
     });
 
-    test('TC_07: Submit button is enabled', async () => {
+    test('TC_05: ✅ Submit button is enabled after input', async () => {
       await chatbotscreen.SubmitbtnActive();
     });
 
-    test('TC_08: Submit query', async ({}, testInfo) => {
+    test('TC_06: 📤 Submit query message', async ({}, testInfo) => {
       await chatbotscreen.SubmitQuery(testInfo);
     });
 
-
-    test('TC_09: Scroll to bottom', async () => {
+    test('TC_07: 🔽 Scroll to bottom of chat', async () => {
       await chatbotscreen.scrollToBottom();
     });
 
-    test('TC_10: Predefined buttons are active', async () => {
+    test('TC_08: ✅ Predefined buttons become active after response', async () => {
       await chatbotscreen.PredefinebuttonActive();
     });
 
-    test('TC_11: Like buttons', async () => {
+    test('TC_09: 👍 Like button functionality', async () => {
       await chatbotscreen.LikeBtn();
     });
 
-    test('TC_12: Dislike buttons', async () => {
-     await chatbotscreen.DisLikeBtn();
+    test('TC_10: 👎 Dislike button functionality', async () => {
+      await chatbotscreen.DisLikeBtn();
     });
 
-    
-    test('TC_13: Copy buttons', async () => {
-      await chatbotscreen.DisLikeBtn();
-     });
+    test('TC_11: 📋 Copy button functionality', async () => {
+      await chatbotscreen.CopyBtn(); // changed from DisLikeBtn to CopyBtn for clarity
+    });
 
-     test('TC_11: Click on predefined button click', async ({}, testInfo) => {
+    test('TC_12: 📍 Predefined button click triggers response', async ({}, testInfo) => {
       await chatbotscreen.PredefinedBtnClick(testInfo);
     });
 
-    test('TC_14: Reload hides old chat', async () => {
+    test('TC_13: 🔄 Reload hides previous chat', async () => {
       await page.reload();
       await chatbotscreen.Pagereload();
       await chatbotscreen.InitialbotMessage();
     });
 
-    test('TC_15: Create new session using "edit" icon button', async () => {
+    test('TC_14: ✏️ New session is created using edit icon', async () => {
       await chatbotscreen.NewsessionChatbotPage();
       await chatbotscreen.Pagereload();
       await chatbotscreen.InitialbotMessage();
     });
   });
+});
 
+test.afterEach(async ({ page }, testInfo) => {
+  if (testInfo.status !== testInfo.expectedStatus) {
+    const screenshotPath = `screenshots/${testInfo.title.replace(/\s+/g, '_')}.png`;
+    await page.screenshot({ path: screenshotPath, fullPage: true });
+    console.log(`❌ Test failed: ${testInfo.title}`);
+    console.log(`📸 Screenshot saved at: ${screenshotPath}`);
+  }
 
-  });
-
-  test.afterEach(async ({ page }, testInfo) => {
-    if (testInfo.status !== testInfo.expectedStatus) {
-      const screenshotPath = `screenshots/${testInfo.title.replace(/\s+/g, '_')}.png`;
-      await page.screenshot({ path: screenshotPath, fullPage: true });
-      console.log(`Screenshot saved: ${screenshotPath}`);
-    }
-
-    const videoPath = testInfo.attachments.find(a => a.name === 'video')?.path;
-    if (videoPath) {
-      testInfo.attach('video', { path: videoPath, contentType: 'video/webm' });
-    }
-  });
-
-
-
-
+  const videoPath = testInfo.attachments.find(a => a.name === 'video')?.path;
+  if (videoPath) {
+    testInfo.attach('video', { path: videoPath, contentType: 'video/webm' });
+  }
+});

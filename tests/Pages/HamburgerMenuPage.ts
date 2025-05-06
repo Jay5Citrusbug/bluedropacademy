@@ -1,17 +1,24 @@
 import { Page, expect, FrameLocator, TestInfo } from '@playwright/test';
 import { generateRandomQuestion } from '../Utils/testData';
 import { MenuLocator } from '../Locators/HamburgerMenuLocator';
+import { faker } from '@faker-js/faker';
+let name = faker.food.dish();
+
+
 
 export class HamburgerMenuPage {
+    private sessionName: string;
+
   readonly page: Page;
   private userMessage: string = '';
 
   constructor(page: Page) {
     this.page = page;
+    this.sessionName = faker.person.fullName(); // generate once
+
   }
 
 async OpenHamburgerMenu() {
-
 
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
     const menuButton = frameLocator.locator(MenuLocator.hamburgerMenuBtn);
@@ -23,7 +30,8 @@ async OpenHamburgerMenu() {
 
     await expect(frameLocator.getByRole('button', { name: 'Close' })).toBeVisible();
     await expect(frameLocator.getByTestId('start-new-session')).toBeVisible();
-  }
+
+}
 
   async LoadmoreBtn() {
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
@@ -80,4 +88,36 @@ async OpenHamburgerMenu() {
   
       console.log('✅ Verified: Bot responses are cleared after reload.');
     }
+
+        
+async Edithistory() {
+
+    const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
+
+await frameLocator.locator('li:nth-child(2) > .ant-btn').isVisible();
+
+await frameLocator.locator('li:nth-child(2) > .ant-btn').click();
+await frameLocator.getByTestId('edit-session-input').isVisible();
+
+await frameLocator.getByTestId('edit-session-input').click();
+ await frameLocator.getByTestId('edit-session-input').fill(this.sessionName);
+
+await frameLocator.getByTestId('edit-session-input').press('Enter');
+
+await frameLocator.getByText(name).isVisible();
+
+    }
+
+async OpenHistory_ContinueSession() {
+
+    const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
+    await this.page.evaluate(() => window.scrollTo(0, 0));
+
+    await frameLocator.getByText(this.sessionName).isVisible();
+    await frameLocator.getByText(this.sessionName).click();
+    await frameLocator.getByText('המשך שיחה').isVisible();
+    await frameLocator.getByText('המשך שיחה').click();
+
+}
+
 }

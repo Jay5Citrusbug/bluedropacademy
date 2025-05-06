@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "reporter": [
@@ -39,7 +39,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 4
         },
         "id": "chromium",
         "name": "chromium",
@@ -55,7 +55,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 4
         },
         "id": "long-wait",
         "name": "long-wait",
@@ -71,7 +71,7 @@
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.52.0",
-    "workers": 1,
+    "workers": 4,
     "webServer": null
   },
   "suites": [
@@ -83,20 +83,20 @@
       "specs": [],
       "suites": [
         {
-          "title": "BlueDrop test cases",
+          "title": "BlueDrop Chatbot Test Suite",
           "file": "Chatbot.spec.ts",
           "line": 16,
           "column": 6,
           "specs": [],
           "suites": [
             {
-              "title": "Chatbot Screen",
+              "title": "💬 Chatbot Screen",
               "file": "Chatbot.spec.ts",
-              "line": 45,
+              "line": 48,
               "column": 8,
               "specs": [
                 {
-                  "title": "TC_02: Confirm chatbot screen elements",
+                  "title": "TC_01: ✅ Confirm chatbot screen elements are visible",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -111,9 +111,12 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 934,
+                          "duration": 971,
                           "errors": [],
                           "stdout": [
+                            {
+                              "text": "🔧 Setting up environment...\n"
+                            },
                             {
                               "text": "Navigating to the admin page...\n"
                             },
@@ -166,6 +169,9 @@
                               "text": "✅ Reset process completed for user: qa@yopmail.com\n"
                             },
                             {
+                              "text": "✅ User reset complete\n"
+                            },
+                            {
                               "text": "Navigating to chatbot login page...\n"
                             },
                             {
@@ -214,7 +220,7 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Marlon\n"
+                              "text": "Filling name: Jerome\n"
                             },
                             {
                               "text": "Selecting gender: בן\n"
@@ -229,6 +235,9 @@
                               "text": "✅ Personal info submitted successfully.\n"
                             },
                             {
+                              "text": "✅ Chatbot login and form submitted\n"
+                            },
+                            {
                               "text": "🔍 Waiting for confirmation iframe to appear...\n"
                             },
                             {
@@ -237,7 +246,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:53:46.114Z",
+                          "startTime": "2025-05-06T14:41:24.824Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -245,13 +254,13 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-77b820b548ac36506470",
+                  "id": "23335bb06d3df52af178-b1004f10ffc156eaa0a1",
                   "file": "Chatbot.spec.ts",
-                  "line": 46,
+                  "line": 50,
                   "column": 9
                 },
                 {
-                  "title": "TC_04: Initial chatbot message",
+                  "title": "TC_02: 🧠 Initial chatbot message is displayed",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -266,7 +275,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1125,
+                          "duration": 760,
                           "errors": [],
                           "stdout": [
                             {
@@ -278,7 +287,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:54:14.964Z",
+                          "startTime": "2025-05-06T14:41:52.381Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -286,13 +295,13 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-b57adab1f2d2c75e35d6",
+                  "id": "23335bb06d3df52af178-7a1143fd846f163b527d",
                   "file": "Chatbot.spec.ts",
-                  "line": 50,
+                  "line": 54,
                   "column": 9
                 },
                 {
-                  "title": "TC_05: Predefined buttons are not active",
+                  "title": "TC_03: 🚫 Predefined buttons are not active",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -307,7 +316,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 232,
+                          "duration": 241,
                           "errors": [],
                           "stdout": [
                             {
@@ -316,7 +325,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:54:16.105Z",
+                          "startTime": "2025-05-06T14:41:53.160Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -324,14 +333,14 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-0635ab54a25861b85703",
+                  "id": "23335bb06d3df52af178-6a0676835a2727c1c3fa",
                   "file": "Chatbot.spec.ts",
-                  "line": 54,
+                  "line": 58,
                   "column": 9
                 },
                 {
-                  "title": "TC_06: Submit button is disabled",
-                  "ok": false,
+                  "title": "TC_04: 🚫 Submit button is disabled initially",
+                  "ok": true,
                   "tags": [],
                   "tests": [
                     {
@@ -344,74 +353,34 @@
                         {
                           "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 5606,
-                          "error": {
-                            "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('button[data-testid=\"send-message-button\"]')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('button[data-testid=\"send-message-button\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <button disabled type=\"button\" data-testid=\"send-message-button\" class=\"ant-btn css-1m63z2v ant-btn-default ant-btn-color-default ant-btn-variant-outlined button send-btn mobile-send-btn\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n",
-                            "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('button[data-testid=\"send-message-button\"]')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('button[data-testid=\"send-message-button\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <button disabled type=\"button\" data-testid=\"send-message-button\" class=\"ant-btn css-1m63z2v ant-btn-default ant-btn-color-default ant-btn-variant-outlined button send-btn mobile-send-btn\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n\n    at chatbotPage.SubmitbtnNotActive (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:39:66)\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:59:27",
-                            "location": {
-                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                              "column": 66,
-                              "line": 39
-                            },
-                            "snippet": "\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:39\n\n\u001b[0m \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m frameLocator \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mframeLocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39miframeName)\u001b[33m;\u001b[39m\n \u001b[90m 38 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🔒 Verifying Submit button is disabled...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mlocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39m\u001b[33mSubmitBtn\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m   }\n \u001b[90m 41 |\u001b[39m\n \u001b[90m 42 |\u001b[39m   \u001b[36masync\u001b[39m \u001b[33mSubmitbtnActive\u001b[39m() {\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                                "column": 66,
-                                "line": 39
-                              },
-                              "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeEnabled\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('button[data-testid=\"send-message-button\"]')\nExpected: enabled\nReceived: disabled\nCall log:\n\u001b[2m  - expect.toBeEnabled with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('button[data-testid=\"send-message-button\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <button disabled type=\"button\" data-testid=\"send-message-button\" class=\"ant-btn css-1m63z2v ant-btn-default ant-btn-color-default ant-btn-variant-outlined button send-btn mobile-send-btn\">…</button>\u001b[22m\n\u001b[2m      - unexpected value \"disabled\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:39\n\n\u001b[0m \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m frameLocator \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mframeLocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39miframeName)\u001b[33m;\u001b[39m\n \u001b[90m 38 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🔒 Verifying Submit button is disabled...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mlocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39m\u001b[33mSubmitBtn\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m   }\n \u001b[90m 41 |\u001b[39m\n \u001b[90m 42 |\u001b[39m   \u001b[36masync\u001b[39m \u001b[33mSubmitbtnActive\u001b[39m() {\u001b[0m\n\u001b[2m    at chatbotPage.SubmitbtnNotActive (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:39:66)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:59:27\u001b[22m"
-                            }
-                          ],
+                          "status": "passed",
+                          "duration": 301,
+                          "errors": [],
                           "stdout": [
                             {
                               "text": "🔒 Verifying Submit button is disabled...\n"
                             },
                             {
-                              "text": "Screenshot saved: screenshots/TC_06:_Submit_button_is_disabled.png\n"
+                              "text": "🧹 Closing context\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:54:16.346Z",
+                          "startTime": "2025-05-06T14:41:53.410Z",
                           "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-test-case-e310d-6-Submit-button-is-disabled-chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-test-case-e310d-6-Submit-button-is-disabled-chromium\\test-failed-2.png"
-                            },
-                            {
-                              "name": "_error-context-0",
-                              "contentType": "text/markdown",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-test-case-e310d-6-Submit-button-is-disabled-chromium\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                            "column": 66,
-                            "line": 39
-                          }
+                          "attachments": []
                         }
                       ],
-                      "status": "unexpected"
+                      "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-340d952b91d3fb1290b5",
+                  "id": "23335bb06d3df52af178-693d284707c4d9132f25",
                   "file": "Chatbot.spec.ts",
-                  "line": 58,
+                  "line": 62,
                   "column": 9
                 },
                 {
-                  "title": "TC_07: Submit button is enabled",
+                  "title": "TC_05: ✅ Submit button is enabled after input",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -424,11 +393,14 @@
                       "results": [
                         {
                           "workerIndex": 1,
-                          "parallelIndex": 0,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 1762,
+                          "duration": 1977,
                           "errors": [],
                           "stdout": [
+                            {
+                              "text": "🔧 Setting up environment...\n"
+                            },
                             {
                               "text": "Navigating to the admin page...\n"
                             },
@@ -481,6 +453,9 @@
                               "text": "✅ Reset process completed for user: qa@yopmail.com\n"
                             },
                             {
+                              "text": "✅ User reset complete\n"
+                            },
+                            {
                               "text": "Navigating to chatbot login page...\n"
                             },
                             {
@@ -529,7 +504,7 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Christy\n"
+                              "text": "Filling name: Kristi\n"
                             },
                             {
                               "text": "Selecting gender: בת\n"
@@ -544,7 +519,10 @@
                               "text": "✅ Personal info submitted successfully.\n"
                             },
                             {
-                              "text": "💬 Typing message: אתה יכול להסביר את השימוש של Dubnium?\n"
+                              "text": "✅ Chatbot login and form submitted\n"
+                            },
+                            {
+                              "text": "💬 Typing message: איך מבשלים Philadelphia Maki?\n"
                             },
                             {
                               "text": "✅ Verifying Submit button is enabled...\n"
@@ -552,7 +530,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:54:25.018Z",
+                          "startTime": "2025-05-06T14:41:25.688Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -560,13 +538,13 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-627838552b71b75ee575",
+                  "id": "23335bb06d3df52af178-b35b2af01cf0d18b9281",
                   "file": "Chatbot.spec.ts",
-                  "line": 62,
+                  "line": 66,
                   "column": 9
                 },
                 {
-                  "title": "TC_08: Submit query",
+                  "title": "TC_06: 📤 Submit query message",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -575,7 +553,7 @@
                       "annotations": [
                         {
                           "type": "info",
-                          "description": "Bot response: 🌌 Mendelevium: The Element of Mystery and Discovery\nImagine stepping into a gleaming laboratory filled with curious scientists, all buzzing with excitement. In this world of discovery, one element stands out like a rare gem: Mendelevium! 🌟 This remarkable element, named in honor of the great chemist Dmitri Mendeleev, is not just a name on the periodic table; it’s a key player in the story of atomic science. But what makes this element so special? Let’s embark on a vivid journey through the world of Mendelevium and uncover its secrets together! 🧪✨\n🎬 The Birth of Mendelevium\nOur adventure begins in the early 1950s, at the Lawrence Berkeley National Laboratory in California. Here, scientists were on a quest to discover new elements by bombarding lighter atoms with particles. In 1955, they achieved an extraordinary feat by creating Mendelevium (Md) through bombarding einsteinium (Es) atoms with alpha particles! ⚛️ This was a moment of triumph — scientists had synthesized an element that would forever change our understanding of the actinide series.\nBut what exactly is Mendelevium? It is an artificially produced, radioactive element with atomic number 101. 🧬 As part of the actinide series, it shares characteristics with its neighbors like uranium and plutonium. However, it’s a bit shy — only existing in tiny amounts and for very short periods before decaying into other elements.\n🔍 Exploring the Uses of Mendelevium\nYou might be wondering: “What’s so useful about an element that hardly sticks around?” Well, hold on tight because this part is fascinating! Mendelevium has some intriguing applications:\n\n\nResearch Purposes: Its primary use is in scientific research! 🔬 Due to its radioactive nature, scientists can explore atomic interactions and properties that help us understand more about heavier elements.\n\n\nRadiochemistry: Mendelevium can be used in radiochemical studies to investigate reactions involving other actinides or transuranic elements. Think of it as the secret sauce that helps decode complex chemical puzzles! 🧩\n\n\nNeutron Sources: Although not widely used yet, there are experimental approaches where Mendelevium could potentially serve as a neutron source for nuclear reactions. How cool is that? Imagine tapping"
+                          "description": "Bot response: 🌟 Californium: The Element of Discovery! 🌟\nImagine stepping into a shimmering laboratory, where the air crackles with the promise of discovery! Scientists bustle around, wearing lab coats like superheroes in a quest for knowledge. Amongst the beakers and microscopes lies a mysterious element called Californium — a rare, radioactive metal that holds secrets and powers beyond our wildest dreams! 🧪✨\nBut what is Californium, you ask? Well, it’s not just another element on the periodic table; it’s an atomic superhero with symbol Cf and atomic number 98. Discovered in 1950 by a team of scientists at the University of California, Berkeley, this brilliant element was named after its home state — California! 🎉 It’s like finding out that your favorite ice cream flavor was named after your hometown. Yum!\n🧠 The Magical Properties of Californium\nCalifornium is extraordinary for several reasons. First off, it's one of the actinides, a group of elements known for their radioactivity. This little marvel is particularly interesting because it can emit neutrons when bombarded with alpha particles. In fact, it’s one of only a few elements that can produce neutrons without needing to be mixed with something else! Talk about being self-sufficient! 💥🔬\nBut wait, here comes the magic: Californium-252, one of its isotopes, is particularly famous for its ability to produce neutrons effectively. This means that it can be used in neutron radiography — a technique similar to X-rays but even deeper and more penetrating! Imagine being able to see through dense materials like metals or even certain types of rocks just by using this incredible element! It's like giving superpowers to engineers and geologists! 🔍🌌\n🚀 Applications Galore!\nNow that we’ve unveiled some of its enchanting properties, let’s explore where Californium shines brightest:\n\n\nNuclear Reactors: Californium-252 is used as a neutron source in nuclear reactors to help initiate fission reactions. Imagine being a spark plug in an engine; that's what Californium does for nuclear energy! ⚡️\n\n\nMedical Applications: In medicine, Californium can be used in cancer treatments through neutron therapy. It targets cancer cells while sparing healthy ones —"
                         }
                       ],
                       "expectedStatus": "passed",
@@ -584,28 +562,28 @@
                       "results": [
                         {
                           "workerIndex": 1,
-                          "parallelIndex": 0,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 9476,
+                          "duration": 9457,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "💬 Submitting query: \"אתה יכול להסביר את השימוש של Mendelevium?\"\n"
+                              "text": "💬 Submitting query: \"אתה יכול להסביר את השימוש של Californium?\"\n"
                             },
                             {
                               "text": "🕐 Waiting for bot response...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"🌌 Mendelevium: The Element of Mystery and Discovery\nImagine stepping into a gleaming laboratory filled with curious scientists, all buzzing with excitement. In this world of discovery, one element stands out like a rare gem: Mendelevium! 🌟 This remarkable element, named in honor of the great chemist Dmitri Mendeleev, is not just a name on the periodic table; it’s a key player in the story of atomic science. But what makes this element so special? Let’s embark on a vivid journey through the world of Mendelevium and uncover its secrets together! 🧪✨\n🎬 The Birth of Mendelevium\nOur adventure begins in the early 1950s, at the Lawrence Berkeley National Laboratory in California. Here, scientists were on a quest to discover new elements by bombarding lighter atoms with particles. In 1955, they achieved an extraordinary feat by creating Mendelevium (Md) through bombarding einsteinium (Es) atoms with alpha particles! ⚛️ This was a moment of triumph — scientists had synthesized an element that would forever change our understanding of the actinide series.\nBut what exactly is Mendelevium? It is an artificially produced, radioactive element with atomic number 101. 🧬 As part of the actinide series, it shares characteristics with its neighbors like uranium and plutonium. However, it’s a bit shy — only existing in tiny amounts and for very short periods before decaying into other elements.\n🔍 Exploring the Uses of Mendelevium\nYou might be wondering: “What’s so useful about an element that hardly sticks around?” Well, hold on tight because this part is fascinating! Mendelevium has some intriguing applications:\n\n\nResearch Purposes: Its primary use is in scientific research! 🔬 Due to its radioactive nature, scientists can explore atomic interactions and properties that help us understand more about heavier elements.\n\n\nRadiochemistry: Mendelevium can be used in radiochemical studies to investigate reactions involving other actinides or transuranic elements. Think of it as the secret sauce that helps decode complex chemical puzzles! 🧩\n\n\nNeutron Sources: Although not widely used yet, there are experimental approaches where Mendelevium could potentially serve as a neutron source for nuclear reactions. How cool is that? Imagine tapping\"\n"
+                              "text": "✅ Bot response received: \"🌟 Californium: The Element of Discovery! 🌟\nImagine stepping into a shimmering laboratory, where the air crackles with the promise of discovery! Scientists bustle around, wearing lab coats like superheroes in a quest for knowledge. Amongst the beakers and microscopes lies a mysterious element called Californium — a rare, radioactive metal that holds secrets and powers beyond our wildest dreams! 🧪✨\nBut what is Californium, you ask? Well, it’s not just another element on the periodic table; it’s an atomic superhero with symbol Cf and atomic number 98. Discovered in 1950 by a team of scientists at the University of California, Berkeley, this brilliant element was named after its home state — California! 🎉 It’s like finding out that your favorite ice cream flavor was named after your hometown. Yum!\n🧠 The Magical Properties of Californium\nCalifornium is extraordinary for several reasons. First off, it's one of the actinides, a group of elements known for their radioactivity. This little marvel is particularly interesting because it can emit neutrons when bombarded with alpha particles. In fact, it’s one of only a few elements that can produce neutrons without needing to be mixed with something else! Talk about being self-sufficient! 💥🔬\nBut wait, here comes the magic: Californium-252, one of its isotopes, is particularly famous for its ability to produce neutrons effectively. This means that it can be used in neutron radiography — a technique similar to X-rays but even deeper and more penetrating! Imagine being able to see through dense materials like metals or even certain types of rocks just by using this incredible element! It's like giving superpowers to engineers and geologists! 🔍🌌\n🚀 Applications Galore!\nNow that we’ve unveiled some of its enchanting properties, let’s explore where Californium shines brightest:\n\n\nNuclear Reactors: Californium-252 is used as a neutron source in nuclear reactors to help initiate fission reactions. Imagine being a spark plug in an engine; that's what Californium does for nuclear energy! ⚡️\n\n\nMedical Applications: In medicine, Californium can be used in cancer treatments through neutron therapy. It targets cancer cells while sparing healthy ones —\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:54:51.295Z",
+                          "startTime": "2025-05-06T14:41:53.731Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: 🌌 Mendelevium: The Element of Mystery and Discovery\nImagine stepping into a gleaming laboratory filled with curious scientists, all buzzing with excitement. In this world of discovery, one element stands out like a rare gem: Mendelevium! 🌟 This remarkable element, named in honor of the great chemist Dmitri Mendeleev, is not just a name on the periodic table; it’s a key player in the story of atomic science. But what makes this element so special? Let’s embark on a vivid journey through the world of Mendelevium and uncover its secrets together! 🧪✨\n🎬 The Birth of Mendelevium\nOur adventure begins in the early 1950s, at the Lawrence Berkeley National Laboratory in California. Here, scientists were on a quest to discover new elements by bombarding lighter atoms with particles. In 1955, they achieved an extraordinary feat by creating Mendelevium (Md) through bombarding einsteinium (Es) atoms with alpha particles! ⚛️ This was a moment of triumph — scientists had synthesized an element that would forever change our understanding of the actinide series.\nBut what exactly is Mendelevium? It is an artificially produced, radioactive element with atomic number 101. 🧬 As part of the actinide series, it shares characteristics with its neighbors like uranium and plutonium. However, it’s a bit shy — only existing in tiny amounts and for very short periods before decaying into other elements.\n🔍 Exploring the Uses of Mendelevium\nYou might be wondering: “What’s so useful about an element that hardly sticks around?” Well, hold on tight because this part is fascinating! Mendelevium has some intriguing applications:\n\n\nResearch Purposes: Its primary use is in scientific research! 🔬 Due to its radioactive nature, scientists can explore atomic interactions and properties that help us understand more about heavier elements.\n\n\nRadiochemistry: Mendelevium can be used in radiochemical studies to investigate reactions involving other actinides or transuranic elements. Think of it as the secret sauce that helps decode complex chemical puzzles! 🧩\n\n\nNeutron Sources: Although not widely used yet, there are experimental approaches where Mendelevium could potentially serve as a neutron source for nuclear reactions. How cool is that? Imagine tapping"
+                              "description": "Bot response: 🌟 Californium: The Element of Discovery! 🌟\nImagine stepping into a shimmering laboratory, where the air crackles with the promise of discovery! Scientists bustle around, wearing lab coats like superheroes in a quest for knowledge. Amongst the beakers and microscopes lies a mysterious element called Californium — a rare, radioactive metal that holds secrets and powers beyond our wildest dreams! 🧪✨\nBut what is Californium, you ask? Well, it’s not just another element on the periodic table; it’s an atomic superhero with symbol Cf and atomic number 98. Discovered in 1950 by a team of scientists at the University of California, Berkeley, this brilliant element was named after its home state — California! 🎉 It’s like finding out that your favorite ice cream flavor was named after your hometown. Yum!\n🧠 The Magical Properties of Californium\nCalifornium is extraordinary for several reasons. First off, it's one of the actinides, a group of elements known for their radioactivity. This little marvel is particularly interesting because it can emit neutrons when bombarded with alpha particles. In fact, it’s one of only a few elements that can produce neutrons without needing to be mixed with something else! Talk about being self-sufficient! 💥🔬\nBut wait, here comes the magic: Californium-252, one of its isotopes, is particularly famous for its ability to produce neutrons effectively. This means that it can be used in neutron radiography — a technique similar to X-rays but even deeper and more penetrating! Imagine being able to see through dense materials like metals or even certain types of rocks just by using this incredible element! It's like giving superpowers to engineers and geologists! 🔍🌌\n🚀 Applications Galore!\nNow that we’ve unveiled some of its enchanting properties, let’s explore where Californium shines brightest:\n\n\nNuclear Reactors: Californium-252 is used as a neutron source in nuclear reactors to help initiate fission reactions. Imagine being a spark plug in an engine; that's what Californium does for nuclear energy! ⚡️\n\n\nMedical Applications: In medicine, Californium can be used in cancer treatments through neutron therapy. It targets cancer cells while sparing healthy ones —"
                             }
                           ],
                           "attachments": []
@@ -614,13 +592,13 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-2019ddc1c04faa48381d",
+                  "id": "23335bb06d3df52af178-c7d9a4d7c8379355269a",
                   "file": "Chatbot.spec.ts",
-                  "line": 66,
+                  "line": 70,
                   "column": 9
                 },
                 {
-                  "title": "TC_09: Scroll to bottom",
+                  "title": "TC_07: 🔽 Scroll to bottom of chat",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -633,9 +611,9 @@
                       "results": [
                         {
                           "workerIndex": 1,
-                          "parallelIndex": 0,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 5516,
+                          "duration": 5315,
                           "errors": [],
                           "stdout": [
                             {
@@ -644,7 +622,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:55:00.779Z",
+                          "startTime": "2025-05-06T14:42:03.197Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -652,13 +630,13 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-e01a2a514d9560115936",
+                  "id": "23335bb06d3df52af178-30c38a51400fa5db62f0",
                   "file": "Chatbot.spec.ts",
-                  "line": 71,
+                  "line": 74,
                   "column": 9
                 },
                 {
-                  "title": "TC_10: Predefined buttons are active",
+                  "title": "TC_08: ✅ Predefined buttons become active after response",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -671,197 +649,196 @@
                       "results": [
                         {
                           "workerIndex": 1,
-                          "parallelIndex": 0,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 301,
+                          "duration": 184,
                           "errors": [],
                           "stdout": [
                             {
                               "text": "🔓 Verifying predefined buttons are visible...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-06T12:55:06.309Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-ea6a5b140f42cd434c74",
-                  "file": "Chatbot.spec.ts",
-                  "line": 75,
-                  "column": 9
-                },
-                {
-                  "title": "TC_11: Like buttons",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 885,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "👍 Clicking Like button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-06T12:55:06.623Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-9524f742d5140a0c8af5",
-                  "file": "Chatbot.spec.ts",
-                  "line": 79,
-                  "column": 9
-                },
-                {
-                  "title": "TC_12: Dislike buttons",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 743,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "👎 Clicking Dislike button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-06T12:55:07.523Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-cf2f39e37db57009aa38",
-                  "file": "Chatbot.spec.ts",
-                  "line": 83,
-                  "column": 9
-                },
-                {
-                  "title": "TC_13: Copy buttons",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 344,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "👎 Clicking Dislike button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-06T12:55:08.274Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-4b305ec85b7088e80c9d",
-                  "file": "Chatbot.spec.ts",
-                  "line": 88,
-                  "column": 9
-                },
-                {
-                  "title": "TC_11: Click on predefined button click",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: 🌌 The Enigmatic World of Mendelevium: Unraveling the Mysteries of Element 101\nImagine stepping into a bustling laboratory, where the air is thick with excitement and curiosity! Scientists, clad in white coats, are scribbling equations on chalkboards and peering into microscopes like detectives searching for clues 🔍. Amongst this whirlwind of discovery glimmers a unique element that captures their fascination: Mendelevium! 🌟 This extraordinary element isn't just another name on the periodic table; it’s a testament to human ingenuity and the quest for knowledge. Are you ready to embark on this captivating adventure? Let’s dive deep into the world of Mendelevium together! 🚀✨\n🎬 The Birth of an Element\nOur story begins in the early 1950s at the Lawrence Berkeley National Laboratory in California, a place buzzing with ambition and scientific prowess. Here, a team of daring chemists embarked on an adventurous quest to discover new elements by bombarding lighter atoms with high-energy particles. 🌪️ In 1955, they achieved something remarkable: by bombarding einsteinium (Es) atoms with alpha particles, they created Mendelevium (Md), forever marking its place as the 101st element on the periodic table! 🧪\nBut what exactly is Mendelevium? It’s an artificially produced, radioactive element, a member of the actinide series that includes its rowdy cousins like uranium and plutonium. 🌌 However, unlike those more famous relatives, Mendelevium is quite rare and only exists in tiny amounts before decaying swiftly into other elements. Think of it as an elusive ghost — fascinating but hard to catch!\n🔍 The Intriguing Uses of Mendelevium\nYou might be itching to ask: “What can we do with an element that disappears faster than cookies at a party?” 🍪 Well, buckle up because Mendelevium’s potential is truly mesmerizing! Here are some exciting applications:\n\nResearch Purposes: Primarily, Mendelevium is used in scientific research! 🔬 Its radioactive nature allows scientists to explore atomic interactions and properties that deepen our understanding of heavier elements. Imagine unraveling the"
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 9469,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔘 Clicking Predefined button...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"🌌 The Enigmatic World of Mendelevium: Unraveling the Mysteries of Element 101\nImagine stepping into a bustling laboratory, where the air is thick with excitement and curiosity! Scientists, clad in white coats, are scribbling equations on chalkboards and peering into microscopes like detectives searching for clues 🔍. Amongst this whirlwind of discovery glimmers a unique element that captures their fascination: Mendelevium! 🌟 This extraordinary element isn't just another name on the periodic table; it’s a testament to human ingenuity and the quest for knowledge. Are you ready to embark on this captivating adventure? Let’s dive deep into the world of Mendelevium together! 🚀✨\n🎬 The Birth of an Element\nOur story begins in the early 1950s at the Lawrence Berkeley National Laboratory in California, a place buzzing with ambition and scientific prowess. Here, a team of daring chemists embarked on an adventurous quest to discover new elements by bombarding lighter atoms with high-energy particles. 🌪️ In 1955, they achieved something remarkable: by bombarding einsteinium (Es) atoms with alpha particles, they created Mendelevium (Md), forever marking its place as the 101st element on the periodic table! 🧪\nBut what exactly is Mendelevium? It’s an artificially produced, radioactive element, a member of the actinide series that includes its rowdy cousins like uranium and plutonium. 🌌 However, unlike those more famous relatives, Mendelevium is quite rare and only exists in tiny amounts before decaying swiftly into other elements. Think of it as an elusive ghost — fascinating but hard to catch!\n🔍 The Intriguing Uses of Mendelevium\nYou might be itching to ask: “What can we do with an element that disappears faster than cookies at a party?” 🍪 Well, buckle up because Mendelevium’s potential is truly mesmerizing! Here are some exciting applications:\n\nResearch Purposes: Primarily, Mendelevium is used in scientific research! 🔬 Its radioactive nature allows scientists to explore atomic interactions and properties that deepen our understanding of heavier elements. Imagine unraveling the\"\n"
+                              "text": "🧹 Closing context\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:55:08.627Z",
-                          "annotations": [
-                            {
-                              "type": "info",
-                              "description": "Bot response: 🌌 The Enigmatic World of Mendelevium: Unraveling the Mysteries of Element 101\nImagine stepping into a bustling laboratory, where the air is thick with excitement and curiosity! Scientists, clad in white coats, are scribbling equations on chalkboards and peering into microscopes like detectives searching for clues 🔍. Amongst this whirlwind of discovery glimmers a unique element that captures their fascination: Mendelevium! 🌟 This extraordinary element isn't just another name on the periodic table; it’s a testament to human ingenuity and the quest for knowledge. Are you ready to embark on this captivating adventure? Let’s dive deep into the world of Mendelevium together! 🚀✨\n🎬 The Birth of an Element\nOur story begins in the early 1950s at the Lawrence Berkeley National Laboratory in California, a place buzzing with ambition and scientific prowess. Here, a team of daring chemists embarked on an adventurous quest to discover new elements by bombarding lighter atoms with high-energy particles. 🌪️ In 1955, they achieved something remarkable: by bombarding einsteinium (Es) atoms with alpha particles, they created Mendelevium (Md), forever marking its place as the 101st element on the periodic table! 🧪\nBut what exactly is Mendelevium? It’s an artificially produced, radioactive element, a member of the actinide series that includes its rowdy cousins like uranium and plutonium. 🌌 However, unlike those more famous relatives, Mendelevium is quite rare and only exists in tiny amounts before decaying swiftly into other elements. Think of it as an elusive ghost — fascinating but hard to catch!\n🔍 The Intriguing Uses of Mendelevium\nYou might be itching to ask: “What can we do with an element that disappears faster than cookies at a party?” 🍪 Well, buckle up because Mendelevium’s potential is truly mesmerizing! Here are some exciting applications:\n\nResearch Purposes: Primarily, Mendelevium is used in scientific research! 🔬 Its radioactive nature allows scientists to explore atomic interactions and properties that deepen our understanding of heavier elements. Imagine unraveling the"
-                            }
-                          ],
+                          "startTime": "2025-05-06T14:42:08.522Z",
+                          "annotations": [],
                           "attachments": []
                         }
                       ],
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-9035c82ff11d2405c39c",
+                  "id": "23335bb06d3df52af178-0637274af489116a11d1",
                   "file": "Chatbot.spec.ts",
-                  "line": 92,
-                  "column": 10
+                  "line": 78,
+                  "column": 9
                 },
                 {
-                  "title": "TC_14: Reload hides old chat",
+                  "title": "TC_09: 👍 Like button functionality",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
+                          "status": "failed",
+                          "duration": 0,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 30000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('heading', { name: 'תכירו את \"בלו\"' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('heading', { name: 'תכירו את \"בלו\"' })\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 30000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('heading', { name: 'תכירו את \"בלו\"' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('heading', { name: 'תכירו את \"בלו\"' })\u001b[22m\n\n    at ChatbotLoginPage.login (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\LoginChatbot.ts:49:33)\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:37:5",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\LoginChatbot.ts",
+                              "column": 33,
+                              "line": 49
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39mPages\\LoginChatbot.ts:49\n\n\u001b[0m \u001b[90m 47 |\u001b[39m       \u001b[36mconst\u001b[39m verifyTitle \u001b[33m=\u001b[39m iframeLocator\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m chatbotLocators\u001b[33m.\u001b[39m\u001b[33mFormTitle\u001b[39m\u001b[33m.\u001b[39mname })\u001b[33m;\u001b[39m\n \u001b[90m 48 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m       \u001b[36mawait\u001b[39m expect(verifyTitle)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m timeoutLimit })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m\n \u001b[90m 51 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'✅ Login process completed and iframe title located successfully.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 52 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\LoginChatbot.ts",
+                                "column": 33,
+                                "line": 49
+                              },
+                              "message": "Error: \u001b[31mTimed out 30000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('heading', { name: 'תכירו את \"בלו\"' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('heading', { name: 'תכירו את \"בלו\"' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\LoginChatbot.ts:49\n\n\u001b[0m \u001b[90m 47 |\u001b[39m       \u001b[36mconst\u001b[39m verifyTitle \u001b[33m=\u001b[39m iframeLocator\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m chatbotLocators\u001b[33m.\u001b[39m\u001b[33mFormTitle\u001b[39m\u001b[33m.\u001b[39mname })\u001b[33m;\u001b[39m\n \u001b[90m 48 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m       \u001b[36mawait\u001b[39m expect(verifyTitle)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m timeoutLimit })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m\n \u001b[90m 51 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'✅ Login process completed and iframe title located successfully.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 52 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\u001b[0m\n\u001b[2m    at ChatbotLoginPage.login (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\LoginChatbot.ts:49:33)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:37:5\u001b[22m"
+                            }
+                          ],
+                          "stdout": [
+                            {
+                              "text": "🔧 Setting up environment...\n"
+                            },
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "✅ User reset complete\n"
+                            },
+                            {
+                              "text": "Navigating to chatbot login page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "🧹 Closing context\n"
+                            }
+                          ],
+                          "stderr": [
+                            {
+                              "text": "❌ Error during login: Error: \u001b[31mTimed out 30000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('heading', { name: 'תכירו את \"בלו\"' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('heading', { name: 'תכירו את \"בלו\"' })\u001b[22m\n\n"
+                            },
+                            {
+                              "text": "Test failed due to timeout after 30000 ms - check network/API/browser performance.\n"
+                            }
+                          ],
+                          "retry": 0,
+                          "startTime": "2025-05-06T14:41:26.114Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-c9612-\udc4d-Like-button-functionality-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "_error-context-0",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-c9612-\udc4d-Like-button-functionality-chromium\\error-context.md"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\LoginChatbot.ts",
+                            "column": 33,
+                            "line": 49
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-fb851d92181092d9ee02",
+                  "file": "Chatbot.spec.ts",
+                  "line": 82,
+                  "column": 9
+                },
+                {
+                  "title": "TC_10: 👎 Dislike button functionality",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -873,12 +850,237 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-06T14:42:13.798Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-fe244b42414d3a15ab9a",
+                  "file": "Chatbot.spec.ts",
+                  "line": 86,
+                  "column": 9
+                },
+                {
+                  "title": "TC_11: 📋 Copy button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-06T14:42:13.799Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-5b9d5ff26ae699e98514",
+                  "file": "Chatbot.spec.ts",
+                  "line": 90,
+                  "column": 9
+                },
+                {
+                  "title": "TC_12: 📍 Predefined button click triggers response",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-06T14:42:13.799Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-f403e5035d0666c0b019",
+                  "file": "Chatbot.spec.ts",
+                  "line": 94,
+                  "column": 9
+                },
+                {
+                  "title": "TC_13: 🔄 Reload hides previous chat",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 3,
                           "status": "passed",
-                          "duration": 7563,
+                          "duration": 6359,
                           "errors": [],
                           "stdout": [
+                            {
+                              "text": "🔧 Setting up environment...\n"
+                            },
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "✅ User reset complete\n"
+                            },
+                            {
+                              "text": "Navigating to chatbot login page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "✅ Login process completed and iframe title located successfully.\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            },
+                            {
+                              "text": "Waiting for validation error messages...\n"
+                            },
+                            {
+                              "text": "Verified gender required validation message.\n"
+                            },
+                            {
+                              "text": "Verified name required validation message.\n"
+                            },
+                            {
+                              "text": "✅ Invalid input test completed with expected error validations.\n"
+                            },
+                            {
+                              "text": "Starting to fill personal information form...\n"
+                            },
+                            {
+                              "text": "Filling name: Darryl\n"
+                            },
+                            {
+                              "text": "Selecting gender: בן\n"
+                            },
+                            {
+                              "text": "Checking visibility of \"Start\" button...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button...\n"
+                            },
+                            {
+                              "text": "✅ Personal info submitted successfully.\n"
+                            },
+                            {
+                              "text": "✅ Chatbot login and form submitted\n"
+                            },
                             {
                               "text": "🔄 Reloading and verifying bot session is cleared...\n"
                             },
@@ -894,7 +1096,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:55:18.106Z",
+                          "startTime": "2025-05-06T14:41:25.118Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -902,13 +1104,13 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-f0d33acd3321a1ab024b",
+                  "id": "23335bb06d3df52af178-507e3eeff22d394f85bc",
                   "file": "Chatbot.spec.ts",
-                  "line": 96,
+                  "line": 98,
                   "column": 9
                 },
                 {
-                  "title": "TC_15: Create new session using \"edit\" icon button",
+                  "title": "TC_14: ✏️ New session is created using edit icon",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -920,10 +1122,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
+                          "workerIndex": 3,
+                          "parallelIndex": 3,
                           "status": "passed",
-                          "duration": 1799,
+                          "duration": 1623,
                           "errors": [],
                           "stdout": [
                             {
@@ -940,11 +1142,14 @@
                             },
                             {
                               "text": "✅ Initial bot message received.\n"
+                            },
+                            {
+                              "text": "🧹 Closing context\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:55:25.682Z",
+                          "startTime": "2025-05-06T14:41:57.185Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -952,9 +1157,9 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-dbc4e8c6d4a370d5c1de",
+                  "id": "23335bb06d3df52af178-408603e96cb3141402d5",
                   "file": "Chatbot.spec.ts",
-                  "line": 102,
+                  "line": 104,
                   "column": 9
                 }
               ]
@@ -971,20 +1176,20 @@
       "specs": [],
       "suites": [
         {
-          "title": "BlueDrop test cases",
+          "title": "BlueDrop Hamburgermenu Test Suite",
           "file": "Hamburger_Menu.spec.ts",
-          "line": 19,
+          "line": 18,
           "column": 6,
           "specs": [],
           "suites": [
             {
-              "title": "Hamburger Menu & History",
+              "title": "Hamburger Menu & 📜 Chat History",
               "file": "Hamburger_Menu.spec.ts",
-              "line": 48,
-              "column": 6,
+              "line": 46,
+              "column": 8,
               "specs": [
                 {
-                  "title": "TC_16: Open Hamburger Menu",
+                  "title": "TC_16 🔓 Open Hamburger Menu",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -996,10 +1201,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 1,
+                          "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1380,
+                          "duration": 709,
                           "errors": [],
                           "stdout": [
                             {
@@ -1102,7 +1307,417 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Christy\n"
+                              "text": "Filling name: Jerome\n"
+                            },
+                            {
+                              "text": "Selecting gender: בן\n"
+                            },
+                            {
+                              "text": "Checking visibility of \"Start\" button...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button...\n"
+                            },
+                            {
+                              "text": "✅ Personal info submitted successfully.\n"
+                            },
+                            {
+                              "text": "✅ TC_15: Open Hamburger Menu\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-06T14:41:53.923Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-831204726bd1f5d94275",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 48,
+                  "column": 9
+                },
+                {
+                  "title": "TC_17 ➕ Load More button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1092,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_16: Load More button functionality\n"
+                            },
+                            {
+                              "text": "📜 Clicking Load More button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-06T14:42:17.835Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-2a9f8e93d66713e6aa42",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 53,
+                  "column": 9
+                },
+                {
+                  "title": "TC_18 🔍 Search in chat history",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "parallelIndex": 3,
+                          "status": "failed",
+                          "duration": 5414,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('input[placeholder=\"חפש\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('input[placeholder=\"חפש\"]')\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('input[placeholder=\"חפש\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('input[placeholder=\"חפש\"]')\u001b[22m\n\n    at HamburgerMenuPage.SearchHistory (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts:48:25)\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:60:18",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts",
+                              "column": 25,
+                              "line": 48
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39mPages\\HamburgerMenuPage.ts:48\n\n\u001b[0m \u001b[90m 46 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Searching for message: \"${this.userMessage}\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m     \u001b[36mconst\u001b[39m input \u001b[33m=\u001b[39m frameLocator\u001b[33m.\u001b[39mlocator(\u001b[33mMenuLocator\u001b[39m\u001b[33m.\u001b[39m\u001b[33mSearchbar\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m     \u001b[36mawait\u001b[39m expect(input)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m window\u001b[33m.\u001b[39mscrollTo(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m     \u001b[36mawait\u001b[39m input\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m     \u001b[36mawait\u001b[39m input\u001b[33m.\u001b[39mfill(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserMessage)\u001b[33m;\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts",
+                                "column": 25,
+                                "line": 48
+                              },
+                              "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('input[placeholder=\"חפש\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('input[placeholder=\"חפש\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\HamburgerMenuPage.ts:48\n\n\u001b[0m \u001b[90m 46 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Searching for message: \"${this.userMessage}\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m     \u001b[36mconst\u001b[39m input \u001b[33m=\u001b[39m frameLocator\u001b[33m.\u001b[39mlocator(\u001b[33mMenuLocator\u001b[39m\u001b[33m.\u001b[39m\u001b[33mSearchbar\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m     \u001b[36mawait\u001b[39m expect(input)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m window\u001b[33m.\u001b[39mscrollTo(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m     \u001b[36mawait\u001b[39m input\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m     \u001b[36mawait\u001b[39m input\u001b[33m.\u001b[39mfill(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39muserMessage)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at HamburgerMenuPage.SearchHistory (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts:48:25)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:60:18\u001b[22m"
+                            }
+                          ],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Navigating to chatbot login page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "✅ Login process completed and iframe title located successfully.\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            },
+                            {
+                              "text": "Waiting for validation error messages...\n"
+                            },
+                            {
+                              "text": "Verified gender required validation message.\n"
+                            },
+                            {
+                              "text": "Verified name required validation message.\n"
+                            },
+                            {
+                              "text": "✅ Invalid input test completed with expected error validations.\n"
+                            },
+                            {
+                              "text": "Starting to fill personal information form...\n"
+                            },
+                            {
+                              "text": "Filling name: Darryl\n"
+                            },
+                            {
+                              "text": "Selecting gender: בן\n"
+                            },
+                            {
+                              "text": "Checking visibility of \"Start\" button...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button...\n"
+                            },
+                            {
+                              "text": "✅ Personal info submitted successfully.\n"
+                            },
+                            {
+                              "text": "✅ TC_17: Search in chat history\n"
+                            },
+                            {
+                              "text": "🔍 Searching for message: \"\"\n"
+                            },
+                            {
+                              "text": "🖼️ Screenshot saved: screenshots/TC_18_🔍_Search_in_chat_history.png\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-06T14:41:58.938Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-36bac-8-🔍-Search-in-chat-history-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-36bac-8-🔍-Search-in-chat-history-chromium\\test-failed-2.png"
+                            },
+                            {
+                              "name": "_error-context-0",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-36bac-8-🔍-Search-in-chat-history-chromium\\error-context.md"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts",
+                            "column": 25,
+                            "line": 48
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-672809698635e1d16800",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 58,
+                  "column": 9
+                },
+                {
+                  "title": "TC_19 ❌ No result in chat history",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "parallelIndex": 0,
+                          "status": "timedOut",
+                          "duration": 60366,
+                          "error": {
+                            "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                            "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                            },
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts",
+                                "column": 55,
+                                "line": 59
+                              },
+                              "message": "Error: locator.clear: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('input[placeholder=\"חפש\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\HamburgerMenuPage.ts:59\n\n\u001b[0m \u001b[90m 57 |\u001b[39m\n \u001b[90m 58 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Searching for non-existent history: \"${randomQuery}\"`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 59 |\u001b[39m     \u001b[36mawait\u001b[39m frameLocator\u001b[33m.\u001b[39mlocator(\u001b[33mMenuLocator\u001b[39m\u001b[33m.\u001b[39m\u001b[33mSearchbar\u001b[39m)\u001b[33m.\u001b[39mclear()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 60 |\u001b[39m     \u001b[36mawait\u001b[39m frameLocator\u001b[33m.\u001b[39mlocator(\u001b[33mMenuLocator\u001b[39m\u001b[33m.\u001b[39m\u001b[33mSearchbar\u001b[39m)\u001b[33m.\u001b[39mfill(randomQuery)\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mgetByText(\u001b[32m'לא נמצאה שיחה'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 62 |\u001b[39m   \u001b[0m\n\u001b[2m    at HamburgerMenuPage.NoSearchHistory (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts:59:55)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:65:18\u001b[22m"
+                            }
+                          ],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Navigating to chatbot login page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "✅ Login process completed and iframe title located successfully.\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            },
+                            {
+                              "text": "Waiting for validation error messages...\n"
+                            },
+                            {
+                              "text": "Verified gender required validation message.\n"
+                            },
+                            {
+                              "text": "Verified name required validation message.\n"
+                            },
+                            {
+                              "text": "✅ Invalid input test completed with expected error validations.\n"
+                            },
+                            {
+                              "text": "Starting to fill personal information form...\n"
+                            },
+                            {
+                              "text": "Filling name: Candice\n"
                             },
                             {
                               "text": "Selecting gender: בת\n"
@@ -1117,27 +1732,49 @@
                               "text": "✅ Personal info submitted successfully.\n"
                             },
                             {
-                              "text": "📂 Opening hamburger menu...\n"
+                              "text": "✅ TC_18: No result in chat history\n"
+                            },
+                            {
+                              "text": "🔍 Searching for non-existent history: \"אתה יכול להסביר את השימוש של Chromium?\"\n"
+                            },
+                            {
+                              "text": "🖼️ Screenshot saved: screenshots/TC_19_❌_No_result_in_chat_history.png\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:55:27.655Z",
+                          "startTime": "2025-05-06T14:42:29.885Z",
                           "annotations": [],
-                          "attachments": []
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-ccd5c-❌-No-result-in-chat-history-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-ccd5c-❌-No-result-in-chat-history-chromium\\test-failed-2.png"
+                            },
+                            {
+                              "name": "_error-context-1",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-ccd5c-❌-No-result-in-chat-history-chromium\\error-context.md"
+                            }
+                          ]
                         }
                       ],
-                      "status": "expected"
+                      "status": "unexpected"
                     }
                   ],
-                  "id": "b55e7195d3b5536049bb-da3ce025fa3923ae19a9",
+                  "id": "b55e7195d3b5536049bb-12667e1532b86b4548db",
                   "file": "Hamburger_Menu.spec.ts",
-                  "line": 49,
+                  "line": 63,
                   "column": 9
                 },
                 {
-                  "title": "TC_17: Load More button functionality",
-                  "ok": true,
+                  "title": "TC_20 ❎ Close Hamburger Menu",
+                  "ok": false,
                   "tags": [],
                   "tests": [
                     {
@@ -1149,146 +1786,530 @@
                       "results": [
                         {
                           "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 523,
-                          "errors": [],
+                          "parallelIndex": 1,
+                          "status": "failed",
+                          "duration": 5403,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Close' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Close' })\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Close' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Close' })\u001b[22m\n\n    at HamburgerMenuPage.CloseHamburgerMenu (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts:69:71)\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:70:18",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts",
+                              "column": 71,
+                              "line": 69
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39mPages\\HamburgerMenuPage.ts:69\n\n\u001b[0m \u001b[90m 67 |\u001b[39m\n \u001b[90m 68 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'❌ Closing hamburger menu...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 69 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Close'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 70 |\u001b[39m     \u001b[36mawait\u001b[39m frameLocator\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Close'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m   }\n \u001b[90m 72 |\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts",
+                                "column": 71,
+                                "line": 69
+                              },
+                              "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Close' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Close' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\HamburgerMenuPage.ts:69\n\n\u001b[0m \u001b[90m 67 |\u001b[39m\n \u001b[90m 68 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'❌ Closing hamburger menu...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 69 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Close'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 70 |\u001b[39m     \u001b[36mawait\u001b[39m frameLocator\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Close'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m   }\n \u001b[90m 72 |\u001b[39m\u001b[0m\n\u001b[2m    at HamburgerMenuPage.CloseHamburgerMenu (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts:69:71)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:70:18\u001b[22m"
+                            }
+                          ],
                           "stdout": [
                             {
-                              "text": "📜 Clicking Load More button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-06T12:55:52.223Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-e03dac05cae726c3a574",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 53,
-                  "column": 9
-                },
-                {
-                  "title": "TC_18: Search in chat history",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 371,
-                          "errors": [],
-                          "stdout": [
+                              "text": "Navigating to the admin page...\n"
+                            },
                             {
-                              "text": "🔍 Searching for message: \"\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-06T12:55:52.756Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-b555f1a16c04e3c8cadd",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 57,
-                  "column": 9
-                },
-                {
-                  "title": "TC_19: No result in chat history",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2317,
-                          "errors": [],
-                          "stdout": [
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
                             {
-                              "text": "🔍 Searching for non-existent history: \"אתה יכול להסביר את השימוש של Magnesium?\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-06T12:55:53.137Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-9f501e9553062d3d14fb",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 61,
-                  "column": 9
-                },
-                {
-                  "title": "TC_20: Close Hamburger Menu",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 647,
-                          "errors": [],
-                          "stdout": [
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Navigating to chatbot login page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "✅ Login process completed and iframe title located successfully.\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            },
+                            {
+                              "text": "Waiting for validation error messages...\n"
+                            },
+                            {
+                              "text": "Verified gender required validation message.\n"
+                            },
+                            {
+                              "text": "Verified name required validation message.\n"
+                            },
+                            {
+                              "text": "✅ Invalid input test completed with expected error validations.\n"
+                            },
+                            {
+                              "text": "Starting to fill personal information form...\n"
+                            },
+                            {
+                              "text": "Filling name: Kristi\n"
+                            },
+                            {
+                              "text": "Selecting gender: בת\n"
+                            },
+                            {
+                              "text": "Checking visibility of \"Start\" button...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button...\n"
+                            },
+                            {
+                              "text": "✅ Personal info submitted successfully.\n"
+                            },
+                            {
+                              "text": "✅ TC_19: Close Hamburger Menu\n"
+                            },
                             {
                               "text": "❌ Closing hamburger menu...\n"
+                            },
+                            {
+                              "text": "🖼️ Screenshot saved: screenshots/TC_20_❎_Close_Hamburger_Menu.png\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:55:55.464Z",
+                          "startTime": "2025-05-06T14:42:08.830Z",
                           "annotations": [],
-                          "attachments": []
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-7a6db-C-20-❎-Close-Hamburger-Menu-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-7a6db-C-20-❎-Close-Hamburger-Menu-chromium\\test-failed-2.png"
+                            },
+                            {
+                              "name": "_error-context-0",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-7a6db-C-20-❎-Close-Hamburger-Menu-chromium\\error-context.md"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\HamburgerMenuPage.ts",
+                            "column": 71,
+                            "line": 69
+                          }
                         }
                       ],
-                      "status": "expected"
+                      "status": "unexpected"
                     }
                   ],
-                  "id": "b55e7195d3b5536049bb-94730463d86433d29e0e",
+                  "id": "b55e7195d3b5536049bb-ee9894bb40db5ddb5e33",
                   "file": "Hamburger_Menu.spec.ts",
-                  "line": 65,
+                  "line": 68,
                   "column": 9
                 },
                 {
-                  "title": "TC_21: New session with \"שיחה חדשה\"",
+                  "title": "TC_21 🆕 New session with \"שיחה חדשה\"",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "parallelIndex": 1,
+                          "status": "timedOut",
+                          "duration": 0,
+                          "error": {
+                            "message": "\u001b[31m\"beforeAll\" hook timeout of 60000ms exceeded.\u001b[39m",
+                            "stack": "\u001b[31m\"beforeAll\" hook timeout of 60000ms exceeded.\u001b[39m\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:20:8",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts",
+                              "column": 8,
+                              "line": 20
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'BlueDrop Hamburgermenu Test Suite'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeAll(\u001b[36masync\u001b[39m ({ browser }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m adminContext \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m adminPageInstance \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m adminContext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mconst\u001b[39m adminPage \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAdminPage\u001b[39m(adminPageInstance)\u001b[33m;\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts",
+                                "column": 8,
+                                "line": 20
+                              },
+                              "message": "\u001b[31m\"beforeAll\" hook timeout of 60000ms exceeded.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'BlueDrop Hamburgermenu Test Suite'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeAll(\u001b[36masync\u001b[39m ({ browser }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m adminContext \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m adminPageInstance \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m adminContext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mconst\u001b[39m adminPage \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAdminPage\u001b[39m(adminPageInstance)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:20:8\u001b[22m"
+                            },
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\FormPage.ts",
+                                "column": 25,
+                                "line": 61
+                              },
+                              "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'בואו נתחיל' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\FormPage.ts:61\n\n\u001b[0m \u001b[90m 59 |\u001b[39m\n \u001b[90m 60 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Clicking \"Start\" button without filling fields...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 61 |\u001b[39m       \u001b[36mawait\u001b[39m startButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 62 |\u001b[39m\n \u001b[90m 63 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Waiting for validation error messages...'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m\u001b[0m\n\u001b[2m    at FillPersonalInfopage.fillinvalidPersonalInfo (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\FormPage.ts:61:25)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:38:16\u001b[22m"
+                            }
+                          ],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Navigating to chatbot login page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "✅ Login process completed and iframe title located successfully.\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            }
+                          ],
+                          "stderr": [
+                            {
+                              "text": "❌ Error in fillinvalidPersonalInfo: Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'בואו נתחיל' })\u001b[22m\n\n"
+                            },
+                            {
+                              "text": "Test failed due to timeout after 30000 ms - check if error messages are rendering correctly.\n"
+                            }
+                          ],
+                          "retry": 0,
+                          "startTime": "2025-05-06T14:42:38.946Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-62c77-New-session-with-שיחה-חדשה--chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "_error-context-1",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-62c77-New-session-with-שיחה-חדשה--chromium\\error-context.md"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts",
+                            "column": 8,
+                            "line": 20
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-1b9fde63f86753164ca7",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 73,
+                  "column": 9
+                },
+                {
+                  "title": "TC_22 ✏️ Edit and save changes in chat history",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 60000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 2,
+                          "status": "timedOut",
+                          "duration": 0,
+                          "error": {
+                            "message": "\u001b[31m\"beforeAll\" hook timeout of 60000ms exceeded.\u001b[39m",
+                            "stack": "\u001b[31m\"beforeAll\" hook timeout of 60000ms exceeded.\u001b[39m\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:20:8",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts",
+                              "column": 8,
+                              "line": 20
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'BlueDrop Hamburgermenu Test Suite'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeAll(\u001b[36masync\u001b[39m ({ browser }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m adminContext \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m adminPageInstance \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m adminContext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mconst\u001b[39m adminPage \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAdminPage\u001b[39m(adminPageInstance)\u001b[33m;\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts",
+                                "column": 8,
+                                "line": 20
+                              },
+                              "message": "\u001b[31m\"beforeAll\" hook timeout of 60000ms exceeded.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'BlueDrop Hamburgermenu Test Suite'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeAll(\u001b[36masync\u001b[39m ({ browser }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m adminContext \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m browser\u001b[33m.\u001b[39mnewContext()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mconst\u001b[39m adminPageInstance \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m adminContext\u001b[33m.\u001b[39mnewPage()\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mconst\u001b[39m adminPage \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mAdminPage\u001b[39m(adminPageInstance)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:20:8\u001b[22m"
+                            },
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\FormPage.ts",
+                                "column": 25,
+                                "line": 61
+                              },
+                              "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'בואו נתחיל' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\FormPage.ts:61\n\n\u001b[0m \u001b[90m 59 |\u001b[39m\n \u001b[90m 60 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Clicking \"Start\" button without filling fields...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 61 |\u001b[39m       \u001b[36mawait\u001b[39m startButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 62 |\u001b[39m\n \u001b[90m 63 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Waiting for validation error messages...'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m\u001b[0m\n\u001b[2m    at FillPersonalInfopage.fillinvalidPersonalInfo (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\FormPage.ts:61:25)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:38:16\u001b[22m"
+                            }
+                          ],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Navigating to chatbot login page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "✅ Login process completed and iframe title located successfully.\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            }
+                          ],
+                          "stderr": [
+                            {
+                              "text": "❌ Error in fillinvalidPersonalInfo: Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'בואו נתחיל' })\u001b[22m\n\n"
+                            },
+                            {
+                              "text": "Test failed due to timeout after 30000 ms - check if error messages are rendering correctly.\n"
+                            }
+                          ],
+                          "retry": 0,
+                          "startTime": "2025-05-06T14:42:16.294Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-11857-ave-changes-in-chat-history-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "_error-context-1",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-11857-ave-changes-in-chat-history-chromium\\error-context.md"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts",
+                            "column": 8,
+                            "line": 20
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-9a2dcbc5e812dbbea474",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 80,
+                  "column": 9
+                },
+                {
+                  "title": "TC_23 🔁 Continue Chat Functionality",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -1300,41 +2321,25 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2232,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔁 Creating new session from hamburger menu...\n"
-                            },
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "✅ Verified: Bot responses are cleared after reload.\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "✅ Initial bot message received.\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-06T12:55:56.131Z",
+                          "startTime": "2025-05-06T14:43:16.732Z",
                           "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
-                  "id": "b55e7195d3b5536049bb-3722e0464e3c646bb9b4",
+                  "id": "b55e7195d3b5536049bb-c1b5c30e176758c5177c",
                   "file": "Hamburger_Menu.spec.ts",
-                  "line": 69,
+                  "line": 86,
                   "column": 9
                 }
               ]
@@ -1346,11 +2351,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-06T12:53:42.168Z",
-    "duration": 136574.36,
-    "expected": 19,
-    "skipped": 0,
-    "unexpected": 1,
+    "startTime": "2025-05-06T14:41:22.123Z",
+    "duration": 151720.95500000002,
+    "expected": 12,
+    "skipped": 4,
+    "unexpected": 6,
     "flaky": 0
   }
 }
