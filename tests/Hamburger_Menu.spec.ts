@@ -4,14 +4,17 @@ import { FillPersonalInfopage } from './Pages/FormPage';
 import { testUserData } from './Utils/testData';
 import { adminCredentials, chatbotCredentials } from './Config/credentials';
 import { AdminPage } from './Pages/AdminPage';
+import { HamburgerMenuPage } from './Pages/HamburgerMenuPage';
 import { chatbotPage } from './Pages/chatbotPage';
+
 
 let page: Page;
 let context: BrowserContext;
 let chatbot: ChatbotLoginPage;
 let form: FillPersonalInfopage;
-let chatbotscreen: chatbotPage;
 let adminPage: AdminPage;
+let Menu: HamburgerMenuPage;
+let chatbotscreen: chatbotPage;
 
 test.describe('BlueDrop test cases', () => {
 
@@ -28,6 +31,7 @@ test.describe('BlueDrop test cases', () => {
     page = await context.newPage();
     chatbot = new ChatbotLoginPage(page);
     form = new FillPersonalInfopage(page);
+    Menu = new HamburgerMenuPage(page);
     chatbotscreen = new chatbotPage(page);
       
       await chatbot.goto();
@@ -43,27 +47,27 @@ test.describe('BlueDrop test cases', () => {
   });
 test.describe('Hamburger Menu & History', () => {
     test('TC_16: Open Hamburger Menu', async () => {
-      await chatbotscreen.OpenHamburgerMenu();
+      await Menu.OpenHamburgerMenu();
     });
 
     test('TC_17: Load More button functionality', async () => {
-      await chatbotscreen.LoadmoreBtn();
+      await Menu.LoadmoreBtn();
     });
 
     test('TC_18: Search in chat history', async () => {
-      await chatbotscreen.SearchHistory();
+      await Menu.SearchHistory();
     });
 
     test('TC_19: No result in chat history', async () => {
-      await chatbotscreen.NoSearchHistory();
+      await Menu.NoSearchHistory();
     });
 
     test('TC_20: Close Hamburger Menu', async () => {
-      await chatbotscreen.CloseHamburgerMenu();
+      await Menu.CloseHamburgerMenu();
     });
 
     test('TC_21: New session with "שיחה חדשה"', async () => {
-      await chatbotscreen.Newsession();
+      await Menu.Newsession();
       await chatbotscreen.Pagereload();
       await chatbotscreen.InitialbotMessage();
     });

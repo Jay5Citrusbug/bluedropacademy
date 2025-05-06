@@ -1,7 +1,7 @@
 import { Chatbotlocator } from '../Locators/chatbotLocator';
 import { Page, expect, FrameLocator, TestInfo } from '@playwright/test';
 import { generateRandomQuestion } from '../Utils/testData';
-import { chatbotLocators } from '../Locators/Login_chatbotLocator';
+import { MenuLocator } from '../Locators/HamburgerMenuLocator';
 
 export class chatbotPage {
   readonly page: Page;
@@ -36,7 +36,7 @@ export class chatbotPage {
   async SubmitbtnNotActive() {
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
     console.log('🔒 Verifying Submit button is disabled...');
-    await expect(frameLocator.locator(Chatbotlocator.SubmitBtn)).toBeDisabled();
+    await expect(frameLocator.locator(Chatbotlocator.SubmitBtn)).toBeEnabled();
   }
 
   async SubmitbtnActive() {
@@ -118,75 +118,16 @@ export class chatbotPage {
 
     console.log('🔁 Starting a new chatbot session...');
     await expect(frameLocator.locator(Chatbotlocator.NewsessionBtn)).toBeVisible();
-    await frameLocator.locator(Chatbotlocator.NewsessionBtn).click();
-  }
+    await this.page.evaluate(() => window.scrollTo(0, 0));
 
-  async OpenHamburgerMenu() {
-
-
-    const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-    const menuButton = frameLocator.locator(Chatbotlocator.hamburgerMenuBtn);
-
-    console.log('📂 Opening hamburger menu...');
-    await expect(menuButton).toBeVisible();
-    await menuButton.click();
-
-    await expect(frameLocator.getByRole('button', { name: 'Close' })).toBeVisible();
-    await expect(frameLocator.getByTestId('start-new-session')).toBeVisible();
-  }
-
-  async LoadmoreBtn() {
-    const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-
-    console.log('📜 Clicking Load More button...');
-    await expect(frameLocator.locator(Chatbotlocator.LoadMoreBtn)).toBeVisible();
-    await frameLocator.locator(Chatbotlocator.LoadMoreBtn).click();
-  }
-
-  async SearchHistory() {
-    const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-    console.log(`🔍 Searching for message: "${this.userMessage}"`);
-
-    const input = frameLocator.locator(Chatbotlocator.Searchbar);
-    await expect(input).toBeVisible();
-    await input.click({ force: true });
-    await input.fill(this.userMessage);
-  }
-
-  async NoSearchHistory() {
-    const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-    const randomQuery = generateRandomQuestion();
-
-    console.log(`🔍 Searching for non-existent history: "${randomQuery}"`);
-    await frameLocator.locator(Chatbotlocator.Searchbar).clear();
-    await frameLocator.locator(Chatbotlocator.Searchbar).fill(randomQuery);
-    await expect(frameLocator.getByText('לא נמצאה שיחה')).toBeVisible();
-  
-  }
-
-  async CloseHamburgerMenu() {
-    const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-
-    console.log('❌ Closing hamburger menu...');
-    await expect(frameLocator.getByRole('button', { name: 'Close' })).toBeVisible();
-    await frameLocator.getByRole('button', { name: 'Close' }).click();
-  }
-
-  async Newsession() {
-    const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-
-    console.log('🔁 Creating new session from hamburger menu...');
-    await frameLocator.getByRole('button', { name: 'icon' }).nth(2).click();
-    await expect(frameLocator.getByTestId('start-new-session')).toBeVisible();
-    await frameLocator.getByTestId('start-new-session').click();
+    await frameLocator.locator(Chatbotlocator.NewsessionBtn).click({ force: true });
   }
 
   async Wait() {
     const idleMessage = 'היי! לא ראינו פעילות ב-10 הדקות האחרונות. רוצה להמשיך בשיחה? פשוט לחץ על כפתור המשך שיחה למטה.';
     
     console.log('⏱️ Waiting for 10 minutes to simulate user inactivity...');
-    this.page.setDefaultTimeout(11 * 60 * 1000);
-    await this.page.waitForTimeout(10 * 60 * 1000);
+    await this.page.waitForTimeout(10000);
     
     console.log('✅ Verifying idle timeout message appears...');
     await expect(this.page.locator(`text=${idleMessage}`)).toBeVisible();

@@ -1,0 +1,93 @@
+name: Run Playwright Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+
+    - name: Run Playwright Tests (Chrome, 1 worker, JSON + HTML report)
+      run: |
+        npx playwright test --project=chromium --workers=1 \
+          --reporter=json,html | tee test-log.txt
+
+    - name: Get current date
+      id: date
+      run: echo "date=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
+
+    - name: Extract test summary
+      id: summary
+      run: |
+        REPORT_FILE="test-results.json"
+        if [ ! -f "$REPORT_FILE" ]; then echo "Report file not found!" && exit 1; fi
+        TOTAL=$(jq '.suites | map(.specs | length) | add' $REPORT_FILE)
+        PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' $REPORT_FILE)
+        FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' $REPORT_FILE)
+        SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' $REPORT_FILE)
+
+        echo "total=$TOTAL" >> $GITHUB_OUTPUT
+        echo "passed=$PASSED" >> $GITHUB_OUTPUT
+        echo "failed=$FAILED" >> $GITHUB_OUTPUT
+        echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+
+    - name: Prepare artifacts (HTML Report + Screenshots + Logs)
+      run: |
+        mkdir -p artifacts
+        cp -r playwright-report artifacts/
+        if [ -d "test-results" ]; then cp -r test-results artifacts/; fi
+        if [ -f "test-log.txt" ]; then cp test-log.txt artifacts/; fi
+        if [ -f "test-results.json" ]; then cp test-results.json artifacts/; fi
+        zip -r playwright-report.zip artifacts
+
+    - name: Send Email with Report
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 587
+        username: "${{ secrets.BLUEDROP_AUTOMATION }}"
+        password: "${{ secrets.SMTP_PASSWORD }}"
+        subject: 🧪 Playwright Test Report - ${{ steps.date.outputs.date }}
+        to: jay5.citrusbug@gmail.com
+        from: bhargav.citrusbug@gmail.com
+        body: |
+          Hello Client,
+
+          The automated Playwright test suite has completed. Please find the attached report and diagnostic assets.
+
+          📅 **Report Date**: _${{ steps.date.outputs.date }}_
+
+          **🔍 Test Summary**
+          - Total Tests: **${{ steps.summary.outputs.total }}**
+          - ✅ Passed: **${{ steps.summary.outputs.passed }}**
+          - ❌ Failed: **${{ steps.summary.outputs.failed }}**
+          - ⏭️ Skipped: **${{ steps.summary.outputs.skipped }}**
+
+          📎 **Attachments**:
+          - HTML test report
+          - Screenshots for failed tests
+          - Console logs from test run
+
+          Please let us know if you'd like assistance reviewing the results.
+
+          Best regards,  
+          **QA Team**
+        attachments: playwright-report.zip
