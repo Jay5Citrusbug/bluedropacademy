@@ -54,17 +54,17 @@ jobs:
 
     - name: Deploy HTML Report to GitHub Pages
       run: |
-        git config --global user.email "github-actions@github.com"
-        git config --global user.name "GitHub Actions"
         mkdir gh-pages
-        cp -r "report-${{ steps.date.outputs.date }}" gh-pages/
+        cp -r playwright-report/* gh-pages/
         cd gh-pages
         git init
-        git checkout -b gh-pages
-        git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
         git add .
-        git commit -m "Deploy report ${{ steps.date.outputs.date }}"
-        git push --force origin gh-pages
+        git commit -m "Deploy Playwright report"
+        git branch -M gh-pages
+        git remote add origin https://github.com/${{ github.repository }}.git
+        git push -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
 
     - name: Send Email with Link to Report
       uses: dawidd6/action-send-mail@v3
