@@ -11,86 +11,92 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
 
-    - name: Run Playwright Tests
-      run: |
-        npx playwright test --project=chromium --workers=1 \
-          --reporter=json,html | tee test-log.txt
+      - name: Run Playwright Tests
+        run: |
+          npx playwright test --project=chromium --workers=1 \
+            --reporter=json,html | tee test-log.txt
 
-    - name: Get current date
-      id: date
-      run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
+      - name: Get current date
+        id: date
+        run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
 
-    - name: Extract test summary
-      id: summary
-      run: |
-        REPORT_FILE="test-results.json"
-        if [ ! -f "$REPORT_FILE" ]; then echo "Report file not found!" && exit 1; fi
-        TOTAL=$(jq '.suites | map(.specs | length) | add' $REPORT_FILE)
-        PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' $REPORT_FILE)
-        FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' $REPORT_FILE)
-        SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' $REPORT_FILE)
+      - name: Extract test summary
+        id: summary
+        run: |
+          REPORT_FILE="test-results.json"
+          if [ ! -f "$REPORT_FILE" ]; then echo "Report file not found!" && exit 1; fi
+          TOTAL=$(jq '.suites | map(.specs | length) | add' $REPORT_FILE)
+          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' $REPORT_FILE)
+          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' $REPORT_FILE)
+          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' $REPORT_FILE)
 
-        echo "total=$TOTAL" >> $GITHUB_OUTPUT
-        echo "passed=$PASSED" >> $GITHUB_OUTPUT
-        echo "failed=$FAILED" >> $GITHUB_OUTPUT
-        echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+          echo "total=$TOTAL" >> $GITHUB_OUTPUT
+          echo "passed=$PASSED" >> $GITHUB_OUTPUT
+          echo "failed=$FAILED" >> $GITHUB_OUTPUT
+          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
 
-    - name: Rename report folder with timestamp
-      run: mv playwright-report "report-${{ steps.date.outputs.date }}"
+      - name: Rename report folder with timestamp
+        run: mv playwright-report "report-${{ steps.date.outputs.date }}"
 
-    - name: Deploy HTML Report to GitHub Pages
-      run: |
-        mkdir gh-pages
-        cp -r playwright-report/* gh-pages/
-        cd gh-pages
-        git init
-        git config user.name "github-actions"
-        git config user.email "github-actions@github.com"
-        git add .
-        git commit -m "Deploy Playwright report"
-        git branch -M gh-pages
-        git remote add origin https://github.com/${{ github.repository }}.git
-        git push -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
+      - name: Deploy HTML Report to GitHub Pages
+        run: |
+          mkdir gh-pages
+          cp -r report-${{ steps.date.outputs.date }}/* gh-pages/
+          cd gh-pages
+          git init
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Deploy Playwright report"
+          git branch -M gh-pages
+          git remote add origin https://github.com/${{ github.repository }}.git
+          git push -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
 
-    - name: Send Email with Link to Report
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.gmail.com
-        server_port: 587
-        username: "${{ secrets.BLUEDROP_AUTOMATION }}"
-        password: "${{ secrets.SMTP_PASSWORD }}"
-        subject: 🧪 Playwright Test Report - ${{ steps.date.outputs.date }}
-        to: jay5.citrusbug@gmail.com
-        from: bhargav.citrusbug@gmail.com
-        body: |
-          Hello Client,
+      - name: Upload HTML Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: report-${{ steps.date.outputs.date }}/index.html
 
-          The automated Playwright test suite has completed.
+      - name: Send Email with Link to Report
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: "${{ secrets.BLUEDROP_AUTOMATION }}"
+          password: "${{ secrets.SMTP_PASSWORD }}"
+          subject: 🧪 Playwright Test Report - ${{ steps.date.outputs.date }}
+          to: jay5.citrusbug@gmail.com
+          from: bhargav.citrusbug@gmail.com
+          body: |
+            Hello Client,
 
-          📅 **Report Date**: _${{ steps.date.outputs.date }}_
+            The automated Playwright test suite has completed.
 
-          **🔍 Test Summary**
-          - Total Tests: **${{ steps.summary.outputs.total }}**
-          - ✅ Passed: **${{ steps.summary.outputs.passed }}**
-          - ❌ Failed: **${{ steps.summary.outputs.failed }}**
-          - ⏭️ Skipped: **${{ steps.summary.outputs.skipped }}**
+            📅 **Report Date**: _${{ steps.date.outputs.date }}_
 
-          🔗 **View the full HTML report here**:  
-          https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report-${{ steps.date.outputs.date }}/
+            **🔍 Test Summary**
+            - Total Tests: **${{ steps.summary.outputs.total }}**
+            - ✅ Passed: **${{ steps.summary.outputs.passed }}**
+            - ❌ Failed: **${{ steps.summary.outputs.failed }}**
+            - ⏭️ Skipped: **${{ steps.summary.outputs.skipped }}**
 
-          Best regards,  
-          **QA Team**
+            🔗 **View the full HTML report here**:  
+            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report-${{ steps.date.outputs.date }}/
+
+            Best regards,  
+            **QA Team**

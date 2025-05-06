@@ -36,7 +36,7 @@ export class chatbotPage {
   async SubmitbtnNotActive() {
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
     console.log('🔒 Verifying Submit button is disabled...');
-    await expect(frameLocator.locator(Chatbotlocator.SubmitBtn)).toBeEnabled();
+    await expect(frameLocator.locator(Chatbotlocator.SubmitBtn)).toBeDisabled();
   }
 
   async SubmitbtnActive() {
