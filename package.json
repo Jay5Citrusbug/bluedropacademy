@@ -11,7 +11,8 @@
     "@playwright/test": "^1.52.0",
     "@types/jest": "^29.5.14",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^22.15.2"
+    "@types/node": "^22.15.2",
+    "gh-pages": "^6.3.0"
   },
   "dependencies": {
     "@faker-js/faker": "^9.7.0",

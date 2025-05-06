@@ -32,8 +32,10 @@ export default defineConfig({
   //   ['allure-playwright']
   // ],
   // // 
-  reporter: [['html'], ['json', { outputFile: 'playwright-report/test-results.json' }]],
-
+  reporter: [
+    ['json', { outputFile: 'test-results.json' }],
+    ['html', { open: 'never' }]
+  ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
    //globalSetup: require.resolve('./globalsetup.ts'), // Path to your global setup file
