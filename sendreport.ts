@@ -21,6 +21,8 @@ const skipped = process.env.SKIPPED || '2';
 const repoOwner = process.env.REPO_OWNER || 'your-org';
 const repoName = process.env.REPO_NAME || 'your-repo';
 
+const reportUrl = `https://${repoOwner}.github.io/${repoName}/report-${reportDate}/index.html`;
+
 const msg = {
   to: 'jay5.citrusbug@gmail.com',
   from: 'bluedropacademy.aws@gmail.com',
@@ -37,7 +39,7 @@ const msg = {
       <li>⏭️ Skipped: <strong>${skipped}</strong></li>
     </ul>
     <p>🔗 <strong>View the full HTML report here</strong>:<br>
-    <a href="https://${repoOwner}.github.io/${repoName}/">${repoOwner}.github.io/${repoName}</a></p>
+    <a href="${reportUrl}">${reportUrl}</a>
     <p>Best regards,<br><strong>QA Team</strong></p>
   `,
 };
