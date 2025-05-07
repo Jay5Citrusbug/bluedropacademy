@@ -76,11 +76,6 @@ jobs:
           env: github-pages
           token: ${{ secrets.GITHUB_TOKEN }}
 
-
-      - name: Set report URL
-        id: report_url
-        run: echo "url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> $GITHUB_OUTPUT
-
       - name: Send Email Report via SendGrid API
         run: |
           node sendreport.ts
