@@ -2,9 +2,9 @@ name: Run Playwright Tests and Email Report
 
 on:
   push:
-    branches: [ main1 ]
+    branches: [ main ]
   pull_request:
-    branches: [ main1 ]
+    branches: [ main ]
 
 jobs:
   test:
