@@ -65,10 +65,10 @@ jobs:
       - name: Send Email with Link to Report
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com
+          server_address: smtp.sendgrid.net
           server_port: 587
-          username: "${{ secrets.BLUEDROP_AUTOMATION }}"
-          password: "${{ secrets.SMTP_PASSWORD }}"
+          username: "${{ secrets.SENDGRID_USERNAME }}"
+          password: "${{ secrets.SENDGRID_API_KEY }}"
           subject: 🧪 Playwright Test Report - ${{ steps.date.outputs.date }}
           to: jay5.citrusbug@gmail.com
           from: bhargav.citrusbug@gmail.com
@@ -86,7 +86,7 @@ jobs:
             - ⏭️ Skipped: **${{ steps.summary.outputs.skipped }}**
 
             🔗 **View the full HTML report here**:  
-            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report-${{ steps.date.outputs.date }}/
+            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
 
             Best regards,  
             **QA Team**
