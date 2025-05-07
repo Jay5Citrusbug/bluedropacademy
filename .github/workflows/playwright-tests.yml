@@ -56,16 +56,12 @@ jobs:
           echo "failed=$FAILED" >> $GITHUB_OUTPUT
           echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
 
-      - name: Rename report folder with timestamp
-        run: |
-          if [ ! -d "playwright-report" ]; then echo "Playwright report folder not found!" && exit 1; fi
-          mv playwright-report "report-${{ steps.date.outputs.date }}"
-
+      # Remove the "Rename report folder" step to avoid nested directories
       - name: Upload HTML Report Artifact
         uses: actions/upload-artifact@v4
         with:
           name: test-report
-          path: report-${{ steps.date.outputs.date }}/index.html
+          path: playwright-report/
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
