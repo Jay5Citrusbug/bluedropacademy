@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
       - name: Install dependencies
         run: npm ci
 
@@ -28,7 +31,7 @@ jobs:
       - name: Run Playwright Tests
         run: |
           npx playwright test --project=chromium --workers=1 \
-            --reporter=json,html | tee test-log.txt
+            --reporter=json=test-results.json,html | tee test-log.txt
 
       - name: Get current date
         id: date
@@ -37,12 +40,11 @@ jobs:
       - name: Extract test summary
         id: summary
         run: |
-          REPORT_FILE="test-results.json"
-          if [ ! -f "$REPORT_FILE" ]; then echo "Report file not found!" && exit 1; fi
-          TOTAL=$(jq '.suites | map(.specs | length) | add' $REPORT_FILE)
-          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' $REPORT_FILE)
-          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' $REPORT_FILE)
-          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' $REPORT_FILE)
+          if [ ! -f "test-results.json" ]; then echo "Report file not found!" && exit 1; fi
+          TOTAL=$(jq '.suites | map(.specs | length) | add' test-results.json)
+          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' test-results.json)
+          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)
+          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)
 
           echo "total=$TOTAL" >> $GITHUB_OUTPUT
           echo "passed=$PASSED" >> $GITHUB_OUTPUT
@@ -50,30 +52,30 @@ jobs:
           echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
 
       - name: Rename report folder with timestamp
-        run: mv playwright-report "report-${{ steps.date.outputs.date }}"
+        run: |
+          if [ ! -d "playwright-report" ]; then echo "Playwright report folder not found!" && exit 1; fi
+          mv playwright-report "report-${{ steps.date.outputs.date }}"
 
-      - name: Deploy HTML Report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.LOGIN_TOKEN }}
-          publish_dir: report-${{ steps.date.outputs.date }}
-
-      - name: Upload HTML Report
+      - name: Upload HTML Report Artifact
         uses: actions/upload-artifact@v4
         with:
           name: test-report
           path: report-${{ steps.date.outputs.date }}/index.html
 
+      - name: Set report URL
+        id: report_url
+        run: echo "url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> $GITHUB_OUTPUT
+
       - name: Send Email with Link to Report
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com
+          server_address: smtp.sendgrid.net
           server_port: 587
-          username: "${{ secrets.BLUEDROP_AUTOMATION }}"
-          password: "${{ secrets.SMTP_PASSWORD }}"
+          username: "${{ secrets.SENDGRID_USERNAME }}"
+          password: "${{ secrets.SENDGRID_API_KEY }}"
           subject: 🧪 Playwright Test Report - ${{ steps.date.outputs.date }}
-          to: qa.citrusbug@gmail.com
-          from: bhargav.citrusbug@gmail.com
+          to: jay5.citrusbug@gmail.com
+          from: bluedropacademy.aws@gmail.com
           body: |
             Hello Client,
 
@@ -88,7 +90,7 @@ jobs:
             - ⏭️ Skipped: **${{ steps.summary.outputs.skipped }}**
 
             🔗 **View the full HTML report here**:  
-            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report-${{ steps.date.outputs.date }}/
+            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
 
             Best regards,  
             **QA Team**
