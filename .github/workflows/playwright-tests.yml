@@ -71,7 +71,7 @@ jobs:
           password: "${{ secrets.SENDGRID_API_KEY }}"
           subject: 🧪 Playwright Test Report - ${{ steps.date.outputs.date }}
           to: jay5.citrusbug@gmail.com
-          from: bhargav.citrusbug@gmail.com
+          from: bluedropacademy.aws@gmail.com
           body: |
             Hello Client,
 
