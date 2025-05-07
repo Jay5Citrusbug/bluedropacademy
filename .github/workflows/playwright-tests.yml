@@ -39,7 +39,7 @@ jobs:
         run: npm ci
       
       - name: Get current time
-        id: date
+        id: current_date
         run: echo "current_date=$(date '+%H-%M-%S')" >> $GITHUB_OUTPUT
 
 
