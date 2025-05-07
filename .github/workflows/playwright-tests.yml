@@ -55,7 +55,7 @@ jobs:
       - name: Deploy HTML Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.LOGIN_TOKEN }}
           publish_dir: report-${{ steps.date.outputs.date }}
 
       - name: Upload HTML Report
@@ -72,7 +72,7 @@ jobs:
           username: "${{ secrets.BLUEDROP_AUTOMATION }}"
           password: "${{ secrets.SMTP_PASSWORD }}"
           subject: 🧪 Playwright Test Report - ${{ steps.date.outputs.date }}
-          to: jay5.citrusbug@gmail.com
+          to: qa.citrusbug@gmail.com
           from: bhargav.citrusbug@gmail.com
           body: |
             Hello Client,

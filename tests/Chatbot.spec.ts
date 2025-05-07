@@ -16,7 +16,6 @@ let adminPage: AdminPage;
 test.describe('BlueDrop Chatbot Test Suite', () => {
 
   test.beforeAll(async ({ browser }) => {
-    console.log('🔧 Setting up environment...');
     const adminContext = await browser.newContext();
     const adminPageInstance = await adminContext.newPage();
     const admin = new AdminPage(adminPageInstance);
