@@ -111,7 +111,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1221,
+                          "duration": 1300,
                           "errors": [],
                           "stdout": [
                             {
@@ -217,10 +217,10 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Johnnie\n"
+                              "text": "Filling name: Clark\n"
                             },
                             {
-                              "text": "Selecting gender: בת\n"
+                              "text": "Selecting gender: בן\n"
                             },
                             {
                               "text": "Checking visibility of \"Start\" button...\n"
@@ -243,7 +243,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:01.337Z",
+                          "startTime": "2025-05-07T07:16:11.912Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -272,7 +272,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1158,
+                          "duration": 544,
                           "errors": [],
                           "stdout": [
                             {
@@ -284,7 +284,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:38.068Z",
+                          "startTime": "2025-05-07T07:16:48.705Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -313,7 +313,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 314,
+                          "duration": 269,
                           "errors": [],
                           "stdout": [
                             {
@@ -322,7 +322,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:39.237Z",
+                          "startTime": "2025-05-07T07:16:49.258Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -351,7 +351,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 365,
+                          "duration": 298,
                           "errors": [],
                           "stdout": [
                             {
@@ -360,7 +360,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:39.562Z",
+                          "startTime": "2025-05-07T07:16:49.536Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -389,11 +389,11 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 286,
+                          "duration": 326,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "💬 Typing message: אתה יכול להסביר את השימוש של Erbium?\n"
+                              "text": "💬 Typing message: אתה יכול להסביר את השימוש של Phosphorus?\n"
                             },
                             {
                               "text": "✅ Verifying Submit button is enabled...\n"
@@ -401,7 +401,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:39.939Z",
+                          "startTime": "2025-05-07T07:16:49.843Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -424,7 +424,7 @@
                       "annotations": [
                         {
                           "type": "info",
-                          "description": "Bot response: 🥦 ברוקולי סלט: הרפתקה במטבח!\nדמייני את עצמך עומדת במרכז מטבח צעיר ובועט, ריחות מתובלים ממלאים את האוויר. 🌬️ פתאום, באור הזרקורים, עולה ברוקולי ירוק וזוהר — הכוכב של המתכון שלנו! ✨ איך אפשר להפוך את הירק הזה לסלט שיהפוך כל ארוחה לחגיגה? בואי נצא יחד למסע בישול צבעוני ומלא טעמים! 🎉\n🌱 תחילת המסע: חומרים ורכיבים\nלפני שנתחיל, חשוב לאסוף את כל החומרים שעל המנה שלנו. ההכנה קלה כמו לקפוץ משולחן לשולחן — הכל נעשה בכיף! 💃\n\nברוקולי – 1 ראש גדול, שהופך לירוק מבריק כשמבשלים אותו.\nגזר – 1 בינוני, מצריך חיתוכים מעודנים.\nאגוזי פקאן קלויים – חצי כוס, להוסיף פריכות ונפח. 🥜\nצימוקים – רבע כוס, מגע מתוק שלא תשכחי.\nבצל ירוק – 2-3 גביעים קצוצים, טעים ומרענן!\nרוטב יוגורט (או רוטב אחר) – ½ כוס (שיהיה טעים כמו שפתיים אחרי גלידה). 🍦\n\n🔥 שלב ההכנה: בואי נתחיל לבשל!\n\n\nהכנת הברוקולי: 🤓\n\nחתכי את הברוקולי לפרחים קטנים. שימי אותם בסיר עם מים רותחים למשך כ-2 דקות — רק עד שהם מתרככים מעט והופכים לירוקים עזים! 🥦\nאחרי השהייה במים הרותחים, הכניסי אותם למים קרים לעצור את הבישול — כך הם ישמרו על צבע וחיות!\n\n\n\nחיתוך הירקות: 🔪\n\nגזר? קצצי אותו לרצועות דקות או לעיגולים כדי להוסיף צבע וטעם."
+                          "description": "Bot response: 🍲 המסע המרגש של תבשיל צ'צ'ני עם טעמים חמצמצים!\nדמיין את עצמך נכנס למטבח חמים ומזמין, ריח של תבלינים מתערבב באוויר, ובמרכזו סיר גדול מבעבע. זה הזמן להתכונן להרפתקה קולינרית מדהימה עם תבשיל צ'צ'ני שהוא לא רק מנה — אלא חוויה! 🌍✨\n🎬 פתיחת הסיפור\nהסיפור שלנו מתחיל בעיירה קטנה בצ'צ'ניה, שם השמש זורחת על שדות ירוקים ומלאי חיים. הילד הראשון בוגר עם חיוך מתוק מביא תבלינים מהשוק המקומי, והשף המקומי מכין את התבשיל המפורסם שלו. “אבל למה הוא כל כך חמצמץ?” אתה שואל את עצמך, ונראה שהסוד טמון במתכון העתיק שעובר מדור לדור. 🤔💭\n🚀 המרכיבים – מה נדרש?\nלפני שנצלול לתוך ההכנה, בוא נוודא שיש לנו את כל מה שצריך. הנה רשימת המרכיבים העיקריים:\n\n500 גרם בשר (כבש או בקר) – חתוך לקוביות\n2 בצל בינוניים – קצוצים\n3 גזר – קלופים וחותכים לקוביות\n4 שיני שום – קצוצות\n4 תפוחי אדמה – קלופים וחתוכים לקוביות\n1 כוס עגבניות מרוסקות (או רסק עגבניות)\n2 כפות פפריקה מתוקה\n1/2 כוס מיץ לימון – זה הקסם החמצמץ! 🍋\n**מלח ופלפל לפי"
                         }
                       ],
                       "expectedStatus": "passed",
@@ -435,26 +435,26 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 9472,
+                          "duration": 9474,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "💬 Submitting query: \"איך מבשלים Broccoli Salad?\"\n"
+                              "text": "💬 Submitting query: \"איך מבשלים Tangy Chechen Stew?\"\n"
                             },
                             {
                               "text": "🕐 Waiting for bot response...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"🥦 ברוקולי סלט: הרפתקה במטבח!\nדמייני את עצמך עומדת במרכז מטבח צעיר ובועט, ריחות מתובלים ממלאים את האוויר. 🌬️ פתאום, באור הזרקורים, עולה ברוקולי ירוק וזוהר — הכוכב של המתכון שלנו! ✨ איך אפשר להפוך את הירק הזה לסלט שיהפוך כל ארוחה לחגיגה? בואי נצא יחד למסע בישול צבעוני ומלא טעמים! 🎉\n🌱 תחילת המסע: חומרים ורכיבים\nלפני שנתחיל, חשוב לאסוף את כל החומרים שעל המנה שלנו. ההכנה קלה כמו לקפוץ משולחן לשולחן — הכל נעשה בכיף! 💃\n\nברוקולי – 1 ראש גדול, שהופך לירוק מבריק כשמבשלים אותו.\nגזר – 1 בינוני, מצריך חיתוכים מעודנים.\nאגוזי פקאן קלויים – חצי כוס, להוסיף פריכות ונפח. 🥜\nצימוקים – רבע כוס, מגע מתוק שלא תשכחי.\nבצל ירוק – 2-3 גביעים קצוצים, טעים ומרענן!\nרוטב יוגורט (או רוטב אחר) – ½ כוס (שיהיה טעים כמו שפתיים אחרי גלידה). 🍦\n\n🔥 שלב ההכנה: בואי נתחיל לבשל!\n\n\nהכנת הברוקולי: 🤓\n\nחתכי את הברוקולי לפרחים קטנים. שימי אותם בסיר עם מים רותחים למשך כ-2 דקות — רק עד שהם מתרככים מעט והופכים לירוקים עזים! 🥦\nאחרי השהייה במים הרותחים, הכניסי אותם למים קרים לעצור את הבישול — כך הם ישמרו על צבע וחיות!\n\n\n\nחיתוך הירקות: 🔪\n\nגזר? קצצי אותו לרצועות דקות או לעיגולים כדי להוסיף צבע וטעם.\"\n"
+                              "text": "✅ Bot response received: \"🍲 המסע המרגש של תבשיל צ'צ'ני עם טעמים חמצמצים!\nדמיין את עצמך נכנס למטבח חמים ומזמין, ריח של תבלינים מתערבב באוויר, ובמרכזו סיר גדול מבעבע. זה הזמן להתכונן להרפתקה קולינרית מדהימה עם תבשיל צ'צ'ני שהוא לא רק מנה — אלא חוויה! 🌍✨\n🎬 פתיחת הסיפור\nהסיפור שלנו מתחיל בעיירה קטנה בצ'צ'ניה, שם השמש זורחת על שדות ירוקים ומלאי חיים. הילד הראשון בוגר עם חיוך מתוק מביא תבלינים מהשוק המקומי, והשף המקומי מכין את התבשיל המפורסם שלו. “אבל למה הוא כל כך חמצמץ?” אתה שואל את עצמך, ונראה שהסוד טמון במתכון העתיק שעובר מדור לדור. 🤔💭\n🚀 המרכיבים – מה נדרש?\nלפני שנצלול לתוך ההכנה, בוא נוודא שיש לנו את כל מה שצריך. הנה רשימת המרכיבים העיקריים:\n\n500 גרם בשר (כבש או בקר) – חתוך לקוביות\n2 בצל בינוניים – קצוצים\n3 גזר – קלופים וחותכים לקוביות\n4 שיני שום – קצוצות\n4 תפוחי אדמה – קלופים וחתוכים לקוביות\n1 כוס עגבניות מרוסקות (או רסק עגבניות)\n2 כפות פפריקה מתוקה\n1/2 כוס מיץ לימון – זה הקסם החמצמץ! 🍋\n**מלח ופלפל לפי\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:40.234Z",
+                          "startTime": "2025-05-07T07:16:50.177Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: 🥦 ברוקולי סלט: הרפתקה במטבח!\nדמייני את עצמך עומדת במרכז מטבח צעיר ובועט, ריחות מתובלים ממלאים את האוויר. 🌬️ פתאום, באור הזרקורים, עולה ברוקולי ירוק וזוהר — הכוכב של המתכון שלנו! ✨ איך אפשר להפוך את הירק הזה לסלט שיהפוך כל ארוחה לחגיגה? בואי נצא יחד למסע בישול צבעוני ומלא טעמים! 🎉\n🌱 תחילת המסע: חומרים ורכיבים\nלפני שנתחיל, חשוב לאסוף את כל החומרים שעל המנה שלנו. ההכנה קלה כמו לקפוץ משולחן לשולחן — הכל נעשה בכיף! 💃\n\nברוקולי – 1 ראש גדול, שהופך לירוק מבריק כשמבשלים אותו.\nגזר – 1 בינוני, מצריך חיתוכים מעודנים.\nאגוזי פקאן קלויים – חצי כוס, להוסיף פריכות ונפח. 🥜\nצימוקים – רבע כוס, מגע מתוק שלא תשכחי.\nבצל ירוק – 2-3 גביעים קצוצים, טעים ומרענן!\nרוטב יוגורט (או רוטב אחר) – ½ כוס (שיהיה טעים כמו שפתיים אחרי גלידה). 🍦\n\n🔥 שלב ההכנה: בואי נתחיל לבשל!\n\n\nהכנת הברוקולי: 🤓\n\nחתכי את הברוקולי לפרחים קטנים. שימי אותם בסיר עם מים רותחים למשך כ-2 דקות — רק עד שהם מתרככים מעט והופכים לירוקים עזים! 🥦\nאחרי השהייה במים הרותחים, הכניסי אותם למים קרים לעצור את הבישול — כך הם ישמרו על צבע וחיות!\n\n\n\nחיתוך הירקות: 🔪\n\nגזר? קצצי אותו לרצועות דקות או לעיגולים כדי להוסיף צבע וטעם."
+                              "description": "Bot response: 🍲 המסע המרגש של תבשיל צ'צ'ני עם טעמים חמצמצים!\nדמיין את עצמך נכנס למטבח חמים ומזמין, ריח של תבלינים מתערבב באוויר, ובמרכזו סיר גדול מבעבע. זה הזמן להתכונן להרפתקה קולינרית מדהימה עם תבשיל צ'צ'ני שהוא לא רק מנה — אלא חוויה! 🌍✨\n🎬 פתיחת הסיפור\nהסיפור שלנו מתחיל בעיירה קטנה בצ'צ'ניה, שם השמש זורחת על שדות ירוקים ומלאי חיים. הילד הראשון בוגר עם חיוך מתוק מביא תבלינים מהשוק המקומי, והשף המקומי מכין את התבשיל המפורסם שלו. “אבל למה הוא כל כך חמצמץ?” אתה שואל את עצמך, ונראה שהסוד טמון במתכון העתיק שעובר מדור לדור. 🤔💭\n🚀 המרכיבים – מה נדרש?\nלפני שנצלול לתוך ההכנה, בוא נוודא שיש לנו את כל מה שצריך. הנה רשימת המרכיבים העיקריים:\n\n500 גרם בשר (כבש או בקר) – חתוך לקוביות\n2 בצל בינוניים – קצוצים\n3 גזר – קלופים וחותכים לקוביות\n4 שיני שום – קצוצות\n4 תפוחי אדמה – קלופים וחתוכים לקוביות\n1 כוס עגבניות מרוסקות (או רסק עגבניות)\n2 כפות פפריקה מתוקה\n1/2 כוס מיץ לימון – זה הקסם החמצמץ! 🍋\n**מלח ופלפל לפי"
                             }
                           ],
                           "attachments": []
@@ -484,7 +484,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 5366,
+                          "duration": 5481,
                           "errors": [],
                           "stdout": [
                             {
@@ -493,7 +493,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:49.713Z",
+                          "startTime": "2025-05-07T07:16:59.661Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -522,7 +522,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 340,
+                          "duration": 280,
                           "errors": [],
                           "stdout": [
                             {
@@ -531,7 +531,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:55.088Z",
+                          "startTime": "2025-05-07T07:17:05.152Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -560,7 +560,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 770,
+                          "duration": 1339,
                           "errors": [],
                           "stdout": [
                             {
@@ -569,7 +569,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:55.439Z",
+                          "startTime": "2025-05-07T07:17:05.441Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -598,7 +598,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 751,
+                          "duration": 813,
                           "errors": [],
                           "stdout": [
                             {
@@ -607,7 +607,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:56.220Z",
+                          "startTime": "2025-05-07T07:17:06.789Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -636,7 +636,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 361,
+                          "duration": 344,
                           "errors": [],
                           "stdout": [
                             {
@@ -645,7 +645,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:56.978Z",
+                          "startTime": "2025-05-07T07:17:07.612Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -668,7 +668,7 @@
                       "annotations": [
                         {
                           "type": "info",
-                          "description": "Bot response: 🌌 The Enigmatic World of Quantum Mechanics: A Journey into the Microcosmos\nImagine standing on the edge of a cosmic cliff, overlooking a vast, swirling sea of possibilities. 🌊 Below you lies a world so small that it defies the very laws of our everyday experiences. Welcome to quantum mechanics, where particles dance in ways that would make even the most skilled ballet dancer envious! 🩰 But don’t worry; we’re going to explore this fascinating realm together, unraveling its mysteries like a treasure map leading us to unexpected delights! 🗺️✨\n🌱 The Beginning of Our Adventure: What is Quantum Mechanics?\nQuantum mechanics is like the secret handbook for understanding the universe at its tiniest scales—the scale of atoms and subatomic particles. At this level, things get bizarre. Imagine if your favorite video game suddenly threw in crazy power-ups or strange gravity shifts every time you pressed a button! 🎮 That's a bit like what happens with quantum particles. They can exist in multiple states at once, and their behaviors can seem almost magical! 🎩✨\nIn classical physics, we understand that objects have clear paths and predictable outcomes. But when we dive into quantum territory, we find ourselves in a land where particles can behave as both waves and particles — yes, they’re like shape-shifting ninjas! 🥷💨 This duality leads us to one of the most mind-bending concepts: superposition. Imagine flipping a coin; while it's spinning in the air, it’s not just heads or tails—it’s both! ⚖️ That’s superposition!\n🔍 The Middle of Our Exploration: Key Concepts\nNow that we've set our stage, let’s delve deeper into some key ideas that shape our understanding of this weird world:\n\n\nWave-Particle Duality: Just like two sides of a coin, quantum objects can act as either particles or waves. Light behaves this way too—sometimes it travels as a wave (think ripples on water) and sometimes as discrete packets called photons! 🌈✨\n\n\nUncertainty Principle: Pioneered by Werner Heisenberg (nope, not the guy from \"Breaking Bad\"), this principle tells us that we cannot know both the position and momentum of a particle with absolute certainty at the same time. The more accurately we try to measure one, the less accurately we can measure the other. It’s like trying to capture smoke with your"
+                          "description": "Bot response: 🏰 The Enigmatic World of Quantum Physics: A Journey Beyond the Ordinary 🌌\nImagine stepping into a realm where the rules of reality twist and turn like a funhouse mirror. You’re not just an observer; you’re an adventurer exploring a mystical land filled with strange particles, incredible forces, and mind-boggling phenomena. Welcome to the world of quantum physics! 🌀✨\n🎬 Opening Scene\nPicture a small, dimly lit laboratory, bustling with excitement. Scientists in lab coats scurry about, peering through microscopes and scribbling equations on whiteboards. Suddenly, a loud bang echoes as someone accidentally knocks over a container of marbles (oops! 😅). But these aren’t just any marbles; they represent tiny particles that exist in the quantum world. What’s that? You hear whispers of “superposition” and “entanglement.” Your curiosity is piqued — what are these mysterious concepts that govern this strange universe? 🤔💭\n🚀 The Quantum Realm: What Is It?\nAt its core, quantum physics is the branch of science that seeks to understand the behavior of matter and energy at the smallest scales — the level of atoms and subatomic particles! 🌌 This world is governed by peculiar rules that differ dramatically from those we experience in our everyday lives. While classical physics describes how large objects move and interact, quantum physics unveils a hidden reality where particles can exist in multiple states at once — a phenomenon known as superposition!\n🌟 Superposition: The Magical Trick!\nImagine flipping a coin. It can either be heads or tails, right? Not in quantum mechanics! In this whimsical world, when you flip a quantum coin (let's call it “Q-coin”), it can be both heads and tails simultaneously until someone takes a peek to check its state! This magical trick allows particles like electrons to exist in various positions or states until measured. It's like having your cake and eating it too — all at once! 🍰🪄\n🔗 Entanglement: A Cosmic Connection\nNow let’s venture deeper into the quantum jungle with entanglement! Imagine two magical dice thrown across the universe. When one die lands on six, instantly (and I mean instantly) the other die will show six too — no matter how far apart they are! 🌀 This peculiar connection occurs because entangled particles"
                         }
                       ],
                       "expectedStatus": "passed",
@@ -679,23 +679,23 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 9456,
+                          "duration": 9446,
                           "errors": [],
                           "stdout": [
                             {
                               "text": "🔘 Clicking Predefined button...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"🌌 The Enigmatic World of Quantum Mechanics: A Journey into the Microcosmos\nImagine standing on the edge of a cosmic cliff, overlooking a vast, swirling sea of possibilities. 🌊 Below you lies a world so small that it defies the very laws of our everyday experiences. Welcome to quantum mechanics, where particles dance in ways that would make even the most skilled ballet dancer envious! 🩰 But don’t worry; we’re going to explore this fascinating realm together, unraveling its mysteries like a treasure map leading us to unexpected delights! 🗺️✨\n🌱 The Beginning of Our Adventure: What is Quantum Mechanics?\nQuantum mechanics is like the secret handbook for understanding the universe at its tiniest scales—the scale of atoms and subatomic particles. At this level, things get bizarre. Imagine if your favorite video game suddenly threw in crazy power-ups or strange gravity shifts every time you pressed a button! 🎮 That's a bit like what happens with quantum particles. They can exist in multiple states at once, and their behaviors can seem almost magical! 🎩✨\nIn classical physics, we understand that objects have clear paths and predictable outcomes. But when we dive into quantum territory, we find ourselves in a land where particles can behave as both waves and particles — yes, they’re like shape-shifting ninjas! 🥷💨 This duality leads us to one of the most mind-bending concepts: superposition. Imagine flipping a coin; while it's spinning in the air, it’s not just heads or tails—it’s both! ⚖️ That’s superposition!\n🔍 The Middle of Our Exploration: Key Concepts\nNow that we've set our stage, let’s delve deeper into some key ideas that shape our understanding of this weird world:\n\n\nWave-Particle Duality: Just like two sides of a coin, quantum objects can act as either particles or waves. Light behaves this way too—sometimes it travels as a wave (think ripples on water) and sometimes as discrete packets called photons! 🌈✨\n\n\nUncertainty Principle: Pioneered by Werner Heisenberg (nope, not the guy from \"Breaking Bad\"), this principle tells us that we cannot know both the position and momentum of a particle with absolute certainty at the same time. The more accurately we try to measure one, the less accurately we can measure the other. It’s like trying to capture smoke with your\"\n"
+                              "text": "✅ Bot response received: \"🏰 The Enigmatic World of Quantum Physics: A Journey Beyond the Ordinary 🌌\nImagine stepping into a realm where the rules of reality twist and turn like a funhouse mirror. You’re not just an observer; you’re an adventurer exploring a mystical land filled with strange particles, incredible forces, and mind-boggling phenomena. Welcome to the world of quantum physics! 🌀✨\n🎬 Opening Scene\nPicture a small, dimly lit laboratory, bustling with excitement. Scientists in lab coats scurry about, peering through microscopes and scribbling equations on whiteboards. Suddenly, a loud bang echoes as someone accidentally knocks over a container of marbles (oops! 😅). But these aren’t just any marbles; they represent tiny particles that exist in the quantum world. What’s that? You hear whispers of “superposition” and “entanglement.” Your curiosity is piqued — what are these mysterious concepts that govern this strange universe? 🤔💭\n🚀 The Quantum Realm: What Is It?\nAt its core, quantum physics is the branch of science that seeks to understand the behavior of matter and energy at the smallest scales — the level of atoms and subatomic particles! 🌌 This world is governed by peculiar rules that differ dramatically from those we experience in our everyday lives. While classical physics describes how large objects move and interact, quantum physics unveils a hidden reality where particles can exist in multiple states at once — a phenomenon known as superposition!\n🌟 Superposition: The Magical Trick!\nImagine flipping a coin. It can either be heads or tails, right? Not in quantum mechanics! In this whimsical world, when you flip a quantum coin (let's call it “Q-coin”), it can be both heads and tails simultaneously until someone takes a peek to check its state! This magical trick allows particles like electrons to exist in various positions or states until measured. It's like having your cake and eating it too — all at once! 🍰🪄\n🔗 Entanglement: A Cosmic Connection\nNow let’s venture deeper into the quantum jungle with entanglement! Imagine two magical dice thrown across the universe. When one die lands on six, instantly (and I mean instantly) the other die will show six too — no matter how far apart they are! 🌀 This peculiar connection occurs because entangled particles\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:57:57.347Z",
+                          "startTime": "2025-05-07T07:17:07.964Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: 🌌 The Enigmatic World of Quantum Mechanics: A Journey into the Microcosmos\nImagine standing on the edge of a cosmic cliff, overlooking a vast, swirling sea of possibilities. 🌊 Below you lies a world so small that it defies the very laws of our everyday experiences. Welcome to quantum mechanics, where particles dance in ways that would make even the most skilled ballet dancer envious! 🩰 But don’t worry; we’re going to explore this fascinating realm together, unraveling its mysteries like a treasure map leading us to unexpected delights! 🗺️✨\n🌱 The Beginning of Our Adventure: What is Quantum Mechanics?\nQuantum mechanics is like the secret handbook for understanding the universe at its tiniest scales—the scale of atoms and subatomic particles. At this level, things get bizarre. Imagine if your favorite video game suddenly threw in crazy power-ups or strange gravity shifts every time you pressed a button! 🎮 That's a bit like what happens with quantum particles. They can exist in multiple states at once, and their behaviors can seem almost magical! 🎩✨\nIn classical physics, we understand that objects have clear paths and predictable outcomes. But when we dive into quantum territory, we find ourselves in a land where particles can behave as both waves and particles — yes, they’re like shape-shifting ninjas! 🥷💨 This duality leads us to one of the most mind-bending concepts: superposition. Imagine flipping a coin; while it's spinning in the air, it’s not just heads or tails—it’s both! ⚖️ That’s superposition!\n🔍 The Middle of Our Exploration: Key Concepts\nNow that we've set our stage, let’s delve deeper into some key ideas that shape our understanding of this weird world:\n\n\nWave-Particle Duality: Just like two sides of a coin, quantum objects can act as either particles or waves. Light behaves this way too—sometimes it travels as a wave (think ripples on water) and sometimes as discrete packets called photons! 🌈✨\n\n\nUncertainty Principle: Pioneered by Werner Heisenberg (nope, not the guy from \"Breaking Bad\"), this principle tells us that we cannot know both the position and momentum of a particle with absolute certainty at the same time. The more accurately we try to measure one, the less accurately we can measure the other. It’s like trying to capture smoke with your"
+                              "description": "Bot response: 🏰 The Enigmatic World of Quantum Physics: A Journey Beyond the Ordinary 🌌\nImagine stepping into a realm where the rules of reality twist and turn like a funhouse mirror. You’re not just an observer; you’re an adventurer exploring a mystical land filled with strange particles, incredible forces, and mind-boggling phenomena. Welcome to the world of quantum physics! 🌀✨\n🎬 Opening Scene\nPicture a small, dimly lit laboratory, bustling with excitement. Scientists in lab coats scurry about, peering through microscopes and scribbling equations on whiteboards. Suddenly, a loud bang echoes as someone accidentally knocks over a container of marbles (oops! 😅). But these aren’t just any marbles; they represent tiny particles that exist in the quantum world. What’s that? You hear whispers of “superposition” and “entanglement.” Your curiosity is piqued — what are these mysterious concepts that govern this strange universe? 🤔💭\n🚀 The Quantum Realm: What Is It?\nAt its core, quantum physics is the branch of science that seeks to understand the behavior of matter and energy at the smallest scales — the level of atoms and subatomic particles! 🌌 This world is governed by peculiar rules that differ dramatically from those we experience in our everyday lives. While classical physics describes how large objects move and interact, quantum physics unveils a hidden reality where particles can exist in multiple states at once — a phenomenon known as superposition!\n🌟 Superposition: The Magical Trick!\nImagine flipping a coin. It can either be heads or tails, right? Not in quantum mechanics! In this whimsical world, when you flip a quantum coin (let's call it “Q-coin”), it can be both heads and tails simultaneously until someone takes a peek to check its state! This magical trick allows particles like electrons to exist in various positions or states until measured. It's like having your cake and eating it too — all at once! 🍰🪄\n🔗 Entanglement: A Cosmic Connection\nNow let’s venture deeper into the quantum jungle with entanglement! Imagine two magical dice thrown across the universe. When one die lands on six, instantly (and I mean instantly) the other die will show six too — no matter how far apart they are! 🌀 This peculiar connection occurs because entangled particles"
                             }
                           ],
                           "attachments": []
@@ -725,7 +725,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 9932,
+                          "duration": 8329,
                           "errors": [],
                           "stdout": [
                             {
@@ -743,7 +743,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:58:06.818Z",
+                          "startTime": "2025-05-07T07:17:17.422Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -772,7 +772,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2321,
+                          "duration": 1849,
                           "errors": [],
                           "stdout": [
                             {
@@ -796,7 +796,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:58:16.757Z",
+                          "startTime": "2025-05-07T07:17:25.760Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -851,7 +851,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1433,
+                          "duration": 844,
                           "errors": [],
                           "stdout": [
                             {
@@ -954,10 +954,10 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Johnnie\n"
+                              "text": "Filling name: Clark\n"
                             },
                             {
-                              "text": "Selecting gender: בת\n"
+                              "text": "Selecting gender: בן\n"
                             },
                             {
                               "text": "Checking visibility of \"Start\" button...\n"
@@ -977,7 +977,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:58:19.250Z",
+                          "startTime": "2025-05-07T07:17:27.785Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1006,7 +1006,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1340,
+                          "duration": 897,
                           "errors": [],
                           "stdout": [
                             {
@@ -1018,7 +1018,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:58:53.438Z",
+                          "startTime": "2025-05-07T07:18:01.297Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1047,7 +1047,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 394,
+                          "duration": 274,
                           "errors": [],
                           "stdout": [
                             {
@@ -1059,7 +1059,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:58:54.788Z",
+                          "startTime": "2025-05-07T07:18:02.202Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1088,19 +1088,19 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2289,
+                          "duration": 2294,
                           "errors": [],
                           "stdout": [
                             {
                               "text": "✅ TC_18: No result in chat history\n"
                             },
                             {
-                              "text": "🔍 Searching for non-existent history: \"איך מבשלים Turkey Steak?\"\n"
+                              "text": "🔍 Searching for non-existent history: \"איך מבשלים Bunny Chow?\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:58:55.194Z",
+                          "startTime": "2025-05-07T07:18:02.484Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1129,7 +1129,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 354,
+                          "duration": 369,
                           "errors": [],
                           "stdout": [
                             {
@@ -1141,7 +1141,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:58:57.491Z",
+                          "startTime": "2025-05-07T07:18:04.784Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1170,7 +1170,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2261,
+                          "duration": 2242,
                           "errors": [],
                           "stdout": [
                             {
@@ -1194,7 +1194,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:58:57.852Z",
+                          "startTime": "2025-05-07T07:18:05.160Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1223,7 +1223,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1056,
+                          "duration": 1487,
                           "errors": [],
                           "stdout": [
                             {
@@ -1235,7 +1235,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:59:00.122Z",
+                          "startTime": "2025-05-07T07:18:07.410Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1264,7 +1264,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2776,
+                          "duration": 1696,
                           "errors": [],
                           "stdout": [
                             {
@@ -1273,7 +1273,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T06:59:01.185Z",
+                          "startTime": "2025-05-07T07:18:08.904Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1295,8 +1295,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-07T06:56:58.501Z",
-    "duration": 125839.38799999999,
+    "startTime": "2025-05-07T07:16:08.944Z",
+    "duration": 122007.826,
     "expected": 22,
     "skipped": 0,
     "unexpected": 0,
