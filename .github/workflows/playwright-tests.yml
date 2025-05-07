@@ -62,31 +62,35 @@ jobs:
           name: test-report
           path: report-${{ steps.date.outputs.date }}/index.html
 
-      - name: Send Email with Link to Report
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.sendgrid.net
-          server_port: 587
-          username: "${{ secrets.SENDGRID_USERNAME }}"
-          password: "${{ secrets.SENDGRID_API_KEY }}"
-          subject: 🧪 Playwright Test Report - ${{ steps.date.outputs.date }}
-          to: jay5.citrusbug@gmail.com
-          from: noam@bluedropacademy.com
-          body: |
-            Hello Client,
+      - name: Set report URL
+        id: report_url
+        run: echo "url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> $GITHUB_OUTPUT
 
-            The automated Playwright test suite has completed.
+      # - name: Send Email with Link to Report
+      #   uses: dawidd6/action-send-mail@v3
+      #   with:
+      #     server_address: smtp.sendgrid.net
+      #     server_port: 587
+      #     username: "${{ secrets.SENDGRID_USERNAME }}"
+      #     password: "${{ secrets.SENDGRID_API_KEY }}"
+      #     subject: 🧪 Playwright Test Report - ${{ steps.date.outputs.date }}
+      #     to: jay5.citrusbug@gmail.com
+      #     from: noam@bluedropacademy.com
+      #     body: |
+      #       Hello Client,
 
-            📅 **Report Date**: _${{ steps.date.outputs.date }}_
+      #       The automated Playwright test suite has completed.
 
-            **🔍 Test Summary**
-            - Total Tests: **${{ steps.summary.outputs.total }}**
-            - ✅ Passed: **${{ steps.summary.outputs.passed }}**
-            - ❌ Failed: **${{ steps.summary.outputs.failed }}**
-            - ⏭️ Skipped: **${{ steps.summary.outputs.skipped }}**
+      #       📅 **Report Date**: _${{ steps.date.outputs.date }}_
 
-            🔗 **View the full HTML report here**:  
-            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+      #       **🔍 Test Summary**
+      #       - Total Tests: **${{ steps.summary.outputs.total }}**
+      #       - ✅ Passed: **${{ steps.summary.outputs.passed }}**
+      #       - ❌ Failed: **${{ steps.summary.outputs.failed }}**
+      #       - ⏭️ Skipped: **${{ steps.summary.outputs.skipped }}**
 
-            Best regards,  
-            **QA Team**
+      #       🔗 **View the full HTML report here**:  
+      #       https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+
+      #       Best regards,  
+      #       **QA Team**
