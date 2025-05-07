@@ -1,1 +1,1 @@
-# bluedropacademy.
+# bluedropacademy
