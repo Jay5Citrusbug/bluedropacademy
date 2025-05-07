@@ -66,31 +66,31 @@ jobs:
         id: report_url
         run: echo "url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> $GITHUB_OUTPUT
 
-      # - name: Send Email with Link to Report
-      #   uses: dawidd6/action-send-mail@v3
-      #   with:
-      #     server_address: smtp.sendgrid.net
-      #     server_port: 587
-      #     username: "${{ secrets.SENDGRID_USERNAME }}"
-      #     password: "${{ secrets.SENDGRID_API_KEY }}"
-      #     subject: 🧪 Playwright Test Report - ${{ steps.date.outputs.date }}
-      #     to: jay5.citrusbug@gmail.com
-      #     from: noam@bluedropacademy.com
-      #     body: |
-      #       Hello Client,
+      - name: Send Email with Link to Report
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.sendgrid.net
+          server_port: 587
+          username: "${{ secrets.SENDGRID_USERNAME }}"
+          password: "${{ secrets.SENDGRID_API_KEY }}"
+          subject: 🧪 Playwright Test Report - ${{ steps.date.outputs.date }}
+          to: jay5.citrusbug@gmail.com
+          from: bluedropacademy.aws@gmail.com
+          body: |
+            Hello Client,
 
-      #       The automated Playwright test suite has completed.
+            The automated Playwright test suite has completed.
 
-      #       📅 **Report Date**: _${{ steps.date.outputs.date }}_
+            📅 **Report Date**: _${{ steps.date.outputs.date }}_
 
-      #       **🔍 Test Summary**
-      #       - Total Tests: **${{ steps.summary.outputs.total }}**
-      #       - ✅ Passed: **${{ steps.summary.outputs.passed }}**
-      #       - ❌ Failed: **${{ steps.summary.outputs.failed }}**
-      #       - ⏭️ Skipped: **${{ steps.summary.outputs.skipped }}**
+            **🔍 Test Summary**
+            - Total Tests: **${{ steps.summary.outputs.total }}**
+            - ✅ Passed: **${{ steps.summary.outputs.passed }}**
+            - ❌ Failed: **${{ steps.summary.outputs.failed }}**
+            - ⏭️ Skipped: **${{ steps.summary.outputs.skipped }}**
 
-      #       🔗 **View the full HTML report here**:  
-      #       https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+            🔗 **View the full HTML report here**:  
+            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
 
-      #       Best regards,  
-      #       **QA Team**
+            Best regards,  
+            **QA Team**
