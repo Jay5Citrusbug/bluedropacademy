@@ -68,7 +68,7 @@ jobs:
 
       - name: Send Email Report via SendGrid API
         run: |
-          node send-report-email.js
+          node sendreport.ts
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           REPORT_DATE: ${{ steps.date.outputs.date }}
