@@ -23,7 +23,7 @@ const repoName = process.env.REPO_NAME || 'your-repo';
 
 const msg = {
   to: 'jay5.citrusbug@gmail.com',
-  from: 'no-reply@bluedropacademy.com', // Must be verified in SendGrid
+  from: 'bluedropacademy.aws@gmail.com',
   subject: `🧪 Playwright Test Report - ${reportDate}`,
   html: `
     <p>Hello Client,</p>
