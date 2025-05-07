@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     permissions:
@@ -56,31 +56,45 @@ jobs:
           echo "failed=$FAILED" >> $GITHUB_OUTPUT
           echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
 
-      # Remove the "Rename report folder" step to avoid nested directories
-      - name: Upload HTML Report Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-report
-          path: playwright-report/
+      - name: Rename report folder with timestamp
+        run: |
+          if [ ! -d "playwright-report" ]; then echo "Playwright report folder not found!" && exit 1; fi
+          mv playwright-report "report-${{ steps.date.outputs.date }}"
 
+      - name: Upload report as GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: report-${{ steps.date.outputs.date }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        uses: actions/deploy-pages@v3
-        with:
-          artifact_name: test-report
-          target_branch: gh-pages
-          env: github-pages
-          token: ${{ secrets.GITHUB_TOKEN }}
+        id: deploy
+        uses: actions/deploy-pages@v4
 
+  notify:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    steps:
       - name: Send Email Report via SendGrid API
         run: |
           node sendreport.ts
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          REPORT_DATE: ${{ steps.date.outputs.date }}
-          TOTAL: ${{ steps.summary.outputs.total }}
-          PASSED: ${{ steps.summary.outputs.passed }}
-          FAILED: ${{ steps.summary.outputs.failed }}
-          SKIPPED: ${{ steps.summary.outputs.skipped }}
+          REPORT_DATE: ${{ needs.build.outputs.date }}
+          TOTAL: ${{ needs.build.outputs.total }}
+          PASSED: ${{ needs.build.outputs.passed }}
+          FAILED: ${{ needs.build.outputs.failed }}
+          SKIPPED: ${{ needs.build.outputs.skipped }}
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
+          REPORT_URL: ${{ needs.deploy.outputs.page_url }}/report-${{ needs.build.outputs.date }}/index.html
