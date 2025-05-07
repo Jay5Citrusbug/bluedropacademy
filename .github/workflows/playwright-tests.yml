@@ -21,6 +21,7 @@ jobs:
       passed: ${{ steps.summary.outputs.passed }}
       failed: ${{ steps.summary.outputs.failed }}
       skipped: ${{ steps.summary.outputs.skipped }}
+      current_date: ${{ steps.summary.outputs.current_date }}
 
     steps:
       - name: Checkout code
@@ -36,6 +37,11 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+      
+      - name: Get current time
+        id: date
+        run: echo "current_date=$(date '+%H-%M-%S')" >> $GITHUB_OUTPUT
+
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
@@ -113,7 +119,7 @@ jobs:
           node sendreport.ts
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          REPORT_DATE: ${{ needs.build.outputs.date }}
+          REPORT_DATE: ${{ needs.build.outputs.current_date }}
           TOTAL: ${{ needs.build.outputs.total }}
           PASSED: ${{ needs.build.outputs.passed }}
           FAILED: ${{ needs.build.outputs.failed }}

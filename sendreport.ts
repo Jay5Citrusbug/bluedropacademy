@@ -26,14 +26,14 @@ const reportUrl = `https://${repoOwner}.github.io/${repoName}`;
 const msg = {
   to: 'jay5.citrusbug@gmail.com',
   from: 'bluedropacademy.aws@gmail.com',
-  subject: `🧪 Daily Automation Test Report - ${reportDate}`,
+  subject: `Daily Automation Test Report - ${reportDate}`,
   html: `
     <p>Hello Bluedrop Academy,</p>
     <p>The automated Playwright test suite has completed.</p>
     <p>📅 <strong>Report Date</strong>: <em>${reportDate}</em></p>
     <p><strong>🔍 Test Summary</strong></p>
     <ul>
-      <li>Total Tests: <strong>${total}</strong></li>
+      <li>Total Tests: <strong>${passed+failed+skipped}</strong></li>
       <li>✅ Passed: <strong>${passed}</strong></li>
       <li>❌ Failed: <strong>${failed}</strong></li>
       <li>⏭️ Skipped: <strong>${skipped}</strong></li>
