@@ -33,7 +33,7 @@ const msg = {
     <p>📅 <strong>Report Date</strong>: <em>${reportDate}</em></p>
     <p><strong>🔍 Test Summary</strong></p>
     <ul>
-      <li>Total Tests: <strong>${passed+failed+skipped}</strong></li>
+      <li>Total Tests: <strong>${Number(passed) + Number(failed) + Number(skipped)}</strong></li>
       <li>✅ Passed: <strong>${passed}</strong></li>
       <li>❌ Failed: <strong>${failed}</strong></li>
       <li>⏭️ Skipped: <strong>${skipped}</strong></li>
