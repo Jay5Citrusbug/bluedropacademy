@@ -111,7 +111,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1300,
+                          "duration": 626,
                           "errors": [],
                           "stdout": [
                             {
@@ -217,10 +217,10 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Clark\n"
+                              "text": "Filling name: Sheila\n"
                             },
                             {
-                              "text": "Selecting gender: בן\n"
+                              "text": "Selecting gender: בת\n"
                             },
                             {
                               "text": "Checking visibility of \"Start\" button...\n"
@@ -243,7 +243,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:16:11.912Z",
+                          "startTime": "2025-05-12T06:55:05.087Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -272,7 +272,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 544,
+                          "duration": 1021,
                           "errors": [],
                           "stdout": [
                             {
@@ -284,7 +284,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:16:48.705Z",
+                          "startTime": "2025-05-12T06:55:28.019Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -313,7 +313,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 269,
+                          "duration": 195,
                           "errors": [],
                           "stdout": [
                             {
@@ -322,7 +322,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:16:49.258Z",
+                          "startTime": "2025-05-12T06:55:29.045Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -351,7 +351,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 298,
+                          "duration": 201,
                           "errors": [],
                           "stdout": [
                             {
@@ -360,7 +360,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:16:49.536Z",
+                          "startTime": "2025-05-12T06:55:29.246Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -389,11 +389,11 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 326,
+                          "duration": 204,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "💬 Typing message: אתה יכול להסביר את השימוש של Phosphorus?\n"
+                              "text": "💬 Typing message: אתה יכול להסביר את השימוש של Boron?\n"
                             },
                             {
                               "text": "✅ Verifying Submit button is enabled...\n"
@@ -401,7 +401,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:16:49.843Z",
+                          "startTime": "2025-05-12T06:55:29.452Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -424,7 +424,7 @@
                       "annotations": [
                         {
                           "type": "info",
-                          "description": "Bot response: 🍲 המסע המרגש של תבשיל צ'צ'ני עם טעמים חמצמצים!\nדמיין את עצמך נכנס למטבח חמים ומזמין, ריח של תבלינים מתערבב באוויר, ובמרכזו סיר גדול מבעבע. זה הזמן להתכונן להרפתקה קולינרית מדהימה עם תבשיל צ'צ'ני שהוא לא רק מנה — אלא חוויה! 🌍✨\n🎬 פתיחת הסיפור\nהסיפור שלנו מתחיל בעיירה קטנה בצ'צ'ניה, שם השמש זורחת על שדות ירוקים ומלאי חיים. הילד הראשון בוגר עם חיוך מתוק מביא תבלינים מהשוק המקומי, והשף המקומי מכין את התבשיל המפורסם שלו. “אבל למה הוא כל כך חמצמץ?” אתה שואל את עצמך, ונראה שהסוד טמון במתכון העתיק שעובר מדור לדור. 🤔💭\n🚀 המרכיבים – מה נדרש?\nלפני שנצלול לתוך ההכנה, בוא נוודא שיש לנו את כל מה שצריך. הנה רשימת המרכיבים העיקריים:\n\n500 גרם בשר (כבש או בקר) – חתוך לקוביות\n2 בצל בינוניים – קצוצים\n3 גזר – קלופים וחותכים לקוביות\n4 שיני שום – קצוצות\n4 תפוחי אדמה – קלופים וחתוכים לקוביות\n1 כוס עגבניות מרוסקות (או רסק עגבניות)\n2 כפות פפריקה מתוקה\n1/2 כוס מיץ לימון – זה הקסם החמצמץ! 🍋\n**מלח ופלפל לפי"
+                          "description": "Bot response: 🥗 Piri Piri-Rubbed Rabbit Salad – A Flavor Explosion Awaits! 🌶️🐇\nImagine yourself standing in a vibrant kitchen filled with the exhilarating aroma of spices swirling through the air! 🎉 You're about to embark on a culinary adventure that will tantalize your taste buds and leave you craving more. Are you ready to dive into the delightful world of Piri Piri-Rubbed Rabbit Salad? Let’s hop right in! 🌟\n🎬 The Flavorful Beginning\nPicture this: you’re in a sun-soaked marketplace, surrounded by stalls bursting with colorful vegetables and aromatic spices. The vibrant reds of bell peppers and the fiery hues of chili peppers call out to you! 🌶️ Suddenly, a friendly vendor approaches and shares the secret recipe for a dish that has been loved for generations. It’s a delightful salad featuring rabbit, marinated in spicy Piri Piri rub, paired with fresh greens. Your mouth waters just thinking about it! 😋\n🧠 Discovering the Ingredients\nTo create this culinary masterpiece, gather the following ingredients:\n\nFor the Piri Piri rub:\n\n2 tablespoons of smoked paprika 🔥\n1 tablespoon of crushed red pepper flakes (adjust according to your spice level!) 🌶️\n1 teaspoon of"
                         }
                       ],
                       "expectedStatus": "passed",
@@ -435,26 +435,26 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 9474,
+                          "duration": 9345,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "💬 Submitting query: \"איך מבשלים Tangy Chechen Stew?\"\n"
+                              "text": "💬 Submitting query: \"איך מבשלים Piri Piri-rubbed Rabbit Salad?\"\n"
                             },
                             {
                               "text": "🕐 Waiting for bot response...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"🍲 המסע המרגש של תבשיל צ'צ'ני עם טעמים חמצמצים!\nדמיין את עצמך נכנס למטבח חמים ומזמין, ריח של תבלינים מתערבב באוויר, ובמרכזו סיר גדול מבעבע. זה הזמן להתכונן להרפתקה קולינרית מדהימה עם תבשיל צ'צ'ני שהוא לא רק מנה — אלא חוויה! 🌍✨\n🎬 פתיחת הסיפור\nהסיפור שלנו מתחיל בעיירה קטנה בצ'צ'ניה, שם השמש זורחת על שדות ירוקים ומלאי חיים. הילד הראשון בוגר עם חיוך מתוק מביא תבלינים מהשוק המקומי, והשף המקומי מכין את התבשיל המפורסם שלו. “אבל למה הוא כל כך חמצמץ?” אתה שואל את עצמך, ונראה שהסוד טמון במתכון העתיק שעובר מדור לדור. 🤔💭\n🚀 המרכיבים – מה נדרש?\nלפני שנצלול לתוך ההכנה, בוא נוודא שיש לנו את כל מה שצריך. הנה רשימת המרכיבים העיקריים:\n\n500 גרם בשר (כבש או בקר) – חתוך לקוביות\n2 בצל בינוניים – קצוצים\n3 גזר – קלופים וחותכים לקוביות\n4 שיני שום – קצוצות\n4 תפוחי אדמה – קלופים וחתוכים לקוביות\n1 כוס עגבניות מרוסקות (או רסק עגבניות)\n2 כפות פפריקה מתוקה\n1/2 כוס מיץ לימון – זה הקסם החמצמץ! 🍋\n**מלח ופלפל לפי\"\n"
+                              "text": "✅ Bot response received: \"🥗 Piri Piri-Rubbed Rabbit Salad – A Flavor Explosion Awaits! 🌶️🐇\nImagine yourself standing in a vibrant kitchen filled with the exhilarating aroma of spices swirling through the air! 🎉 You're about to embark on a culinary adventure that will tantalize your taste buds and leave you craving more. Are you ready to dive into the delightful world of Piri Piri-Rubbed Rabbit Salad? Let’s hop right in! 🌟\n🎬 The Flavorful Beginning\nPicture this: you’re in a sun-soaked marketplace, surrounded by stalls bursting with colorful vegetables and aromatic spices. The vibrant reds of bell peppers and the fiery hues of chili peppers call out to you! 🌶️ Suddenly, a friendly vendor approaches and shares the secret recipe for a dish that has been loved for generations. It’s a delightful salad featuring rabbit, marinated in spicy Piri Piri rub, paired with fresh greens. Your mouth waters just thinking about it! 😋\n🧠 Discovering the Ingredients\nTo create this culinary masterpiece, gather the following ingredients:\n\nFor the Piri Piri rub:\n\n2 tablespoons of smoked paprika 🔥\n1 tablespoon of crushed red pepper flakes (adjust according to your spice level!) 🌶️\n1 teaspoon of\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:16:50.177Z",
+                          "startTime": "2025-05-12T06:55:29.661Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: 🍲 המסע המרגש של תבשיל צ'צ'ני עם טעמים חמצמצים!\nדמיין את עצמך נכנס למטבח חמים ומזמין, ריח של תבלינים מתערבב באוויר, ובמרכזו סיר גדול מבעבע. זה הזמן להתכונן להרפתקה קולינרית מדהימה עם תבשיל צ'צ'ני שהוא לא רק מנה — אלא חוויה! 🌍✨\n🎬 פתיחת הסיפור\nהסיפור שלנו מתחיל בעיירה קטנה בצ'צ'ניה, שם השמש זורחת על שדות ירוקים ומלאי חיים. הילד הראשון בוגר עם חיוך מתוק מביא תבלינים מהשוק המקומי, והשף המקומי מכין את התבשיל המפורסם שלו. “אבל למה הוא כל כך חמצמץ?” אתה שואל את עצמך, ונראה שהסוד טמון במתכון העתיק שעובר מדור לדור. 🤔💭\n🚀 המרכיבים – מה נדרש?\nלפני שנצלול לתוך ההכנה, בוא נוודא שיש לנו את כל מה שצריך. הנה רשימת המרכיבים העיקריים:\n\n500 גרם בשר (כבש או בקר) – חתוך לקוביות\n2 בצל בינוניים – קצוצים\n3 גזר – קלופים וחותכים לקוביות\n4 שיני שום – קצוצות\n4 תפוחי אדמה – קלופים וחתוכים לקוביות\n1 כוס עגבניות מרוסקות (או רסק עגבניות)\n2 כפות פפריקה מתוקה\n1/2 כוס מיץ לימון – זה הקסם החמצמץ! 🍋\n**מלח ופלפל לפי"
+                              "description": "Bot response: 🥗 Piri Piri-Rubbed Rabbit Salad – A Flavor Explosion Awaits! 🌶️🐇\nImagine yourself standing in a vibrant kitchen filled with the exhilarating aroma of spices swirling through the air! 🎉 You're about to embark on a culinary adventure that will tantalize your taste buds and leave you craving more. Are you ready to dive into the delightful world of Piri Piri-Rubbed Rabbit Salad? Let’s hop right in! 🌟\n🎬 The Flavorful Beginning\nPicture this: you’re in a sun-soaked marketplace, surrounded by stalls bursting with colorful vegetables and aromatic spices. The vibrant reds of bell peppers and the fiery hues of chili peppers call out to you! 🌶️ Suddenly, a friendly vendor approaches and shares the secret recipe for a dish that has been loved for generations. It’s a delightful salad featuring rabbit, marinated in spicy Piri Piri rub, paired with fresh greens. Your mouth waters just thinking about it! 😋\n🧠 Discovering the Ingredients\nTo create this culinary masterpiece, gather the following ingredients:\n\nFor the Piri Piri rub:\n\n2 tablespoons of smoked paprika 🔥\n1 tablespoon of crushed red pepper flakes (adjust according to your spice level!) 🌶️\n1 teaspoon of"
                             }
                           ],
                           "attachments": []
@@ -484,7 +484,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 5481,
+                          "duration": 5244,
                           "errors": [],
                           "stdout": [
                             {
@@ -493,7 +493,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:16:59.661Z",
+                          "startTime": "2025-05-12T06:55:39.011Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -522,7 +522,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 280,
+                          "duration": 2080,
                           "errors": [],
                           "stdout": [
                             {
@@ -531,7 +531,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:17:05.152Z",
+                          "startTime": "2025-05-12T06:55:44.260Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -560,7 +560,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1339,
+                          "duration": 1128,
                           "errors": [],
                           "stdout": [
                             {
@@ -569,7 +569,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:17:05.441Z",
+                          "startTime": "2025-05-12T06:55:46.346Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -598,7 +598,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 813,
+                          "duration": 596,
                           "errors": [],
                           "stdout": [
                             {
@@ -607,7 +607,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:17:06.789Z",
+                          "startTime": "2025-05-12T06:55:47.480Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -636,7 +636,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 344,
+                          "duration": 209,
                           "errors": [],
                           "stdout": [
                             {
@@ -645,7 +645,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:17:07.612Z",
+                          "startTime": "2025-05-12T06:55:48.081Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -660,17 +660,12 @@
                 },
                 {
                   "title": "TC_12: 📍 Predefined button click triggers response",
-                  "ok": true,
+                  "ok": false,
                   "tags": [],
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: 🏰 The Enigmatic World of Quantum Physics: A Journey Beyond the Ordinary 🌌\nImagine stepping into a realm where the rules of reality twist and turn like a funhouse mirror. You’re not just an observer; you’re an adventurer exploring a mystical land filled with strange particles, incredible forces, and mind-boggling phenomena. Welcome to the world of quantum physics! 🌀✨\n🎬 Opening Scene\nPicture a small, dimly lit laboratory, bustling with excitement. Scientists in lab coats scurry about, peering through microscopes and scribbling equations on whiteboards. Suddenly, a loud bang echoes as someone accidentally knocks over a container of marbles (oops! 😅). But these aren’t just any marbles; they represent tiny particles that exist in the quantum world. What’s that? You hear whispers of “superposition” and “entanglement.” Your curiosity is piqued — what are these mysterious concepts that govern this strange universe? 🤔💭\n🚀 The Quantum Realm: What Is It?\nAt its core, quantum physics is the branch of science that seeks to understand the behavior of matter and energy at the smallest scales — the level of atoms and subatomic particles! 🌌 This world is governed by peculiar rules that differ dramatically from those we experience in our everyday lives. While classical physics describes how large objects move and interact, quantum physics unveils a hidden reality where particles can exist in multiple states at once — a phenomenon known as superposition!\n🌟 Superposition: The Magical Trick!\nImagine flipping a coin. It can either be heads or tails, right? Not in quantum mechanics! In this whimsical world, when you flip a quantum coin (let's call it “Q-coin”), it can be both heads and tails simultaneously until someone takes a peek to check its state! This magical trick allows particles like electrons to exist in various positions or states until measured. It's like having your cake and eating it too — all at once! 🍰🪄\n🔗 Entanglement: A Cosmic Connection\nNow let’s venture deeper into the quantum jungle with entanglement! Imagine two magical dice thrown across the universe. When one die lands on six, instantly (and I mean instantly) the other die will show six too — no matter how far apart they are! 🌀 This peculiar connection occurs because entangled particles"
-                        }
-                      ],
+                      "annotations": [],
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
@@ -678,30 +673,71 @@
                         {
                           "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 9446,
-                          "errors": [],
+                          "status": "failed",
+                          "duration": 5319,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Explain me in detail so i can get it' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Explain me in detail so i can get it' })\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Explain me in detail so i can get it' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Explain me in detail so i can get it' })\u001b[22m\n\n    at chatbotPage.PredefinedBtnClick (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:167:33)\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:94:27",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                              "column": 33,
+                              "line": 167
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:167\n\n\u001b[0m \u001b[90m 165 |\u001b[39m\n \u001b[90m 166 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🔘 Clicking Predefined button...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 167 |\u001b[39m     \u001b[36mawait\u001b[39m expect(predefinedBtn)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 168 |\u001b[39m     \u001b[36mawait\u001b[39m predefinedBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 169 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m9000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 170 |\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                                "column": 33,
+                                "line": 167
+                              },
+                              "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Explain me in detail so i can get it' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByRole('button', { name: 'Explain me in detail so i can get it' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:167\n\n\u001b[0m \u001b[90m 165 |\u001b[39m\n \u001b[90m 166 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🔘 Clicking Predefined button...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 167 |\u001b[39m     \u001b[36mawait\u001b[39m expect(predefinedBtn)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 168 |\u001b[39m     \u001b[36mawait\u001b[39m predefinedBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 169 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m9000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 170 |\u001b[39m\u001b[0m\n\u001b[2m    at chatbotPage.PredefinedBtnClick (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:167:33)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:94:27\u001b[22m"
+                            }
+                          ],
                           "stdout": [
                             {
                               "text": "🔘 Clicking Predefined button...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"🏰 The Enigmatic World of Quantum Physics: A Journey Beyond the Ordinary 🌌\nImagine stepping into a realm where the rules of reality twist and turn like a funhouse mirror. You’re not just an observer; you’re an adventurer exploring a mystical land filled with strange particles, incredible forces, and mind-boggling phenomena. Welcome to the world of quantum physics! 🌀✨\n🎬 Opening Scene\nPicture a small, dimly lit laboratory, bustling with excitement. Scientists in lab coats scurry about, peering through microscopes and scribbling equations on whiteboards. Suddenly, a loud bang echoes as someone accidentally knocks over a container of marbles (oops! 😅). But these aren’t just any marbles; they represent tiny particles that exist in the quantum world. What’s that? You hear whispers of “superposition” and “entanglement.” Your curiosity is piqued — what are these mysterious concepts that govern this strange universe? 🤔💭\n🚀 The Quantum Realm: What Is It?\nAt its core, quantum physics is the branch of science that seeks to understand the behavior of matter and energy at the smallest scales — the level of atoms and subatomic particles! 🌌 This world is governed by peculiar rules that differ dramatically from those we experience in our everyday lives. While classical physics describes how large objects move and interact, quantum physics unveils a hidden reality where particles can exist in multiple states at once — a phenomenon known as superposition!\n🌟 Superposition: The Magical Trick!\nImagine flipping a coin. It can either be heads or tails, right? Not in quantum mechanics! In this whimsical world, when you flip a quantum coin (let's call it “Q-coin”), it can be both heads and tails simultaneously until someone takes a peek to check its state! This magical trick allows particles like electrons to exist in various positions or states until measured. It's like having your cake and eating it too — all at once! 🍰🪄\n🔗 Entanglement: A Cosmic Connection\nNow let’s venture deeper into the quantum jungle with entanglement! Imagine two magical dice thrown across the universe. When one die lands on six, instantly (and I mean instantly) the other die will show six too — no matter how far apart they are! 🌀 This peculiar connection occurs because entangled particles\"\n"
+                              "text": "❌ Test failed: TC_12: 📍 Predefined button click triggers response\n"
+                            },
+                            {
+                              "text": "📸 Screenshot saved at: screenshots/TC_12:_📍_Predefined_button_click_triggers_response.png\n"
+                            },
+                            {
+                              "text": "🧹 Closing context\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:17:07.964Z",
-                          "annotations": [
+                          "startTime": "2025-05-12T06:55:48.295Z",
+                          "annotations": [],
+                          "attachments": [
                             {
-                              "type": "info",
-                              "description": "Bot response: 🏰 The Enigmatic World of Quantum Physics: A Journey Beyond the Ordinary 🌌\nImagine stepping into a realm where the rules of reality twist and turn like a funhouse mirror. You’re not just an observer; you’re an adventurer exploring a mystical land filled with strange particles, incredible forces, and mind-boggling phenomena. Welcome to the world of quantum physics! 🌀✨\n🎬 Opening Scene\nPicture a small, dimly lit laboratory, bustling with excitement. Scientists in lab coats scurry about, peering through microscopes and scribbling equations on whiteboards. Suddenly, a loud bang echoes as someone accidentally knocks over a container of marbles (oops! 😅). But these aren’t just any marbles; they represent tiny particles that exist in the quantum world. What’s that? You hear whispers of “superposition” and “entanglement.” Your curiosity is piqued — what are these mysterious concepts that govern this strange universe? 🤔💭\n🚀 The Quantum Realm: What Is It?\nAt its core, quantum physics is the branch of science that seeks to understand the behavior of matter and energy at the smallest scales — the level of atoms and subatomic particles! 🌌 This world is governed by peculiar rules that differ dramatically from those we experience in our everyday lives. While classical physics describes how large objects move and interact, quantum physics unveils a hidden reality where particles can exist in multiple states at once — a phenomenon known as superposition!\n🌟 Superposition: The Magical Trick!\nImagine flipping a coin. It can either be heads or tails, right? Not in quantum mechanics! In this whimsical world, when you flip a quantum coin (let's call it “Q-coin”), it can be both heads and tails simultaneously until someone takes a peek to check its state! This magical trick allows particles like electrons to exist in various positions or states until measured. It's like having your cake and eating it too — all at once! 🍰🪄\n🔗 Entanglement: A Cosmic Connection\nNow let’s venture deeper into the quantum jungle with entanglement! Imagine two magical dice thrown across the universe. When one die lands on six, instantly (and I mean instantly) the other die will show six too — no matter how far apart they are! 🌀 This peculiar connection occurs because entangled particles"
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-157c3-ton-click-triggers-response-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-157c3-ton-click-triggers-response-chromium\\test-failed-2.png"
+                            },
+                            {
+                              "name": "_error-context-0",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-157c3-ton-click-triggers-response-chromium\\error-context.md"
                             }
                           ],
-                          "attachments": []
+                          "errorLocation": {
+                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                            "column": 33,
+                            "line": 167
+                          }
                         }
                       ],
-                      "status": "expected"
+                      "status": "unexpected"
                     }
                   ],
                   "id": "23335bb06d3df52af178-f403e5035d0666c0b019",
@@ -722,12 +758,132 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 8329,
+                          "duration": 8243,
                           "errors": [],
                           "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "✅ User reset complete\n"
+                            },
+                            {
+                              "text": "Navigating to chatbot login page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "✅ Login process completed and iframe title located successfully.\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            },
+                            {
+                              "text": "Waiting for validation error messages...\n"
+                            },
+                            {
+                              "text": "Verified gender required validation message.\n"
+                            },
+                            {
+                              "text": "Verified name required validation message.\n"
+                            },
+                            {
+                              "text": "✅ Invalid input test completed with expected error validations.\n"
+                            },
+                            {
+                              "text": "Starting to fill personal information form...\n"
+                            },
+                            {
+                              "text": "Filling name: Clint\n"
+                            },
+                            {
+                              "text": "Selecting gender: בן\n"
+                            },
+                            {
+                              "text": "Checking visibility of \"Start\" button...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button...\n"
+                            },
+                            {
+                              "text": "✅ Personal info submitted successfully.\n"
+                            },
+                            {
+                              "text": "✅ Chatbot login and form submitted\n"
+                            },
                             {
                               "text": "🔄 Reloading and verifying bot session is cleared...\n"
                             },
@@ -743,7 +899,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:17:17.422Z",
+                          "startTime": "2025-05-12T06:55:55.388Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -769,10 +925,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1849,
+                          "duration": 1664,
                           "errors": [],
                           "stdout": [
                             {
@@ -796,7 +952,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:17:25.760Z",
+                          "startTime": "2025-05-12T06:56:27.065Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -848,10 +1004,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 844,
+                          "duration": 704,
                           "errors": [],
                           "stdout": [
                             {
@@ -954,7 +1110,7 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Clark\n"
+                              "text": "Filling name: Clint\n"
                             },
                             {
                               "text": "Selecting gender: בן\n"
@@ -977,7 +1133,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:17:27.785Z",
+                          "startTime": "2025-05-12T06:56:28.830Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1003,10 +1159,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 897,
+                          "duration": 890,
                           "errors": [],
                           "stdout": [
                             {
@@ -1018,7 +1174,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:18:01.297Z",
+                          "startTime": "2025-05-12T06:56:50.023Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1044,10 +1200,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 274,
+                          "duration": 227,
                           "errors": [],
                           "stdout": [
                             {
@@ -1059,7 +1215,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:18:02.202Z",
+                          "startTime": "2025-05-12T06:56:50.919Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1085,22 +1241,22 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2294,
+                          "duration": 2146,
                           "errors": [],
                           "stdout": [
                             {
                               "text": "✅ TC_18: No result in chat history\n"
                             },
                             {
-                              "text": "🔍 Searching for non-existent history: \"איך מבשלים Bunny Chow?\"\n"
+                              "text": "🔍 Searching for non-existent history: \"אתה יכול להסביר את השימוש של Terbium?\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:18:02.484Z",
+                          "startTime": "2025-05-12T06:56:51.151Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1126,10 +1282,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 369,
+                          "duration": 227,
                           "errors": [],
                           "stdout": [
                             {
@@ -1141,7 +1297,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:18:04.784Z",
+                          "startTime": "2025-05-12T06:56:53.302Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1167,10 +1323,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2242,
+                          "duration": 2065,
                           "errors": [],
                           "stdout": [
                             {
@@ -1194,7 +1350,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:18:05.160Z",
+                          "startTime": "2025-05-12T06:56:53.534Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1220,10 +1376,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1487,
+                          "duration": 1299,
                           "errors": [],
                           "stdout": [
                             {
@@ -1235,7 +1391,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:18:07.410Z",
+                          "startTime": "2025-05-12T06:56:55.610Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1261,10 +1417,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1696,
+                          "duration": 1401,
                           "errors": [],
                           "stdout": [
                             {
@@ -1273,7 +1429,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-07T07:18:08.904Z",
+                          "startTime": "2025-05-12T06:56:56.915Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1295,11 +1451,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-07T07:16:08.944Z",
-    "duration": 122007.826,
-    "expected": 22,
+    "startTime": "2025-05-12T06:55:03.400Z",
+    "duration": 115138.746,
+    "expected": 21,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
