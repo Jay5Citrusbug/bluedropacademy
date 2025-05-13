@@ -62,8 +62,7 @@ jobs:
       - name: Rename report folder
         run: | 
           mv playwright-report "report-${{ steps.date.outputs.date }}-staging"
-          mv playwright-report playwright-report-staging 
-
+        
       - name: Upload staging report
         uses: actions/upload-pages-artifact@v3
         with:
@@ -98,6 +97,7 @@ jobs:
 
   production:
     runs-on: ubuntu-latest
+    needs: notify-staging
     env:
       URL_ADMIN: ${{ secrets.PROD_URL_ADMIN }}
       URL_CHATBOT: ${{ secrets.PROD_URL_CHATBOT }}
