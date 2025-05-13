@@ -13,6 +13,9 @@ try {
   process.exit(1);
 }
 
+// Determine the environment
+const environment = process.env.ENVIRONMENT || 'Staging'; // Default to 'Staging' if not set
+
 // Report details
 const reportDate = process.env.REPORT_DATE || '2025-05-07';
 const passed = process.env.PASSED || '45';
@@ -24,15 +27,18 @@ const repoOwner = process.env.REPO_OWNER || 'your-org';
 const repoName = process.env.REPO_NAME || 'your-repo';
 const reportUrl = `https://${repoOwner}.github.io/${repoName}`;
 
+// Set the subject dynamically based on environment
+const subject = `${environment} Daily Automation Test Report - ${reportDate}`;
+
 const msg = {
   to: 'noam@bluedropacademy.com',
   cc: ['jay5.citrusbug@gmail.com', 'jayshree@citrusbug.com'],
   from: 'bluedropacademy.aws@gmail.com',
-  subject: `Daily Automation Test Report - ${reportDate}`,
+  subject: subject,
   html: `
     <div style="font-family: Arial, sans-serif; padding: 20px; text-align: left; color: #333;">
       <p>Hello Bluedrop Academy,</p>
-      <p>The automated Playwright test suite has completed.</p>
+      <p>The automated Playwright test suite for the <strong>${environment}</strong> environment has completed.</p>
 
       <p style="margin-top: 10px;"><strong>🔍 Test Summary</strong></p>
 

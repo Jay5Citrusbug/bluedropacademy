@@ -12,8 +12,12 @@ export class ChatbotLoginPage {
 
   // Navigates to the chatbot login page
   async goto() {
-    console.log('Navigating to chatbot login page...');
-    await this.page.goto('https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site');
+    const chatbotUrl = process.env.URL_CHATBOT ?? '';
+    if (!chatbotUrl) {
+      throw new Error('Environment variable URL_CHATBOT is not defined.');
+    }
+    console.log('Navigating to the chatbot page...');
+    await this.page.goto(chatbotUrl);
     console.log('Successfully navigated to chatbot login page.');
   }
 

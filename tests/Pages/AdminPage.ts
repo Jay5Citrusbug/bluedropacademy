@@ -1,8 +1,6 @@
 import { Page, expect } from '@playwright/test';
 import { adminPageLocators } from '../Locators/AdminpageLocator';
-import { testUserData } from '../Utils/testData';
-import { time } from 'console';
-import { TIMEOUT } from 'dns';
+
 
 export class AdminPage {
   readonly page: Page;
@@ -13,8 +11,12 @@ export class AdminPage {
 
   // Navigate to the admin login page
   async goto() {
+    const adminUrl = process.env.URL_ADMIN;
     console.log('Navigating to the admin page...');
-    await this.page.goto('https://stg-chat.bluedropacademy.com/admin/');
+    if (!adminUrl) {
+      throw new Error('Admin URL is not defined in the environment variables.');
+    }
+    await this.page.goto(adminUrl);
     console.log('Successfully navigated to the admin page.');
   }
 
