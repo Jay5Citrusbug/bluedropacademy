@@ -67,6 +67,21 @@ jobs:
         with:
           path: report-${{ steps.date.outputs.date }}-production
 
+  deploy:
+    needs: production
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
   notify-production:
     if: always()
     needs: production
