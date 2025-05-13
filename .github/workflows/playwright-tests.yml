@@ -139,7 +139,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Send Email Report (Staging)
-        run: node sendreport.js
+        run: node sendreport.ts
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           ENVIRONMENT: Staging
@@ -165,7 +165,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Send Email Report (Production)
-        run: node sendreport.js
+        run: node sendreport.ts
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           ENVIRONMENT: Production
