@@ -1,12 +1,10 @@
 name: Production Run Playwright Tests and Email Reports
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  schedule:
-    - cron: '0 22 * * *' 
+  workflow_run:
+    workflows: ["Staging Run Playwright Tests and Email Reports"]
+    types:
+      - completed
 
 jobs:
   production:
