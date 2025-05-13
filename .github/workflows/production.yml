@@ -41,8 +41,7 @@ jobs:
 
       - name: Run Playwright Tests (Production)
         run: |
-          npx playwright test --project=chromium --workers=1 \
-            --reporter=json=test-results.json,html | tee test-log.txt
+          npx playwright test --project=chromium --workers=1 --reporter=json=test-results.json,html | tee test-log.txt
 
       - name: Extract test summary
         id: summary
