@@ -120,15 +120,26 @@ jobs:
           echo "failed=$FAILED" >> $GITHUB_OUTPUT
           echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
 
-      - name: Rename report folder with timestamp
+      - name: Rename report folder with timestamp for production
         run: |
-          if [ ! -d "playwright-report" ]; then echo "Playwright report folder not found!" && exit 1; fi
-          mv playwright-report "report-${{ steps.date.outputs.date }}"
+          if [ ! -d "playwright-report" ]; then
+            echo "Playwright report folder not found!" && exit 1
+          fi
+          mv playwright-report "report-${{ steps.date.outputs.date }}-production"
 
-      - name: Upload report as GitHub Pages artifact
+      - name: Verify report folder exists
+        run: |
+          if [ ! -d "report-${{ steps.date.outputs.date }}-production" ]; then
+            echo "Report folder missing. Exiting..." && exit 1
+          fi
+
+      - name: List files (debug)
+        run: ls -l
+
+      - name: Upload production report artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: report-${{ steps.date.outputs.date }}-production-${{ github.run_id }}  # Adding run_id for uniqueness
+          path: report-${{ steps.date.outputs.date }}-production
 
   notify:
     needs: [staging, production]
