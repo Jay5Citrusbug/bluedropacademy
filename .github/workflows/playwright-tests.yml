@@ -69,7 +69,7 @@ jobs:
           path: report-${{ steps.date.outputs.date }}-staging
 
   deploy:
-    needs: deploy
+    needs: staging
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -85,7 +85,7 @@ jobs:
 
   notify-staging:
     if: always()
-    needs: staging
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
