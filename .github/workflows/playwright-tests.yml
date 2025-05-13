@@ -54,14 +54,26 @@ jobs:
 
       - name: Rename report folder with timestamp
         run: |
-          if [ ! -d "playwright-report" ]; then echo "Playwright report folder not found!" && exit 1; fi
-          mv playwright-report "report-${{ steps.summary.outputs.date }}"
+          if [ ! -d "playwright-report" ]; then
+            echo "Playwright report folder not found!" && exit 1
+          fi
+          mv playwright-report "report-${{ steps.date.outputs.date }}-staging"
+
+      - name: List contents of the directory for debugging
+        run: |
+          ls -alh
+
+      - name: Check if the report folder exists
+        run: |
+          if [ ! -d "report-${{ steps.date.outputs.date }}-staging" ]; then
+            echo "The report folder does not exist!"
+            exit 1
+          fi
 
       - name: Upload report as GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: report-${{ steps.date.outputs.date }}-staging-${{ github.run_id }}  # Adding run_id for uniqueness
-
+          path: report-${{ steps.date.outputs.date }}-staging
   production:
     runs-on: ubuntu-latest
     env:
