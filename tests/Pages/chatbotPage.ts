@@ -181,7 +181,20 @@ export class chatbotPage {
 
     expect(botResponse).toBeTruthy();
 
-
-
 }
+
+async InactivityPopup() {
+  const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
+  //const inactivityPopup = frameLocator.locator(Chatbotlocator.InactivityPopup);
+
+  console.log('⏳ Waiting for inactivity popup to appear...');
+  const inactivityPopup = frameLocator.locator('role=heading[name="נראה שלא היית פעיל לאחרונה"]');
+  console.log('⏳ Waiting for inactivity popup to appear...');
+  await expect(inactivityPopup).toBeVisible({ timeout: 70000  });
+  await this.page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByText('היי! לא ראינו פעילות ב-10').isVisible();
+  console.log('✅ Inactivity popup is visible.');
+  await this.page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('dialog').getByRole('button', { name: 'המשך שיחה' }).click();
+  console.log('🔄 Clicking "Continue Chat" button...');
+    }                                                                                                             
+
 }

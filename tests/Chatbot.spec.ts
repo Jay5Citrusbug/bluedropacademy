@@ -54,6 +54,7 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
       await chatbotscreen.InitialbotMessage();
     });
 
+
     test('TC_03: 🚫 Predefined buttons are not active', async () => {
       await chatbotscreen.PredefinebuttonNotActive();
     });
@@ -105,6 +106,12 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
       await chatbotscreen.Pagereload();
       await chatbotscreen.InitialbotMessage();
     });
+
+    test('TC_15:Session pop-up display after 10 minutes.', async () => {
+      await chatbotscreen.InactivityPopup();
+    }
+    );
+
   });
 });
 

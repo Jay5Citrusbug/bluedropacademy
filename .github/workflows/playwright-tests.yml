@@ -55,7 +55,7 @@ jobs:
 
       - name: Get current date
         id: date
-        run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
+        run: echo "date=$(date '+%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Extract test summary
         id: summary
@@ -81,7 +81,6 @@ jobs:
         with:
           path: report-${{ steps.date.outputs.date }}
       
-        
 
   deploy:
     needs: build
@@ -121,7 +120,7 @@ jobs:
           node sendreport.ts
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          REPORT_DATE: ${{ needs.build.outputs.current_date }}
+          REPORT_DATE: ${{ needs.build.outputs.date }}
           TOTAL: ${{ needs.build.outputs.total }}
           PASSED: ${{ needs.build.outputs.passed }}
           FAILED: ${{ needs.build.outputs.failed }}
