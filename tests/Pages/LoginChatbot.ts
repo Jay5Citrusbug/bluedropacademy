@@ -12,12 +12,8 @@ export class ChatbotLoginPage {
 
   // Navigates to the chatbot login page
   async goto() {
-    const chatbotUrl = process.env.URL_CHATBOT ?? '';
-    if (!chatbotUrl) {
-      throw new Error('Environment variable URL_CHATBOT is not defined.');
-    }
-    console.log('Navigating to the chatbot page...');
-    await this.page.goto(chatbotUrl);
+    await this.page.goto(process.env.URL_CHATBOT!);
+
     console.log('Successfully navigated to chatbot login page.');
   }
 

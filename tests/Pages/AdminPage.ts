@@ -11,12 +11,10 @@ export class AdminPage {
 
   // Navigate to the admin login page
   async goto() {
-    const adminUrl = process.env.URL_ADMIN;
+  await this.page.goto(process.env.URL_ADMIN!);
+
     console.log('Navigating to the admin page...');
-    if (!adminUrl) {
-      throw new Error('Admin URL is not defined in the environment variables.');
-    }
-    await this.page.goto(adminUrl);
+
     console.log('Successfully navigated to the admin page.');
   }
 
