@@ -1,5 +1,6 @@
 const sgMail = require('@sendgrid/mail');
 
+// Validate SendGrid API Key
 if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
   console.error('❌ Invalid or missing SENDGRID_API_KEY.');
   process.exit(1);
@@ -14,50 +15,49 @@ try {
 
 // Report details
 const reportDate = process.env.REPORT_DATE || '2025-05-07';
-const total = process.env.TOTAL || '50';
 const passed = process.env.PASSED || '45';
 const failed = process.env.FAILED || '3';
 const skipped = process.env.SKIPPED || '2';
+const total = Number(passed) + Number(failed) + Number(skipped);
+
 const repoOwner = process.env.REPO_OWNER || 'your-org';
 const repoName = process.env.REPO_NAME || 'your-repo';
-
 const reportUrl = `https://${repoOwner}.github.io/${repoName}`;
 
 const msg = {
-  //to: 'noam@bluedropacademy.com',
-  //cc: ['jay5.citrusbug@gmail.com', 'jayshree@citrusbug.com'],
-  to: 'jay5.citrusbug@gmail.com',
+  to: 'noam@bluedropacademy.com',
+  cc: ['jay5.citrusbug@gmail.com', 'jayshree@citrusbug.com'],
   from: 'bluedropacademy.aws@gmail.com',
   subject: `Daily Automation Test Report - ${reportDate}`,
   html: `
-    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; text-align: left;">
+    <div style="font-family: Arial, sans-serif; padding: 20px; text-align: left; color: #333;">
       <p>Hello Bluedrop Academy,</p>
       <p>The automated Playwright test suite has completed.</p>
 
-      <table style="width: 100%; border-collapse: collapse; margin-top: 16px; table-layout: fixed;">
+      <p style="margin-top: 10px;"><strong>🔍 Test Summary</strong></p>
+
+      <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
         <tr style="background-color: #f8f8f8;">
-          <th style="width: 50%; text-align: left; padding: 8px; border: 1px solid #ddd;">📅 Date</th>
-          <td style="width: 50%; padding: 8px; border: 1px solid #ddd; text-align: left;">${reportDate}</td>
+          <th style="width: 35%; text-align: left; padding: 8px; border: 1px solid #ddd;">📅 Date</th>
+          <td style="width: 65%; text-align: left; padding: 8px; border: 1px solid #ddd;">${reportDate}</td>
         </tr>
         <tr>
           <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Total Tests</th>
-          <td style="padding: 8px; border: 1px solid #ddd; text-align: left;">${Number(passed) + Number(failed) + Number(skipped)}</td>
+          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${total}</td>
         </tr>
         <tr>
           <th style="text-align: left; padding: 8px; border: 1px solid #ddd; color: green;">✅ Passed</th>
-          <td style="padding: 8px; border: 1px solid #ddd; text-align: left;">${passed}</td>
+          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${passed}</td>
         </tr>
         <tr>
           <th style="text-align: left; padding: 8px; border: 1px solid #ddd; color: red;">❌ Failed</th>
-          <td style="padding: 8px; border: 1px solid #ddd; text-align: left;">${failed}</td>
+          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${failed}</td>
         </tr>
         <tr>
           <th style="text-align: left; padding: 8px; border: 1px solid #ddd; color: orange;">⏭️ Skipped</th>
-          <td style="padding: 8px; border: 1px solid #ddd; text-align: left;">${skipped}</td>
+          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${skipped}</td>
         </tr>
       </table>
-
-      <p style="margin-top: 10px;"><strong>🔍 Test Summary</strong></p>
 
       <p style="margin-top: 20px;">🔗 <strong>Full Report:</strong><br>
         <a href="${reportUrl}" style="color: #3498db;">${reportUrl}</a>
@@ -68,6 +68,7 @@ const msg = {
   `,
 };
 
+// Send email
 sgMail
   .send(msg)
   .then(() => {
