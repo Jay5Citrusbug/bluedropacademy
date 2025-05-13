@@ -12,8 +12,8 @@ jobs:
   staging:
     runs-on: ubuntu-latest
     env:
-      URL_ADMIN: ${{ secrets.STAGING_URL_ADMIN }}
-      URL_CHATBOT: ${{ secrets.STAGING_URL_CHATBOT }}
+      URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
+      URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
     outputs:
       date: ${{ steps.date.outputs.date }}
       total: ${{ steps.summary.outputs.total }}
