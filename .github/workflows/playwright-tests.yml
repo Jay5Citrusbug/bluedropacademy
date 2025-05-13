@@ -141,9 +141,38 @@ jobs:
         with:
           path: report-${{ steps.date.outputs.date }}-production
 
-  notify:
-    needs: [staging, production]
+  notify-staging:
+    needs: staging
     runs-on: ubuntu-latest
+    if: always()  # Run even if staging fails
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+  
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+  
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Send Staging Email Report via SendGrid
+        run: node sendreport.ts
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          REPORT_TYPE: staging
+          REPORT_DATE: ${{ needs.staging.outputs.date }}
+          TOTAL: ${{ needs.staging.outputs.total }}
+          PASSED: ${{ needs.staging.outputs.passed }}
+          FAILED: ${{ needs.staging.outputs.failed }}
+          SKIPPED: ${{ needs.staging.outputs.skipped }}
+          REPORT_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+  notify-production:
+    needs: production
+    runs-on: ubuntu-latest
+    if: always()  # Run even if production fails
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -156,16 +185,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Send Email Report via SendGrid API
-        run: |
-          node sendreport.ts
+      - name: Send Production Email Report via SendGrid
+        run: node sendreport.ts
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          REPORT_TYPE: production
           REPORT_DATE: ${{ needs.production.outputs.date }}
           TOTAL: ${{ needs.production.outputs.total }}
           PASSED: ${{ needs.production.outputs.passed }}
           FAILED: ${{ needs.production.outputs.failed }}
           SKIPPED: ${{ needs.production.outputs.skipped }}
-          REPO_OWNER: ${{ github.repository_owner }}
-          REPO_NAME: ${{ github.event.repository.name }}
-          REPORT_URL: ${{ needs.production.outputs.page_url }}/report-${{ needs.production.outputs.date }}/index.html
+          REPORT_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
