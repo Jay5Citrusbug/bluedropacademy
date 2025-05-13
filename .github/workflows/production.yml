@@ -10,8 +10,8 @@ jobs:
   production:
     runs-on: ubuntu-latest
     env:
-    URL_ADMIN: https://chat.bluedropacademy.com/admin
-    URL_CHATBOT: https://www.bluedropacademy.com/chatbot
+      URL_ADMIN: https://chat.bluedropacademy.com/admin
+      URL_CHATBOT: https://www.bluedropacademy.com/chatbot
 
     outputs:
       date: ${{ steps.date.outputs.date }}
