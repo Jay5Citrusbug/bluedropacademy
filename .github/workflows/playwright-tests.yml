@@ -69,7 +69,7 @@ jobs:
           path: report-${{ steps.date.outputs.date }}-staging
 
   deploy:
-    needs: staging
+    needs: deploy
     runs-on: ubuntu-latest
     environment:
       name: github-pages

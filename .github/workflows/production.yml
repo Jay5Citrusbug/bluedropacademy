@@ -84,7 +84,7 @@ jobs:
 
   notify-production:
     if: always()
-    needs: production
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
