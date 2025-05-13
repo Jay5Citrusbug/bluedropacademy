@@ -1,6 +1,5 @@
-const sgMail = require('@sendgrid/mail');
+import sgMail from '@sendgrid/mail';
 
-// Validate API key
 if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
   console.error('❌ Invalid or missing SENDGRID_API_KEY.');
   process.exit(1);
@@ -8,12 +7,11 @@ if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('S
 
 try {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-} catch (e) {
+} catch (e: any) {
   console.error('❌ Failed to set SendGrid API key:', e.message);
   process.exit(1);
 }
 
-// Extract report data from environment
 const environment = process.env.ENVIRONMENT || 'Staging';
 const reportDate = process.env.REPORT_DATE || 'Unknown Date';
 const passed = process.env.PASSED || '0';
@@ -23,60 +21,39 @@ const total = Number(passed) + Number(failed) + Number(skipped);
 
 const repoOwner = process.env.REPO_OWNER || 'your-org';
 const repoName = process.env.REPO_NAME || 'your-repo';
-const reportUrl = process.env.REPORT_URL || `https://${repoOwner}.github.io/${repoName}/report-${reportDate.toString().trim()}-${environment.toLowerCase()}/`;
+
+const reportUrl = process.env.REPORT_URL || 
+  `https://${repoOwner}.github.io/${repoName}/report-${reportDate.trim()}-${environment.toLowerCase()}/`;
 
 const subject = `${environment} Daily Automation Test Report - ${reportDate}`;
 
 const msg = {
-  to: 'noam@bluedropacademy.com',
-  cc: ['jay5.citrusbug@gmail.com', 'jayshree@citrusbug.com'],
+  to: 'jay5.citrusbug@gmail.com',
   from: 'bluedropacademy.aws@gmail.com',
-  subject: subject,
+  subject,
   html: `
-    <div style="font-family: Arial, sans-serif; padding: 20px; text-align: left; color: #333;">
+    <div style="font-family: Arial, sans-serif; padding: 20px;">
       <p>Hello Bluedrop Academy,</p>
       <p>The automated Playwright test suite for the <strong>${environment}</strong> environment has completed.</p>
 
-      <p style="margin-top: 10px;"><strong>🔍 Test Summary</strong></p>
-
       <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
-        <tr style="background-color: #f8f8f8;">
-          <th style="width: 35%; text-align: left; padding: 8px; border: 1px solid #ddd;">📅 Date</th>
-          <td style="width: 65%; text-align: left; padding: 8px; border: 1px solid #ddd;">${reportDate}</td>
-        </tr>
-        <tr>
-          <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Total Tests</th>
-          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${total}</td>
-        </tr>
-        <tr>
-          <th style="text-align: left; padding: 8px; border: 1px solid #ddd; color: green;">✅ Passed</th>
-          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${passed}</td>
-        </tr>
-        <tr>
-          <th style="text-align: left; padding: 8px; border: 1px solid #ddd; color: red;">❌ Failed</th>
-          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${failed}</td>
-        </tr>
-        <tr>
-          <th style="text-align: left; padding: 8px; border: 1px solid #ddd; color: orange;">⏭️ Skipped</th>
-          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${skipped}</td>
-        </tr>
+        <tr><th>Date</th><td>${reportDate}</td></tr>
+        <tr><th>Total</th><td>${total}</td></tr>
+        <tr><th style="color:green;">Passed</th><td>${passed}</td></tr>
+        <tr><th style="color:red;">Failed</th><td>${failed}</td></tr>
+        <tr><th style="color:orange;">Skipped</th><td>${skipped}</td></tr>
       </table>
 
-      <p style="margin-top: 20px;">🔗 <strong>Full Report:</strong><br>
-        <a href="${reportUrl}" style="color: #3498db;">${reportUrl}</a>
-      </p>
+      <p>🔗 <strong>Full Report:</strong><br><a href="${reportUrl}">${reportUrl}</a></p>
 
       <p>Best regards,<br><strong>Citrusbug QA Team</strong></p>
     </div>
   `,
 };
 
-sgMail
-  .send(msg)
-  .then(() => {
-    console.log('✅ Email sent successfully');
-  })
-  .catch((error) => {
+sgMail.send(msg)
+  .then(() => console.log('✅ Email sent successfully'))
+  .catch((error: any) => {
     console.error('❌ Failed to send email:', error.response?.body || error.message);
     process.exit(1);
   });
