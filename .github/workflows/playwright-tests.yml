@@ -1,4 +1,4 @@
-name: Run Playwright Tests and Email Report
+name: Staging Run Playwright Tests and Email Report
 
 on:
   push:
@@ -95,87 +95,4 @@ jobs:
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
 
-  production:
-    runs-on: ubuntu-latest
-    needs: notify-staging
-    env:
-      URL_ADMIN: ${{ secrets.PROD_URL_ADMIN }}
-      URL_CHATBOT: ${{ secrets.PROD_URL_CHATBOT }}
-    outputs:
-      date: ${{ steps.date.outputs.date }}
-      total: ${{ steps.summary.outputs.total }}
-      passed: ${{ steps.summary.outputs.passed }}
-      failed: ${{ steps.summary.outputs.failed }}
-      skipped: ${{ steps.summary.outputs.skipped }}
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-
-      - name: Get date for report
-        id: date
-        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
-
-      - name: Run Playwright Tests (Production)
-        run: |
-          npx playwright test --project=chromium --workers=1 \
-            --reporter=json=test-results.json,html | tee test-log.txt
-
-      - name: Extract test summary
-        id: summary
-        run: |
-          if [ ! -f "test-results.json" ]; then echo "Report file not found!" && exit 1; fi
-          TOTAL=$(jq '.suites | map(.specs | length) | add' test-results.json)
-          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' test-results.json)
-          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)
-          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)
-
-          echo "total=$TOTAL" >> $GITHUB_OUTPUT
-          echo "passed=$PASSED" >> $GITHUB_OUTPUT
-          echo "failed=$FAILED" >> $GITHUB_OUTPUT
-          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
-
-      - name: Rename report folder
-        run: mv playwright-report "report-${{ steps.date.outputs.date }}-production"
-
-      - name: Upload production report
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: report-${{ steps.date.outputs.date }}-production
-
-  notify-production:
-    if: always()
-    needs: production
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-      - name: Install dependencies
-        run: npm ci
-      - name: Send Email Report (Production)
-        run: node sendreport.ts
-        env:
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          ENVIRONMENT: Production
-          REPORT_DATE: ${{ needs.production.outputs.date }}
-          TOTAL: ${{ needs.production.outputs.total }}
-          PASSED: ${{ needs.production.outputs.passed }}
-          FAILED: ${{ needs.production.outputs.failed }}
-          SKIPPED: ${{ needs.production.outputs.skipped }}
-          REPO_OWNER: ${{ github.repository_owner }}
-          REPO_NAME: ${{ github.event.repository.name }}
+  
