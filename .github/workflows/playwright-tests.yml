@@ -60,12 +60,41 @@ jobs:
           echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
 
       - name: Rename report folder
-        run: mv playwright-report "report-${{ steps.date.outputs.date }}-staging"
+        run: | 
+          mv playwright-report "report-${{ steps.date.outputs.date }}-staging"
+          mv playwright-report playwright-report-staging 
 
       - name: Upload staging report
         uses: actions/upload-pages-artifact@v3
         with:
           path: report-${{ steps.date.outputs.date }}-staging
+
+
+  notify-staging:
+    if: always()
+    needs: staging
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Send Email Report (Staging)
+        run: node sendreport.ts
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          ENVIRONMENT: Staging
+          REPORT_DATE: ${{ needs.staging.outputs.date }}
+          TOTAL: ${{ needs.staging.outputs.total }}
+          PASSED: ${{ needs.staging.outputs.passed }}
+          FAILED: ${{ needs.staging.outputs.failed }}
+          SKIPPED: ${{ needs.staging.outputs.skipped }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
 
   production:
     runs-on: ubuntu-latest
@@ -124,32 +153,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: report-${{ steps.date.outputs.date }}-production
-
-  notify-staging:
-    if: always()
-    needs: staging
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-      - name: Install dependencies
-        run: npm ci
-      - name: Send Email Report (Staging)
-        run: node sendreport.ts
-        env:
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          ENVIRONMENT: Staging
-          REPORT_DATE: ${{ needs.staging.outputs.date }}
-          TOTAL: ${{ needs.staging.outputs.total }}
-          PASSED: ${{ needs.staging.outputs.passed }}
-          FAILED: ${{ needs.staging.outputs.failed }}
-          SKIPPED: ${{ needs.staging.outputs.skipped }}
-          REPO_OWNER: ${{ github.repository_owner }}
-          REPO_NAME: ${{ github.event.repository.name }}
 
   notify-production:
     if: always()
