@@ -1,4 +1,4 @@
-name: Production Run Playwright Tests and Email Report
+name: Production Run Playwright Tests and Email Reports
 
 on:
   push:

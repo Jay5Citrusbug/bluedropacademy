@@ -1,4 +1,4 @@
-name: Staging Run Playwright Tests and Email Report
+name: Staging Run Playwright Tests and Email Reports
 
 on:
   push:
