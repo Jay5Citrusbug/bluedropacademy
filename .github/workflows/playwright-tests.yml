@@ -142,57 +142,55 @@ jobs:
           path: report-${{ steps.date.outputs.date }}-production
 
   notify-staging:
+    if: always()
     needs: staging
     runs-on: ubuntu-latest
-    if: always()  # Run even if staging fails
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
-  
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
-  
       - name: Install dependencies
         run: npm ci
-
-      - name: Send Staging Email Report via SendGrid
-        run: node sendreport.ts
+      - name: Send Staging Email Report
+        run: node sendreport.js
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          REPORT_TYPE: staging
+          ENVIRONMENT: Staging
           REPORT_DATE: ${{ needs.staging.outputs.date }}
           TOTAL: ${{ needs.staging.outputs.total }}
           PASSED: ${{ needs.staging.outputs.passed }}
           FAILED: ${{ needs.staging.outputs.failed }}
           SKIPPED: ${{ needs.staging.outputs.skipped }}
-          REPORT_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          REPORT_URL: ${{ needs.staging.outputs.page_url }}
 
   notify-production:
+    if: always()
     needs: production
     runs-on: ubuntu-latest
-    if: always()  # Run even if production fails
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
-
       - name: Install dependencies
         run: npm ci
-
-      - name: Send Production Email Report via SendGrid
-        run: node sendreport.ts
+      - name: Send Production Email Report
+        run: node sendreport.js
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          REPORT_TYPE: production
+          ENVIRONMENT: Production
           REPORT_DATE: ${{ needs.production.outputs.date }}
           TOTAL: ${{ needs.production.outputs.total }}
           PASSED: ${{ needs.production.outputs.passed }}
           FAILED: ${{ needs.production.outputs.failed }}
           SKIPPED: ${{ needs.production.outputs.skipped }}
-          REPORT_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          REPORT_URL: ${{ needs.production.outputs.page_url }}
