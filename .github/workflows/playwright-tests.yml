@@ -60,7 +60,7 @@ jobs:
       - name: Upload report as GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: report-${{ steps.date.outputs.date }}-staging # Include 'staging' in the artifact name to make it unique
+          path: report-${{ steps.date.outputs.date }}-staging-${{ github.run_id }}  # Adding run_id for uniqueness
 
   production:
     runs-on: ubuntu-latest
@@ -116,7 +116,7 @@ jobs:
       - name: Upload report as GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: report-${{ steps.date.outputs.date }}-production # Include 'production' in the artifact name to make it unique
+          path: report-${{ steps.date.outputs.date }}-production-${{ github.run_id }}  # Adding run_id for uniqueness
 
   notify:
     needs: [staging, production]
