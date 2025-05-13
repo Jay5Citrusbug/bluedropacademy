@@ -6,79 +6,14 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: '0 22 * * *'  # 1 AM Israel Time (approx, depending on DST)
+    - cron: '0 22 * * *'  # Runs daily at 1 AM Israel Time
 
 jobs:
   staging:
     runs-on: ubuntu-latest
     env:
-      URL_ADMIN: ${{ secrets.STAGING_URL_ADMIN }}  # Use environment variable for staging URL
-      URL_CHATBOT: ${{ secrets.STAGING_URL_CHATBOT }}  # Use environment variable for staging URL
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-
-      - name: Run Playwright Tests (Staging)
-        run: |
-          npx playwright test --project=chromium --workers=1 \
-            --reporter=json=test-results.json,html | tee test-log.txt
-
-      - name: Extract test summary
-        id: summary
-        run: |
-          if [ ! -f "test-results.json" ]; then echo "Report file not found!" && exit 1; fi
-          TOTAL=$(jq '.suites | map(.specs | length) | add' test-results.json)
-          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' test-results.json)
-          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)
-          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)
-
-          echo "total=$TOTAL" >> $GITHUB_OUTPUT
-          echo "passed=$PASSED" >> $GITHUB_OUTPUT
-          echo "failed=$FAILED" >> $GITHUB_OUTPUT
-          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
-
-      - name: Rename report folder with timestamp
-        run: |
-          if [ ! -d "playwright-report" ]; then
-            echo "Playwright report folder not found!" && exit 1
-          fi
-          mv playwright-report "report-${{ steps.date.outputs.date }}-staging"
-
-      - name: List contents of the directory for debugging
-        run: |
-          ls -alh
-
-      - name: Check if the report folder exists
-        run: |
-          if [ ! -d "report-${{ steps.date.outputs.date }}-staging" ]; then
-            echo "The report folder does not exist!"
-            exit 1
-          fi
-
-      - name: Upload report as GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: report-${{ steps.date.outputs.date }}-staging
-  production:
-    runs-on: ubuntu-latest
-    env:
-      URL_ADMIN: ${{ secrets.PROD_URL_ADMIN }}  # Use environment variable for production URL
-      URL_CHATBOT: ${{ secrets.PROD_URL_CHATBOT }}  # Use environment variable for production URL
+      URL_ADMIN: ${{ secrets.STAGING_URL_ADMIN }}
+      URL_CHATBOT: ${{ secrets.STAGING_URL_CHATBOT }}
     outputs:
       date: ${{ steps.date.outputs.date }}
       total: ${{ steps.summary.outputs.total }}
@@ -101,6 +36,68 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+      - name: Get date for report
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Run Playwright Tests (Staging)
+        run: |
+          npx playwright test --project=chromium --workers=1 \
+            --reporter=json=test-results.json,html | tee test-log.txt
+
+      - name: Extract test summary
+        id: summary
+        run: |
+          if [ ! -f "test-results.json" ]; then echo "Report file not found!" && exit 1; fi
+          TOTAL=$(jq '.suites | map(.specs | length) | add' test-results.json)
+          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' test-results.json)
+          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)
+          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)
+
+          echo "total=$TOTAL" >> $GITHUB_OUTPUT
+          echo "passed=$PASSED" >> $GITHUB_OUTPUT
+          echo "failed=$FAILED" >> $GITHUB_OUTPUT
+          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+
+      - name: Rename report folder
+        run: mv playwright-report "report-${{ steps.date.outputs.date }}-staging"
+
+      - name: Upload staging report
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: report-${{ steps.date.outputs.date }}-staging
+
+  production:
+    runs-on: ubuntu-latest
+    env:
+      URL_ADMIN: ${{ secrets.PROD_URL_ADMIN }}
+      URL_CHATBOT: ${{ secrets.PROD_URL_CHATBOT }}
+    outputs:
+      date: ${{ steps.date.outputs.date }}
+      total: ${{ steps.summary.outputs.total }}
+      passed: ${{ steps.summary.outputs.passed }}
+      failed: ${{ steps.summary.outputs.failed }}
+      skipped: ${{ steps.summary.outputs.skipped }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Get date for report
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
       - name: Run Playwright Tests (Production)
         run: |
           npx playwright test --project=chromium --workers=1 \
@@ -120,23 +117,10 @@ jobs:
           echo "failed=$FAILED" >> $GITHUB_OUTPUT
           echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
 
-      - name: Rename report folder with timestamp for production
-        run: |
-          if [ ! -d "playwright-report" ]; then
-            echo "Playwright report folder not found!" && exit 1
-          fi
-          mv playwright-report "report-${{ steps.date.outputs.date }}-production"
+      - name: Rename report folder
+        run: mv playwright-report "report-${{ steps.date.outputs.date }}-production"
 
-      - name: Verify report folder exists
-        run: |
-          if [ ! -d "report-${{ steps.date.outputs.date }}-production" ]; then
-            echo "Report folder missing. Exiting..." && exit 1
-          fi
-
-      - name: List files (debug)
-        run: ls -l
-
-      - name: Upload production report artifact
+      - name: Upload production report
         uses: actions/upload-pages-artifact@v3
         with:
           path: report-${{ steps.date.outputs.date }}-production
@@ -146,7 +130,7 @@ jobs:
     needs: staging
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -154,7 +138,7 @@ jobs:
           node-version: 20
       - name: Install dependencies
         run: npm ci
-      - name: Send Staging Email Report
+      - name: Send Email Report (Staging)
         run: node sendreport.js
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
@@ -166,14 +150,13 @@ jobs:
           SKIPPED: ${{ needs.staging.outputs.skipped }}
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
-          REPORT_URL: ${{ needs.staging.outputs.page_url }}
 
   notify-production:
     if: always()
     needs: production
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -181,7 +164,7 @@ jobs:
           node-version: 20
       - name: Install dependencies
         run: npm ci
-      - name: Send Production Email Report
+      - name: Send Email Report (Production)
         run: node sendreport.js
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
@@ -193,4 +176,3 @@ jobs:
           SKIPPED: ${{ needs.production.outputs.skipped }}
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
-          REPORT_URL: ${{ needs.production.outputs.page_url }}
