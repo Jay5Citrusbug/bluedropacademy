@@ -69,7 +69,7 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.52.0",
     "workers": 1,
     "webServer": null
@@ -96,7 +96,7 @@
               "column": 8,
               "specs": [
                 {
-                  "title": "TC_04: ✅ No Activity pop-up",
+                  "title": "TC_01: ✅ Confirm chatbot screen elements are visible",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -108,10 +108,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 1,
+                          "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 61494,
+                          "duration": 2622,
                           "errors": [],
                           "stdout": [
                             {
@@ -217,7 +217,7 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Christopher\n"
+                              "text": "Filling name: Jeremy\n"
                             },
                             {
                               "text": "Selecting gender: בן\n"
@@ -234,6 +234,597 @@
                             {
                               "text": "✅ Chatbot login and form submitted\n"
                             },
+                            {
+                              "text": "🔍 Waiting for confirmation iframe to appear...\n"
+                            },
+                            {
+                              "text": "✅ Verifying confirmation message and title...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:24:59.947Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-b1004f10ffc156eaa0a1",
+                  "file": "Chatbot.spec.ts",
+                  "line": 49,
+                  "column": 9
+                },
+                {
+                  "title": "TC_02: 🧠 Initial chatbot message is displayed",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2029,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "✅ Initial bot message received.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:25:39.536Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-7a1143fd846f163b527d",
+                  "file": "Chatbot.spec.ts",
+                  "line": 53,
+                  "column": 9
+                },
+                {
+                  "title": "TC_03: 🚫 Predefined buttons are not active",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1564,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔒 Verifying predefined buttons are hidden...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:25:41.573Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-6a0676835a2727c1c3fa",
+                  "file": "Chatbot.spec.ts",
+                  "line": 58,
+                  "column": 9
+                },
+                {
+                  "title": "TC_04: 🚫 Submit button is disabled initially",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1482,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔒 Verifying Submit button is disabled...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:25:43.146Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-693d284707c4d9132f25",
+                  "file": "Chatbot.spec.ts",
+                  "line": 62,
+                  "column": 9
+                },
+                {
+                  "title": "TC_05: ✅ Submit button is enabled after input",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1518,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Typing message: איך מבשלים Turkey With Orange Sauce?\n"
+                            },
+                            {
+                              "text": "✅ Verifying Submit button is enabled...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:25:44.636Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-b35b2af01cf0d18b9281",
+                  "file": "Chatbot.spec.ts",
+                  "line": 66,
+                  "column": 9
+                },
+                {
+                  "title": "TC_06: 📤 Submit query message",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: Neptunium – The Mysterious Element That Dances on the Edge of Science! 🌌✨\nImagine stepping into a secret lab hidden deep beneath the surface of a bustling city, where scientists in white coats are buzzing with excitement! In one corner, a shimmering blue liquid bubbles away, and in another, a glowing golden element sits quietly, waiting for its moment to shine. 🎇 What is this mysterious element? It's none other than Neptunium—the first transuranic element discovered, and it has quite the fascinating story to tell! 🎉\nThe Unveiling of Neptunium: A Cosmic Adventure 🚀\nNeptunium, with the atomic number 93, is a member of the actinide series on the periodic table. Picture it as a cosmic traveler that comes after uranium—its more famous cousin. This intriguing element was discovered in 1940 by scientists Edwin McMillan and Philip H. Abelson at the University of California, Berkeley. They were on an adventurous quest to find new elements, and their efforts led them to create Neptunium by bombarding uranium with neutrons! ⚛️\nBut what makes Neptunium so special? Well, it's not just another pretty face on the periodic table! It has some unique properties and applications that make it stand out like a shooting star 🌠 in the vast universe of elements.\nThe Applications: How Neptunium Lights Up Our World 🔦\n\nNuclear Energy: ✨ Nept"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 11331,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Submitting query: \"אתה יכול להסביר את השימוש של Neptunium?\"\n"
+                            },
+                            {
+                              "text": "🕐 Waiting for bot response...\n"
+                            },
+                            {
+                              "text": "✅ Bot response received: \"Neptunium – The Mysterious Element That Dances on the Edge of Science! 🌌✨\nImagine stepping into a secret lab hidden deep beneath the surface of a bustling city, where scientists in white coats are buzzing with excitement! In one corner, a shimmering blue liquid bubbles away, and in another, a glowing golden element sits quietly, waiting for its moment to shine. 🎇 What is this mysterious element? It's none other than Neptunium—the first transuranic element discovered, and it has quite the fascinating story to tell! 🎉\nThe Unveiling of Neptunium: A Cosmic Adventure 🚀\nNeptunium, with the atomic number 93, is a member of the actinide series on the periodic table. Picture it as a cosmic traveler that comes after uranium—its more famous cousin. This intriguing element was discovered in 1940 by scientists Edwin McMillan and Philip H. Abelson at the University of California, Berkeley. They were on an adventurous quest to find new elements, and their efforts led them to create Neptunium by bombarding uranium with neutrons! ⚛️\nBut what makes Neptunium so special? Well, it's not just another pretty face on the periodic table! It has some unique properties and applications that make it stand out like a shooting star 🌠 in the vast universe of elements.\nThe Applications: How Neptunium Lights Up Our World 🔦\n\nNuclear Energy: ✨ Nept\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:25:46.160Z",
+                          "annotations": [
+                            {
+                              "type": "info",
+                              "description": "Bot response: Neptunium – The Mysterious Element That Dances on the Edge of Science! 🌌✨\nImagine stepping into a secret lab hidden deep beneath the surface of a bustling city, where scientists in white coats are buzzing with excitement! In one corner, a shimmering blue liquid bubbles away, and in another, a glowing golden element sits quietly, waiting for its moment to shine. 🎇 What is this mysterious element? It's none other than Neptunium—the first transuranic element discovered, and it has quite the fascinating story to tell! 🎉\nThe Unveiling of Neptunium: A Cosmic Adventure 🚀\nNeptunium, with the atomic number 93, is a member of the actinide series on the periodic table. Picture it as a cosmic traveler that comes after uranium—its more famous cousin. This intriguing element was discovered in 1940 by scientists Edwin McMillan and Philip H. Abelson at the University of California, Berkeley. They were on an adventurous quest to find new elements, and their efforts led them to create Neptunium by bombarding uranium with neutrons! ⚛️\nBut what makes Neptunium so special? Well, it's not just another pretty face on the periodic table! It has some unique properties and applications that make it stand out like a shooting star 🌠 in the vast universe of elements.\nThe Applications: How Neptunium Lights Up Our World 🔦\n\nNuclear Energy: ✨ Nept"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-c7d9a4d7c8379355269a",
+                  "file": "Chatbot.spec.ts",
+                  "line": 70,
+                  "column": 9
+                },
+                {
+                  "title": "TC_07: 🔽 Scroll to bottom of chat",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 6941,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔽 Scrolling to bottom...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:25:57.498Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-30c38a51400fa5db62f0",
+                  "file": "Chatbot.spec.ts",
+                  "line": 74,
+                  "column": 9
+                },
+                {
+                  "title": "TC_08: ✅ Predefined buttons become active after response",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1507,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔓 Verifying predefined buttons are visible...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:26:04.446Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-0637274af489116a11d1",
+                  "file": "Chatbot.spec.ts",
+                  "line": 78,
+                  "column": 9
+                },
+                {
+                  "title": "TC_09: 👍 Like button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3076,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "👍 Clicking Like button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:26:05.962Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-fb851d92181092d9ee02",
+                  "file": "Chatbot.spec.ts",
+                  "line": 82,
+                  "column": 9
+                },
+                {
+                  "title": "TC_10: 👎 Dislike button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3010,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "👎 Clicking Dislike button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:26:09.046Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-fe244b42414d3a15ab9a",
+                  "file": "Chatbot.spec.ts",
+                  "line": 86,
+                  "column": 9
+                },
+                {
+                  "title": "TC_11: 📋 Copy button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2097,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "📋 Clicking Copy button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:26:12.063Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-5b9d5ff26ae699e98514",
+                  "file": "Chatbot.spec.ts",
+                  "line": 90,
+                  "column": 9
+                },
+                {
+                  "title": "TC_12: 📍 Predefined button click triggers response",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: The Enchanting World of Neptunium: A Journey into the Unknown! 🌌✨\nImagine a world where elements weave stories of cosmic wonder, where scientists don white lab coats and work tirelessly to unlock the secrets of the universe! 🎓💫 Picture yourself stepping into a hidden laboratory, filled with bubbling blue liquids and glowing golden substances. Among these elixirs lies a fascinating element called Neptunium—an enigmatic player in the grand tale of chemistry that awaits your discovery! 🚀\nThe Cosmic Birth of Neptunium 🌟\nLet’s embark on our adventure by unveiling the origins of Neptunium. This element, with the atomic number 93, is a member of the actinide series on the periodic table. Think of it as Uranium's lesser-known sibling, adding a touch of mystery to an already intriguing family! 🧬 Discovered in 1940 by scientists Edwin McMillan and Philip H. Abelson at the University of California, Berkeley, Neptunium emerged from their ambitious quest to uncover new elements. By bombarding uranium with neutrons, they conjured this element into existence—how cool is that? ⚛️✨\nBut wait, what makes Neptunium so special? Well, hold onto your lab goggles because this element is not just another face on the periodic table—it has unique properties and exciting applications that make it shine like a star in our scientific universe! 🌠\nThe Many Faces of Neptunium: Applications That Light Up Our World 🔦\n\n\nNuclear Energy: ✨ Neptunium plays an essential role in nuclear reactors! Its isotopes can be used as fuel. When Neptunium-237 (the most stable isotope) absorbs neutrons, it can transform into plutonium-238—a key player in powering space missions and even some pacemakers! Imagine being part of an adventure that fuels journeys to distant planets! 🚀🌌\n\n\nResearch Applications: 🔬 Scientists are absolutely enamored with Neptunium for its intriguing radioactive properties."
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 11400,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔘 Clicking Predefined button...\n"
+                            },
+                            {
+                              "text": "✅ Bot response received: \"The Enchanting World of Neptunium: A Journey into the Unknown! 🌌✨\nImagine a world where elements weave stories of cosmic wonder, where scientists don white lab coats and work tirelessly to unlock the secrets of the universe! 🎓💫 Picture yourself stepping into a hidden laboratory, filled with bubbling blue liquids and glowing golden substances. Among these elixirs lies a fascinating element called Neptunium—an enigmatic player in the grand tale of chemistry that awaits your discovery! 🚀\nThe Cosmic Birth of Neptunium 🌟\nLet’s embark on our adventure by unveiling the origins of Neptunium. This element, with the atomic number 93, is a member of the actinide series on the periodic table. Think of it as Uranium's lesser-known sibling, adding a touch of mystery to an already intriguing family! 🧬 Discovered in 1940 by scientists Edwin McMillan and Philip H. Abelson at the University of California, Berkeley, Neptunium emerged from their ambitious quest to uncover new elements. By bombarding uranium with neutrons, they conjured this element into existence—how cool is that? ⚛️✨\nBut wait, what makes Neptunium so special? Well, hold onto your lab goggles because this element is not just another face on the periodic table—it has unique properties and exciting applications that make it shine like a star in our scientific universe! 🌠\nThe Many Faces of Neptunium: Applications That Light Up Our World 🔦\n\n\nNuclear Energy: ✨ Neptunium plays an essential role in nuclear reactors! Its isotopes can be used as fuel. When Neptunium-237 (the most stable isotope) absorbs neutrons, it can transform into plutonium-238—a key player in powering space missions and even some pacemakers! Imagine being part of an adventure that fuels journeys to distant planets! 🚀🌌\n\n\nResearch Applications: 🔬 Scientists are absolutely enamored with Neptunium for its intriguing radioactive properties.\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:26:14.168Z",
+                          "annotations": [
+                            {
+                              "type": "info",
+                              "description": "Bot response: The Enchanting World of Neptunium: A Journey into the Unknown! 🌌✨\nImagine a world where elements weave stories of cosmic wonder, where scientists don white lab coats and work tirelessly to unlock the secrets of the universe! 🎓💫 Picture yourself stepping into a hidden laboratory, filled with bubbling blue liquids and glowing golden substances. Among these elixirs lies a fascinating element called Neptunium—an enigmatic player in the grand tale of chemistry that awaits your discovery! 🚀\nThe Cosmic Birth of Neptunium 🌟\nLet’s embark on our adventure by unveiling the origins of Neptunium. This element, with the atomic number 93, is a member of the actinide series on the periodic table. Think of it as Uranium's lesser-known sibling, adding a touch of mystery to an already intriguing family! 🧬 Discovered in 1940 by scientists Edwin McMillan and Philip H. Abelson at the University of California, Berkeley, Neptunium emerged from their ambitious quest to uncover new elements. By bombarding uranium with neutrons, they conjured this element into existence—how cool is that? ⚛️✨\nBut wait, what makes Neptunium so special? Well, hold onto your lab goggles because this element is not just another face on the periodic table—it has unique properties and exciting applications that make it shine like a star in our scientific universe! 🌠\nThe Many Faces of Neptunium: Applications That Light Up Our World 🔦\n\n\nNuclear Energy: ✨ Neptunium plays an essential role in nuclear reactors! Its isotopes can be used as fuel. When Neptunium-237 (the most stable isotope) absorbs neutrons, it can transform into plutonium-238—a key player in powering space missions and even some pacemakers! Imagine being part of an adventure that fuels journeys to distant planets! 🚀🌌\n\n\nResearch Applications: 🔬 Scientists are absolutely enamored with Neptunium for its intriguing radioactive properties."
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-f403e5035d0666c0b019",
+                  "file": "Chatbot.spec.ts",
+                  "line": 94,
+                  "column": 9
+                },
+                {
+                  "title": "TC_13: 🔄 Reload hides previous chat",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 9443,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "✅ Verified: Bot responses are cleared after reload.\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "✅ Initial bot message received.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:26:25.578Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-507e3eeff22d394f85bc",
+                  "file": "Chatbot.spec.ts",
+                  "line": 98,
+                  "column": 9
+                },
+                {
+                  "title": "TC_14: ✏️ New session is created using edit icon",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3519,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔁 Starting a new chatbot session...\n"
+                            },
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "✅ Verified: Bot responses are cleared after reload.\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "✅ Initial bot message received.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:26:35.028Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-408603e96cb3141402d5",
+                  "file": "Chatbot.spec.ts",
+                  "line": 104,
+                  "column": 9
+                },
+                {
+                  "title": "TC_15:Session pop-up display after 10 minutes.",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 60418,
+                          "errors": [],
+                          "stdout": [
                             {
                               "text": "⏳ Waiting for inactivity popup to appear...\n"
                             },
@@ -252,7 +843,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-12T13:48:40.702Z",
+                          "startTime": "2025-05-13T06:26:38.554Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -260,9 +851,486 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-ce934daf5ea7307ee643",
+                  "id": "23335bb06d3df52af178-496c9f37641645c94a62",
                   "file": "Chatbot.spec.ts",
-                  "line": 57,
+                  "line": 110,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hamburger_Menu.spec.ts",
+      "file": "Hamburger_Menu.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "BlueDrop Hamburgermenu Test Suite",
+          "file": "Hamburger_Menu.spec.ts",
+          "line": 18,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Hamburger Menu & 📜 Chat History",
+              "file": "Hamburger_Menu.spec.ts",
+              "line": 46,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC_16 🔓 Open Hamburger Menu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2599,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Navigating to chatbot login page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "✅ Login process completed and iframe title located successfully.\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            },
+                            {
+                              "text": "Waiting for validation error messages...\n"
+                            },
+                            {
+                              "text": "Verified gender required validation message.\n"
+                            },
+                            {
+                              "text": "Verified name required validation message.\n"
+                            },
+                            {
+                              "text": "✅ Invalid input test completed with expected error validations.\n"
+                            },
+                            {
+                              "text": "Starting to fill personal information form...\n"
+                            },
+                            {
+                              "text": "Filling name: Jeremy\n"
+                            },
+                            {
+                              "text": "Selecting gender: בן\n"
+                            },
+                            {
+                              "text": "Checking visibility of \"Start\" button...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button...\n"
+                            },
+                            {
+                              "text": "✅ Personal info submitted successfully.\n"
+                            },
+                            {
+                              "text": "✅ TC_15: Open Hamburger Menu\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:27:39.194Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-831204726bd1f5d94275",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 48,
+                  "column": 9
+                },
+                {
+                  "title": "TC_17 ➕ Load More button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2243,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_16: Load More button functionality\n"
+                            },
+                            {
+                              "text": "📜 Clicking Load More button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:28:09.371Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-2a9f8e93d66713e6aa42",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 53,
+                  "column": 9
+                },
+                {
+                  "title": "TC_18 🔍 Search in chat history",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2182,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_17: Search in chat history\n"
+                            },
+                            {
+                              "text": "🔍 Searching for message: \"\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:28:11.622Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-672809698635e1d16800",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 58,
+                  "column": 9
+                },
+                {
+                  "title": "TC_19 ❌ No result in chat history",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 4030,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_18: No result in chat history\n"
+                            },
+                            {
+                              "text": "🔍 Searching for non-existent history: \"איך מבשלים Udupi Cheddar Soup?\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:28:13.810Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-12667e1532b86b4548db",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 63,
+                  "column": 9
+                },
+                {
+                  "title": "TC_20 ❎ Close Hamburger Menu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2075,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_19: Close Hamburger Menu\n"
+                            },
+                            {
+                              "text": "❌ Closing hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:28:17.850Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-ee9894bb40db5ddb5e33",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 68,
+                  "column": 9
+                },
+                {
+                  "title": "TC_21 🆕 New session with \"שיחה חדשה\"",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 4010,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_20: Start new session using \"שיחה חדשה\"\n"
+                            },
+                            {
+                              "text": "🔁 Creating new session from hamburger menu...\n"
+                            },
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "✅ Verified: Bot responses are cleared after reload.\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "✅ Initial bot message received.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:28:19.933Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-1b9fde63f86753164ca7",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 73,
+                  "column": 9
+                },
+                {
+                  "title": "TC_22 ✏️ Edit and save changes in chat history",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3292,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_21: Edit and save changes in chat history\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:28:23.954Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-9a2dcbc5e812dbbea474",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 80,
+                  "column": 9
+                },
+                {
+                  "title": "TC_23 🔁 Continue Chat Functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 3648,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_22: Continue Chat Functionality\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-13T06:28:27.252Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-c1b5c30e176758c5177c",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 86,
                   "column": 9
                 }
               ]
@@ -274,9 +1342,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-12T13:48:36.841Z",
-    "duration": 90256.15600000002,
-    "expected": 1,
+    "startTime": "2025-05-13T06:24:56.927Z",
+    "duration": 214468.53399999999,
+    "expected": 23,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
