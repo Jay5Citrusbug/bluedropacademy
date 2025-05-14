@@ -2,18 +2,16 @@ name: Staging Run Playwright Tests and Email Reports
 
 on:
   push:
-    branches: [main]
+    branches: [main1]
   pull_request:
-    branches: [main]
+    branches: [main1]
   schedule:
     - cron: '0 22 * * *'  # Runs daily at 1 AM Israel Time
 
 jobs:
   staging:
     runs-on: ubuntu-latest
-    env:
-      URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
-      URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
+    
     outputs:
       date: ${{ steps.date.outputs.date }}
       total: ${{ steps.summary.outputs.total }}
@@ -30,8 +28,15 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
       - name: Install dependencies
         run: npm ci
+      
+      - name: Get current time
+        id: current_date
+        run: echo "current_date=$(date '+%H-%M-%S')" >> $GITHUB_OUTPUT
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
@@ -41,6 +46,9 @@ jobs:
         run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Run Playwright Tests (Staging)
+        env:
+          URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
+          URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
         run: |
           npx playwright test --project=chromium --workers=1 --reporter=json=test-results.json,html | tee test-log.txt
 
@@ -107,5 +115,7 @@ jobs:
           SKIPPED: ${{ needs.staging.outputs.skipped }}
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
+          URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
+          URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
 
   
