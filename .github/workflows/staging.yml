@@ -77,10 +77,20 @@ jobs:
           if [ ! -d "playwright-report" ]; then echo "Playwright report folder not found!" && exit 1; fi
           mv playwright-report "report-${{ needs.build.outputs.current_date }}"
       
+      - name: Move report into subdirectory
+        run: |
+          mkdir -p site/report-${{ needs.build.outputs.current_date }}
+          mv report-${{ needs.build.outputs.current_date }}/* site/report-${{ needs.build.outputs.current_date }}
+      
       - name: Upload report as GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: report-${{ needs.build.outputs.current_date }}
+          path: .
+        
+      - name: Upload report as GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
       
   deploy:
     needs: build
