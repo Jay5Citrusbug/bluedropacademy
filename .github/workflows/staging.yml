@@ -23,7 +23,7 @@ jobs:
       passed: ${{ steps.summary.outputs.passed }}
       failed: ${{ steps.summary.outputs.failed }}
       skipped: ${{ steps.summary.outputs.skipped }}
-      current_date: ${{ steps.summary.outputs.current_date }}
+      current_date: ${{ steps.current_date.outputs.current_date }}
 
     steps:
       - name: Checkout code
@@ -133,6 +133,6 @@ jobs:
           SKIPPED: ${{ needs.build.outputs.skipped }}
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
-          REPORT_URL: ${{ needs.deploy.outputs.page_url }}/report-${{ needs.build.outputs.date }}/index.html
+          REPORT_URL: ${{ needs.deploy.outputs.page_url }}report-${{ needs.build.outputs.date }}/index.html
           URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
           URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
