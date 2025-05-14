@@ -40,9 +40,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Get current time
+      - name: Get current date
         id: current_date
-        run: echo "current_date=$(date '+%H-%M-%S')" >> $GITHUB_OUTPUT
+        run: echo "current_date=$(date '+%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
