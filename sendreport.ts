@@ -30,7 +30,7 @@ const subject = `${environment} Daily Automation Test Report - ${reportDate}`;
 
 const msg = {
  // to: 'noam@bluedropacademy.com',
-    to: 'jay5.citrusbug@gmail.com',
+    to: 'nikunj.citrusbug@gmail.com',
   //cc: ['jay5.citrusbug@gmail.com', 'jayshree@citrusbug.com'],
   from: 'bluedropacademy.aws@gmail.com',
   subject: subject,
