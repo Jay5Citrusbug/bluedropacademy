@@ -75,12 +75,12 @@ jobs:
       - name: Rename report folder with timestamp
         run: |
           if [ ! -d "playwright-report" ]; then echo "Playwright report folder not found!" && exit 1; fi
-          mv playwright-report "report-${{ steps.date.outputs.date }}"
+          mv playwright-report "report-${{ steps.current_date.outputs.current_date }}"
       
       - name: Upload report as GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: report-${{ steps.date.outputs.date }}
+          path: report-${{ steps.current_date.outputs.current_date }}
       
   deploy:
     needs: build
