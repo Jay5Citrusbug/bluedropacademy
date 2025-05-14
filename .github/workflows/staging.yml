@@ -85,12 +85,8 @@ jobs:
       - name: Upload report as GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
-        
-      - name: Upload report as GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
           path: site
+          name: github-pages-${{ needs.build.outputs.current_date }}
       
   deploy:
     needs: build
