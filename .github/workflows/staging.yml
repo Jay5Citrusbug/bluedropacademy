@@ -75,8 +75,8 @@ jobs:
       - name: Prepare report folder for GitHub Pages
         run: |
           if [ ! -d "playwright-report" ]; then echo "Playwright report folder not found!" && exit 1; fi
-          mkdir -p site/report-${{ steps.current_date.outputs.current_date }}
-          mv playwright-report/* site/report-${{ steps.current_date.outputs.current_date }}
+          mkdir -p site/staging-report-${{ steps.current_date.outputs.current_date }}
+          mv playwright-report/* site/staging-report-${{ steps.current_date.outputs.current_date }}
 
       - name: Upload report as GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -135,6 +135,6 @@ jobs:
           SKIPPED: ${{ needs.build.outputs.skipped }}
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
-          REPORT_URL: ${{ needs.deploy.outputs.page_url }}report-${{ needs.build.outputs.current_date }}/index.html
+          REPORT_URL: ${{ needs.deploy.outputs.page_url }}staging-report-${{ needs.build.outputs.current_date }}/index.html
           URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
           URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
