@@ -1,0 +1,140 @@
+name: Run Playwright Tests and Email Report
+
+on:
+  push:
+    branches: [ production ]
+  pull_request:
+    branches: [ production ]
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    outputs:
+      date: ${{ steps.date.outputs.date }}
+      total: ${{ steps.summary.outputs.total }}
+      passed: ${{ steps.summary.outputs.passed }}
+      failed: ${{ steps.summary.outputs.failed }}
+      skipped: ${{ steps.summary.outputs.skipped }}
+      current_date: ${{ steps.current_date.outputs.current_date }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Get current date
+        id: current_date
+        run: echo "current_date=$(date '+%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright Tests
+        env:
+          URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
+          URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
+        run: |
+          npx playwright test --project=chromium --workers=1 \
+            --reporter=json=test-results.json,html | tee test-log.txt
+
+      - name: Get current date with timestamp
+        id: date
+        run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
+
+      - name: Extract test summary
+        id: summary
+        run: |
+          if [ ! -f "test-results.json" ]; then echo "Report file not found!" && exit 1; fi
+          TOTAL=$(jq '.suites | map(.specs | length) | add' test-results.json)
+          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' test-results.json)
+          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)
+          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)
+          echo "total=$TOTAL" >> $GITHUB_OUTPUT
+          echo "passed=$PASSED" >> $GITHUB_OUTPUT
+          echo "failed=$FAILED" >> $GITHUB_OUTPUT
+          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+
+      - name: Prepare report folder for GitHub Pages
+        run: |
+          if [ ! -d "playwright-report" ]; then echo "Playwright report folder not found!" && exit 1; fi
+          mkdir -p site/report-${{ steps.current_date.outputs.current_date }}
+          mv playwright-report/* site/report-${{ steps.current_date.outputs.current_date }}
+
+      - name: Upload report as GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site  # must be `site` to match Pages deploy expectation
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    outputs:
+      page_url: ${{ steps.deploy.outputs.page_url }}
+
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+  notify:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Send Email Report via SendGrid API
+        run: |
+          node sendreport.ts
+        env:
+          ENVIRONMENT: Production
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          REPORT_DATE: ${{ needs.build.outputs.current_date }}
+          TOTAL: ${{ needs.build.outputs.total }}
+          PASSED: ${{ needs.build.outputs.passed }}
+          FAILED: ${{ needs.build.outputs.failed }}
+          SKIPPED: ${{ needs.build.outputs.skipped }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          REPORT_URL: ${{ needs.deploy.outputs.page_url }}report-${{ needs.build.outputs.current_date }}/index.html
+          URL_ADMIN: https://chat.bluedropacademy.com/admin
+          URL_CHATBOT: https://www.bluedropacademy.com/chatbot
