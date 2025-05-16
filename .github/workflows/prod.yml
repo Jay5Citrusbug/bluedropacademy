@@ -2,7 +2,7 @@ name: Run Playwright Tests and Email Report
 
 on:
   push:
-    branches: [ main ]
+    branches: [ production ]
   schedule:
     - cron: '0 0 * * *'
 
@@ -47,8 +47,8 @@ jobs:
 
       - name: Run Playwright Tests
         env:
-          URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
-          URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
+          URL_ADMIN: https://chat.bluedropacademy.com/admin
+          URL_CHATBOT: https://www.bluedropacademy.com/chatbot
         run: |
           npx playwright test --project=chromium --workers=1 \
             --reporter=json=test-results.json,html | tee test-log.txt
@@ -73,8 +73,8 @@ jobs:
       - name: Prepare report folder for GitHub Pages
         run: |
           if [ ! -d "playwright-report" ]; then echo "Playwright report folder not found!" && exit 1; fi
-          mkdir -p site/staging-report-${{ steps.current_date.outputs.current_date }}
-          mv playwright-report/* site/staging-report-${{ steps.current_date.outputs.current_date }}
+          mkdir -p site/production-report-${{ steps.current_date.outputs.current_date }}
+          mv playwright-report/* site/production-report-${{ steps.current_date.outputs.current_date }}
 
       - name: Upload report as GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -124,7 +124,7 @@ jobs:
         run: |
           node sendreport.ts
         env:
-          ENVIRONMENT: Staging
+          ENVIRONMENT: Production
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           REPORT_DATE: ${{ needs.build.outputs.current_date }}
           TOTAL: ${{ needs.build.outputs.total }}
@@ -133,6 +133,6 @@ jobs:
           SKIPPED: ${{ needs.build.outputs.skipped }}
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
-          REPORT_URL: ${{ needs.deploy.outputs.page_url }}staging-report-${{ needs.build.outputs.current_date }}/index.html
-          URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
-          URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
+          REPORT_URL: ${{ needs.deploy.outputs.page_url }}production-report-${{ needs.build.outputs.current_date }}/index.html
+          URL_ADMIN: https://chat.bluedropacademy.com/admin
+          URL_CHATBOT: https://www.bluedropacademy.com/chatbot
