@@ -69,7 +69,7 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "patch",
+    "updateSourceMethod": "3way",
     "version": "1.52.0",
     "workers": 1,
     "webServer": null
@@ -85,37 +85,72 @@
         {
           "title": "BlueDrop Chatbot Test Suite",
           "file": "Chatbot.spec.ts",
-          "line": 16,
+          "line": 21,
           "column": 6,
           "specs": [],
           "suites": [
             {
               "title": "💬 Chatbot Screen",
               "file": "Chatbot.spec.ts",
-              "line": 47,
+              "line": 52,
               "column": 8,
               "specs": [
                 {
-                  "title": "TC_01: ✅ Confirm chatbot screen elements are visible",
-                  "ok": true,
+                  "title": "TC_17: Browser tab end/terminate and verify search history page.",
+                  "ok": false,
                   "tags": [],
                   "tests": [
                     {
                       "timeout": 120000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: 🥩 קרוקודיל על הצלחת: כך תכיני סטייק קרוקודיל מושלם! 🐊🔥\nאוקיי, Glenda, אנחנו עומדות לצלול להרפתקה קולינרית סופר ייחודית היום – הכנת סטייק קרוקודיל! כן, כן, את שומעת נכון. 🐊 זה בשר אקזוטי (אבל גם די עדין), אז צריך לדעת איך להתייחס אליו באהבה ובזהירות. מוכנה? כי הולכת להיות חגיגה במטבח! 🍳✨\n\n🎬 שלב 1: הבנת הבשר – מה הסיפור של קרוקודיל?\nלפני שנתחיל, בואי נדבר רגע על הבשר עצמו: בשר קרוקודיל מזכיר קצת עוף (כן, באמת!) אבל עם טוויסט עדין שמזכיר דגים. 💡 הוא רזה מאוד ויכול להתייבש די מהר אם לא מכינים אותו נכון. אז המטרה שלנו כאן היא לשמור עליו עסיסי ולהוציא ממנו את המקסימום טעמים.\n\n🛒 שלב 2: מה צריך לקנות?\nהנה מה שתצטרכי:\n\nנתחי קרוקודיל טריים או קפואים (עדיף פילה או סטייקים חתוכים מראש).\nמרינדה לטעם: מיץ לימון 🍋, שום כתוש 🧄, שמן זית איכותי, מלח ופלפל.\nלתיבול נוסף: עשבי תיבול כמו טימין או רוזמרין 🌿 ושפריץ של סויה למי שאוהבת טיפה מליחות מעודנת.\nמחבת פסים כבדה או גריל טוב. 🔥\n\n💡 טיפ קטן: אם הבשר קפוא, תני לו להפשיר במקרר ללילה – אל תנסי למהר עם מיקרוגל.\n\n👩‍🍳 שלב 3: המרינדה הקסומה\nכדי להבטיח שהבשר יהיה רך וטוב, נשרה אותו קודם כל במרינדה כיפית:\n1️⃣ קחי קערה עמוקה. ערבבי בתוכה:\n\n3 כפות מיץ לימון 🍋.\n2 כפות שמן זית.\nשן שום כתושה אחת או שתיים (או יותר אם את משוגעת לשום כמוני 😜).\nטיפונת מלח ופלפל לפי הטעם.\n\n2️⃣ הניחי את נתחי הקרוקודיל בתוך המרינדה ודאגי שהם \"שוחים\" בתוכה מכל הצדדים.\n3️⃣ כסי בניילון נצמד והשאירי במקרר למשך לפחות שעה ⏰ (ואם יש לך זמן – אפילו ללילה שלם!).\n\n🔥 **שלב"
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 4,
                           "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1339,
-                          "errors": [],
+                          "status": "failed",
+                          "duration": 46309,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\u001b[22m\n\n    at chatbotPage.PredefinebuttonActive (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:62:70)\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:135:29",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                              "column": 70,
+                              "line": 62
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:62\n\n\u001b[0m \u001b[90m 60 |\u001b[39m     \u001b[36mconst\u001b[39m frameLocator \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mframeLocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39miframeName)\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🔓 Verifying predefined buttons are visible...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mlocator(\u001b[32m'.main-chat-buttons-wrapper'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m   }\n \u001b[90m 64 |\u001b[39m\n \u001b[90m 65 |\u001b[39m  \u001b[36masync\u001b[39m \u001b[33mSubmitQuery\u001b[39m(testInfo\u001b[33m:\u001b[39m \u001b[33mTestInfo\u001b[39m)\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[33mstring\u001b[39m\u001b[33m>\u001b[39m {\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                                "column": 70,
+                                "line": 62
+                              },
+                              "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:62\n\n\u001b[0m \u001b[90m 60 |\u001b[39m     \u001b[36mconst\u001b[39m frameLocator \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mframeLocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39miframeName)\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🔓 Verifying predefined buttons are visible...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mlocator(\u001b[32m'.main-chat-buttons-wrapper'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m   }\n \u001b[90m 64 |\u001b[39m\n \u001b[90m 65 |\u001b[39m  \u001b[36masync\u001b[39m \u001b[33mSubmitQuery\u001b[39m(testInfo\u001b[33m:\u001b[39m \u001b[33mTestInfo\u001b[39m)\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[33mstring\u001b[39m\u001b[33m>\u001b[39m {\u001b[0m\n\u001b[2m    at chatbotPage.PredefinebuttonActive (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:62:70)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:135:29\u001b[22m"
+                            },
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                                "column": 5,
+                                "line": 176
+                              },
+                              "message": "Error: ENOENT: no such file or directory, open 'D:\\Playwright\\Bluedrop_academy\\screenshots\\TC_17:_Browser_tab_end\\terminate_and_verify_search_history_page..png'\n\n\u001b[0m \u001b[90m 174 |\u001b[39m   \u001b[36mif\u001b[39m (testInfo\u001b[33m.\u001b[39mstatus \u001b[33m!==\u001b[39m testInfo\u001b[33m.\u001b[39mexpectedStatus) {\n \u001b[90m 175 |\u001b[39m     \u001b[36mconst\u001b[39m screenshotPath \u001b[33m=\u001b[39m \u001b[32m`screenshots/${testInfo.title.replace(/\\s+/g, '_')}.png`\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m screenshotPath\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 177 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`❌ Test failed: ${testInfo.title}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 178 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`📸 Screenshot saved at: ${screenshotPath}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 179 |\u001b[39m   }\u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:176:5\u001b[22m"
+                            }
+                          ],
                           "stdout": [
                             {
                               "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
                             },
                             {
                               "text": "Successfully navigated to the admin page.\n"
@@ -169,7 +204,10 @@
                               "text": "✅ User reset complete\n"
                             },
                             {
-                              "text": "Navigating to chatbot login page...\n"
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
                             },
                             {
                               "text": "Successfully navigated to chatbot login page.\n"
@@ -217,7 +255,7 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Renee\n"
+                              "text": "Filling name: Glenda\n"
                             },
                             {
                               "text": "Selecting gender: בת\n"
@@ -235,626 +273,19 @@
                               "text": "✅ Chatbot login and form submitted\n"
                             },
                             {
-                              "text": "🔍 Waiting for confirmation iframe to appear...\n"
-                            },
-                            {
-                              "text": "✅ Verifying confirmation message and title...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:18:29.841Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-b1004f10ffc156eaa0a1",
-                  "file": "Chatbot.spec.ts",
-                  "line": 49,
-                  "column": 9
-                },
-                {
-                  "title": "TC_02: 🧠 Initial chatbot message is displayed",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 3588,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "✅ Initial bot message received.\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:00.824Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-7a1143fd846f163b527d",
-                  "file": "Chatbot.spec.ts",
-                  "line": 53,
-                  "column": 9
-                },
-                {
-                  "title": "TC_03: 🚫 Predefined buttons are not active",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 772,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔒 Verifying predefined buttons are hidden...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:04.437Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-6a0676835a2727c1c3fa",
-                  "file": "Chatbot.spec.ts",
-                  "line": 58,
-                  "column": 9
-                },
-                {
-                  "title": "TC_04: 🚫 Submit button is disabled initially",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 786,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔒 Verifying Submit button is disabled...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:05.232Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-693d284707c4d9132f25",
-                  "file": "Chatbot.spec.ts",
-                  "line": 62,
-                  "column": 9
-                },
-                {
-                  "title": "TC_05: ✅ Submit button is enabled after input",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 846,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "💬 Typing message: איך מבשלים Peach-infused Rabbit Roast?\n"
-                            },
-                            {
-                              "text": "✅ Verifying Submit button is enabled...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:06.040Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-b35b2af01cf0d18b9281",
-                  "file": "Chatbot.spec.ts",
-                  "line": 66,
-                  "column": 9
-                },
-                {
-                  "title": "TC_06: 📤 Submit query message",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: היכן שמנפצים את האורז: מסע הקולף פסטה ברוקולי! 🥦🍝\nתארי לעצמך שאתה נכנסת לממלכת המטבח, שם ניחוחות השום והזיתים מתערבבים עם ריחות של ירקות טריים! 🌿✨ המצב רוח מרגש, והישר מתחת לידיים שלך מחכה לקולף פסטה ברוקולי – ממתק טעים ובריא, שמוסיף צבע על השולחן שלך.\nהשלב הראשון: גיוס הצוות! 🎉\nלפני שאת מתחילה לבשל, כדאי לגייס את \"צוות המרכיבים\"! מה צריכים כדי להתחיל במסע הקולף? כאן יש את הרשימה שתעזור לך להזרים חיות במרפסת המטבח:\n\nפנֵּי (Penne) – 300 גרם: הפנֵּי הם המהות של המנה הזו. הם מתאימים בצורה מושלמת לבלוע את הרוטב! 🍝\nברוקולי – 1 ראש בינוני: חברו הטוב והירוק שיתחבר לפסטה באהבה. 🥦💚\nשום – 2 שיניים קצוצות: הכן את האף שלך לריחות המשגעים! 🧄✨\nשמן זית – 3 כפות: זה הזמן להוסיף שמן זית – זה מה שיביא את כל הטעמים יחד! 🌻\nמיץ לימון – 1 כף: לחוות את החמיצות הנפלאה! 🍋\nמלח ופלפל לפי הטעם: לחזק טעמים כמו שהשפים הגדולים עושים. 🧂\n\n**שלב שני: חימום"
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 10533,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "💬 Submitting query: \"איך מבשלים Cauliflower Penne?\"\n"
+                              "text": "💬 Submitting query: \"איך להכין Crocodile Steak? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
                             },
                             {
                               "text": "🕐 Waiting for bot response...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"היכן שמנפצים את האורז: מסע הקולף פסטה ברוקולי! 🥦🍝\nתארי לעצמך שאתה נכנסת לממלכת המטבח, שם ניחוחות השום והזיתים מתערבבים עם ריחות של ירקות טריים! 🌿✨ המצב רוח מרגש, והישר מתחת לידיים שלך מחכה לקולף פסטה ברוקולי – ממתק טעים ובריא, שמוסיף צבע על השולחן שלך.\nהשלב הראשון: גיוס הצוות! 🎉\nלפני שאת מתחילה לבשל, כדאי לגייס את \"צוות המרכיבים\"! מה צריכים כדי להתחיל במסע הקולף? כאן יש את הרשימה שתעזור לך להזרים חיות במרפסת המטבח:\n\nפנֵּי (Penne) – 300 גרם: הפנֵּי הם המהות של המנה הזו. הם מתאימים בצורה מושלמת לבלוע את הרוטב! 🍝\nברוקולי – 1 ראש בינוני: חברו הטוב והירוק שיתחבר לפסטה באהבה. 🥦💚\nשום – 2 שיניים קצוצות: הכן את האף שלך לריחות המשגעים! 🧄✨\nשמן זית – 3 כפות: זה הזמן להוסיף שמן זית – זה מה שיביא את כל הטעמים יחד! 🌻\nמיץ לימון – 1 כף: לחוות את החמיצות הנפלאה! 🍋\nמלח ופלפל לפי הטעם: לחזק טעמים כמו שהשפים הגדולים עושים. 🧂\n\n**שלב שני: חימום\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:06.900Z",
-                          "annotations": [
-                            {
-                              "type": "info",
-                              "description": "Bot response: היכן שמנפצים את האורז: מסע הקולף פסטה ברוקולי! 🥦🍝\nתארי לעצמך שאתה נכנסת לממלכת המטבח, שם ניחוחות השום והזיתים מתערבבים עם ריחות של ירקות טריים! 🌿✨ המצב רוח מרגש, והישר מתחת לידיים שלך מחכה לקולף פסטה ברוקולי – ממתק טעים ובריא, שמוסיף צבע על השולחן שלך.\nהשלב הראשון: גיוס הצוות! 🎉\nלפני שאת מתחילה לבשל, כדאי לגייס את \"צוות המרכיבים\"! מה צריכים כדי להתחיל במסע הקולף? כאן יש את הרשימה שתעזור לך להזרים חיות במרפסת המטבח:\n\nפנֵּי (Penne) – 300 גרם: הפנֵּי הם המהות של המנה הזו. הם מתאימים בצורה מושלמת לבלוע את הרוטב! 🍝\nברוקולי – 1 ראש בינוני: חברו הטוב והירוק שיתחבר לפסטה באהבה. 🥦💚\nשום – 2 שיניים קצוצות: הכן את האף שלך לריחות המשגעים! 🧄✨\nשמן זית – 3 כפות: זה הזמן להוסיף שמן זית – זה מה שיביא את כל הטעמים יחד! 🌻\nמיץ לימון – 1 כף: לחוות את החמיצות הנפלאה! 🍋\nמלח ופלפל לפי הטעם: לחזק טעמים כמו שהשפים הגדולים עושים. 🧂\n\n**שלב שני: חימום"
-                            }
-                          ],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-c7d9a4d7c8379355269a",
-                  "file": "Chatbot.spec.ts",
-                  "line": 70,
-                  "column": 9
-                },
-                {
-                  "title": "TC_07: 🔽 Scroll to bottom of chat",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 5755,
-                          "errors": [],
-                          "stdout": [
+                              "text": "✅ Bot response received: \"🥩 קרוקודיל על הצלחת: כך תכיני סטייק קרוקודיל מושלם! 🐊🔥\nאוקיי, Glenda, אנחנו עומדות לצלול להרפתקה קולינרית סופר ייחודית היום – הכנת סטייק קרוקודיל! כן, כן, את שומעת נכון. 🐊 זה בשר אקזוטי (אבל גם די עדין), אז צריך לדעת איך להתייחס אליו באהבה ובזהירות. מוכנה? כי הולכת להיות חגיגה במטבח! 🍳✨\n\n🎬 שלב 1: הבנת הבשר – מה הסיפור של קרוקודיל?\nלפני שנתחיל, בואי נדבר רגע על הבשר עצמו: בשר קרוקודיל מזכיר קצת עוף (כן, באמת!) אבל עם טוויסט עדין שמזכיר דגים. 💡 הוא רזה מאוד ויכול להתייבש די מהר אם לא מכינים אותו נכון. אז המטרה שלנו כאן היא לשמור עליו עסיסי ולהוציא ממנו את המקסימום טעמים.\n\n🛒 שלב 2: מה צריך לקנות?\nהנה מה שתצטרכי:\n\nנתחי קרוקודיל טריים או קפואים (עדיף פילה או סטייקים חתוכים מראש).\nמרינדה לטעם: מיץ לימון 🍋, שום כתוש 🧄, שמן זית איכותי, מלח ופלפל.\nלתיבול נוסף: עשבי תיבול כמו טימין או רוזמרין 🌿 ושפריץ של סויה למי שאוהבת טיפה מליחות מעודנת.\nמחבת פסים כבדה או גריל טוב. 🔥\n\n💡 טיפ קטן: אם הבשר קפוא, תני לו להפשיר במקרר ללילה – אל תנסי למהר עם מיקרוגל.\n\n👩‍🍳 שלב 3: המרינדה הקסומה\nכדי להבטיח שהבשר יהיה רך וטוב, נשרה אותו קודם כל במרינדה כיפית:\n1️⃣ קחי קערה עמוקה. ערבבי בתוכה:\n\n3 כפות מיץ לימון 🍋.\n2 כפות שמן זית.\nשן שום כתושה אחת או שתיים (או יותר אם את משוגעת לשום כמוני 😜).\nטיפונת מלח ופלפל לפי הטעם.\n\n2️⃣ הניחי את נתחי הקרוקודיל בתוך המרינדה ודאגי שהם \"שוחים\" בתוכה מכל הצדדים.\n3️⃣ כסי בניילון נצמד והשאירי במקרר למשך לפחות שעה ⏰ (ואם יש לך זמן – אפילו ללילה שלם!).\n\n🔥 **שלב\"\n"
+                            },
                             {
                               "text": "🔽 Scrolling to bottom...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:17.457Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-30c38a51400fa5db62f0",
-                  "file": "Chatbot.spec.ts",
-                  "line": 74,
-                  "column": 9
-                },
-                {
-                  "title": "TC_08: ✅ Predefined buttons become active after response",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 782,
-                          "errors": [],
-                          "stdout": [
+                            },
                             {
                               "text": "🔓 Verifying predefined buttons are visible...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:23.232Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-0637274af489116a11d1",
-                  "file": "Chatbot.spec.ts",
-                  "line": 78,
-                  "column": 9
-                },
-                {
-                  "title": "TC_09: 👍 Like button functionality",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1257,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "👍 Clicking Like button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:24.029Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-fb851d92181092d9ee02",
-                  "file": "Chatbot.spec.ts",
-                  "line": 82,
-                  "column": 9
-                },
-                {
-                  "title": "TC_10: 👎 Dislike button functionality",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1294,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "👎 Clicking Dislike button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:25.307Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-fe244b42414d3a15ab9a",
-                  "file": "Chatbot.spec.ts",
-                  "line": 86,
-                  "column": 9
-                },
-                {
-                  "title": "TC_11: 📋 Copy button functionality",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 853,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "📋 Clicking Copy button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:26.615Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-5b9d5ff26ae699e98514",
-                  "file": "Chatbot.spec.ts",
-                  "line": 90,
-                  "column": 9
-                },
-                {
-                  "title": "TC_12: 📍 Predefined button click triggers response",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: The Magical World of Cauliflower Penne: A Culinary Adventure Awaits! 🥦🍝\nImagine you're standing at the edge of a vibrant kitchen, the air filled with the intoxicating scents of garlic and olive oil, beckoning you to embark on a culinary journey! 🌿✨ Today, we’re diving deep into the enchanting world of Cauliflower Penne — a dish that transforms humble ingredients into a delightful masterpiece! Are you ready to roll up your sleeves and create something spectacular? Let’s go!\nGathering Your Ingredients: The Dream Team! 🎉\nBefore we unleash our culinary creativity, we need to assemble our “team” of ingredients. Think of them as your trusty sidekicks on this flavorful quest! Here’s what you’ll need:\n\nPenne Pasta – 300 grams: The sturdy pasta that will act as the canvas for our delicious sauce! 🍝\nCauliflower – 1 medium head: Our star vegetable, packed with nutrients and ready to shine! 🥦💚\nGarlic – 2 cloves, minced: The aromatic hero that will bring a burst of flavor to our dish! 🧄✨\nOlive Oil – 3 tablespoons: Liquid gold that binds everything together in perfect harmony. 🌻\nLemon Juice – 1 tablespoon: A splash of brightness to elevate the flavors! 🍋\nSalt and Pepper to taste: The magic touch that enhances all our ingredients. 🧂\n\nStep Two: Setting the Stage 🔥\nNow that we have our team ready, it’s time to set the stage for our culinary adventure!\n\n**Bring Water to"
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 10014,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔘 Clicking Predefined button...\n"
-                            },
-                            {
-                              "text": "✅ Bot response received: \"The Magical World of Cauliflower Penne: A Culinary Adventure Awaits! 🥦🍝\nImagine you're standing at the edge of a vibrant kitchen, the air filled with the intoxicating scents of garlic and olive oil, beckoning you to embark on a culinary journey! 🌿✨ Today, we’re diving deep into the enchanting world of Cauliflower Penne — a dish that transforms humble ingredients into a delightful masterpiece! Are you ready to roll up your sleeves and create something spectacular? Let’s go!\nGathering Your Ingredients: The Dream Team! 🎉\nBefore we unleash our culinary creativity, we need to assemble our “team” of ingredients. Think of them as your trusty sidekicks on this flavorful quest! Here’s what you’ll need:\n\nPenne Pasta – 300 grams: The sturdy pasta that will act as the canvas for our delicious sauce! 🍝\nCauliflower – 1 medium head: Our star vegetable, packed with nutrients and ready to shine! 🥦💚\nGarlic – 2 cloves, minced: The aromatic hero that will bring a burst of flavor to our dish! 🧄✨\nOlive Oil – 3 tablespoons: Liquid gold that binds everything together in perfect harmony. 🌻\nLemon Juice – 1 tablespoon: A splash of brightness to elevate the flavors! 🍋\nSalt and Pepper to taste: The magic touch that enhances all our ingredients. 🧂\n\nStep Two: Setting the Stage 🔥\nNow that we have our team ready, it’s time to set the stage for our culinary adventure!\n\n**Bring Water to\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:27.485Z",
-                          "annotations": [
-                            {
-                              "type": "info",
-                              "description": "Bot response: The Magical World of Cauliflower Penne: A Culinary Adventure Awaits! 🥦🍝\nImagine you're standing at the edge of a vibrant kitchen, the air filled with the intoxicating scents of garlic and olive oil, beckoning you to embark on a culinary journey! 🌿✨ Today, we’re diving deep into the enchanting world of Cauliflower Penne — a dish that transforms humble ingredients into a delightful masterpiece! Are you ready to roll up your sleeves and create something spectacular? Let’s go!\nGathering Your Ingredients: The Dream Team! 🎉\nBefore we unleash our culinary creativity, we need to assemble our “team” of ingredients. Think of them as your trusty sidekicks on this flavorful quest! Here’s what you’ll need:\n\nPenne Pasta – 300 grams: The sturdy pasta that will act as the canvas for our delicious sauce! 🍝\nCauliflower – 1 medium head: Our star vegetable, packed with nutrients and ready to shine! 🥦💚\nGarlic – 2 cloves, minced: The aromatic hero that will bring a burst of flavor to our dish! 🧄✨\nOlive Oil – 3 tablespoons: Liquid gold that binds everything together in perfect harmony. 🌻\nLemon Juice – 1 tablespoon: A splash of brightness to elevate the flavors! 🍋\nSalt and Pepper to taste: The magic touch that enhances all our ingredients. 🧂\n\nStep Two: Setting the Stage 🔥\nNow that we have our team ready, it’s time to set the stage for our culinary adventure!\n\n**Bring Water to"
-                            }
-                          ],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-f403e5035d0666c0b019",
-                  "file": "Chatbot.spec.ts",
-                  "line": 94,
-                  "column": 9
-                },
-                {
-                  "title": "TC_13: 🔄 Reload hides previous chat",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 8636,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "✅ Verified: Bot responses are cleared after reload.\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "✅ Initial bot message received.\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:37.512Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-507e3eeff22d394f85bc",
-                  "file": "Chatbot.spec.ts",
-                  "line": 98,
-                  "column": 9
-                },
-                {
-                  "title": "TC_14: ✏️ New session is created using edit icon",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2239,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔁 Starting a new chatbot session...\n"
-                            },
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "✅ Verified: Bot responses are cleared after reload.\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "✅ Initial bot message received.\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:19:46.160Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "23335bb06d3df52af178-408603e96cb3141402d5",
-                  "file": "Chatbot.spec.ts",
-                  "line": 104,
-                  "column": 9
-                },
-                {
-                  "title": "TC_15:Session pop-up display after 10 minutes.",
-                  "ok": false,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 71201,
-                          "error": {
-                            "message": "Error: \u001b[31mTimed out 70000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 70000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\u001b[22m\n",
-                            "stack": "Error: \u001b[31mTimed out 70000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 70000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\u001b[22m\n\n    at chatbotPage.InactivityPopup (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:193:33)\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:111:27",
-                            "location": {
-                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                              "column": 33,
-                              "line": 193
-                            },
-                            "snippet": "\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:193\n\n\u001b[0m \u001b[90m 191 |\u001b[39m   \u001b[36mconst\u001b[39m inactivityPopup \u001b[33m=\u001b[39m frameLocator\u001b[33m.\u001b[39mlocator(\u001b[32m'role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 192 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m'⏳ Waiting for inactivity popup to appear...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 193 |\u001b[39m   \u001b[36mawait\u001b[39m expect(inactivityPopup)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m70000\u001b[39m  })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 194 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m.\u001b[39mcontentFrame()\u001b[33m.\u001b[39mgetByText(\u001b[32m'היי! לא ראינו פעילות ב-10'\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n \u001b[90m 195 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m'✅ Inactivity popup is visible.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 196 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m.\u001b[39mcontentFrame()\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m)\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'המשך שיחה'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                                "column": 33,
-                                "line": 193
-                              },
-                              "message": "Error: \u001b[31mTimed out 70000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 70000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:193\n\n\u001b[0m \u001b[90m 191 |\u001b[39m   \u001b[36mconst\u001b[39m inactivityPopup \u001b[33m=\u001b[39m frameLocator\u001b[33m.\u001b[39mlocator(\u001b[32m'role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 192 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m'⏳ Waiting for inactivity popup to appear...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 193 |\u001b[39m   \u001b[36mawait\u001b[39m expect(inactivityPopup)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m70000\u001b[39m  })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 194 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m.\u001b[39mcontentFrame()\u001b[33m.\u001b[39mgetByText(\u001b[32m'היי! לא ראינו פעילות ב-10'\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n \u001b[90m 195 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m'✅ Inactivity popup is visible.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 196 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m.\u001b[39mcontentFrame()\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m)\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'המשך שיחה'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at chatbotPage.InactivityPopup (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:193:33)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:111:27\u001b[22m"
-                            }
-                          ],
-                          "stdout": [
-                            {
-                              "text": "⏳ Waiting for inactivity popup to appear...\n"
-                            },
-                            {
-                              "text": "⏳ Waiting for inactivity popup to appear...\n"
-                            },
-                            {
-                              "text": "❌ Test failed: TC_15:Session pop-up display after 10 minutes.\n"
-                            },
-                            {
-                              "text": "📸 Screenshot saved at: screenshots/TC_15:Session_pop-up_display_after_10_minutes..png\n"
                             },
                             {
                               "text": "🧹 Closing context\n"
@@ -862,515 +293,48 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-13T08:19:48.419Z",
-                          "annotations": [],
+                          "startTime": "2025-05-16T12:16:32.386Z",
+                          "annotations": [
+                            {
+                              "type": "info",
+                              "description": "Bot response: 🥩 קרוקודיל על הצלחת: כך תכיני סטייק קרוקודיל מושלם! 🐊🔥\nאוקיי, Glenda, אנחנו עומדות לצלול להרפתקה קולינרית סופר ייחודית היום – הכנת סטייק קרוקודיל! כן, כן, את שומעת נכון. 🐊 זה בשר אקזוטי (אבל גם די עדין), אז צריך לדעת איך להתייחס אליו באהבה ובזהירות. מוכנה? כי הולכת להיות חגיגה במטבח! 🍳✨\n\n🎬 שלב 1: הבנת הבשר – מה הסיפור של קרוקודיל?\nלפני שנתחיל, בואי נדבר רגע על הבשר עצמו: בשר קרוקודיל מזכיר קצת עוף (כן, באמת!) אבל עם טוויסט עדין שמזכיר דגים. 💡 הוא רזה מאוד ויכול להתייבש די מהר אם לא מכינים אותו נכון. אז המטרה שלנו כאן היא לשמור עליו עסיסי ולהוציא ממנו את המקסימום טעמים.\n\n🛒 שלב 2: מה צריך לקנות?\nהנה מה שתצטרכי:\n\nנתחי קרוקודיל טריים או קפואים (עדיף פילה או סטייקים חתוכים מראש).\nמרינדה לטעם: מיץ לימון 🍋, שום כתוש 🧄, שמן זית איכותי, מלח ופלפל.\nלתיבול נוסף: עשבי תיבול כמו טימין או רוזמרין 🌿 ושפריץ של סויה למי שאוהבת טיפה מליחות מעודנת.\nמחבת פסים כבדה או גריל טוב. 🔥\n\n💡 טיפ קטן: אם הבשר קפוא, תני לו להפשיר במקרר ללילה – אל תנסי למהר עם מיקרוגל.\n\n👩‍🍳 שלב 3: המרינדה הקסומה\nכדי להבטיח שהבשר יהיה רך וטוב, נשרה אותו קודם כל במרינדה כיפית:\n1️⃣ קחי קערה עמוקה. ערבבי בתוכה:\n\n3 כפות מיץ לימון 🍋.\n2 כפות שמן זית.\nשן שום כתושה אחת או שתיים (או יותר אם את משוגעת לשום כמוני 😜).\nטיפונת מלח ופלפל לפי הטעם.\n\n2️⃣ הניחי את נתחי הקרוקודיל בתוך המרינדה ודאגי שהם \"שוחים\" בתוכה מכל הצדדים.\n3️⃣ כסי בניילון נצמד והשאירי במקרר למשך לפחות שעה ⏰ (ואם יש לך זמן – אפילו ללילה שלם!).\n\n🔥 **שלב"
+                            }
+                          ],
                           "attachments": [
                             {
                               "name": "screenshot",
                               "contentType": "image/png",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-42b13-p-display-after-10-minutes--chromium\\test-failed-1.png"
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-850fb-verify-search-history-page--chromium\\test-failed-2.png"
                             },
                             {
                               "name": "screenshot",
                               "contentType": "image/png",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-42b13-p-display-after-10-minutes--chromium\\test-failed-2.png"
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-850fb-verify-search-history-page--chromium\\test-failed-1.png"
                             },
                             {
-                              "name": "_error-context-0",
-                              "contentType": "text/markdown",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-42b13-p-display-after-10-minutes--chromium\\error-context.md"
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-850fb-verify-search-history-page--chromium\\test-failed-3.png"
+                            },
+                            {
+                              "name": "_error-context",
+                              "contentType": "application/json",
+                              "body": "eyJwYWdlU25hcHNob3QiOiItIHJlZ2lvbiBcInRvcCBvZiBwYWdlXCJcbi0gYnV0dG9uIFwi15zXk9ec15Ig15zXqteV15vXnyDXlNeo15DXqdeZXCJcbi0gbGluayBcIteU15DXqteoINeU15bXlCDXoteV16bXkSDXkdei15bXqNeqINeU15vXnNeZINec15HXoNeZ15nXqiDXkNeq16jXmdedINep15wgd2l4IC5jb20gLiDXqNeV16bXmdedINec15nXpteV16gg15DXqteoINee16nXnNeb150/INeU16rXl9eZ15zXlSDXoteb16nXmdeVXCI6XG4gIC0gL3VybDogLy93d3cud2l4LmNvbS9scHZpcmFsL2VudmlyYWw/dXRtX2NhbXBhaWduPXZpcl93aXhhZF9saXZlJm9yaWdfbXNpZD1kMTQ3MzgwYS1mM2QxLTQxOWQtOWNlZC0xMzQwMGVhNWE2OTUmYWRzVmVyc2lvbj13aGl0ZVxuICAtIHRleHQ6INeU15DXqteoINeU15bXlCDXoteV16bXkSDXkdei15bXqNeqINeU15vXnNeZINec15HXoNeZ15nXqiDXkNeq16jXmdedINep15xcbiAgLSBpbWcgXCJ3aXhcIlxuICAtIHRleHQ6IC5jb20gLiDXqNeV16bXmdedINec15nXpteV16gg15DXqteoINee16nXnNeb150/INeU16rXl9eZ15zXlSDXoteb16nXmdeVXG4tIG1haW46XG4gIC0gaWZyYW1lXG4tIHJlZ2lvbiBcImJvdHRvbSBvZiBwYWdlXCIifQ=="
                             }
                           ],
                           "errorLocation": {
                             "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                            "column": 33,
-                            "line": 193
+                            "column": 70,
+                            "line": 62
                           }
                         }
                       ],
                       "status": "unexpected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-496c9f37641645c94a62",
+                  "id": "23335bb06d3df52af178-7f0199ab3caea09c8d10",
                   "file": "Chatbot.spec.ts",
-                  "line": 110,
-                  "column": 9
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Hamburger_Menu.spec.ts",
-      "file": "Hamburger_Menu.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "BlueDrop Hamburgermenu Test Suite",
-          "file": "Hamburger_Menu.spec.ts",
-          "line": 18,
-          "column": 6,
-          "specs": [],
-          "suites": [
-            {
-              "title": "Hamburger Menu & 📜 Chat History",
-              "file": "Hamburger_Menu.spec.ts",
-              "line": 46,
-              "column": 8,
-              "specs": [
-                {
-                  "title": "TC_16 🔓 Open Hamburger Menu",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2245,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "Navigating to the admin page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to the admin page.\n"
-                            },
-                            {
-                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
-                            },
-                            {
-                              "text": "Filling in email input...\n"
-                            },
-                            {
-                              "text": "Filling in password input...\n"
-                            },
-                            {
-                              "text": "Clicking on Sign In button...\n"
-                            },
-                            {
-                              "text": "Login submitted, waiting for dashboard to load...\n"
-                            },
-                            {
-                              "text": "Starting reset process for user: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "Clicking on User Data tab...\n"
-                            },
-                            {
-                              "text": "Searching for user with email: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "Waiting for user data to appear...\n"
-                            },
-                            {
-                              "text": "Clicking Reset button...\n"
-                            },
-                            {
-                              "text": "Confirming the reset...\n"
-                            },
-                            {
-                              "text": "Waiting for success message...\n"
-                            },
-                            {
-                              "text": "Reset confirmation message is visible.\n"
-                            },
-                            {
-                              "text": "Verifying usage value has been reset to 0...\n"
-                            },
-                            {
-                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "Navigating to chatbot login page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to chatbot login page.\n"
-                            },
-                            {
-                              "text": "Clicking \"Login with Email\" button...\n"
-                            },
-                            {
-                              "text": "Filling in email: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "Filling in password...\n"
-                            },
-                            {
-                              "text": "Clicking \"Submit\" to log in...\n"
-                            },
-                            {
-                              "text": "Waiting for page navigation after login...\n"
-                            },
-                            {
-                              "text": "URL indicates successful navigation to chat page.\n"
-                            },
-                            {
-                              "text": "✅ Login process completed and iframe title located successfully.\n"
-                            },
-                            {
-                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button without filling fields...\n"
-                            },
-                            {
-                              "text": "Waiting for validation error messages...\n"
-                            },
-                            {
-                              "text": "Verified gender required validation message.\n"
-                            },
-                            {
-                              "text": "Verified name required validation message.\n"
-                            },
-                            {
-                              "text": "✅ Invalid input test completed with expected error validations.\n"
-                            },
-                            {
-                              "text": "Starting to fill personal information form...\n"
-                            },
-                            {
-                              "text": "Filling name: Georgia\n"
-                            },
-                            {
-                              "text": "Selecting gender: בת\n"
-                            },
-                            {
-                              "text": "Checking visibility of \"Start\" button...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button...\n"
-                            },
-                            {
-                              "text": "✅ Personal info submitted successfully.\n"
-                            },
-                            {
-                              "text": "✅ TC_15: Open Hamburger Menu\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:21:04.400Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-831204726bd1f5d94275",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 48,
-                  "column": 9
-                },
-                {
-                  "title": "TC_17 ➕ Load More button functionality",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1376,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_16: Load More button functionality\n"
-                            },
-                            {
-                              "text": "📜 Clicking Load More button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:21:32.778Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-2a9f8e93d66713e6aa42",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 53,
-                  "column": 9
-                },
-                {
-                  "title": "TC_18 🔍 Search in chat history",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1176,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_17: Search in chat history\n"
-                            },
-                            {
-                              "text": "🔍 Searching for message: \"\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:21:34.214Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-672809698635e1d16800",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 58,
-                  "column": 9
-                },
-                {
-                  "title": "TC_19 ❌ No result in chat history",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2816,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_18: No result in chat history\n"
-                            },
-                            {
-                              "text": "🔍 Searching for non-existent history: \"איך מבשלים Tomato-glazed Kangaroo Skewers?\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:21:35.418Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-12667e1532b86b4548db",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 63,
-                  "column": 9
-                },
-                {
-                  "title": "TC_20 ❎ Close Hamburger Menu",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 910,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_19: Close Hamburger Menu\n"
-                            },
-                            {
-                              "text": "❌ Closing hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:21:38.255Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-ee9894bb40db5ddb5e33",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 68,
-                  "column": 9
-                },
-                {
-                  "title": "TC_21 🆕 New session with \"שיחה חדשה\"",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 4098,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_20: Start new session using \"שיחה חדשה\"\n"
-                            },
-                            {
-                              "text": "🔁 Creating new session from hamburger menu...\n"
-                            },
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "✅ Verified: Bot responses are cleared after reload.\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "✅ Initial bot message received.\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:21:39.188Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-1b9fde63f86753164ca7",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 73,
-                  "column": 9
-                },
-                {
-                  "title": "TC_22 ✏️ Edit and save changes in chat history",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1940,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_21: Edit and save changes in chat history\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:21:43.318Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-9a2dcbc5e812dbbea474",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 80,
-                  "column": 9
-                },
-                {
-                  "title": "TC_23 🔁 Continue Chat Functionality",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 1,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1919,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_22: Continue Chat Functionality\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-13T08:21:45.276Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-c1b5c30e176758c5177c",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 86,
+                  "line": 128,
                   "column": 9
                 }
               ]
@@ -1382,9 +346,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-13T08:18:26.448Z",
-    "duration": 201815.004,
-    "expected": 22,
+    "startTime": "2025-05-16T12:16:28.860Z",
+    "duration": 75504.18500000238,
+    "expected": 0,
     "skipped": 0,
     "unexpected": 1,
     "flaky": 0

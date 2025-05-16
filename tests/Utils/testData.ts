@@ -8,10 +8,10 @@ const name = faker.person.firstName(gender);
 
 export function generateRandomQuestion(): string {
   const questionTemplates = [
-    `אתה יכול להסביר את השימוש של ${faker.science.chemicalElement().name}?`,
-    `איך מבשלים ${faker.food.dish()}?`
+    `תסביר לי בפרטים על ${faker.science.chemicalElement().name}.`,
+    `איך להכין ${faker.food.dish()}? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.`
   ];
-  // Pick one randomly
+
   const randomIndex = Math.floor(Math.random() * questionTemplates.length);
   return questionTemplates[randomIndex];
 }

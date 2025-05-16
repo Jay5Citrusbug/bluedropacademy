@@ -13,7 +13,7 @@ export class FillPersonalInfopage {
 
   // Fill personal info form with valid data
   async fillPersonalInfo(name: string, gender: string) {
-    const timeoutLimit = 30000; // Adjust based on global config if different
+    const timeoutLimit = 3000; 
 
     try {
       console.log('Starting to fill personal information form...');

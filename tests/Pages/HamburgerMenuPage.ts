@@ -19,7 +19,6 @@ export class HamburgerMenuPage {
   }
 
 async OpenHamburgerMenu() {
-
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
     const menuButton = frameLocator.locator(MenuLocator.hamburgerMenuBtn);
 
@@ -35,21 +34,33 @@ async OpenHamburgerMenu() {
 
   async LoadmoreBtn() {
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
-
+  await this.page.evaluate(() => {
+  window.scrollTo(0, document.body.scrollHeight);
+});
     console.log('📜 Clicking Load More button...');
     await expect(frameLocator.locator(MenuLocator.LoadMoreBtn)).toBeVisible();
     await frameLocator.locator(MenuLocator.LoadMoreBtn).click();
   }
 
-  async SearchHistory() {
-    const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
-    console.log(`🔍 Searching for message: "${this.userMessage}"`);
-    const input = frameLocator.locator(MenuLocator.Searchbar);
-    await expect(input).toBeVisible();
-    await this.page.evaluate(() => window.scrollTo(0, 0));
-    await input.click({ force: true });
-    await input.fill(this.userMessage);
-  }
+async SearchHistory(query: string) {
+  const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
+  console.log(`🔍 Searching for message: "${query}"`);
+
+  const input = frameLocator.locator(MenuLocator.Searchbar);
+  await expect(input).toBeVisible();
+
+  await this.page.evaluate(() => window.scrollTo(0, 0)); // Ensure input is in view
+  await input.fill(query); // Fill the search box with the query
+  await this.page.waitForTimeout(2000); // Optional wait for results
+  // ✅ Assertion: session list is visible
+  const sessionList = frameLocator.locator('.session-list');
+  await expect(sessionList).toBeVisible();
+
+  // ✅ Assertion: session list contains the searched query
+  await expect(sessionList).toContainText(query);
+
+  console.log(`✅ Verified session list contains: "${query}"`);
+}
 
   async NoSearchHistory() {
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
@@ -64,6 +75,7 @@ async OpenHamburgerMenu() {
 
   async CloseHamburgerMenu() {
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
+    await this.page.evaluate(() => window.scrollTo(0, 0));
 
     console.log('❌ Closing hamburger menu...');
     await expect(frameLocator.getByRole('button', { name: 'Close' })).toBeVisible();

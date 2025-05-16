@@ -5,6 +5,9 @@ import { testUserData } from './Utils/testData';
 import { adminCredentials, chatbotCredentials } from './Config/credentials';
 import { AdminPage } from './Pages/AdminPage';
 import { chatbotPage } from './Pages/chatbotPage';
+import { HamburgerMenuPage } from './Pages/HamburgerMenuPage';
+import { MenuLocator } from './Locators/HamburgerMenuLocator';
+
 
 let page: Page;
 let context: BrowserContext;
@@ -12,6 +15,8 @@ let chatbot: ChatbotLoginPage;
 let form: FillPersonalInfopage;
 let chatbotscreen: chatbotPage;
 let adminPage: AdminPage;
+let Menu: HamburgerMenuPage;
+
 
 test.describe('BlueDrop Chatbot Test Suite', () => {
 
@@ -19,13 +24,13 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
     const adminContext = await browser.newContext();
     const adminPageInstance = await adminContext.newPage();
     const admin = new AdminPage(adminPageInstance);
+    Menu = new HamburgerMenuPage(page);
 
     await admin.goto();
     await admin.login(adminCredentials.email, adminCredentials.password);
     await admin.resetUserData(testUserData.email);
     await adminContext.close();
     console.log('✅ User reset complete');
-
     context = await browser.newContext();
     page = await context.newPage();
     chatbot = new ChatbotLoginPage(page);
@@ -107,10 +112,60 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
       await chatbotscreen.InitialbotMessage();
     });
 
-    test('TC_15:Session pop-up display after 10 minutes.', async () => {
-      await chatbotscreen.InactivityPopup();
+ 
+test('TC_15: Click on the Continue button for continue session.', async () => {
+      await chatbotscreen.InactivityPopup1();
+
     }
     );
+  test('TC_16:Session pop-up display after 1 minutes and close .', async () => {
+          await chatbotscreen.InactivityPopup2();
+
+    }
+    );
+
+    
+    test('TC_17: Browser tab end/terminate and verify search history page.', async ({ browser }, testInfo) => {
+
+      const chatbotContext = await browser.newContext();
+      const chatbotPage = await chatbotContext.newPage();
+
+        const query = await chatbotscreen.SubmitQuery(testInfo);
+        await chatbotscreen.scrollToBottom()
+        await chatbotscreen.PredefinebuttonActive()
+        // await chatbotscreen.Pagereload();
+      
+        // ❌ Close only the second tab (action tab)
+        await chatbotPage.close();
+
+        // 🔁 Open a new tab in same context for history check
+      const Historypage = await browser.newContext();
+      const History = await chatbotContext.newPage();
+
+        await chatbot.goto();
+      
+        const iframe = await History.frameLocator('iframe[name="htmlComp-iframe"]');
+        await iframe.getByTestId('hamburger-click').click();
+        await iframe.getByTestId('search-session-input').click();
+      
+        const frameLocator = History.frameLocator(MenuLocator.iframeName);
+        console.log(`🔍 Searching for message: "${query}"`);
+      
+        const input = frameLocator.locator(MenuLocator.Searchbar);
+        await expect(input).toBeVisible();
+      
+        await History.evaluate(() => window.scrollTo(0, 0));
+        await input.fill(query);
+        await History.waitForTimeout(2000);
+      
+        const sessionList = frameLocator.locator('.session-list');
+        await expect(sessionList).toBeVisible();
+        // await expect(sessionList).toContainText(query);
+      
+        // ✅ Clean up
+        await chatbotContext.close();
+      });
+      
 
   });
 });

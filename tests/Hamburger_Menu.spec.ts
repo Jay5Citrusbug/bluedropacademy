@@ -45,45 +45,55 @@ test.describe('BlueDrop Hamburgermenu Test Suite', () => {
 
   test.describe('Hamburger Menu & 📜 Chat History', () => {
 
-    test('TC_16 🔓 Open Hamburger Menu', async () => {
+  test('TC_18 🔍 Search in chat history', async ({}, testInfo) => {
+  console.log('✅ TC_18: Search in chat history');
+  const query = await chatbotscreen.SubmitQuery(testInfo);
+  await chatbotscreen.scrollToBottom()
+  await chatbotscreen.PredefinebuttonActive()
+  await page.waitForTimeout(7000)
+
+  await chatbotscreen.Pagereload();
+    await Menu.OpenHamburgerMenu();
+  await Menu.SearchHistory(query);  // Pass query to search
+  await Menu.CloseHamburgerMenu();
+
+});
+
+    test('TC_19 🔓 Open Hamburger Menu', async () => {
       console.log('✅ TC_15: Open Hamburger Menu');
       await Menu.OpenHamburgerMenu();
     });
 
-    test('TC_17 ➕ Load More button functionality', async () => {
+    test('TC_20 ➕ Load More button functionality', async () => {
       console.log('✅ TC_16: Load More button functionality');
       await Menu.LoadmoreBtn();
     });
 
-    test('TC_18 🔍 Search in chat history', async () => {
-      console.log('✅ TC_17: Search in chat history');
-      await Menu.SearchHistory();
-    });
 
-    test('TC_19 ❌ No result in chat history', async () => {
+    test('TC_21 ❌ No result in chat history', async () => {
       console.log('✅ TC_18: No result in chat history');
       await Menu.NoSearchHistory();
     });
 
-    test('TC_20 ❎ Close Hamburger Menu', async () => {
+    test('TC_22 ❎ Close Hamburger Menu', async () => {
       console.log('✅ TC_19: Close Hamburger Menu');
       await Menu.CloseHamburgerMenu();
     });
 
-    test('TC_21 🆕 New session with "שיחה חדשה"', async () => {
+    test('TC_23 🆕 New session with "שיחה חדשה"', async () => {
       console.log('✅ TC_20: Start new session using "שיחה חדשה"');
       await Menu.Newsession();
       await chatbotscreen.Pagereload();
       await chatbotscreen.InitialbotMessage();
     });
 
-    test('TC_22 ✏️ Edit and save changes in chat history', async () => {
+    test('TC_24 ✏️ Edit and save changes in chat history', async () => {
       console.log('✅ TC_21: Edit and save changes in chat history');
       await Menu.OpenHamburgerMenu();
       await Menu.Edithistory();
     });
 
-    test('TC_23 🔁 Continue Chat Functionality', async () => {
+    test('TC_25 🔁 Continue Chat Functionality', async () => {
       console.log('✅ TC_22: Continue Chat Functionality');
       await Menu.OpenHistory_ContinueSession();
     });

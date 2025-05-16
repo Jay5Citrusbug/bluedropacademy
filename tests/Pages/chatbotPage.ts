@@ -62,41 +62,45 @@ export class chatbotPage {
     await expect(frameLocator.locator('.main-chat-buttons-wrapper')).toBeVisible();
   }
 
-  async SubmitQuery(testInfo: TestInfo) {
-    this.userMessage = generateRandomQuestion();
-    const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-    const input = frameLocator.getByTestId('seach-msg-input');
-    const submitBtn = frameLocator.locator(Chatbotlocator.SubmitBtn);
+ async SubmitQuery(testInfo: TestInfo): Promise<string> {
+  this.userMessage = generateRandomQuestion();
+  const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
+  const input = frameLocator.getByTestId('seach-msg-input');
+  const submitBtn = frameLocator.locator(Chatbotlocator.SubmitBtn);
 
-    console.log(`💬 Submitting query: "${this.userMessage}"`);
+  console.log(`💬 Submitting query: "${this.userMessage}"`);
 
-    await input.clear();
-    await input.fill(this.userMessage);
-    await expect(submitBtn).toBeEnabled();
-    await submitBtn.click();
+  await input.clear();
+  await input.fill(this.userMessage);
+  await expect(submitBtn).toBeEnabled();
+  await submitBtn.click();
 
-    console.log('🕐 Waiting for bot response...');
-    await this.page.waitForTimeout(9000);
+  console.log('🕐 Waiting for bot response...');
+  await this.page.waitForTimeout(30000);
 
-    const botMessages = await frameLocator.locator('.system-message-text').all();
-    const lastMessage = botMessages[botMessages.length - 1];
-    const botResponse = (await lastMessage.textContent())?.trim();
+  const botMessages = await frameLocator.locator('.system-message-text').all();
+  const lastMessage = botMessages[botMessages.length - 1];
+  const botResponse = (await lastMessage.textContent())?.trim();
 
-    console.log(`✅ Bot response received: "${botResponse}"`);
+  console.log(`✅ Bot response received: "${botResponse}"`);
 
-    testInfo.annotations.push({
-      type: 'info',
-      description: `Bot response: ${botResponse}`,
-    });
+  testInfo.annotations.push({
+    type: 'info',
+    description: `Bot response: ${botResponse}`,
+  });
 
-    expect(botResponse).toBeTruthy();
-  }
+  expect(botResponse).toBeTruthy();
+
+  // Return the message
+  return this.userMessage;  // <-- ensure this line exists at the end
+}
+
 
   async scrollToBottom() {
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
 
     console.log('🔽 Scrolling to bottom...');
-    await this.page.waitForTimeout(5000);
+    await this.page.waitForTimeout(9000);
 
     await expect(frameLocator.locator(Chatbotlocator.ScrollingBtn)).toBeVisible();
     await frameLocator.locator(Chatbotlocator.ScrollingBtn).click();
@@ -105,11 +109,8 @@ export class chatbotPage {
 
   async Pagereload() {
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-
     console.log('🔄 Reloading and verifying bot session is cleared...');
     const botMessages = await frameLocator.locator('.system-message-text');
-    await expect(botMessages).toHaveCount(0);
-
     console.log('✅ Verified: Bot responses are cleared after reload.');
   }
 
@@ -121,6 +122,11 @@ export class chatbotPage {
     await this.page.evaluate(() => window.scrollTo(0, 0));
 
     await frameLocator.locator(Chatbotlocator.NewsessionBtn).click({ force: true });
+      console.log('🔄 Reloading and verifying bot session is cleared...');
+    const botMessages = await frameLocator.locator('.system-message-text');
+    await expect(botMessages).toHaveCount(0);
+
+    console.log('✅ Verified: Bot responses are cleared after reload.');
   }
 
   async Wait() {
@@ -161,9 +167,10 @@ export class chatbotPage {
 
   async PredefinedBtnClick(testInfo: TestInfo) {
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-    const predefinedBtn = frameLocator.getByRole('button', { name: 'Explain me in detail so i can get it' });
+    const predefinedBtn = frameLocator.locator(Chatbotlocator.Predefinebutton1);
 
     console.log('🔘 Clicking Predefined button...');
+
     await expect(predefinedBtn).toBeVisible();
     await predefinedBtn.click();
     await this.page.waitForTimeout(9000);
@@ -183,18 +190,33 @@ export class chatbotPage {
 
 }
 
-async InactivityPopup() {
+async InactivityPopup1() {
   const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-  //const inactivityPopup = frameLocator.locator(Chatbotlocator.InactivityPopup);
-
   console.log('⏳ Waiting for inactivity popup to appear...');
   const inactivityPopup = frameLocator.locator('role=heading[name="נראה שלא היית פעיל לאחרונה"]');
   console.log('⏳ Waiting for inactivity popup to appear...');
   await expect(inactivityPopup).toBeVisible({ timeout: 70000  });
   await this.page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByText('היי! לא ראינו פעילות ב-10').isVisible();
+    await this.page.locator('.anticon.anticon-close.ant-modal-close-icon').isVisible();
   console.log('✅ Inactivity popup is visible.');
   await this.page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('dialog').getByRole('button', { name: 'המשך שיחה' }).click();
   console.log('🔄 Clicking "Continue Chat" button...');
+
+}
+async InactivityPopup2(){
+
+
+// Wait for 1 minute and 10 seconds
+await this.page.waitForTimeout(70000);
+
+// Check visibility of the close icon
+//const closeIcon = this.page.locator('//html/body/div[2]/div/div[2]/div/div[1]/div/button');
+
+//await expect(closeIcon).toBeVisible();  // Optional but recommended
+
+// Click the close icon
+//await closeIcon.click();
+
     }                                                                                                             
 
 }

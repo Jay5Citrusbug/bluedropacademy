@@ -13,31 +13,27 @@ try {
   process.exit(1);
 }
 
-// Extract report data from environment
-const environment = process.env.ENVIRONMENT || 'Staging';
-const reportDate = process.env.REPORT_DATE || 'Unknown Date';
-const passed = process.env.PASSED || '0';
-const failed = process.env.FAILED || '0';
-const skipped = process.env.SKIPPED || '0';
+// Report details
+const reportDate = process.env.REPORT_DATE || '2025-05-07';
+const passed = process.env.PASSED || '45';
+const failed = process.env.FAILED || '3';
+const skipped = process.env.SKIPPED || '2';
 const total = Number(passed) + Number(failed) + Number(skipped);
 
 const repoOwner = process.env.REPO_OWNER || 'your-org';
 const repoName = process.env.REPO_NAME || 'your-repo';
 const reportUrl = process.env.REPORT_URL || `https://${repoOwner}.github.io/${repoName}/report-${reportDate.toString().trim()}-${environment.toLowerCase()}/`;
 
-console.log("reportUrl",reportUrl)
-const subject = `${environment} Daily Automation Test Report - ${reportDate}`;
-
 const msg = {
  // to: 'noam@bluedropacademy.com',
     to: 'jay5.citrusbug@gmail.com',
   //cc: ['jay5.citrusbug@gmail.com', 'jayshree@citrusbug.com'],
   from: 'bluedropacademy.aws@gmail.com',
-  subject: subject,
+  subject: `Daily Automation Test Report - ${reportDate}`,
   html: `
     <div style="font-family: Arial, sans-serif; padding: 20px; text-align: left; color: #333;">
       <p>Hello Bluedrop Academy,</p>
-      <p>The automated Playwright test suite for the <strong>${environment}</strong> environment has completed.</p>
+      <p>The automated Playwright test suite has completed.</p>
 
       <p style="margin-top: 10px;"><strong>🔍 Test Summary</strong></p>
 

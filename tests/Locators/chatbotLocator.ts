@@ -14,5 +14,6 @@ export const Chatbotlocator = {
     LikeBtn:'[data-testid="like-thumb"]',
     DisLikeBtn:'[data-testid="dislike-thumb"]',
     Copybtn : '[data-testid="copy-response"]',
+    Predefinebutton1 : '[data-test-id="predefined-button-0"]',
     
     };  

@@ -11,12 +11,17 @@ export class ChatbotLoginPage {
   }
 
   // Navigates to the chatbot login page
-  async goto() {
-    await this.page.goto(process.env.URL_CHATBOT!);
-
+   async goto() {
+    console.log('Navigating to the admin page...');
+ const Chatboturl = process.env.URL_CHATBOT ?? 'https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site';
+    if (!Chatboturl) {
+      throw new Error('Environment variable URL_CHATBOT is not defined.');
+    }
+    console.log('Navigating to the chatbot page...');
+   await this.page.goto(Chatboturl);
     console.log('Successfully navigated to chatbot login page.');
   }
-
+ 
   // Logs in to chatbot using email and password
   async login(email: string, password: string) {
     const timeoutLimit = 30000; // assuming 30 seconds timeout (adjust as per your global config)
