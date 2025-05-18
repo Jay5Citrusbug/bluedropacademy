@@ -64,12 +64,12 @@
         "testMatch": [
           "**/tests/No_Activity.spec.ts"
         ],
-        "timeout": 700000
+        "timeout": 80000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.52.0",
     "workers": 1,
     "webServer": null
@@ -96,55 +96,23 @@
               "column": 8,
               "specs": [
                 {
-                  "title": "TC_17: Browser tab end/terminate and verify search history page.",
-                  "ok": false,
+                  "title": "TC_01: ✅ Confirm chatbot screen elements are visible",
+                  "ok": true,
                   "tags": [],
                   "tests": [
                     {
                       "timeout": 120000,
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: 🥩 קרוקודיל על הצלחת: כך תכיני סטייק קרוקודיל מושלם! 🐊🔥\nאוקיי, Glenda, אנחנו עומדות לצלול להרפתקה קולינרית סופר ייחודית היום – הכנת סטייק קרוקודיל! כן, כן, את שומעת נכון. 🐊 זה בשר אקזוטי (אבל גם די עדין), אז צריך לדעת איך להתייחס אליו באהבה ובזהירות. מוכנה? כי הולכת להיות חגיגה במטבח! 🍳✨\n\n🎬 שלב 1: הבנת הבשר – מה הסיפור של קרוקודיל?\nלפני שנתחיל, בואי נדבר רגע על הבשר עצמו: בשר קרוקודיל מזכיר קצת עוף (כן, באמת!) אבל עם טוויסט עדין שמזכיר דגים. 💡 הוא רזה מאוד ויכול להתייבש די מהר אם לא מכינים אותו נכון. אז המטרה שלנו כאן היא לשמור עליו עסיסי ולהוציא ממנו את המקסימום טעמים.\n\n🛒 שלב 2: מה צריך לקנות?\nהנה מה שתצטרכי:\n\nנתחי קרוקודיל טריים או קפואים (עדיף פילה או סטייקים חתוכים מראש).\nמרינדה לטעם: מיץ לימון 🍋, שום כתוש 🧄, שמן זית איכותי, מלח ופלפל.\nלתיבול נוסף: עשבי תיבול כמו טימין או רוזמרין 🌿 ושפריץ של סויה למי שאוהבת טיפה מליחות מעודנת.\nמחבת פסים כבדה או גריל טוב. 🔥\n\n💡 טיפ קטן: אם הבשר קפוא, תני לו להפשיר במקרר ללילה – אל תנסי למהר עם מיקרוגל.\n\n👩‍🍳 שלב 3: המרינדה הקסומה\nכדי להבטיח שהבשר יהיה רך וטוב, נשרה אותו קודם כל במרינדה כיפית:\n1️⃣ קחי קערה עמוקה. ערבבי בתוכה:\n\n3 כפות מיץ לימון 🍋.\n2 כפות שמן זית.\nשן שום כתושה אחת או שתיים (או יותר אם את משוגעת לשום כמוני 😜).\nטיפונת מלח ופלפל לפי הטעם.\n\n2️⃣ הניחי את נתחי הקרוקודיל בתוך המרינדה ודאגי שהם \"שוחים\" בתוכה מכל הצדדים.\n3️⃣ כסי בניילון נצמד והשאירי במקרר למשך לפחות שעה ⏰ (ואם יש לך זמן – אפילו ללילה שלם!).\n\n🔥 **שלב"
-                        }
-                      ],
+                      "annotations": [],
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 4,
+                          "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 46309,
-                          "error": {
-                            "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\u001b[22m\n",
-                            "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\u001b[22m\n\n    at chatbotPage.PredefinebuttonActive (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:62:70)\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:135:29",
-                            "location": {
-                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                              "column": 70,
-                              "line": 62
-                            },
-                            "snippet": "\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:62\n\n\u001b[0m \u001b[90m 60 |\u001b[39m     \u001b[36mconst\u001b[39m frameLocator \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mframeLocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39miframeName)\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🔓 Verifying predefined buttons are visible...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mlocator(\u001b[32m'.main-chat-buttons-wrapper'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m   }\n \u001b[90m 64 |\u001b[39m\n \u001b[90m 65 |\u001b[39m  \u001b[36masync\u001b[39m \u001b[33mSubmitQuery\u001b[39m(testInfo\u001b[33m:\u001b[39m \u001b[33mTestInfo\u001b[39m)\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[33mstring\u001b[39m\u001b[33m>\u001b[39m {\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                                "column": 70,
-                                "line": 62
-                              },
-                              "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.main-chat-buttons-wrapper')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:62\n\n\u001b[0m \u001b[90m 60 |\u001b[39m     \u001b[36mconst\u001b[39m frameLocator \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mframeLocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39miframeName)\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🔓 Verifying predefined buttons are visible...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mlocator(\u001b[32m'.main-chat-buttons-wrapper'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m   }\n \u001b[90m 64 |\u001b[39m\n \u001b[90m 65 |\u001b[39m  \u001b[36masync\u001b[39m \u001b[33mSubmitQuery\u001b[39m(testInfo\u001b[33m:\u001b[39m \u001b[33mTestInfo\u001b[39m)\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[33mstring\u001b[39m\u001b[33m>\u001b[39m {\u001b[0m\n\u001b[2m    at chatbotPage.PredefinebuttonActive (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:62:70)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:135:29\u001b[22m"
-                            },
-                            {
-                              "location": {
-                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
-                                "column": 5,
-                                "line": 176
-                              },
-                              "message": "Error: ENOENT: no such file or directory, open 'D:\\Playwright\\Bluedrop_academy\\screenshots\\TC_17:_Browser_tab_end\\terminate_and_verify_search_history_page..png'\n\n\u001b[0m \u001b[90m 174 |\u001b[39m   \u001b[36mif\u001b[39m (testInfo\u001b[33m.\u001b[39mstatus \u001b[33m!==\u001b[39m testInfo\u001b[33m.\u001b[39mexpectedStatus) {\n \u001b[90m 175 |\u001b[39m     \u001b[36mconst\u001b[39m screenshotPath \u001b[33m=\u001b[39m \u001b[32m`screenshots/${testInfo.title.replace(/\\s+/g, '_')}.png`\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 176 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m screenshotPath\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 177 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`❌ Test failed: ${testInfo.title}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 178 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`📸 Screenshot saved at: ${screenshotPath}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 179 |\u001b[39m   }\u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:176:5\u001b[22m"
-                            }
-                          ],
+                          "status": "passed",
+                          "duration": 737,
+                          "errors": [],
                           "stdout": [
                             {
                               "text": "Navigating to the admin page...\n"
@@ -255,7 +223,7 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Glenda\n"
+                              "text": "Filling name: Judith\n"
                             },
                             {
                               "text": "Selecting gender: בת\n"
@@ -273,13 +241,905 @@
                               "text": "✅ Chatbot login and form submitted\n"
                             },
                             {
-                              "text": "💬 Submitting query: \"איך להכין Crocodile Steak? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                              "text": "🔍 Waiting for confirmation iframe to appear...\n"
                             },
                             {
-                              "text": "🕐 Waiting for bot response...\n"
+                              "text": "✅ Verifying confirmation message and title...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:08:20.633Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-b1004f10ffc156eaa0a1",
+                  "file": "Chatbot.spec.ts",
+                  "line": 54,
+                  "column": 9
+                },
+                {
+                  "title": "TC_02: 🧠 Initial chatbot message is displayed",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1730,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"🥩 קרוקודיל על הצלחת: כך תכיני סטייק קרוקודיל מושלם! 🐊🔥\nאוקיי, Glenda, אנחנו עומדות לצלול להרפתקה קולינרית סופר ייחודית היום – הכנת סטייק קרוקודיל! כן, כן, את שומעת נכון. 🐊 זה בשר אקזוטי (אבל גם די עדין), אז צריך לדעת איך להתייחס אליו באהבה ובזהירות. מוכנה? כי הולכת להיות חגיגה במטבח! 🍳✨\n\n🎬 שלב 1: הבנת הבשר – מה הסיפור של קרוקודיל?\nלפני שנתחיל, בואי נדבר רגע על הבשר עצמו: בשר קרוקודיל מזכיר קצת עוף (כן, באמת!) אבל עם טוויסט עדין שמזכיר דגים. 💡 הוא רזה מאוד ויכול להתייבש די מהר אם לא מכינים אותו נכון. אז המטרה שלנו כאן היא לשמור עליו עסיסי ולהוציא ממנו את המקסימום טעמים.\n\n🛒 שלב 2: מה צריך לקנות?\nהנה מה שתצטרכי:\n\nנתחי קרוקודיל טריים או קפואים (עדיף פילה או סטייקים חתוכים מראש).\nמרינדה לטעם: מיץ לימון 🍋, שום כתוש 🧄, שמן זית איכותי, מלח ופלפל.\nלתיבול נוסף: עשבי תיבול כמו טימין או רוזמרין 🌿 ושפריץ של סויה למי שאוהבת טיפה מליחות מעודנת.\nמחבת פסים כבדה או גריל טוב. 🔥\n\n💡 טיפ קטן: אם הבשר קפוא, תני לו להפשיר במקרר ללילה – אל תנסי למהר עם מיקרוגל.\n\n👩‍🍳 שלב 3: המרינדה הקסומה\nכדי להבטיח שהבשר יהיה רך וטוב, נשרה אותו קודם כל במרינדה כיפית:\n1️⃣ קחי קערה עמוקה. ערבבי בתוכה:\n\n3 כפות מיץ לימון 🍋.\n2 כפות שמן זית.\nשן שום כתושה אחת או שתיים (או יותר אם את משוגעת לשום כמוני 😜).\nטיפונת מלח ופלפל לפי הטעם.\n\n2️⃣ הניחי את נתחי הקרוקודיל בתוך המרינדה ודאגי שהם \"שוחים\" בתוכה מכל הצדדים.\n3️⃣ כסי בניילון נצמד והשאירי במקרר למשך לפחות שעה ⏰ (ואם יש לך זמן – אפילו ללילה שלם!).\n\n🔥 **שלב\"\n"
+                              "text": "✅ Initial bot message received.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:08:54.763Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-7a1143fd846f163b527d",
+                  "file": "Chatbot.spec.ts",
+                  "line": 58,
+                  "column": 9
+                },
+                {
+                  "title": "TC_03: 🚫 Predefined buttons are not active",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 303,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔒 Verifying predefined buttons are hidden...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:08:56.508Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-6a0676835a2727c1c3fa",
+                  "file": "Chatbot.spec.ts",
+                  "line": 63,
+                  "column": 9
+                },
+                {
+                  "title": "TC_04: 🚫 Submit button is disabled initially",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 267,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔒 Verifying Submit button is disabled...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:08:56.820Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-693d284707c4d9132f25",
+                  "file": "Chatbot.spec.ts",
+                  "line": 67,
+                  "column": 9
+                },
+                {
+                  "title": "TC_05: ✅ Submit button is enabled after input",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 328,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Typing message: איך להכין Rice Flour And Pigeon Pie? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\n"
+                            },
+                            {
+                              "text": "✅ Verifying Submit button is enabled...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:08:57.095Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-b35b2af01cf0d18b9281",
+                  "file": "Chatbot.spec.ts",
+                  "line": 71,
+                  "column": 9
+                },
+                {
+                  "title": "TC_06: 📤 Submit query message",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: 🦴✨ יצירת מופת מעושנת: טלה עם ניחוחות בריסל! ✨🦴\nדמייני את הרגע שבו ניחוחות של בשר טלה עסיסי, מתובל במדויק ומתמזג עם מתיקות פריכה של נבטי בריסל יוצרים חגיגה של טעמים! 😋 מוכנה לצלול לתוך מטבח מלא עשן וקסם? קדימה – אנחנו בדרך להכין Smoky Lamb with Brussels Sprouts שיגרום לכל שולחן להתאהב מחדש! 🌟\n\n🍳 רשימת הקסם: המרכיבים שצריך\nהכיני את כל אלה מראש, כך שלא תיאלצי לרוץ באמצע ההכנה למכולת:\nלטלה\n\nכ-1.5 ק\"ג צלעות טלה או כתף טלה 🐑 (עם מעט שומן – הוא המלך כאן!)\n2 כפות שמן זית 🍶\nמלח ופלפל לפי הטעם 🧂\n1 כפית פפריקה מעושנת 🌶️\n1 כפית כמון 🏜️\n4 שיני שום, כתושות 🧄\nחצי כוס יין אדום (כי למה לא להוסיף קצת יוקרה?) 🍷\n\nלנבטי הבריסל\n\n500 גרם נבטי בריסל חתוכים לחצאים 🍃\n2 כפות שמן זית\nמלח גס 🧂\nפלפל שחור גרוס טרי 🌑\nגרידת לימון טרייה 🍋 (לתוספת רעננות)\n\nלתיבול הסופי\n\nמעט דבש או סירופ מייפל (לבחירה) 🍯\nאגוזי מלך קלויים לקראנצ'יות מושלמת 🌰\n\n\n🔥 שלב ראשון: הכנת הבשר – הלב של המנה\n\n\nשדרגי את הבשר: הניחי את צלעות הטלה על משטח עבודה. עסי אותן עם שמן זית, כך שכל החלקים יקבלו מסאז' מלכותי. 💆‍♀️ לערבב בקערה את המלח, פלפל, פפריקה וכמון ולפזר בנדיבות מעל הצלעות.\n\n\nמעשנים את העניינים! חממי מחבת כבדה (עדיף מברזל יצוק!) עד שהיא חמה כמו מדבר סהרה. 🏜️ צרבי את הצלעות מכל צד עד להשחמה יפה ושומנית – בערך 2 דקות לכל צד. הניחי בצד לנוח.\n\n\nהוספת השום והיין: באותה מחבת (בלי לשטוף!), הוסיפי שום כתוש וטגני קלות עד שהוא מתחיל להפיץ ניחוחות שאפשר לכתוב עליהם שירים. 🎶 שפכי פנימה חצי כוס יין אדום וגרדי בעדינות את הקרקעית כדי לשחרר את כל הטעמים שהצטברו מהטלה.\n\n\nאפייה להשלמת המלאכה: העבירי את הצלעות לתבנית אפייה, שפכי מעליהן את רוטב השום והיין, וכסי בנייר כסף. הכניסי לתנור שחומם מראש ל-180 מעלות למשך 20–25 דקות (תלוי כמה \"מידת עשייה\" בא לך שהטלה יהיה).\n\n\n\n🥬 שלב שני: הבריסל עושים הופעה מרשימה\n\n\nבזמן שהטלה נח בתנור כמו מלך 👑, חממי שמן זית במחבת גדולה.\n\n\nהוסיפי את נבטי הבריסל החתוכים כשהצד החתוך כלפי מטה – הם צריכים להיות קריספיים וזהובים כמו חלומות! ✨\n\n\nתבלי במלח גס ופלפל שחור לפי הטעם, ערבבי בעדינות והשאירי אותם כמה דקות עד שהם מתרככים אבל עדיין פריכים.\n\n\nלקראת הסיום: סחטי מעט לימון מעל והוסיפי גרידת לימון – זה הקסם שנותן להם חיים! 🍋\n\n\n\n✨ שלב שלישי ואחרון: איחוד מופלא\n\n\nהוציאי את הצלעות מהתנור ותני להן לנוח עוד 5 דקות לפני ההגשה – הן צריכות להתארגן למסיבה שלהן! 🎉\n\n\nערכי צלחת מהממת: הניחי שכבה של נבטי בריסל בתחתית הצלחת, וסדרי מעליהם בגאווה כמה צלעות טלה עסיסיות.\n\n\nזלפי דבש או מייפל בעדינות מעל להשלמת המתיקות המעודנת ואל תשכחי לפזר אגוזי מלך קלויים בשביל קראנצ'יות אלוהית! 🌰💥\n\n\nאם בא לך להוסיף עוד טאץ' מעושן – אפשר לסיים עם קמצוץ פפריקה מעושנת לפני ההגשה.\n\n\n\n🎉 הסיום המרשים\nוואו, Judith! עכשיו יש לך מנה שנראית כאילו יצאה ממסעדה יוקרתית בפריז או איטליה 🗼🇮🇹 אבל בעצם יצאה מהמטבח שלך 😍✨.\nאז קדימה, הגישי בסטייל – ותיהני מכל ביס לוהט ומעושן!"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 36628,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Submitting query: \"איך להכין Smoky Lamb With Brussels Sprouts? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                            },
+                            {
+                              "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
+                            },
+                            {
+                              "text": "✅ Bot response received: \"🦴✨ יצירת מופת מעושנת: טלה עם ניחוחות בריסל! ✨🦴\nדמייני את הרגע שבו ניחוחות של בשר טלה עסיסי, מתובל במדויק ומתמזג עם מתיקות פריכה של נבטי בריסל יוצרים חגיגה של טעמים! 😋 מוכנה לצלול לתוך מטבח מלא עשן וקסם? קדימה – אנחנו בדרך להכין Smoky Lamb with Brussels Sprouts שיגרום לכל שולחן להתאהב מחדש! 🌟\n\n🍳 רשימת הקסם: המרכיבים שצריך\nהכיני את כל אלה מראש, כך שלא תיאלצי לרוץ באמצע ההכנה למכולת:\nלטלה\n\nכ-1.5 ק\"ג צלעות טלה או כתף טלה 🐑 (עם מעט שומן – הוא המלך כאן!)\n2 כפות שמן זית 🍶\nמלח ופלפל לפי הטעם 🧂\n1 כפית פפריקה מעושנת 🌶️\n1 כפית כמון 🏜️\n4 שיני שום, כתושות 🧄\nחצי כוס יין אדום (כי למה לא להוסיף קצת יוקרה?) 🍷\n\nלנבטי הבריסל\n\n500 גרם נבטי בריסל חתוכים לחצאים 🍃\n2 כפות שמן זית\nמלח גס 🧂\nפלפל שחור גרוס טרי 🌑\nגרידת לימון טרייה 🍋 (לתוספת רעננות)\n\nלתיבול הסופי\n\nמעט דבש או סירופ מייפל (לבחירה) 🍯\nאגוזי מלך קלויים לקראנצ'יות מושלמת 🌰\n\n\n🔥 שלב ראשון: הכנת הבשר – הלב של המנה\n\n\nשדרגי את הבשר: הניחי את צלעות הטלה על משטח עבודה. עסי אותן עם שמן זית, כך שכל החלקים יקבלו מסאז' מלכותי. 💆‍♀️ לערבב בקערה את המלח, פלפל, פפריקה וכמון ולפזר בנדיבות מעל הצלעות.\n\n\nמעשנים את העניינים! חממי מחבת כבדה (עדיף מברזל יצוק!) עד שהיא חמה כמו מדבר סהרה. 🏜️ צרבי את הצלעות מכל צד עד להשחמה יפה ושומנית – בערך 2 דקות לכל צד. הניחי בצד לנוח.\n\n\nהוספת השום והיין: באותה מחבת (בלי לשטוף!), הוסיפי שום כתוש וטגני קלות עד שהוא מתחיל להפיץ ניחוחות שאפשר לכתוב עליהם שירים. 🎶 שפכי פנימה חצי כוס יין אדום וגרדי בעדינות את הקרקעית כדי לשחרר את כל הטעמים שהצטברו מהטלה.\n\n\nאפייה להשלמת המלאכה: העבירי את הצלעות לתבנית אפייה, שפכי מעליהן את רוטב השום והיין, וכסי בנייר כסף. הכניסי לתנור שחומם מראש ל-180 מעלות למשך 20–25 דקות (תלוי כמה \"מידת עשייה\" בא לך שהטלה יהיה).\n\n\n\n🥬 שלב שני: הבריסל עושים הופעה מרשימה\n\n\nבזמן שהטלה נח בתנור כמו מלך 👑, חממי שמן זית במחבת גדולה.\n\n\nהוסיפי את נבטי הבריסל החתוכים כשהצד החתוך כלפי מטה – הם צריכים להיות קריספיים וזהובים כמו חלומות! ✨\n\n\nתבלי במלח גס ופלפל שחור לפי הטעם, ערבבי בעדינות והשאירי אותם כמה דקות עד שהם מתרככים אבל עדיין פריכים.\n\n\nלקראת הסיום: סחטי מעט לימון מעל והוסיפי גרידת לימון – זה הקסם שנותן להם חיים! 🍋\n\n\n\n✨ שלב שלישי ואחרון: איחוד מופלא\n\n\nהוציאי את הצלעות מהתנור ותני להן לנוח עוד 5 דקות לפני ההגשה – הן צריכות להתארגן למסיבה שלהן! 🎉\n\n\nערכי צלחת מהממת: הניחי שכבה של נבטי בריסל בתחתית הצלחת, וסדרי מעליהם בגאווה כמה צלעות טלה עסיסיות.\n\n\nזלפי דבש או מייפל בעדינות מעל להשלמת המתיקות המעודנת ואל תשכחי לפזר אגוזי מלך קלויים בשביל קראנצ'יות אלוהית! 🌰💥\n\n\nאם בא לך להוסיף עוד טאץ' מעושן – אפשר לסיים עם קמצוץ פפריקה מעושנת לפני ההגשה.\n\n\n\n🎉 הסיום המרשים\nוואו, Judith! עכשיו יש לך מנה שנראית כאילו יצאה ממסעדה יוקרתית בפריז או איטליה 🗼🇮🇹 אבל בעצם יצאה מהמטבח שלך 😍✨.\nאז קדימה, הגישי בסטייל – ותיהני מכל ביס לוהט ומעושן!\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:08:57.432Z",
+                          "annotations": [
+                            {
+                              "type": "info",
+                              "description": "Bot response: 🦴✨ יצירת מופת מעושנת: טלה עם ניחוחות בריסל! ✨🦴\nדמייני את הרגע שבו ניחוחות של בשר טלה עסיסי, מתובל במדויק ומתמזג עם מתיקות פריכה של נבטי בריסל יוצרים חגיגה של טעמים! 😋 מוכנה לצלול לתוך מטבח מלא עשן וקסם? קדימה – אנחנו בדרך להכין Smoky Lamb with Brussels Sprouts שיגרום לכל שולחן להתאהב מחדש! 🌟\n\n🍳 רשימת הקסם: המרכיבים שצריך\nהכיני את כל אלה מראש, כך שלא תיאלצי לרוץ באמצע ההכנה למכולת:\nלטלה\n\nכ-1.5 ק\"ג צלעות טלה או כתף טלה 🐑 (עם מעט שומן – הוא המלך כאן!)\n2 כפות שמן זית 🍶\nמלח ופלפל לפי הטעם 🧂\n1 כפית פפריקה מעושנת 🌶️\n1 כפית כמון 🏜️\n4 שיני שום, כתושות 🧄\nחצי כוס יין אדום (כי למה לא להוסיף קצת יוקרה?) 🍷\n\nלנבטי הבריסל\n\n500 גרם נבטי בריסל חתוכים לחצאים 🍃\n2 כפות שמן זית\nמלח גס 🧂\nפלפל שחור גרוס טרי 🌑\nגרידת לימון טרייה 🍋 (לתוספת רעננות)\n\nלתיבול הסופי\n\nמעט דבש או סירופ מייפל (לבחירה) 🍯\nאגוזי מלך קלויים לקראנצ'יות מושלמת 🌰\n\n\n🔥 שלב ראשון: הכנת הבשר – הלב של המנה\n\n\nשדרגי את הבשר: הניחי את צלעות הטלה על משטח עבודה. עסי אותן עם שמן זית, כך שכל החלקים יקבלו מסאז' מלכותי. 💆‍♀️ לערבב בקערה את המלח, פלפל, פפריקה וכמון ולפזר בנדיבות מעל הצלעות.\n\n\nמעשנים את העניינים! חממי מחבת כבדה (עדיף מברזל יצוק!) עד שהיא חמה כמו מדבר סהרה. 🏜️ צרבי את הצלעות מכל צד עד להשחמה יפה ושומנית – בערך 2 דקות לכל צד. הניחי בצד לנוח.\n\n\nהוספת השום והיין: באותה מחבת (בלי לשטוף!), הוסיפי שום כתוש וטגני קלות עד שהוא מתחיל להפיץ ניחוחות שאפשר לכתוב עליהם שירים. 🎶 שפכי פנימה חצי כוס יין אדום וגרדי בעדינות את הקרקעית כדי לשחרר את כל הטעמים שהצטברו מהטלה.\n\n\nאפייה להשלמת המלאכה: העבירי את הצלעות לתבנית אפייה, שפכי מעליהן את רוטב השום והיין, וכסי בנייר כסף. הכניסי לתנור שחומם מראש ל-180 מעלות למשך 20–25 דקות (תלוי כמה \"מידת עשייה\" בא לך שהטלה יהיה).\n\n\n\n🥬 שלב שני: הבריסל עושים הופעה מרשימה\n\n\nבזמן שהטלה נח בתנור כמו מלך 👑, חממי שמן זית במחבת גדולה.\n\n\nהוסיפי את נבטי הבריסל החתוכים כשהצד החתוך כלפי מטה – הם צריכים להיות קריספיים וזהובים כמו חלומות! ✨\n\n\nתבלי במלח גס ופלפל שחור לפי הטעם, ערבבי בעדינות והשאירי אותם כמה דקות עד שהם מתרככים אבל עדיין פריכים.\n\n\nלקראת הסיום: סחטי מעט לימון מעל והוסיפי גרידת לימון – זה הקסם שנותן להם חיים! 🍋\n\n\n\n✨ שלב שלישי ואחרון: איחוד מופלא\n\n\nהוציאי את הצלעות מהתנור ותני להן לנוח עוד 5 דקות לפני ההגשה – הן צריכות להתארגן למסיבה שלהן! 🎉\n\n\nערכי צלחת מהממת: הניחי שכבה של נבטי בריסל בתחתית הצלחת, וסדרי מעליהם בגאווה כמה צלעות טלה עסיסיות.\n\n\nזלפי דבש או מייפל בעדינות מעל להשלמת המתיקות המעודנת ואל תשכחי לפזר אגוזי מלך קלויים בשביל קראנצ'יות אלוהית! 🌰💥\n\n\nאם בא לך להוסיף עוד טאץ' מעושן – אפשר לסיים עם קמצוץ פפריקה מעושנת לפני ההגשה.\n\n\n\n🎉 הסיום המרשים\nוואו, Judith! עכשיו יש לך מנה שנראית כאילו יצאה ממסעדה יוקרתית בפריז או איטליה 🗼🇮🇹 אבל בעצם יצאה מהמטבח שלך 😍✨.\nאז קדימה, הגישי בסטייל – ותיהני מכל ביס לוהט ומעושן!"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-c7d9a4d7c8379355269a",
+                  "file": "Chatbot.spec.ts",
+                  "line": 75,
+                  "column": 9
+                },
+                {
+                  "title": "TC_07: 🔽 Scroll to bottom of chat",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 372,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔽 Scrolling to bottom...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:09:34.070Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-30c38a51400fa5db62f0",
+                  "file": "Chatbot.spec.ts",
+                  "line": 79,
+                  "column": 9
+                },
+                {
+                  "title": "TC_08: ✅ Predefined buttons become active after response",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 270,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔓 Verifying predefined buttons are visible...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:09:34.451Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-0637274af489116a11d1",
+                  "file": "Chatbot.spec.ts",
+                  "line": 83,
+                  "column": 9
+                },
+                {
+                  "title": "TC_09: 👍 Like button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1289,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "👍 Clicking Like button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:09:34.732Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-fb851d92181092d9ee02",
+                  "file": "Chatbot.spec.ts",
+                  "line": 87,
+                  "column": 9
+                },
+                {
+                  "title": "TC_10: 👎 Dislike button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1280,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "👎 Clicking Dislike button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:09:36.031Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-fe244b42414d3a15ab9a",
+                  "file": "Chatbot.spec.ts",
+                  "line": 91,
+                  "column": 9
+                },
+                {
+                  "title": "TC_11: 📋 Copy button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 367,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "📋 Clicking Copy button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:09:37.320Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-5b9d5ff26ae699e98514",
+                  "file": "Chatbot.spec.ts",
+                  "line": 95,
+                  "column": 9
+                },
+                {
+                  "title": "TC_12: 📍 Predefined button click triggers response",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: Oops, Judith! I think something went a little wonky with the text you just sent. Did you mean button or something specific you'd like help with? 🕵️‍♀️✨ Let me know, and we’ll get it all sorted in the most fabulous way possible! 🌟"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2805,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔘 Clicking Predefined button...\n"
+                            },
+                            {
+                              "text": "✅ Bot response received: \"Oops, Judith! I think something went a little wonky with the text you just sent. Did you mean button or something specific you'd like help with? 🕵️‍♀️✨ Let me know, and we’ll get it all sorted in the most fabulous way possible! 🌟\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:09:37.699Z",
+                          "annotations": [
+                            {
+                              "type": "info",
+                              "description": "Bot response: Oops, Judith! I think something went a little wonky with the text you just sent. Did you mean button or something specific you'd like help with? 🕵️‍♀️✨ Let me know, and we’ll get it all sorted in the most fabulous way possible! 🌟"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-f403e5035d0666c0b019",
+                  "file": "Chatbot.spec.ts",
+                  "line": 99,
+                  "column": 9
+                },
+                {
+                  "title": "TC_13: 🔄 Reload hides previous chat",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 7924,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "✅ Verified: Bot responses are cleared after reload.\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "✅ Initial bot message received.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:09:40.515Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-507e3eeff22d394f85bc",
+                  "file": "Chatbot.spec.ts",
+                  "line": 103,
+                  "column": 9
+                },
+                {
+                  "title": "TC_14: ✏️ New session is created using edit icon",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2291,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔁 Starting a new chatbot session...\n"
+                            },
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "✅ Verified: Bot responses are cleared after reload.\n"
+                            },
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "✅ Verified: Bot responses are cleared after reload.\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "✅ Initial bot message received.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:09:48.447Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-408603e96cb3141402d5",
+                  "file": "Chatbot.spec.ts",
+                  "line": 109,
+                  "column": 9
+                },
+                {
+                  "title": "TC_15: Click on the Continue button for continue session.",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 59232,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "⏳ Waiting for inactivity popup to appear...\n"
+                            },
+                            {
+                              "text": "⏳ Waiting for inactivity popup to appear...\n"
+                            },
+                            {
+                              "text": "✅ Inactivity popup is visible.\n"
+                            },
+                            {
+                              "text": "🔄 Clicking \"Continue Chat\" button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:09:50.746Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-c565d112a77296d83296",
+                  "file": "Chatbot.spec.ts",
+                  "line": 116,
+                  "column": 5
+                },
+                {
+                  "title": "TC_16:Session pop-up display after 1 minutes and close .",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 281,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:10:49.991Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-277a3076fdbbd78a287b",
+                  "file": "Chatbot.spec.ts",
+                  "line": 121,
+                  "column": 7
+                },
+                {
+                  "title": "TC_17: Browser tab end/terminate and verify search history page.",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: פלאיה ימית: איך להכין את המנה הספרדית הכי חגיגית בעולם? 🥘🐚\nתארי לך שאת עומדת במטבח קטן בעיר נמל ספרדית, ליד חלון פתוח שמשקיף על ים כחול אינסופי. ברקע נשמעים צחוקי דייגים והקצב של גיטרה ספרדית. 🌊🎸 זו בדיוק התחושה שפלאיה ימית (Seafood Paella) יכולה להביא למטבח שלך — מנה צבעונית, ריחנית ומלאה בטעמים שיגרמו לכולם להתאהב.\nמוכנה לשים סינר ולהפוך להיות השפית הספרדייה של הבית? Vamos! 💃\n\n🎯 החומרים (ל-4 מנות גדולות):\n\nאורז לפלאיה: 2 כוסות (אורז מסוג בומבה או עגול מתאים במיוחד).\nשמן זית: 3 כפות.\nבצל: 1 קטן, קצוץ.\nפלפל אדום: חתוך לרצועות דקות.\nעגבניות מרוסקות או מגוררות: 2 גדולות.\nשום: 3 שיניים קצוצות דק-דק (כמו סוד שאי אפשר לגלות! 🕵️‍♀️🧄).\nמרק דגים או עוף: כ-5 כוסות חמות (אפשר גם מים עם מעט מלח).\nזעפרן: כמה חוטים, מושרים בכף מים חמימים (זה הקסם של הפלאיה! ✨).\nפירות ים טריים: שרימפס, קלמארי וחצי ק\"ג מולים – בוחרים לפי מה שאוהבים.\nאפונה ירוקה קטנה (לא חובה): חצי כוס.\nפפריקה מתוקה ומעושנת: כפית מכל סוג.\nמלח ופלפל לפי הטעם.\nלימונים חצויים להגשה 🍋.\n\n\n📚 ההכנה – צעד אחר צעד עם אהבה 🥘\n🔥 שלב ראשון – תכיני את הבסיס\n1️⃣ חממי מחבת גדולה ורחבה מאוד – עדיף מחבת פלאיה אם יש לך אחת (היא שטוחה וגדולה). מוסיפים את שמן הזית ומחממים בעדינות.\n2️⃣ מוסיפים את הבצל הקצוץ ומטגנים עד שהוא הופך לשקוף ורך (אבל לא שחום!). מוסיפים את השום והפפריקה המתוקה והמעושנת – הריח? חלומי! 🌟\n3️⃣ מוסיפים את רצועות הפלפל האדום ומשיכים לבשל עוד כמה דקות.\n\n🧪 שלב שני – הוספת הקסם\n4️⃣ זה הרגע להוסיף את העגבניות המגוררות ולבשל על אש בינונית עד שהן מצטמצמות מעט ונראות כמו רוטב סמיך ועשיר.\n5️⃣ מפזרים מעל את האורז בצורה אחידה במחבת ולא מערבבים! 😲 כן, שמעת נכון — זה חוק ברזל בפלאיה כדי לקבל את הקרקעית הפריכה שנקראת \"סוקראט\" בספרדית.\n6️⃣ שופכים בזהירות את מרק הדגים החם מעל הכל ומוסיפים את המים שבהם הושרה הזעפרן.\n7️⃣ מביאים לרתיחה ולאחר מכן מנמיכים לאש קטנה כדי שהאורז יבשל בעדינות ויספוג כל טיפה מהנוזלים הטעימים האלו.\n\n🐚 שלב שלישי – הכוכבים מגיעים!\n8️⃣ אחרי בערך 10 דקות בישול, מפזרים באופן שווה את פירות הים מעל האורז:\n\nמסדרים את השרימפס כך שהם \"יישבו\" יפה על המחבת כמו מלכים 👑.\nמוסיפים טבעות קלמארי בין לבין.\nמסדרים מולים סביב המחבת כך שהם ייפתחו בצורה חגיגית בזמן הבישול! ✨\n\n9️⃣ מכסים בעזרת מכסה או נייר כסף ומבשלים עוד כ-10 דקות עד שכל פירות הים מבושלים והמולים נפתחים (אל תשכחי להוציא מולים שלא נפתחו!).\n\n🌟 שלב רביעי – טאץ' אחרון\n🔟 מסירים מהאש, מפזרים אפונה ירוקה מעל למראה צבעוני ורענן ומשאירים לנוח 5 דקות – אל תדלגי על השלב הזה, הוא מאפשר לכל הטעמים להתייצב כמו ציור מושלם!\n🍋 מגישים עם לימונים טריים לסחיטה מעל כל מנה ו... ¡Olé!\n\n😲 טיפ מדהים מפליאה אמיתי:\nידעת שבספרד לכל אזור יש גרסה משלו לפלאיה? חלקם אפילו מוסיפים בשר עוף או ארנבת לצד פירות הים!\n\nツ איזה טוויסט היית רוצה לנסות בפלאיה שלך?"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 41802,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Submitting query: \"איך להכין Seafood Paella? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                            },
+                            {
+                              "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
+                            },
+                            {
+                              "text": "✅ Bot response received: \"פלאיה ימית: איך להכין את המנה הספרדית הכי חגיגית בעולם? 🥘🐚\nתארי לך שאת עומדת במטבח קטן בעיר נמל ספרדית, ליד חלון פתוח שמשקיף על ים כחול אינסופי. ברקע נשמעים צחוקי דייגים והקצב של גיטרה ספרדית. 🌊🎸 זו בדיוק התחושה שפלאיה ימית (Seafood Paella) יכולה להביא למטבח שלך — מנה צבעונית, ריחנית ומלאה בטעמים שיגרמו לכולם להתאהב.\nמוכנה לשים סינר ולהפוך להיות השפית הספרדייה של הבית? Vamos! 💃\n\n🎯 החומרים (ל-4 מנות גדולות):\n\nאורז לפלאיה: 2 כוסות (אורז מסוג בומבה או עגול מתאים במיוחד).\nשמן זית: 3 כפות.\nבצל: 1 קטן, קצוץ.\nפלפל אדום: חתוך לרצועות דקות.\nעגבניות מרוסקות או מגוררות: 2 גדולות.\nשום: 3 שיניים קצוצות דק-דק (כמו סוד שאי אפשר לגלות! 🕵️‍♀️🧄).\nמרק דגים או עוף: כ-5 כוסות חמות (אפשר גם מים עם מעט מלח).\nזעפרן: כמה חוטים, מושרים בכף מים חמימים (זה הקסם של הפלאיה! ✨).\nפירות ים טריים: שרימפס, קלמארי וחצי ק\"ג מולים – בוחרים לפי מה שאוהבים.\nאפונה ירוקה קטנה (לא חובה): חצי כוס.\nפפריקה מתוקה ומעושנת: כפית מכל סוג.\nמלח ופלפל לפי הטעם.\nלימונים חצויים להגשה 🍋.\n\n\n📚 ההכנה – צעד אחר צעד עם אהבה 🥘\n🔥 שלב ראשון – תכיני את הבסיס\n1️⃣ חממי מחבת גדולה ורחבה מאוד – עדיף מחבת פלאיה אם יש לך אחת (היא שטוחה וגדולה). מוסיפים את שמן הזית ומחממים בעדינות.\n2️⃣ מוסיפים את הבצל הקצוץ ומטגנים עד שהוא הופך לשקוף ורך (אבל לא שחום!). מוסיפים את השום והפפריקה המתוקה והמעושנת – הריח? חלומי! 🌟\n3️⃣ מוסיפים את רצועות הפלפל האדום ומשיכים לבשל עוד כמה דקות.\n\n🧪 שלב שני – הוספת הקסם\n4️⃣ זה הרגע להוסיף את העגבניות המגוררות ולבשל על אש בינונית עד שהן מצטמצמות מעט ונראות כמו רוטב סמיך ועשיר.\n5️⃣ מפזרים מעל את האורז בצורה אחידה במחבת ולא מערבבים! 😲 כן, שמעת נכון — זה חוק ברזל בפלאיה כדי לקבל את הקרקעית הפריכה שנקראת \"סוקראט\" בספרדית.\n6️⃣ שופכים בזהירות את מרק הדגים החם מעל הכל ומוסיפים את המים שבהם הושרה הזעפרן.\n7️⃣ מביאים לרתיחה ולאחר מכן מנמיכים לאש קטנה כדי שהאורז יבשל בעדינות ויספוג כל טיפה מהנוזלים הטעימים האלו.\n\n🐚 שלב שלישי – הכוכבים מגיעים!\n8️⃣ אחרי בערך 10 דקות בישול, מפזרים באופן שווה את פירות הים מעל האורז:\n\nמסדרים את השרימפס כך שהם \"יישבו\" יפה על המחבת כמו מלכים 👑.\nמוסיפים טבעות קלמארי בין לבין.\nמסדרים מולים סביב המחבת כך שהם ייפתחו בצורה חגיגית בזמן הבישול! ✨\n\n9️⃣ מכסים בעזרת מכסה או נייר כסף ומבשלים עוד כ-10 דקות עד שכל פירות הים מבושלים והמולים נפתחים (אל תשכחי להוציא מולים שלא נפתחו!).\n\n🌟 שלב רביעי – טאץ' אחרון\n🔟 מסירים מהאש, מפזרים אפונה ירוקה מעל למראה צבעוני ורענן ומשאירים לנוח 5 דקות – אל תדלגי על השלב הזה, הוא מאפשר לכל הטעמים להתייצב כמו ציור מושלם!\n🍋 מגישים עם לימונים טריים לסחיטה מעל כל מנה ו... ¡Olé!\n\n😲 טיפ מדהים מפליאה אמיתי:\nידעת שבספרד לכל אזור יש גרסה משלו לפלאיה? חלקם אפילו מוסיפים בשר עוף או ארנבת לצד פירות הים!\n\nツ איזה טוויסט היית רוצה לנסות בפלאיה שלך?\"\n"
+                            },
+                            {
+                              "text": "🔍 Searching for message: \"איך להכין Seafood Paella? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                            },
+                            {
+                              "text": "🧹 Closing context\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:10:50.282Z",
+                          "annotations": [
+                            {
+                              "type": "info",
+                              "description": "Bot response: פלאיה ימית: איך להכין את המנה הספרדית הכי חגיגית בעולם? 🥘🐚\nתארי לך שאת עומדת במטבח קטן בעיר נמל ספרדית, ליד חלון פתוח שמשקיף על ים כחול אינסופי. ברקע נשמעים צחוקי דייגים והקצב של גיטרה ספרדית. 🌊🎸 זו בדיוק התחושה שפלאיה ימית (Seafood Paella) יכולה להביא למטבח שלך — מנה צבעונית, ריחנית ומלאה בטעמים שיגרמו לכולם להתאהב.\nמוכנה לשים סינר ולהפוך להיות השפית הספרדייה של הבית? Vamos! 💃\n\n🎯 החומרים (ל-4 מנות גדולות):\n\nאורז לפלאיה: 2 כוסות (אורז מסוג בומבה או עגול מתאים במיוחד).\nשמן זית: 3 כפות.\nבצל: 1 קטן, קצוץ.\nפלפל אדום: חתוך לרצועות דקות.\nעגבניות מרוסקות או מגוררות: 2 גדולות.\nשום: 3 שיניים קצוצות דק-דק (כמו סוד שאי אפשר לגלות! 🕵️‍♀️🧄).\nמרק דגים או עוף: כ-5 כוסות חמות (אפשר גם מים עם מעט מלח).\nזעפרן: כמה חוטים, מושרים בכף מים חמימים (זה הקסם של הפלאיה! ✨).\nפירות ים טריים: שרימפס, קלמארי וחצי ק\"ג מולים – בוחרים לפי מה שאוהבים.\nאפונה ירוקה קטנה (לא חובה): חצי כוס.\nפפריקה מתוקה ומעושנת: כפית מכל סוג.\nמלח ופלפל לפי הטעם.\nלימונים חצויים להגשה 🍋.\n\n\n📚 ההכנה – צעד אחר צעד עם אהבה 🥘\n🔥 שלב ראשון – תכיני את הבסיס\n1️⃣ חממי מחבת גדולה ורחבה מאוד – עדיף מחבת פלאיה אם יש לך אחת (היא שטוחה וגדולה). מוסיפים את שמן הזית ומחממים בעדינות.\n2️⃣ מוסיפים את הבצל הקצוץ ומטגנים עד שהוא הופך לשקוף ורך (אבל לא שחום!). מוסיפים את השום והפפריקה המתוקה והמעושנת – הריח? חלומי! 🌟\n3️⃣ מוסיפים את רצועות הפלפל האדום ומשיכים לבשל עוד כמה דקות.\n\n🧪 שלב שני – הוספת הקסם\n4️⃣ זה הרגע להוסיף את העגבניות המגוררות ולבשל על אש בינונית עד שהן מצטמצמות מעט ונראות כמו רוטב סמיך ועשיר.\n5️⃣ מפזרים מעל את האורז בצורה אחידה במחבת ולא מערבבים! 😲 כן, שמעת נכון — זה חוק ברזל בפלאיה כדי לקבל את הקרקעית הפריכה שנקראת \"סוקראט\" בספרדית.\n6️⃣ שופכים בזהירות את מרק הדגים החם מעל הכל ומוסיפים את המים שבהם הושרה הזעפרן.\n7️⃣ מביאים לרתיחה ולאחר מכן מנמיכים לאש קטנה כדי שהאורז יבשל בעדינות ויספוג כל טיפה מהנוזלים הטעימים האלו.\n\n🐚 שלב שלישי – הכוכבים מגיעים!\n8️⃣ אחרי בערך 10 דקות בישול, מפזרים באופן שווה את פירות הים מעל האורז:\n\nמסדרים את השרימפס כך שהם \"יישבו\" יפה על המחבת כמו מלכים 👑.\nמוסיפים טבעות קלמארי בין לבין.\nמסדרים מולים סביב המחבת כך שהם ייפתחו בצורה חגיגית בזמן הבישול! ✨\n\n9️⃣ מכסים בעזרת מכסה או נייר כסף ומבשלים עוד כ-10 דקות עד שכל פירות הים מבושלים והמולים נפתחים (אל תשכחי להוציא מולים שלא נפתחו!).\n\n🌟 שלב רביעי – טאץ' אחרון\n🔟 מסירים מהאש, מפזרים אפונה ירוקה מעל למראה צבעוני ורענן ומשאירים לנוח 5 דקות – אל תדלגי על השלב הזה, הוא מאפשר לכל הטעמים להתייצב כמו ציור מושלם!\n🍋 מגישים עם לימונים טריים לסחיטה מעל כל מנה ו... ¡Olé!\n\n😲 טיפ מדהים מפליאה אמיתי:\nידעת שבספרד לכל אזור יש גרסה משלו לפלאיה? חלקם אפילו מוסיפים בשר עוף או ארנבת לצד פירות הים!\n\nツ איזה טוויסט היית רוצה לנסות בפלאיה שלך?"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-7f0199ab3caea09c8d10",
+                  "file": "Chatbot.spec.ts",
+                  "line": 127,
+                  "column": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hamburger_Menu.spec.ts",
+      "file": "Hamburger_Menu.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "BlueDrop Hamburgermenu Test Suite",
+          "file": "Hamburger_Menu.spec.ts",
+          "line": 18,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Hamburger Menu & 📜 Chat History",
+              "file": "Hamburger_Menu.spec.ts",
+              "line": 46,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC_18 🔍 Search in chat history",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: בריליום: האלמנט הקטן עם כוח-על 🦸‍♀️✨\nדמייני שאת חוקרת במעבדה סופר-מתקדמת 🧪, ואת פותחת מגירה מלאה באוצרות כימיים. בין כל האבקות והגבישים, מונח שם אלמנט בוהק, קליל בצורה מפתיעה ומעט מסתורי – זהו הבריליום! אבל רגע לפני שאת מושיטה יד לגעת בו, כדאי לדעת שסיפורו מורכב ומרתק כמו ספר הרפתקאות מדע בדיוני. 📖🌌\n\nהתחלה נוצצת: מהו בריליום?\nבריליום (Beryllium) הוא יסוד כימי שמסומן באות Be בטבלה המחזורית. מספרו האטומי הוא 4 – כלומר, יש לו ארבעה פרוטונים בליבתו 🧬. הוא שייך למשפחת המתכות האלקליות אדמתיות (כן, זה שם ממש מפואר), ולמרות שהוא מתכת, הוא קליל ונראה כמעט עדין.\nאבל אל תתני למראה השקט שלו להטעות אותך! 😏 בריליום אולי נראה צנוע, אבל יש לו כוחות מיוחדים שהופכים אותו לאחד מהיסודות הכי מסקרנים שיש.\n\nמאפיינים פיזיקליים וכימיים: למה הוא כזה מיוחד?\n🌀 קלילות בלתי רגילה: בריליום הוא אחד החומרים הקלים ביותר שיש – אפילו קל יותר מאלומיניום! המשקל האטומי שלו עומד על 9 בלבד, מה שהופך אותו לאידיאלי לשימושים שדורשים חומרים חזקים וקלילים גם יחד.\n🌟 חוזק-על: ביחס למשקל שלו, הבריליום חזק פי כמה מהרבה מתכות אחרות. דמייני אותו כמו סופרמן של עולם החומרים – נראה קטן ורגוע מבחוץ, אבל בפנים מלא עוצמה! 💪\n🔥 עמידות בפני חום: לבריליום נקודת התכה גבוהה במיוחד (בערך 1,287 מעלות צלזיוס!). המשמעות? הוא מחזיק מעמד גם בתנאים קשים במיוחד ואפילו במנועי חלל. 🚀\n💡 שימושים טכנולוגיים: בריליום אינו מתחמצן בקלות (כלומר לא מחליד), והוא מוליך חום מצוין. לכן אפשר למצוא אותו במטוסים ✈️, לוויינים 🛰️ ואפילו בכורים גרעיניים!\n\nאיפה מוצאים אותו בעולם?\nבריליום לא מסתובב ברחובות כמו חול 😉 – מדובר באלמנט די נדיר! לרוב מוצאים אותו במינרלים כמו ברטרנדיט ובריל (כן כן, הברקת הירוקה היפהפייה 💚 היא סוג של מינרל שמכיל בריליום).\nארצות הברית וקזחסטן הן מהמובילות בהפקת בריליום בעולם 🌍.\n\nאבל רגע... למה צריך להיזהר ממנו? ⚠️\nפה מגיעה נקודת הטוויסט בסיפור: בעוד שבריליום מרשים במיוחד בתכונותיו הפיזיקליות והכימיות, הוא גם עלול להיות מסוכן לבריאות אם נושמים את האבקה שלו או באים איתו במגע ממושך 😷. חשיפה לבריליום יכולה לגרום למחלה נדירה שנקראת \"בריליוזיס\" – מצב שבו מערכת הנשימה נפגעת.\nלכן בכל פעם שעובדים עם בריליום בתעשיות השונות, משתמשים בציוד מיוחד ושומרים על כללי בטיחות חמורים מאוד 🛡️.\n\nשימושים שנשמעים כמו מדע בדיוני 🚀\nבריליום נכנס כמעט לכל טכנולוגיה מתקדמת שאפשר לחשוב עליה:\n\nחלל ותעופה: בזכות חוזקו וקלילותו המטורפת משתמשים בו לייצור רכיבי מטוסים וחלקים של לוויינים.\nמערכות גרעיניות: הבריליום משמש כחומר שמחזיר נייטרונים ומשפר תגובות בכורים גרעיניים.\nטלסקופים ענקיים: המראות של טלסקופ החלל ג'יימס וב בנאס\"א עשויות מבריליום קל במיוחד כדי לעמוד בטמפרטורות קיצוניות בחלל 🌌🔭.\nחקר רפואה: בזכות תכונותיו הכימיות המיוחדות משתמשים בו גם בתחום הדימות הרפואי.\n\n\n🎁 Fun Fact – משהו שלא ידעת על בריליום:\nהברקת (Emerald) המפורסמת 💎 שמככבת בתכשיטים יוקרתיים עשויה מהמינרל \"ברִיל\" המכיל אטומי בריליום יחד עם כרום – וזה בדיוק מה שנותן לה את הצבע הירוק המדהים שלה! אז בפעם הבאה שתראי טבעת עם אבן ירוקה נוצצת... תדעי שאת בעצם מסתכלת על יצירת אמנות כימית 🤩.\n\n🌟 עכשיו אחרי שהכרנו את הבריליום לעומק, אפשר לומר שזה אחד היסודות שבאמת מחברים בין יופי ועוצמה להרפתקה מדעית יוצאת דופן!"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 46313,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "✅ Login process completed and iframe title located successfully.\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            },
+                            {
+                              "text": "Waiting for validation error messages...\n"
+                            },
+                            {
+                              "text": "Verified gender required validation message.\n"
+                            },
+                            {
+                              "text": "Verified name required validation message.\n"
+                            },
+                            {
+                              "text": "✅ Invalid input test completed with expected error validations.\n"
+                            },
+                            {
+                              "text": "Starting to fill personal information form...\n"
+                            },
+                            {
+                              "text": "Filling name: Judith\n"
+                            },
+                            {
+                              "text": "Selecting gender: בת\n"
+                            },
+                            {
+                              "text": "Checking visibility of \"Start\" button...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button...\n"
+                            },
+                            {
+                              "text": "✅ Personal info submitted successfully.\n"
+                            },
+                            {
+                              "text": "✅ TC_18: Search in chat history\n"
+                            },
+                            {
+                              "text": "💬 Submitting query: \"תסביר לי בפרטים על Beryllium.\"\n"
+                            },
+                            {
+                              "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
+                            },
+                            {
+                              "text": "✅ Bot response received: \"בריליום: האלמנט הקטן עם כוח-על 🦸‍♀️✨\nדמייני שאת חוקרת במעבדה סופר-מתקדמת 🧪, ואת פותחת מגירה מלאה באוצרות כימיים. בין כל האבקות והגבישים, מונח שם אלמנט בוהק, קליל בצורה מפתיעה ומעט מסתורי – זהו הבריליום! אבל רגע לפני שאת מושיטה יד לגעת בו, כדאי לדעת שסיפורו מורכב ומרתק כמו ספר הרפתקאות מדע בדיוני. 📖🌌\n\nהתחלה נוצצת: מהו בריליום?\nבריליום (Beryllium) הוא יסוד כימי שמסומן באות Be בטבלה המחזורית. מספרו האטומי הוא 4 – כלומר, יש לו ארבעה פרוטונים בליבתו 🧬. הוא שייך למשפחת המתכות האלקליות אדמתיות (כן, זה שם ממש מפואר), ולמרות שהוא מתכת, הוא קליל ונראה כמעט עדין.\nאבל אל תתני למראה השקט שלו להטעות אותך! 😏 בריליום אולי נראה צנוע, אבל יש לו כוחות מיוחדים שהופכים אותו לאחד מהיסודות הכי מסקרנים שיש.\n\nמאפיינים פיזיקליים וכימיים: למה הוא כזה מיוחד?\n🌀 קלילות בלתי רגילה: בריליום הוא אחד החומרים הקלים ביותר שיש – אפילו קל יותר מאלומיניום! המשקל האטומי שלו עומד על 9 בלבד, מה שהופך אותו לאידיאלי לשימושים שדורשים חומרים חזקים וקלילים גם יחד.\n🌟 חוזק-על: ביחס למשקל שלו, הבריליום חזק פי כמה מהרבה מתכות אחרות. דמייני אותו כמו סופרמן של עולם החומרים – נראה קטן ורגוע מבחוץ, אבל בפנים מלא עוצמה! 💪\n🔥 עמידות בפני חום: לבריליום נקודת התכה גבוהה במיוחד (בערך 1,287 מעלות צלזיוס!). המשמעות? הוא מחזיק מעמד גם בתנאים קשים במיוחד ואפילו במנועי חלל. 🚀\n💡 שימושים טכנולוגיים: בריליום אינו מתחמצן בקלות (כלומר לא מחליד), והוא מוליך חום מצוין. לכן אפשר למצוא אותו במטוסים ✈️, לוויינים 🛰️ ואפילו בכורים גרעיניים!\n\nאיפה מוצאים אותו בעולם?\nבריליום לא מסתובב ברחובות כמו חול 😉 – מדובר באלמנט די נדיר! לרוב מוצאים אותו במינרלים כמו ברטרנדיט ובריל (כן כן, הברקת הירוקה היפהפייה 💚 היא סוג של מינרל שמכיל בריליום).\nארצות הברית וקזחסטן הן מהמובילות בהפקת בריליום בעולם 🌍.\n\nאבל רגע... למה צריך להיזהר ממנו? ⚠️\nפה מגיעה נקודת הטוויסט בסיפור: בעוד שבריליום מרשים במיוחד בתכונותיו הפיזיקליות והכימיות, הוא גם עלול להיות מסוכן לבריאות אם נושמים את האבקה שלו או באים איתו במגע ממושך 😷. חשיפה לבריליום יכולה לגרום למחלה נדירה שנקראת \"בריליוזיס\" – מצב שבו מערכת הנשימה נפגעת.\nלכן בכל פעם שעובדים עם בריליום בתעשיות השונות, משתמשים בציוד מיוחד ושומרים על כללי בטיחות חמורים מאוד 🛡️.\n\nשימושים שנשמעים כמו מדע בדיוני 🚀\nבריליום נכנס כמעט לכל טכנולוגיה מתקדמת שאפשר לחשוב עליה:\n\nחלל ותעופה: בזכות חוזקו וקלילותו המטורפת משתמשים בו לייצור רכיבי מטוסים וחלקים של לוויינים.\nמערכות גרעיניות: הבריליום משמש כחומר שמחזיר נייטרונים ומשפר תגובות בכורים גרעיניים.\nטלסקופים ענקיים: המראות של טלסקופ החלל ג'יימס וב בנאס\"א עשויות מבריליום קל במיוחד כדי לעמוד בטמפרטורות קיצוניות בחלל 🌌🔭.\nחקר רפואה: בזכות תכונותיו הכימיות המיוחדות משתמשים בו גם בתחום הדימות הרפואי.\n\n\n🎁 Fun Fact – משהו שלא ידעת על בריליום:\nהברקת (Emerald) המפורסמת 💎 שמככבת בתכשיטים יוקרתיים עשויה מהמינרל \"ברִיל\" המכיל אטומי בריליום יחד עם כרום – וזה בדיוק מה שנותן לה את הצבע הירוק המדהים שלה! אז בפעם הבאה שתראי טבעת עם אבן ירוקה נוצצת... תדעי שאת בעצם מסתכלת על יצירת אמנות כימית 🤩.\n\n🌟 עכשיו אחרי שהכרנו את הבריליום לעומק, אפשר לומר שזה אחד היסודות שבאמת מחברים בין יופי ועוצמה להרפתקה מדעית יוצאת דופן!\"\n"
                             },
                             {
                               "text": "🔽 Scrolling to bottom...\n"
@@ -288,53 +1148,338 @@
                               "text": "🔓 Verifying predefined buttons are visible...\n"
                             },
                             {
-                              "text": "🧹 Closing context\n"
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "✅ Initial bot message received.\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            },
+                            {
+                              "text": "🔍 Searching for message: \"תסביר לי בפרטים על Beryllium.\"\n"
+                            },
+                            {
+                              "text": "✅ Verified session list contains: \"תסביר לי בפרטים על Beryllium.\"\n"
+                            },
+                            {
+                              "text": "❌ Closing hamburger menu...\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-16T12:16:32.386Z",
+                          "startTime": "2025-05-18T10:11:32.123Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: 🥩 קרוקודיל על הצלחת: כך תכיני סטייק קרוקודיל מושלם! 🐊🔥\nאוקיי, Glenda, אנחנו עומדות לצלול להרפתקה קולינרית סופר ייחודית היום – הכנת סטייק קרוקודיל! כן, כן, את שומעת נכון. 🐊 זה בשר אקזוטי (אבל גם די עדין), אז צריך לדעת איך להתייחס אליו באהבה ובזהירות. מוכנה? כי הולכת להיות חגיגה במטבח! 🍳✨\n\n🎬 שלב 1: הבנת הבשר – מה הסיפור של קרוקודיל?\nלפני שנתחיל, בואי נדבר רגע על הבשר עצמו: בשר קרוקודיל מזכיר קצת עוף (כן, באמת!) אבל עם טוויסט עדין שמזכיר דגים. 💡 הוא רזה מאוד ויכול להתייבש די מהר אם לא מכינים אותו נכון. אז המטרה שלנו כאן היא לשמור עליו עסיסי ולהוציא ממנו את המקסימום טעמים.\n\n🛒 שלב 2: מה צריך לקנות?\nהנה מה שתצטרכי:\n\nנתחי קרוקודיל טריים או קפואים (עדיף פילה או סטייקים חתוכים מראש).\nמרינדה לטעם: מיץ לימון 🍋, שום כתוש 🧄, שמן זית איכותי, מלח ופלפל.\nלתיבול נוסף: עשבי תיבול כמו טימין או רוזמרין 🌿 ושפריץ של סויה למי שאוהבת טיפה מליחות מעודנת.\nמחבת פסים כבדה או גריל טוב. 🔥\n\n💡 טיפ קטן: אם הבשר קפוא, תני לו להפשיר במקרר ללילה – אל תנסי למהר עם מיקרוגל.\n\n👩‍🍳 שלב 3: המרינדה הקסומה\nכדי להבטיח שהבשר יהיה רך וטוב, נשרה אותו קודם כל במרינדה כיפית:\n1️⃣ קחי קערה עמוקה. ערבבי בתוכה:\n\n3 כפות מיץ לימון 🍋.\n2 כפות שמן זית.\nשן שום כתושה אחת או שתיים (או יותר אם את משוגעת לשום כמוני 😜).\nטיפונת מלח ופלפל לפי הטעם.\n\n2️⃣ הניחי את נתחי הקרוקודיל בתוך המרינדה ודאגי שהם \"שוחים\" בתוכה מכל הצדדים.\n3️⃣ כסי בניילון נצמד והשאירי במקרר למשך לפחות שעה ⏰ (ואם יש לך זמן – אפילו ללילה שלם!).\n\n🔥 **שלב"
+                              "description": "Bot response: בריליום: האלמנט הקטן עם כוח-על 🦸‍♀️✨\nדמייני שאת חוקרת במעבדה סופר-מתקדמת 🧪, ואת פותחת מגירה מלאה באוצרות כימיים. בין כל האבקות והגבישים, מונח שם אלמנט בוהק, קליל בצורה מפתיעה ומעט מסתורי – זהו הבריליום! אבל רגע לפני שאת מושיטה יד לגעת בו, כדאי לדעת שסיפורו מורכב ומרתק כמו ספר הרפתקאות מדע בדיוני. 📖🌌\n\nהתחלה נוצצת: מהו בריליום?\nבריליום (Beryllium) הוא יסוד כימי שמסומן באות Be בטבלה המחזורית. מספרו האטומי הוא 4 – כלומר, יש לו ארבעה פרוטונים בליבתו 🧬. הוא שייך למשפחת המתכות האלקליות אדמתיות (כן, זה שם ממש מפואר), ולמרות שהוא מתכת, הוא קליל ונראה כמעט עדין.\nאבל אל תתני למראה השקט שלו להטעות אותך! 😏 בריליום אולי נראה צנוע, אבל יש לו כוחות מיוחדים שהופכים אותו לאחד מהיסודות הכי מסקרנים שיש.\n\nמאפיינים פיזיקליים וכימיים: למה הוא כזה מיוחד?\n🌀 קלילות בלתי רגילה: בריליום הוא אחד החומרים הקלים ביותר שיש – אפילו קל יותר מאלומיניום! המשקל האטומי שלו עומד על 9 בלבד, מה שהופך אותו לאידיאלי לשימושים שדורשים חומרים חזקים וקלילים גם יחד.\n🌟 חוזק-על: ביחס למשקל שלו, הבריליום חזק פי כמה מהרבה מתכות אחרות. דמייני אותו כמו סופרמן של עולם החומרים – נראה קטן ורגוע מבחוץ, אבל בפנים מלא עוצמה! 💪\n🔥 עמידות בפני חום: לבריליום נקודת התכה גבוהה במיוחד (בערך 1,287 מעלות צלזיוס!). המשמעות? הוא מחזיק מעמד גם בתנאים קשים במיוחד ואפילו במנועי חלל. 🚀\n💡 שימושים טכנולוגיים: בריליום אינו מתחמצן בקלות (כלומר לא מחליד), והוא מוליך חום מצוין. לכן אפשר למצוא אותו במטוסים ✈️, לוויינים 🛰️ ואפילו בכורים גרעיניים!\n\nאיפה מוצאים אותו בעולם?\nבריליום לא מסתובב ברחובות כמו חול 😉 – מדובר באלמנט די נדיר! לרוב מוצאים אותו במינרלים כמו ברטרנדיט ובריל (כן כן, הברקת הירוקה היפהפייה 💚 היא סוג של מינרל שמכיל בריליום).\nארצות הברית וקזחסטן הן מהמובילות בהפקת בריליום בעולם 🌍.\n\nאבל רגע... למה צריך להיזהר ממנו? ⚠️\nפה מגיעה נקודת הטוויסט בסיפור: בעוד שבריליום מרשים במיוחד בתכונותיו הפיזיקליות והכימיות, הוא גם עלול להיות מסוכן לבריאות אם נושמים את האבקה שלו או באים איתו במגע ממושך 😷. חשיפה לבריליום יכולה לגרום למחלה נדירה שנקראת \"בריליוזיס\" – מצב שבו מערכת הנשימה נפגעת.\nלכן בכל פעם שעובדים עם בריליום בתעשיות השונות, משתמשים בציוד מיוחד ושומרים על כללי בטיחות חמורים מאוד 🛡️.\n\nשימושים שנשמעים כמו מדע בדיוני 🚀\nבריליום נכנס כמעט לכל טכנולוגיה מתקדמת שאפשר לחשוב עליה:\n\nחלל ותעופה: בזכות חוזקו וקלילותו המטורפת משתמשים בו לייצור רכיבי מטוסים וחלקים של לוויינים.\nמערכות גרעיניות: הבריליום משמש כחומר שמחזיר נייטרונים ומשפר תגובות בכורים גרעיניים.\nטלסקופים ענקיים: המראות של טלסקופ החלל ג'יימס וב בנאס\"א עשויות מבריליום קל במיוחד כדי לעמוד בטמפרטורות קיצוניות בחלל 🌌🔭.\nחקר רפואה: בזכות תכונותיו הכימיות המיוחדות משתמשים בו גם בתחום הדימות הרפואי.\n\n\n🎁 Fun Fact – משהו שלא ידעת על בריליום:\nהברקת (Emerald) המפורסמת 💎 שמככבת בתכשיטים יוקרתיים עשויה מהמינרל \"ברִיל\" המכיל אטומי בריליום יחד עם כרום – וזה בדיוק מה שנותן לה את הצבע הירוק המדהים שלה! אז בפעם הבאה שתראי טבעת עם אבן ירוקה נוצצת... תדעי שאת בעצם מסתכלת על יצירת אמנות כימית 🤩.\n\n🌟 עכשיו אחרי שהכרנו את הבריליום לעומק, אפשר לומר שזה אחד היסודות שבאמת מחברים בין יופי ועוצמה להרפתקה מדעית יוצאת דופן!"
                             }
                           ],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-850fb-verify-search-history-page--chromium\\test-failed-2.png"
-                            },
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-850fb-verify-search-history-page--chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-850fb-verify-search-history-page--chromium\\test-failed-3.png"
-                            },
-                            {
-                              "name": "_error-context",
-                              "contentType": "application/json",
-                              "body": "eyJwYWdlU25hcHNob3QiOiItIHJlZ2lvbiBcInRvcCBvZiBwYWdlXCJcbi0gYnV0dG9uIFwi15zXk9ec15Ig15zXqteV15vXnyDXlNeo15DXqdeZXCJcbi0gbGluayBcIteU15DXqteoINeU15bXlCDXoteV16bXkSDXkdei15bXqNeqINeU15vXnNeZINec15HXoNeZ15nXqiDXkNeq16jXmdedINep15wgd2l4IC5jb20gLiDXqNeV16bXmdedINec15nXpteV16gg15DXqteoINee16nXnNeb150/INeU16rXl9eZ15zXlSDXoteb16nXmdeVXCI6XG4gIC0gL3VybDogLy93d3cud2l4LmNvbS9scHZpcmFsL2VudmlyYWw/dXRtX2NhbXBhaWduPXZpcl93aXhhZF9saXZlJm9yaWdfbXNpZD1kMTQ3MzgwYS1mM2QxLTQxOWQtOWNlZC0xMzQwMGVhNWE2OTUmYWRzVmVyc2lvbj13aGl0ZVxuICAtIHRleHQ6INeU15DXqteoINeU15bXlCDXoteV16bXkSDXkdei15bXqNeqINeU15vXnNeZINec15HXoNeZ15nXqiDXkNeq16jXmdedINep15xcbiAgLSBpbWcgXCJ3aXhcIlxuICAtIHRleHQ6IC5jb20gLiDXqNeV16bXmdedINec15nXpteV16gg15DXqteoINee16nXnNeb150/INeU16rXl9eZ15zXlSDXoteb16nXmdeVXG4tIG1haW46XG4gIC0gaWZyYW1lXG4tIHJlZ2lvbiBcImJvdHRvbSBvZiBwYWdlXCIifQ=="
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                            "column": 70,
-                            "line": 62
-                          }
+                          "attachments": []
                         }
                       ],
-                      "status": "unexpected"
+                      "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-7f0199ab3caea09c8d10",
-                  "file": "Chatbot.spec.ts",
-                  "line": 128,
+                  "id": "b55e7195d3b5536049bb-672809698635e1d16800",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 48,
+                  "column": 7
+                },
+                {
+                  "title": "TC_19 🔓 Open Hamburger Menu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 351,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_19: Open Hamburger Menu\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:13:03.756Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-0bdac69ceb7b48cc00dc",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 61,
+                  "column": 9
+                },
+                {
+                  "title": "TC_20 ➕ Load More button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 372,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_20: Load More button functionality\n"
+                            },
+                            {
+                              "text": "📜 Clicking Load More button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:13:04.114Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-d24643ba24428cfadf40",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 66,
+                  "column": 9
+                },
+                {
+                  "title": "TC_21 ❌ No result in chat history",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2338,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_21: No result in chat history\n"
+                            },
+                            {
+                              "text": "🔍 Searching for non-existent history: \"תסביר לי בפרטים על Ruthenium.\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:13:04.494Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-63ee410174dfddab9e3f",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 72,
+                  "column": 9
+                },
+                {
+                  "title": "TC_22 ❎ Close Hamburger Menu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 411,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_22: Close Hamburger Menu\n"
+                            },
+                            {
+                              "text": "❌ Closing hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:13:06.840Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-2190c0520e124b39d946",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 77,
+                  "column": 9
+                },
+                {
+                  "title": "TC_23 🆕 New session with \"שיחה חדשה\"",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2267,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_23: Start new session using \"שיחה חדשה\"\n"
+                            },
+                            {
+                              "text": "🔁 Creating new session from hamburger menu...\n"
+                            },
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "✅ Verified: Bot responses are cleared after reload.\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "✅ Initial bot message received.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:13:07.261Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-8c7d68adebe27bbac4e5",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 82,
+                  "column": 9
+                },
+                {
+                  "title": "TC_24 ✏️ Edit and save changes in chat history",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1500,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_24: Edit and save changes in chat history\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:13:09.537Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-59a9ccad7051d101f55b",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 89,
+                  "column": 9
+                },
+                {
+                  "title": "TC_25 🔁 Continue Chat Functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2195,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_25: Continue Chat Functionality\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-18T10:13:11.045Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-83c37c807ca80fc2f2f9",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 95,
                   "column": 9
                 }
               ]
@@ -342,15 +1487,236 @@
           ]
         }
       ]
+    },
+    {
+      "title": "insufficient_balance.spec.ts",
+      "file": "insufficient_balance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC_26 : Admin balance change and verify insufficient balance popup",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "info",
+                  "description": "Bot response: 🐟 Fish and Chips – הארוחה הבריטית שכל ביס ממנה הוא חגיגה פריכה! 🍟\nדמייני שאת עומדת באמצע שוק דגים באנגליה, הריח של דגים טריים באוויר, וקול טיגון שמח מתנגן ברקע. מוכנה לצלול לתוך המתכון? 🏴‍☠️✨\n\n🎣 שלב 1: מה צריך? (הכיני את החומרים!)\n\n\nלדג:\n\n4 פילטים של דג לבן טרי (כמו בקלה או מרלוזה). 🐟\nכוס קמח רגיל.\nכוס בירה קרה או מים מוגזים (הסוד לפריכות!). 🍺\nכפית אבקת אפייה.\nקורט מלח ופלפל לפי הטעם.\n\n\n\nלצ'יפס:\n\n4 תפוחי אדמה גדולים, קלופים וחתוכים לרצועות עבות. 🥔\nשמן לטיגון עמוק (שמן קנולה או חמניות).\n\n\n\nלתיבול וצדדים:\n\nחומץ מאלט (קלאסי בריטי!).\nמלח גס 📌\nרוטב טרטר או קטשופ לפי בחירה.\n\n\n\n\n🔥 שלב 2: הצ'יפס קודם! כי הוא צריך זמן אהבה\n\nבישול ראשוני: הרתיחי מים בסיר גדול עם מעט מלח. הוסיפי את רצועות תפוחי האדמה ובשלי אותן ל-5 דקות עד שהן רכות, אבל עדיין לא מתפרקות.\nייבוש: סנני היטב והניחי על מגבת מטבח לספיגת הנוזלים. אף אחד לא אוהב צ'יפס רטוב בטיגון! 😜\nטיגון ראשון: חממי שמן ל-150°C וטגני את הצ'יפס למשך כ-4 דקות עד שהם מתחילים להיות זהובים בהירים. הוציאי אותם לנייר סופג ותני להם לנוח.\n\n\n🧪 שלב 3: הבלילה הסודית לדגים!\n\nבקערה גדולה ערבבי את הקמח, אבקת האפייה וקורט המלח.\nהוסיפי בהדרגה את הבירה/מים המוגזים ותערבבי עד שתתקבל בלילה חלקה ועבה שאפשר \"לטבול\" בה את הדג כמו סוודר במים חמים! 🤓\n\n\n🌊 שלב 4: הדגים יוצאים לשחייה עמוקה בשמן\n\nחממי שמן ל-180°C (חשוב שהשמן יהיה חם מספיק כדי שהבלילה תהפוך לפריכה מיידית).\nטבלי כל פילה דג בבלילה כך שיכוסה כולו, ואז הכניסי בזהירות לשמן החם.\nטגני במשך כ-6-8 דקות עד שהדג מזהיב והבלילה קריספית כמו חלום! ✨\n\n\n🍟 שלב 5: סיום עם הצ'יפס\n\nהחזירי את הצ'יפס לשמן החם לטיגון שני של כ-3 דקות עד שהם זהובים ושובבים במיוחד.\nפזרי מלח גס מעל מיד כשהם יוצאים מהשמן.\n\n\n🌟 הגשה מושלמת:\nערמי צ'יפס ודגים זהובים על צלחת יפה, זלפי מעט חומץ מאלט מעל והגישי לצד רוטב אהוב לבחירתך ורבע לימון לסחיטה קלילה 🍋."
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 95981,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Navigating to the admin page...\n"
+                    },
+                    {
+                      "text": "Navigating to the chatbot page...\n"
+                    },
+                    {
+                      "text": "Successfully navigated to the admin page.\n"
+                    },
+                    {
+                      "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                    },
+                    {
+                      "text": "Filling in email input...\n"
+                    },
+                    {
+                      "text": "Filling in password input...\n"
+                    },
+                    {
+                      "text": "Clicking on Sign In button...\n"
+                    },
+                    {
+                      "text": "Login submitted, waiting for dashboard to load...\n"
+                    },
+                    {
+                      "text": "Starting reset process for user: qa@yopmail.com\n"
+                    },
+                    {
+                      "text": "Clicking on User Data tab...\n"
+                    },
+                    {
+                      "text": "Searching for user with email: qa@yopmail.com\n"
+                    },
+                    {
+                      "text": "Waiting for user data to appear...\n"
+                    },
+                    {
+                      "text": "Clicking Reset button...\n"
+                    },
+                    {
+                      "text": "Confirming the reset...\n"
+                    },
+                    {
+                      "text": "Waiting for success message...\n"
+                    },
+                    {
+                      "text": "Reset confirmation message is visible.\n"
+                    },
+                    {
+                      "text": "Verifying usage value has been reset to 0...\n"
+                    },
+                    {
+                      "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                    },
+                    {
+                      "text": "Navigating to the admin page...\n"
+                    },
+                    {
+                      "text": "Navigating to the chatbot page...\n"
+                    },
+                    {
+                      "text": "Successfully navigated to chatbot login page.\n"
+                    },
+                    {
+                      "text": "Clicking \"Login with Email\" button...\n"
+                    },
+                    {
+                      "text": "Filling in email: qa@yopmail.com\n"
+                    },
+                    {
+                      "text": "Filling in password...\n"
+                    },
+                    {
+                      "text": "Clicking \"Submit\" to log in...\n"
+                    },
+                    {
+                      "text": "Waiting for page navigation after login...\n"
+                    },
+                    {
+                      "text": "URL indicates successful navigation to chat page.\n"
+                    },
+                    {
+                      "text": "✅ Login process completed and iframe title located successfully.\n"
+                    },
+                    {
+                      "text": "Insufficient Balance pop-up comming\n"
+                    },
+                    {
+                      "text": "Navigating to the admin page...\n"
+                    },
+                    {
+                      "text": "Navigating to the chatbot page...\n"
+                    },
+                    {
+                      "text": "Successfully navigated to the admin page.\n"
+                    },
+                    {
+                      "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                    },
+                    {
+                      "text": "Filling in email input...\n"
+                    },
+                    {
+                      "text": "Filling in password input...\n"
+                    },
+                    {
+                      "text": "Clicking on Sign In button...\n"
+                    },
+                    {
+                      "text": "Login submitted, waiting for dashboard to load...\n"
+                    },
+                    {
+                      "text": "Navigating to the admin page...\n"
+                    },
+                    {
+                      "text": "Navigating to the chatbot page...\n"
+                    },
+                    {
+                      "text": "Successfully navigated to chatbot login page.\n"
+                    },
+                    {
+                      "text": "Clicking \"Login with Email\" button...\n"
+                    },
+                    {
+                      "text": "Filling in email: qa@yopmail.com\n"
+                    },
+                    {
+                      "text": "Filling in password...\n"
+                    },
+                    {
+                      "text": "Clicking \"Submit\" to log in...\n"
+                    },
+                    {
+                      "text": "Waiting for page navigation after login...\n"
+                    },
+                    {
+                      "text": "URL indicates successful navigation to chat page.\n"
+                    },
+                    {
+                      "text": "✅ Login process completed and iframe title located successfully.\n"
+                    },
+                    {
+                      "text": "Starting to fill personal information form...\n"
+                    },
+                    {
+                      "text": "Filling name: Judith\n"
+                    },
+                    {
+                      "text": "Selecting gender: בת\n"
+                    },
+                    {
+                      "text": "Checking visibility of \"Start\" button...\n"
+                    },
+                    {
+                      "text": "Clicking \"Start\" button...\n"
+                    },
+                    {
+                      "text": "✅ Personal info submitted successfully.\n"
+                    },
+                    {
+                      "text": "💬 Submitting query: \"איך להכין Fish And Chips? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                    },
+                    {
+                      "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
+                    },
+                    {
+                      "text": "✅ Bot response received: \"🐟 Fish and Chips – הארוחה הבריטית שכל ביס ממנה הוא חגיגה פריכה! 🍟\nדמייני שאת עומדת באמצע שוק דגים באנגליה, הריח של דגים טריים באוויר, וקול טיגון שמח מתנגן ברקע. מוכנה לצלול לתוך המתכון? 🏴‍☠️✨\n\n🎣 שלב 1: מה צריך? (הכיני את החומרים!)\n\n\nלדג:\n\n4 פילטים של דג לבן טרי (כמו בקלה או מרלוזה). 🐟\nכוס קמח רגיל.\nכוס בירה קרה או מים מוגזים (הסוד לפריכות!). 🍺\nכפית אבקת אפייה.\nקורט מלח ופלפל לפי הטעם.\n\n\n\nלצ'יפס:\n\n4 תפוחי אדמה גדולים, קלופים וחתוכים לרצועות עבות. 🥔\nשמן לטיגון עמוק (שמן קנולה או חמניות).\n\n\n\nלתיבול וצדדים:\n\nחומץ מאלט (קלאסי בריטי!).\nמלח גס 📌\nרוטב טרטר או קטשופ לפי בחירה.\n\n\n\n\n🔥 שלב 2: הצ'יפס קודם! כי הוא צריך זמן אהבה\n\nבישול ראשוני: הרתיחי מים בסיר גדול עם מעט מלח. הוסיפי את רצועות תפוחי האדמה ובשלי אותן ל-5 דקות עד שהן רכות, אבל עדיין לא מתפרקות.\nייבוש: סנני היטב והניחי על מגבת מטבח לספיגת הנוזלים. אף אחד לא אוהב צ'יפס רטוב בטיגון! 😜\nטיגון ראשון: חממי שמן ל-150°C וטגני את הצ'יפס למשך כ-4 דקות עד שהם מתחילים להיות זהובים בהירים. הוציאי אותם לנייר סופג ותני להם לנוח.\n\n\n🧪 שלב 3: הבלילה הסודית לדגים!\n\nבקערה גדולה ערבבי את הקמח, אבקת האפייה וקורט המלח.\nהוסיפי בהדרגה את הבירה/מים המוגזים ותערבבי עד שתתקבל בלילה חלקה ועבה שאפשר \"לטבול\" בה את הדג כמו סוודר במים חמים! 🤓\n\n\n🌊 שלב 4: הדגים יוצאים לשחייה עמוקה בשמן\n\nחממי שמן ל-180°C (חשוב שהשמן יהיה חם מספיק כדי שהבלילה תהפוך לפריכה מיידית).\nטבלי כל פילה דג בבלילה כך שיכוסה כולו, ואז הכניסי בזהירות לשמן החם.\nטגני במשך כ-6-8 דקות עד שהדג מזהיב והבלילה קריספית כמו חלום! ✨\n\n\n🍟 שלב 5: סיום עם הצ'יפס\n\nהחזירי את הצ'יפס לשמן החם לטיגון שני של כ-3 דקות עד שהם זהובים ושובבים במיוחד.\nפזרי מלח גס מעל מיד כשהם יוצאים מהשמן.\n\n\n🌟 הגשה מושלמת:\nערמי צ'יפס ודגים זהובים על צלחת יפה, זלפי מעט חומץ מאלט מעל והגישי לצד רוטב אהוב לבחירתך ורבע לימון לסחיטה קלילה 🍋.\"\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-05-18T10:13:13.443Z",
+                  "annotations": [
+                    {
+                      "type": "info",
+                      "description": "Bot response: 🐟 Fish and Chips – הארוחה הבריטית שכל ביס ממנה הוא חגיגה פריכה! 🍟\nדמייני שאת עומדת באמצע שוק דגים באנגליה, הריח של דגים טריים באוויר, וקול טיגון שמח מתנגן ברקע. מוכנה לצלול לתוך המתכון? 🏴‍☠️✨\n\n🎣 שלב 1: מה צריך? (הכיני את החומרים!)\n\n\nלדג:\n\n4 פילטים של דג לבן טרי (כמו בקלה או מרלוזה). 🐟\nכוס קמח רגיל.\nכוס בירה קרה או מים מוגזים (הסוד לפריכות!). 🍺\nכפית אבקת אפייה.\nקורט מלח ופלפל לפי הטעם.\n\n\n\nלצ'יפס:\n\n4 תפוחי אדמה גדולים, קלופים וחתוכים לרצועות עבות. 🥔\nשמן לטיגון עמוק (שמן קנולה או חמניות).\n\n\n\nלתיבול וצדדים:\n\nחומץ מאלט (קלאסי בריטי!).\nמלח גס 📌\nרוטב טרטר או קטשופ לפי בחירה.\n\n\n\n\n🔥 שלב 2: הצ'יפס קודם! כי הוא צריך זמן אהבה\n\nבישול ראשוני: הרתיחי מים בסיר גדול עם מעט מלח. הוסיפי את רצועות תפוחי האדמה ובשלי אותן ל-5 דקות עד שהן רכות, אבל עדיין לא מתפרקות.\nייבוש: סנני היטב והניחי על מגבת מטבח לספיגת הנוזלים. אף אחד לא אוהב צ'יפס רטוב בטיגון! 😜\nטיגון ראשון: חממי שמן ל-150°C וטגני את הצ'יפס למשך כ-4 דקות עד שהם מתחילים להיות זהובים בהירים. הוציאי אותם לנייר סופג ותני להם לנוח.\n\n\n🧪 שלב 3: הבלילה הסודית לדגים!\n\nבקערה גדולה ערבבי את הקמח, אבקת האפייה וקורט המלח.\nהוסיפי בהדרגה את הבירה/מים המוגזים ותערבבי עד שתתקבל בלילה חלקה ועבה שאפשר \"לטבול\" בה את הדג כמו סוודר במים חמים! 🤓\n\n\n🌊 שלב 4: הדגים יוצאים לשחייה עמוקה בשמן\n\nחממי שמן ל-180°C (חשוב שהשמן יהיה חם מספיק כדי שהבלילה תהפוך לפריכה מיידית).\nטבלי כל פילה דג בבלילה כך שיכוסה כולו, ואז הכניסי בזהירות לשמן החם.\nטגני במשך כ-6-8 דקות עד שהדג מזהיב והבלילה קריספית כמו חלום! ✨\n\n\n🍟 שלב 5: סיום עם הצ'יפס\n\nהחזירי את הצ'יפס לשמן החם לטיגון שני של כ-3 דקות עד שהם זהובים ושובבים במיוחד.\nפזרי מלח גס מעל מיד כשהם יוצאים מהשמן.\n\n\n🌟 הגשה מושלמת:\nערמי צ'יפס ודגים זהובים על צלחת יפה, זלפי מעט חומץ מאלט מעל והגישי לצד רוטב אהוב לבחירתך ורבע לימון לסחיטה קלילה 🍋."
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "802b36f43135f9baf1c9-53fc9b79c69c59e2f9d6",
+          "file": "insufficient_balance.spec.ts",
+          "line": 11,
+          "column": 5
+        }
+      ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-16T12:16:28.860Z",
-    "duration": 75504.18500000238,
-    "expected": 0,
+    "startTime": "2025-05-18T10:08:17.968Z",
+    "duration": 391786.728,
+    "expected": 26,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

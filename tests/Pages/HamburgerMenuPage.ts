@@ -18,6 +18,7 @@ export class HamburgerMenuPage {
 
   }
 
+  
 async OpenHamburgerMenu() {
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
     const menuButton = frameLocator.locator(MenuLocator.hamburgerMenuBtn);
@@ -65,10 +66,13 @@ async SearchHistory(query: string) {
   async NoSearchHistory() {
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
     const randomQuery = generateRandomQuestion();
-
+    await this.page.evaluate(() => {
+  window.scrollTo(0, 0);
+});
     console.log(`🔍 Searching for non-existent history: "${randomQuery}"`);
     await frameLocator.locator(MenuLocator.Searchbar).clear();
     await frameLocator.locator(MenuLocator.Searchbar).fill(randomQuery);
+    await this.page.waitForTimeout(2000); // Optional wait for results
     await expect(frameLocator.getByText('לא נמצאה שיחה')).toBeVisible();
   
   }
@@ -104,7 +108,7 @@ async SearchHistory(query: string) {
         
 async Edithistory() {
 
-    const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
+const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
 
 await frameLocator.locator('li:nth-child(2) > .ant-btn').isVisible();
 

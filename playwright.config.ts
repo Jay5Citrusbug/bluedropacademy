@@ -63,7 +63,7 @@ export default defineConfig({
 
     {
       name: 'long-wait',
-      timeout: 700_000, // 10+ minutes
+      timeout: 80_000 , // 1 minutes and 20 seconds
       testMatch: ['**/tests/No_Activity.spec.ts'], // only the inactivity test
     },
 

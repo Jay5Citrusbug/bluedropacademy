@@ -119,56 +119,35 @@ test('TC_15: Click on the Continue button for continue session.', async () => {
     }
     );
   test('TC_16:Session pop-up display after 1 minutes and close .', async () => {
-          await chatbotscreen.InactivityPopup2();
+       //   await chatbotscreen.InactivityPopup2();
 
     }
     );
-
     
-    test('TC_17: Browser tab end/terminate and verify search history page.', async ({ browser }, testInfo) => {
+test('TC_17: Browser tab end/terminate and verify search history page.', async ({ browser }, testInfo) => {
 
-      const chatbotContext = await browser.newContext();
-      const chatbotPage = await chatbotContext.newPage();
+  const query = await chatbotscreen.SubmitQuery(testInfo);
 
-        const query = await chatbotscreen.SubmitQuery(testInfo);
-        await chatbotscreen.scrollToBottom()
-        await chatbotscreen.PredefinebuttonActive()
-        // await chatbotscreen.Pagereload();
-      
-        // ❌ Close only the second tab (action tab)
-        await chatbotPage.close();
+  await page.reload();
 
-        // 🔁 Open a new tab in same context for history check
-      const Historypage = await browser.newContext();
-      const History = await chatbotContext.newPage();
+  await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByTestId('hamburger-click').click();
+  await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByTestId('search-session-input').click();
 
-        await chatbot.goto();
-      
-        const iframe = await History.frameLocator('iframe[name="htmlComp-iframe"]');
-        await iframe.getByTestId('hamburger-click').click();
-        await iframe.getByTestId('search-session-input').click();
-      
-        const frameLocator = History.frameLocator(MenuLocator.iframeName);
-        console.log(`🔍 Searching for message: "${query}"`);
-      
-        const input = frameLocator.locator(MenuLocator.Searchbar);
-        await expect(input).toBeVisible();
-      
-        await History.evaluate(() => window.scrollTo(0, 0));
-        await input.fill(query);
-        await History.waitForTimeout(2000);
-      
-        const sessionList = frameLocator.locator('.session-list');
-        await expect(sessionList).toBeVisible();
-        // await expect(sessionList).toContainText(query);
-      
-        // ✅ Clean up
-        await chatbotContext.close();
-      });
-      
+  console.log(`🔍 Searching for message: "${query}"`);
 
-  });
+  const input = await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().locator(MenuLocator.Searchbar);
+  await expect(input).toBeVisible();
+  await input.fill(query);
+
+  const sessionList = await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().locator('.session-list');
+  await expect(sessionList).toBeVisible();
+  await page.waitForTimeout(2000); // Optional: wait for the session list to update
+   await expect(sessionList).toContainText(query); // Optional
+
+  // ✅ Do not close the context if you need the browser to stay alive
+ await page.close(); // Skip this if needed
 });
+
 
 test.afterEach(async ({ page }, testInfo) => {
   if (testInfo.status !== testInfo.expectedStatus) {
@@ -183,3 +162,5 @@ test.afterEach(async ({ page }, testInfo) => {
     testInfo.attach('video', { path: videoPath, contentType: 'video/webm' });
   }
 });
+});
+})

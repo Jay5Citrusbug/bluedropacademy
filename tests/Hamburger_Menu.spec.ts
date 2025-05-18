@@ -50,51 +50,50 @@ test.describe('BlueDrop Hamburgermenu Test Suite', () => {
   const query = await chatbotscreen.SubmitQuery(testInfo);
   await chatbotscreen.scrollToBottom()
   await chatbotscreen.PredefinebuttonActive()
-  await page.waitForTimeout(7000)
-
-  await chatbotscreen.Pagereload();
-    await Menu.OpenHamburgerMenu();
+  await page.reload();
+  await chatbotscreen.InitialbotMessage();
+  await Menu.OpenHamburgerMenu();
   await Menu.SearchHistory(query);  // Pass query to search
   await Menu.CloseHamburgerMenu();
 
 });
 
     test('TC_19 🔓 Open Hamburger Menu', async () => {
-      console.log('✅ TC_15: Open Hamburger Menu');
+      console.log('✅ TC_19: Open Hamburger Menu');
       await Menu.OpenHamburgerMenu();
     });
 
     test('TC_20 ➕ Load More button functionality', async () => {
-      console.log('✅ TC_16: Load More button functionality');
+      console.log('✅ TC_20: Load More button functionality');
       await Menu.LoadmoreBtn();
     });
 
 
     test('TC_21 ❌ No result in chat history', async () => {
-      console.log('✅ TC_18: No result in chat history');
+      console.log('✅ TC_21: No result in chat history');
       await Menu.NoSearchHistory();
     });
 
     test('TC_22 ❎ Close Hamburger Menu', async () => {
-      console.log('✅ TC_19: Close Hamburger Menu');
+      console.log('✅ TC_22: Close Hamburger Menu');
       await Menu.CloseHamburgerMenu();
     });
 
     test('TC_23 🆕 New session with "שיחה חדשה"', async () => {
-      console.log('✅ TC_20: Start new session using "שיחה חדשה"');
+      console.log('✅ TC_23: Start new session using "שיחה חדשה"');
       await Menu.Newsession();
       await chatbotscreen.Pagereload();
       await chatbotscreen.InitialbotMessage();
     });
 
     test('TC_24 ✏️ Edit and save changes in chat history', async () => {
-      console.log('✅ TC_21: Edit and save changes in chat history');
+      console.log('✅ TC_24: Edit and save changes in chat history');
       await Menu.OpenHamburgerMenu();
       await Menu.Edithistory();
     });
 
     test('TC_25 🔁 Continue Chat Functionality', async () => {
-      console.log('✅ TC_22: Continue Chat Functionality');
+      console.log('✅ TC_25: Continue Chat Functionality');
       await Menu.OpenHistory_ContinueSession();
     });
 

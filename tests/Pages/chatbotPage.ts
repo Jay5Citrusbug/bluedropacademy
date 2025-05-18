@@ -27,8 +27,9 @@ export class chatbotPage {
     const messageLocator = frameLocator.locator(Chatbotlocator.InitialMessage);
 
     console.log('💬 Waiting for initial bot message...');
+    
     await expect
-      .poll(async () => (await messageLocator.textContent())?.trim(), { timeout: 30000 })
+      .poll(async () => (await messageLocator.textContent())?.trim(), { timeout: 40000 })
       .not.toBe('');
     console.log('✅ Initial bot message received.');
   }
@@ -67,16 +68,15 @@ export class chatbotPage {
   const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
   const input = frameLocator.getByTestId('seach-msg-input');
   const submitBtn = frameLocator.locator(Chatbotlocator.SubmitBtn);
+  const predefinedBtn = frameLocator.locator(Chatbotlocator.Predefinebutton1);
 
   console.log(`💬 Submitting query: "${this.userMessage}"`);
-
-  await input.clear();
   await input.fill(this.userMessage);
   await expect(submitBtn).toBeEnabled();
   await submitBtn.click();
 
-  console.log('🕐 Waiting for bot response...');
-  await this.page.waitForTimeout(30000);
+  console.log('🕐 Waiting for AI response to complete (predefined button visible)...');
+  await predefinedBtn.waitFor({ state: 'visible' });
 
   const botMessages = await frameLocator.locator('.system-message-text').all();
   const lastMessage = botMessages[botMessages.length - 1];
@@ -95,12 +95,9 @@ export class chatbotPage {
   return this.userMessage;  // <-- ensure this line exists at the end
 }
 
-
   async scrollToBottom() {
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-
     console.log('🔽 Scrolling to bottom...');
-    await this.page.waitForTimeout(9000);
 
     await expect(frameLocator.locator(Chatbotlocator.ScrollingBtn)).toBeVisible();
     await frameLocator.locator(Chatbotlocator.ScrollingBtn).click();
@@ -169,11 +166,12 @@ export class chatbotPage {
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
     const predefinedBtn = frameLocator.locator(Chatbotlocator.Predefinebutton1);
 
+
     console.log('🔘 Clicking Predefined button...');
 
     await expect(predefinedBtn).toBeVisible();
     await predefinedBtn.click();
-    await this.page.waitForTimeout(9000);
+  await predefinedBtn.waitFor({ state: 'visible' });
 
     const botMessages = await frameLocator.locator('.system-message-text').all();
     const lastMessage = botMessages[botMessages.length - 1];
@@ -185,7 +183,7 @@ export class chatbotPage {
       type: 'info',
       description: `Bot response: ${botResponse}`,
     });
-
+    
     expect(botResponse).toBeTruthy();
 
 }

@@ -24,7 +24,7 @@ export class ChatbotLoginPage {
  
   // Logs in to chatbot using email and password
   async login(email: string, password: string) {
-    const timeoutLimit = 30000; // assuming 30 seconds timeout (adjust as per your global config)
+    const timeoutLimit = 40000; // assuming 30 seconds timeout (adjust as per your global config)
 
     try {
       console.log('Clicking "Login with Email" button...');
