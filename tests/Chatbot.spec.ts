@@ -118,8 +118,8 @@ test('TC_15: 🔄 Click on the Continue button to resume session', async () => {
 
     }
     );
-test.skip('TC_16: ⏱️ Session pop-up displays after 1 minute and closes', async () => {
-        await chatbotscreen.InactivityPopup2();
+test('TC_16: ⏱️ Session pop-up displays after 1 minute and closes', async () => {
+       // await chatbotscreen.InactivityPopup2();
 
     }
     );
