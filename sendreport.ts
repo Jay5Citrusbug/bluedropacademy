@@ -17,7 +17,7 @@ try {
 const reportDate = process.env.REPORT_DATE || '2025-05-07';
 const passed = process.env.PASSED || '45';
 const failed = process.env.FAILED || '3';
-const skipped = process.env.SKIPPED || '1';
+const skipped = process.env.SKIPPED || '2';
 const total = Number(passed) + Number(failed) + Number(skipped);
 
 const repoOwner = process.env.REPO_OWNER || 'your-org';
