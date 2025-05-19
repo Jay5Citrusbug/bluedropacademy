@@ -113,18 +113,18 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
     });
 
  
-test('TC_15: Click on the Continue button for continue session.', async () => {
+test('TC_15: 🔄 Click on the Continue button to resume session', async () => {
       await chatbotscreen.InactivityPopup1();
 
     }
     );
-  test('TC_16:Session pop-up display after 1 minutes and close .', async () => {
-       //   await chatbotscreen.InactivityPopup2();
+test.skip('TC_16: ⏱️ Session pop-up displays after 1 minute and closes', async () => {
+        await chatbotscreen.InactivityPopup2();
 
     }
     );
     
-test('TC_17: Browser tab end/terminate and verify search history page.', async ({ browser }, testInfo) => {
+test('TC_17: 🧭 Browser tab terminated and search history page is verified', async ({}, testInfo) => {
 
   const query = await chatbotscreen.SubmitQuery(testInfo);
 

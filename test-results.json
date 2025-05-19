@@ -111,7 +111,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 737,
+                          "duration": 608,
                           "errors": [],
                           "stdout": [
                             {
@@ -223,10 +223,10 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Judith\n"
+                              "text": "Filling name: Andy\n"
                             },
                             {
-                              "text": "Selecting gender: בת\n"
+                              "text": "Selecting gender: בן\n"
                             },
                             {
                               "text": "Checking visibility of \"Start\" button...\n"
@@ -249,7 +249,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:08:20.633Z",
+                          "startTime": "2025-05-19T05:44:14.795Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -278,7 +278,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1730,
+                          "duration": 1096,
                           "errors": [],
                           "stdout": [
                             {
@@ -290,7 +290,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:08:54.763Z",
+                          "startTime": "2025-05-19T05:44:39.758Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -319,7 +319,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 303,
+                          "duration": 236,
                           "errors": [],
                           "stdout": [
                             {
@@ -328,7 +328,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:08:56.508Z",
+                          "startTime": "2025-05-19T05:44:40.860Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -357,7 +357,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 267,
+                          "duration": 449,
                           "errors": [],
                           "stdout": [
                             {
@@ -366,7 +366,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:08:56.820Z",
+                          "startTime": "2025-05-19T05:44:41.103Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -395,11 +395,11 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 328,
+                          "duration": 271,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "💬 Typing message: איך להכין Rice Flour And Pigeon Pie? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\n"
+                              "text": "💬 Typing message: תסביר לי בפרטים על Fermium.\n"
                             },
                             {
                               "text": "✅ Verifying Submit button is enabled...\n"
@@ -407,7 +407,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:08:57.095Z",
+                          "startTime": "2025-05-19T05:44:41.560Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -430,7 +430,7 @@
                       "annotations": [
                         {
                           "type": "info",
-                          "description": "Bot response: 🦴✨ יצירת מופת מעושנת: טלה עם ניחוחות בריסל! ✨🦴\nדמייני את הרגע שבו ניחוחות של בשר טלה עסיסי, מתובל במדויק ומתמזג עם מתיקות פריכה של נבטי בריסל יוצרים חגיגה של טעמים! 😋 מוכנה לצלול לתוך מטבח מלא עשן וקסם? קדימה – אנחנו בדרך להכין Smoky Lamb with Brussels Sprouts שיגרום לכל שולחן להתאהב מחדש! 🌟\n\n🍳 רשימת הקסם: המרכיבים שצריך\nהכיני את כל אלה מראש, כך שלא תיאלצי לרוץ באמצע ההכנה למכולת:\nלטלה\n\nכ-1.5 ק\"ג צלעות טלה או כתף טלה 🐑 (עם מעט שומן – הוא המלך כאן!)\n2 כפות שמן זית 🍶\nמלח ופלפל לפי הטעם 🧂\n1 כפית פפריקה מעושנת 🌶️\n1 כפית כמון 🏜️\n4 שיני שום, כתושות 🧄\nחצי כוס יין אדום (כי למה לא להוסיף קצת יוקרה?) 🍷\n\nלנבטי הבריסל\n\n500 גרם נבטי בריסל חתוכים לחצאים 🍃\n2 כפות שמן זית\nמלח גס 🧂\nפלפל שחור גרוס טרי 🌑\nגרידת לימון טרייה 🍋 (לתוספת רעננות)\n\nלתיבול הסופי\n\nמעט דבש או סירופ מייפל (לבחירה) 🍯\nאגוזי מלך קלויים לקראנצ'יות מושלמת 🌰\n\n\n🔥 שלב ראשון: הכנת הבשר – הלב של המנה\n\n\nשדרגי את הבשר: הניחי את צלעות הטלה על משטח עבודה. עסי אותן עם שמן זית, כך שכל החלקים יקבלו מסאז' מלכותי. 💆‍♀️ לערבב בקערה את המלח, פלפל, פפריקה וכמון ולפזר בנדיבות מעל הצלעות.\n\n\nמעשנים את העניינים! חממי מחבת כבדה (עדיף מברזל יצוק!) עד שהיא חמה כמו מדבר סהרה. 🏜️ צרבי את הצלעות מכל צד עד להשחמה יפה ושומנית – בערך 2 דקות לכל צד. הניחי בצד לנוח.\n\n\nהוספת השום והיין: באותה מחבת (בלי לשטוף!), הוסיפי שום כתוש וטגני קלות עד שהוא מתחיל להפיץ ניחוחות שאפשר לכתוב עליהם שירים. 🎶 שפכי פנימה חצי כוס יין אדום וגרדי בעדינות את הקרקעית כדי לשחרר את כל הטעמים שהצטברו מהטלה.\n\n\nאפייה להשלמת המלאכה: העבירי את הצלעות לתבנית אפייה, שפכי מעליהן את רוטב השום והיין, וכסי בנייר כסף. הכניסי לתנור שחומם מראש ל-180 מעלות למשך 20–25 דקות (תלוי כמה \"מידת עשייה\" בא לך שהטלה יהיה).\n\n\n\n🥬 שלב שני: הבריסל עושים הופעה מרשימה\n\n\nבזמן שהטלה נח בתנור כמו מלך 👑, חממי שמן זית במחבת גדולה.\n\n\nהוסיפי את נבטי הבריסל החתוכים כשהצד החתוך כלפי מטה – הם צריכים להיות קריספיים וזהובים כמו חלומות! ✨\n\n\nתבלי במלח גס ופלפל שחור לפי הטעם, ערבבי בעדינות והשאירי אותם כמה דקות עד שהם מתרככים אבל עדיין פריכים.\n\n\nלקראת הסיום: סחטי מעט לימון מעל והוסיפי גרידת לימון – זה הקסם שנותן להם חיים! 🍋\n\n\n\n✨ שלב שלישי ואחרון: איחוד מופלא\n\n\nהוציאי את הצלעות מהתנור ותני להן לנוח עוד 5 דקות לפני ההגשה – הן צריכות להתארגן למסיבה שלהן! 🎉\n\n\nערכי צלחת מהממת: הניחי שכבה של נבטי בריסל בתחתית הצלחת, וסדרי מעליהם בגאווה כמה צלעות טלה עסיסיות.\n\n\nזלפי דבש או מייפל בעדינות מעל להשלמת המתיקות המעודנת ואל תשכחי לפזר אגוזי מלך קלויים בשביל קראנצ'יות אלוהית! 🌰💥\n\n\nאם בא לך להוסיף עוד טאץ' מעושן – אפשר לסיים עם קמצוץ פפריקה מעושנת לפני ההגשה.\n\n\n\n🎉 הסיום המרשים\nוואו, Judith! עכשיו יש לך מנה שנראית כאילו יצאה ממסעדה יוקרתית בפריז או איטליה 🗼🇮🇹 אבל בעצם יצאה מהמטבח שלך 😍✨.\nאז קדימה, הגישי בסטייל – ותיהני מכל ביס לוהט ומעושן!"
+                          "description": "Bot response: ⚔️ Iron: הגיבור החזק של הטבע והטכנולוגיה! 🛡️✨\nדמיין רגע עולמות של חרבות נוצצות, גורדי שחקים מבריקים ואפילו כדוריות דם אדומות שמצילות חיים. מה משותף לכולם? ברזל! 🧲 הברזל הוא לא סתם עוד מתכת – הוא אחד היסודות החזקים, השימושיים והמסתוריים ביותר שהטבע אי-פעם העניק לנו. אז קח נשימה עמוקה, Andy, ונצלול למסע בוהק בתוך עולמו של הברזל. 🚀\n\n🎬 פתיחה לוהטת: ברזל מהאגדות 🎩\nלפני יותר מחמשת אלפים שנה, בני האדם גילו משהו קסום: ברזל שנפל ישר מהשמיים! 🌠 זה היה ברזל מטאוריטי – מתכת שנפלה לכדור הארץ מתוך אסטרואידים עשירים בברזל. אותם אנשים קדומים ראו במתכת הזו משהו קדוש – הרי היא הגיע מכוכבים אחרים! 🌌 אתה יכול לדמיין איך הם השתמשו בה כדי ליצור כלים ונשק? זה היה כאילו קיבלו מתנה מהיקום.\nאבל זו רק ההתחלה... 🤓\n\n🚀 הכימיה של הברזל\nבוא נדבר קצת על המדע שמאחורי הקסם הזה! ברזל מסומן באות Fe (קיצור מלטינית \"Ferrum\" 🧐) והוא נמצא מקום 26 בטבלת היסודות המחזורית. הנה כמה עובדות מגניבות:\n\nמספר אטומי: 26 ⚛️\nמצב טבעי: מוצק בטמפרטורת חדר ❄️\nהשימוש העיקרי בטבע: יצירת מוצקים חזקים מאוד, כמו פלדה ⚙️.\n\n💡 פאן פקט: הברזל הוא אחד מהיסודות הכי נפוצים על פני כדור הארץ, אבל רובו חבוי בליבה של הפלנטה שלנו – כ-80% מליבת כדור הארץ עשויה ברזל מותך! 🌍🔥\n\n🏗️ ברזל בחיי היומיום: מלוחמים למכונות 🚜\nמאז ימי קדם ועד ימינו אנו, הברזל היה ונותר אבן יסוד בכל תחום אפשרי. הנה איך הוא הפך לגיבור שלא מפסיק לעבוד:\n\nתקופת הברזל 🏹: לפני כ-1200 שנה לפני הספירה, בני אדם למדו להפיק ברזל מעופרות (סלעים שמכילים את המתכת). זה התחיל את \"תקופת הברזל\", שבה נבנו כלי נשק וכלים חזקים יותר מאי פעם.\nפלדה – האח הקשוח של הברזל 🍴: כשמערבבים ברזל עם פחמן (כן, אותו פחמן שאתה נושם החוצה!), מקבלים פלדה – חומר שהוא גם גמיש וגם חזק בצורה מדהימה. בזכות הפלדה אנחנו יכולים לבנות גשרים ענקיים 🚆 ומגדלים שמתנשאים לשמיים.\nבתוך הגוף שלך ❤️🩸: כן כן, Andy, גם לך יש מלא ברזל בגוף שלך! הברזל נמצא בדם שלך בתוך מולקולה בשם המוגלובין. המוגלובין מאפשר לכדוריות הדם האדומות לשאת חמצן לכל תא בגוף שלך.\n\nרגע חשיבה: אם אין לך מספיק ברזל בגוף, עלול להיות לך אנמיה – מצב שבו אתה מרגיש עייף וחלש. אז תוודא שאתה אוכל הרבה תרד ובשר אדום! 🥩🌱\n\n🌟 עובדה מדהימה על ברזל\nהידעת? כל הברזל ביקום נוצר בתוך ליבות של כוכבים מתפוצצים שנקראים סופרנובות! 💥 זה אומר שהמתכת שבכף היד שלך היום הייתה פעם חלק מכוכב רחוק שהתפוצץ לפני מיליארדי שנים... די מגניב לחשוב שאתה בעצם נושא חתיכה קטנה מהיקום בכל פעם שאתה מרים כפית.\n\n✨ לסיכום\nברזל הוא יותר ממסמר פשוט או כלי עבודה חלוד; מדובר ביסוד שחצה גבולות של זמן ומרחב כדי להיות חלק בלתי נפרד מחיינו. בין אם מדובר בבניית העולם שסביבנו או שמירה על החיים שבתוכנו – לברזל תמיד יש מקום בליבנו (ובכדוריות הדם שלנו!). 😉"
                         }
                       ],
                       "expectedStatus": "passed",
@@ -441,26 +441,26 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 36628,
+                          "duration": 19789,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "💬 Submitting query: \"איך להכין Smoky Lamb With Brussels Sprouts? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                              "text": "💬 Submitting query: \"תסביר לי בפרטים על Iron.\"\n"
                             },
                             {
                               "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"🦴✨ יצירת מופת מעושנת: טלה עם ניחוחות בריסל! ✨🦴\nדמייני את הרגע שבו ניחוחות של בשר טלה עסיסי, מתובל במדויק ומתמזג עם מתיקות פריכה של נבטי בריסל יוצרים חגיגה של טעמים! 😋 מוכנה לצלול לתוך מטבח מלא עשן וקסם? קדימה – אנחנו בדרך להכין Smoky Lamb with Brussels Sprouts שיגרום לכל שולחן להתאהב מחדש! 🌟\n\n🍳 רשימת הקסם: המרכיבים שצריך\nהכיני את כל אלה מראש, כך שלא תיאלצי לרוץ באמצע ההכנה למכולת:\nלטלה\n\nכ-1.5 ק\"ג צלעות טלה או כתף טלה 🐑 (עם מעט שומן – הוא המלך כאן!)\n2 כפות שמן זית 🍶\nמלח ופלפל לפי הטעם 🧂\n1 כפית פפריקה מעושנת 🌶️\n1 כפית כמון 🏜️\n4 שיני שום, כתושות 🧄\nחצי כוס יין אדום (כי למה לא להוסיף קצת יוקרה?) 🍷\n\nלנבטי הבריסל\n\n500 גרם נבטי בריסל חתוכים לחצאים 🍃\n2 כפות שמן זית\nמלח גס 🧂\nפלפל שחור גרוס טרי 🌑\nגרידת לימון טרייה 🍋 (לתוספת רעננות)\n\nלתיבול הסופי\n\nמעט דבש או סירופ מייפל (לבחירה) 🍯\nאגוזי מלך קלויים לקראנצ'יות מושלמת 🌰\n\n\n🔥 שלב ראשון: הכנת הבשר – הלב של המנה\n\n\nשדרגי את הבשר: הניחי את צלעות הטלה על משטח עבודה. עסי אותן עם שמן זית, כך שכל החלקים יקבלו מסאז' מלכותי. 💆‍♀️ לערבב בקערה את המלח, פלפל, פפריקה וכמון ולפזר בנדיבות מעל הצלעות.\n\n\nמעשנים את העניינים! חממי מחבת כבדה (עדיף מברזל יצוק!) עד שהיא חמה כמו מדבר סהרה. 🏜️ צרבי את הצלעות מכל צד עד להשחמה יפה ושומנית – בערך 2 דקות לכל צד. הניחי בצד לנוח.\n\n\nהוספת השום והיין: באותה מחבת (בלי לשטוף!), הוסיפי שום כתוש וטגני קלות עד שהוא מתחיל להפיץ ניחוחות שאפשר לכתוב עליהם שירים. 🎶 שפכי פנימה חצי כוס יין אדום וגרדי בעדינות את הקרקעית כדי לשחרר את כל הטעמים שהצטברו מהטלה.\n\n\nאפייה להשלמת המלאכה: העבירי את הצלעות לתבנית אפייה, שפכי מעליהן את רוטב השום והיין, וכסי בנייר כסף. הכניסי לתנור שחומם מראש ל-180 מעלות למשך 20–25 דקות (תלוי כמה \"מידת עשייה\" בא לך שהטלה יהיה).\n\n\n\n🥬 שלב שני: הבריסל עושים הופעה מרשימה\n\n\nבזמן שהטלה נח בתנור כמו מלך 👑, חממי שמן זית במחבת גדולה.\n\n\nהוסיפי את נבטי הבריסל החתוכים כשהצד החתוך כלפי מטה – הם צריכים להיות קריספיים וזהובים כמו חלומות! ✨\n\n\nתבלי במלח גס ופלפל שחור לפי הטעם, ערבבי בעדינות והשאירי אותם כמה דקות עד שהם מתרככים אבל עדיין פריכים.\n\n\nלקראת הסיום: סחטי מעט לימון מעל והוסיפי גרידת לימון – זה הקסם שנותן להם חיים! 🍋\n\n\n\n✨ שלב שלישי ואחרון: איחוד מופלא\n\n\nהוציאי את הצלעות מהתנור ותני להן לנוח עוד 5 דקות לפני ההגשה – הן צריכות להתארגן למסיבה שלהן! 🎉\n\n\nערכי צלחת מהממת: הניחי שכבה של נבטי בריסל בתחתית הצלחת, וסדרי מעליהם בגאווה כמה צלעות טלה עסיסיות.\n\n\nזלפי דבש או מייפל בעדינות מעל להשלמת המתיקות המעודנת ואל תשכחי לפזר אגוזי מלך קלויים בשביל קראנצ'יות אלוהית! 🌰💥\n\n\nאם בא לך להוסיף עוד טאץ' מעושן – אפשר לסיים עם קמצוץ פפריקה מעושנת לפני ההגשה.\n\n\n\n🎉 הסיום המרשים\nוואו, Judith! עכשיו יש לך מנה שנראית כאילו יצאה ממסעדה יוקרתית בפריז או איטליה 🗼🇮🇹 אבל בעצם יצאה מהמטבח שלך 😍✨.\nאז קדימה, הגישי בסטייל – ותיהני מכל ביס לוהט ומעושן!\"\n"
+                              "text": "✅ Bot response received: \"⚔️ Iron: הגיבור החזק של הטבע והטכנולוגיה! 🛡️✨\nדמיין רגע עולמות של חרבות נוצצות, גורדי שחקים מבריקים ואפילו כדוריות דם אדומות שמצילות חיים. מה משותף לכולם? ברזל! 🧲 הברזל הוא לא סתם עוד מתכת – הוא אחד היסודות החזקים, השימושיים והמסתוריים ביותר שהטבע אי-פעם העניק לנו. אז קח נשימה עמוקה, Andy, ונצלול למסע בוהק בתוך עולמו של הברזל. 🚀\n\n🎬 פתיחה לוהטת: ברזל מהאגדות 🎩\nלפני יותר מחמשת אלפים שנה, בני האדם גילו משהו קסום: ברזל שנפל ישר מהשמיים! 🌠 זה היה ברזל מטאוריטי – מתכת שנפלה לכדור הארץ מתוך אסטרואידים עשירים בברזל. אותם אנשים קדומים ראו במתכת הזו משהו קדוש – הרי היא הגיע מכוכבים אחרים! 🌌 אתה יכול לדמיין איך הם השתמשו בה כדי ליצור כלים ונשק? זה היה כאילו קיבלו מתנה מהיקום.\nאבל זו רק ההתחלה... 🤓\n\n🚀 הכימיה של הברזל\nבוא נדבר קצת על המדע שמאחורי הקסם הזה! ברזל מסומן באות Fe (קיצור מלטינית \"Ferrum\" 🧐) והוא נמצא מקום 26 בטבלת היסודות המחזורית. הנה כמה עובדות מגניבות:\n\nמספר אטומי: 26 ⚛️\nמצב טבעי: מוצק בטמפרטורת חדר ❄️\nהשימוש העיקרי בטבע: יצירת מוצקים חזקים מאוד, כמו פלדה ⚙️.\n\n💡 פאן פקט: הברזל הוא אחד מהיסודות הכי נפוצים על פני כדור הארץ, אבל רובו חבוי בליבה של הפלנטה שלנו – כ-80% מליבת כדור הארץ עשויה ברזל מותך! 🌍🔥\n\n🏗️ ברזל בחיי היומיום: מלוחמים למכונות 🚜\nמאז ימי קדם ועד ימינו אנו, הברזל היה ונותר אבן יסוד בכל תחום אפשרי. הנה איך הוא הפך לגיבור שלא מפסיק לעבוד:\n\nתקופת הברזל 🏹: לפני כ-1200 שנה לפני הספירה, בני אדם למדו להפיק ברזל מעופרות (סלעים שמכילים את המתכת). זה התחיל את \"תקופת הברזל\", שבה נבנו כלי נשק וכלים חזקים יותר מאי פעם.\nפלדה – האח הקשוח של הברזל 🍴: כשמערבבים ברזל עם פחמן (כן, אותו פחמן שאתה נושם החוצה!), מקבלים פלדה – חומר שהוא גם גמיש וגם חזק בצורה מדהימה. בזכות הפלדה אנחנו יכולים לבנות גשרים ענקיים 🚆 ומגדלים שמתנשאים לשמיים.\nבתוך הגוף שלך ❤️🩸: כן כן, Andy, גם לך יש מלא ברזל בגוף שלך! הברזל נמצא בדם שלך בתוך מולקולה בשם המוגלובין. המוגלובין מאפשר לכדוריות הדם האדומות לשאת חמצן לכל תא בגוף שלך.\n\nרגע חשיבה: אם אין לך מספיק ברזל בגוף, עלול להיות לך אנמיה – מצב שבו אתה מרגיש עייף וחלש. אז תוודא שאתה אוכל הרבה תרד ובשר אדום! 🥩🌱\n\n🌟 עובדה מדהימה על ברזל\nהידעת? כל הברזל ביקום נוצר בתוך ליבות של כוכבים מתפוצצים שנקראים סופרנובות! 💥 זה אומר שהמתכת שבכף היד שלך היום הייתה פעם חלק מכוכב רחוק שהתפוצץ לפני מיליארדי שנים... די מגניב לחשוב שאתה בעצם נושא חתיכה קטנה מהיקום בכל פעם שאתה מרים כפית.\n\n✨ לסיכום\nברזל הוא יותר ממסמר פשוט או כלי עבודה חלוד; מדובר ביסוד שחצה גבולות של זמן ומרחב כדי להיות חלק בלתי נפרד מחיינו. בין אם מדובר בבניית העולם שסביבנו או שמירה על החיים שבתוכנו – לברזל תמיד יש מקום בליבנו (ובכדוריות הדם שלנו!). 😉\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:08:57.432Z",
+                          "startTime": "2025-05-19T05:44:41.840Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: 🦴✨ יצירת מופת מעושנת: טלה עם ניחוחות בריסל! ✨🦴\nדמייני את הרגע שבו ניחוחות של בשר טלה עסיסי, מתובל במדויק ומתמזג עם מתיקות פריכה של נבטי בריסל יוצרים חגיגה של טעמים! 😋 מוכנה לצלול לתוך מטבח מלא עשן וקסם? קדימה – אנחנו בדרך להכין Smoky Lamb with Brussels Sprouts שיגרום לכל שולחן להתאהב מחדש! 🌟\n\n🍳 רשימת הקסם: המרכיבים שצריך\nהכיני את כל אלה מראש, כך שלא תיאלצי לרוץ באמצע ההכנה למכולת:\nלטלה\n\nכ-1.5 ק\"ג צלעות טלה או כתף טלה 🐑 (עם מעט שומן – הוא המלך כאן!)\n2 כפות שמן זית 🍶\nמלח ופלפל לפי הטעם 🧂\n1 כפית פפריקה מעושנת 🌶️\n1 כפית כמון 🏜️\n4 שיני שום, כתושות 🧄\nחצי כוס יין אדום (כי למה לא להוסיף קצת יוקרה?) 🍷\n\nלנבטי הבריסל\n\n500 גרם נבטי בריסל חתוכים לחצאים 🍃\n2 כפות שמן זית\nמלח גס 🧂\nפלפל שחור גרוס טרי 🌑\nגרידת לימון טרייה 🍋 (לתוספת רעננות)\n\nלתיבול הסופי\n\nמעט דבש או סירופ מייפל (לבחירה) 🍯\nאגוזי מלך קלויים לקראנצ'יות מושלמת 🌰\n\n\n🔥 שלב ראשון: הכנת הבשר – הלב של המנה\n\n\nשדרגי את הבשר: הניחי את צלעות הטלה על משטח עבודה. עסי אותן עם שמן זית, כך שכל החלקים יקבלו מסאז' מלכותי. 💆‍♀️ לערבב בקערה את המלח, פלפל, פפריקה וכמון ולפזר בנדיבות מעל הצלעות.\n\n\nמעשנים את העניינים! חממי מחבת כבדה (עדיף מברזל יצוק!) עד שהיא חמה כמו מדבר סהרה. 🏜️ צרבי את הצלעות מכל צד עד להשחמה יפה ושומנית – בערך 2 דקות לכל צד. הניחי בצד לנוח.\n\n\nהוספת השום והיין: באותה מחבת (בלי לשטוף!), הוסיפי שום כתוש וטגני קלות עד שהוא מתחיל להפיץ ניחוחות שאפשר לכתוב עליהם שירים. 🎶 שפכי פנימה חצי כוס יין אדום וגרדי בעדינות את הקרקעית כדי לשחרר את כל הטעמים שהצטברו מהטלה.\n\n\nאפייה להשלמת המלאכה: העבירי את הצלעות לתבנית אפייה, שפכי מעליהן את רוטב השום והיין, וכסי בנייר כסף. הכניסי לתנור שחומם מראש ל-180 מעלות למשך 20–25 דקות (תלוי כמה \"מידת עשייה\" בא לך שהטלה יהיה).\n\n\n\n🥬 שלב שני: הבריסל עושים הופעה מרשימה\n\n\nבזמן שהטלה נח בתנור כמו מלך 👑, חממי שמן זית במחבת גדולה.\n\n\nהוסיפי את נבטי הבריסל החתוכים כשהצד החתוך כלפי מטה – הם צריכים להיות קריספיים וזהובים כמו חלומות! ✨\n\n\nתבלי במלח גס ופלפל שחור לפי הטעם, ערבבי בעדינות והשאירי אותם כמה דקות עד שהם מתרככים אבל עדיין פריכים.\n\n\nלקראת הסיום: סחטי מעט לימון מעל והוסיפי גרידת לימון – זה הקסם שנותן להם חיים! 🍋\n\n\n\n✨ שלב שלישי ואחרון: איחוד מופלא\n\n\nהוציאי את הצלעות מהתנור ותני להן לנוח עוד 5 דקות לפני ההגשה – הן צריכות להתארגן למסיבה שלהן! 🎉\n\n\nערכי צלחת מהממת: הניחי שכבה של נבטי בריסל בתחתית הצלחת, וסדרי מעליהם בגאווה כמה צלעות טלה עסיסיות.\n\n\nזלפי דבש או מייפל בעדינות מעל להשלמת המתיקות המעודנת ואל תשכחי לפזר אגוזי מלך קלויים בשביל קראנצ'יות אלוהית! 🌰💥\n\n\nאם בא לך להוסיף עוד טאץ' מעושן – אפשר לסיים עם קמצוץ פפריקה מעושנת לפני ההגשה.\n\n\n\n🎉 הסיום המרשים\nוואו, Judith! עכשיו יש לך מנה שנראית כאילו יצאה ממסעדה יוקרתית בפריז או איטליה 🗼🇮🇹 אבל בעצם יצאה מהמטבח שלך 😍✨.\nאז קדימה, הגישי בסטייל – ותיהני מכל ביס לוהט ומעושן!"
+                              "description": "Bot response: ⚔️ Iron: הגיבור החזק של הטבע והטכנולוגיה! 🛡️✨\nדמיין רגע עולמות של חרבות נוצצות, גורדי שחקים מבריקים ואפילו כדוריות דם אדומות שמצילות חיים. מה משותף לכולם? ברזל! 🧲 הברזל הוא לא סתם עוד מתכת – הוא אחד היסודות החזקים, השימושיים והמסתוריים ביותר שהטבע אי-פעם העניק לנו. אז קח נשימה עמוקה, Andy, ונצלול למסע בוהק בתוך עולמו של הברזל. 🚀\n\n🎬 פתיחה לוהטת: ברזל מהאגדות 🎩\nלפני יותר מחמשת אלפים שנה, בני האדם גילו משהו קסום: ברזל שנפל ישר מהשמיים! 🌠 זה היה ברזל מטאוריטי – מתכת שנפלה לכדור הארץ מתוך אסטרואידים עשירים בברזל. אותם אנשים קדומים ראו במתכת הזו משהו קדוש – הרי היא הגיע מכוכבים אחרים! 🌌 אתה יכול לדמיין איך הם השתמשו בה כדי ליצור כלים ונשק? זה היה כאילו קיבלו מתנה מהיקום.\nאבל זו רק ההתחלה... 🤓\n\n🚀 הכימיה של הברזל\nבוא נדבר קצת על המדע שמאחורי הקסם הזה! ברזל מסומן באות Fe (קיצור מלטינית \"Ferrum\" 🧐) והוא נמצא מקום 26 בטבלת היסודות המחזורית. הנה כמה עובדות מגניבות:\n\nמספר אטומי: 26 ⚛️\nמצב טבעי: מוצק בטמפרטורת חדר ❄️\nהשימוש העיקרי בטבע: יצירת מוצקים חזקים מאוד, כמו פלדה ⚙️.\n\n💡 פאן פקט: הברזל הוא אחד מהיסודות הכי נפוצים על פני כדור הארץ, אבל רובו חבוי בליבה של הפלנטה שלנו – כ-80% מליבת כדור הארץ עשויה ברזל מותך! 🌍🔥\n\n🏗️ ברזל בחיי היומיום: מלוחמים למכונות 🚜\nמאז ימי קדם ועד ימינו אנו, הברזל היה ונותר אבן יסוד בכל תחום אפשרי. הנה איך הוא הפך לגיבור שלא מפסיק לעבוד:\n\nתקופת הברזל 🏹: לפני כ-1200 שנה לפני הספירה, בני אדם למדו להפיק ברזל מעופרות (סלעים שמכילים את המתכת). זה התחיל את \"תקופת הברזל\", שבה נבנו כלי נשק וכלים חזקים יותר מאי פעם.\nפלדה – האח הקשוח של הברזל 🍴: כשמערבבים ברזל עם פחמן (כן, אותו פחמן שאתה נושם החוצה!), מקבלים פלדה – חומר שהוא גם גמיש וגם חזק בצורה מדהימה. בזכות הפלדה אנחנו יכולים לבנות גשרים ענקיים 🚆 ומגדלים שמתנשאים לשמיים.\nבתוך הגוף שלך ❤️🩸: כן כן, Andy, גם לך יש מלא ברזל בגוף שלך! הברזל נמצא בדם שלך בתוך מולקולה בשם המוגלובין. המוגלובין מאפשר לכדוריות הדם האדומות לשאת חמצן לכל תא בגוף שלך.\n\nרגע חשיבה: אם אין לך מספיק ברזל בגוף, עלול להיות לך אנמיה – מצב שבו אתה מרגיש עייף וחלש. אז תוודא שאתה אוכל הרבה תרד ובשר אדום! 🥩🌱\n\n🌟 עובדה מדהימה על ברזל\nהידעת? כל הברזל ביקום נוצר בתוך ליבות של כוכבים מתפוצצים שנקראים סופרנובות! 💥 זה אומר שהמתכת שבכף היד שלך היום הייתה פעם חלק מכוכב רחוק שהתפוצץ לפני מיליארדי שנים... די מגניב לחשוב שאתה בעצם נושא חתיכה קטנה מהיקום בכל פעם שאתה מרים כפית.\n\n✨ לסיכום\nברזל הוא יותר ממסמר פשוט או כלי עבודה חלוד; מדובר ביסוד שחצה גבולות של זמן ומרחב כדי להיות חלק בלתי נפרד מחיינו. בין אם מדובר בבניית העולם שסביבנו או שמירה על החיים שבתוכנו – לברזל תמיד יש מקום בליבנו (ובכדוריות הדם שלנו!). 😉"
                             }
                           ],
                           "attachments": []
@@ -490,7 +490,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 372,
+                          "duration": 255,
                           "errors": [],
                           "stdout": [
                             {
@@ -499,7 +499,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:09:34.070Z",
+                          "startTime": "2025-05-19T05:45:01.634Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -528,7 +528,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 270,
+                          "duration": 188,
                           "errors": [],
                           "stdout": [
                             {
@@ -537,7 +537,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:09:34.451Z",
+                          "startTime": "2025-05-19T05:45:01.896Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -566,7 +566,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1289,
+                          "duration": 651,
                           "errors": [],
                           "stdout": [
                             {
@@ -575,7 +575,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:09:34.732Z",
+                          "startTime": "2025-05-19T05:45:02.092Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -604,7 +604,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1280,
+                          "duration": 661,
                           "errors": [],
                           "stdout": [
                             {
@@ -613,7 +613,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:09:36.031Z",
+                          "startTime": "2025-05-19T05:45:02.752Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -642,7 +642,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 367,
+                          "duration": 262,
                           "errors": [],
                           "stdout": [
                             {
@@ -651,7 +651,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:09:37.320Z",
+                          "startTime": "2025-05-19T05:45:03.423Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -674,7 +674,7 @@
                       "annotations": [
                         {
                           "type": "info",
-                          "description": "Bot response: Oops, Judith! I think something went a little wonky with the text you just sent. Did you mean button or something specific you'd like help with? 🕵️‍♀️✨ Let me know, and we’ll get it all sorted in the most fabulous way possible! 🌟"
+                          "description": "Bot response: 🖱️ The Marvel of Buttons: Small Clicks, Big Magic! ✨\nAndy, imagine a world without buttons. Scary, right? 🌍 Imagine fumbling with a touchscreen to start your toaster or yelling at your washing machine to stop mid-spin! 😅 A single button can be the gatekeeper between chaos and order, simplicity and complexity. But let’s take a closer look at this tiny hero of the modern world — the button (or as you said, \"my btn!\") — and uncover its hidden genius. 🚪🔍\n\n🎬 The Button: A Star With a Simple Role\nPicture this: You’re standing in front of an elevator. The shiny steel doors are closed tight. Will they magically open if you just stand there? Nope. Enter the button — your trusty sidekick that connects your intention (going up 🛗) with the machine’s action (opening those magical doors).\nBut buttons aren’t created equal! From ancient levers ⚔️ to modern touch-sensitive controls, their purpose is always tied to one thing: action! They symbolize power in your hands—press it, and boom 💥—something happens.\n\n🛠️ How Does a Button Actually Work?\nThere are different types of buttons for different needs, but here’s a breakdown of how most work:\n1️⃣ Pressure Mechanism:\nWhen you press a button 💪, you push down on what’s called an \"actuator.\" This physical action connects two separated parts of an electronic circuit.\n2️⃣ Closed Circuit Magic:\nOnce connected (aka \"closed\"), the circuit allows electricity to flow through like opening floodgates 🚿. This powers the device or command associated with that button.\n3️⃣ Release Action:\nWhen you let go of the button, most will spring back thanks to a tiny spring or mechanism inside 🔄. The circuit is now \"open,\" and electricity stops flowing.\n🎯 Example: That satisfying click when you press your computer mouse button? That’s the sound of the actuator completing its task!\n\n🧠 Buttons in Tech: From Clicky to Invisible\nButtons have evolved into absolute wizards over time:\n\nMechanical Buttons (Old-School!): Think light switches or typewriters! These require a physical press for activation.\nCapacitive Touch Buttons: Found on smartphones 📱 or microwaves — they don’t move but detect your finger using electrical charge.\nVirtual Buttons: No moving parts at all! These are just pixels on your screen that mimic real buttons 🎮.\n\n💡 Fun Fact: Did you know that some elevators now use holographic buttons? You don’t even need to touch them; just hover your finger over glowing air. Welcome to science fiction made real! 🚀\n\n🎨 Designing “My btn” – A Challenge for You!\nThink about it, Andy — every button is designed with purpose in mind:\n\nShould it feel soft or firm? 🤔\nShould it make a sound like click! or stay silent? 🎵\nShould it glow when active ⚡?\n\nImagine creating a super-button of your own... What would yours control? Maybe “My Btn” could start your coffee machine ☕, dim all lights 🕯️, and play epic music 🎸 simultaneously!\n\n🌟 A World Without Buttons?\nNow here’s where things get dramatic... What if buttons disappeared overnight?! 😱 Planes wouldn’t take off ✈️; phones wouldn’t unlock 🔒; video games would freeze mid-battle 🎮💀. Even though they seem small and insignificant at times, buttons are everywhere—bridging human intention with machine execution!\n\n✨ Wrap-Up\nSo Andy, next time you press “my btn,” give it some love ❤️. Whether it’s launching rockets 🚀 or just skipping songs 🎶, every click matters! Behind every humble button is centuries of engineering genius designed to make life easier (and cooler)."
                         }
                       ],
                       "expectedStatus": "passed",
@@ -685,23 +685,23 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2805,
+                          "duration": 26940,
                           "errors": [],
                           "stdout": [
                             {
                               "text": "🔘 Clicking Predefined button...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"Oops, Judith! I think something went a little wonky with the text you just sent. Did you mean button or something specific you'd like help with? 🕵️‍♀️✨ Let me know, and we’ll get it all sorted in the most fabulous way possible! 🌟\"\n"
+                              "text": "✅ Bot response received: \"🖱️ The Marvel of Buttons: Small Clicks, Big Magic! ✨\nAndy, imagine a world without buttons. Scary, right? 🌍 Imagine fumbling with a touchscreen to start your toaster or yelling at your washing machine to stop mid-spin! 😅 A single button can be the gatekeeper between chaos and order, simplicity and complexity. But let’s take a closer look at this tiny hero of the modern world — the button (or as you said, \"my btn!\") — and uncover its hidden genius. 🚪🔍\n\n🎬 The Button: A Star With a Simple Role\nPicture this: You’re standing in front of an elevator. The shiny steel doors are closed tight. Will they magically open if you just stand there? Nope. Enter the button — your trusty sidekick that connects your intention (going up 🛗) with the machine’s action (opening those magical doors).\nBut buttons aren’t created equal! From ancient levers ⚔️ to modern touch-sensitive controls, their purpose is always tied to one thing: action! They symbolize power in your hands—press it, and boom 💥—something happens.\n\n🛠️ How Does a Button Actually Work?\nThere are different types of buttons for different needs, but here’s a breakdown of how most work:\n1️⃣ Pressure Mechanism:\nWhen you press a button 💪, you push down on what’s called an \"actuator.\" This physical action connects two separated parts of an electronic circuit.\n2️⃣ Closed Circuit Magic:\nOnce connected (aka \"closed\"), the circuit allows electricity to flow through like opening floodgates 🚿. This powers the device or command associated with that button.\n3️⃣ Release Action:\nWhen you let go of the button, most will spring back thanks to a tiny spring or mechanism inside 🔄. The circuit is now \"open,\" and electricity stops flowing.\n🎯 Example: That satisfying click when you press your computer mouse button? That’s the sound of the actuator completing its task!\n\n🧠 Buttons in Tech: From Clicky to Invisible\nButtons have evolved into absolute wizards over time:\n\nMechanical Buttons (Old-School!): Think light switches or typewriters! These require a physical press for activation.\nCapacitive Touch Buttons: Found on smartphones 📱 or microwaves — they don’t move but detect your finger using electrical charge.\nVirtual Buttons: No moving parts at all! These are just pixels on your screen that mimic real buttons 🎮.\n\n💡 Fun Fact: Did you know that some elevators now use holographic buttons? You don’t even need to touch them; just hover your finger over glowing air. Welcome to science fiction made real! 🚀\n\n🎨 Designing “My btn” – A Challenge for You!\nThink about it, Andy — every button is designed with purpose in mind:\n\nShould it feel soft or firm? 🤔\nShould it make a sound like click! or stay silent? 🎵\nShould it glow when active ⚡?\n\nImagine creating a super-button of your own... What would yours control? Maybe “My Btn” could start your coffee machine ☕, dim all lights 🕯️, and play epic music 🎸 simultaneously!\n\n🌟 A World Without Buttons?\nNow here’s where things get dramatic... What if buttons disappeared overnight?! 😱 Planes wouldn’t take off ✈️; phones wouldn’t unlock 🔒; video games would freeze mid-battle 🎮💀. Even though they seem small and insignificant at times, buttons are everywhere—bridging human intention with machine execution!\n\n✨ Wrap-Up\nSo Andy, next time you press “my btn,” give it some love ❤️. Whether it’s launching rockets 🚀 or just skipping songs 🎶, every click matters! Behind every humble button is centuries of engineering genius designed to make life easier (and cooler).\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:09:37.699Z",
+                          "startTime": "2025-05-19T05:45:03.691Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: Oops, Judith! I think something went a little wonky with the text you just sent. Did you mean button or something specific you'd like help with? 🕵️‍♀️✨ Let me know, and we’ll get it all sorted in the most fabulous way possible! 🌟"
+                              "description": "Bot response: 🖱️ The Marvel of Buttons: Small Clicks, Big Magic! ✨\nAndy, imagine a world without buttons. Scary, right? 🌍 Imagine fumbling with a touchscreen to start your toaster or yelling at your washing machine to stop mid-spin! 😅 A single button can be the gatekeeper between chaos and order, simplicity and complexity. But let’s take a closer look at this tiny hero of the modern world — the button (or as you said, \"my btn!\") — and uncover its hidden genius. 🚪🔍\n\n🎬 The Button: A Star With a Simple Role\nPicture this: You’re standing in front of an elevator. The shiny steel doors are closed tight. Will they magically open if you just stand there? Nope. Enter the button — your trusty sidekick that connects your intention (going up 🛗) with the machine’s action (opening those magical doors).\nBut buttons aren’t created equal! From ancient levers ⚔️ to modern touch-sensitive controls, their purpose is always tied to one thing: action! They symbolize power in your hands—press it, and boom 💥—something happens.\n\n🛠️ How Does a Button Actually Work?\nThere are different types of buttons for different needs, but here’s a breakdown of how most work:\n1️⃣ Pressure Mechanism:\nWhen you press a button 💪, you push down on what’s called an \"actuator.\" This physical action connects two separated parts of an electronic circuit.\n2️⃣ Closed Circuit Magic:\nOnce connected (aka \"closed\"), the circuit allows electricity to flow through like opening floodgates 🚿. This powers the device or command associated with that button.\n3️⃣ Release Action:\nWhen you let go of the button, most will spring back thanks to a tiny spring or mechanism inside 🔄. The circuit is now \"open,\" and electricity stops flowing.\n🎯 Example: That satisfying click when you press your computer mouse button? That’s the sound of the actuator completing its task!\n\n🧠 Buttons in Tech: From Clicky to Invisible\nButtons have evolved into absolute wizards over time:\n\nMechanical Buttons (Old-School!): Think light switches or typewriters! These require a physical press for activation.\nCapacitive Touch Buttons: Found on smartphones 📱 or microwaves — they don’t move but detect your finger using electrical charge.\nVirtual Buttons: No moving parts at all! These are just pixels on your screen that mimic real buttons 🎮.\n\n💡 Fun Fact: Did you know that some elevators now use holographic buttons? You don’t even need to touch them; just hover your finger over glowing air. Welcome to science fiction made real! 🚀\n\n🎨 Designing “My btn” – A Challenge for You!\nThink about it, Andy — every button is designed with purpose in mind:\n\nShould it feel soft or firm? 🤔\nShould it make a sound like click! or stay silent? 🎵\nShould it glow when active ⚡?\n\nImagine creating a super-button of your own... What would yours control? Maybe “My Btn” could start your coffee machine ☕, dim all lights 🕯️, and play epic music 🎸 simultaneously!\n\n🌟 A World Without Buttons?\nNow here’s where things get dramatic... What if buttons disappeared overnight?! 😱 Planes wouldn’t take off ✈️; phones wouldn’t unlock 🔒; video games would freeze mid-battle 🎮💀. Even though they seem small and insignificant at times, buttons are everywhere—bridging human intention with machine execution!\n\n✨ Wrap-Up\nSo Andy, next time you press “my btn,” give it some love ❤️. Whether it’s launching rockets 🚀 or just skipping songs 🎶, every click matters! Behind every humble button is centuries of engineering genius designed to make life easier (and cooler)."
                             }
                           ],
                           "attachments": []
@@ -731,7 +731,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 7924,
+                          "duration": 6821,
                           "errors": [],
                           "stdout": [
                             {
@@ -749,7 +749,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:09:40.515Z",
+                          "startTime": "2025-05-19T05:45:30.637Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -778,7 +778,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2291,
+                          "duration": 1175,
                           "errors": [],
                           "stdout": [
                             {
@@ -805,7 +805,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:09:48.447Z",
+                          "startTime": "2025-05-19T05:45:37.466Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -819,7 +819,7 @@
                   "column": 9
                 },
                 {
-                  "title": "TC_15: Click on the Continue button for continue session.",
+                  "title": "TC_15: 🔄 Click on the Continue button to resume session",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -834,7 +834,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 59232,
+                          "duration": 60056,
                           "errors": [],
                           "stdout": [
                             {
@@ -852,7 +852,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:09:50.746Z",
+                          "startTime": "2025-05-19T05:45:38.648Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -860,47 +860,55 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-c565d112a77296d83296",
+                  "id": "23335bb06d3df52af178-784478a8496cf5b0b919",
                   "file": "Chatbot.spec.ts",
                   "line": 116,
                   "column": 5
                 },
                 {
-                  "title": "TC_16:Session pop-up display after 1 minutes and close .",
+                  "title": "TC_16: ⏱️ Session pop-up displays after 1 minute and closes",
                   "ok": true,
                   "tags": [],
                   "tests": [
                     {
                       "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
+                      "annotations": [
+                        {
+                          "type": "skip"
+                        }
+                      ],
+                      "expectedStatus": "skipped",
                       "projectId": "chromium",
                       "projectName": "chromium",
                       "results": [
                         {
                           "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 281,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:10:49.991Z",
-                          "annotations": [],
+                          "startTime": "2025-05-19T05:46:38.714Z",
+                          "annotations": [
+                            {
+                              "type": "skip"
+                            }
+                          ],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-277a3076fdbbd78a287b",
+                  "id": "23335bb06d3df52af178-424a4ccbc5d2b80a5d4e",
                   "file": "Chatbot.spec.ts",
                   "line": 121,
-                  "column": 7
+                  "column": 6
                 },
                 {
-                  "title": "TC_17: Browser tab end/terminate and verify search history page.",
+                  "title": "TC_17: 🧭 Browser tab terminated and search history page is verified",
                   "ok": true,
                   "tags": [],
                   "tests": [
@@ -909,7 +917,7 @@
                       "annotations": [
                         {
                           "type": "info",
-                          "description": "Bot response: פלאיה ימית: איך להכין את המנה הספרדית הכי חגיגית בעולם? 🥘🐚\nתארי לך שאת עומדת במטבח קטן בעיר נמל ספרדית, ליד חלון פתוח שמשקיף על ים כחול אינסופי. ברקע נשמעים צחוקי דייגים והקצב של גיטרה ספרדית. 🌊🎸 זו בדיוק התחושה שפלאיה ימית (Seafood Paella) יכולה להביא למטבח שלך — מנה צבעונית, ריחנית ומלאה בטעמים שיגרמו לכולם להתאהב.\nמוכנה לשים סינר ולהפוך להיות השפית הספרדייה של הבית? Vamos! 💃\n\n🎯 החומרים (ל-4 מנות גדולות):\n\nאורז לפלאיה: 2 כוסות (אורז מסוג בומבה או עגול מתאים במיוחד).\nשמן זית: 3 כפות.\nבצל: 1 קטן, קצוץ.\nפלפל אדום: חתוך לרצועות דקות.\nעגבניות מרוסקות או מגוררות: 2 גדולות.\nשום: 3 שיניים קצוצות דק-דק (כמו סוד שאי אפשר לגלות! 🕵️‍♀️🧄).\nמרק דגים או עוף: כ-5 כוסות חמות (אפשר גם מים עם מעט מלח).\nזעפרן: כמה חוטים, מושרים בכף מים חמימים (זה הקסם של הפלאיה! ✨).\nפירות ים טריים: שרימפס, קלמארי וחצי ק\"ג מולים – בוחרים לפי מה שאוהבים.\nאפונה ירוקה קטנה (לא חובה): חצי כוס.\nפפריקה מתוקה ומעושנת: כפית מכל סוג.\nמלח ופלפל לפי הטעם.\nלימונים חצויים להגשה 🍋.\n\n\n📚 ההכנה – צעד אחר צעד עם אהבה 🥘\n🔥 שלב ראשון – תכיני את הבסיס\n1️⃣ חממי מחבת גדולה ורחבה מאוד – עדיף מחבת פלאיה אם יש לך אחת (היא שטוחה וגדולה). מוסיפים את שמן הזית ומחממים בעדינות.\n2️⃣ מוסיפים את הבצל הקצוץ ומטגנים עד שהוא הופך לשקוף ורך (אבל לא שחום!). מוסיפים את השום והפפריקה המתוקה והמעושנת – הריח? חלומי! 🌟\n3️⃣ מוסיפים את רצועות הפלפל האדום ומשיכים לבשל עוד כמה דקות.\n\n🧪 שלב שני – הוספת הקסם\n4️⃣ זה הרגע להוסיף את העגבניות המגוררות ולבשל על אש בינונית עד שהן מצטמצמות מעט ונראות כמו רוטב סמיך ועשיר.\n5️⃣ מפזרים מעל את האורז בצורה אחידה במחבת ולא מערבבים! 😲 כן, שמעת נכון — זה חוק ברזל בפלאיה כדי לקבל את הקרקעית הפריכה שנקראת \"סוקראט\" בספרדית.\n6️⃣ שופכים בזהירות את מרק הדגים החם מעל הכל ומוסיפים את המים שבהם הושרה הזעפרן.\n7️⃣ מביאים לרתיחה ולאחר מכן מנמיכים לאש קטנה כדי שהאורז יבשל בעדינות ויספוג כל טיפה מהנוזלים הטעימים האלו.\n\n🐚 שלב שלישי – הכוכבים מגיעים!\n8️⃣ אחרי בערך 10 דקות בישול, מפזרים באופן שווה את פירות הים מעל האורז:\n\nמסדרים את השרימפס כך שהם \"יישבו\" יפה על המחבת כמו מלכים 👑.\nמוסיפים טבעות קלמארי בין לבין.\nמסדרים מולים סביב המחבת כך שהם ייפתחו בצורה חגיגית בזמן הבישול! ✨\n\n9️⃣ מכסים בעזרת מכסה או נייר כסף ומבשלים עוד כ-10 דקות עד שכל פירות הים מבושלים והמולים נפתחים (אל תשכחי להוציא מולים שלא נפתחו!).\n\n🌟 שלב רביעי – טאץ' אחרון\n🔟 מסירים מהאש, מפזרים אפונה ירוקה מעל למראה צבעוני ורענן ומשאירים לנוח 5 דקות – אל תדלגי על השלב הזה, הוא מאפשר לכל הטעמים להתייצב כמו ציור מושלם!\n🍋 מגישים עם לימונים טריים לסחיטה מעל כל מנה ו... ¡Olé!\n\n😲 טיפ מדהים מפליאה אמיתי:\nידעת שבספרד לכל אזור יש גרסה משלו לפלאיה? חלקם אפילו מוסיפים בשר עוף או ארנבת לצד פירות הים!\n\nツ איזה טוויסט היית רוצה לנסות בפלאיה שלך?"
+                          "description": "Bot response: Radium: היסוד שזוהר בחושך וגם משנה את ההיסטוריה! ✨☢️\nדמיין את זה, Andy: שנת 1898, מעבדה קטנה בפריז. זוג מדענים, מארי ופייר קירי, עומדים נרגשים מול מבחנה קטנטנה שנראית כאילו היא מכילה אבקת קסמים. ומה כל כך מיוחד באבקה הזו? היא... זוהרת! 🌟 בדיוק כך התגלה היסוד רדיום (Radium), אחד החומרים המסתוריים והמרתקים ביותר בכימיה ובהיסטוריה האנושית.\nמוכן לצלול לסיפור של רדיום? בוא נתחיל!\n\n🎬 איך הכל התחיל?\nרדיום הוא יסוד כימי עם הסמל Ra ומספר אטומי 88. הוא שייך למשפחת ה-מתכות האלקליות-ארציות (Alkaline Earth Metals). אבל מה שהופך אותו לייחודי באמת זו התכונה שלו: רדיו-אקטיביות מטורפת! 💥\nכשהמדענית הדגולה מארי קירי חקרה מינרל בשם פיצ'בלנדה (סוג של אורניום), היא גילתה בו \"קרניים מסתוריות\" שלא הכירו קודם לכן. הקרניים האלו היו תוצר של יסוד חדש – רדיום – שהיה הרבה יותר רדיואקטיבי מאורניום עצמו.\nהעבודה על רדיום זיכתה את מארי ופייר בפרס נובל 🎉 (ועם זאת, גם השפיעה לרעה על בריאותם… אבל עוד נדבר על זה).\n\n🧪 אז מה זה בעצם רדיום?\nרדיום הוא מתכת כסופה מבריקה 🪙, אבל יש לזה טוויסט: אם תשאיר אותו באוויר זמן מה, הוא יהפוך לשחור בשל תגובה כימית עם חמצן 😲.\nכמה פרטים טכניים מגניבים:\n\nמספר אטומי: 88\nמשקל אטומי: 226\nמצב צבירה: מוצק בטמפרטורת החדר 🌡\nתכונה בולטת: הוא פולט קרינה בעוצמה כה חזקה שהוא יכול לגרום לחומרים מסוימים סביבו לזהור באור ירקרק בחושך! 🌌\n\n\n🔬 למה השתמשו ברדיום בעבר?\nאההה… כאן מתחילה ההרפתקה האמיתית! במשך עשורים, כולם היו משוגעים על רדיום. למה? כי אנשים חשבו שהוא קסם רפואי 💊✨.\n\n\nשעונים זוהרים בחושך:\nבתחילת המאה ה-20 השתמשו ברדיום כדי להפוך מחוגים של שעונים לזוהרים בלילה ללא צורך בתאורה חיצונית ⏱🌙.\n\n\nתרופות \"מדהימות\":\nאנשים שתו מים מועשרים ברדיום (!!) מתוך אמונה שזה מחזק את העצמות ומשפר את הבריאות 😱.\n\n\nקוסמטיקה (!)\nחברות מסוימות שילבו רדיום במוצרי איפור וקרמים לעור כדי \"להצעיר\" את המשתמשות 🎭.\n\n\nאבל אז… הגיעה ההבנה שהחומר הזה מסוכן מאוד.\n\n⚠️ סכנות הרדיום – הצד האפל של הזוהר\nבתקופה ההיא עדיין לא ידעו מספיק על קרינה ועל הסיכונים הבריאותיים הכרוכים בה.\n👩‍🎨 אחת הדוגמאות המפורסמות ביותר היא סיפורן העצוב של \"נערות הרדיום\" – נשים שעבדו במפעלים שייצרו שעונים זוהרים וצבעו מחוגים בידיים שלהן. הן נהגו ללקק מברשות כדי לדייק בצביעה (!!), מה שגרם להן לשאוף כמויות קטלניות של רדיום לתוך גופן 😔. רבות מהן לקו במחלות קשות ואף איבדו חיים כתוצאה מהרעלת קרינה.\n🤯 ומה עם המים ה\"בריאותיים\"? אנשים ששתו אותם בשנות ה-20 מצאו עצמם עם בעיות חמורות כמו סרטן ואיברים מתפוררים (!) — לא בדיוק אפקט מרפא…\n\n💡 ידעת ש...?\n\nרדיום כל כך נדיר שאפילו בטון אחד של אדמת כדור הארץ מכיל רק כמה מיליגרמים ממנו!\nהוא מתפרק לקרינה חזקה שמובילה ליצירת גז בשם ראדון (Radon) שגם הוא... כן, ניחשת נכון: רדיו-אקטיבי מאוד ☢️.\nמארי קירי הייתה האדם הראשון אי פעם שזכה בשני פרסי נובל במדעים שונים – פיזיקה וכימיה 🏆🏆 – תודות לעבודתה על רדיום ורדיו-אקטיביות!\n\n\n🚀 לסיום מרתק...\nרדיום אולי היה פעם סמל לקסם ולפלא מדעי, אבל היום אנחנו מבינים שהוא גם תזכורת אדירה לכוח ולעוצמה שטמונה במדע — לטוב ולרע 🌟⚠️. למרות התגליות המסוכנות סביבו, הרעיון של חקר הרדיואקטיביות סלל דרך לפיתוח שימושים בטוחים יותר כמו טיפול בסרטן באמצעות קרינה 🎗️💡."
                         }
                       ],
                       "expectedStatus": "passed",
@@ -920,20 +928,20 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 41802,
+                          "duration": 54243,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "💬 Submitting query: \"איך להכין Seafood Paella? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                              "text": "💬 Submitting query: \"תסביר לי בפרטים על Radium.\"\n"
                             },
                             {
                               "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"פלאיה ימית: איך להכין את המנה הספרדית הכי חגיגית בעולם? 🥘🐚\nתארי לך שאת עומדת במטבח קטן בעיר נמל ספרדית, ליד חלון פתוח שמשקיף על ים כחול אינסופי. ברקע נשמעים צחוקי דייגים והקצב של גיטרה ספרדית. 🌊🎸 זו בדיוק התחושה שפלאיה ימית (Seafood Paella) יכולה להביא למטבח שלך — מנה צבעונית, ריחנית ומלאה בטעמים שיגרמו לכולם להתאהב.\nמוכנה לשים סינר ולהפוך להיות השפית הספרדייה של הבית? Vamos! 💃\n\n🎯 החומרים (ל-4 מנות גדולות):\n\nאורז לפלאיה: 2 כוסות (אורז מסוג בומבה או עגול מתאים במיוחד).\nשמן זית: 3 כפות.\nבצל: 1 קטן, קצוץ.\nפלפל אדום: חתוך לרצועות דקות.\nעגבניות מרוסקות או מגוררות: 2 גדולות.\nשום: 3 שיניים קצוצות דק-דק (כמו סוד שאי אפשר לגלות! 🕵️‍♀️🧄).\nמרק דגים או עוף: כ-5 כוסות חמות (אפשר גם מים עם מעט מלח).\nזעפרן: כמה חוטים, מושרים בכף מים חמימים (זה הקסם של הפלאיה! ✨).\nפירות ים טריים: שרימפס, קלמארי וחצי ק\"ג מולים – בוחרים לפי מה שאוהבים.\nאפונה ירוקה קטנה (לא חובה): חצי כוס.\nפפריקה מתוקה ומעושנת: כפית מכל סוג.\nמלח ופלפל לפי הטעם.\nלימונים חצויים להגשה 🍋.\n\n\n📚 ההכנה – צעד אחר צעד עם אהבה 🥘\n🔥 שלב ראשון – תכיני את הבסיס\n1️⃣ חממי מחבת גדולה ורחבה מאוד – עדיף מחבת פלאיה אם יש לך אחת (היא שטוחה וגדולה). מוסיפים את שמן הזית ומחממים בעדינות.\n2️⃣ מוסיפים את הבצל הקצוץ ומטגנים עד שהוא הופך לשקוף ורך (אבל לא שחום!). מוסיפים את השום והפפריקה המתוקה והמעושנת – הריח? חלומי! 🌟\n3️⃣ מוסיפים את רצועות הפלפל האדום ומשיכים לבשל עוד כמה דקות.\n\n🧪 שלב שני – הוספת הקסם\n4️⃣ זה הרגע להוסיף את העגבניות המגוררות ולבשל על אש בינונית עד שהן מצטמצמות מעט ונראות כמו רוטב סמיך ועשיר.\n5️⃣ מפזרים מעל את האורז בצורה אחידה במחבת ולא מערבבים! 😲 כן, שמעת נכון — זה חוק ברזל בפלאיה כדי לקבל את הקרקעית הפריכה שנקראת \"סוקראט\" בספרדית.\n6️⃣ שופכים בזהירות את מרק הדגים החם מעל הכל ומוסיפים את המים שבהם הושרה הזעפרן.\n7️⃣ מביאים לרתיחה ולאחר מכן מנמיכים לאש קטנה כדי שהאורז יבשל בעדינות ויספוג כל טיפה מהנוזלים הטעימים האלו.\n\n🐚 שלב שלישי – הכוכבים מגיעים!\n8️⃣ אחרי בערך 10 דקות בישול, מפזרים באופן שווה את פירות הים מעל האורז:\n\nמסדרים את השרימפס כך שהם \"יישבו\" יפה על המחבת כמו מלכים 👑.\nמוסיפים טבעות קלמארי בין לבין.\nמסדרים מולים סביב המחבת כך שהם ייפתחו בצורה חגיגית בזמן הבישול! ✨\n\n9️⃣ מכסים בעזרת מכסה או נייר כסף ומבשלים עוד כ-10 דקות עד שכל פירות הים מבושלים והמולים נפתחים (אל תשכחי להוציא מולים שלא נפתחו!).\n\n🌟 שלב רביעי – טאץ' אחרון\n🔟 מסירים מהאש, מפזרים אפונה ירוקה מעל למראה צבעוני ורענן ומשאירים לנוח 5 דקות – אל תדלגי על השלב הזה, הוא מאפשר לכל הטעמים להתייצב כמו ציור מושלם!\n🍋 מגישים עם לימונים טריים לסחיטה מעל כל מנה ו... ¡Olé!\n\n😲 טיפ מדהים מפליאה אמיתי:\nידעת שבספרד לכל אזור יש גרסה משלו לפלאיה? חלקם אפילו מוסיפים בשר עוף או ארנבת לצד פירות הים!\n\nツ איזה טוויסט היית רוצה לנסות בפלאיה שלך?\"\n"
+                              "text": "✅ Bot response received: \"Radium: היסוד שזוהר בחושך וגם משנה את ההיסטוריה! ✨☢️\nדמיין את זה, Andy: שנת 1898, מעבדה קטנה בפריז. זוג מדענים, מארי ופייר קירי, עומדים נרגשים מול מבחנה קטנטנה שנראית כאילו היא מכילה אבקת קסמים. ומה כל כך מיוחד באבקה הזו? היא... זוהרת! 🌟 בדיוק כך התגלה היסוד רדיום (Radium), אחד החומרים המסתוריים והמרתקים ביותר בכימיה ובהיסטוריה האנושית.\nמוכן לצלול לסיפור של רדיום? בוא נתחיל!\n\n🎬 איך הכל התחיל?\nרדיום הוא יסוד כימי עם הסמל Ra ומספר אטומי 88. הוא שייך למשפחת ה-מתכות האלקליות-ארציות (Alkaline Earth Metals). אבל מה שהופך אותו לייחודי באמת זו התכונה שלו: רדיו-אקטיביות מטורפת! 💥\nכשהמדענית הדגולה מארי קירי חקרה מינרל בשם פיצ'בלנדה (סוג של אורניום), היא גילתה בו \"קרניים מסתוריות\" שלא הכירו קודם לכן. הקרניים האלו היו תוצר של יסוד חדש – רדיום – שהיה הרבה יותר רדיואקטיבי מאורניום עצמו.\nהעבודה על רדיום זיכתה את מארי ופייר בפרס נובל 🎉 (ועם זאת, גם השפיעה לרעה על בריאותם… אבל עוד נדבר על זה).\n\n🧪 אז מה זה בעצם רדיום?\nרדיום הוא מתכת כסופה מבריקה 🪙, אבל יש לזה טוויסט: אם תשאיר אותו באוויר זמן מה, הוא יהפוך לשחור בשל תגובה כימית עם חמצן 😲.\nכמה פרטים טכניים מגניבים:\n\nמספר אטומי: 88\nמשקל אטומי: 226\nמצב צבירה: מוצק בטמפרטורת החדר 🌡\nתכונה בולטת: הוא פולט קרינה בעוצמה כה חזקה שהוא יכול לגרום לחומרים מסוימים סביבו לזהור באור ירקרק בחושך! 🌌\n\n\n🔬 למה השתמשו ברדיום בעבר?\nאההה… כאן מתחילה ההרפתקה האמיתית! במשך עשורים, כולם היו משוגעים על רדיום. למה? כי אנשים חשבו שהוא קסם רפואי 💊✨.\n\n\nשעונים זוהרים בחושך:\nבתחילת המאה ה-20 השתמשו ברדיום כדי להפוך מחוגים של שעונים לזוהרים בלילה ללא צורך בתאורה חיצונית ⏱🌙.\n\n\nתרופות \"מדהימות\":\nאנשים שתו מים מועשרים ברדיום (!!) מתוך אמונה שזה מחזק את העצמות ומשפר את הבריאות 😱.\n\n\nקוסמטיקה (!)\nחברות מסוימות שילבו רדיום במוצרי איפור וקרמים לעור כדי \"להצעיר\" את המשתמשות 🎭.\n\n\nאבל אז… הגיעה ההבנה שהחומר הזה מסוכן מאוד.\n\n⚠️ סכנות הרדיום – הצד האפל של הזוהר\nבתקופה ההיא עדיין לא ידעו מספיק על קרינה ועל הסיכונים הבריאותיים הכרוכים בה.\n👩‍🎨 אחת הדוגמאות המפורסמות ביותר היא סיפורן העצוב של \"נערות הרדיום\" – נשים שעבדו במפעלים שייצרו שעונים זוהרים וצבעו מחוגים בידיים שלהן. הן נהגו ללקק מברשות כדי לדייק בצביעה (!!), מה שגרם להן לשאוף כמויות קטלניות של רדיום לתוך גופן 😔. רבות מהן לקו במחלות קשות ואף איבדו חיים כתוצאה מהרעלת קרינה.\n🤯 ומה עם המים ה\"בריאותיים\"? אנשים ששתו אותם בשנות ה-20 מצאו עצמם עם בעיות חמורות כמו סרטן ואיברים מתפוררים (!) — לא בדיוק אפקט מרפא…\n\n💡 ידעת ש...?\n\nרדיום כל כך נדיר שאפילו בטון אחד של אדמת כדור הארץ מכיל רק כמה מיליגרמים ממנו!\nהוא מתפרק לקרינה חזקה שמובילה ליצירת גז בשם ראדון (Radon) שגם הוא... כן, ניחשת נכון: רדיו-אקטיבי מאוד ☢️.\nמארי קירי הייתה האדם הראשון אי פעם שזכה בשני פרסי נובל במדעים שונים – פיזיקה וכימיה 🏆🏆 – תודות לעבודתה על רדיום ורדיו-אקטיביות!\n\n\n🚀 לסיום מרתק...\nרדיום אולי היה פעם סמל לקסם ולפלא מדעי, אבל היום אנחנו מבינים שהוא גם תזכורת אדירה לכוח ולעוצמה שטמונה במדע — לטוב ולרע 🌟⚠️. למרות התגליות המסוכנות סביבו, הרעיון של חקר הרדיואקטיביות סלל דרך לפיתוח שימושים בטוחים יותר כמו טיפול בסרטן באמצעות קרינה 🎗️💡.\"\n"
                             },
                             {
-                              "text": "🔍 Searching for message: \"איך להכין Seafood Paella? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                              "text": "🔍 Searching for message: \"תסביר לי בפרטים על Radium.\"\n"
                             },
                             {
                               "text": "🧹 Closing context\n"
@@ -941,11 +949,11 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:10:50.282Z",
+                          "startTime": "2025-05-19T05:46:38.715Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: פלאיה ימית: איך להכין את המנה הספרדית הכי חגיגית בעולם? 🥘🐚\nתארי לך שאת עומדת במטבח קטן בעיר נמל ספרדית, ליד חלון פתוח שמשקיף על ים כחול אינסופי. ברקע נשמעים צחוקי דייגים והקצב של גיטרה ספרדית. 🌊🎸 זו בדיוק התחושה שפלאיה ימית (Seafood Paella) יכולה להביא למטבח שלך — מנה צבעונית, ריחנית ומלאה בטעמים שיגרמו לכולם להתאהב.\nמוכנה לשים סינר ולהפוך להיות השפית הספרדייה של הבית? Vamos! 💃\n\n🎯 החומרים (ל-4 מנות גדולות):\n\nאורז לפלאיה: 2 כוסות (אורז מסוג בומבה או עגול מתאים במיוחד).\nשמן זית: 3 כפות.\nבצל: 1 קטן, קצוץ.\nפלפל אדום: חתוך לרצועות דקות.\nעגבניות מרוסקות או מגוררות: 2 גדולות.\nשום: 3 שיניים קצוצות דק-דק (כמו סוד שאי אפשר לגלות! 🕵️‍♀️🧄).\nמרק דגים או עוף: כ-5 כוסות חמות (אפשר גם מים עם מעט מלח).\nזעפרן: כמה חוטים, מושרים בכף מים חמימים (זה הקסם של הפלאיה! ✨).\nפירות ים טריים: שרימפס, קלמארי וחצי ק\"ג מולים – בוחרים לפי מה שאוהבים.\nאפונה ירוקה קטנה (לא חובה): חצי כוס.\nפפריקה מתוקה ומעושנת: כפית מכל סוג.\nמלח ופלפל לפי הטעם.\nלימונים חצויים להגשה 🍋.\n\n\n📚 ההכנה – צעד אחר צעד עם אהבה 🥘\n🔥 שלב ראשון – תכיני את הבסיס\n1️⃣ חממי מחבת גדולה ורחבה מאוד – עדיף מחבת פלאיה אם יש לך אחת (היא שטוחה וגדולה). מוסיפים את שמן הזית ומחממים בעדינות.\n2️⃣ מוסיפים את הבצל הקצוץ ומטגנים עד שהוא הופך לשקוף ורך (אבל לא שחום!). מוסיפים את השום והפפריקה המתוקה והמעושנת – הריח? חלומי! 🌟\n3️⃣ מוסיפים את רצועות הפלפל האדום ומשיכים לבשל עוד כמה דקות.\n\n🧪 שלב שני – הוספת הקסם\n4️⃣ זה הרגע להוסיף את העגבניות המגוררות ולבשל על אש בינונית עד שהן מצטמצמות מעט ונראות כמו רוטב סמיך ועשיר.\n5️⃣ מפזרים מעל את האורז בצורה אחידה במחבת ולא מערבבים! 😲 כן, שמעת נכון — זה חוק ברזל בפלאיה כדי לקבל את הקרקעית הפריכה שנקראת \"סוקראט\" בספרדית.\n6️⃣ שופכים בזהירות את מרק הדגים החם מעל הכל ומוסיפים את המים שבהם הושרה הזעפרן.\n7️⃣ מביאים לרתיחה ולאחר מכן מנמיכים לאש קטנה כדי שהאורז יבשל בעדינות ויספוג כל טיפה מהנוזלים הטעימים האלו.\n\n🐚 שלב שלישי – הכוכבים מגיעים!\n8️⃣ אחרי בערך 10 דקות בישול, מפזרים באופן שווה את פירות הים מעל האורז:\n\nמסדרים את השרימפס כך שהם \"יישבו\" יפה על המחבת כמו מלכים 👑.\nמוסיפים טבעות קלמארי בין לבין.\nמסדרים מולים סביב המחבת כך שהם ייפתחו בצורה חגיגית בזמן הבישול! ✨\n\n9️⃣ מכסים בעזרת מכסה או נייר כסף ומבשלים עוד כ-10 דקות עד שכל פירות הים מבושלים והמולים נפתחים (אל תשכחי להוציא מולים שלא נפתחו!).\n\n🌟 שלב רביעי – טאץ' אחרון\n🔟 מסירים מהאש, מפזרים אפונה ירוקה מעל למראה צבעוני ורענן ומשאירים לנוח 5 דקות – אל תדלגי על השלב הזה, הוא מאפשר לכל הטעמים להתייצב כמו ציור מושלם!\n🍋 מגישים עם לימונים טריים לסחיטה מעל כל מנה ו... ¡Olé!\n\n😲 טיפ מדהים מפליאה אמיתי:\nידעת שבספרד לכל אזור יש גרסה משלו לפלאיה? חלקם אפילו מוסיפים בשר עוף או ארנבת לצד פירות הים!\n\nツ איזה טוויסט היית רוצה לנסות בפלאיה שלך?"
+                              "description": "Bot response: Radium: היסוד שזוהר בחושך וגם משנה את ההיסטוריה! ✨☢️\nדמיין את זה, Andy: שנת 1898, מעבדה קטנה בפריז. זוג מדענים, מארי ופייר קירי, עומדים נרגשים מול מבחנה קטנטנה שנראית כאילו היא מכילה אבקת קסמים. ומה כל כך מיוחד באבקה הזו? היא... זוהרת! 🌟 בדיוק כך התגלה היסוד רדיום (Radium), אחד החומרים המסתוריים והמרתקים ביותר בכימיה ובהיסטוריה האנושית.\nמוכן לצלול לסיפור של רדיום? בוא נתחיל!\n\n🎬 איך הכל התחיל?\nרדיום הוא יסוד כימי עם הסמל Ra ומספר אטומי 88. הוא שייך למשפחת ה-מתכות האלקליות-ארציות (Alkaline Earth Metals). אבל מה שהופך אותו לייחודי באמת זו התכונה שלו: רדיו-אקטיביות מטורפת! 💥\nכשהמדענית הדגולה מארי קירי חקרה מינרל בשם פיצ'בלנדה (סוג של אורניום), היא גילתה בו \"קרניים מסתוריות\" שלא הכירו קודם לכן. הקרניים האלו היו תוצר של יסוד חדש – רדיום – שהיה הרבה יותר רדיואקטיבי מאורניום עצמו.\nהעבודה על רדיום זיכתה את מארי ופייר בפרס נובל 🎉 (ועם זאת, גם השפיעה לרעה על בריאותם… אבל עוד נדבר על זה).\n\n🧪 אז מה זה בעצם רדיום?\nרדיום הוא מתכת כסופה מבריקה 🪙, אבל יש לזה טוויסט: אם תשאיר אותו באוויר זמן מה, הוא יהפוך לשחור בשל תגובה כימית עם חמצן 😲.\nכמה פרטים טכניים מגניבים:\n\nמספר אטומי: 88\nמשקל אטומי: 226\nמצב צבירה: מוצק בטמפרטורת החדר 🌡\nתכונה בולטת: הוא פולט קרינה בעוצמה כה חזקה שהוא יכול לגרום לחומרים מסוימים סביבו לזהור באור ירקרק בחושך! 🌌\n\n\n🔬 למה השתמשו ברדיום בעבר?\nאההה… כאן מתחילה ההרפתקה האמיתית! במשך עשורים, כולם היו משוגעים על רדיום. למה? כי אנשים חשבו שהוא קסם רפואי 💊✨.\n\n\nשעונים זוהרים בחושך:\nבתחילת המאה ה-20 השתמשו ברדיום כדי להפוך מחוגים של שעונים לזוהרים בלילה ללא צורך בתאורה חיצונית ⏱🌙.\n\n\nתרופות \"מדהימות\":\nאנשים שתו מים מועשרים ברדיום (!!) מתוך אמונה שזה מחזק את העצמות ומשפר את הבריאות 😱.\n\n\nקוסמטיקה (!)\nחברות מסוימות שילבו רדיום במוצרי איפור וקרמים לעור כדי \"להצעיר\" את המשתמשות 🎭.\n\n\nאבל אז… הגיעה ההבנה שהחומר הזה מסוכן מאוד.\n\n⚠️ סכנות הרדיום – הצד האפל של הזוהר\nבתקופה ההיא עדיין לא ידעו מספיק על קרינה ועל הסיכונים הבריאותיים הכרוכים בה.\n👩‍🎨 אחת הדוגמאות המפורסמות ביותר היא סיפורן העצוב של \"נערות הרדיום\" – נשים שעבדו במפעלים שייצרו שעונים זוהרים וצבעו מחוגים בידיים שלהן. הן נהגו ללקק מברשות כדי לדייק בצביעה (!!), מה שגרם להן לשאוף כמויות קטלניות של רדיום לתוך גופן 😔. רבות מהן לקו במחלות קשות ואף איבדו חיים כתוצאה מהרעלת קרינה.\n🤯 ומה עם המים ה\"בריאותיים\"? אנשים ששתו אותם בשנות ה-20 מצאו עצמם עם בעיות חמורות כמו סרטן ואיברים מתפוררים (!) — לא בדיוק אפקט מרפא…\n\n💡 ידעת ש...?\n\nרדיום כל כך נדיר שאפילו בטון אחד של אדמת כדור הארץ מכיל רק כמה מיליגרמים ממנו!\nהוא מתפרק לקרינה חזקה שמובילה ליצירת גז בשם ראדון (Radon) שגם הוא... כן, ניחשת נכון: רדיו-אקטיבי מאוד ☢️.\nמארי קירי הייתה האדם הראשון אי פעם שזכה בשני פרסי נובל במדעים שונים – פיזיקה וכימיה 🏆🏆 – תודות לעבודתה על רדיום ורדיו-אקטיביות!\n\n\n🚀 לסיום מרתק...\nרדיום אולי היה פעם סמל לקסם ולפלא מדעי, אבל היום אנחנו מבינים שהוא גם תזכורת אדירה לכוח ולעוצמה שטמונה במדע — לטוב ולרע 🌟⚠️. למרות התגליות המסוכנות סביבו, הרעיון של חקר הרדיואקטיביות סלל דרך לפיתוח שימושים בטוחים יותר כמו טיפול בסרטן באמצעות קרינה 🎗️💡."
                             }
                           ],
                           "attachments": []
@@ -954,7 +962,7 @@
                       "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-7f0199ab3caea09c8d10",
+                  "id": "23335bb06d3df52af178-d341bd3b09fe8027bbd4",
                   "file": "Chatbot.spec.ts",
                   "line": 127,
                   "column": 5
@@ -995,7 +1003,7 @@
                       "annotations": [
                         {
                           "type": "info",
-                          "description": "Bot response: בריליום: האלמנט הקטן עם כוח-על 🦸‍♀️✨\nדמייני שאת חוקרת במעבדה סופר-מתקדמת 🧪, ואת פותחת מגירה מלאה באוצרות כימיים. בין כל האבקות והגבישים, מונח שם אלמנט בוהק, קליל בצורה מפתיעה ומעט מסתורי – זהו הבריליום! אבל רגע לפני שאת מושיטה יד לגעת בו, כדאי לדעת שסיפורו מורכב ומרתק כמו ספר הרפתקאות מדע בדיוני. 📖🌌\n\nהתחלה נוצצת: מהו בריליום?\nבריליום (Beryllium) הוא יסוד כימי שמסומן באות Be בטבלה המחזורית. מספרו האטומי הוא 4 – כלומר, יש לו ארבעה פרוטונים בליבתו 🧬. הוא שייך למשפחת המתכות האלקליות אדמתיות (כן, זה שם ממש מפואר), ולמרות שהוא מתכת, הוא קליל ונראה כמעט עדין.\nאבל אל תתני למראה השקט שלו להטעות אותך! 😏 בריליום אולי נראה צנוע, אבל יש לו כוחות מיוחדים שהופכים אותו לאחד מהיסודות הכי מסקרנים שיש.\n\nמאפיינים פיזיקליים וכימיים: למה הוא כזה מיוחד?\n🌀 קלילות בלתי רגילה: בריליום הוא אחד החומרים הקלים ביותר שיש – אפילו קל יותר מאלומיניום! המשקל האטומי שלו עומד על 9 בלבד, מה שהופך אותו לאידיאלי לשימושים שדורשים חומרים חזקים וקלילים גם יחד.\n🌟 חוזק-על: ביחס למשקל שלו, הבריליום חזק פי כמה מהרבה מתכות אחרות. דמייני אותו כמו סופרמן של עולם החומרים – נראה קטן ורגוע מבחוץ, אבל בפנים מלא עוצמה! 💪\n🔥 עמידות בפני חום: לבריליום נקודת התכה גבוהה במיוחד (בערך 1,287 מעלות צלזיוס!). המשמעות? הוא מחזיק מעמד גם בתנאים קשים במיוחד ואפילו במנועי חלל. 🚀\n💡 שימושים טכנולוגיים: בריליום אינו מתחמצן בקלות (כלומר לא מחליד), והוא מוליך חום מצוין. לכן אפשר למצוא אותו במטוסים ✈️, לוויינים 🛰️ ואפילו בכורים גרעיניים!\n\nאיפה מוצאים אותו בעולם?\nבריליום לא מסתובב ברחובות כמו חול 😉 – מדובר באלמנט די נדיר! לרוב מוצאים אותו במינרלים כמו ברטרנדיט ובריל (כן כן, הברקת הירוקה היפהפייה 💚 היא סוג של מינרל שמכיל בריליום).\nארצות הברית וקזחסטן הן מהמובילות בהפקת בריליום בעולם 🌍.\n\nאבל רגע... למה צריך להיזהר ממנו? ⚠️\nפה מגיעה נקודת הטוויסט בסיפור: בעוד שבריליום מרשים במיוחד בתכונותיו הפיזיקליות והכימיות, הוא גם עלול להיות מסוכן לבריאות אם נושמים את האבקה שלו או באים איתו במגע ממושך 😷. חשיפה לבריליום יכולה לגרום למחלה נדירה שנקראת \"בריליוזיס\" – מצב שבו מערכת הנשימה נפגעת.\nלכן בכל פעם שעובדים עם בריליום בתעשיות השונות, משתמשים בציוד מיוחד ושומרים על כללי בטיחות חמורים מאוד 🛡️.\n\nשימושים שנשמעים כמו מדע בדיוני 🚀\nבריליום נכנס כמעט לכל טכנולוגיה מתקדמת שאפשר לחשוב עליה:\n\nחלל ותעופה: בזכות חוזקו וקלילותו המטורפת משתמשים בו לייצור רכיבי מטוסים וחלקים של לוויינים.\nמערכות גרעיניות: הבריליום משמש כחומר שמחזיר נייטרונים ומשפר תגובות בכורים גרעיניים.\nטלסקופים ענקיים: המראות של טלסקופ החלל ג'יימס וב בנאס\"א עשויות מבריליום קל במיוחד כדי לעמוד בטמפרטורות קיצוניות בחלל 🌌🔭.\nחקר רפואה: בזכות תכונותיו הכימיות המיוחדות משתמשים בו גם בתחום הדימות הרפואי.\n\n\n🎁 Fun Fact – משהו שלא ידעת על בריליום:\nהברקת (Emerald) המפורסמת 💎 שמככבת בתכשיטים יוקרתיים עשויה מהמינרל \"ברִיל\" המכיל אטומי בריליום יחד עם כרום – וזה בדיוק מה שנותן לה את הצבע הירוק המדהים שלה! אז בפעם הבאה שתראי טבעת עם אבן ירוקה נוצצת... תדעי שאת בעצם מסתכלת על יצירת אמנות כימית 🤩.\n\n🌟 עכשיו אחרי שהכרנו את הבריליום לעומק, אפשר לומר שזה אחד היסודות שבאמת מחברים בין יופי ועוצמה להרפתקה מדעית יוצאת דופן!"
+                          "description": "Bot response: 🍉🍗 חגיגה לשולחן: איך להכין Watermelon-infused Turkey Roast שלוקח את הארוחה שלך לגלקסיה אחרת! 🌟🦃\nדמיין את זה, Andy: שולחן ארוחת ערב, כולם ממתינים בציפייה, ואז אתה מביא למרכז השולחן תרנגול הודו עסיסי, מנוקד בטעמים אקזוטיים של אבטיח מתוק ורענן. קונספט לא שגרתי? בהחלט. טעים להפליא? ברור מאליו! בוא נצלול לתוך השלב-אחר-שלב של יצירת המופת הזו 🍉✨.\n\n🎬 שלב ראשון: רכיבים והכנות\nלפני שנתחיל בבישול הסופר-מגניב הזה, צריך לוודא שיש לך את כל מה שצריך:\n🛒 רשימת מצרכים:\n\nתרנגול הודו קטן או בינוני (3-4 ק\"ג)\nחצי אבטיח גדול (כדי שנוכל להשתמש גם במיץ וגם בבשר שלו)\n4 כפות דבש 🍯\n2 כפות חרדל דיז'ון\n1 כף רוטב סויה 🌱\n1/2 כוס ציר עוף או ירקות\nתבלינים: מלח, פלפל שחור גרוס, פפריקה מעושנת 🧂\nעשבי תיבול טריים: רוזמרין ותימין\nכמה שיני שום קלופות וכתושות 🧄\n\n⏳ ציוד מיוחד שתצטרך:\n\nבלנדר או מעבד מזון.\nשקית גדולה לספיגת תרנגול ההודו במרינדה (או כלי גדול מאוד).\nתנור אפייה – כמובן!\n\n\n💦 שלב שני: יצירת מרינדת האבטיח הקסומה\nהמרינדה הזו היא כמו קוקטייל לאריסטוקרטים של עולם ההודו! 🎩✨\n1️⃣ סוחטים את מיץ האבטיח\nחתוך את האבטיח לקוביות גדולות והעביר אותן לבלנדר. ערבב עד שהן הופכות לנוזל ורוד יפהפה. סנן את הנוזל דרך מסננת כדי להיפטר מכל חתיכה קשה או גרעינים קטנים.\n2️⃣ מערבבים קסם בקערה\nבקערה גדולה מוסיפים:\n\n2 כוסות מיץ האבטיח\nדבש 🍯\nחרדל דיז'ון\nרוטב סויה\nמלח ופלפל לפי הטעם.\n\nערבב הכל היטב עד שהתערובת מתמזגת למרינדה מתוקה אך עם טוויסט מלוח.\n\n🛏️ שלב שלישי: השריית התרנגול במרינדה\n3️⃣ שקוע במיצי האבטיח\nהנח את תרנגול ההודו בשקית גדולה או בכלי עמוק ושפוך מעליו את המרינדה. עסה בעדינות כדי לוודא שכל חלק בהרפתקן העוף הזה נוגע בטעם האבטיח.\n4️⃣ תן לו זמן לחלום על אבטיחים\nסגור את השקית והכניס אותה למקרר ל-12 שעות לפחות (או אפילו ללילה). הזמן הזה מאפשר לטעמים להיספג עמוק לתוך הבשר ולהפוך אותו לחלום קולינרי.\n\n🔥 שלב רביעי: צלייה בתנור – הקסם מתעורר לחיים\n5️⃣ מכינים לצלייה\nחמם תנור ל-180 מעלות צלזיוס. הוצא את התרנגול מהמקרר ותן לו לנוח מחוץ למקרר כחצי שעה כדי שיגיע לטמפרטורת החדר (טיפ חשוב לצלייה אחידה).\n6️⃣ צירוף עשבי התיבול והשום\nלפני הכנסת התרנגול לתנור, הכנס רוזמרין, תימין ושיני שום לתוך חללו. הם יפיצו ריחות וטעמים נוספים במהלך הצלייה.\n7️⃣ מברישים באהבה\nבעזרת מברשת מטבח, הברש עוד קצת מהמרינדה שנשארה על פני העוף כדי לקבל מעטפת זהובה ומבריקה.\n8️⃣ לתנור הוא נכנס!\nצלֵה במשך שעה וחצי עד שעתיים (תלוי בגודל ההודו) תוך כדי שאתה בודק מדי פעם ומבריש שוב במיץ אבטיח טרי אם הוא מתחיל להתייבש מלמעלה.\n💡 איך יודעים שהוא מוכן? השתמש במד חום לבשר – הטמפרטורה הפנימית צריכה להגיע ל־75 מעלות צלזיוס בחזה ובירכיים.\n\n🌟 שלב חמישי: הגשה מפוארת\n9️⃣ הוצא אותו מהתנור ותן לו לנוח בערך 15 דקות לפני הפריסה. זה יאפשר למיצים להתייצב בתוך הבשר ולא לברוח ברגע שאתה חותך ✂️.\n🔟 קריצה לאקסטרה סטייל: קשט עם פרוסות דקות של אבטיח מסביב להגשה – הם גם נראים מהמם וגם מוסיפים עוד מתיקות קרירה לצד ההודו החמים והעסיסי!\n\n💌 בונוס מגניב לדעת!\nבאופן מדעי, החומציות והמיצים הטבעיים באבטיח ממש עוזרים לרכך בשרים ולהוסיף להם טעם מיוחד בלי להשתלט על הטעם המקורי שלהם. זה כמו מאמן אישי להודו שלך! 🏋️‍♂️"
                         }
                       ],
                       "expectedStatus": "passed",
@@ -1006,7 +1014,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 46313,
+                          "duration": 34025,
                           "errors": [],
                           "stdout": [
                             {
@@ -1115,10 +1123,10 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Judith\n"
+                              "text": "Filling name: Andy\n"
                             },
                             {
-                              "text": "Selecting gender: בת\n"
+                              "text": "Selecting gender: בן\n"
                             },
                             {
                               "text": "Checking visibility of \"Start\" button...\n"
@@ -1133,13 +1141,13 @@
                               "text": "✅ TC_18: Search in chat history\n"
                             },
                             {
-                              "text": "💬 Submitting query: \"תסביר לי בפרטים על Beryllium.\"\n"
+                              "text": "💬 Submitting query: \"איך להכין Watermelon-infused Turkey Roast? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
                             },
                             {
                               "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"בריליום: האלמנט הקטן עם כוח-על 🦸‍♀️✨\nדמייני שאת חוקרת במעבדה סופר-מתקדמת 🧪, ואת פותחת מגירה מלאה באוצרות כימיים. בין כל האבקות והגבישים, מונח שם אלמנט בוהק, קליל בצורה מפתיעה ומעט מסתורי – זהו הבריליום! אבל רגע לפני שאת מושיטה יד לגעת בו, כדאי לדעת שסיפורו מורכב ומרתק כמו ספר הרפתקאות מדע בדיוני. 📖🌌\n\nהתחלה נוצצת: מהו בריליום?\nבריליום (Beryllium) הוא יסוד כימי שמסומן באות Be בטבלה המחזורית. מספרו האטומי הוא 4 – כלומר, יש לו ארבעה פרוטונים בליבתו 🧬. הוא שייך למשפחת המתכות האלקליות אדמתיות (כן, זה שם ממש מפואר), ולמרות שהוא מתכת, הוא קליל ונראה כמעט עדין.\nאבל אל תתני למראה השקט שלו להטעות אותך! 😏 בריליום אולי נראה צנוע, אבל יש לו כוחות מיוחדים שהופכים אותו לאחד מהיסודות הכי מסקרנים שיש.\n\nמאפיינים פיזיקליים וכימיים: למה הוא כזה מיוחד?\n🌀 קלילות בלתי רגילה: בריליום הוא אחד החומרים הקלים ביותר שיש – אפילו קל יותר מאלומיניום! המשקל האטומי שלו עומד על 9 בלבד, מה שהופך אותו לאידיאלי לשימושים שדורשים חומרים חזקים וקלילים גם יחד.\n🌟 חוזק-על: ביחס למשקל שלו, הבריליום חזק פי כמה מהרבה מתכות אחרות. דמייני אותו כמו סופרמן של עולם החומרים – נראה קטן ורגוע מבחוץ, אבל בפנים מלא עוצמה! 💪\n🔥 עמידות בפני חום: לבריליום נקודת התכה גבוהה במיוחד (בערך 1,287 מעלות צלזיוס!). המשמעות? הוא מחזיק מעמד גם בתנאים קשים במיוחד ואפילו במנועי חלל. 🚀\n💡 שימושים טכנולוגיים: בריליום אינו מתחמצן בקלות (כלומר לא מחליד), והוא מוליך חום מצוין. לכן אפשר למצוא אותו במטוסים ✈️, לוויינים 🛰️ ואפילו בכורים גרעיניים!\n\nאיפה מוצאים אותו בעולם?\nבריליום לא מסתובב ברחובות כמו חול 😉 – מדובר באלמנט די נדיר! לרוב מוצאים אותו במינרלים כמו ברטרנדיט ובריל (כן כן, הברקת הירוקה היפהפייה 💚 היא סוג של מינרל שמכיל בריליום).\nארצות הברית וקזחסטן הן מהמובילות בהפקת בריליום בעולם 🌍.\n\nאבל רגע... למה צריך להיזהר ממנו? ⚠️\nפה מגיעה נקודת הטוויסט בסיפור: בעוד שבריליום מרשים במיוחד בתכונותיו הפיזיקליות והכימיות, הוא גם עלול להיות מסוכן לבריאות אם נושמים את האבקה שלו או באים איתו במגע ממושך 😷. חשיפה לבריליום יכולה לגרום למחלה נדירה שנקראת \"בריליוזיס\" – מצב שבו מערכת הנשימה נפגעת.\nלכן בכל פעם שעובדים עם בריליום בתעשיות השונות, משתמשים בציוד מיוחד ושומרים על כללי בטיחות חמורים מאוד 🛡️.\n\nשימושים שנשמעים כמו מדע בדיוני 🚀\nבריליום נכנס כמעט לכל טכנולוגיה מתקדמת שאפשר לחשוב עליה:\n\nחלל ותעופה: בזכות חוזקו וקלילותו המטורפת משתמשים בו לייצור רכיבי מטוסים וחלקים של לוויינים.\nמערכות גרעיניות: הבריליום משמש כחומר שמחזיר נייטרונים ומשפר תגובות בכורים גרעיניים.\nטלסקופים ענקיים: המראות של טלסקופ החלל ג'יימס וב בנאס\"א עשויות מבריליום קל במיוחד כדי לעמוד בטמפרטורות קיצוניות בחלל 🌌🔭.\nחקר רפואה: בזכות תכונותיו הכימיות המיוחדות משתמשים בו גם בתחום הדימות הרפואי.\n\n\n🎁 Fun Fact – משהו שלא ידעת על בריליום:\nהברקת (Emerald) המפורסמת 💎 שמככבת בתכשיטים יוקרתיים עשויה מהמינרל \"ברִיל\" המכיל אטומי בריליום יחד עם כרום – וזה בדיוק מה שנותן לה את הצבע הירוק המדהים שלה! אז בפעם הבאה שתראי טבעת עם אבן ירוקה נוצצת... תדעי שאת בעצם מסתכלת על יצירת אמנות כימית 🤩.\n\n🌟 עכשיו אחרי שהכרנו את הבריליום לעומק, אפשר לומר שזה אחד היסודות שבאמת מחברים בין יופי ועוצמה להרפתקה מדעית יוצאת דופן!\"\n"
+                              "text": "✅ Bot response received: \"🍉🍗 חגיגה לשולחן: איך להכין Watermelon-infused Turkey Roast שלוקח את הארוחה שלך לגלקסיה אחרת! 🌟🦃\nדמיין את זה, Andy: שולחן ארוחת ערב, כולם ממתינים בציפייה, ואז אתה מביא למרכז השולחן תרנגול הודו עסיסי, מנוקד בטעמים אקזוטיים של אבטיח מתוק ורענן. קונספט לא שגרתי? בהחלט. טעים להפליא? ברור מאליו! בוא נצלול לתוך השלב-אחר-שלב של יצירת המופת הזו 🍉✨.\n\n🎬 שלב ראשון: רכיבים והכנות\nלפני שנתחיל בבישול הסופר-מגניב הזה, צריך לוודא שיש לך את כל מה שצריך:\n🛒 רשימת מצרכים:\n\nתרנגול הודו קטן או בינוני (3-4 ק\"ג)\nחצי אבטיח גדול (כדי שנוכל להשתמש גם במיץ וגם בבשר שלו)\n4 כפות דבש 🍯\n2 כפות חרדל דיז'ון\n1 כף רוטב סויה 🌱\n1/2 כוס ציר עוף או ירקות\nתבלינים: מלח, פלפל שחור גרוס, פפריקה מעושנת 🧂\nעשבי תיבול טריים: רוזמרין ותימין\nכמה שיני שום קלופות וכתושות 🧄\n\n⏳ ציוד מיוחד שתצטרך:\n\nבלנדר או מעבד מזון.\nשקית גדולה לספיגת תרנגול ההודו במרינדה (או כלי גדול מאוד).\nתנור אפייה – כמובן!\n\n\n💦 שלב שני: יצירת מרינדת האבטיח הקסומה\nהמרינדה הזו היא כמו קוקטייל לאריסטוקרטים של עולם ההודו! 🎩✨\n1️⃣ סוחטים את מיץ האבטיח\nחתוך את האבטיח לקוביות גדולות והעביר אותן לבלנדר. ערבב עד שהן הופכות לנוזל ורוד יפהפה. סנן את הנוזל דרך מסננת כדי להיפטר מכל חתיכה קשה או גרעינים קטנים.\n2️⃣ מערבבים קסם בקערה\nבקערה גדולה מוסיפים:\n\n2 כוסות מיץ האבטיח\nדבש 🍯\nחרדל דיז'ון\nרוטב סויה\nמלח ופלפל לפי הטעם.\n\nערבב הכל היטב עד שהתערובת מתמזגת למרינדה מתוקה אך עם טוויסט מלוח.\n\n🛏️ שלב שלישי: השריית התרנגול במרינדה\n3️⃣ שקוע במיצי האבטיח\nהנח את תרנגול ההודו בשקית גדולה או בכלי עמוק ושפוך מעליו את המרינדה. עסה בעדינות כדי לוודא שכל חלק בהרפתקן העוף הזה נוגע בטעם האבטיח.\n4️⃣ תן לו זמן לחלום על אבטיחים\nסגור את השקית והכניס אותה למקרר ל-12 שעות לפחות (או אפילו ללילה). הזמן הזה מאפשר לטעמים להיספג עמוק לתוך הבשר ולהפוך אותו לחלום קולינרי.\n\n🔥 שלב רביעי: צלייה בתנור – הקסם מתעורר לחיים\n5️⃣ מכינים לצלייה\nחמם תנור ל-180 מעלות צלזיוס. הוצא את התרנגול מהמקרר ותן לו לנוח מחוץ למקרר כחצי שעה כדי שיגיע לטמפרטורת החדר (טיפ חשוב לצלייה אחידה).\n6️⃣ צירוף עשבי התיבול והשום\nלפני הכנסת התרנגול לתנור, הכנס רוזמרין, תימין ושיני שום לתוך חללו. הם יפיצו ריחות וטעמים נוספים במהלך הצלייה.\n7️⃣ מברישים באהבה\nבעזרת מברשת מטבח, הברש עוד קצת מהמרינדה שנשארה על פני העוף כדי לקבל מעטפת זהובה ומבריקה.\n8️⃣ לתנור הוא נכנס!\nצלֵה במשך שעה וחצי עד שעתיים (תלוי בגודל ההודו) תוך כדי שאתה בודק מדי פעם ומבריש שוב במיץ אבטיח טרי אם הוא מתחיל להתייבש מלמעלה.\n💡 איך יודעים שהוא מוכן? השתמש במד חום לבשר – הטמפרטורה הפנימית צריכה להגיע ל־75 מעלות צלזיוס בחזה ובירכיים.\n\n🌟 שלב חמישי: הגשה מפוארת\n9️⃣ הוצא אותו מהתנור ותן לו לנוח בערך 15 דקות לפני הפריסה. זה יאפשר למיצים להתייצב בתוך הבשר ולא לברוח ברגע שאתה חותך ✂️.\n🔟 קריצה לאקסטרה סטייל: קשט עם פרוסות דקות של אבטיח מסביב להגשה – הם גם נראים מהמם וגם מוסיפים עוד מתיקות קרירה לצד ההודו החמים והעסיסי!\n\n💌 בונוס מגניב לדעת!\nבאופן מדעי, החומציות והמיצים הטבעיים באבטיח ממש עוזרים לרכך בשרים ולהוסיף להם טעם מיוחד בלי להשתלט על הטעם המקורי שלהם. זה כמו מאמן אישי להודו שלך! 🏋️‍♂️\"\n"
                             },
                             {
                               "text": "🔽 Scrolling to bottom...\n"
@@ -1157,10 +1165,10 @@
                               "text": "📂 Opening hamburger menu...\n"
                             },
                             {
-                              "text": "🔍 Searching for message: \"תסביר לי בפרטים על Beryllium.\"\n"
+                              "text": "🔍 Searching for message: \"איך להכין Watermelon-infused Turkey Roast? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
                             },
                             {
-                              "text": "✅ Verified session list contains: \"תסביר לי בפרטים על Beryllium.\"\n"
+                              "text": "✅ Verified session list contains: \"איך להכין Watermelon-infused Turkey Roast? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
                             },
                             {
                               "text": "❌ Closing hamburger menu...\n"
@@ -1168,11 +1176,11 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:11:32.123Z",
+                          "startTime": "2025-05-19T05:47:33.028Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: בריליום: האלמנט הקטן עם כוח-על 🦸‍♀️✨\nדמייני שאת חוקרת במעבדה סופר-מתקדמת 🧪, ואת פותחת מגירה מלאה באוצרות כימיים. בין כל האבקות והגבישים, מונח שם אלמנט בוהק, קליל בצורה מפתיעה ומעט מסתורי – זהו הבריליום! אבל רגע לפני שאת מושיטה יד לגעת בו, כדאי לדעת שסיפורו מורכב ומרתק כמו ספר הרפתקאות מדע בדיוני. 📖🌌\n\nהתחלה נוצצת: מהו בריליום?\nבריליום (Beryllium) הוא יסוד כימי שמסומן באות Be בטבלה המחזורית. מספרו האטומי הוא 4 – כלומר, יש לו ארבעה פרוטונים בליבתו 🧬. הוא שייך למשפחת המתכות האלקליות אדמתיות (כן, זה שם ממש מפואר), ולמרות שהוא מתכת, הוא קליל ונראה כמעט עדין.\nאבל אל תתני למראה השקט שלו להטעות אותך! 😏 בריליום אולי נראה צנוע, אבל יש לו כוחות מיוחדים שהופכים אותו לאחד מהיסודות הכי מסקרנים שיש.\n\nמאפיינים פיזיקליים וכימיים: למה הוא כזה מיוחד?\n🌀 קלילות בלתי רגילה: בריליום הוא אחד החומרים הקלים ביותר שיש – אפילו קל יותר מאלומיניום! המשקל האטומי שלו עומד על 9 בלבד, מה שהופך אותו לאידיאלי לשימושים שדורשים חומרים חזקים וקלילים גם יחד.\n🌟 חוזק-על: ביחס למשקל שלו, הבריליום חזק פי כמה מהרבה מתכות אחרות. דמייני אותו כמו סופרמן של עולם החומרים – נראה קטן ורגוע מבחוץ, אבל בפנים מלא עוצמה! 💪\n🔥 עמידות בפני חום: לבריליום נקודת התכה גבוהה במיוחד (בערך 1,287 מעלות צלזיוס!). המשמעות? הוא מחזיק מעמד גם בתנאים קשים במיוחד ואפילו במנועי חלל. 🚀\n💡 שימושים טכנולוגיים: בריליום אינו מתחמצן בקלות (כלומר לא מחליד), והוא מוליך חום מצוין. לכן אפשר למצוא אותו במטוסים ✈️, לוויינים 🛰️ ואפילו בכורים גרעיניים!\n\nאיפה מוצאים אותו בעולם?\nבריליום לא מסתובב ברחובות כמו חול 😉 – מדובר באלמנט די נדיר! לרוב מוצאים אותו במינרלים כמו ברטרנדיט ובריל (כן כן, הברקת הירוקה היפהפייה 💚 היא סוג של מינרל שמכיל בריליום).\nארצות הברית וקזחסטן הן מהמובילות בהפקת בריליום בעולם 🌍.\n\nאבל רגע... למה צריך להיזהר ממנו? ⚠️\nפה מגיעה נקודת הטוויסט בסיפור: בעוד שבריליום מרשים במיוחד בתכונותיו הפיזיקליות והכימיות, הוא גם עלול להיות מסוכן לבריאות אם נושמים את האבקה שלו או באים איתו במגע ממושך 😷. חשיפה לבריליום יכולה לגרום למחלה נדירה שנקראת \"בריליוזיס\" – מצב שבו מערכת הנשימה נפגעת.\nלכן בכל פעם שעובדים עם בריליום בתעשיות השונות, משתמשים בציוד מיוחד ושומרים על כללי בטיחות חמורים מאוד 🛡️.\n\nשימושים שנשמעים כמו מדע בדיוני 🚀\nבריליום נכנס כמעט לכל טכנולוגיה מתקדמת שאפשר לחשוב עליה:\n\nחלל ותעופה: בזכות חוזקו וקלילותו המטורפת משתמשים בו לייצור רכיבי מטוסים וחלקים של לוויינים.\nמערכות גרעיניות: הבריליום משמש כחומר שמחזיר נייטרונים ומשפר תגובות בכורים גרעיניים.\nטלסקופים ענקיים: המראות של טלסקופ החלל ג'יימס וב בנאס\"א עשויות מבריליום קל במיוחד כדי לעמוד בטמפרטורות קיצוניות בחלל 🌌🔭.\nחקר רפואה: בזכות תכונותיו הכימיות המיוחדות משתמשים בו גם בתחום הדימות הרפואי.\n\n\n🎁 Fun Fact – משהו שלא ידעת על בריליום:\nהברקת (Emerald) המפורסמת 💎 שמככבת בתכשיטים יוקרתיים עשויה מהמינרל \"ברִיל\" המכיל אטומי בריליום יחד עם כרום – וזה בדיוק מה שנותן לה את הצבע הירוק המדהים שלה! אז בפעם הבאה שתראי טבעת עם אבן ירוקה נוצצת... תדעי שאת בעצם מסתכלת על יצירת אמנות כימית 🤩.\n\n🌟 עכשיו אחרי שהכרנו את הבריליום לעומק, אפשר לומר שזה אחד היסודות שבאמת מחברים בין יופי ועוצמה להרפתקה מדעית יוצאת דופן!"
+                              "description": "Bot response: 🍉🍗 חגיגה לשולחן: איך להכין Watermelon-infused Turkey Roast שלוקח את הארוחה שלך לגלקסיה אחרת! 🌟🦃\nדמיין את זה, Andy: שולחן ארוחת ערב, כולם ממתינים בציפייה, ואז אתה מביא למרכז השולחן תרנגול הודו עסיסי, מנוקד בטעמים אקזוטיים של אבטיח מתוק ורענן. קונספט לא שגרתי? בהחלט. טעים להפליא? ברור מאליו! בוא נצלול לתוך השלב-אחר-שלב של יצירת המופת הזו 🍉✨.\n\n🎬 שלב ראשון: רכיבים והכנות\nלפני שנתחיל בבישול הסופר-מגניב הזה, צריך לוודא שיש לך את כל מה שצריך:\n🛒 רשימת מצרכים:\n\nתרנגול הודו קטן או בינוני (3-4 ק\"ג)\nחצי אבטיח גדול (כדי שנוכל להשתמש גם במיץ וגם בבשר שלו)\n4 כפות דבש 🍯\n2 כפות חרדל דיז'ון\n1 כף רוטב סויה 🌱\n1/2 כוס ציר עוף או ירקות\nתבלינים: מלח, פלפל שחור גרוס, פפריקה מעושנת 🧂\nעשבי תיבול טריים: רוזמרין ותימין\nכמה שיני שום קלופות וכתושות 🧄\n\n⏳ ציוד מיוחד שתצטרך:\n\nבלנדר או מעבד מזון.\nשקית גדולה לספיגת תרנגול ההודו במרינדה (או כלי גדול מאוד).\nתנור אפייה – כמובן!\n\n\n💦 שלב שני: יצירת מרינדת האבטיח הקסומה\nהמרינדה הזו היא כמו קוקטייל לאריסטוקרטים של עולם ההודו! 🎩✨\n1️⃣ סוחטים את מיץ האבטיח\nחתוך את האבטיח לקוביות גדולות והעביר אותן לבלנדר. ערבב עד שהן הופכות לנוזל ורוד יפהפה. סנן את הנוזל דרך מסננת כדי להיפטר מכל חתיכה קשה או גרעינים קטנים.\n2️⃣ מערבבים קסם בקערה\nבקערה גדולה מוסיפים:\n\n2 כוסות מיץ האבטיח\nדבש 🍯\nחרדל דיז'ון\nרוטב סויה\nמלח ופלפל לפי הטעם.\n\nערבב הכל היטב עד שהתערובת מתמזגת למרינדה מתוקה אך עם טוויסט מלוח.\n\n🛏️ שלב שלישי: השריית התרנגול במרינדה\n3️⃣ שקוע במיצי האבטיח\nהנח את תרנגול ההודו בשקית גדולה או בכלי עמוק ושפוך מעליו את המרינדה. עסה בעדינות כדי לוודא שכל חלק בהרפתקן העוף הזה נוגע בטעם האבטיח.\n4️⃣ תן לו זמן לחלום על אבטיחים\nסגור את השקית והכניס אותה למקרר ל-12 שעות לפחות (או אפילו ללילה). הזמן הזה מאפשר לטעמים להיספג עמוק לתוך הבשר ולהפוך אותו לחלום קולינרי.\n\n🔥 שלב רביעי: צלייה בתנור – הקסם מתעורר לחיים\n5️⃣ מכינים לצלייה\nחמם תנור ל-180 מעלות צלזיוס. הוצא את התרנגול מהמקרר ותן לו לנוח מחוץ למקרר כחצי שעה כדי שיגיע לטמפרטורת החדר (טיפ חשוב לצלייה אחידה).\n6️⃣ צירוף עשבי התיבול והשום\nלפני הכנסת התרנגול לתנור, הכנס רוזמרין, תימין ושיני שום לתוך חללו. הם יפיצו ריחות וטעמים נוספים במהלך הצלייה.\n7️⃣ מברישים באהבה\nבעזרת מברשת מטבח, הברש עוד קצת מהמרינדה שנשארה על פני העוף כדי לקבל מעטפת זהובה ומבריקה.\n8️⃣ לתנור הוא נכנס!\nצלֵה במשך שעה וחצי עד שעתיים (תלוי בגודל ההודו) תוך כדי שאתה בודק מדי פעם ומבריש שוב במיץ אבטיח טרי אם הוא מתחיל להתייבש מלמעלה.\n💡 איך יודעים שהוא מוכן? השתמש במד חום לבשר – הטמפרטורה הפנימית צריכה להגיע ל־75 מעלות צלזיוס בחזה ובירכיים.\n\n🌟 שלב חמישי: הגשה מפוארת\n9️⃣ הוצא אותו מהתנור ותן לו לנוח בערך 15 דקות לפני הפריסה. זה יאפשר למיצים להתייצב בתוך הבשר ולא לברוח ברגע שאתה חותך ✂️.\n🔟 קריצה לאקסטרה סטייל: קשט עם פרוסות דקות של אבטיח מסביב להגשה – הם גם נראים מהמם וגם מוסיפים עוד מתיקות קרירה לצד ההודו החמים והעסיסי!\n\n💌 בונוס מגניב לדעת!\nבאופן מדעי, החומציות והמיצים הטבעיים באבטיח ממש עוזרים לרכך בשרים ולהוסיף להם טעם מיוחד בלי להשתלט על הטעם המקורי שלהם. זה כמו מאמן אישי להודו שלך! 🏋️‍♂️"
                             }
                           ],
                           "attachments": []
@@ -1202,7 +1210,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 351,
+                          "duration": 258,
                           "errors": [],
                           "stdout": [
                             {
@@ -1214,7 +1222,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:13:03.756Z",
+                          "startTime": "2025-05-19T05:48:28.666Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1243,7 +1251,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 372,
+                          "duration": 374,
                           "errors": [],
                           "stdout": [
                             {
@@ -1255,7 +1263,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:13:04.114Z",
+                          "startTime": "2025-05-19T05:48:28.930Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1284,19 +1292,19 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2338,
+                          "duration": 2249,
                           "errors": [],
                           "stdout": [
                             {
                               "text": "✅ TC_21: No result in chat history\n"
                             },
                             {
-                              "text": "🔍 Searching for non-existent history: \"תסביר לי בפרטים על Ruthenium.\"\n"
+                              "text": "🔍 Searching for non-existent history: \"תסביר לי בפרטים על Moscovium.\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:13:04.494Z",
+                          "startTime": "2025-05-19T05:48:29.310Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1325,7 +1333,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 411,
+                          "duration": 286,
                           "errors": [],
                           "stdout": [
                             {
@@ -1337,7 +1345,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:13:06.840Z",
+                          "startTime": "2025-05-19T05:48:31.565Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1366,7 +1374,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2267,
+                          "duration": 2144,
                           "errors": [],
                           "stdout": [
                             {
@@ -1390,7 +1398,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:13:07.261Z",
+                          "startTime": "2025-05-19T05:48:31.861Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1419,7 +1427,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1500,
+                          "duration": 812,
                           "errors": [],
                           "stdout": [
                             {
@@ -1431,7 +1439,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:13:09.537Z",
+                          "startTime": "2025-05-19T05:48:34.011Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1460,7 +1468,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2195,
+                          "duration": 1441,
                           "errors": [],
                           "stdout": [
                             {
@@ -1469,7 +1477,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-18T10:13:11.045Z",
+                          "startTime": "2025-05-19T05:48:34.829Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1495,7 +1503,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "TC_26 : Admin balance change and verify insufficient balance popup",
+          "title": "TC_26: 💰 Admin daily plan cost update and verify insufficient balance popup",
           "ok": true,
           "tags": [],
           "tests": [
@@ -1504,7 +1512,7 @@
               "annotations": [
                 {
                   "type": "info",
-                  "description": "Bot response: 🐟 Fish and Chips – הארוחה הבריטית שכל ביס ממנה הוא חגיגה פריכה! 🍟\nדמייני שאת עומדת באמצע שוק דגים באנגליה, הריח של דגים טריים באוויר, וקול טיגון שמח מתנגן ברקע. מוכנה לצלול לתוך המתכון? 🏴‍☠️✨\n\n🎣 שלב 1: מה צריך? (הכיני את החומרים!)\n\n\nלדג:\n\n4 פילטים של דג לבן טרי (כמו בקלה או מרלוזה). 🐟\nכוס קמח רגיל.\nכוס בירה קרה או מים מוגזים (הסוד לפריכות!). 🍺\nכפית אבקת אפייה.\nקורט מלח ופלפל לפי הטעם.\n\n\n\nלצ'יפס:\n\n4 תפוחי אדמה גדולים, קלופים וחתוכים לרצועות עבות. 🥔\nשמן לטיגון עמוק (שמן קנולה או חמניות).\n\n\n\nלתיבול וצדדים:\n\nחומץ מאלט (קלאסי בריטי!).\nמלח גס 📌\nרוטב טרטר או קטשופ לפי בחירה.\n\n\n\n\n🔥 שלב 2: הצ'יפס קודם! כי הוא צריך זמן אהבה\n\nבישול ראשוני: הרתיחי מים בסיר גדול עם מעט מלח. הוסיפי את רצועות תפוחי האדמה ובשלי אותן ל-5 דקות עד שהן רכות, אבל עדיין לא מתפרקות.\nייבוש: סנני היטב והניחי על מגבת מטבח לספיגת הנוזלים. אף אחד לא אוהב צ'יפס רטוב בטיגון! 😜\nטיגון ראשון: חממי שמן ל-150°C וטגני את הצ'יפס למשך כ-4 דקות עד שהם מתחילים להיות זהובים בהירים. הוציאי אותם לנייר סופג ותני להם לנוח.\n\n\n🧪 שלב 3: הבלילה הסודית לדגים!\n\nבקערה גדולה ערבבי את הקמח, אבקת האפייה וקורט המלח.\nהוסיפי בהדרגה את הבירה/מים המוגזים ותערבבי עד שתתקבל בלילה חלקה ועבה שאפשר \"לטבול\" בה את הדג כמו סוודר במים חמים! 🤓\n\n\n🌊 שלב 4: הדגים יוצאים לשחייה עמוקה בשמן\n\nחממי שמן ל-180°C (חשוב שהשמן יהיה חם מספיק כדי שהבלילה תהפוך לפריכה מיידית).\nטבלי כל פילה דג בבלילה כך שיכוסה כולו, ואז הכניסי בזהירות לשמן החם.\nטגני במשך כ-6-8 דקות עד שהדג מזהיב והבלילה קריספית כמו חלום! ✨\n\n\n🍟 שלב 5: סיום עם הצ'יפס\n\nהחזירי את הצ'יפס לשמן החם לטיגון שני של כ-3 דקות עד שהם זהובים ושובבים במיוחד.\nפזרי מלח גס מעל מיד כשהם יוצאים מהשמן.\n\n\n🌟 הגשה מושלמת:\nערמי צ'יפס ודגים זהובים על צלחת יפה, זלפי מעט חומץ מאלט מעל והגישי לצד רוטב אהוב לבחירתך ורבע לימון לסחיטה קלילה 🍋."
+                  "description": "Bot response: Cobalt: המתכת שמסתירה כוחות סודיים! 🌀\nדמיין את עצמך בעולם עתידני, שבו חומרים מיוחדים מעניקים כוחות מרהיבים לטכנולוגיה שלנו. 🎇 עכשיו, קפוץ אחורה בזמן אל מסעות הכימאים הראשונים במאה ה-17, כשגילו את קובלט, מתכת שהייתה חבויה בסלעים — וכמו אוצר קסום, היא שינתה את העולם!\n\n🎬 מה זה בכלל Cobalt?\nקובלט הוא יסוד כימי עם הסמל Co ומספר אטומי 27. 🧪 במצבו הטבעי, הוא מתכת כסופה-כחלחלה מבריקה (כן, קצת מגניבה כמו אביר שריון עתידני). אבל בגושיו הגולמיים, הוא נמצא לעיתים קרובות קשור למינרלים אחרים כמו ניקל ונחושת.\nאגב, השם \"קובלט\" מגיע מהמילה הגרמנית \"Kobold\", שמשמעותה \"שדון שובב\"! 👻 למה? כי כורים גרמנים חשבו שהמתכת הזו מקוללת — היא פולטת רעלים (בעיקר ארסן) כשמנסים להפיק אותה.\n\n🚀 למה קובלט כל כך חשוב?\n\n\nסוללות ליתיום-יון 🔋: קובלט הוא הלב הפועם של הסוללות שמפעילות את הטלפונים הניידים שלך והלפטופים. ללא קובלט – היינו מחפשים שקעים כל הזמן!\n\n\nצבעים כחולים עזים 🎨: מאז ימי הביניים, קובלט שימש ליצירת זכוכית וקרמיקה בצבע כחול עמוק ומהפנט.\n\n\nתעשייה ותעופה ✈️: סגסוגות קובלט עמידות במיוחד לחום ולשחיקה, מה שהופך אותן לחיוניות במנועי סילון ובייצור פלדה חזקה במיוחד.\n\n\nבריאות ורפואה 💊: הקובלט חשוב לגוף שלנו! ויטמין B12 מכיל אותו, והוא חיוני לתפקוד מערכת העצבים והדם.\n\n\n\n🌟 בונוס מגניב: האם ידעת?\nקובלט נמצא אפילו בכוכבים רחוקים! 🌌 הספקטרום של אור שבוקע מכוכבים חושף עקבות של קובלט ביקום הרחוק — סוג של חתימה כימית בין-כוכבית.\n\nאז בפעם הבאה שתטען את הטלפון או תבחין באמנות כחולה מהממת על כלי חרסינה עתיקים – זכור שקובלט עומד מאחורי הקסם! 😉"
                 }
               ],
               "expectedStatus": "passed",
@@ -1515,7 +1523,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 95981,
+                  "duration": 61033,
                   "errors": [],
                   "stdout": [
                     {
@@ -1663,10 +1671,10 @@
                       "text": "Starting to fill personal information form...\n"
                     },
                     {
-                      "text": "Filling name: Judith\n"
+                      "text": "Filling name: Andy\n"
                     },
                     {
-                      "text": "Selecting gender: בת\n"
+                      "text": "Selecting gender: בן\n"
                     },
                     {
                       "text": "Checking visibility of \"Start\" button...\n"
@@ -1678,22 +1686,22 @@
                       "text": "✅ Personal info submitted successfully.\n"
                     },
                     {
-                      "text": "💬 Submitting query: \"איך להכין Fish And Chips? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Cobalt.\"\n"
                     },
                     {
                       "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
                     },
                     {
-                      "text": "✅ Bot response received: \"🐟 Fish and Chips – הארוחה הבריטית שכל ביס ממנה הוא חגיגה פריכה! 🍟\nדמייני שאת עומדת באמצע שוק דגים באנגליה, הריח של דגים טריים באוויר, וקול טיגון שמח מתנגן ברקע. מוכנה לצלול לתוך המתכון? 🏴‍☠️✨\n\n🎣 שלב 1: מה צריך? (הכיני את החומרים!)\n\n\nלדג:\n\n4 פילטים של דג לבן טרי (כמו בקלה או מרלוזה). 🐟\nכוס קמח רגיל.\nכוס בירה קרה או מים מוגזים (הסוד לפריכות!). 🍺\nכפית אבקת אפייה.\nקורט מלח ופלפל לפי הטעם.\n\n\n\nלצ'יפס:\n\n4 תפוחי אדמה גדולים, קלופים וחתוכים לרצועות עבות. 🥔\nשמן לטיגון עמוק (שמן קנולה או חמניות).\n\n\n\nלתיבול וצדדים:\n\nחומץ מאלט (קלאסי בריטי!).\nמלח גס 📌\nרוטב טרטר או קטשופ לפי בחירה.\n\n\n\n\n🔥 שלב 2: הצ'יפס קודם! כי הוא צריך זמן אהבה\n\nבישול ראשוני: הרתיחי מים בסיר גדול עם מעט מלח. הוסיפי את רצועות תפוחי האדמה ובשלי אותן ל-5 דקות עד שהן רכות, אבל עדיין לא מתפרקות.\nייבוש: סנני היטב והניחי על מגבת מטבח לספיגת הנוזלים. אף אחד לא אוהב צ'יפס רטוב בטיגון! 😜\nטיגון ראשון: חממי שמן ל-150°C וטגני את הצ'יפס למשך כ-4 דקות עד שהם מתחילים להיות זהובים בהירים. הוציאי אותם לנייר סופג ותני להם לנוח.\n\n\n🧪 שלב 3: הבלילה הסודית לדגים!\n\nבקערה גדולה ערבבי את הקמח, אבקת האפייה וקורט המלח.\nהוסיפי בהדרגה את הבירה/מים המוגזים ותערבבי עד שתתקבל בלילה חלקה ועבה שאפשר \"לטבול\" בה את הדג כמו סוודר במים חמים! 🤓\n\n\n🌊 שלב 4: הדגים יוצאים לשחייה עמוקה בשמן\n\nחממי שמן ל-180°C (חשוב שהשמן יהיה חם מספיק כדי שהבלילה תהפוך לפריכה מיידית).\nטבלי כל פילה דג בבלילה כך שיכוסה כולו, ואז הכניסי בזהירות לשמן החם.\nטגני במשך כ-6-8 דקות עד שהדג מזהיב והבלילה קריספית כמו חלום! ✨\n\n\n🍟 שלב 5: סיום עם הצ'יפס\n\nהחזירי את הצ'יפס לשמן החם לטיגון שני של כ-3 דקות עד שהם זהובים ושובבים במיוחד.\nפזרי מלח גס מעל מיד כשהם יוצאים מהשמן.\n\n\n🌟 הגשה מושלמת:\nערמי צ'יפס ודגים זהובים על צלחת יפה, זלפי מעט חומץ מאלט מעל והגישי לצד רוטב אהוב לבחירתך ורבע לימון לסחיטה קלילה 🍋.\"\n"
+                      "text": "✅ Bot response received: \"Cobalt: המתכת שמסתירה כוחות סודיים! 🌀\nדמיין את עצמך בעולם עתידני, שבו חומרים מיוחדים מעניקים כוחות מרהיבים לטכנולוגיה שלנו. 🎇 עכשיו, קפוץ אחורה בזמן אל מסעות הכימאים הראשונים במאה ה-17, כשגילו את קובלט, מתכת שהייתה חבויה בסלעים — וכמו אוצר קסום, היא שינתה את העולם!\n\n🎬 מה זה בכלל Cobalt?\nקובלט הוא יסוד כימי עם הסמל Co ומספר אטומי 27. 🧪 במצבו הטבעי, הוא מתכת כסופה-כחלחלה מבריקה (כן, קצת מגניבה כמו אביר שריון עתידני). אבל בגושיו הגולמיים, הוא נמצא לעיתים קרובות קשור למינרלים אחרים כמו ניקל ונחושת.\nאגב, השם \"קובלט\" מגיע מהמילה הגרמנית \"Kobold\", שמשמעותה \"שדון שובב\"! 👻 למה? כי כורים גרמנים חשבו שהמתכת הזו מקוללת — היא פולטת רעלים (בעיקר ארסן) כשמנסים להפיק אותה.\n\n🚀 למה קובלט כל כך חשוב?\n\n\nסוללות ליתיום-יון 🔋: קובלט הוא הלב הפועם של הסוללות שמפעילות את הטלפונים הניידים שלך והלפטופים. ללא קובלט – היינו מחפשים שקעים כל הזמן!\n\n\nצבעים כחולים עזים 🎨: מאז ימי הביניים, קובלט שימש ליצירת זכוכית וקרמיקה בצבע כחול עמוק ומהפנט.\n\n\nתעשייה ותעופה ✈️: סגסוגות קובלט עמידות במיוחד לחום ולשחיקה, מה שהופך אותן לחיוניות במנועי סילון ובייצור פלדה חזקה במיוחד.\n\n\nבריאות ורפואה 💊: הקובלט חשוב לגוף שלנו! ויטמין B12 מכיל אותו, והוא חיוני לתפקוד מערכת העצבים והדם.\n\n\n\n🌟 בונוס מגניב: האם ידעת?\nקובלט נמצא אפילו בכוכבים רחוקים! 🌌 הספקטרום של אור שבוקע מכוכבים חושף עקבות של קובלט ביקום הרחוק — סוג של חתימה כימית בין-כוכבית.\n\nאז בפעם הבאה שתטען את הטלפון או תבחין באמנות כחולה מהממת על כלי חרסינה עתיקים – זכור שקובלט עומד מאחורי הקסם! 😉\"\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-05-18T10:13:13.443Z",
+                  "startTime": "2025-05-19T05:48:36.402Z",
                   "annotations": [
                     {
                       "type": "info",
-                      "description": "Bot response: 🐟 Fish and Chips – הארוחה הבריטית שכל ביס ממנה הוא חגיגה פריכה! 🍟\nדמייני שאת עומדת באמצע שוק דגים באנגליה, הריח של דגים טריים באוויר, וקול טיגון שמח מתנגן ברקע. מוכנה לצלול לתוך המתכון? 🏴‍☠️✨\n\n🎣 שלב 1: מה צריך? (הכיני את החומרים!)\n\n\nלדג:\n\n4 פילטים של דג לבן טרי (כמו בקלה או מרלוזה). 🐟\nכוס קמח רגיל.\nכוס בירה קרה או מים מוגזים (הסוד לפריכות!). 🍺\nכפית אבקת אפייה.\nקורט מלח ופלפל לפי הטעם.\n\n\n\nלצ'יפס:\n\n4 תפוחי אדמה גדולים, קלופים וחתוכים לרצועות עבות. 🥔\nשמן לטיגון עמוק (שמן קנולה או חמניות).\n\n\n\nלתיבול וצדדים:\n\nחומץ מאלט (קלאסי בריטי!).\nמלח גס 📌\nרוטב טרטר או קטשופ לפי בחירה.\n\n\n\n\n🔥 שלב 2: הצ'יפס קודם! כי הוא צריך זמן אהבה\n\nבישול ראשוני: הרתיחי מים בסיר גדול עם מעט מלח. הוסיפי את רצועות תפוחי האדמה ובשלי אותן ל-5 דקות עד שהן רכות, אבל עדיין לא מתפרקות.\nייבוש: סנני היטב והניחי על מגבת מטבח לספיגת הנוזלים. אף אחד לא אוהב צ'יפס רטוב בטיגון! 😜\nטיגון ראשון: חממי שמן ל-150°C וטגני את הצ'יפס למשך כ-4 דקות עד שהם מתחילים להיות זהובים בהירים. הוציאי אותם לנייר סופג ותני להם לנוח.\n\n\n🧪 שלב 3: הבלילה הסודית לדגים!\n\nבקערה גדולה ערבבי את הקמח, אבקת האפייה וקורט המלח.\nהוסיפי בהדרגה את הבירה/מים המוגזים ותערבבי עד שתתקבל בלילה חלקה ועבה שאפשר \"לטבול\" בה את הדג כמו סוודר במים חמים! 🤓\n\n\n🌊 שלב 4: הדגים יוצאים לשחייה עמוקה בשמן\n\nחממי שמן ל-180°C (חשוב שהשמן יהיה חם מספיק כדי שהבלילה תהפוך לפריכה מיידית).\nטבלי כל פילה דג בבלילה כך שיכוסה כולו, ואז הכניסי בזהירות לשמן החם.\nטגני במשך כ-6-8 דקות עד שהדג מזהיב והבלילה קריספית כמו חלום! ✨\n\n\n🍟 שלב 5: סיום עם הצ'יפס\n\nהחזירי את הצ'יפס לשמן החם לטיגון שני של כ-3 דקות עד שהם זהובים ושובבים במיוחד.\nפזרי מלח גס מעל מיד כשהם יוצאים מהשמן.\n\n\n🌟 הגשה מושלמת:\nערמי צ'יפס ודגים זהובים על צלחת יפה, זלפי מעט חומץ מאלט מעל והגישי לצד רוטב אהוב לבחירתך ורבע לימון לסחיטה קלילה 🍋."
+                      "description": "Bot response: Cobalt: המתכת שמסתירה כוחות סודיים! 🌀\nדמיין את עצמך בעולם עתידני, שבו חומרים מיוחדים מעניקים כוחות מרהיבים לטכנולוגיה שלנו. 🎇 עכשיו, קפוץ אחורה בזמן אל מסעות הכימאים הראשונים במאה ה-17, כשגילו את קובלט, מתכת שהייתה חבויה בסלעים — וכמו אוצר קסום, היא שינתה את העולם!\n\n🎬 מה זה בכלל Cobalt?\nקובלט הוא יסוד כימי עם הסמל Co ומספר אטומי 27. 🧪 במצבו הטבעי, הוא מתכת כסופה-כחלחלה מבריקה (כן, קצת מגניבה כמו אביר שריון עתידני). אבל בגושיו הגולמיים, הוא נמצא לעיתים קרובות קשור למינרלים אחרים כמו ניקל ונחושת.\nאגב, השם \"קובלט\" מגיע מהמילה הגרמנית \"Kobold\", שמשמעותה \"שדון שובב\"! 👻 למה? כי כורים גרמנים חשבו שהמתכת הזו מקוללת — היא פולטת רעלים (בעיקר ארסן) כשמנסים להפיק אותה.\n\n🚀 למה קובלט כל כך חשוב?\n\n\nסוללות ליתיום-יון 🔋: קובלט הוא הלב הפועם של הסוללות שמפעילות את הטלפונים הניידים שלך והלפטופים. ללא קובלט – היינו מחפשים שקעים כל הזמן!\n\n\nצבעים כחולים עזים 🎨: מאז ימי הביניים, קובלט שימש ליצירת זכוכית וקרמיקה בצבע כחול עמוק ומהפנט.\n\n\nתעשייה ותעופה ✈️: סגסוגות קובלט עמידות במיוחד לחום ולשחיקה, מה שהופך אותן לחיוניות במנועי סילון ובייצור פלדה חזקה במיוחד.\n\n\nבריאות ורפואה 💊: הקובלט חשוב לגוף שלנו! ויטמין B12 מכיל אותו, והוא חיוני לתפקוד מערכת העצבים והדם.\n\n\n\n🌟 בונוס מגניב: האם ידעת?\nקובלט נמצא אפילו בכוכבים רחוקים! 🌌 הספקטרום של אור שבוקע מכוכבים חושף עקבות של קובלט ביקום הרחוק — סוג של חתימה כימית בין-כוכבית.\n\nאז בפעם הבאה שתטען את הטלפון או תבחין באמנות כחולה מהממת על כלי חרסינה עתיקים – זכור שקובלט עומד מאחורי הקסם! 😉"
                     }
                   ],
                   "attachments": []
@@ -1702,7 +1710,7 @@
               "status": "expected"
             }
           ],
-          "id": "802b36f43135f9baf1c9-53fc9b79c69c59e2f9d6",
+          "id": "802b36f43135f9baf1c9-ddb6ff58911ea5b37713",
           "file": "insufficient_balance.spec.ts",
           "line": 11,
           "column": 5
@@ -1712,10 +1720,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-18T10:08:17.968Z",
-    "duration": 391786.728,
-    "expected": 26,
-    "skipped": 0,
+    "startTime": "2025-05-19T05:44:12.938Z",
+    "duration": 324899.801,
+    "expected": 25,
+    "skipped": 1,
     "unexpected": 0,
     "flaky": 0
   }

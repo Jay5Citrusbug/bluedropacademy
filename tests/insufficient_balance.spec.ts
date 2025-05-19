@@ -8,7 +8,7 @@ import { chatbotPage } from './Pages/chatbotPage';
 import { adminCredentials, chatbotCredentials } from './Config/credentials';
 
 
-test('TC_26 : Admin balance change and verify insufficient balance popup', async ({ browser }, testInfo) => {
+test('TC_26: 💰 Admin daily plan cost update and verify insufficient balance popup', async ({ browser }, testInfo) => {
  const adminContext = await browser.newContext();
   const adminPage = await adminContext.newPage();
   const adminInsufficientPopup = new Edge_case(adminPage); // ✅ correct instantiation
@@ -61,6 +61,5 @@ await chatbotPage1.evaluate(() => {
 await chatbotPage1.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: '📚 תשובה קצרה תשובה מפורטת 📄' }).isVisible();
 await chatbotPage1.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: '📚 תשובה קצרה תשובה מפורטת 📄' }).click();
 await chatbotscreen.SubmitQuery(testInfo);
-
 
 });
