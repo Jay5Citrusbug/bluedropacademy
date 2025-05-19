@@ -3,8 +3,6 @@ name: Run Playwright Tests and Email Report
 on:
   push:
     branches: [ production ]
-  schedule:
-    - cron: '0 0 * * *'
 
 jobs:
   build:
