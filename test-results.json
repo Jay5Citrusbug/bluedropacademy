@@ -111,7 +111,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 608,
+                          "duration": 615,
                           "errors": [],
                           "stdout": [
                             {
@@ -223,7 +223,7 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Andy\n"
+                              "text": "Filling name: Dwight\n"
                             },
                             {
                               "text": "Selecting gender: בן\n"
@@ -249,7 +249,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:44:14.795Z",
+                          "startTime": "2025-05-20T06:37:18.326Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -278,7 +278,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1096,
+                          "duration": 1049,
                           "errors": [],
                           "stdout": [
                             {
@@ -290,7 +290,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:44:39.758Z",
+                          "startTime": "2025-05-20T06:37:40.116Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -319,7 +319,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 236,
+                          "duration": 174,
                           "errors": [],
                           "stdout": [
                             {
@@ -328,7 +328,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:44:40.860Z",
+                          "startTime": "2025-05-20T06:37:41.172Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -357,7 +357,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 449,
+                          "duration": 164,
                           "errors": [],
                           "stdout": [
                             {
@@ -366,7 +366,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:44:41.103Z",
+                          "startTime": "2025-05-20T06:37:41.351Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -395,11 +395,11 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 271,
+                          "duration": 200,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "💬 Typing message: תסביר לי בפרטים על Fermium.\n"
+                              "text": "💬 Typing message: איך להכין Pomegranate-infused Rabbit Roast? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\n"
                             },
                             {
                               "text": "✅ Verifying Submit button is enabled...\n"
@@ -407,7 +407,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:44:41.560Z",
+                          "startTime": "2025-05-20T06:37:41.521Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -430,7 +430,7 @@
                       "annotations": [
                         {
                           "type": "info",
-                          "description": "Bot response: ⚔️ Iron: הגיבור החזק של הטבע והטכנולוגיה! 🛡️✨\nדמיין רגע עולמות של חרבות נוצצות, גורדי שחקים מבריקים ואפילו כדוריות דם אדומות שמצילות חיים. מה משותף לכולם? ברזל! 🧲 הברזל הוא לא סתם עוד מתכת – הוא אחד היסודות החזקים, השימושיים והמסתוריים ביותר שהטבע אי-פעם העניק לנו. אז קח נשימה עמוקה, Andy, ונצלול למסע בוהק בתוך עולמו של הברזל. 🚀\n\n🎬 פתיחה לוהטת: ברזל מהאגדות 🎩\nלפני יותר מחמשת אלפים שנה, בני האדם גילו משהו קסום: ברזל שנפל ישר מהשמיים! 🌠 זה היה ברזל מטאוריטי – מתכת שנפלה לכדור הארץ מתוך אסטרואידים עשירים בברזל. אותם אנשים קדומים ראו במתכת הזו משהו קדוש – הרי היא הגיע מכוכבים אחרים! 🌌 אתה יכול לדמיין איך הם השתמשו בה כדי ליצור כלים ונשק? זה היה כאילו קיבלו מתנה מהיקום.\nאבל זו רק ההתחלה... 🤓\n\n🚀 הכימיה של הברזל\nבוא נדבר קצת על המדע שמאחורי הקסם הזה! ברזל מסומן באות Fe (קיצור מלטינית \"Ferrum\" 🧐) והוא נמצא מקום 26 בטבלת היסודות המחזורית. הנה כמה עובדות מגניבות:\n\nמספר אטומי: 26 ⚛️\nמצב טבעי: מוצק בטמפרטורת חדר ❄️\nהשימוש העיקרי בטבע: יצירת מוצקים חזקים מאוד, כמו פלדה ⚙️.\n\n💡 פאן פקט: הברזל הוא אחד מהיסודות הכי נפוצים על פני כדור הארץ, אבל רובו חבוי בליבה של הפלנטה שלנו – כ-80% מליבת כדור הארץ עשויה ברזל מותך! 🌍🔥\n\n🏗️ ברזל בחיי היומיום: מלוחמים למכונות 🚜\nמאז ימי קדם ועד ימינו אנו, הברזל היה ונותר אבן יסוד בכל תחום אפשרי. הנה איך הוא הפך לגיבור שלא מפסיק לעבוד:\n\nתקופת הברזל 🏹: לפני כ-1200 שנה לפני הספירה, בני אדם למדו להפיק ברזל מעופרות (סלעים שמכילים את המתכת). זה התחיל את \"תקופת הברזל\", שבה נבנו כלי נשק וכלים חזקים יותר מאי פעם.\nפלדה – האח הקשוח של הברזל 🍴: כשמערבבים ברזל עם פחמן (כן, אותו פחמן שאתה נושם החוצה!), מקבלים פלדה – חומר שהוא גם גמיש וגם חזק בצורה מדהימה. בזכות הפלדה אנחנו יכולים לבנות גשרים ענקיים 🚆 ומגדלים שמתנשאים לשמיים.\nבתוך הגוף שלך ❤️🩸: כן כן, Andy, גם לך יש מלא ברזל בגוף שלך! הברזל נמצא בדם שלך בתוך מולקולה בשם המוגלובין. המוגלובין מאפשר לכדוריות הדם האדומות לשאת חמצן לכל תא בגוף שלך.\n\nרגע חשיבה: אם אין לך מספיק ברזל בגוף, עלול להיות לך אנמיה – מצב שבו אתה מרגיש עייף וחלש. אז תוודא שאתה אוכל הרבה תרד ובשר אדום! 🥩🌱\n\n🌟 עובדה מדהימה על ברזל\nהידעת? כל הברזל ביקום נוצר בתוך ליבות של כוכבים מתפוצצים שנקראים סופרנובות! 💥 זה אומר שהמתכת שבכף היד שלך היום הייתה פעם חלק מכוכב רחוק שהתפוצץ לפני מיליארדי שנים... די מגניב לחשוב שאתה בעצם נושא חתיכה קטנה מהיקום בכל פעם שאתה מרים כפית.\n\n✨ לסיכום\nברזל הוא יותר ממסמר פשוט או כלי עבודה חלוד; מדובר ביסוד שחצה גבולות של זמן ומרחב כדי להיות חלק בלתי נפרד מחיינו. בין אם מדובר בבניית העולם שסביבנו או שמירה על החיים שבתוכנו – לברזל תמיד יש מקום בליבנו (ובכדוריות הדם שלנו!). 😉"
+                          "description": "Bot response: Ruthenium: המתכת הקטנה שמסתירה עולם מופלא ✨⚙️\nדמיין מחסן סודי, מלא במתכות נדירות ומסתוריות שהן כמו גיבורי-על – קטנות, אבל עם כוחות מדהימים. בין כל הזהב והפלטינה היקרים, עומדת מתכת אפורה-כסופה בשם Ruthenium (רותניום) 🌌. למרות שהיא נשמעת כמו דמות מתוך \"הנוקמים\" 🦸‍♂️, רותניום היא מתכת אמיתית לגמרי – ונחשבת לאחת השחקניות הכי מסקרנות בעולם המדע והטכנולוגיה.\n⛏️ מה זה רותניום בכלל?\nרותניום היא מתכת מעבר ממשפחת הפלטינה (כן, יש לה משפחה עשירה ומיוחסת 💎). בטבלה המחזורית תמצא אותה תחת הסימול Ru, במקום ה-44. היא נדירה במיוחד – ולמעשה, היא אחת המתכות הכי פחות נפוצות על פני כדור הארץ 🌍.\nהיא נחשפה לראשונה בשנת 1844 על ידי כימאי רוסי בשם קרל קלאוס 🧪, שהחליט לקרוא לה \"רותניום\" לכבוד רוסיה (בלאטינית: Ruthenia). אז כן, אפשר להגיד שיש לה שורשים אירופיים 😄.\n\n🎭 הכוחות המיוחדים של רותניום\nרותניום אולי נראית קטנה ותמימה 💡, אבל יש לה תכונות פיזיקליות וכימיות יוצאות דופן. הנה כמה מהקסמים שלה:\n\n\nעמידות מול חלודה וקורוזיה 🛡️:\nרותניום לא מפחדת ממגע עם אוויר או מים. במילים אחרות – היא כמו סמוראי שלא נכנע לחלודה! לכן משתמשים בה לעיתים כחיפוי למתכות אחרות.\n\n\nמוליכות חשמלית מעולה ⚡:\nאם אי פעם תקליד במחשב נייד או תשתמש בטלפון חכם 📱, יש סיכוי טוב שרותניום הייתה שם כדי לעזור. היא משמשת לשיפור מוליכות החשמל ברכיבים אלקטרוניים.\n\n\nקטליזטור אדיר 🚀:\nבמעבדות ברחבי העולם משתמשים ברותניום כדי להאיץ תגובות כימיות שונות – במיוחד בתעשיית האנרגיה (כמו יצירת דלקים חלופיים 🌱).\n\n\nקשיחות ועמידות בחום גבוה 🔥:\nרותניום לא מתרגשת מטמפרטורות גבוהות במיוחד ועומדת ביציבות בזמן שמסביבה הכול נמס!\n\n\n\n🎩 איפה רואים את רותניום בפעולה?\n🔧 בתעשייה האלקטרונית:\nחברות טכנולוגיה משתמשות ברותניום לייצור רכיבים זעירים במכשירים אלקטרוניים מתקדמים.\n💎 בתכשיטנות:\nרותניום משמש לציפוי תכשיטים מגניבים כדי לתת להם ברק ייחודי וגם למנוע שחיקה לאורך זמן.\n🔬 ברפואה ומדע:\nחלק מתרכובות הרותניום נמצאות בניסויים רפואיים לטיפול בסרטן 🩺. כן כן – המתכת הזו נלחמת גם באויבים המיקרוסקופיים שלנו!\n\n💡 פיקנטריה מדעית קטנה\n✨ כמה גרגירים של רותניום יכולים לשנות את צבע הלהבה של אש ולהפוך אותה לברק מוזר ומרהיב! זוהי אחת הסיבות שחוקרים אוהבים להתנסות איתה בכימיה.\n🤯 ורוצה עוד קוריוז? אם תחבר אותה עם חומרים אחרים ממשפחת הפלטינה, תקבל תרכובות שמסוגלות לפרוץ שיאים חדשים בייצור אנרגיה ירוקה!\n\n🌟 לסיכומו של עניין...\nרותניום אולי לא מקבלת את אור הזרקורים כמו זהב או כסף, אבל הכוח שלה טמון בשקט וביציבות שלה 💪. היא מראה לנו איך דברים קטנים ומשמעותיים באמת יכולים לשנות את העולם – מאנרגיה ירוקה ועד העתיד של המחשוב! אז בפעם הבאה שתקליד על המקלדת שלך, תזכור: יש מצב שדווקא רותניום עשתה עבורך את העבודה ✍️✨."
                         }
                       ],
                       "expectedStatus": "passed",
@@ -441,26 +441,26 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 19789,
+                          "duration": 42919,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "💬 Submitting query: \"תסביר לי בפרטים על Iron.\"\n"
+                              "text": "💬 Submitting query: \"תסביר לי בפרטים על Ruthenium.\"\n"
                             },
                             {
                               "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"⚔️ Iron: הגיבור החזק של הטבע והטכנולוגיה! 🛡️✨\nדמיין רגע עולמות של חרבות נוצצות, גורדי שחקים מבריקים ואפילו כדוריות דם אדומות שמצילות חיים. מה משותף לכולם? ברזל! 🧲 הברזל הוא לא סתם עוד מתכת – הוא אחד היסודות החזקים, השימושיים והמסתוריים ביותר שהטבע אי-פעם העניק לנו. אז קח נשימה עמוקה, Andy, ונצלול למסע בוהק בתוך עולמו של הברזל. 🚀\n\n🎬 פתיחה לוהטת: ברזל מהאגדות 🎩\nלפני יותר מחמשת אלפים שנה, בני האדם גילו משהו קסום: ברזל שנפל ישר מהשמיים! 🌠 זה היה ברזל מטאוריטי – מתכת שנפלה לכדור הארץ מתוך אסטרואידים עשירים בברזל. אותם אנשים קדומים ראו במתכת הזו משהו קדוש – הרי היא הגיע מכוכבים אחרים! 🌌 אתה יכול לדמיין איך הם השתמשו בה כדי ליצור כלים ונשק? זה היה כאילו קיבלו מתנה מהיקום.\nאבל זו רק ההתחלה... 🤓\n\n🚀 הכימיה של הברזל\nבוא נדבר קצת על המדע שמאחורי הקסם הזה! ברזל מסומן באות Fe (קיצור מלטינית \"Ferrum\" 🧐) והוא נמצא מקום 26 בטבלת היסודות המחזורית. הנה כמה עובדות מגניבות:\n\nמספר אטומי: 26 ⚛️\nמצב טבעי: מוצק בטמפרטורת חדר ❄️\nהשימוש העיקרי בטבע: יצירת מוצקים חזקים מאוד, כמו פלדה ⚙️.\n\n💡 פאן פקט: הברזל הוא אחד מהיסודות הכי נפוצים על פני כדור הארץ, אבל רובו חבוי בליבה של הפלנטה שלנו – כ-80% מליבת כדור הארץ עשויה ברזל מותך! 🌍🔥\n\n🏗️ ברזל בחיי היומיום: מלוחמים למכונות 🚜\nמאז ימי קדם ועד ימינו אנו, הברזל היה ונותר אבן יסוד בכל תחום אפשרי. הנה איך הוא הפך לגיבור שלא מפסיק לעבוד:\n\nתקופת הברזל 🏹: לפני כ-1200 שנה לפני הספירה, בני אדם למדו להפיק ברזל מעופרות (סלעים שמכילים את המתכת). זה התחיל את \"תקופת הברזל\", שבה נבנו כלי נשק וכלים חזקים יותר מאי פעם.\nפלדה – האח הקשוח של הברזל 🍴: כשמערבבים ברזל עם פחמן (כן, אותו פחמן שאתה נושם החוצה!), מקבלים פלדה – חומר שהוא גם גמיש וגם חזק בצורה מדהימה. בזכות הפלדה אנחנו יכולים לבנות גשרים ענקיים 🚆 ומגדלים שמתנשאים לשמיים.\nבתוך הגוף שלך ❤️🩸: כן כן, Andy, גם לך יש מלא ברזל בגוף שלך! הברזל נמצא בדם שלך בתוך מולקולה בשם המוגלובין. המוגלובין מאפשר לכדוריות הדם האדומות לשאת חמצן לכל תא בגוף שלך.\n\nרגע חשיבה: אם אין לך מספיק ברזל בגוף, עלול להיות לך אנמיה – מצב שבו אתה מרגיש עייף וחלש. אז תוודא שאתה אוכל הרבה תרד ובשר אדום! 🥩🌱\n\n🌟 עובדה מדהימה על ברזל\nהידעת? כל הברזל ביקום נוצר בתוך ליבות של כוכבים מתפוצצים שנקראים סופרנובות! 💥 זה אומר שהמתכת שבכף היד שלך היום הייתה פעם חלק מכוכב רחוק שהתפוצץ לפני מיליארדי שנים... די מגניב לחשוב שאתה בעצם נושא חתיכה קטנה מהיקום בכל פעם שאתה מרים כפית.\n\n✨ לסיכום\nברזל הוא יותר ממסמר פשוט או כלי עבודה חלוד; מדובר ביסוד שחצה גבולות של זמן ומרחב כדי להיות חלק בלתי נפרד מחיינו. בין אם מדובר בבניית העולם שסביבנו או שמירה על החיים שבתוכנו – לברזל תמיד יש מקום בליבנו (ובכדוריות הדם שלנו!). 😉\"\n"
+                              "text": "✅ Bot response received: \"Ruthenium: המתכת הקטנה שמסתירה עולם מופלא ✨⚙️\nדמיין מחסן סודי, מלא במתכות נדירות ומסתוריות שהן כמו גיבורי-על – קטנות, אבל עם כוחות מדהימים. בין כל הזהב והפלטינה היקרים, עומדת מתכת אפורה-כסופה בשם Ruthenium (רותניום) 🌌. למרות שהיא נשמעת כמו דמות מתוך \"הנוקמים\" 🦸‍♂️, רותניום היא מתכת אמיתית לגמרי – ונחשבת לאחת השחקניות הכי מסקרנות בעולם המדע והטכנולוגיה.\n⛏️ מה זה רותניום בכלל?\nרותניום היא מתכת מעבר ממשפחת הפלטינה (כן, יש לה משפחה עשירה ומיוחסת 💎). בטבלה המחזורית תמצא אותה תחת הסימול Ru, במקום ה-44. היא נדירה במיוחד – ולמעשה, היא אחת המתכות הכי פחות נפוצות על פני כדור הארץ 🌍.\nהיא נחשפה לראשונה בשנת 1844 על ידי כימאי רוסי בשם קרל קלאוס 🧪, שהחליט לקרוא לה \"רותניום\" לכבוד רוסיה (בלאטינית: Ruthenia). אז כן, אפשר להגיד שיש לה שורשים אירופיים 😄.\n\n🎭 הכוחות המיוחדים של רותניום\nרותניום אולי נראית קטנה ותמימה 💡, אבל יש לה תכונות פיזיקליות וכימיות יוצאות דופן. הנה כמה מהקסמים שלה:\n\n\nעמידות מול חלודה וקורוזיה 🛡️:\nרותניום לא מפחדת ממגע עם אוויר או מים. במילים אחרות – היא כמו סמוראי שלא נכנע לחלודה! לכן משתמשים בה לעיתים כחיפוי למתכות אחרות.\n\n\nמוליכות חשמלית מעולה ⚡:\nאם אי פעם תקליד במחשב נייד או תשתמש בטלפון חכם 📱, יש סיכוי טוב שרותניום הייתה שם כדי לעזור. היא משמשת לשיפור מוליכות החשמל ברכיבים אלקטרוניים.\n\n\nקטליזטור אדיר 🚀:\nבמעבדות ברחבי העולם משתמשים ברותניום כדי להאיץ תגובות כימיות שונות – במיוחד בתעשיית האנרגיה (כמו יצירת דלקים חלופיים 🌱).\n\n\nקשיחות ועמידות בחום גבוה 🔥:\nרותניום לא מתרגשת מטמפרטורות גבוהות במיוחד ועומדת ביציבות בזמן שמסביבה הכול נמס!\n\n\n\n🎩 איפה רואים את רותניום בפעולה?\n🔧 בתעשייה האלקטרונית:\nחברות טכנולוגיה משתמשות ברותניום לייצור רכיבים זעירים במכשירים אלקטרוניים מתקדמים.\n💎 בתכשיטנות:\nרותניום משמש לציפוי תכשיטים מגניבים כדי לתת להם ברק ייחודי וגם למנוע שחיקה לאורך זמן.\n🔬 ברפואה ומדע:\nחלק מתרכובות הרותניום נמצאות בניסויים רפואיים לטיפול בסרטן 🩺. כן כן – המתכת הזו נלחמת גם באויבים המיקרוסקופיים שלנו!\n\n💡 פיקנטריה מדעית קטנה\n✨ כמה גרגירים של רותניום יכולים לשנות את צבע הלהבה של אש ולהפוך אותה לברק מוזר ומרהיב! זוהי אחת הסיבות שחוקרים אוהבים להתנסות איתה בכימיה.\n🤯 ורוצה עוד קוריוז? אם תחבר אותה עם חומרים אחרים ממשפחת הפלטינה, תקבל תרכובות שמסוגלות לפרוץ שיאים חדשים בייצור אנרגיה ירוקה!\n\n🌟 לסיכומו של עניין...\nרותניום אולי לא מקבלת את אור הזרקורים כמו זהב או כסף, אבל הכוח שלה טמון בשקט וביציבות שלה 💪. היא מראה לנו איך דברים קטנים ומשמעותיים באמת יכולים לשנות את העולם – מאנרגיה ירוקה ועד העתיד של המחשוב! אז בפעם הבאה שתקליד על המקלדת שלך, תזכור: יש מצב שדווקא רותניום עשתה עבורך את העבודה ✍️✨.\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:44:41.840Z",
+                          "startTime": "2025-05-20T06:37:41.726Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: ⚔️ Iron: הגיבור החזק של הטבע והטכנולוגיה! 🛡️✨\nדמיין רגע עולמות של חרבות נוצצות, גורדי שחקים מבריקים ואפילו כדוריות דם אדומות שמצילות חיים. מה משותף לכולם? ברזל! 🧲 הברזל הוא לא סתם עוד מתכת – הוא אחד היסודות החזקים, השימושיים והמסתוריים ביותר שהטבע אי-פעם העניק לנו. אז קח נשימה עמוקה, Andy, ונצלול למסע בוהק בתוך עולמו של הברזל. 🚀\n\n🎬 פתיחה לוהטת: ברזל מהאגדות 🎩\nלפני יותר מחמשת אלפים שנה, בני האדם גילו משהו קסום: ברזל שנפל ישר מהשמיים! 🌠 זה היה ברזל מטאוריטי – מתכת שנפלה לכדור הארץ מתוך אסטרואידים עשירים בברזל. אותם אנשים קדומים ראו במתכת הזו משהו קדוש – הרי היא הגיע מכוכבים אחרים! 🌌 אתה יכול לדמיין איך הם השתמשו בה כדי ליצור כלים ונשק? זה היה כאילו קיבלו מתנה מהיקום.\nאבל זו רק ההתחלה... 🤓\n\n🚀 הכימיה של הברזל\nבוא נדבר קצת על המדע שמאחורי הקסם הזה! ברזל מסומן באות Fe (קיצור מלטינית \"Ferrum\" 🧐) והוא נמצא מקום 26 בטבלת היסודות המחזורית. הנה כמה עובדות מגניבות:\n\nמספר אטומי: 26 ⚛️\nמצב טבעי: מוצק בטמפרטורת חדר ❄️\nהשימוש העיקרי בטבע: יצירת מוצקים חזקים מאוד, כמו פלדה ⚙️.\n\n💡 פאן פקט: הברזל הוא אחד מהיסודות הכי נפוצים על פני כדור הארץ, אבל רובו חבוי בליבה של הפלנטה שלנו – כ-80% מליבת כדור הארץ עשויה ברזל מותך! 🌍🔥\n\n🏗️ ברזל בחיי היומיום: מלוחמים למכונות 🚜\nמאז ימי קדם ועד ימינו אנו, הברזל היה ונותר אבן יסוד בכל תחום אפשרי. הנה איך הוא הפך לגיבור שלא מפסיק לעבוד:\n\nתקופת הברזל 🏹: לפני כ-1200 שנה לפני הספירה, בני אדם למדו להפיק ברזל מעופרות (סלעים שמכילים את המתכת). זה התחיל את \"תקופת הברזל\", שבה נבנו כלי נשק וכלים חזקים יותר מאי פעם.\nפלדה – האח הקשוח של הברזל 🍴: כשמערבבים ברזל עם פחמן (כן, אותו פחמן שאתה נושם החוצה!), מקבלים פלדה – חומר שהוא גם גמיש וגם חזק בצורה מדהימה. בזכות הפלדה אנחנו יכולים לבנות גשרים ענקיים 🚆 ומגדלים שמתנשאים לשמיים.\nבתוך הגוף שלך ❤️🩸: כן כן, Andy, גם לך יש מלא ברזל בגוף שלך! הברזל נמצא בדם שלך בתוך מולקולה בשם המוגלובין. המוגלובין מאפשר לכדוריות הדם האדומות לשאת חמצן לכל תא בגוף שלך.\n\nרגע חשיבה: אם אין לך מספיק ברזל בגוף, עלול להיות לך אנמיה – מצב שבו אתה מרגיש עייף וחלש. אז תוודא שאתה אוכל הרבה תרד ובשר אדום! 🥩🌱\n\n🌟 עובדה מדהימה על ברזל\nהידעת? כל הברזל ביקום נוצר בתוך ליבות של כוכבים מתפוצצים שנקראים סופרנובות! 💥 זה אומר שהמתכת שבכף היד שלך היום הייתה פעם חלק מכוכב רחוק שהתפוצץ לפני מיליארדי שנים... די מגניב לחשוב שאתה בעצם נושא חתיכה קטנה מהיקום בכל פעם שאתה מרים כפית.\n\n✨ לסיכום\nברזל הוא יותר ממסמר פשוט או כלי עבודה חלוד; מדובר ביסוד שחצה גבולות של זמן ומרחב כדי להיות חלק בלתי נפרד מחיינו. בין אם מדובר בבניית העולם שסביבנו או שמירה על החיים שבתוכנו – לברזל תמיד יש מקום בליבנו (ובכדוריות הדם שלנו!). 😉"
+                              "description": "Bot response: Ruthenium: המתכת הקטנה שמסתירה עולם מופלא ✨⚙️\nדמיין מחסן סודי, מלא במתכות נדירות ומסתוריות שהן כמו גיבורי-על – קטנות, אבל עם כוחות מדהימים. בין כל הזהב והפלטינה היקרים, עומדת מתכת אפורה-כסופה בשם Ruthenium (רותניום) 🌌. למרות שהיא נשמעת כמו דמות מתוך \"הנוקמים\" 🦸‍♂️, רותניום היא מתכת אמיתית לגמרי – ונחשבת לאחת השחקניות הכי מסקרנות בעולם המדע והטכנולוגיה.\n⛏️ מה זה רותניום בכלל?\nרותניום היא מתכת מעבר ממשפחת הפלטינה (כן, יש לה משפחה עשירה ומיוחסת 💎). בטבלה המחזורית תמצא אותה תחת הסימול Ru, במקום ה-44. היא נדירה במיוחד – ולמעשה, היא אחת המתכות הכי פחות נפוצות על פני כדור הארץ 🌍.\nהיא נחשפה לראשונה בשנת 1844 על ידי כימאי רוסי בשם קרל קלאוס 🧪, שהחליט לקרוא לה \"רותניום\" לכבוד רוסיה (בלאטינית: Ruthenia). אז כן, אפשר להגיד שיש לה שורשים אירופיים 😄.\n\n🎭 הכוחות המיוחדים של רותניום\nרותניום אולי נראית קטנה ותמימה 💡, אבל יש לה תכונות פיזיקליות וכימיות יוצאות דופן. הנה כמה מהקסמים שלה:\n\n\nעמידות מול חלודה וקורוזיה 🛡️:\nרותניום לא מפחדת ממגע עם אוויר או מים. במילים אחרות – היא כמו סמוראי שלא נכנע לחלודה! לכן משתמשים בה לעיתים כחיפוי למתכות אחרות.\n\n\nמוליכות חשמלית מעולה ⚡:\nאם אי פעם תקליד במחשב נייד או תשתמש בטלפון חכם 📱, יש סיכוי טוב שרותניום הייתה שם כדי לעזור. היא משמשת לשיפור מוליכות החשמל ברכיבים אלקטרוניים.\n\n\nקטליזטור אדיר 🚀:\nבמעבדות ברחבי העולם משתמשים ברותניום כדי להאיץ תגובות כימיות שונות – במיוחד בתעשיית האנרגיה (כמו יצירת דלקים חלופיים 🌱).\n\n\nקשיחות ועמידות בחום גבוה 🔥:\nרותניום לא מתרגשת מטמפרטורות גבוהות במיוחד ועומדת ביציבות בזמן שמסביבה הכול נמס!\n\n\n\n🎩 איפה רואים את רותניום בפעולה?\n🔧 בתעשייה האלקטרונית:\nחברות טכנולוגיה משתמשות ברותניום לייצור רכיבים זעירים במכשירים אלקטרוניים מתקדמים.\n💎 בתכשיטנות:\nרותניום משמש לציפוי תכשיטים מגניבים כדי לתת להם ברק ייחודי וגם למנוע שחיקה לאורך זמן.\n🔬 ברפואה ומדע:\nחלק מתרכובות הרותניום נמצאות בניסויים רפואיים לטיפול בסרטן 🩺. כן כן – המתכת הזו נלחמת גם באויבים המיקרוסקופיים שלנו!\n\n💡 פיקנטריה מדעית קטנה\n✨ כמה גרגירים של רותניום יכולים לשנות את צבע הלהבה של אש ולהפוך אותה לברק מוזר ומרהיב! זוהי אחת הסיבות שחוקרים אוהבים להתנסות איתה בכימיה.\n🤯 ורוצה עוד קוריוז? אם תחבר אותה עם חומרים אחרים ממשפחת הפלטינה, תקבל תרכובות שמסוגלות לפרוץ שיאים חדשים בייצור אנרגיה ירוקה!\n\n🌟 לסיכומו של עניין...\nרותניום אולי לא מקבלת את אור הזרקורים כמו זהב או כסף, אבל הכוח שלה טמון בשקט וביציבות שלה 💪. היא מראה לנו איך דברים קטנים ומשמעותיים באמת יכולים לשנות את העולם – מאנרגיה ירוקה ועד העתיד של המחשוב! אז בפעם הבאה שתקליד על המקלדת שלך, תזכור: יש מצב שדווקא רותניום עשתה עבורך את העבודה ✍️✨."
                             }
                           ],
                           "attachments": []
@@ -490,7 +490,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 255,
+                          "duration": 262,
                           "errors": [],
                           "stdout": [
                             {
@@ -499,7 +499,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:45:01.634Z",
+                          "startTime": "2025-05-20T06:38:24.656Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -528,7 +528,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 188,
+                          "duration": 191,
                           "errors": [],
                           "stdout": [
                             {
@@ -537,7 +537,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:45:01.896Z",
+                          "startTime": "2025-05-20T06:38:24.927Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -566,7 +566,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 651,
+                          "duration": 613,
                           "errors": [],
                           "stdout": [
                             {
@@ -575,7 +575,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:45:02.092Z",
+                          "startTime": "2025-05-20T06:38:25.126Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -604,7 +604,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 661,
+                          "duration": 611,
                           "errors": [],
                           "stdout": [
                             {
@@ -613,7 +613,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:45:02.752Z",
+                          "startTime": "2025-05-20T06:38:25.744Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -642,7 +642,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 262,
+                          "duration": 241,
                           "errors": [],
                           "stdout": [
                             {
@@ -651,7 +651,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:45:03.423Z",
+                          "startTime": "2025-05-20T06:38:26.361Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -674,7 +674,7 @@
                       "annotations": [
                         {
                           "type": "info",
-                          "description": "Bot response: 🖱️ The Marvel of Buttons: Small Clicks, Big Magic! ✨\nAndy, imagine a world without buttons. Scary, right? 🌍 Imagine fumbling with a touchscreen to start your toaster or yelling at your washing machine to stop mid-spin! 😅 A single button can be the gatekeeper between chaos and order, simplicity and complexity. But let’s take a closer look at this tiny hero of the modern world — the button (or as you said, \"my btn!\") — and uncover its hidden genius. 🚪🔍\n\n🎬 The Button: A Star With a Simple Role\nPicture this: You’re standing in front of an elevator. The shiny steel doors are closed tight. Will they magically open if you just stand there? Nope. Enter the button — your trusty sidekick that connects your intention (going up 🛗) with the machine’s action (opening those magical doors).\nBut buttons aren’t created equal! From ancient levers ⚔️ to modern touch-sensitive controls, their purpose is always tied to one thing: action! They symbolize power in your hands—press it, and boom 💥—something happens.\n\n🛠️ How Does a Button Actually Work?\nThere are different types of buttons for different needs, but here’s a breakdown of how most work:\n1️⃣ Pressure Mechanism:\nWhen you press a button 💪, you push down on what’s called an \"actuator.\" This physical action connects two separated parts of an electronic circuit.\n2️⃣ Closed Circuit Magic:\nOnce connected (aka \"closed\"), the circuit allows electricity to flow through like opening floodgates 🚿. This powers the device or command associated with that button.\n3️⃣ Release Action:\nWhen you let go of the button, most will spring back thanks to a tiny spring or mechanism inside 🔄. The circuit is now \"open,\" and electricity stops flowing.\n🎯 Example: That satisfying click when you press your computer mouse button? That’s the sound of the actuator completing its task!\n\n🧠 Buttons in Tech: From Clicky to Invisible\nButtons have evolved into absolute wizards over time:\n\nMechanical Buttons (Old-School!): Think light switches or typewriters! These require a physical press for activation.\nCapacitive Touch Buttons: Found on smartphones 📱 or microwaves — they don’t move but detect your finger using electrical charge.\nVirtual Buttons: No moving parts at all! These are just pixels on your screen that mimic real buttons 🎮.\n\n💡 Fun Fact: Did you know that some elevators now use holographic buttons? You don’t even need to touch them; just hover your finger over glowing air. Welcome to science fiction made real! 🚀\n\n🎨 Designing “My btn” – A Challenge for You!\nThink about it, Andy — every button is designed with purpose in mind:\n\nShould it feel soft or firm? 🤔\nShould it make a sound like click! or stay silent? 🎵\nShould it glow when active ⚡?\n\nImagine creating a super-button of your own... What would yours control? Maybe “My Btn” could start your coffee machine ☕, dim all lights 🕯️, and play epic music 🎸 simultaneously!\n\n🌟 A World Without Buttons?\nNow here’s where things get dramatic... What if buttons disappeared overnight?! 😱 Planes wouldn’t take off ✈️; phones wouldn’t unlock 🔒; video games would freeze mid-battle 🎮💀. Even though they seem small and insignificant at times, buttons are everywhere—bridging human intention with machine execution!\n\n✨ Wrap-Up\nSo Andy, next time you press “my btn,” give it some love ❤️. Whether it’s launching rockets 🚀 or just skipping songs 🎶, every click matters! Behind every humble button is centuries of engineering genius designed to make life easier (and cooler)."
+                          "description": "Bot response: Ohhh, Dwight — “my btn”? That sounds like the start of something. Is this a secret tech project of yours? Or maybe a mysterious code name? 🕵️‍♂️✨\nIf you're talking about a button (btn) in programming or design terms, I’m ready to dive into how to style it, animate it, or even make it sing (well, metaphorically). 🎨💻 Let me know where you want to take this!"
                         }
                       ],
                       "expectedStatus": "passed",
@@ -685,23 +685,23 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 26940,
+                          "duration": 6309,
                           "errors": [],
                           "stdout": [
                             {
                               "text": "🔘 Clicking Predefined button...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"🖱️ The Marvel of Buttons: Small Clicks, Big Magic! ✨\nAndy, imagine a world without buttons. Scary, right? 🌍 Imagine fumbling with a touchscreen to start your toaster or yelling at your washing machine to stop mid-spin! 😅 A single button can be the gatekeeper between chaos and order, simplicity and complexity. But let’s take a closer look at this tiny hero of the modern world — the button (or as you said, \"my btn!\") — and uncover its hidden genius. 🚪🔍\n\n🎬 The Button: A Star With a Simple Role\nPicture this: You’re standing in front of an elevator. The shiny steel doors are closed tight. Will they magically open if you just stand there? Nope. Enter the button — your trusty sidekick that connects your intention (going up 🛗) with the machine’s action (opening those magical doors).\nBut buttons aren’t created equal! From ancient levers ⚔️ to modern touch-sensitive controls, their purpose is always tied to one thing: action! They symbolize power in your hands—press it, and boom 💥—something happens.\n\n🛠️ How Does a Button Actually Work?\nThere are different types of buttons for different needs, but here’s a breakdown of how most work:\n1️⃣ Pressure Mechanism:\nWhen you press a button 💪, you push down on what’s called an \"actuator.\" This physical action connects two separated parts of an electronic circuit.\n2️⃣ Closed Circuit Magic:\nOnce connected (aka \"closed\"), the circuit allows electricity to flow through like opening floodgates 🚿. This powers the device or command associated with that button.\n3️⃣ Release Action:\nWhen you let go of the button, most will spring back thanks to a tiny spring or mechanism inside 🔄. The circuit is now \"open,\" and electricity stops flowing.\n🎯 Example: That satisfying click when you press your computer mouse button? That’s the sound of the actuator completing its task!\n\n🧠 Buttons in Tech: From Clicky to Invisible\nButtons have evolved into absolute wizards over time:\n\nMechanical Buttons (Old-School!): Think light switches or typewriters! These require a physical press for activation.\nCapacitive Touch Buttons: Found on smartphones 📱 or microwaves — they don’t move but detect your finger using electrical charge.\nVirtual Buttons: No moving parts at all! These are just pixels on your screen that mimic real buttons 🎮.\n\n💡 Fun Fact: Did you know that some elevators now use holographic buttons? You don’t even need to touch them; just hover your finger over glowing air. Welcome to science fiction made real! 🚀\n\n🎨 Designing “My btn” – A Challenge for You!\nThink about it, Andy — every button is designed with purpose in mind:\n\nShould it feel soft or firm? 🤔\nShould it make a sound like click! or stay silent? 🎵\nShould it glow when active ⚡?\n\nImagine creating a super-button of your own... What would yours control? Maybe “My Btn” could start your coffee machine ☕, dim all lights 🕯️, and play epic music 🎸 simultaneously!\n\n🌟 A World Without Buttons?\nNow here’s where things get dramatic... What if buttons disappeared overnight?! 😱 Planes wouldn’t take off ✈️; phones wouldn’t unlock 🔒; video games would freeze mid-battle 🎮💀. Even though they seem small and insignificant at times, buttons are everywhere—bridging human intention with machine execution!\n\n✨ Wrap-Up\nSo Andy, next time you press “my btn,” give it some love ❤️. Whether it’s launching rockets 🚀 or just skipping songs 🎶, every click matters! Behind every humble button is centuries of engineering genius designed to make life easier (and cooler).\"\n"
+                              "text": "✅ Bot response received: \"Ohhh, Dwight — “my btn”? That sounds like the start of something. Is this a secret tech project of yours? Or maybe a mysterious code name? 🕵️‍♂️✨\nIf you're talking about a button (btn) in programming or design terms, I’m ready to dive into how to style it, animate it, or even make it sing (well, metaphorically). 🎨💻 Let me know where you want to take this!\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:45:03.691Z",
+                          "startTime": "2025-05-20T06:38:26.609Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: 🖱️ The Marvel of Buttons: Small Clicks, Big Magic! ✨\nAndy, imagine a world without buttons. Scary, right? 🌍 Imagine fumbling with a touchscreen to start your toaster or yelling at your washing machine to stop mid-spin! 😅 A single button can be the gatekeeper between chaos and order, simplicity and complexity. But let’s take a closer look at this tiny hero of the modern world — the button (or as you said, \"my btn!\") — and uncover its hidden genius. 🚪🔍\n\n🎬 The Button: A Star With a Simple Role\nPicture this: You’re standing in front of an elevator. The shiny steel doors are closed tight. Will they magically open if you just stand there? Nope. Enter the button — your trusty sidekick that connects your intention (going up 🛗) with the machine’s action (opening those magical doors).\nBut buttons aren’t created equal! From ancient levers ⚔️ to modern touch-sensitive controls, their purpose is always tied to one thing: action! They symbolize power in your hands—press it, and boom 💥—something happens.\n\n🛠️ How Does a Button Actually Work?\nThere are different types of buttons for different needs, but here’s a breakdown of how most work:\n1️⃣ Pressure Mechanism:\nWhen you press a button 💪, you push down on what’s called an \"actuator.\" This physical action connects two separated parts of an electronic circuit.\n2️⃣ Closed Circuit Magic:\nOnce connected (aka \"closed\"), the circuit allows electricity to flow through like opening floodgates 🚿. This powers the device or command associated with that button.\n3️⃣ Release Action:\nWhen you let go of the button, most will spring back thanks to a tiny spring or mechanism inside 🔄. The circuit is now \"open,\" and electricity stops flowing.\n🎯 Example: That satisfying click when you press your computer mouse button? That’s the sound of the actuator completing its task!\n\n🧠 Buttons in Tech: From Clicky to Invisible\nButtons have evolved into absolute wizards over time:\n\nMechanical Buttons (Old-School!): Think light switches or typewriters! These require a physical press for activation.\nCapacitive Touch Buttons: Found on smartphones 📱 or microwaves — they don’t move but detect your finger using electrical charge.\nVirtual Buttons: No moving parts at all! These are just pixels on your screen that mimic real buttons 🎮.\n\n💡 Fun Fact: Did you know that some elevators now use holographic buttons? You don’t even need to touch them; just hover your finger over glowing air. Welcome to science fiction made real! 🚀\n\n🎨 Designing “My btn” – A Challenge for You!\nThink about it, Andy — every button is designed with purpose in mind:\n\nShould it feel soft or firm? 🤔\nShould it make a sound like click! or stay silent? 🎵\nShould it glow when active ⚡?\n\nImagine creating a super-button of your own... What would yours control? Maybe “My Btn” could start your coffee machine ☕, dim all lights 🕯️, and play epic music 🎸 simultaneously!\n\n🌟 A World Without Buttons?\nNow here’s where things get dramatic... What if buttons disappeared overnight?! 😱 Planes wouldn’t take off ✈️; phones wouldn’t unlock 🔒; video games would freeze mid-battle 🎮💀. Even though they seem small and insignificant at times, buttons are everywhere—bridging human intention with machine execution!\n\n✨ Wrap-Up\nSo Andy, next time you press “my btn,” give it some love ❤️. Whether it’s launching rockets 🚀 or just skipping songs 🎶, every click matters! Behind every humble button is centuries of engineering genius designed to make life easier (and cooler)."
+                              "description": "Bot response: Ohhh, Dwight — “my btn”? That sounds like the start of something. Is this a secret tech project of yours? Or maybe a mysterious code name? 🕵️‍♂️✨\nIf you're talking about a button (btn) in programming or design terms, I’m ready to dive into how to style it, animate it, or even make it sing (well, metaphorically). 🎨💻 Let me know where you want to take this!"
                             }
                           ],
                           "attachments": []
@@ -731,7 +731,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 6821,
+                          "duration": 7847,
                           "errors": [],
                           "stdout": [
                             {
@@ -749,7 +749,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:45:30.637Z",
+                          "startTime": "2025-05-20T06:38:32.923Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -778,7 +778,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1175,
+                          "duration": 1576,
                           "errors": [],
                           "stdout": [
                             {
@@ -805,7 +805,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:45:37.466Z",
+                          "startTime": "2025-05-20T06:38:40.774Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -834,12 +834,9 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 60056,
+                          "duration": 60076,
                           "errors": [],
                           "stdout": [
-                            {
-                              "text": "⏳ Waiting for inactivity popup to appear...\n"
-                            },
                             {
                               "text": "⏳ Waiting for inactivity popup to appear...\n"
                             },
@@ -852,7 +849,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:45:38.648Z",
+                          "startTime": "2025-05-20T06:38:42.356Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -866,46 +863,51 @@
                   "column": 5
                 },
                 {
-                  "title": "TC_16: ⏱️ Session pop-up displays after 1 minute and closes",
+                  "title": "TC_16: ⏱️ Session pop-up displays after 1 minute and close pop-up",
                   "ok": true,
                   "tags": [],
                   "tests": [
                     {
                       "timeout": 120000,
-                      "annotations": [
-                        {
-                          "type": "skip"
-                        }
-                      ],
-                      "expectedStatus": "skipped",
+                      "annotations": [],
+                      "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
                       "results": [
                         {
                           "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "skipped",
-                          "duration": 0,
+                          "status": "passed",
+                          "duration": 67525,
                           "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-19T05:46:38.714Z",
-                          "annotations": [
+                          "stdout": [
                             {
-                              "type": "skip"
+                              "text": "⏳ Waiting for inactivity popup to appear for close...\n"
+                            },
+                            {
+                              "text": "✅ Inactivity popup is visible.\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "✅ Initial bot message received.\n"
                             }
                           ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-20T06:39:42.432Z",
+                          "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "skipped"
+                      "status": "expected"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-424a4ccbc5d2b80a5d4e",
+                  "id": "23335bb06d3df52af178-5d4f81bc3f008b80e549",
                   "file": "Chatbot.spec.ts",
                   "line": 121,
-                  "column": 6
+                  "column": 5
                 },
                 {
                   "title": "TC_17: 🧭 Browser tab terminated and search history page is verified",
@@ -917,7 +919,7 @@
                       "annotations": [
                         {
                           "type": "info",
-                          "description": "Bot response: Radium: היסוד שזוהר בחושך וגם משנה את ההיסטוריה! ✨☢️\nדמיין את זה, Andy: שנת 1898, מעבדה קטנה בפריז. זוג מדענים, מארי ופייר קירי, עומדים נרגשים מול מבחנה קטנטנה שנראית כאילו היא מכילה אבקת קסמים. ומה כל כך מיוחד באבקה הזו? היא... זוהרת! 🌟 בדיוק כך התגלה היסוד רדיום (Radium), אחד החומרים המסתוריים והמרתקים ביותר בכימיה ובהיסטוריה האנושית.\nמוכן לצלול לסיפור של רדיום? בוא נתחיל!\n\n🎬 איך הכל התחיל?\nרדיום הוא יסוד כימי עם הסמל Ra ומספר אטומי 88. הוא שייך למשפחת ה-מתכות האלקליות-ארציות (Alkaline Earth Metals). אבל מה שהופך אותו לייחודי באמת זו התכונה שלו: רדיו-אקטיביות מטורפת! 💥\nכשהמדענית הדגולה מארי קירי חקרה מינרל בשם פיצ'בלנדה (סוג של אורניום), היא גילתה בו \"קרניים מסתוריות\" שלא הכירו קודם לכן. הקרניים האלו היו תוצר של יסוד חדש – רדיום – שהיה הרבה יותר רדיואקטיבי מאורניום עצמו.\nהעבודה על רדיום זיכתה את מארי ופייר בפרס נובל 🎉 (ועם זאת, גם השפיעה לרעה על בריאותם… אבל עוד נדבר על זה).\n\n🧪 אז מה זה בעצם רדיום?\nרדיום הוא מתכת כסופה מבריקה 🪙, אבל יש לזה טוויסט: אם תשאיר אותו באוויר זמן מה, הוא יהפוך לשחור בשל תגובה כימית עם חמצן 😲.\nכמה פרטים טכניים מגניבים:\n\nמספר אטומי: 88\nמשקל אטומי: 226\nמצב צבירה: מוצק בטמפרטורת החדר 🌡\nתכונה בולטת: הוא פולט קרינה בעוצמה כה חזקה שהוא יכול לגרום לחומרים מסוימים סביבו לזהור באור ירקרק בחושך! 🌌\n\n\n🔬 למה השתמשו ברדיום בעבר?\nאההה… כאן מתחילה ההרפתקה האמיתית! במשך עשורים, כולם היו משוגעים על רדיום. למה? כי אנשים חשבו שהוא קסם רפואי 💊✨.\n\n\nשעונים זוהרים בחושך:\nבתחילת המאה ה-20 השתמשו ברדיום כדי להפוך מחוגים של שעונים לזוהרים בלילה ללא צורך בתאורה חיצונית ⏱🌙.\n\n\nתרופות \"מדהימות\":\nאנשים שתו מים מועשרים ברדיום (!!) מתוך אמונה שזה מחזק את העצמות ומשפר את הבריאות 😱.\n\n\nקוסמטיקה (!)\nחברות מסוימות שילבו רדיום במוצרי איפור וקרמים לעור כדי \"להצעיר\" את המשתמשות 🎭.\n\n\nאבל אז… הגיעה ההבנה שהחומר הזה מסוכן מאוד.\n\n⚠️ סכנות הרדיום – הצד האפל של הזוהר\nבתקופה ההיא עדיין לא ידעו מספיק על קרינה ועל הסיכונים הבריאותיים הכרוכים בה.\n👩‍🎨 אחת הדוגמאות המפורסמות ביותר היא סיפורן העצוב של \"נערות הרדיום\" – נשים שעבדו במפעלים שייצרו שעונים זוהרים וצבעו מחוגים בידיים שלהן. הן נהגו ללקק מברשות כדי לדייק בצביעה (!!), מה שגרם להן לשאוף כמויות קטלניות של רדיום לתוך גופן 😔. רבות מהן לקו במחלות קשות ואף איבדו חיים כתוצאה מהרעלת קרינה.\n🤯 ומה עם המים ה\"בריאותיים\"? אנשים ששתו אותם בשנות ה-20 מצאו עצמם עם בעיות חמורות כמו סרטן ואיברים מתפוררים (!) — לא בדיוק אפקט מרפא…\n\n💡 ידעת ש...?\n\nרדיום כל כך נדיר שאפילו בטון אחד של אדמת כדור הארץ מכיל רק כמה מיליגרמים ממנו!\nהוא מתפרק לקרינה חזקה שמובילה ליצירת גז בשם ראדון (Radon) שגם הוא... כן, ניחשת נכון: רדיו-אקטיבי מאוד ☢️.\nמארי קירי הייתה האדם הראשון אי פעם שזכה בשני פרסי נובל במדעים שונים – פיזיקה וכימיה 🏆🏆 – תודות לעבודתה על רדיום ורדיו-אקטיביות!\n\n\n🚀 לסיום מרתק...\nרדיום אולי היה פעם סמל לקסם ולפלא מדעי, אבל היום אנחנו מבינים שהוא גם תזכורת אדירה לכוח ולעוצמה שטמונה במדע — לטוב ולרע 🌟⚠️. למרות התגליות המסוכנות סביבו, הרעיון של חקר הרדיואקטיביות סלל דרך לפיתוח שימושים בטוחים יותר כמו טיפול בסרטן באמצעות קרינה 🎗️💡."
+                          "description": "Bot response: \"הסלט שכבש את סין – איך להכין Chinese Cabbage Salad מושלם? 🥗🇨🇳\"\nדמיין רגע שולחן חגיגי, מלא צבעים וטעמים, וכוכב הסעודה הוא סלט מרענן, פריך ומלא חיים. זה לא עוד סתם סלט — זה Chinese Cabbage Salad! 🍴✨ בוא נצלול לתוך המתכון המלא ונגלה איך ליצור את הקסם הזה שלב אחרי שלב.\n\n🎬 שלב ראשון: החומרים שצריך לאסוף\nכמו כל הרפתקה טובה, גם כאן אנחנו צריכים לצאת לדרך מצוידים היטב. הנה רשימת החומרים:\nלרכיבי הסלט:\n\nכרוב סיני (הגיבור הראשי שלנו 🥬) – בערך חצי ראש בינוני או יותר לפי צורך.\nגזר אחד גדול – מגורד לגפרורים דקיקים או רצועות. 🥕\nפלפל אדום יחיד – חתוך לרצועות דקות בשביל הבזק של צבע מתוק ויפה. 🌶️\nירוקים רעננים: בצל ירוק קצוץ (2-3 גבעולים) וכוסברה טרייה אם אוהבים (חופן קטן).\nאפשר להוסיף גם קצת שקדים קלויים פרוסים או אגוזי מלך כתוספת קראנצ'ית! 🥜\n\nלרוטב החלומי:\n\n3 כפות סויה איכותית 🍶\nכף שמן שומשום קלוי (הריח הזה 😍... ממכר!)\nכף חומץ אורז (או חומץ רגיל למי שאין).\n2 כפות דבש או סירופ מייפל בשביל איזון מתיקות 🌟\nכפית ג'ינג'ר טרי מגורד – כי בלי זה, זה לא באמת \"סיני\".\nשן שום מעוכה (אופציונלי, למי שאוהב טוויסט עוקצני 💥).\n\nטיפ קטן: להכנת הרוטב ברמה גבוהה, תוכל להוסיף גם כמה טיפות שמן צ'ילי אם בא לך חריפות עדינה 🔥.\n\n🧑‍🍳 שלב שני: ההכנות מתחילות!\n\nחיתוך הכרוב הסיני: שטוף היטב את הכרוב וחתוך אותו לרצועות דקות. זה הבסיס הפריך שלנו – אז תשקיע בסבלנות. 🙌\nגירוד הגזר: השתמש בפומפייה או קולפן מיוחד לגזר כדי ליצור רצועות יפות ודקות.\nפלפל אדום: חתוך אותו לרצועות קטנות ועדינות כדי לשלב צבע וטעם.\nהירוקים: קצוץ את הבצל הירוק והכוסברה טרייה דק ככל שאפשר.\n\n\n🍯 שלב שלישי: מכינים את הרוטב הסודי\nזהו חלק שהוא כמו קסם בכוס קטנה! 🎩✨ בקערה קטנה:\n\nערבב יחד את כל המרכיבים – הסויה, שמן השומשום, החומץ, הדבש/מייפל, הג’ינג’ר והשום.\nנסה לטעום ולכוון לפי הטעם שלך — מתוק יותר? הוסף עוד טיפונת דבש 🐝; חמוץ מדי? הוסף שוב קורט קטן של מייפל.\n\n\n🔀 שלב רביעי: מחברים בין העולמות\n\nקח קערת ערבוב גדולה והנח בה את הכרוב הסיני עם כל הירקות החתוכים והירוקים הקצוצים.\nמזוג בעדינות את הרוטב מעל הירקות וערבב הכל בעזרת ידיים נקיות או כף עץ גדולה — עד שהרוטב יעטוף כל פיסה בצורה מושלמת!\nאם בא לך \"קריספיות\", תוכל לפזר מעל לפני ההגשה שקדים קלויים או שומשום קלוי.\n\n\n🌟 שלב חמישי ואחרון: ההגשה המלכותית\nהעבר בעדינות לקערת הגשה יפה וצבעונית — כי עיניים אוכלות קודם! 👀✨ אפשר להוסיף עוד קצת ירוקים מעל לקישוט אחרון ולהגיש מיד.\n\n💡 רגע של חוכמה סינית: ידעת שהכרוב הסיני הוא לא רק טעים? הוא עשיר בויטמין C וברזל נהדר לגוף שלך! 💪"
                         }
                       ],
                       "expectedStatus": "passed",
@@ -928,20 +930,20 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 54243,
+                          "duration": 57426,
                           "errors": [],
                           "stdout": [
                             {
-                              "text": "💬 Submitting query: \"תסביר לי בפרטים על Radium.\"\n"
+                              "text": "💬 Submitting query: \"איך להכין Chinese Cabbage Salad? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
                             },
                             {
                               "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
                             },
                             {
-                              "text": "✅ Bot response received: \"Radium: היסוד שזוהר בחושך וגם משנה את ההיסטוריה! ✨☢️\nדמיין את זה, Andy: שנת 1898, מעבדה קטנה בפריז. זוג מדענים, מארי ופייר קירי, עומדים נרגשים מול מבחנה קטנטנה שנראית כאילו היא מכילה אבקת קסמים. ומה כל כך מיוחד באבקה הזו? היא... זוהרת! 🌟 בדיוק כך התגלה היסוד רדיום (Radium), אחד החומרים המסתוריים והמרתקים ביותר בכימיה ובהיסטוריה האנושית.\nמוכן לצלול לסיפור של רדיום? בוא נתחיל!\n\n🎬 איך הכל התחיל?\nרדיום הוא יסוד כימי עם הסמל Ra ומספר אטומי 88. הוא שייך למשפחת ה-מתכות האלקליות-ארציות (Alkaline Earth Metals). אבל מה שהופך אותו לייחודי באמת זו התכונה שלו: רדיו-אקטיביות מטורפת! 💥\nכשהמדענית הדגולה מארי קירי חקרה מינרל בשם פיצ'בלנדה (סוג של אורניום), היא גילתה בו \"קרניים מסתוריות\" שלא הכירו קודם לכן. הקרניים האלו היו תוצר של יסוד חדש – רדיום – שהיה הרבה יותר רדיואקטיבי מאורניום עצמו.\nהעבודה על רדיום זיכתה את מארי ופייר בפרס נובל 🎉 (ועם זאת, גם השפיעה לרעה על בריאותם… אבל עוד נדבר על זה).\n\n🧪 אז מה זה בעצם רדיום?\nרדיום הוא מתכת כסופה מבריקה 🪙, אבל יש לזה טוויסט: אם תשאיר אותו באוויר זמן מה, הוא יהפוך לשחור בשל תגובה כימית עם חמצן 😲.\nכמה פרטים טכניים מגניבים:\n\nמספר אטומי: 88\nמשקל אטומי: 226\nמצב צבירה: מוצק בטמפרטורת החדר 🌡\nתכונה בולטת: הוא פולט קרינה בעוצמה כה חזקה שהוא יכול לגרום לחומרים מסוימים סביבו לזהור באור ירקרק בחושך! 🌌\n\n\n🔬 למה השתמשו ברדיום בעבר?\nאההה… כאן מתחילה ההרפתקה האמיתית! במשך עשורים, כולם היו משוגעים על רדיום. למה? כי אנשים חשבו שהוא קסם רפואי 💊✨.\n\n\nשעונים זוהרים בחושך:\nבתחילת המאה ה-20 השתמשו ברדיום כדי להפוך מחוגים של שעונים לזוהרים בלילה ללא צורך בתאורה חיצונית ⏱🌙.\n\n\nתרופות \"מדהימות\":\nאנשים שתו מים מועשרים ברדיום (!!) מתוך אמונה שזה מחזק את העצמות ומשפר את הבריאות 😱.\n\n\nקוסמטיקה (!)\nחברות מסוימות שילבו רדיום במוצרי איפור וקרמים לעור כדי \"להצעיר\" את המשתמשות 🎭.\n\n\nאבל אז… הגיעה ההבנה שהחומר הזה מסוכן מאוד.\n\n⚠️ סכנות הרדיום – הצד האפל של הזוהר\nבתקופה ההיא עדיין לא ידעו מספיק על קרינה ועל הסיכונים הבריאותיים הכרוכים בה.\n👩‍🎨 אחת הדוגמאות המפורסמות ביותר היא סיפורן העצוב של \"נערות הרדיום\" – נשים שעבדו במפעלים שייצרו שעונים זוהרים וצבעו מחוגים בידיים שלהן. הן נהגו ללקק מברשות כדי לדייק בצביעה (!!), מה שגרם להן לשאוף כמויות קטלניות של רדיום לתוך גופן 😔. רבות מהן לקו במחלות קשות ואף איבדו חיים כתוצאה מהרעלת קרינה.\n🤯 ומה עם המים ה\"בריאותיים\"? אנשים ששתו אותם בשנות ה-20 מצאו עצמם עם בעיות חמורות כמו סרטן ואיברים מתפוררים (!) — לא בדיוק אפקט מרפא…\n\n💡 ידעת ש...?\n\nרדיום כל כך נדיר שאפילו בטון אחד של אדמת כדור הארץ מכיל רק כמה מיליגרמים ממנו!\nהוא מתפרק לקרינה חזקה שמובילה ליצירת גז בשם ראדון (Radon) שגם הוא... כן, ניחשת נכון: רדיו-אקטיבי מאוד ☢️.\nמארי קירי הייתה האדם הראשון אי פעם שזכה בשני פרסי נובל במדעים שונים – פיזיקה וכימיה 🏆🏆 – תודות לעבודתה על רדיום ורדיו-אקטיביות!\n\n\n🚀 לסיום מרתק...\nרדיום אולי היה פעם סמל לקסם ולפלא מדעי, אבל היום אנחנו מבינים שהוא גם תזכורת אדירה לכוח ולעוצמה שטמונה במדע — לטוב ולרע 🌟⚠️. למרות התגליות המסוכנות סביבו, הרעיון של חקר הרדיואקטיביות סלל דרך לפיתוח שימושים בטוחים יותר כמו טיפול בסרטן באמצעות קרינה 🎗️💡.\"\n"
+                              "text": "✅ Bot response received: \"\"הסלט שכבש את סין – איך להכין Chinese Cabbage Salad מושלם? 🥗🇨🇳\"\nדמיין רגע שולחן חגיגי, מלא צבעים וטעמים, וכוכב הסעודה הוא סלט מרענן, פריך ומלא חיים. זה לא עוד סתם סלט — זה Chinese Cabbage Salad! 🍴✨ בוא נצלול לתוך המתכון המלא ונגלה איך ליצור את הקסם הזה שלב אחרי שלב.\n\n🎬 שלב ראשון: החומרים שצריך לאסוף\nכמו כל הרפתקה טובה, גם כאן אנחנו צריכים לצאת לדרך מצוידים היטב. הנה רשימת החומרים:\nלרכיבי הסלט:\n\nכרוב סיני (הגיבור הראשי שלנו 🥬) – בערך חצי ראש בינוני או יותר לפי צורך.\nגזר אחד גדול – מגורד לגפרורים דקיקים או רצועות. 🥕\nפלפל אדום יחיד – חתוך לרצועות דקות בשביל הבזק של צבע מתוק ויפה. 🌶️\nירוקים רעננים: בצל ירוק קצוץ (2-3 גבעולים) וכוסברה טרייה אם אוהבים (חופן קטן).\nאפשר להוסיף גם קצת שקדים קלויים פרוסים או אגוזי מלך כתוספת קראנצ'ית! 🥜\n\nלרוטב החלומי:\n\n3 כפות סויה איכותית 🍶\nכף שמן שומשום קלוי (הריח הזה 😍... ממכר!)\nכף חומץ אורז (או חומץ רגיל למי שאין).\n2 כפות דבש או סירופ מייפל בשביל איזון מתיקות 🌟\nכפית ג'ינג'ר טרי מגורד – כי בלי זה, זה לא באמת \"סיני\".\nשן שום מעוכה (אופציונלי, למי שאוהב טוויסט עוקצני 💥).\n\nטיפ קטן: להכנת הרוטב ברמה גבוהה, תוכל להוסיף גם כמה טיפות שמן צ'ילי אם בא לך חריפות עדינה 🔥.\n\n🧑‍🍳 שלב שני: ההכנות מתחילות!\n\nחיתוך הכרוב הסיני: שטוף היטב את הכרוב וחתוך אותו לרצועות דקות. זה הבסיס הפריך שלנו – אז תשקיע בסבלנות. 🙌\nגירוד הגזר: השתמש בפומפייה או קולפן מיוחד לגזר כדי ליצור רצועות יפות ודקות.\nפלפל אדום: חתוך אותו לרצועות קטנות ועדינות כדי לשלב צבע וטעם.\nהירוקים: קצוץ את הבצל הירוק והכוסברה טרייה דק ככל שאפשר.\n\n\n🍯 שלב שלישי: מכינים את הרוטב הסודי\nזהו חלק שהוא כמו קסם בכוס קטנה! 🎩✨ בקערה קטנה:\n\nערבב יחד את כל המרכיבים – הסויה, שמן השומשום, החומץ, הדבש/מייפל, הג’ינג’ר והשום.\nנסה לטעום ולכוון לפי הטעם שלך — מתוק יותר? הוסף עוד טיפונת דבש 🐝; חמוץ מדי? הוסף שוב קורט קטן של מייפל.\n\n\n🔀 שלב רביעי: מחברים בין העולמות\n\nקח קערת ערבוב גדולה והנח בה את הכרוב הסיני עם כל הירקות החתוכים והירוקים הקצוצים.\nמזוג בעדינות את הרוטב מעל הירקות וערבב הכל בעזרת ידיים נקיות או כף עץ גדולה — עד שהרוטב יעטוף כל פיסה בצורה מושלמת!\nאם בא לך \"קריספיות\", תוכל לפזר מעל לפני ההגשה שקדים קלויים או שומשום קלוי.\n\n\n🌟 שלב חמישי ואחרון: ההגשה המלכותית\nהעבר בעדינות לקערת הגשה יפה וצבעונית — כי עיניים אוכלות קודם! 👀✨ אפשר להוסיף עוד קצת ירוקים מעל לקישוט אחרון ולהגיש מיד.\n\n💡 רגע של חוכמה סינית: ידעת שהכרוב הסיני הוא לא רק טעים? הוא עשיר בויטמין C וברזל נהדר לגוף שלך! 💪\"\n"
                             },
                             {
-                              "text": "🔍 Searching for message: \"תסביר לי בפרטים על Radium.\"\n"
+                              "text": "🔍 Searching for message: \"איך להכין Chinese Cabbage Salad? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
                             },
                             {
                               "text": "🧹 Closing context\n"
@@ -949,11 +951,11 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:46:38.715Z",
+                          "startTime": "2025-05-20T06:40:49.968Z",
                           "annotations": [
                             {
                               "type": "info",
-                              "description": "Bot response: Radium: היסוד שזוהר בחושך וגם משנה את ההיסטוריה! ✨☢️\nדמיין את זה, Andy: שנת 1898, מעבדה קטנה בפריז. זוג מדענים, מארי ופייר קירי, עומדים נרגשים מול מבחנה קטנטנה שנראית כאילו היא מכילה אבקת קסמים. ומה כל כך מיוחד באבקה הזו? היא... זוהרת! 🌟 בדיוק כך התגלה היסוד רדיום (Radium), אחד החומרים המסתוריים והמרתקים ביותר בכימיה ובהיסטוריה האנושית.\nמוכן לצלול לסיפור של רדיום? בוא נתחיל!\n\n🎬 איך הכל התחיל?\nרדיום הוא יסוד כימי עם הסמל Ra ומספר אטומי 88. הוא שייך למשפחת ה-מתכות האלקליות-ארציות (Alkaline Earth Metals). אבל מה שהופך אותו לייחודי באמת זו התכונה שלו: רדיו-אקטיביות מטורפת! 💥\nכשהמדענית הדגולה מארי קירי חקרה מינרל בשם פיצ'בלנדה (סוג של אורניום), היא גילתה בו \"קרניים מסתוריות\" שלא הכירו קודם לכן. הקרניים האלו היו תוצר של יסוד חדש – רדיום – שהיה הרבה יותר רדיואקטיבי מאורניום עצמו.\nהעבודה על רדיום זיכתה את מארי ופייר בפרס נובל 🎉 (ועם זאת, גם השפיעה לרעה על בריאותם… אבל עוד נדבר על זה).\n\n🧪 אז מה זה בעצם רדיום?\nרדיום הוא מתכת כסופה מבריקה 🪙, אבל יש לזה טוויסט: אם תשאיר אותו באוויר זמן מה, הוא יהפוך לשחור בשל תגובה כימית עם חמצן 😲.\nכמה פרטים טכניים מגניבים:\n\nמספר אטומי: 88\nמשקל אטומי: 226\nמצב צבירה: מוצק בטמפרטורת החדר 🌡\nתכונה בולטת: הוא פולט קרינה בעוצמה כה חזקה שהוא יכול לגרום לחומרים מסוימים סביבו לזהור באור ירקרק בחושך! 🌌\n\n\n🔬 למה השתמשו ברדיום בעבר?\nאההה… כאן מתחילה ההרפתקה האמיתית! במשך עשורים, כולם היו משוגעים על רדיום. למה? כי אנשים חשבו שהוא קסם רפואי 💊✨.\n\n\nשעונים זוהרים בחושך:\nבתחילת המאה ה-20 השתמשו ברדיום כדי להפוך מחוגים של שעונים לזוהרים בלילה ללא צורך בתאורה חיצונית ⏱🌙.\n\n\nתרופות \"מדהימות\":\nאנשים שתו מים מועשרים ברדיום (!!) מתוך אמונה שזה מחזק את העצמות ומשפר את הבריאות 😱.\n\n\nקוסמטיקה (!)\nחברות מסוימות שילבו רדיום במוצרי איפור וקרמים לעור כדי \"להצעיר\" את המשתמשות 🎭.\n\n\nאבל אז… הגיעה ההבנה שהחומר הזה מסוכן מאוד.\n\n⚠️ סכנות הרדיום – הצד האפל של הזוהר\nבתקופה ההיא עדיין לא ידעו מספיק על קרינה ועל הסיכונים הבריאותיים הכרוכים בה.\n👩‍🎨 אחת הדוגמאות המפורסמות ביותר היא סיפורן העצוב של \"נערות הרדיום\" – נשים שעבדו במפעלים שייצרו שעונים זוהרים וצבעו מחוגים בידיים שלהן. הן נהגו ללקק מברשות כדי לדייק בצביעה (!!), מה שגרם להן לשאוף כמויות קטלניות של רדיום לתוך גופן 😔. רבות מהן לקו במחלות קשות ואף איבדו חיים כתוצאה מהרעלת קרינה.\n🤯 ומה עם המים ה\"בריאותיים\"? אנשים ששתו אותם בשנות ה-20 מצאו עצמם עם בעיות חמורות כמו סרטן ואיברים מתפוררים (!) — לא בדיוק אפקט מרפא…\n\n💡 ידעת ש...?\n\nרדיום כל כך נדיר שאפילו בטון אחד של אדמת כדור הארץ מכיל רק כמה מיליגרמים ממנו!\nהוא מתפרק לקרינה חזקה שמובילה ליצירת גז בשם ראדון (Radon) שגם הוא... כן, ניחשת נכון: רדיו-אקטיבי מאוד ☢️.\nמארי קירי הייתה האדם הראשון אי פעם שזכה בשני פרסי נובל במדעים שונים – פיזיקה וכימיה 🏆🏆 – תודות לעבודתה על רדיום ורדיו-אקטיביות!\n\n\n🚀 לסיום מרתק...\nרדיום אולי היה פעם סמל לקסם ולפלא מדעי, אבל היום אנחנו מבינים שהוא גם תזכורת אדירה לכוח ולעוצמה שטמונה במדע — לטוב ולרע 🌟⚠️. למרות התגליות המסוכנות סביבו, הרעיון של חקר הרדיואקטיביות סלל דרך לפיתוח שימושים בטוחים יותר כמו טיפול בסרטן באמצעות קרינה 🎗️💡."
+                              "description": "Bot response: \"הסלט שכבש את סין – איך להכין Chinese Cabbage Salad מושלם? 🥗🇨🇳\"\nדמיין רגע שולחן חגיגי, מלא צבעים וטעמים, וכוכב הסעודה הוא סלט מרענן, פריך ומלא חיים. זה לא עוד סתם סלט — זה Chinese Cabbage Salad! 🍴✨ בוא נצלול לתוך המתכון המלא ונגלה איך ליצור את הקסם הזה שלב אחרי שלב.\n\n🎬 שלב ראשון: החומרים שצריך לאסוף\nכמו כל הרפתקה טובה, גם כאן אנחנו צריכים לצאת לדרך מצוידים היטב. הנה רשימת החומרים:\nלרכיבי הסלט:\n\nכרוב סיני (הגיבור הראשי שלנו 🥬) – בערך חצי ראש בינוני או יותר לפי צורך.\nגזר אחד גדול – מגורד לגפרורים דקיקים או רצועות. 🥕\nפלפל אדום יחיד – חתוך לרצועות דקות בשביל הבזק של צבע מתוק ויפה. 🌶️\nירוקים רעננים: בצל ירוק קצוץ (2-3 גבעולים) וכוסברה טרייה אם אוהבים (חופן קטן).\nאפשר להוסיף גם קצת שקדים קלויים פרוסים או אגוזי מלך כתוספת קראנצ'ית! 🥜\n\nלרוטב החלומי:\n\n3 כפות סויה איכותית 🍶\nכף שמן שומשום קלוי (הריח הזה 😍... ממכר!)\nכף חומץ אורז (או חומץ רגיל למי שאין).\n2 כפות דבש או סירופ מייפל בשביל איזון מתיקות 🌟\nכפית ג'ינג'ר טרי מגורד – כי בלי זה, זה לא באמת \"סיני\".\nשן שום מעוכה (אופציונלי, למי שאוהב טוויסט עוקצני 💥).\n\nטיפ קטן: להכנת הרוטב ברמה גבוהה, תוכל להוסיף גם כמה טיפות שמן צ'ילי אם בא לך חריפות עדינה 🔥.\n\n🧑‍🍳 שלב שני: ההכנות מתחילות!\n\nחיתוך הכרוב הסיני: שטוף היטב את הכרוב וחתוך אותו לרצועות דקות. זה הבסיס הפריך שלנו – אז תשקיע בסבלנות. 🙌\nגירוד הגזר: השתמש בפומפייה או קולפן מיוחד לגזר כדי ליצור רצועות יפות ודקות.\nפלפל אדום: חתוך אותו לרצועות קטנות ועדינות כדי לשלב צבע וטעם.\nהירוקים: קצוץ את הבצל הירוק והכוסברה טרייה דק ככל שאפשר.\n\n\n🍯 שלב שלישי: מכינים את הרוטב הסודי\nזהו חלק שהוא כמו קסם בכוס קטנה! 🎩✨ בקערה קטנה:\n\nערבב יחד את כל המרכיבים – הסויה, שמן השומשום, החומץ, הדבש/מייפל, הג’ינג’ר והשום.\nנסה לטעום ולכוון לפי הטעם שלך — מתוק יותר? הוסף עוד טיפונת דבש 🐝; חמוץ מדי? הוסף שוב קורט קטן של מייפל.\n\n\n🔀 שלב רביעי: מחברים בין העולמות\n\nקח קערת ערבוב גדולה והנח בה את הכרוב הסיני עם כל הירקות החתוכים והירוקים הקצוצים.\nמזוג בעדינות את הרוטב מעל הירקות וערבב הכל בעזרת ידיים נקיות או כף עץ גדולה — עד שהרוטב יעטוף כל פיסה בצורה מושלמת!\nאם בא לך \"קריספיות\", תוכל לפזר מעל לפני ההגשה שקדים קלויים או שומשום קלוי.\n\n\n🌟 שלב חמישי ואחרון: ההגשה המלכותית\nהעבר בעדינות לקערת הגשה יפה וצבעונית — כי עיניים אוכלות קודם! 👀✨ אפשר להוסיף עוד קצת ירוקים מעל לקישוט אחרון ולהגיש מיד.\n\n💡 רגע של חוכמה סינית: ידעת שהכרוב הסיני הוא לא רק טעים? הוא עשיר בויטמין C וברזל נהדר לגוף שלך! 💪"
                             }
                           ],
                           "attachments": []
@@ -964,7 +966,7 @@
                   ],
                   "id": "23335bb06d3df52af178-d341bd3b09fe8027bbd4",
                   "file": "Chatbot.spec.ts",
-                  "line": 127,
+                  "line": 130,
                   "column": 5
                 }
               ]
@@ -995,17 +997,12 @@
               "specs": [
                 {
                   "title": "TC_18 🔍 Search in chat history",
-                  "ok": true,
+                  "ok": false,
                   "tags": [],
                   "tests": [
                     {
                       "timeout": 120000,
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: 🍉🍗 חגיגה לשולחן: איך להכין Watermelon-infused Turkey Roast שלוקח את הארוחה שלך לגלקסיה אחרת! 🌟🦃\nדמיין את זה, Andy: שולחן ארוחת ערב, כולם ממתינים בציפייה, ואז אתה מביא למרכז השולחן תרנגול הודו עסיסי, מנוקד בטעמים אקזוטיים של אבטיח מתוק ורענן. קונספט לא שגרתי? בהחלט. טעים להפליא? ברור מאליו! בוא נצלול לתוך השלב-אחר-שלב של יצירת המופת הזו 🍉✨.\n\n🎬 שלב ראשון: רכיבים והכנות\nלפני שנתחיל בבישול הסופר-מגניב הזה, צריך לוודא שיש לך את כל מה שצריך:\n🛒 רשימת מצרכים:\n\nתרנגול הודו קטן או בינוני (3-4 ק\"ג)\nחצי אבטיח גדול (כדי שנוכל להשתמש גם במיץ וגם בבשר שלו)\n4 כפות דבש 🍯\n2 כפות חרדל דיז'ון\n1 כף רוטב סויה 🌱\n1/2 כוס ציר עוף או ירקות\nתבלינים: מלח, פלפל שחור גרוס, פפריקה מעושנת 🧂\nעשבי תיבול טריים: רוזמרין ותימין\nכמה שיני שום קלופות וכתושות 🧄\n\n⏳ ציוד מיוחד שתצטרך:\n\nבלנדר או מעבד מזון.\nשקית גדולה לספיגת תרנגול ההודו במרינדה (או כלי גדול מאוד).\nתנור אפייה – כמובן!\n\n\n💦 שלב שני: יצירת מרינדת האבטיח הקסומה\nהמרינדה הזו היא כמו קוקטייל לאריסטוקרטים של עולם ההודו! 🎩✨\n1️⃣ סוחטים את מיץ האבטיח\nחתוך את האבטיח לקוביות גדולות והעביר אותן לבלנדר. ערבב עד שהן הופכות לנוזל ורוד יפהפה. סנן את הנוזל דרך מסננת כדי להיפטר מכל חתיכה קשה או גרעינים קטנים.\n2️⃣ מערבבים קסם בקערה\nבקערה גדולה מוסיפים:\n\n2 כוסות מיץ האבטיח\nדבש 🍯\nחרדל דיז'ון\nרוטב סויה\nמלח ופלפל לפי הטעם.\n\nערבב הכל היטב עד שהתערובת מתמזגת למרינדה מתוקה אך עם טוויסט מלוח.\n\n🛏️ שלב שלישי: השריית התרנגול במרינדה\n3️⃣ שקוע במיצי האבטיח\nהנח את תרנגול ההודו בשקית גדולה או בכלי עמוק ושפוך מעליו את המרינדה. עסה בעדינות כדי לוודא שכל חלק בהרפתקן העוף הזה נוגע בטעם האבטיח.\n4️⃣ תן לו זמן לחלום על אבטיחים\nסגור את השקית והכניס אותה למקרר ל-12 שעות לפחות (או אפילו ללילה). הזמן הזה מאפשר לטעמים להיספג עמוק לתוך הבשר ולהפוך אותו לחלום קולינרי.\n\n🔥 שלב רביעי: צלייה בתנור – הקסם מתעורר לחיים\n5️⃣ מכינים לצלייה\nחמם תנור ל-180 מעלות צלזיוס. הוצא את התרנגול מהמקרר ותן לו לנוח מחוץ למקרר כחצי שעה כדי שיגיע לטמפרטורת החדר (טיפ חשוב לצלייה אחידה).\n6️⃣ צירוף עשבי התיבול והשום\nלפני הכנסת התרנגול לתנור, הכנס רוזמרין, תימין ושיני שום לתוך חללו. הם יפיצו ריחות וטעמים נוספים במהלך הצלייה.\n7️⃣ מברישים באהבה\nבעזרת מברשת מטבח, הברש עוד קצת מהמרינדה שנשארה על פני העוף כדי לקבל מעטפת זהובה ומבריקה.\n8️⃣ לתנור הוא נכנס!\nצלֵה במשך שעה וחצי עד שעתיים (תלוי בגודל ההודו) תוך כדי שאתה בודק מדי פעם ומבריש שוב במיץ אבטיח טרי אם הוא מתחיל להתייבש מלמעלה.\n💡 איך יודעים שהוא מוכן? השתמש במד חום לבשר – הטמפרטורה הפנימית צריכה להגיע ל־75 מעלות צלזיוס בחזה ובירכיים.\n\n🌟 שלב חמישי: הגשה מפוארת\n9️⃣ הוצא אותו מהתנור ותן לו לנוח בערך 15 דקות לפני הפריסה. זה יאפשר למיצים להתייצב בתוך הבשר ולא לברוח ברגע שאתה חותך ✂️.\n🔟 קריצה לאקסטרה סטייל: קשט עם פרוסות דקות של אבטיח מסביב להגשה – הם גם נראים מהמם וגם מוסיפים עוד מתיקות קרירה לצד ההודו החמים והעסיסי!\n\n💌 בונוס מגניב לדעת!\nבאופן מדעי, החומציות והמיצים הטבעיים באבטיח ממש עוזרים לרכך בשרים ולהוסיף להם טעם מיוחד בלי להשתלט על הטעם המקורי שלהם. זה כמו מאמן אישי להודו שלך! 🏋️‍♂️"
-                        }
-                      ],
+                      "annotations": [],
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
@@ -1013,8 +1010,207 @@
                         {
                           "workerIndex": 0,
                           "parallelIndex": 0,
+                          "status": "timedOut",
+                          "duration": 120320,
+                          "error": {
+                            "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                            "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                            },
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                                "column": 23,
+                                "line": 79
+                              },
+                              "message": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-test-id=\"predefined-button-0\"]') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:79\n\n\u001b[0m \u001b[90m 77 |\u001b[39m\n \u001b[90m 78 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m'🕐 Waiting for AI response to complete (predefined button visible)...'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 79 |\u001b[39m   \u001b[36mawait\u001b[39m predefinedBtn\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 80 |\u001b[39m\n \u001b[90m 81 |\u001b[39m   \u001b[36mconst\u001b[39m botMessages \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m frameLocator\u001b[33m.\u001b[39mlocator(\u001b[32m'.system-message-text'\u001b[39m)\u001b[33m.\u001b[39mall()\u001b[33m;\u001b[39m\n \u001b[90m 82 |\u001b[39m   \u001b[36mconst\u001b[39m lastMessage \u001b[33m=\u001b[39m botMessages[botMessages\u001b[33m.\u001b[39mlength \u001b[33m-\u001b[39m \u001b[35m1\u001b[39m]\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at chatbotPage.SubmitQuery (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:79:23)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:50:17\u001b[22m"
+                            }
+                          ],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "✅ Login process completed and iframe title located successfully.\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            },
+                            {
+                              "text": "Waiting for validation error messages...\n"
+                            },
+                            {
+                              "text": "Verified gender required validation message.\n"
+                            },
+                            {
+                              "text": "Verified name required validation message.\n"
+                            },
+                            {
+                              "text": "✅ Invalid input test completed with expected error validations.\n"
+                            },
+                            {
+                              "text": "Starting to fill personal information form...\n"
+                            },
+                            {
+                              "text": "Filling name: Dwight\n"
+                            },
+                            {
+                              "text": "Selecting gender: בן\n"
+                            },
+                            {
+                              "text": "Checking visibility of \"Start\" button...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button...\n"
+                            },
+                            {
+                              "text": "✅ Personal info submitted successfully.\n"
+                            },
+                            {
+                              "text": "✅ TC_18: Search in chat history\n"
+                            },
+                            {
+                              "text": "💬 Submitting query: \"איך להכין Crispy Pigeon With Turnips? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                            },
+                            {
+                              "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
+                            },
+                            {
+                              "text": "🖼️ Screenshot saved: screenshots/TC_18_🔍_Search_in_chat_history.png\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-20T06:41:47.423Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-36bac-8-🔍-Search-in-chat-history-chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-36bac-8-🔍-Search-in-chat-history-chromium\\test-failed-2.png"
+                            },
+                            {
+                              "name": "_error-context-1",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-36bac-8-🔍-Search-in-chat-history-chromium\\error-context.md"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-672809698635e1d16800",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 48,
+                  "column": 7
+                },
+                {
+                  "title": "TC_19 🔓 Open Hamburger Menu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 34025,
+                          "duration": 637,
                           "errors": [],
                           "stdout": [
                             {
@@ -1123,7 +1319,7 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Andy\n"
+                              "text": "Filling name: Orlando\n"
                             },
                             {
                               "text": "Selecting gender: בן\n"
@@ -1138,82 +1334,6 @@
                               "text": "✅ Personal info submitted successfully.\n"
                             },
                             {
-                              "text": "✅ TC_18: Search in chat history\n"
-                            },
-                            {
-                              "text": "💬 Submitting query: \"איך להכין Watermelon-infused Turkey Roast? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
-                            },
-                            {
-                              "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
-                            },
-                            {
-                              "text": "✅ Bot response received: \"🍉🍗 חגיגה לשולחן: איך להכין Watermelon-infused Turkey Roast שלוקח את הארוחה שלך לגלקסיה אחרת! 🌟🦃\nדמיין את זה, Andy: שולחן ארוחת ערב, כולם ממתינים בציפייה, ואז אתה מביא למרכז השולחן תרנגול הודו עסיסי, מנוקד בטעמים אקזוטיים של אבטיח מתוק ורענן. קונספט לא שגרתי? בהחלט. טעים להפליא? ברור מאליו! בוא נצלול לתוך השלב-אחר-שלב של יצירת המופת הזו 🍉✨.\n\n🎬 שלב ראשון: רכיבים והכנות\nלפני שנתחיל בבישול הסופר-מגניב הזה, צריך לוודא שיש לך את כל מה שצריך:\n🛒 רשימת מצרכים:\n\nתרנגול הודו קטן או בינוני (3-4 ק\"ג)\nחצי אבטיח גדול (כדי שנוכל להשתמש גם במיץ וגם בבשר שלו)\n4 כפות דבש 🍯\n2 כפות חרדל דיז'ון\n1 כף רוטב סויה 🌱\n1/2 כוס ציר עוף או ירקות\nתבלינים: מלח, פלפל שחור גרוס, פפריקה מעושנת 🧂\nעשבי תיבול טריים: רוזמרין ותימין\nכמה שיני שום קלופות וכתושות 🧄\n\n⏳ ציוד מיוחד שתצטרך:\n\nבלנדר או מעבד מזון.\nשקית גדולה לספיגת תרנגול ההודו במרינדה (או כלי גדול מאוד).\nתנור אפייה – כמובן!\n\n\n💦 שלב שני: יצירת מרינדת האבטיח הקסומה\nהמרינדה הזו היא כמו קוקטייל לאריסטוקרטים של עולם ההודו! 🎩✨\n1️⃣ סוחטים את מיץ האבטיח\nחתוך את האבטיח לקוביות גדולות והעביר אותן לבלנדר. ערבב עד שהן הופכות לנוזל ורוד יפהפה. סנן את הנוזל דרך מסננת כדי להיפטר מכל חתיכה קשה או גרעינים קטנים.\n2️⃣ מערבבים קסם בקערה\nבקערה גדולה מוסיפים:\n\n2 כוסות מיץ האבטיח\nדבש 🍯\nחרדל דיז'ון\nרוטב סויה\nמלח ופלפל לפי הטעם.\n\nערבב הכל היטב עד שהתערובת מתמזגת למרינדה מתוקה אך עם טוויסט מלוח.\n\n🛏️ שלב שלישי: השריית התרנגול במרינדה\n3️⃣ שקוע במיצי האבטיח\nהנח את תרנגול ההודו בשקית גדולה או בכלי עמוק ושפוך מעליו את המרינדה. עסה בעדינות כדי לוודא שכל חלק בהרפתקן העוף הזה נוגע בטעם האבטיח.\n4️⃣ תן לו זמן לחלום על אבטיחים\nסגור את השקית והכניס אותה למקרר ל-12 שעות לפחות (או אפילו ללילה). הזמן הזה מאפשר לטעמים להיספג עמוק לתוך הבשר ולהפוך אותו לחלום קולינרי.\n\n🔥 שלב רביעי: צלייה בתנור – הקסם מתעורר לחיים\n5️⃣ מכינים לצלייה\nחמם תנור ל-180 מעלות צלזיוס. הוצא את התרנגול מהמקרר ותן לו לנוח מחוץ למקרר כחצי שעה כדי שיגיע לטמפרטורת החדר (טיפ חשוב לצלייה אחידה).\n6️⃣ צירוף עשבי התיבול והשום\nלפני הכנסת התרנגול לתנור, הכנס רוזמרין, תימין ושיני שום לתוך חללו. הם יפיצו ריחות וטעמים נוספים במהלך הצלייה.\n7️⃣ מברישים באהבה\nבעזרת מברשת מטבח, הברש עוד קצת מהמרינדה שנשארה על פני העוף כדי לקבל מעטפת זהובה ומבריקה.\n8️⃣ לתנור הוא נכנס!\nצלֵה במשך שעה וחצי עד שעתיים (תלוי בגודל ההודו) תוך כדי שאתה בודק מדי פעם ומבריש שוב במיץ אבטיח טרי אם הוא מתחיל להתייבש מלמעלה.\n💡 איך יודעים שהוא מוכן? השתמש במד חום לבשר – הטמפרטורה הפנימית צריכה להגיע ל־75 מעלות צלזיוס בחזה ובירכיים.\n\n🌟 שלב חמישי: הגשה מפוארת\n9️⃣ הוצא אותו מהתנור ותן לו לנוח בערך 15 דקות לפני הפריסה. זה יאפשר למיצים להתייצב בתוך הבשר ולא לברוח ברגע שאתה חותך ✂️.\n🔟 קריצה לאקסטרה סטייל: קשט עם פרוסות דקות של אבטיח מסביב להגשה – הם גם נראים מהמם וגם מוסיפים עוד מתיקות קרירה לצד ההודו החמים והעסיסי!\n\n💌 בונוס מגניב לדעת!\nבאופן מדעי, החומציות והמיצים הטבעיים באבטיח ממש עוזרים לרכך בשרים ולהוסיף להם טעם מיוחד בלי להשתלט על הטעם המקורי שלהם. זה כמו מאמן אישי להודו שלך! 🏋️‍♂️\"\n"
-                            },
-                            {
-                              "text": "🔽 Scrolling to bottom...\n"
-                            },
-                            {
-                              "text": "🔓 Verifying predefined buttons are visible...\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "✅ Initial bot message received.\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            },
-                            {
-                              "text": "🔍 Searching for message: \"איך להכין Watermelon-infused Turkey Roast? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
-                            },
-                            {
-                              "text": "✅ Verified session list contains: \"איך להכין Watermelon-infused Turkey Roast? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
-                            },
-                            {
-                              "text": "❌ Closing hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-19T05:47:33.028Z",
-                          "annotations": [
-                            {
-                              "type": "info",
-                              "description": "Bot response: 🍉🍗 חגיגה לשולחן: איך להכין Watermelon-infused Turkey Roast שלוקח את הארוחה שלך לגלקסיה אחרת! 🌟🦃\nדמיין את זה, Andy: שולחן ארוחת ערב, כולם ממתינים בציפייה, ואז אתה מביא למרכז השולחן תרנגול הודו עסיסי, מנוקד בטעמים אקזוטיים של אבטיח מתוק ורענן. קונספט לא שגרתי? בהחלט. טעים להפליא? ברור מאליו! בוא נצלול לתוך השלב-אחר-שלב של יצירת המופת הזו 🍉✨.\n\n🎬 שלב ראשון: רכיבים והכנות\nלפני שנתחיל בבישול הסופר-מגניב הזה, צריך לוודא שיש לך את כל מה שצריך:\n🛒 רשימת מצרכים:\n\nתרנגול הודו קטן או בינוני (3-4 ק\"ג)\nחצי אבטיח גדול (כדי שנוכל להשתמש גם במיץ וגם בבשר שלו)\n4 כפות דבש 🍯\n2 כפות חרדל דיז'ון\n1 כף רוטב סויה 🌱\n1/2 כוס ציר עוף או ירקות\nתבלינים: מלח, פלפל שחור גרוס, פפריקה מעושנת 🧂\nעשבי תיבול טריים: רוזמרין ותימין\nכמה שיני שום קלופות וכתושות 🧄\n\n⏳ ציוד מיוחד שתצטרך:\n\nבלנדר או מעבד מזון.\nשקית גדולה לספיגת תרנגול ההודו במרינדה (או כלי גדול מאוד).\nתנור אפייה – כמובן!\n\n\n💦 שלב שני: יצירת מרינדת האבטיח הקסומה\nהמרינדה הזו היא כמו קוקטייל לאריסטוקרטים של עולם ההודו! 🎩✨\n1️⃣ סוחטים את מיץ האבטיח\nחתוך את האבטיח לקוביות גדולות והעביר אותן לבלנדר. ערבב עד שהן הופכות לנוזל ורוד יפהפה. סנן את הנוזל דרך מסננת כדי להיפטר מכל חתיכה קשה או גרעינים קטנים.\n2️⃣ מערבבים קסם בקערה\nבקערה גדולה מוסיפים:\n\n2 כוסות מיץ האבטיח\nדבש 🍯\nחרדל דיז'ון\nרוטב סויה\nמלח ופלפל לפי הטעם.\n\nערבב הכל היטב עד שהתערובת מתמזגת למרינדה מתוקה אך עם טוויסט מלוח.\n\n🛏️ שלב שלישי: השריית התרנגול במרינדה\n3️⃣ שקוע במיצי האבטיח\nהנח את תרנגול ההודו בשקית גדולה או בכלי עמוק ושפוך מעליו את המרינדה. עסה בעדינות כדי לוודא שכל חלק בהרפתקן העוף הזה נוגע בטעם האבטיח.\n4️⃣ תן לו זמן לחלום על אבטיחים\nסגור את השקית והכניס אותה למקרר ל-12 שעות לפחות (או אפילו ללילה). הזמן הזה מאפשר לטעמים להיספג עמוק לתוך הבשר ולהפוך אותו לחלום קולינרי.\n\n🔥 שלב רביעי: צלייה בתנור – הקסם מתעורר לחיים\n5️⃣ מכינים לצלייה\nחמם תנור ל-180 מעלות צלזיוס. הוצא את התרנגול מהמקרר ותן לו לנוח מחוץ למקרר כחצי שעה כדי שיגיע לטמפרטורת החדר (טיפ חשוב לצלייה אחידה).\n6️⃣ צירוף עשבי התיבול והשום\nלפני הכנסת התרנגול לתנור, הכנס רוזמרין, תימין ושיני שום לתוך חללו. הם יפיצו ריחות וטעמים נוספים במהלך הצלייה.\n7️⃣ מברישים באהבה\nבעזרת מברשת מטבח, הברש עוד קצת מהמרינדה שנשארה על פני העוף כדי לקבל מעטפת זהובה ומבריקה.\n8️⃣ לתנור הוא נכנס!\nצלֵה במשך שעה וחצי עד שעתיים (תלוי בגודל ההודו) תוך כדי שאתה בודק מדי פעם ומבריש שוב במיץ אבטיח טרי אם הוא מתחיל להתייבש מלמעלה.\n💡 איך יודעים שהוא מוכן? השתמש במד חום לבשר – הטמפרטורה הפנימית צריכה להגיע ל־75 מעלות צלזיוס בחזה ובירכיים.\n\n🌟 שלב חמישי: הגשה מפוארת\n9️⃣ הוצא אותו מהתנור ותן לו לנוח בערך 15 דקות לפני הפריסה. זה יאפשר למיצים להתייצב בתוך הבשר ולא לברוח ברגע שאתה חותך ✂️.\n🔟 קריצה לאקסטרה סטייל: קשט עם פרוסות דקות של אבטיח מסביב להגשה – הם גם נראים מהמם וגם מוסיפים עוד מתיקות קרירה לצד ההודו החמים והעסיסי!\n\n💌 בונוס מגניב לדעת!\nבאופן מדעי, החומציות והמיצים הטבעיים באבטיח ממש עוזרים לרכך בשרים ולהוסיף להם טעם מיוחד בלי להשתלט על הטעם המקורי שלהם. זה כמו מאמן אישי להודו שלך! 🏋️‍♂️"
-                            }
-                          ],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "b55e7195d3b5536049bb-672809698635e1d16800",
-                  "file": "Hamburger_Menu.spec.ts",
-                  "line": 48,
-                  "column": 7
-                },
-                {
-                  "title": "TC_19 🔓 Open Hamburger Menu",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 120000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 258,
-                          "errors": [],
-                          "stdout": [
-                            {
                               "text": "✅ TC_19: Open Hamburger Menu\n"
                             },
                             {
@@ -1222,7 +1342,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:48:28.666Z",
+                          "startTime": "2025-05-20T06:44:10.652Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1248,10 +1368,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 374,
+                          "duration": 667,
                           "errors": [],
                           "stdout": [
                             {
@@ -1263,7 +1383,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:48:28.930Z",
+                          "startTime": "2025-05-20T06:44:33.359Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1289,22 +1409,22 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2249,
+                          "duration": 2246,
                           "errors": [],
                           "stdout": [
                             {
                               "text": "✅ TC_21: No result in chat history\n"
                             },
                             {
-                              "text": "🔍 Searching for non-existent history: \"תסביר לי בפרטים על Moscovium.\"\n"
+                              "text": "🔍 Searching for non-existent history: \"תסביר לי בפרטים על Radon.\"\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:48:29.310Z",
+                          "startTime": "2025-05-20T06:44:34.033Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1330,10 +1450,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 286,
+                          "duration": 245,
                           "errors": [],
                           "stdout": [
                             {
@@ -1345,7 +1465,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:48:31.565Z",
+                          "startTime": "2025-05-20T06:44:36.285Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1371,10 +1491,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 2144,
+                          "duration": 2124,
                           "errors": [],
                           "stdout": [
                             {
@@ -1398,7 +1518,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:48:31.861Z",
+                          "startTime": "2025-05-20T06:44:36.536Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1424,10 +1544,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 812,
+                          "duration": 744,
                           "errors": [],
                           "stdout": [
                             {
@@ -1439,7 +1559,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:48:34.011Z",
+                          "startTime": "2025-05-20T06:44:38.668Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1465,10 +1585,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
+                          "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 1441,
+                          "duration": 1410,
                           "errors": [],
                           "stdout": [
                             {
@@ -1477,7 +1597,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T05:48:34.829Z",
+                          "startTime": "2025-05-20T06:44:39.418Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1512,7 +1632,7 @@
               "annotations": [
                 {
                   "type": "info",
-                  "description": "Bot response: Cobalt: המתכת שמסתירה כוחות סודיים! 🌀\nדמיין את עצמך בעולם עתידני, שבו חומרים מיוחדים מעניקים כוחות מרהיבים לטכנולוגיה שלנו. 🎇 עכשיו, קפוץ אחורה בזמן אל מסעות הכימאים הראשונים במאה ה-17, כשגילו את קובלט, מתכת שהייתה חבויה בסלעים — וכמו אוצר קסום, היא שינתה את העולם!\n\n🎬 מה זה בכלל Cobalt?\nקובלט הוא יסוד כימי עם הסמל Co ומספר אטומי 27. 🧪 במצבו הטבעי, הוא מתכת כסופה-כחלחלה מבריקה (כן, קצת מגניבה כמו אביר שריון עתידני). אבל בגושיו הגולמיים, הוא נמצא לעיתים קרובות קשור למינרלים אחרים כמו ניקל ונחושת.\nאגב, השם \"קובלט\" מגיע מהמילה הגרמנית \"Kobold\", שמשמעותה \"שדון שובב\"! 👻 למה? כי כורים גרמנים חשבו שהמתכת הזו מקוללת — היא פולטת רעלים (בעיקר ארסן) כשמנסים להפיק אותה.\n\n🚀 למה קובלט כל כך חשוב?\n\n\nסוללות ליתיום-יון 🔋: קובלט הוא הלב הפועם של הסוללות שמפעילות את הטלפונים הניידים שלך והלפטופים. ללא קובלט – היינו מחפשים שקעים כל הזמן!\n\n\nצבעים כחולים עזים 🎨: מאז ימי הביניים, קובלט שימש ליצירת זכוכית וקרמיקה בצבע כחול עמוק ומהפנט.\n\n\nתעשייה ותעופה ✈️: סגסוגות קובלט עמידות במיוחד לחום ולשחיקה, מה שהופך אותן לחיוניות במנועי סילון ובייצור פלדה חזקה במיוחד.\n\n\nבריאות ורפואה 💊: הקובלט חשוב לגוף שלנו! ויטמין B12 מכיל אותו, והוא חיוני לתפקוד מערכת העצבים והדם.\n\n\n\n🌟 בונוס מגניב: האם ידעת?\nקובלט נמצא אפילו בכוכבים רחוקים! 🌌 הספקטרום של אור שבוקע מכוכבים חושף עקבות של קובלט ביקום הרחוק — סוג של חתימה כימית בין-כוכבית.\n\nאז בפעם הבאה שתטען את הטלפון או תבחין באמנות כחולה מהממת על כלי חרסינה עתיקים – זכור שקובלט עומד מאחורי הקסם! 😉"
+                  "description": "Bot response: 🥧 Pomegranate & Goose Pie – הפאי שיגרום לך להרגיש כמו מלך באנגליה של ימי הביניים 👑\nדמיין שולחן עץ כבד, נרות דולקים, וצלחת פאי מוזהבת שמתפוצצת מריחות מתקתקים ומלוחים... זה מה שמחכה לך עם הפאי המיוחד הזה! בוא נתחיל בהרפתקת הבישול שלך 🎉.\n\nשלב 1: הכנות – מה צריך? 🛒\nמרכיבים לפאי:\n\n\nלבשר האווז:\n\n2 חזה אווז (או ירכי אווז מפורקות) 🦢\nמלח, פלפל שחור גרוס 🧂\nכפית קינמון ונגיעה של ציפורן טחונה 🌰\n\n\n\nלתערובת רימונים:\n\n1/2 כוס גרגרי רימון עסיסיים (רק האדומים הכי יפים!) 🍒\n3 כפות דבש נוזלי 🍯\n1/2 כוס מיץ רימונים טבעי (או סחוט טרי) 🥤\n\n\n\nלבצק:\n\n3 כוסות קמח (לבן או מלא לפי בחירתך) 🌾\n200 גרם חמאה קרה חתוכה לקוביות ❄️\n1 ביצה גדולה 🥚\nכמה כפות מים קרים, לפי הצורך 💧\n\n\n\n\nשלב 2: הבצק המושלם – בטן הפאי 🌟\n\nבמעבד מזון או בקערה גדולה, ערבב את הקמח עם קוביות החמאה עד שהתערובת מזכירה פירורי לחם.\nהוסף את הביצה ותוך כדי ערבוב, טפטף מים קרים עד שנוצר גוש בצק חלק.\nעטוף בניילון נצמד והכנס למקרר לשעה לפחות. זה הזמן לתת לו לנוח ולחלום על הרימונים! 😴🍃\n\n\nשלב 3: הכנת מילוי האווז והרימונים 🔥\n\nתבל את נתחי האווז במלח, פלפל ותבלינים מחממים כמו קינמון וציפורן.\nבמחבת עמוקה, טגן קלות את האווז עד לקבלת צבע זהוב משגע מכל הצדדים.\nהעבר את האווז לתנור שחומם מראש ל-180°C ואפה למשך 25 דקות (שישאר עסיסי!). בסיום, פרוס לחתיכות קטנות.\n\nתערובת הרימונים:\n\nבמחבת נפרדת, חמם את גרגרי הרימון עם הדבש ומיץ הרימונים עד שהתערובת הופכת לסירופ סמיך ומבריק.\n\n\nשלב 4: בניית הפאי – זמן לקסם ✨\n\nחלק את הבצק לשניים – חצי לתחתית וחצי לכיסוי.\nרדד את החלק הראשון והנח אותו בתבנית פאי משומנת היטב.\nמלא במילוי: שכבות של אווז ורימוני דבש לסירוגין (תחשוב עליהם כשני חברים שמתמסרים בטעמים! 🤝).\nכסה בבצק השני וחתוך חריצים קטנים למעלה כדי לשחרר אדים בזמן האפייה.\n\n\nשלב 5: אפייה ואקשן בתנור! 🔥\n\nמרח ביצה טרופה מעל הבצק לקבלת צבע זהוב חלומי.\nאפה ב-180°C למשך 40 דקות עד שהפאי מקבל קרום פריך וניחוח בלתי נשלט.\n\n\nשלב 6: מגישים ומתענגים 💃🕺\nתן לפאי להתקרר קצת לפני החיתוך (אם אתה מצליח להתאפק!). הגש עם סלט ירוק פריך או אפילו טחינה בצד ותראה איך כולם מתאהבים בטעמים!"
                 }
               ],
               "expectedStatus": "passed",
@@ -1520,10 +1640,10 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 61033,
+                  "duration": 78007,
                   "errors": [],
                   "stdout": [
                     {
@@ -1671,7 +1791,7 @@
                       "text": "Starting to fill personal information form...\n"
                     },
                     {
-                      "text": "Filling name: Andy\n"
+                      "text": "Filling name: Orlando\n"
                     },
                     {
                       "text": "Selecting gender: בן\n"
@@ -1686,22 +1806,22 @@
                       "text": "✅ Personal info submitted successfully.\n"
                     },
                     {
-                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Cobalt.\"\n"
+                      "text": "💬 Submitting query: \"איך להכין Pomegranate And Goose Pie? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
                     },
                     {
                       "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
                     },
                     {
-                      "text": "✅ Bot response received: \"Cobalt: המתכת שמסתירה כוחות סודיים! 🌀\nדמיין את עצמך בעולם עתידני, שבו חומרים מיוחדים מעניקים כוחות מרהיבים לטכנולוגיה שלנו. 🎇 עכשיו, קפוץ אחורה בזמן אל מסעות הכימאים הראשונים במאה ה-17, כשגילו את קובלט, מתכת שהייתה חבויה בסלעים — וכמו אוצר קסום, היא שינתה את העולם!\n\n🎬 מה זה בכלל Cobalt?\nקובלט הוא יסוד כימי עם הסמל Co ומספר אטומי 27. 🧪 במצבו הטבעי, הוא מתכת כסופה-כחלחלה מבריקה (כן, קצת מגניבה כמו אביר שריון עתידני). אבל בגושיו הגולמיים, הוא נמצא לעיתים קרובות קשור למינרלים אחרים כמו ניקל ונחושת.\nאגב, השם \"קובלט\" מגיע מהמילה הגרמנית \"Kobold\", שמשמעותה \"שדון שובב\"! 👻 למה? כי כורים גרמנים חשבו שהמתכת הזו מקוללת — היא פולטת רעלים (בעיקר ארסן) כשמנסים להפיק אותה.\n\n🚀 למה קובלט כל כך חשוב?\n\n\nסוללות ליתיום-יון 🔋: קובלט הוא הלב הפועם של הסוללות שמפעילות את הטלפונים הניידים שלך והלפטופים. ללא קובלט – היינו מחפשים שקעים כל הזמן!\n\n\nצבעים כחולים עזים 🎨: מאז ימי הביניים, קובלט שימש ליצירת זכוכית וקרמיקה בצבע כחול עמוק ומהפנט.\n\n\nתעשייה ותעופה ✈️: סגסוגות קובלט עמידות במיוחד לחום ולשחיקה, מה שהופך אותן לחיוניות במנועי סילון ובייצור פלדה חזקה במיוחד.\n\n\nבריאות ורפואה 💊: הקובלט חשוב לגוף שלנו! ויטמין B12 מכיל אותו, והוא חיוני לתפקוד מערכת העצבים והדם.\n\n\n\n🌟 בונוס מגניב: האם ידעת?\nקובלט נמצא אפילו בכוכבים רחוקים! 🌌 הספקטרום של אור שבוקע מכוכבים חושף עקבות של קובלט ביקום הרחוק — סוג של חתימה כימית בין-כוכבית.\n\nאז בפעם הבאה שתטען את הטלפון או תבחין באמנות כחולה מהממת על כלי חרסינה עתיקים – זכור שקובלט עומד מאחורי הקסם! 😉\"\n"
+                      "text": "✅ Bot response received: \"🥧 Pomegranate & Goose Pie – הפאי שיגרום לך להרגיש כמו מלך באנגליה של ימי הביניים 👑\nדמיין שולחן עץ כבד, נרות דולקים, וצלחת פאי מוזהבת שמתפוצצת מריחות מתקתקים ומלוחים... זה מה שמחכה לך עם הפאי המיוחד הזה! בוא נתחיל בהרפתקת הבישול שלך 🎉.\n\nשלב 1: הכנות – מה צריך? 🛒\nמרכיבים לפאי:\n\n\nלבשר האווז:\n\n2 חזה אווז (או ירכי אווז מפורקות) 🦢\nמלח, פלפל שחור גרוס 🧂\nכפית קינמון ונגיעה של ציפורן טחונה 🌰\n\n\n\nלתערובת רימונים:\n\n1/2 כוס גרגרי רימון עסיסיים (רק האדומים הכי יפים!) 🍒\n3 כפות דבש נוזלי 🍯\n1/2 כוס מיץ רימונים טבעי (או סחוט טרי) 🥤\n\n\n\nלבצק:\n\n3 כוסות קמח (לבן או מלא לפי בחירתך) 🌾\n200 גרם חמאה קרה חתוכה לקוביות ❄️\n1 ביצה גדולה 🥚\nכמה כפות מים קרים, לפי הצורך 💧\n\n\n\n\nשלב 2: הבצק המושלם – בטן הפאי 🌟\n\nבמעבד מזון או בקערה גדולה, ערבב את הקמח עם קוביות החמאה עד שהתערובת מזכירה פירורי לחם.\nהוסף את הביצה ותוך כדי ערבוב, טפטף מים קרים עד שנוצר גוש בצק חלק.\nעטוף בניילון נצמד והכנס למקרר לשעה לפחות. זה הזמן לתת לו לנוח ולחלום על הרימונים! 😴🍃\n\n\nשלב 3: הכנת מילוי האווז והרימונים 🔥\n\nתבל את נתחי האווז במלח, פלפל ותבלינים מחממים כמו קינמון וציפורן.\nבמחבת עמוקה, טגן קלות את האווז עד לקבלת צבע זהוב משגע מכל הצדדים.\nהעבר את האווז לתנור שחומם מראש ל-180°C ואפה למשך 25 דקות (שישאר עסיסי!). בסיום, פרוס לחתיכות קטנות.\n\nתערובת הרימונים:\n\nבמחבת נפרדת, חמם את גרגרי הרימון עם הדבש ומיץ הרימונים עד שהתערובת הופכת לסירופ סמיך ומבריק.\n\n\nשלב 4: בניית הפאי – זמן לקסם ✨\n\nחלק את הבצק לשניים – חצי לתחתית וחצי לכיסוי.\nרדד את החלק הראשון והנח אותו בתבנית פאי משומנת היטב.\nמלא במילוי: שכבות של אווז ורימוני דבש לסירוגין (תחשוב עליהם כשני חברים שמתמסרים בטעמים! 🤝).\nכסה בבצק השני וחתוך חריצים קטנים למעלה כדי לשחרר אדים בזמן האפייה.\n\n\nשלב 5: אפייה ואקשן בתנור! 🔥\n\nמרח ביצה טרופה מעל הבצק לקבלת צבע זהוב חלומי.\nאפה ב-180°C למשך 40 דקות עד שהפאי מקבל קרום פריך וניחוח בלתי נשלט.\n\n\nשלב 6: מגישים ומתענגים 💃🕺\nתן לפאי להתקרר קצת לפני החיתוך (אם אתה מצליח להתאפק!). הגש עם סלט ירוק פריך או אפילו טחינה בצד ותראה איך כולם מתאהבים בטעמים!\"\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-05-19T05:48:36.402Z",
+                  "startTime": "2025-05-20T06:44:40.944Z",
                   "annotations": [
                     {
                       "type": "info",
-                      "description": "Bot response: Cobalt: המתכת שמסתירה כוחות סודיים! 🌀\nדמיין את עצמך בעולם עתידני, שבו חומרים מיוחדים מעניקים כוחות מרהיבים לטכנולוגיה שלנו. 🎇 עכשיו, קפוץ אחורה בזמן אל מסעות הכימאים הראשונים במאה ה-17, כשגילו את קובלט, מתכת שהייתה חבויה בסלעים — וכמו אוצר קסום, היא שינתה את העולם!\n\n🎬 מה זה בכלל Cobalt?\nקובלט הוא יסוד כימי עם הסמל Co ומספר אטומי 27. 🧪 במצבו הטבעי, הוא מתכת כסופה-כחלחלה מבריקה (כן, קצת מגניבה כמו אביר שריון עתידני). אבל בגושיו הגולמיים, הוא נמצא לעיתים קרובות קשור למינרלים אחרים כמו ניקל ונחושת.\nאגב, השם \"קובלט\" מגיע מהמילה הגרמנית \"Kobold\", שמשמעותה \"שדון שובב\"! 👻 למה? כי כורים גרמנים חשבו שהמתכת הזו מקוללת — היא פולטת רעלים (בעיקר ארסן) כשמנסים להפיק אותה.\n\n🚀 למה קובלט כל כך חשוב?\n\n\nסוללות ליתיום-יון 🔋: קובלט הוא הלב הפועם של הסוללות שמפעילות את הטלפונים הניידים שלך והלפטופים. ללא קובלט – היינו מחפשים שקעים כל הזמן!\n\n\nצבעים כחולים עזים 🎨: מאז ימי הביניים, קובלט שימש ליצירת זכוכית וקרמיקה בצבע כחול עמוק ומהפנט.\n\n\nתעשייה ותעופה ✈️: סגסוגות קובלט עמידות במיוחד לחום ולשחיקה, מה שהופך אותן לחיוניות במנועי סילון ובייצור פלדה חזקה במיוחד.\n\n\nבריאות ורפואה 💊: הקובלט חשוב לגוף שלנו! ויטמין B12 מכיל אותו, והוא חיוני לתפקוד מערכת העצבים והדם.\n\n\n\n🌟 בונוס מגניב: האם ידעת?\nקובלט נמצא אפילו בכוכבים רחוקים! 🌌 הספקטרום של אור שבוקע מכוכבים חושף עקבות של קובלט ביקום הרחוק — סוג של חתימה כימית בין-כוכבית.\n\nאז בפעם הבאה שתטען את הטלפון או תבחין באמנות כחולה מהממת על כלי חרסינה עתיקים – זכור שקובלט עומד מאחורי הקסם! 😉"
+                      "description": "Bot response: 🥧 Pomegranate & Goose Pie – הפאי שיגרום לך להרגיש כמו מלך באנגליה של ימי הביניים 👑\nדמיין שולחן עץ כבד, נרות דולקים, וצלחת פאי מוזהבת שמתפוצצת מריחות מתקתקים ומלוחים... זה מה שמחכה לך עם הפאי המיוחד הזה! בוא נתחיל בהרפתקת הבישול שלך 🎉.\n\nשלב 1: הכנות – מה צריך? 🛒\nמרכיבים לפאי:\n\n\nלבשר האווז:\n\n2 חזה אווז (או ירכי אווז מפורקות) 🦢\nמלח, פלפל שחור גרוס 🧂\nכפית קינמון ונגיעה של ציפורן טחונה 🌰\n\n\n\nלתערובת רימונים:\n\n1/2 כוס גרגרי רימון עסיסיים (רק האדומים הכי יפים!) 🍒\n3 כפות דבש נוזלי 🍯\n1/2 כוס מיץ רימונים טבעי (או סחוט טרי) 🥤\n\n\n\nלבצק:\n\n3 כוסות קמח (לבן או מלא לפי בחירתך) 🌾\n200 גרם חמאה קרה חתוכה לקוביות ❄️\n1 ביצה גדולה 🥚\nכמה כפות מים קרים, לפי הצורך 💧\n\n\n\n\nשלב 2: הבצק המושלם – בטן הפאי 🌟\n\nבמעבד מזון או בקערה גדולה, ערבב את הקמח עם קוביות החמאה עד שהתערובת מזכירה פירורי לחם.\nהוסף את הביצה ותוך כדי ערבוב, טפטף מים קרים עד שנוצר גוש בצק חלק.\nעטוף בניילון נצמד והכנס למקרר לשעה לפחות. זה הזמן לתת לו לנוח ולחלום על הרימונים! 😴🍃\n\n\nשלב 3: הכנת מילוי האווז והרימונים 🔥\n\nתבל את נתחי האווז במלח, פלפל ותבלינים מחממים כמו קינמון וציפורן.\nבמחבת עמוקה, טגן קלות את האווז עד לקבלת צבע זהוב משגע מכל הצדדים.\nהעבר את האווז לתנור שחומם מראש ל-180°C ואפה למשך 25 דקות (שישאר עסיסי!). בסיום, פרוס לחתיכות קטנות.\n\nתערובת הרימונים:\n\nבמחבת נפרדת, חמם את גרגרי הרימון עם הדבש ומיץ הרימונים עד שהתערובת הופכת לסירופ סמיך ומבריק.\n\n\nשלב 4: בניית הפאי – זמן לקסם ✨\n\nחלק את הבצק לשניים – חצי לתחתית וחצי לכיסוי.\nרדד את החלק הראשון והנח אותו בתבנית פאי משומנת היטב.\nמלא במילוי: שכבות של אווז ורימוני דבש לסירוגין (תחשוב עליהם כשני חברים שמתמסרים בטעמים! 🤝).\nכסה בבצק השני וחתוך חריצים קטנים למעלה כדי לשחרר אדים בזמן האפייה.\n\n\nשלב 5: אפייה ואקשן בתנור! 🔥\n\nמרח ביצה טרופה מעל הבצק לקבלת צבע זהוב חלומי.\nאפה ב-180°C למשך 40 דקות עד שהפאי מקבל קרום פריך וניחוח בלתי נשלט.\n\n\nשלב 6: מגישים ומתענגים 💃🕺\nתן לפאי להתקרר קצת לפני החיתוך (אם אתה מצליח להתאפק!). הגש עם סלט ירוק פריך או אפילו טחינה בצד ותראה איך כולם מתאהבים בטעמים!"
                     }
                   ],
                   "attachments": []
@@ -1720,11 +1840,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-19T05:44:12.938Z",
-    "duration": 324899.801,
+    "startTime": "2025-05-20T06:37:16.602Z",
+    "duration": 522459.415,
     "expected": 25,
-    "skipped": 1,
-    "unexpected": 0,
+    "skipped": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

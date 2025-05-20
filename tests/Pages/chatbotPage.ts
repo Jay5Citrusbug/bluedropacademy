@@ -192,10 +192,9 @@ async InactivityPopup1() {
   const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
   console.log('⏳ Waiting for inactivity popup to appear...');
   const inactivityPopup = frameLocator.locator('role=heading[name="נראה שלא היית פעיל לאחרונה"]');
-  console.log('⏳ Waiting for inactivity popup to appear...');
   await expect(inactivityPopup).toBeVisible({ timeout: 70000  });
   await this.page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByText('היי! לא ראינו פעילות ב-10').isVisible();
-    await this.page.locator('.anticon.anticon-close.ant-modal-close-icon').isVisible();
+  await this.page.locator('.anticon.anticon-close.ant-modal-close-icon').isVisible();
   console.log('✅ Inactivity popup is visible.');
   await this.page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('dialog').getByRole('button', { name: 'המשך שיחה' }).click();
   console.log('🔄 Clicking "Continue Chat" button...');
@@ -203,9 +202,15 @@ async InactivityPopup1() {
 }
 async InactivityPopup2(){
 
+ const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
+  const inactivityPopup = frameLocator.locator('role=heading[name="נראה שלא היית פעיל לאחרונה"]');
+ // Wait for 1 minute and 10 seconds
+  console.log('⏳ Waiting for inactivity popup to appear for close...');
 
-// Wait for 1 minute and 10 seconds
-await this.page.waitForTimeout(70000);
+  await expect(inactivityPopup).toBeVisible({ timeout: 70000  });
+  await this.page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByText('היי! לא ראינו פעילות ב-10').isVisible();
+
+  console.log('✅ Inactivity popup is visible.');
 
 // Check visibility of the close icon
 //const closeIcon = this.page.locator('//html/body/div[2]/div/div[2]/div/div[1]/div/button');
