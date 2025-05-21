@@ -32,7 +32,10 @@ jobs:
         run: npx playwright test --reporter=html,json
         continue-on-error: true   # <-- important to not fail pipeline if tests fail
 
+      - name: Compile sendreport.ts
+        run: npx tsc sendreport.ts --outDir dist
+
       - name: Send Report via SendGrid
-        run: npx ts-node sendreport.ts
+        run: node dist/sendreport.js
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
