@@ -32,8 +32,9 @@ jobs:
         run: npx playwright test --reporter=html,json
         continue-on-error: true   # <-- important to not fail pipeline if tests fail
 
+ 
       - name: Compile sendreport.ts
-        run: npx tsc sendreport.ts --outDir dist
+        run: npx tsc --project tsconfig.sendreport.json
 
       - name: Send Report via SendGrid
         run: node dist/sendreport.js
