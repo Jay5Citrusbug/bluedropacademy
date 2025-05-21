@@ -3,10 +3,8 @@ name: Run Playwright Tests and Email Report
 on:
   push:
     branches: [ main ]
-  # schedule:
-  #   - cron: '0 23 * * *'  # Runs at 2:00 AM IST (UTC+3)
   schedule:
-    - cron: '*/5 * * * *'  # Runs every 5 minutes
+    - cron: '0 23 * * *'  # Runs at 2:00 AM IST (UTC+3)
 
 jobs:
   build:
@@ -52,11 +50,8 @@ jobs:
           URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
           URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
         run: |
-          npx playwright test --workers=1 --project=chromium \
+          npx playwright test --project=chromium --workers=1 \
             --reporter=json=test-results.json,html | tee test-log.txt
- 
-      - name: List Playwright Tests
-        run: npx playwright test --list
 
       - name: Get current date with timestamp
         id: date
@@ -66,10 +61,10 @@ jobs:
         id: summary
         run: |
           if [ ! -f "test-results.json" ]; then echo "Report file not found!" && exit 1; fi
-          TOTAL=$(jq '[.suites[].specs[].tests[]] | length' test-results.json)
-          PASSED=$(jq '[.suites[].specs[].tests[] | select(.results[].status == "passed")] | length' test-results.json)
-          FAILED=$(jq '[.suites[].specs[].tests[] | select(.results[].status == "failed")] | length' test-results.json)
-          SKIPPED=$(jq '[.suites[].specs[].tests[] | select(.results[].status == "skipped")] | length' test-results.json)
+          TOTAL=$(jq '.suites | map(.specs | length) | add' test-results.json)
+          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' test-results.json)
+          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)
+          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)
           echo "total=$TOTAL" >> $GITHUB_OUTPUT
           echo "passed=$PASSED" >> $GITHUB_OUTPUT
           echo "failed=$FAILED" >> $GITHUB_OUTPUT
