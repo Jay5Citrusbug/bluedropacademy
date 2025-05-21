@@ -8,7 +8,7 @@ import { chatbotPage } from './Pages/chatbotPage';
 import { adminCredentials, chatbotCredentials } from './Config/credentials';
 
 
-test.skip('TC_26: 💰 Admin daily plan cost update and verify insufficient balance popup', async ({ browser }, testInfo) => {
+test('TC_26: 💰 Admin daily plan cost update and verify insufficient balance popup', async ({ browser }, testInfo) => {
  const adminContext = await browser.newContext();
   const adminPage = await adminContext.newPage();
   const adminInsufficientPopup = new Edge_case(adminPage); // ✅ correct instantiation

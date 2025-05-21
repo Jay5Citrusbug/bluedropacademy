@@ -33,6 +33,6 @@ jobs:
         continue-on-error: true   # <-- important to not fail pipeline if tests fail
 
       - name: Send Report via SendGrid
-        run: npx ts-node Scripts/sendreport.ts
+        run: npx ts-node sendreport.ts
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
