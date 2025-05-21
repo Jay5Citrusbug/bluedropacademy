@@ -52,7 +52,7 @@ jobs:
           URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
           URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
         run: |
-          npx playwright test --project=chromium --workers=1 \
+          npx playwright test tests --workers=1 --project=chromium --workers=1 \
             --reporter=json=test-results.json,html | tee test-log.txt
 
       - name: Get current date with timestamp
