@@ -49,9 +49,9 @@ jobs:
         env:
           URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
           URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
-        run: |
-          npx playwright test --workers=1 --project=chromium --workers=1 \
-            --reporter=json=test-results.json,html | tee test-log.txt
+         run: |
+          npx playwright test --workers=1 --project=chromium \
+          --reporter=json=test-results.json,html | tee test-log.txt
       - name: List Playwright Tests
         run: npx playwright test --list
 
