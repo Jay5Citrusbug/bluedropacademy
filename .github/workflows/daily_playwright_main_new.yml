@@ -36,3 +36,4 @@ jobs:
         run: npx ts-node sendreport.ts
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+
