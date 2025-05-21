@@ -18,7 +18,7 @@ let adminPage: AdminPage;
 let Menu: HamburgerMenuPage;
 
 
-test.describe.skip('BlueDrop Chatbot Test Suite', () => {
+test.describe('BlueDrop Chatbot Test Suite', () => {
 
   test.beforeAll(async ({ browser }) => {
     const adminContext = await browser.newContext();
@@ -51,7 +51,7 @@ test.describe.skip('BlueDrop Chatbot Test Suite', () => {
 
   test.describe('💬 Chatbot Screen', () => {
 
-    test('TC_01: ✅ Confirm chatbot screen elements are visible', async () => {
+    test.only('TC_01: ✅ Confirm chatbot screen elements are visible', async () => {
       await chatbotscreen.verifyConfirmationElements();
     });
 
