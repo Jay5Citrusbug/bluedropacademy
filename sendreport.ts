@@ -10,7 +10,6 @@ if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('S
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// ✅ Email recipients
 const TO_EMAIL = 'jay5.citrusbug@gmail.com';
 const FROM_EMAIL = 'bluedropacademy.aws@gmail.com';
 
@@ -18,10 +17,15 @@ const FROM_EMAIL = 'bluedropacademy.aws@gmail.com';
 const htmlReportPath = path.resolve(__dirname, '../playwright-report/index.html');
 const jsonReportPath = path.resolve(__dirname, '../playwright-report/report.json');
 
-// ✅ Read HTML content
+// ✅ Ensure report files exist
+if (!fs.existsSync(htmlReportPath) || !fs.existsSync(jsonReportPath)) {
+  console.error('❌ One or more report files are missing. Email not sent.');
+  process.exit(1);
+}
+
 const htmlContent = fs.readFileSync(htmlReportPath, 'utf8');
 
-// ✅ Read JSON and generate summary
+// ✅ Parse JSON and generate summary
 interface TestResult {
   status: string;
 }
@@ -37,12 +41,12 @@ try {
         test.results?.map((r: any) => ({ status: r.status }))
       )
     )
-  ).filter(Boolean);
+  ).filter(Boolean) || [];
 
   const total = allTests.length;
-  const passed = allTests.filter((t) => t.status === 'passed').length;
-  const failed = allTests.filter((t) => t.status === 'failed').length;
-  const skipped = allTests.filter((t) => t.status === 'skipped').length;
+  const passed = allTests.filter(t => t.status === 'passed').length;
+  const failed = allTests.filter(t => t.status === 'failed').length;
+  const skipped = allTests.filter(t => t.status === 'skipped').length;
 
   summaryTable = `
     <h3>🧪 Test Summary</h3>
@@ -63,12 +67,11 @@ try {
     <br />
   `;
 } catch (err) {
-  const message = err instanceof Error ? err.message : String(err);
-  console.error('⚠️ Could not generate summary from JSON:', message);
+  console.error('⚠️ Could not generate summary from JSON:', err);
   summaryTable = '<p><strong>⚠️ Could not load summary table</strong></p>';
 }
 
-// ✅ Send email with summary + full report
+// ✅ Compose and send the email
 const message = {
   to: TO_EMAIL,
   from: FROM_EMAIL,
@@ -78,7 +81,7 @@ const message = {
     ${summaryTable}
     <hr />
     ${htmlContent}
-  `
+  `,
 };
 
 sgMail
@@ -87,6 +90,5 @@ sgMail
     console.log('✅ Report email sent successfully');
   })
   .catch((error) => {
-    const message = error instanceof Error ? error.message : String(error);
-    console.error('❌ Error sending report email:', message);
-  });
+    console.error('❌ Error sending report email:', error);
+    process.exit(1);
