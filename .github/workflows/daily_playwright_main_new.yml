@@ -1,37 +1,36 @@
-name: Daily Playwright Tests on main-new
+name: Daily Playwright Tests
 
 on:
   push:
     branches:
-      - main-new      # ✅ Triggers when you push to main-new
-  workflow_dispatch:  # ✅ Allows manual run from GitHub UI
-  schedule:
-    - cron: '0 3 * * *'  # ✅ Runs daily at 3 AM UTC (leave it for production)
+      - main-new
+  workflow_dispatch:
 
 jobs:
-  test-and-report:
+  playwright-tests:
     if: github.ref == 'refs/heads/main-new'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: 📦 Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: 🔧 Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: 20
 
-      - name: Install dependencies
+      - name: 📥 Install dependencies
         run: npm ci
 
-      - name: Install Playwright Browsers
+      - name: 🌐 Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright Tests
-        run: npx playwright test
+      - name: 🧪 Run Playwright Tests and Generate Reports
+        run: |
+          npx playwright test --reporter=html,json
 
-      - name: Send Report via SendGrid
+      - name: 📧 Send HTML Report via Email
         run: npx ts-node scripts/sendreport.ts
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
