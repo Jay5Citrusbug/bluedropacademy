@@ -2,24 +2,17 @@ import sgMail from '@sendgrid/mail';
 import fs from 'fs';
 import path from 'path';
 
-
 // Validate API key
 if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
   console.error('❌ Invalid or missing SENDGRID_API_KEY.');
   process.exit(1);
 }
 
-try {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-} catch (e) {
-  console.error('❌ Failed to set SendGrid API key:', e.message);
-  process.exit(1);
-}
-
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // ✅ Email recipients
-const TO_EMAIL = 'jay5.citrusbug@gmail.com';          // 🔁 Change this
-const FROM_EMAIL = 'bluedropacademy.aws@gmail.com';     // 🔁 Must be a verified sender in SendGrid
+const TO_EMAIL = 'jay5.citrusbug@gmail.com';
+const FROM_EMAIL = 'bluedropacademy.aws@gmail.com';
 
 // ✅ Paths to reports
 const htmlReportPath = path.resolve(__dirname, '../playwright-report/index.html');
@@ -70,11 +63,10 @@ try {
     <br />
   `;
 } catch (err) {
-  console.error('⚠️ Could not generate summary from JSON:', err);
+  const message = err instanceof Error ? err.message : String(err);
+  console.error('⚠️ Could not generate summary from JSON:', message);
   summaryTable = '<p><strong>⚠️ Could not load summary table</strong></p>';
 }
-
-
 
 // ✅ Send email with summary + full report
 const message = {
@@ -95,5 +87,6 @@ sgMail
     console.log('✅ Report email sent successfully');
   })
   .catch((error) => {
-    console.error('❌ Error sending report email:', error);
+    const message = error instanceof Error ? error.message : String(error);
+    console.error('❌ Error sending report email:', message);
   });
