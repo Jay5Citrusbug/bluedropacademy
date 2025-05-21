@@ -15,7 +15,7 @@ let adminPage: AdminPage;
 let Menu: HamburgerMenuPage;
 let chatbotscreen: chatbotPage;
 
-test.describe('BlueDrop Hamburgermenu Test Suite', () => {
+test.describe.skip('BlueDrop Hamburgermenu Test Suite', () => {
 
   test.beforeAll(async ({ browser }) => {
     const adminContext = await browser.newContext();

@@ -2,7 +2,20 @@ import sgMail from '@sendgrid/mail';
 import fs from 'fs';
 import path from 'path';
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+
+// Validate API key
+if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
+  console.error('❌ Invalid or missing SENDGRID_API_KEY.');
+  process.exit(1);
+}
+
+try {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+} catch (e) {
+  console.error('❌ Failed to set SendGrid API key:', e.message);
+  process.exit(1);
+}
+
 
 // ✅ Email recipients
 const TO_EMAIL = 'jay5.citrusbug@gmail.com';          // 🔁 Change this
@@ -60,6 +73,8 @@ try {
   console.error('⚠️ Could not generate summary from JSON:', err);
   summaryTable = '<p><strong>⚠️ Could not load summary table</strong></p>';
 }
+
+
 
 // ✅ Send email with summary + full report
 const message = {
