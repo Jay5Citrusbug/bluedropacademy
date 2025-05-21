@@ -15,7 +15,7 @@ const msg = {
   subject: '📋 Daily Playwright Test Report',
   html: `
     <h2>✅ Playwright Test Report</h2>
-    <p>This is your daily automated test run report.</p>
+    <p>Hello, This is your daily automated test run report.</p>
     <p><strong>Summary:</strong> See attached or below.</p>
     <hr/>
     ${htmlReport}
