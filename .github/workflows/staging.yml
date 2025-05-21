@@ -63,10 +63,10 @@ jobs:
         id: summary
         run: |
           if [ ! -f "test-results.json" ]; then echo "Report file not found!" && exit 1; fi
-          TOTAL=$(jq '[.suites[].specs[].tests[]] | length' test-results.json)
-          PASSED=$(jq '[.suites[].specs[].tests[] | select(.results[].status == "passed")] | length' test-results.json)
-          FAILED=$(jq '[.suites[].specs[].tests[] | select(.results[].status == "failed")] | length' test-results.json)
-          SKIPPED=$(jq '[.suites[].specs[].tests[] | select(.results[].status == "skipped")] | length' test-results.json)
+          TOTAL=$(jq '.suites | map(.specs | length) | add' test-results.json)
+          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' test-results.json)
+          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)
+          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)
           echo "total=$TOTAL" >> $GITHUB_OUTPUT
           echo "passed=$PASSED" >> $GITHUB_OUTPUT
           echo "failed=$FAILED" >> $GITHUB_OUTPUT

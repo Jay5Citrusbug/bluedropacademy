@@ -12,6 +12,9 @@ try {
   console.error('❌ Failed to set SendGrid API key:', e.message);
   process.exit(1);
 }
+// Get environment
+const environment = process.env.ENVIRONMENT || 'Staging';
+
 
 // Report details
 const reportDate = process.env.REPORT_DATE || '2025-05-07';
@@ -26,7 +29,7 @@ const reportUrl = process.env.REPORT_URL || `https://${repoOwner}.github.io/${re
 
 const msg = {
   //to: 'noam@bluedropacademy.com',
-   to: ['jay5.citrusbug@gmail.com','jayshree@citrusbug.com '],
+   to: ['jay5.citrusbug@gmail.com'],
   //cc: ['jay5.citrusbug@gmail.com', 'jayshree@citrusbug.com'],
   from: 'bluedropacademy.aws@gmail.com',
   subject: `Daily Automation Test Report - ${reportDate}`,
