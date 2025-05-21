@@ -2,7 +2,7 @@ import sgMail from '@sendgrid/mail';
 import fs from 'fs';
 import path from 'path';
 
-// Validate API key
+// Validate API key presence and format
 if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
   console.error('❌ Invalid or missing SENDGRID_API_KEY.');
   process.exit(1);
@@ -11,13 +11,13 @@ if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('S
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const TO_EMAIL = 'jay5.citrusbug@gmail.com';
-const FROM_EMAIL = 'bluedropacademy.aws@gmail.com';
+const FROM_EMAIL = 'bluedropacademy.aws@gmail.com'; // Ensure this is verified in SendGrid
 
-// ✅ Paths to reports
+// Paths to reports
 const htmlReportPath = path.resolve(__dirname, '../playwright-report/index.html');
 const jsonReportPath = path.resolve(__dirname, '../playwright-report/report.json');
 
-// ✅ Ensure report files exist
+// Check report files exist
 if (!fs.existsSync(htmlReportPath) || !fs.existsSync(jsonReportPath)) {
   console.error('❌ One or more report files are missing. Email not sent.');
   process.exit(1);
@@ -25,12 +25,13 @@ if (!fs.existsSync(htmlReportPath) || !fs.existsSync(jsonReportPath)) {
 
 const htmlContent = fs.readFileSync(htmlReportPath, 'utf8');
 
-// ✅ Parse JSON and generate summary
+// Generate summary table from JSON
 interface TestResult {
   status: string;
 }
 
 let summaryTable = '';
+
 try {
   const rawJson = fs.readFileSync(jsonReportPath, 'utf8');
   const jsonData = JSON.parse(rawJson);
@@ -71,7 +72,6 @@ try {
   summaryTable = '<p><strong>⚠️ Could not load summary table</strong></p>';
 }
 
-// ✅ Compose and send the email
 const message = {
   to: TO_EMAIL,
   from: FROM_EMAIL,
@@ -84,11 +84,17 @@ const message = {
   `,
 };
 
-sgMail
-  .send(message)
-  .then(() => {
+async function sendEmail() {
+  try {
+    await sgMail.send(message);
     console.log('✅ Report email sent successfully');
-  })
-  .catch((error) => {
-    console.error('❌ Error sending report email:', error);
+  } catch (error: any) {
+    console.error('❌ Error sending report email:', error.toString());
+    if (error.response && error.response.body) {
+      console.error('SendGrid response error:', error.response.body);
+    }
     process.exit(1);
+  }
+}
+
+sendEmail();
