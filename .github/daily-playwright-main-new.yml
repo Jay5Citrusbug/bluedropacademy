@@ -1,12 +1,12 @@
 name: Daily Playwright Tests on main-new
 
 on:
-  schedule:
-    - cron: '0 3 * * *'  # Run daily at 3 AM UTC
   push:
     branches:
-      - main-new
-  workflow_dispatch: # Optional: allows manual run from Actions UI
+      - main-new      # ✅ Triggers when you push to main-new
+  workflow_dispatch:  # ✅ Allows manual run from GitHub UI
+  schedule:
+    - cron: '0 3 * * *'  # ✅ Runs daily at 3 AM UTC (leave it for production)
 
 jobs:
   test-and-report:
