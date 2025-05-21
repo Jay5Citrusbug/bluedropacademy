@@ -111,167 +111,42 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "interrupted",
-                          "duration": 1837,
-                          "errors": [],
+                          "duration": 0,
+                          "error": {
+                            "message": "TypeError: Cannot read properties of undefined (reading 'close')",
+                            "stack": "TypeError: Cannot read properties of undefined (reading 'close')\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:49:19",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                              "column": 19,
+                              "line": 49
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 47 |\u001b[39m   test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 48 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🧹 Closing context'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m\n \u001b[90m 52 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m'💬 Chatbot Screen'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                                "column": 19,
+                                "line": 49
+                              },
+                              "message": "TypeError: Cannot read properties of undefined (reading 'close')\n\n\u001b[0m \u001b[90m 47 |\u001b[39m   test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 48 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🧹 Closing context'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m\n \u001b[90m 52 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m'💬 Chatbot Screen'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:49:19\u001b[22m"
+                            }
+                          ],
                           "stdout": [
-                            {
-                              "text": "Navigating to the admin page...\n"
-                            },
-                            {
-                              "text": "Navigating to the chatbot page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to the admin page.\n"
-                            },
-                            {
-                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
-                            },
-                            {
-                              "text": "Filling in email input...\n"
-                            },
-                            {
-                              "text": "Filling in password input...\n"
-                            },
-                            {
-                              "text": "Clicking on Sign In button...\n"
-                            },
-                            {
-                              "text": "Login submitted, waiting for dashboard to load...\n"
-                            },
-                            {
-                              "text": "Starting reset process for user: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "Clicking on User Data tab...\n"
-                            },
-                            {
-                              "text": "Searching for user with email: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "Waiting for user data to appear...\n"
-                            },
-                            {
-                              "text": "Clicking Reset button...\n"
-                            },
-                            {
-                              "text": "Confirming the reset...\n"
-                            },
-                            {
-                              "text": "Waiting for success message...\n"
-                            },
-                            {
-                              "text": "Reset confirmation message is visible.\n"
-                            },
-                            {
-                              "text": "Verifying usage value has been reset to 0...\n"
-                            },
-                            {
-                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "✅ User reset complete\n"
-                            },
-                            {
-                              "text": "Navigating to the admin page...\n"
-                            },
-                            {
-                              "text": "Navigating to the chatbot page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to chatbot login page.\n"
-                            },
-                            {
-                              "text": "Clicking \"Login with Email\" button...\n"
-                            },
-                            {
-                              "text": "Filling in email: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "Filling in password...\n"
-                            },
-                            {
-                              "text": "Clicking \"Submit\" to log in...\n"
-                            },
-                            {
-                              "text": "Waiting for page navigation after login...\n"
-                            },
-                            {
-                              "text": "URL indicates successful navigation to chat page.\n"
-                            },
-                            {
-                              "text": "✅ Login process completed and iframe title located successfully.\n"
-                            },
-                            {
-                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button without filling fields...\n"
-                            },
-                            {
-                              "text": "Waiting for validation error messages...\n"
-                            },
-                            {
-                              "text": "Verified gender required validation message.\n"
-                            },
-                            {
-                              "text": "Verified name required validation message.\n"
-                            },
-                            {
-                              "text": "✅ Invalid input test completed with expected error validations.\n"
-                            },
-                            {
-                              "text": "Starting to fill personal information form...\n"
-                            },
-                            {
-                              "text": "Filling name: Timmy\n"
-                            },
-                            {
-                              "text": "Selecting gender: בן\n"
-                            },
-                            {
-                              "text": "Checking visibility of \"Start\" button...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button...\n"
-                            },
-                            {
-                              "text": "✅ Personal info submitted successfully.\n"
-                            },
-                            {
-                              "text": "✅ Chatbot login and form submitted\n"
-                            },
-                            {
-                              "text": "🔍 Waiting for confirmation iframe to appear...\n"
-                            },
-                            {
-                              "text": "✅ Verifying confirmation message and title...\n"
-                            },
-                            {
-                              "text": "❌ Test failed: TC_01: ✅ Confirm chatbot screen elements are visible\n"
-                            },
-                            {
-                              "text": "📸 Screenshot saved at: screenshots/TC_01:_✅_Confirm_chatbot_screen_elements_are_visible.png\n"
-                            },
                             {
                               "text": "🧹 Closing context\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-21T09:31:55.924Z",
+                          "startTime": "2025-05-21T09:45:22.541Z",
                           "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-22492-screen-elements-are-visible-chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-22492-screen-elements-are-visible-chromium\\test-failed-2.png"
-                            }
-                          ]
+                          "attachments": [],
+                          "errorLocation": {
+                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                            "column": 19,
+                            "line": 49
+                          }
                         }
                       ],
                       "status": "skipped"
@@ -293,7 +168,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:23.979Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -313,7 +202,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:23.986Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -333,7 +236,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:23.992Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -353,7 +270,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.000Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -373,7 +304,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.008Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -393,7 +338,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.011Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -413,7 +372,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.012Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -433,7 +406,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.019Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -453,7 +440,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.019Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -473,7 +474,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.026Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -493,7 +508,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.026Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -513,7 +542,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.032Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -533,7 +576,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.037Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -553,7 +610,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.044Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -573,7 +644,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.051Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -593,7 +678,21 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-21T09:45:24.060Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
                       "status": "skipped"
                     }
                   ],
@@ -825,8 +924,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-21T09:31:54.210Z",
-    "duration": 34913.09,
+    "startTime": "2025-05-21T09:45:20.863Z",
+    "duration": 4472.46,
     "expected": 0,
     "skipped": 26,
     "unexpected": 0,

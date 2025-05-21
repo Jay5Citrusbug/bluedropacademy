@@ -54,6 +54,8 @@ jobs:
         run: |
           npx playwright test tests --workers=1 --project=chromium --workers=1 \
             --reporter=json=test-results.json,html | tee test-log.txt
+      - name: List Playwright Tests
+        run: npx playwright test --list
 
       - name: Get current date with timestamp
         id: date
