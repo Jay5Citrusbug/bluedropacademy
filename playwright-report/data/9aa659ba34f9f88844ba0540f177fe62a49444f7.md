@@ -1,7 +1,7 @@
 # Test info
 
-- Name: BlueDrop Hamburgermenu Test Suite >> Hamburger Menu & 📜 Chat History >> TC_18 🔍 Search in chat history
-- Location: D:\Playwright\Bluedrop_academy\tests\Hamburger_Menu.spec.ts:48:7
+- Name: BlueDrop Chatbot Test Suite >> 💬 Chatbot Screen >> TC_06: 📤 Submit query message
+- Location: D:\Playwright\Bluedrop_academy\tests\Chatbot.spec.ts:75:9
 
 # Error details
 
@@ -11,22 +11,7 @@ Call log:
   - waiting for locator('iframe[name="htmlComp-iframe"]').contentFrame().locator('[data-test-id="predefined-button-0"]') to be visible
 
     at chatbotPage.SubmitQuery (D:\Playwright\Bluedrop_academy\tests\Pages\chatbotPage.ts:79:23)
-    at D:\Playwright\Bluedrop_academy\tests\Hamburger_Menu.spec.ts:50:17
-```
-
-# Page snapshot
-
-```yaml
-- region "top of page"
-- button "לדלג לתוכן הראשי"
-- link "האתר הזה עוצב בעזרת הכלי לבניית אתרים של wix .com . רוצים ליצור אתר משלכם? התחילו עכשיו":
-  - /url: //www.wix.com/lpviral/enviral?utm_campaign=vir_wixad_live&orig_msid=d147380a-f3d1-419d-9ced-13400ea5a695&adsVersion=white
-  - text: האתר הזה עוצב בעזרת הכלי לבניית אתרים של
-  - img "wix"
-  - text: .com . רוצים ליצור אתר משלכם? התחילו עכשיו
-- main:
-  - iframe
-- region "bottom of page"
+    at D:\Playwright\Bluedrop_academy\tests\Chatbot.spec.ts:76:7
 ```
 
 # Test source
