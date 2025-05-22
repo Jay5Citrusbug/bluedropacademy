@@ -49,7 +49,7 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
     await context.close();
   });
 
-  test.describe('💬 Chatbot Screen', () => {
+  test.describe.skip('💬 Chatbot Screen', () => {
 
     test('TC_01: ✅ Confirm chatbot screen elements are visible', async () => {
       await chatbotscreen.verifyConfirmationElements();

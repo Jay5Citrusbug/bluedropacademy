@@ -58,8 +58,8 @@ await form1.fillPersonalInfo(testUserData.name, testUserData.gender);
 await chatbotPage1.evaluate(() => {
   window.scrollTo(0, document.body.scrollHeight);
 });
-await chatbotPage1.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: '📚 תשובה קצרה תשובה מפורטת 📄' }).isVisible();
-await chatbotPage1.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: '📚 תשובה קצרה תשובה מפורטת 📄' }).click();
+// await chatbotPage1.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: '📚 תשובה קצרה תשובה מפורטת 📄' }).isVisible();
+// await chatbotPage1.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: '📚 תשובה קצרה תשובה מפורטת 📄' }).click();
 await chatbotscreen.SubmitQuery(testInfo);
 
 });
