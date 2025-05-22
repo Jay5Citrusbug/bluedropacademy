@@ -1,80 +1,100 @@
-const sgMail = require('@sendgrid/mail');
+import sgMail from '@sendgrid/mail';
+import fs from 'fs';
+import path from 'path';
 
-// Validate API key
+// Validate API key presence and format
 if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
   console.error('❌ Invalid or missing SENDGRID_API_KEY.');
   process.exit(1);
 }
 
-try {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-} catch (e) {
-  console.error('❌ Failed to set SendGrid API key:', e.message);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+const TO_EMAIL = 'jay5.citrusbug@gmail.com';
+const FROM_EMAIL = 'bluedropacademy.aws@gmail.com'; // Ensure this is verified in SendGrid
+
+// Paths to reports
+const htmlReportPath = path.resolve(__dirname, '../playwright-report/index.html');
+const jsonReportPath = path.resolve(__dirname, '../playwright-report/report.json');
+
+// Check report files exist
+if (!fs.existsSync(htmlReportPath) || !fs.existsSync(jsonReportPath)) {
+  console.error('❌ One or more report files are missing. Email not sent.');
   process.exit(1);
 }
 
-// Report details
-const reportDate = process.env.REPORT_DATE || '2025-05-07';
-const passed = process.env.PASSED || '45';
-const failed = process.env.FAILED || '3';
-const skipped = process.env.SKIPPED || '2';
-const total = Number(passed) + Number(failed) + Number(skipped);
+const htmlContent = fs.readFileSync(htmlReportPath, 'utf8');
 
-const repoOwner = process.env.REPO_OWNER || 'your-org';
-const repoName = process.env.REPO_NAME || 'your-repo';
-const reportUrl = process.env.REPORT_URL || `https://${repoOwner}.github.io/${repoName}/report-${reportDate.toString().trim()}-${environment.toLowerCase()}/`;
+// Generate summary table from JSON
+interface TestResult {
+  status: string;
+}
 
-const msg = {
-  //to: 'noam@bluedropacademy.com',
-  to: ['jay5.citrusbug@gmail.com','jayshree@citrusbug.com '],
-  //cc: ['jay5.citrusbug@gmail.com', 'jayshree@citrusbug.com'],
-  from: 'bluedropacademy.aws@gmail.com',
-  subject: `Daily Automation Test Report - ${reportDate}`,
+let summaryTable = '';
+
+try {
+  const rawJson = fs.readFileSync(jsonReportPath, 'utf8');
+  const jsonData = JSON.parse(rawJson);
+
+  const allTests: TestResult[] = jsonData.suites?.flatMap((suite: any) =>
+    suite.specs?.flatMap((spec: any) =>
+      spec.tests?.flatMap((test: any) =>
+        test.results?.map((r: any) => ({ status: r.status }))
+      )
+    )
+  ).filter(Boolean) || [];
+
+  const total = allTests.length;
+  const passed = allTests.filter(t => t.status === 'passed').length;
+  const failed = allTests.filter(t => t.status === 'failed').length;
+  const skipped = allTests.filter(t => t.status === 'skipped').length;
+
+  summaryTable = `
+    <h3>🧪 Test Summary</h3>
+    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif;">
+      <tr style="background-color: #f2f2f2;">
+        <th>Total</th>
+        <th>Passed</th>
+        <th>Failed</th>
+        <th>Skipped</th>
+      </tr>
+      <tr>
+        <td>${total}</td>
+        <td style="color: green;">${passed}</td>
+        <td style="color: red;">${failed}</td>
+        <td style="color: gray;">${skipped}</td>
+      </tr>
+    </table>
+    <br />
+  `;
+} catch (err) {
+  console.error('⚠️ Could not generate summary from JSON:', err);
+  summaryTable = '<p><strong>⚠️ Could not load summary table</strong></p>';
+}
+
+const message = {
+  to: TO_EMAIL,
+  from: FROM_EMAIL,
+  subject: '📋 Daily Playwright Test Report with Summary',
   html: `
-    <div style="font-family: Arial, sans-serif; padding: 20px; text-align: left; color: #333;">
-      <p>Hello Bluedrop Academy,</p>
-      <p>The automated Playwright test suite has completed.</p>
-
-      <p style="margin-top: 10px;"><strong>🔍 Test Summary</strong></p>
-
-      <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
-        <tr style="background-color: #f8f8f8;">
-          <th style="width: 35%; text-align: left; padding: 8px; border: 1px solid #ddd;">📅 Date</th>
-          <td style="width: 65%; text-align: left; padding: 8px; border: 1px solid #ddd;">${reportDate}</td>
-        </tr>
-        <tr>
-          <th style="text-align: left; padding: 8px; border: 1px solid #ddd;">Total Tests</th>
-          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${total}</td>
-        </tr>
-        <tr>
-          <th style="text-align: left; padding: 8px; border: 1px solid #ddd; color: green;">✅ Passed</th>
-          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${passed}</td>
-        </tr>
-        <tr>
-          <th style="text-align: left; padding: 8px; border: 1px solid #ddd; color: red;">❌ Failed</th>
-          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${failed}</td>
-        </tr>
-        <tr>
-          <th style="text-align: left; padding: 8px; border: 1px solid #ddd; color: orange;">⏭️ Skipped</th>
-          <td style="text-align: left; padding: 8px; border: 1px solid #ddd;">${skipped}</td>
-        </tr>
-      </table>
-
-      <p style="margin-top: 20px;">🔗 <strong>Full Report:</strong><br>
-        <a href="${reportUrl}" style="color: #3498db;">${reportUrl}</a>
-      </p>
-
-      <p>Best regards,<br><strong>Citrusbug QA Team</strong></p>
-    </div>
+    <h2>✅ Playwright Test Report</h2>
+    ${summaryTable}
+    <hr />
+    ${htmlContent}
   `,
 };
 
-sgMail
-  .send(msg)
-  .then(() => {
-    console.log('✅ Email sent successfully');
-  })
-  .catch((error) => {
-    console.error('❌ Failed to send email:', error.response?.body || error.message);
+async function sendEmail() {
+  try {
+    await sgMail.send(message);
+    console.log('✅ Report email sent successfully');
+  } catch (error: any) {
+    console.error('❌ Error sending report email:', error.toString());
+    if (error.response && error.response.body) {
+      console.error('SendGrid response error:', error.response.body);
+    }
     process.exit(1);
-  });
+  }
+}
+
+sendEmail();
