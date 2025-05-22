@@ -2,8 +2,7 @@ name: Playwright Automated Tests
 
 on:
   push:
-    branches: 
-      - 'main-new'  # Only trigger on pushes to 'main-new' branch
+    branches: [ main-new ]
   schedule:         # (Optional) Keep the 5-minute scheduled runs
     - cron: '*/5 * * * *'
   workflow_dispatch: # Allow manual triggering
