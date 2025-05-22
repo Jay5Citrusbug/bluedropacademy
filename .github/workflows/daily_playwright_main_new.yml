@@ -4,10 +4,11 @@ on:
   push:
     branches: ['main']
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/5 * * * *'  # Runs every 5 minutes (UTC)
   workflow_dispatch:
 
 env:
+  REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/report.html
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
   TO_EMAIL: jay5.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
@@ -30,14 +31,9 @@ jobs:
           npx playwright install --with-deps
           npm install @sendgrid/mail
 
-      - name: Clean previous test runs
-        run: |
-          rm -rf test-results/
-          rm -f report-*.html
-
       - name: Run Playwright tests
         id: run-tests
-        continue-on-error: true
+        continue-on-error: true  # This prevents the step from failing the pipeline
         run: |
           npx playwright test --reporter=html,json || true
           TEST_EXIT_CODE=$?
@@ -47,19 +43,13 @@ jobs:
       - name: Prepare Report
         if: always()
         run: |
-          TIMESTAMP=$(date +'%Y%m%d-%H%M%S')
-          REPORT_FILENAME="report-${TIMESTAMP}.html"
-          mv playwright-report/index.html ${REPORT_FILENAME}
-          mkdir -p playwright-reports
-          cp ${REPORT_FILENAME} playwright-reports/
-          echo "REPORT_URL=https://jay5Citrusbug.github.io/bluedropacademy/playwright-reports/${REPORT_FILENAME}" >> $GITHUB_ENV
-          echo "REPORT_FILENAME=${REPORT_FILENAME}" >> $GITHUB_ENV
+          mv playwright-report/index.html report.html
 
-      - name: Upload Artifact
+      - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: playwright-reports
-          retention-days: 7
+          path: .
+          retention-days: 1
 
       - name: Send Email Report
         if: always()
@@ -71,7 +61,6 @@ jobs:
           SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
           TO_EMAIL: ${{ env.TO_EMAIL }}
           FROM_EMAIL: ${{ env.FROM_EMAIL }}
-          REPORT_TIMESTAMP: $(date +'%Y-%m-%d %H:%M:%S')
 
   deploy:
     needs: test-and-report
@@ -79,9 +68,11 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
+
     permissions:
       pages: write
       id-token: write
+
     steps:
       - name: Deploy to GitHub Pages
         id: deploy
