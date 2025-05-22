@@ -12,7 +12,7 @@ let failedTests = 0;
 let skippedTests = 0;
 
 try {
-  const rawData = fs.readFileSync('playwright-report/results.json', 'utf8');
+  const rawData = fs.readFileSync('playwright-report/report.json', 'utf8');
   const report = JSON.parse(rawData);
 
   report.suites?.forEach((suite) => {
@@ -37,7 +37,7 @@ const msg = {
   subject: `Daily Automation Test Report - (${reportDate})`,
   text: `Hello Bluedrop Academy,
 
-The automated Playwright test suite for the Staging environment has completed.
+The automated Playwright test suite has completed.
 
 Date: ${reportDate}
 Total: ${totalTests}
