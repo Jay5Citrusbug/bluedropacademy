@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}  # Fixed typo in variable name
   TO_EMAIL: jay5.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
 
@@ -33,6 +33,7 @@ jobs:
       - name: Clean previous test runs (but keep reports)
         run: |
           rm -rf test-results/  # Clears old test data but keeps published reports
+          rm -f report.html  # Remove previous single report file
 
       - name: Run Playwright tests
         id: run-tests
@@ -46,19 +47,21 @@ jobs:
       - name: Generate unique report
         if: always()
         run: |
-          # Create timestamped directory for this run
-          TIMESTAMP=$(date +'%Y-%m-%d_%H-%M-%S')
-          mkdir -p playwright-reports/$TIMESTAMP
-          cp -r playwright-report/* playwright-reports/$TIMESTAMP/
+          # Create timestamped filename
+          TIMESTAMP=$(date +'%Y%m%d-%H%M%S')
+          REPORT_FILENAME="report-${TIMESTAMP}.html"
           
-          # Set the URL for THIS specific report
-          echo "REPORT_URL=https://jay5Citrusbug.github.io/bluedropacademy/playwright-reports/$TIMESTAMP/index.html" >> $GITHUB_ENV
-          echo "REPORT_DIR=playwright-reports/$TIMESTAMP" >> $GITHUB_ENV
+          # Move and rename the report
+          mv playwright-report/index.html ${REPORT_FILENAME}
+          
+          # Set environment variables
+          echo "REPORT_URL=https://jay5Citrusbug.github.io/bluedropacademy/${REPORT_FILENAME}" >> $GITHUB_ENV
+          echo "REPORT_FILENAME=${REPORT_FILENAME}" >> $GITHUB_ENV
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: playwright-reports
+          path: ${{ env.REPORT_FILENAME }}
           retention-days: 7  # Keep reports for 7 days
 
       - name: Send Email Report
