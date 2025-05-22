@@ -33,7 +33,7 @@ jobs:
 
       - name: Run Playwright tests
         id: run-tests
-        continue-on-error: true  # This prevents the step from failing the pipeline
+        continue-on-error: true
         run: |
           npx playwright test --reporter=html,json || true
           TEST_EXIT_CODE=$?
@@ -44,6 +44,8 @@ jobs:
         if: always()
         run: |
           mv playwright-report/index.html report.html
+          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
+          echo "REPORT_TIMESTAMP=$TIMESTAMP" >> $GITHUB_ENV
 
       - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
@@ -56,6 +58,7 @@ jobs:
         run: node .github/scripts/sendreport.js
         env:
           REPORT_URL: ${{ env.REPORT_URL }}
+          REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
           TEST_STATUS: ${{ env.TEST_STATUS }}
           GITHUB_REF_NAME: ${{ github.ref_name }}
           SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
