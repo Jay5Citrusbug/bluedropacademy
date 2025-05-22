@@ -92,7 +92,7 @@ jobs:
         run: npm ci
 
       - name: Send Email Report
-        run: node sendreport.ts
+        run: node sendreport.js
         env:
           ENVIRONMENT: Staging
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
