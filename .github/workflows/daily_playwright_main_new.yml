@@ -4,11 +4,10 @@ on:
   push:
     branches: ['main']
   schedule:
-    - cron: '*/5 * * * *'  # Runs every 5 minutes (UTC)
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 env:
-  REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/report.html
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
   TO_EMAIL: jay5.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
@@ -31,25 +30,36 @@ jobs:
           npx playwright install --with-deps
           npm install @sendgrid/mail
 
+      - name: Clean previous test runs (but keep reports)
+        run: |
+          rm -rf test-results/  # Clears old test data but keeps published reports
+
       - name: Run Playwright tests
         id: run-tests
-        continue-on-error: true  # This prevents the step from failing the pipeline
+        continue-on-error: true
         run: |
           npx playwright test --reporter=html,json || true
           TEST_EXIT_CODE=$?
           echo "TEST_STATUS=$(if [ $TEST_EXIT_CODE -eq 0 ]; then echo 'PASSED'; else echo 'FAILED'; fi)" >> $GITHUB_ENV
           echo "TEST_EXIT_CODE=$TEST_EXIT_CODE" >> $GITHUB_ENV
 
-      - name: Prepare Report
+      - name: Generate unique report
         if: always()
         run: |
-          mv playwright-report/index.html report.html
+          # Create timestamped directory for this run
+          TIMESTAMP=$(date +'%Y-%m-%d_%H-%M-%S')
+          mkdir -p playwright-reports/$TIMESTAMP
+          cp -r playwright-report/* playwright-reports/$TIMESTAMP/
+          
+          # Set the URL for THIS specific report
+          echo "REPORT_URL=https://jay5Citrusbug.github.io/bluedropacademy/playwright-reports/$TIMESTAMP/index.html" >> $GITHUB_ENV
+          echo "REPORT_DIR=playwright-reports/$TIMESTAMP" >> $GITHUB_ENV
 
-      - name: Upload Report Artifact
+      - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
-          retention-days: 1
+          path: playwright-reports
+          retention-days: 7  # Keep reports for 7 days
 
       - name: Send Email Report
         if: always()
@@ -61,6 +71,7 @@ jobs:
           SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
           TO_EMAIL: ${{ env.TO_EMAIL }}
           FROM_EMAIL: ${{ env.FROM_EMAIL }}
+          REPORT_TIMESTAMP: $(date +'%Y-%m-%d %H:%M:%S')
 
   deploy:
     needs: test-and-report
@@ -68,11 +79,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
-
     permissions:
       pages: write
       id-token: write
-
     steps:
       - name: Deploy to GitHub Pages
         id: deploy
