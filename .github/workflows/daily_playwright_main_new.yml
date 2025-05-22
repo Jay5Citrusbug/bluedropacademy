@@ -1,0 +1,69 @@
+name: Playwright Automated Testing
+
+on:
+  push:
+    branches: ['main']
+  schedule:
+    - cron: '*/5 * * * *'  # Runs every 5 minutes (UTC)
+  workflow_dispatch:
+
+jobs:
+  test-and-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: npx playwright test --reporter=html
+        continue-on-error: true  # Continue even if tests fail
+
+      - name: Prepare Report for Deployment
+        if: always()
+        run: |
+          mv playwright-report/index.html playwright-report/report.html
+          echo "<meta http-equiv='refresh' content='0; url=report.html'>" > playwright-report/index.html
+
+      - name: Upload HTML Report
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: playwright-report/
+          retention-days: 1
+
+      - name: Generate Workflow Summary
+        if: always()
+        run: |
+          echo "### ⏱ Last Run: $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "### 🔍 [View Playwright Report](https://jay5Citrusbug.github.io/bluedropacademy/playwright-report/)" >> $GITHUB_STEP_SUMMARY
+          echo "⏳ Next auto-run in 5 minutes" >> $GITHUB_STEP_SUMMARY
+
+  deploy:
+    needs: test-and-report
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Print Live URL
+        run: |
+          echo "=============================================="
+          echo "🚀 Playwright Report Published Successfully!"
+          echo "🌐 Live URL: https://jay5Citrusbug.github.io/bluedropacademy/playwright-report/"
+          echo "⏱ Next scheduled run: $(date -u -d '+5 minutes' '+%H:%M UTC')"
+          echo "=============================================="

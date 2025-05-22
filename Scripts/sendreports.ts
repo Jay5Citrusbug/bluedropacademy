@@ -2,36 +2,38 @@ import sgMail from '@sendgrid/mail';
 import fs from 'fs';
 import path from 'path';
 
-// Validate API key presence and format
+
+// Validate API key
 if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
   console.error('❌ Invalid or missing SENDGRID_API_KEY.');
   process.exit(1);
 }
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-const TO_EMAIL = 'jay5.citrusbug@gmail.com';
-const FROM_EMAIL = 'bluedropacademy.aws@gmail.com'; // Ensure this is verified in SendGrid
-
-// Paths to reports
-const htmlReportPath = path.resolve(__dirname, '../playwright-report/index.html');
-const jsonReportPath = path.resolve(__dirname, '../playwright-report/report.json');
-
-// Check report files exist
-if (!fs.existsSync(htmlReportPath) || !fs.existsSync(jsonReportPath)) {
-  console.error('❌ One or more report files are missing. Email not sent.');
+try {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+} catch (e) {
+  console.error('❌ Failed to set SendGrid API key:', e.message);
   process.exit(1);
 }
 
+
+// ✅ Email recipients
+const TO_EMAIL = 'jay5.citrusbug@gmail.com';          // 🔁 Change this
+const FROM_EMAIL = 'bluedropacademy.aws@gmail.com';     // 🔁 Must be a verified sender in SendGrid
+
+// ✅ Paths to reports
+const htmlReportPath = path.resolve(__dirname, '../playwright-report/index.html');
+const jsonReportPath = path.resolve(__dirname, '../playwright-report/report.json');
+
+// ✅ Read HTML content
 const htmlContent = fs.readFileSync(htmlReportPath, 'utf8');
 
-// Generate summary table from JSON
+// ✅ Read JSON and generate summary
 interface TestResult {
   status: string;
 }
 
 let summaryTable = '';
-
 try {
   const rawJson = fs.readFileSync(jsonReportPath, 'utf8');
   const jsonData = JSON.parse(rawJson);
@@ -42,12 +44,12 @@ try {
         test.results?.map((r: any) => ({ status: r.status }))
       )
     )
-  ).filter(Boolean) || [];
+  ).filter(Boolean);
 
   const total = allTests.length;
-  const passed = allTests.filter(t => t.status === 'passed').length;
-  const failed = allTests.filter(t => t.status === 'failed').length;
-  const skipped = allTests.filter(t => t.status === 'skipped').length;
+  const passed = allTests.filter((t) => t.status === 'passed').length;
+  const failed = allTests.filter((t) => t.status === 'failed').length;
+  const skipped = allTests.filter((t) => t.status === 'skipped').length;
 
   summaryTable = `
     <h3>🧪 Test Summary</h3>
@@ -72,6 +74,9 @@ try {
   summaryTable = '<p><strong>⚠️ Could not load summary table</strong></p>';
 }
 
+
+
+// ✅ Send email with summary + full report
 const message = {
   to: TO_EMAIL,
   from: FROM_EMAIL,
@@ -81,20 +86,14 @@ const message = {
     ${summaryTable}
     <hr />
     ${htmlContent}
-  `,
+  `
 };
 
-async function sendEmail() {
-  try {
-    await sgMail.send(message);
+sgMail
+  .send(message)
+  .then(() => {
     console.log('✅ Report email sent successfully');
-  } catch (error: any) {
-    console.error('❌ Error sending report email:', error.toString());
-    if (error.response && error.response.body) {
-      console.error('SendGrid response error:', error.response.body);
-    }
-    process.exit(1);
-  }
-}
-
-sendEmail();
+  })
+  .catch((error) => {
+    console.error('❌ Error sending report email:', error);
+  });
