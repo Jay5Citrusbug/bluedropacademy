@@ -1,0 +1,501 @@
+{
+  "config": {
+    "configFile": "D:\\Playwright\\Bluedrop_academy\\playwright.config.ts",
+    "rootDir": "D:/Playwright/Bluedrop_academy/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/Playwright/Bluedrop_academy/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Playwright/Bluedrop_academy/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/tests/!(No_Activity).spec.ts"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "D:/Playwright/Bluedrop_academy/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "long-wait",
+        "name": "long-wait",
+        "testDir": "D:/Playwright/Bluedrop_academy/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/tests/No_Activity.spec.ts"
+        ],
+        "timeout": 80000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.52.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "Chatbot.spec.ts",
+      "file": "Chatbot.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "BlueDrop Chatbot Test Suite",
+          "file": "Chatbot.spec.ts",
+          "line": 21,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "💬 Chatbot Screen",
+              "file": "Chatbot.spec.ts",
+              "line": 52,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC_01: ✅ Confirm chatbot screen elements are visible",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1823,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "Verifying usage value has been reset to 0...\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "✅ User reset complete\n"
+                            },
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: qa@yopmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "URL indicates successful navigation to chat page.\n"
+                            },
+                            {
+                              "text": "✅ Login process completed and iframe title located successfully.\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            },
+                            {
+                              "text": "Waiting for validation error messages...\n"
+                            },
+                            {
+                              "text": "Verified gender required validation message.\n"
+                            },
+                            {
+                              "text": "Verified name required validation message.\n"
+                            },
+                            {
+                              "text": "✅ Invalid input test completed with expected error validations.\n"
+                            },
+                            {
+                              "text": "Starting to fill personal information form...\n"
+                            },
+                            {
+                              "text": "Filling name: Johnnie\n"
+                            },
+                            {
+                              "text": "Selecting gender: בת\n"
+                            },
+                            {
+                              "text": "Checking visibility of \"Start\" button...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button...\n"
+                            },
+                            {
+                              "text": "✅ Personal info submitted successfully.\n"
+                            },
+                            {
+                              "text": "✅ Chatbot login and form submitted\n"
+                            },
+                            {
+                              "text": "🔍 Waiting for confirmation iframe to appear...\n"
+                            },
+                            {
+                              "text": "✅ Verifying confirmation message and title...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-22T11:23:12.930Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-b1004f10ffc156eaa0a1",
+                  "file": "Chatbot.spec.ts",
+                  "line": 54,
+                  "column": 9
+                },
+                {
+                  "title": "TC_02: 🧠 Initial chatbot message is displayed",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1356,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "✅ Initial bot message received.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-22T11:23:47.471Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-7a1143fd846f163b527d",
+                  "file": "Chatbot.spec.ts",
+                  "line": 58,
+                  "column": 9
+                },
+                {
+                  "title": "TC_03: 🚫 Predefined buttons are not active",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1288,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔒 Verifying predefined buttons are hidden...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-22T11:23:48.836Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-6a0676835a2727c1c3fa",
+                  "file": "Chatbot.spec.ts",
+                  "line": 63,
+                  "column": 9
+                },
+                {
+                  "title": "TC_04: 🚫 Submit button is disabled initially",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1284,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔒 Verifying Submit button is disabled...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-22T11:23:50.131Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-693d284707c4d9132f25",
+                  "file": "Chatbot.spec.ts",
+                  "line": 67,
+                  "column": 9
+                },
+                {
+                  "title": "TC_05: ✅ Submit button is enabled after input",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1422,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Typing message: איך להכין Pappardelle Alla Bolognese? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\n"
+                            },
+                            {
+                              "text": "✅ Verifying Submit button is enabled...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-22T11:23:51.420Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-b35b2af01cf0d18b9281",
+                  "file": "Chatbot.spec.ts",
+                  "line": 71,
+                  "column": 9
+                },
+                {
+                  "title": "TC_06: 📤 Submit query message",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: 🐇🥵 Piri Piri-Crusted Rabbit: הארנב שיגרום לחיך שלך לרקוד פלמנקו! 💃🔥\nהכנת מנה כמו Piri Piri-crusted Rabbit היא לא סתם בישול – זו הרפתקה קולינרית שמתובלת בתבלינים לוהטים, ארומות משגעות, והרבה כיף! ההכנה הזו תגרום לך להרגיש כמו שף פורטוגלי במסעדת חוף קסומה. אז בואי נתחיל את המסע שלנו 🚀.\n\n🎬 שלב ראשון: אוסף החומרים\nלפני שמתחילים, אנחנו צריכים את כל הקסם במקום אחד. הנה רשימת הקניות שלך 🛒:\nעבור הארנב והמרינדה:\n\n🐇 1 ארנב שלם (חתוך ל-6–8 חלקים).\n🧂 מלח ופלפל שחור לפי הטעם.\n🍋 מיץ מלימון אחד טרי.\n🥂 2 כפות שמן זית.\n\nלרוטב ה-Piri Piri (הלב הפועם של המנה! ❤️🔥):\n\n🌶️ 4–5 פלפלים חריפים אדומים (אפשר לבחור ברמת החריפות שמתאימה לך).\n🧄 4 שיני שום קלופות.\n🌿 2 כפיות פפריקה מעושנת.\n🍅 עגבנייה אחת בינונית קצוצה גס.\n🍯 כפית דבש.\n🍋 מיץ מחצי לימון נוסף.\n🥄 חצי כפית אורגנו יבש או טרי (כי למה לא להוסיף טוויסט ירוק?).\n🥂 3 כפות שמן זית איכותי.\n\n\n🔪 שלב שני: הכנת המרינדה והשריית הארנב\n\nתיבול ראשוני לארנב: תבלי את חלקי הארנב במלח, פלפל שחור, ומיץ לימון. עסי בזהירות את התיבול לתוך הבשר – זה סוג של טיפול ספא לארנב שלך! 💆‍♀️\nהוסיפי כף שמן זית מעל והכניסי למקרר ל-30 דקות לפחות. למה? כדי שהארנבון יספוג קצת אהבה וטעמים. 💖\n\n\n🔥 שלב שלישי: הכנת רוטב ה-Piri Piri\nפה מתחילה האקשן האמיתי! 🤩\n\nחממי תנור מראש ל-180 מעלות צלזיוס.\nשימי את הפלפלים החריפים, העגבנייה והשום על מגש אפייה קטן וטפטפי עליהם מעט שמן זית. צלי אותם בתנור למשך 15 דקות עד שהקליפה של הפלפלים כהה מעט והשום רך וריחני.\nכשהירקות מוכנים, הכניסי אותם לבלנדר יחד עם הפפריקה, הדבש, מיץ לימון נוסף, האורגנו ושמן הזית שנותר. טחני עד שתתקבל משחה אדומה ומבריקה שתגרום לך לרצות לשים אותה על הכול 😍.\n\n💡 כיף לדעת: אם נשאר לך רוטב – אפשר לשמור בצנצנת ולהשתמש בו גם על עוף או טוסט 👌.\n\n🍳 שלב רביעי: ציפוי הארנבון בקסם\n\nהוציאי את חלקי הארנבון מהמקרר ומרחי עליהם שכבה נדיבה מהרוטב שיצרת (אל תחסכי – זה הליבה של המנה!).\nהניחי אותם על מגש אפייה מרופד בנייר אפייה או בתחתית כלי אפייה רחב.\n\n\n🔥 שלב חמישי: צלייה מושלמת\n\nחממי תנור מראש ל-200 מעלות צלזיוס.\nהכניסי את מגש הארנבון לתנור ואפי למשך 35–40 דקות. באמצע הצלייה, כדאי להפוך את החלקים ולמרוח עוד קצת רוטב כדי לוודא שכל ביס יהיה מפוצץ בטעם.\nאיך יודעים שזה מוכן? הבשר צריך להיות זהוב ועסיסי מבפנים – נסי לנעוץ מזלג קלות כדי לבדוק אם הוא מתפרק בעדינות.\n\n\n🍋 שלב שישי: הגשה כמו מקצוענית\nאל תשכחי – אנחנו אוכלות קודם עם העיניים 👀! הנה כמה טיפים להגשה בלתי נשכחת:\n\nהניחי את חלקי הארנבון בצלחת גדולה ויפה.\nקשטי בעלי כוסברה טריים או פטרוזיליה קצוצה 🌿.\nהגישי לצד פרוסות לימון טריות ותוספת פשוטה כמו אורז לבן או תפוח אדמה אפוי 🥔.\n\n💡 טוויסט בונוס: אם בא לך להרגיש ממש פורטוגלית, הגישי לצד יין לבן צונן 😏.\n\nVoilà! 🎉 עכשיו יש לך מנה עוצרת נשימה שתגרום לכל מי שטועם אותה להתאהב בטעמים החריפים והמעושנים שלה!"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 36140,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Submitting query: \"איך להכין Piri Piri-crusted Rabbit? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                            },
+                            {
+                              "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
+                            },
+                            {
+                              "text": "✅ Bot response received: \"🐇🥵 Piri Piri-Crusted Rabbit: הארנב שיגרום לחיך שלך לרקוד פלמנקו! 💃🔥\nהכנת מנה כמו Piri Piri-crusted Rabbit היא לא סתם בישול – זו הרפתקה קולינרית שמתובלת בתבלינים לוהטים, ארומות משגעות, והרבה כיף! ההכנה הזו תגרום לך להרגיש כמו שף פורטוגלי במסעדת חוף קסומה. אז בואי נתחיל את המסע שלנו 🚀.\n\n🎬 שלב ראשון: אוסף החומרים\nלפני שמתחילים, אנחנו צריכים את כל הקסם במקום אחד. הנה רשימת הקניות שלך 🛒:\nעבור הארנב והמרינדה:\n\n🐇 1 ארנב שלם (חתוך ל-6–8 חלקים).\n🧂 מלח ופלפל שחור לפי הטעם.\n🍋 מיץ מלימון אחד טרי.\n🥂 2 כפות שמן זית.\n\nלרוטב ה-Piri Piri (הלב הפועם של המנה! ❤️🔥):\n\n🌶️ 4–5 פלפלים חריפים אדומים (אפשר לבחור ברמת החריפות שמתאימה לך).\n🧄 4 שיני שום קלופות.\n🌿 2 כפיות פפריקה מעושנת.\n🍅 עגבנייה אחת בינונית קצוצה גס.\n🍯 כפית דבש.\n🍋 מיץ מחצי לימון נוסף.\n🥄 חצי כפית אורגנו יבש או טרי (כי למה לא להוסיף טוויסט ירוק?).\n🥂 3 כפות שמן זית איכותי.\n\n\n🔪 שלב שני: הכנת המרינדה והשריית הארנב\n\nתיבול ראשוני לארנב: תבלי את חלקי הארנב במלח, פלפל שחור, ומיץ לימון. עסי בזהירות את התיבול לתוך הבשר – זה סוג של טיפול ספא לארנב שלך! 💆‍♀️\nהוסיפי כף שמן זית מעל והכניסי למקרר ל-30 דקות לפחות. למה? כדי שהארנבון יספוג קצת אהבה וטעמים. 💖\n\n\n🔥 שלב שלישי: הכנת רוטב ה-Piri Piri\nפה מתחילה האקשן האמיתי! 🤩\n\nחממי תנור מראש ל-180 מעלות צלזיוס.\nשימי את הפלפלים החריפים, העגבנייה והשום על מגש אפייה קטן וטפטפי עליהם מעט שמן זית. צלי אותם בתנור למשך 15 דקות עד שהקליפה של הפלפלים כהה מעט והשום רך וריחני.\nכשהירקות מוכנים, הכניסי אותם לבלנדר יחד עם הפפריקה, הדבש, מיץ לימון נוסף, האורגנו ושמן הזית שנותר. טחני עד שתתקבל משחה אדומה ומבריקה שתגרום לך לרצות לשים אותה על הכול 😍.\n\n💡 כיף לדעת: אם נשאר לך רוטב – אפשר לשמור בצנצנת ולהשתמש בו גם על עוף או טוסט 👌.\n\n🍳 שלב רביעי: ציפוי הארנבון בקסם\n\nהוציאי את חלקי הארנבון מהמקרר ומרחי עליהם שכבה נדיבה מהרוטב שיצרת (אל תחסכי – זה הליבה של המנה!).\nהניחי אותם על מגש אפייה מרופד בנייר אפייה או בתחתית כלי אפייה רחב.\n\n\n🔥 שלב חמישי: צלייה מושלמת\n\nחממי תנור מראש ל-200 מעלות צלזיוס.\nהכניסי את מגש הארנבון לתנור ואפי למשך 35–40 דקות. באמצע הצלייה, כדאי להפוך את החלקים ולמרוח עוד קצת רוטב כדי לוודא שכל ביס יהיה מפוצץ בטעם.\nאיך יודעים שזה מוכן? הבשר צריך להיות זהוב ועסיסי מבפנים – נסי לנעוץ מזלג קלות כדי לבדוק אם הוא מתפרק בעדינות.\n\n\n🍋 שלב שישי: הגשה כמו מקצוענית\nאל תשכחי – אנחנו אוכלות קודם עם העיניים 👀! הנה כמה טיפים להגשה בלתי נשכחת:\n\nהניחי את חלקי הארנבון בצלחת גדולה ויפה.\nקשטי בעלי כוסברה טריים או פטרוזיליה קצוצה 🌿.\nהגישי לצד פרוסות לימון טריות ותוספת פשוטה כמו אורז לבן או תפוח אדמה אפוי 🥔.\n\n💡 טוויסט בונוס: אם בא לך להרגיש ממש פורטוגלית, הגישי לצד יין לבן צונן 😏.\n\nVoilà! 🎉 עכשיו יש לך מנה עוצרת נשימה שתגרום לכל מי שטועם אותה להתאהב בטעמים החריפים והמעושנים שלה!\"\n"
+                            },
+                            {
+                              "text": "🧹 Closing context\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-22T11:23:52.851Z",
+                          "annotations": [
+                            {
+                              "type": "info",
+                              "description": "Bot response: 🐇🥵 Piri Piri-Crusted Rabbit: הארנב שיגרום לחיך שלך לרקוד פלמנקו! 💃🔥\nהכנת מנה כמו Piri Piri-crusted Rabbit היא לא סתם בישול – זו הרפתקה קולינרית שמתובלת בתבלינים לוהטים, ארומות משגעות, והרבה כיף! ההכנה הזו תגרום לך להרגיש כמו שף פורטוגלי במסעדת חוף קסומה. אז בואי נתחיל את המסע שלנו 🚀.\n\n🎬 שלב ראשון: אוסף החומרים\nלפני שמתחילים, אנחנו צריכים את כל הקסם במקום אחד. הנה רשימת הקניות שלך 🛒:\nעבור הארנב והמרינדה:\n\n🐇 1 ארנב שלם (חתוך ל-6–8 חלקים).\n🧂 מלח ופלפל שחור לפי הטעם.\n🍋 מיץ מלימון אחד טרי.\n🥂 2 כפות שמן זית.\n\nלרוטב ה-Piri Piri (הלב הפועם של המנה! ❤️🔥):\n\n🌶️ 4–5 פלפלים חריפים אדומים (אפשר לבחור ברמת החריפות שמתאימה לך).\n🧄 4 שיני שום קלופות.\n🌿 2 כפיות פפריקה מעושנת.\n🍅 עגבנייה אחת בינונית קצוצה גס.\n🍯 כפית דבש.\n🍋 מיץ מחצי לימון נוסף.\n🥄 חצי כפית אורגנו יבש או טרי (כי למה לא להוסיף טוויסט ירוק?).\n🥂 3 כפות שמן זית איכותי.\n\n\n🔪 שלב שני: הכנת המרינדה והשריית הארנב\n\nתיבול ראשוני לארנב: תבלי את חלקי הארנב במלח, פלפל שחור, ומיץ לימון. עסי בזהירות את התיבול לתוך הבשר – זה סוג של טיפול ספא לארנב שלך! 💆‍♀️\nהוסיפי כף שמן זית מעל והכניסי למקרר ל-30 דקות לפחות. למה? כדי שהארנבון יספוג קצת אהבה וטעמים. 💖\n\n\n🔥 שלב שלישי: הכנת רוטב ה-Piri Piri\nפה מתחילה האקשן האמיתי! 🤩\n\nחממי תנור מראש ל-180 מעלות צלזיוס.\nשימי את הפלפלים החריפים, העגבנייה והשום על מגש אפייה קטן וטפטפי עליהם מעט שמן זית. צלי אותם בתנור למשך 15 דקות עד שהקליפה של הפלפלים כהה מעט והשום רך וריחני.\nכשהירקות מוכנים, הכניסי אותם לבלנדר יחד עם הפפריקה, הדבש, מיץ לימון נוסף, האורגנו ושמן הזית שנותר. טחני עד שתתקבל משחה אדומה ומבריקה שתגרום לך לרצות לשים אותה על הכול 😍.\n\n💡 כיף לדעת: אם נשאר לך רוטב – אפשר לשמור בצנצנת ולהשתמש בו גם על עוף או טוסט 👌.\n\n🍳 שלב רביעי: ציפוי הארנבון בקסם\n\nהוציאי את חלקי הארנבון מהמקרר ומרחי עליהם שכבה נדיבה מהרוטב שיצרת (אל תחסכי – זה הליבה של המנה!).\nהניחי אותם על מגש אפייה מרופד בנייר אפייה או בתחתית כלי אפייה רחב.\n\n\n🔥 שלב חמישי: צלייה מושלמת\n\nחממי תנור מראש ל-200 מעלות צלזיוס.\nהכניסי את מגש הארנבון לתנור ואפי למשך 35–40 דקות. באמצע הצלייה, כדאי להפוך את החלקים ולמרוח עוד קצת רוטב כדי לוודא שכל ביס יהיה מפוצץ בטעם.\nאיך יודעים שזה מוכן? הבשר צריך להיות זהוב ועסיסי מבפנים – נסי לנעוץ מזלג קלות כדי לבדוק אם הוא מתפרק בעדינות.\n\n\n🍋 שלב שישי: הגשה כמו מקצוענית\nאל תשכחי – אנחנו אוכלות קודם עם העיניים 👀! הנה כמה טיפים להגשה בלתי נשכחת:\n\nהניחי את חלקי הארנבון בצלחת גדולה ויפה.\nקשטי בעלי כוסברה טריים או פטרוזיליה קצוצה 🌿.\nהגישי לצד פרוסות לימון טריות ותוספת פשוטה כמו אורז לבן או תפוח אדמה אפוי 🥔.\n\n💡 טוויסט בונוס: אם בא לך להרגיש ממש פורטוגלית, הגישי לצד יין לבן צונן 😏.\n\nVoilà! 🎉 עכשיו יש לך מנה עוצרת נשימה שתגרום לכל מי שטועם אותה להתאהב בטעמים החריפים והמעושנים שלה!"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-c7d9a4d7c8379355269a",
+                  "file": "Chatbot.spec.ts",
+                  "line": 75,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-05-22T11:23:11.212Z",
+    "duration": 78002.754,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
