@@ -2,7 +2,7 @@ name: Playwright Automated Testing with Email Alerts
 
 on:
   push:
-    branches: ['main-new']
+    branches: ['main']
   schedule:
     - cron: '*/5 * * * *'  # Runs every 5 minutes (UTC)
   workflow_dispatch:
