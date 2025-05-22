@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: playwright-report/
-          retention-days: 1
+          retention-days: 1 
 
       - name: Send Email Report
         if: always()
@@ -58,11 +58,51 @@ jobs:
           FROM_EMAIL: ${{ env.FROM_EMAIL }}
 
   deploy:
-    needs: test-and-report
-    permissions:
-      pages: write
-      id-token: write
+      needs: test-and-report
+      runs-on: ubuntu-latest
+      environment:
+        name: github-pages
+        url: ${{ steps.deploy.outputs.page_url }}
+      outputs:
+        page_url: ${{ steps.deploy.outputs.page_url }}
+
+      permissions:
+        pages: write
+        id-token: write
+
+      steps:
+        - name: Deploy to GitHub Pages
+          id: deploy
+          uses: actions/deploy-pages@v4
+
+  notify:
+    needs: [test-and-report, deploy]
     runs-on: ubuntu-latest
+
     steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Send Email Report
+        run: node sendreport.ts
+        env:
+          ENVIRONMENT: Staging
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          REPORT_DATE: ${{ needs.build.outputs.report_date }}
+          TOTAL: ${{ needs.build.outputs.total }}
+          PASSED: ${{ needs.build.outputs.passed }}
+          FAILED: ${{ needs.build.outputs.failed }}
+          SKIPPED: ${{ needs.build.outputs.skipped }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          REPORT_URL: ${{ needs.deploy.outputs.page_url }}staging-report-${{ needs.build.outputs.report_date }}/index.html
+          URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
+          URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
