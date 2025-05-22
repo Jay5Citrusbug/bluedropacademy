@@ -1,96 +1,68 @@
-const sgMail = require('@sendgrid/mail');
-const fs = require('fs');
-const path = require('path');
+import sgMail from '@sendgrid/mail';
+import fs from 'fs';
+import path from 'path';
 
-// Validate API key presence and format
-if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
-  console.error('❌ Invalid or missing SENDGRID_API_KEY.');
+// Validate API key
+if (!process.env.SENDGRID_API_KEY?.startsWith('SG.')) {
+  console.error('❌ Invalid SENDGRID_API_KEY');
   process.exit(1);
 }
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-const TO_EMAIL = 'jay5.citrusbug@gmail.com';
-const FROM_EMAIL = 'bluedropacademy.aws@gmail.com'; // Ensure this is verified in SendGrid
-
 // Paths to reports
-const htmlReportPath = path.resolve(__dirname, '../playwright-report/index.html');
-const jsonReportPath = path.resolve(__dirname, '../playwright-report/report.json');
+const htmlReportPath = path.join(process.cwd(), 'playwright-report/report.html');
+const jsonReportPath = path.join(process.cwd(), 'playwright-report/results.json');
 
-// Check report files exist
-if (!fs.existsSync(htmlReportPath) || !fs.existsSync(jsonReportPath)) {
-  console.error('❌ One or more report files are missing. Email not sent.');
-  process.exit(1);
-}
-
-const htmlContent = fs.readFileSync(htmlReportPath, 'utf8');
-
-// Generate summary table from JSON
-let summaryTable = '';
-
-try {
-  const rawJson = fs.readFileSync(jsonReportPath, 'utf8');
-  const jsonData = JSON.parse(rawJson);
-
-  const allTests = (jsonData.suites || []).flatMap(suite =>
-    (suite.specs || []).flatMap(spec =>
-      (spec.tests || []).flatMap(test =>
-        (test.results || []).map(r => ({ status: r.status }))
-      )
-    )
-  ).filter(Boolean);
-
-  const total = allTests.length;
-  const passed = allTests.filter(t => t.status === 'passed').length;
-  const failed = allTests.filter(t => t.status === 'failed').length;
-  const skipped = allTests.filter(t => t.status === 'skipped').length;
-
-  summaryTable = `
-    <h3>🧪 Test Summary</h3>
-    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif;">
-      <tr style="background-color: #f2f2f2;">
-        <th>Total</th>
-        <th>Passed</th>
-        <th>Failed</th>
-        <th>Skipped</th>
-      </tr>
-      <tr>
-        <td>${total}</td>
-        <td style="color: green;">${passed}</td>
-        <td style="color: red;">${failed}</td>
-        <td style="color: gray;">${skipped}</td>
-      </tr>
-    </table>
-    <br />
-  `;
-} catch (err) {
-  console.error('⚠️ Could not generate summary from JSON:', err);
-  summaryTable = '<p><strong>⚠️ Could not load summary table</strong></p>';
-}
-
-const message = {
-  to: TO_EMAIL,
-  from: FROM_EMAIL,
-  subject: '📋 Daily Playwright Test Report with Summary',
-  html: `
-    <h2>✅ Playwright Test Report</h2>
-    ${summaryTable}
-    <hr />
-    ${htmlContent}
-  `,
-};
-
-async function sendEmail() {
+// Generate summary from JSON
+function generateSummary() {
   try {
-    await sgMail.send(message);
-    console.log('✅ Report email sent successfully');
-  } catch (error) {
-    console.error('❌ Error sending report email:', error.toString());
-    if (error.response && error.response.body) {
-      console.error('SendGrid response error:', error.response.body);
-    }
-    process.exit(1);
+    const rawData = fs.readFileSync(jsonReportPath, 'utf8');
+    const { stats } = JSON.parse(rawData);
+    
+    return `
+      <h3>🧪 Test Summary</h3>
+      <table border="1" style="border-collapse: collapse; font-family: sans-serif;">
+        <tr style="background-color: #f2f2f2;">
+          <th>Total</th>
+          <th>Passed</th>
+          <th>Failed</th>
+          <th>Skipped</th>
+        </tr>
+        <tr>
+          <td>${stats.total}</td>
+          <td style="color: green;">${stats.expected}</td>
+          <td style="color: red;">${stats.unexpected}</td>
+          <td style="color: gray;">${stats.skipped}</td>
+        </tr>
+      </table>
+    `;
+  } catch (err) {
+    console.error('⚠️ Error generating summary:', err);
+    return '<p>⚠️ Could not load test summary</p>';
   }
 }
 
-sendEmail();
+// Compose email
+const msg = {
+  to: process.env.TO_EMAIL,
+  from: process.env.FROM_EMAIL,
+  subject: `Playwright Tests ${process.env.TEST_STATUS} - ${process.env.GITHUB_REF_NAME}`,
+  html: `
+    <h2>📋 Playwright Test Report</h2>
+    <p><strong>Status:</strong> ${process.env.TEST_STATUS}</p>
+    <p><strong>Branch:</strong> ${process.env.GITHUB_REF_NAME}</p>
+    <p><strong>Report URL:</strong> <a href="${process.env.REPORT_URL}">View Online</a></p>
+    ${generateSummary()}
+    <hr>
+    <p>Generated at ${new Date().toUTCString()}</p>
+  `
+};
+
+// Send email
+sgMail.send(msg)
+  .then(() => console.log('✅ Email sent successfully'))
+  .catch(error => {
+    console.error('❌ Email failed:', error.response?.body || error.message);
+    process.exit(1);
+  });
