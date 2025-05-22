@@ -38,7 +38,7 @@ jobs:
       - name: Prepare Report
         if: always()
         run: |
-          mv playwright-report/index.html playwright-report/report.html
+          mv playwright-report/index.html report.html
           echo "<meta http-equiv='refresh' content='0; url=report.html'>" > playwright-report/index.html
 
       - name: Upload Report Artifact
