@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/playwright-report/report.html # Updated REPORT_URL
+  REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/report.html # Updated to the working URL
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
   TO_EMAIL: jay5.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
@@ -38,20 +38,21 @@ jobs:
       - name: Prepare Report
         if: always()
         run: |
+          # Ensure the report is named 'report.html' at the root of the artifact
           mv playwright-report/index.html report.html
-          echo "<meta http-equiv='refresh' content='0; url=report.html'>" > playwright-report/index.html
+          # No need for the redirect if the main report is at the root
 
       - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: playwright-report/
+          path: . # Upload the root directory
           retention-days: 1
 
       - name: Send Email Report
         if: always()
         run: node .github/scripts/sendreport.js
         env:
-          REPORT_URL: ${{ env.REPORT_URL }} # Using the updated REPORT_URL
+          REPORT_URL: ${{ env.REPORT_URL }} # Using the updated working URL
           TEST_STATUS: ${{ env.TEST_STATUS }}
           GITHUB_REF_NAME: ${{ github.ref_name }}
           SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
