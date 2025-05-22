@@ -56,6 +56,17 @@ jobs:
         with:
           path: playwright-report/
           retention-days: 1
+      
+      - name: Send Email Report
+        if: always()
+        run: node .github/scripts/sendreport.js
+        env:
+          REPORT_URL: ${{ env.REPORT_URL }}
+          TEST_STATUS: ${{ env.TEST_STATUS }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+          SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
+          TO_EMAIL: ${{ env.TO_EMAIL }}
+          FROM_EMAIL: ${{ env.FROM_EMAIL }}
 
   deploy:
     needs: test-and-report
@@ -73,26 +84,3 @@ jobs:
         id: deploy
         uses: actions/deploy-pages@v4
 
-  notify:
-    needs: [test-and-report, deploy]
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm install @sendgrid/mail
-
-      - name: Send Email Report
-        if: always()
-        run: node .github/scripts/sendreport.js
-        env:
-          REPORT_URL: ${{ env.REPORT_URL }}
-          TEST_STATUS: ${{ env.TEST_STATUS }}
-          GITHUB_REF_NAME: ${{ github.ref_name }}
-          SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
-          TO_EMAIL: ${{ env.TO_EMAIL }}
-          FROM_EMAIL: ${{ env.FROM_EMAIL }}
