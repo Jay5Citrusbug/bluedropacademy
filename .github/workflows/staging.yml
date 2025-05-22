@@ -2,7 +2,7 @@ name: Run Playwright Tests and Email Report
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main1 ]
   schedule:
     - cron: '0 23 * * *'  # Runs at 2:00 AM IST (UTC+3)
 
