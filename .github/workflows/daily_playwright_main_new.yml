@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}  # Fixed typo in variable name
+  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
   TO_EMAIL: jay5.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
 
@@ -30,10 +30,10 @@ jobs:
           npx playwright install --with-deps
           npm install @sendgrid/mail
 
-      - name: Clean previous test runs (but keep reports)
+      - name: Clean previous test runs
         run: |
-          rm -rf test-results/  # Clears old test data but keeps published reports
-          rm -f report.html  # Remove previous single report file
+          rm -rf test-results/
+          rm -f report-*.html
 
       - name: Run Playwright tests
         id: run-tests
@@ -44,25 +44,22 @@ jobs:
           echo "TEST_STATUS=$(if [ $TEST_EXIT_CODE -eq 0 ]; then echo 'PASSED'; else echo 'FAILED'; fi)" >> $GITHUB_ENV
           echo "TEST_EXIT_CODE=$TEST_EXIT_CODE" >> $GITHUB_ENV
 
-      - name: Generate unique report
+      - name: Prepare Report
         if: always()
         run: |
-          # Create timestamped filename
           TIMESTAMP=$(date +'%Y%m%d-%H%M%S')
           REPORT_FILENAME="report-${TIMESTAMP}.html"
-          
-          # Move and rename the report
           mv playwright-report/index.html ${REPORT_FILENAME}
-          
-          # Set environment variables
-          echo "REPORT_URL=https://jay5Citrusbug.github.io/bluedropacademy/${REPORT_FILENAME}" >> $GITHUB_ENV
+          mkdir -p playwright-reports
+          cp ${REPORT_FILENAME} playwright-reports/
+          echo "REPORT_URL=https://jay5Citrusbug.github.io/bluedropacademy/playwright-reports/${REPORT_FILENAME}" >> $GITHUB_ENV
           echo "REPORT_FILENAME=${REPORT_FILENAME}" >> $GITHUB_ENV
 
-      - name: Upload Artifacts
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.REPORT_FILENAME }}
-          retention-days: 7  # Keep reports for 7 days
+          path: playwright-reports
+          retention-days: 7
 
       - name: Send Email Report
         if: always()
