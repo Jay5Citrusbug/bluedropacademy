@@ -39,13 +39,6 @@ jobs:
           path: playwright-report/
           retention-days: 1
 
-      - name: Generate Workflow Summary
-        if: always()
-        run: |
-          echo "### ⏱ Last Run: $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
-          echo "### 🔍 [View Playwright Report](https://jay5Citrusbug.github.io/bluedropacademy/playwright-report/)" >> $GITHUB_STEP_SUMMARY
-          echo "⏳ Next auto-run in 5 minutes" >> $GITHUB_STEP_SUMMARY
-
   deploy:
     needs: test-and-report
     permissions:
