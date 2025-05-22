@@ -14,6 +14,9 @@ env:
 jobs:
   test-and-report:
     runs-on: ubuntu-latest
+    outputs:
+      report_date: ${{ steps.set-date.outputs.report_date }}
+    
     steps:
       - uses: actions/checkout@v4
 
@@ -21,6 +24,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Set report date
+        id: set-date
+        run: echo "report_date=$(date +'%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
 
       - name: Install dependencies
         run: |
@@ -33,6 +40,10 @@ jobs:
         run: |
           npx playwright test --reporter=html,json
           echo "TEST_STATUS=$(if [ $? -eq 0 ]; then echo 'PASSED'; else echo 'FAILED'; fi)" >> $GITHUB_ENV
+          echo "TOTAL=$(grep -o '"total": [0-9]*' playwright-report/results.json | cut -d' ' -f2)" >> $GITHUB_ENV
+          echo "PASSED=$(grep -o '"passed": [0-9]*' playwright-report/results.json | cut -d' ' -f2)" >> $GITHUB_ENV
+          echo "FAILED=$(grep -o '"failed": [0-9]*' playwright-report/results.json | cut -d' ' -f2)" >> $GITHUB_ENV
+          echo "SKIPPED=$(grep -o '"skipped": [0-9]*' playwright-report/results.json | cut -d' ' -f2)" >> $GITHUB_ENV
 
       - name: Prepare Report
         if: always()
@@ -44,65 +55,47 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: playwright-report/
-          retention-days: 1 
-
-      - name: Send Email Report
-        if: always()
-        run: node .github/scripts/sendreport.js
-        env:
-          REPORT_URL: ${{ env.REPORT_URL }}
-          TEST_STATUS: ${{ env.TEST_STATUS }}
-          GITHUB_REF_NAME: ${{ github.ref_name }}
-          SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
-          TO_EMAIL: ${{ env.TO_EMAIL }}
-          FROM_EMAIL: ${{ env.FROM_EMAIL }}
+          retention-days: 1
 
   deploy:
-      needs: test-and-report
-      runs-on: ubuntu-latest
-      environment:
-        name: github-pages
-        url: ${{ steps.deploy.outputs.page_url }}
-      outputs:
-        page_url: ${{ steps.deploy.outputs.page_url }}
+    needs: test-and-report
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    
+    permissions:
+      pages: write
+      id-token: write
 
-      permissions:
-        pages: write
-        id-token: write
-
-      steps:
-        - name: Deploy to GitHub Pages
-          id: deploy
-          uses: actions/deploy-pages@v4
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
 
   notify:
     needs: [test-and-report, deploy]
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install @sendgrid/mail
 
       - name: Send Email Report
         run: node .github/scripts/sendreport.js
         env:
-          ENVIRONMENT: Staging
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          REPORT_DATE: ${{ needs.build.outputs.report_date }}
-          TOTAL: ${{ needs.build.outputs.total }}
-          PASSED: ${{ needs.build.outputs.passed }}
-          FAILED: ${{ needs.build.outputs.failed }}
-          SKIPPED: ${{ needs.build.outputs.skipped }}
-          REPO_OWNER: ${{ github.repository_owner }}
-          REPO_NAME: ${{ github.event.repository.name }}
-          REPORT_URL: ${{ needs.deploy.outputs.page_url }}staging-report-${{ needs.build.outputs.report_date }}/index.html
-          URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
-          URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
+          REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/playwright-report/
+          TEST_STATUS: ${{ needs.test-and-report.outputs.TEST_STATUS }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+          SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
+          TO_EMAIL: ${{ env.TO_EMAIL }}
+          FROM_EMAIL: ${{ env.FROM_EMAIL }}
+          TOTAL: ${{ needs.test-and-report.outputs.TOTAL }}
+          PASSED: ${{ needs.test-and-report.outputs.PASSED }}
+          FAILED: ${{ needs.test-and-report.outputs.FAILED }}
+          SKIPPED: ${{ needs.test-and-report.outputs.SKIPPED }}
