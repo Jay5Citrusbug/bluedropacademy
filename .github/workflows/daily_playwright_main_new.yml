@@ -1,19 +1,20 @@
-name: Playwright Tests with Email Notification
+name: Playwright Tests with Email Reports
 
 on:
   push:
-    branches: ['main']
+    branches: ['main-new']
   schedule:
     - cron: '*/5 * * * *'  # Runs every 5 minutes
   workflow_dispatch:
 
 env:
   REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/playwright-report/
+  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
   TO_EMAIL: jay5.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
 
 jobs:
-  test-and-notify:
+  test-and-report:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,7 +33,7 @@ jobs:
       - name: Run Playwright tests
         id: run-tests
         run: |
-          npx playwright test --reporter=html
+          npx playwright test --reporter=html,json
           echo "TEST_STATUS=$(if [ $? -eq 0 ]; then echo 'PASSED'; else echo 'FAILED'; fi)" >> $GITHUB_ENV
 
       - name: Prepare Report
@@ -41,39 +42,26 @@ jobs:
           mv playwright-report/index.html playwright-report/report.html
           echo "<meta http-equiv='refresh' content='0; url=report.html'>" > playwright-report/index.html
 
-      - name: Upload Report
+      - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: playwright-report/
           retention-days: 1
 
-      - name: Send Minimal Email
+      - name: Send Email Report
         if: always()
+        run: node .github/scripts/sendReport.js
         env:
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-        run: |
-          node -e "
-          const sgMail = require('@sendgrid/mail');
-          sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-          
-          sgMail.send({
-            to: process.env.TO_EMAIL,
-            from: process.env.FROM_EMAIL,
-            subject: `Playwright Tests ${process.env.TEST_STATUS}`,
-            text: \`Test report available at: ${process.env.REPORT_URL}\\n\\nStatus: ${process.env.TEST_STATUS}\\nBranch: ${process.env.GITHUB_REF_NAME}\`
-          })
-          .then(() => console.log('✅ Email sent successfully'))
-          .catch(error => {
-            console.error('❌ Email failed:', error.response?.body || error.message);
-            process.exit(1);
-          });
-          "
+          REPORT_URL: ${{ env.REPORT_URL }}
+          TEST_STATUS: ${{ env.TEST_STATUS }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
 
-      - name: Verify Email
-        if: always()
-        run: |
-          echo "========================================"
-          echo "📧 Email should be sent to: $TO_EMAIL"
-          echo "🌐 Report URL: $REPORT_URL"
-          echo "✅ Check inbox for subject: 'Playwright Tests $TEST_STATUS'"
-          echo "========================================"
+  deploy:
+    needs: test-and-report
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
