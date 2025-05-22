@@ -4,24 +4,17 @@ on:
   push:
     branches: [ main1 ]
   schedule:
-    - cron: '0 23 * * *'  # Runs at 2:00 AM IST (UTC+3)
+    - cron: '20 20 * * *'  # 2:00 AM IST (UTC+5:30)
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-
     outputs:
-      date: ${{ steps.date.outputs.date }}
+      report_date: ${{ steps.get_date.outputs.report_date }}
       total: ${{ steps.summary.outputs.total }}
       passed: ${{ steps.summary.outputs.passed }}
       failed: ${{ steps.summary.outputs.failed }}
       skipped: ${{ steps.summary.outputs.skipped }}
-      current_date: ${{ steps.current_date.outputs.current_date }}
 
     steps:
       - name: Checkout code
@@ -32,63 +25,52 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
-
       - name: Install dependencies
         run: npm ci
 
-      - name: Get current date
-        id: current_date
-        run: echo "current_date=$(date '+%Y-%m-%d')" >> $GITHUB_OUTPUT
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
+
+      - name: Get report date
+        id: get_date
+        run: echo "report_date=$(date '+%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Run Playwright Tests
         env:
           URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
           URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
         run: |
-          npx playwright test --project=chromium --workers=1 \
-            --reporter=json=test-results.json,html | tee test-log.txt
-
-      - name: Get current date with timestamp
-        id: date
-        run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
+          rm -rf playwright-report site
+          npx playwright test --project=chromium --workers=1 --reporter=json,test-results.json,html
 
       - name: Extract test summary
         id: summary
         run: |
-          if [ ! -f "test-results.json" ]; then echo "Report file not found!" && exit 1; fi
-          TOTAL=$(jq '.suites | map(.specs | length) | add' test-results.json)
-          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' test-results.json)
-          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)
-          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)
-          echo "total=$TOTAL" >> $GITHUB_OUTPUT
-          echo "passed=$PASSED" >> $GITHUB_OUTPUT
-          echo "failed=$FAILED" >> $GITHUB_OUTPUT
-          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+          [ ! -f "test-results.json" ] && echo "Report not found!" && exit 1
+          echo "total=$(jq '.suites | map(.specs | length) | add' test-results.json)" >> $GITHUB_OUTPUT
+          echo "passed=$(jq '[.. | .status? | select(. == "passed")] | length' test-results.json)" >> $GITHUB_OUTPUT
+          echo "failed=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)" >> $GITHUB_OUTPUT
+          echo "skipped=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)" >> $GITHUB_OUTPUT
 
-      - name: Prepare report folder for GitHub Pages
+      - name: Prepare report for Pages
         run: |
-          if [ ! -d "playwright-report" ]; then echo "Playwright report folder not found!" && exit 1; fi
-          mkdir -p site/staging-report-${{ steps.current_date.outputs.current_date }}
-          mv playwright-report/* site/staging-report-${{ steps.current_date.outputs.current_date }}
+          mkdir -p site/staging-report-${{ steps.get_date.outputs.report_date }}
+          mv playwright-report/* site/staging-report-${{ steps.get_date.outputs.report_date }}
 
-      - name: Upload report as GitHub Pages artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site  # must be `site` to match Pages deploy expectation
+          path: site
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
-
     outputs:
       page_url: ${{ steps.deploy.outputs.page_url }}
 
@@ -114,25 +96,21 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
-
       - name: Install dependencies
         run: npm ci
 
-      - name: Send Email Report via SendGrid API
-        run: |
-          node sendreport.ts
+      - name: Send Email Report
+        run: node sendreport.ts
         env:
           ENVIRONMENT: Staging
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-          REPORT_DATE: ${{ needs.build.outputs.current_date }}
+          REPORT_DATE: ${{ needs.build.outputs.report_date }}
           TOTAL: ${{ needs.build.outputs.total }}
           PASSED: ${{ needs.build.outputs.passed }}
           FAILED: ${{ needs.build.outputs.failed }}
           SKIPPED: ${{ needs.build.outputs.skipped }}
           REPO_OWNER: ${{ github.repository_owner }}
           REPO_NAME: ${{ github.event.repository.name }}
-          REPORT_URL: ${{ needs.deploy.outputs.page_url }}staging-report-${{ needs.build.outputs.current_date }}/index.html
+          REPORT_URL: ${{ needs.deploy.outputs.page_url }}staging-report-${{ needs.build.outputs.report_date }}/index.html
           URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
           URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
