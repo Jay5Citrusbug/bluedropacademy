@@ -36,8 +36,9 @@ jobs:
         continue-on-error: true
         run: |
           mkdir -p playwright-report
-          npx playwright test --reporter=html,json --output=playwright-report || true
-          cp playwright-report/report.json playwright-report/results.json || true
+          npx playwright test --reporter=json --output=playwright-report || true
+          mv playwright-report/report.json playwright-report/results.json || true
+          npx playwright test --reporter=html || true
           TEST_EXIT_CODE=$?
           echo "TEST_STATUS=$(if [ $TEST_EXIT_CODE -eq 0 ]; then echo 'PASSED'; else echo 'FAILED'; fi)" >> $GITHUB_ENV
           echo "TEST_EXIT_CODE=$TEST_EXIT_CODE" >> $GITHUB_ENV
