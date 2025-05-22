@@ -50,7 +50,7 @@ jobs:
 
       - name: Send Email Report
         if: always()
-        run: node .github/scripts/sendReport.js
+        run: node .github/sendReport.js
         env:
           REPORT_URL: ${{ env.REPORT_URL }}
           TEST_STATUS: ${{ env.TEST_STATUS }}
