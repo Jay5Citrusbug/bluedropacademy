@@ -48,7 +48,7 @@ jobs:
 
       - name: Send Email Report
         if: always()
-        run: node ./sendreport.js
+        run: node .github/scripts/sendreport.js
         env:
           REPORT_URL: ${{ env.REPORT_URL }}
           TEST_STATUS: ${{ env.TEST_STATUS }}
@@ -56,15 +56,6 @@ jobs:
           SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
           TO_EMAIL: ${{ env.TO_EMAIL }}
           FROM_EMAIL: ${{ env.FROM_EMAIL }}
-
-      - name: Verify Email Delivery
-        if: always()
-        run: |
-          echo "========================================"
-          echo "📧 Email should have been sent to: $TO_EMAIL"
-          echo "🌐 Report URL: $REPORT_URL"
-          echo "✅ Check your inbox for the test report"
-          echo "========================================"
 
   deploy:
     needs: test-and-report
