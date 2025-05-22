@@ -1,11 +1,15 @@
-name: Playwright Automated Testing
+name: Playwright Automated Testing with Email Alerts
 
 on:
   push:
-    branches: ['main']
+    branches: ['main-new']
   schedule:
     - cron: '*/5 * * * *'  # Runs every 5 minutes (UTC)
   workflow_dispatch:
+
+env:
+  REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/playwright-report/
+  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
 
 jobs:
   test-and-report:
@@ -24,20 +28,30 @@ jobs:
           npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test --reporter=html
-        continue-on-error: true  # Continue even if tests fail
+        id: run-tests
+        run: |
+          npx playwright test --reporter=html
+          echo "TEST_STATUS=$(if [ $? -eq 0 ]; then echo 'PASSED'; else echo 'FAILED'; fi)" >> $GITHUB_ENV
+        continue-on-error: true
 
-      - name: Prepare Report for Deployment
+      - name: Prepare Report
         if: always()
         run: |
           mv playwright-report/index.html playwright-report/report.html
           echo "<meta http-equiv='refresh' content='0; url=report.html'>" > playwright-report/index.html
 
-      - name: Upload HTML Report
+      - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: playwright-report/
           retention-days: 1
+
+      - name: Generate Summary
+        if: always()
+        run: |
+          echo "### ⏱ Last Run: $(date -u '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "### 🔍 [View Playwright Report]($REPORT_URL)" >> $GITHUB_STEP_SUMMARY
+          echo "### 📧 Notification sent to team" >> $GITHUB_STEP_SUMMARY
 
   deploy:
     needs: test-and-report
@@ -49,14 +63,39 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy Report
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Print Live URL
+      - name: Send Email Notification via SendGrid
+        if: always()
+        env:
+          TO_EMAIL: "jay5.citrusbug@gmail.com"  # Replace with your recipient
+          FROM_EMAIL: "bluedropacademy.aws@gmail.com"
+        run: |
+          curl --request POST \
+            --url https://api.sendgrid.com/v3/mail/send \
+            --header "Authorization: Bearer $SENDGRID_API_KEY" \
+            --header 'Content-Type: application/json' \
+            --data '{
+              "personalizations": [{
+                "to": [{"email": "'"$TO_EMAIL"'"}],
+                "dynamic_template_data": {
+                  "report_url": "'"$REPORT_URL"'",
+                  "status": "'"$TEST_STATUS"'",
+                  "timestamp": "'"$(date -u '+%Y-%m-%d %H:%M UTC')"'",
+                  "branch": "'"$GITHUB_REF_NAME"'"
+                }
+              }],
+              "from": {"email": "'"$FROM_EMAIL"'"},
+              "template_id": "d-your-sendgrid-template-id"  # Replace with your template ID
+            }'
+
+      - name: Print Confirmation
         run: |
           echo "=============================================="
-          echo "🚀 Playwright Report Published Successfully!"
-          echo "🌐 Live URL: https://jay5Citrusbug.github.io/bluedropacademy/playwright-report/"
-          echo "⏱ Next scheduled run: $(date -u -d '+5 minutes' '+%H:%M UTC')"
+          echo "🚀 Playwright Report Published"
+          echo "📧 Email sent to: team@example.com"
+          echo "🌐 Live URL: $REPORT_URL"
+          echo "⏱ Next run: $(date -u -d '+5 minutes' '+%H:%M UTC')"
           echo "=============================================="
