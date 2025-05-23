@@ -38,6 +38,7 @@ jobs:
           rm -rf playwright-report/ report.html test-log.txt || true
       
       - name: Run Playwright Tests
+        id: run-tests
         continue-on-error: true
         env:
           URL_ADMIN: https://chat.bluedropacademy.com/admin
@@ -45,7 +46,7 @@ jobs:
         run: npx playwright test --project=chromium --reporter=html
       
       - name: Generate standalone HTML report
-        run: npx playwright show-report --output=report.html       
+        run: cp playwright-report/index.html report.html
 
       - name: Get current date with timestamp
         id: date
