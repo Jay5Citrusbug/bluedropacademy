@@ -32,6 +32,11 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
+      - name: Clean previous test results
+        run: |
+          echo "Cleaning previous Playwright report..."
+          rm -rf playwright-report/ report.html test-log.txt || true
+      
       - name: Run Playwright Tests
         env:
           URL_ADMIN: https://chat.bluedropacademy.com/admin
