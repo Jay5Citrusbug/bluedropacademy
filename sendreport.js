@@ -80,17 +80,11 @@ const message = {
   `,
 };
 
-async function sendEmail() {
-  try {
-    await sgMail.send(message);
-    console.log('✅ Report email sent successfully');
-  } catch (error) {
-    console.error('❌ Error sending report email:', error.toString());
-    if (error.response && error.response.body) {
-      console.error('SendGrid response error:', error.response.body);
-    }
-    process.exit(1);
-  }
-}
 
-sendEmail();
+sgMail
+  .send(msg)
+  .then(() => console.log('Email sent successfully'))
+  .catch((error) => {
+    console.error('Error sending email:', error);
+    process.exit(1);
+  });
