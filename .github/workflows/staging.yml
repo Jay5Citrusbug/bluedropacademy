@@ -102,11 +102,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install ts-node and typescript
-        run: npm install --save-dev ts-node typescript
-
+    
       - name: Send Email Report
-        run: npx ts-node sendreport.ts
+        run: npx ts-node sendreport.js
         env:
           ENVIRONMENT: Staging
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}

@@ -1,6 +1,6 @@
-import sgMail from '@sendgrid/mail';
-import fs from 'node:fs';
-import path from 'node:path';
+const sgMail = require('@sendgrid/mail');
+const fs = require('fs');
+const path = require('path');
 
 // Validate API key presence and format
 if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
@@ -25,24 +25,21 @@ if (!fs.existsSync(htmlReportPath) || !fs.existsSync(jsonReportPath)) {
 
 const htmlContent = fs.readFileSync(htmlReportPath, 'utf8');
 
-// Generate summary table from JSON
-interface TestResult {
-  status: string;
-}
-
 let summaryTable = '';
 
 try {
   const rawJson = fs.readFileSync(jsonReportPath, 'utf8');
   const jsonData = JSON.parse(rawJson);
 
-  const allTests: TestResult[] = jsonData.suites?.flatMap((suite: any) =>
-    suite.specs?.flatMap((spec: any) =>
-      spec.tests?.flatMap((test: any) =>
-        test.results?.map((r: any) => ({ status: r.status }))
+  const allTests = (jsonData.suites || [])
+    .flatMap(suite =>
+      (suite.specs || []).flatMap(spec =>
+        (spec.tests || []).flatMap(test =>
+          (test.results || []).map(r => ({ status: r.status }))
+        )
       )
     )
-  ).filter(Boolean) || [];
+    .filter(Boolean);
 
   const total = allTests.length;
   const passed = allTests.filter(t => t.status === 'passed').length;
@@ -88,7 +85,7 @@ async function sendEmail() {
   try {
     await sgMail.send(message);
     console.log('✅ Report email sent successfully');
-  } catch (error: any) {
+  } catch (error) {
     console.error('❌ Error sending report email:', error.toString());
     if (error.response && error.response.body) {
       console.error('SendGrid response error:', error.response.body);
