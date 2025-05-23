@@ -29,12 +29,13 @@ jobs:
           npx playwright install --with-deps
           npm install @sendgrid/mail
 
-      - name: Run Playwright tests with JSON and HTML reports
+      - name: Run Playwright tests
         id: run-tests
         continue-on-error: true
         run: |
           mkdir -p playwright-report
-          npx playwright test --reporter=json,html --output=playwright-report || true
+          npx playwright test --reporter=json --output=playwright-report || true
+          npx playwright test --reporter=html || true
           TEST_EXIT_CODE=$?
           echo "TEST_STATUS=$(if [ $TEST_EXIT_CODE -eq 0 ]; then echo 'PASSED'; else echo 'FAILED'; fi)" >> $GITHUB_ENV
           echo "TEST_EXIT_CODE=$TEST_EXIT_CODE" >> $GITHUB_ENV
@@ -45,6 +46,12 @@ jobs:
           mv playwright-report/index.html report.html
           TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
           echo "REPORT_TIMESTAMP=$TIMESTAMP" >> $GITHUB_ENV
+
+      - name: Verify Report Exists
+        if: always()
+        run: |
+          ls -la playwright-report/
+          test -f playwright-report/report.json || echo "Report file missing"
 
       - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
@@ -70,11 +77,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
-
     permissions:
       pages: write
       id-token: write
-
     steps:
       - name: Deploy to GitHub Pages
         id: deploy
