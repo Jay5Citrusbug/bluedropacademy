@@ -2,7 +2,7 @@ name: Playwright Tests with Email Reports
 
 on:
   push:
-    branches: ['main']
+    branches: ['sfdhf']
   workflow_dispatch:
 
 env:
