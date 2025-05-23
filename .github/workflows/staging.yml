@@ -2,14 +2,10 @@ name: Run Playwright Tests and Email Report
 
 on:
   push:
-    branches: [ main1 ]
+    branches: [ main ]
   # schedule:
   #   - cron: '20 20 * * *'  # 2:00 AM IST (UTC+5:30)
-env:
-  REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/report.html
-  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-  TO_EMAIL: jay5.citrusbug@gmail.com
-  FROM_EMAIL: bluedropacademy.aws@gmail.com
+
 jobs:
   build:
     runs-on: ubuntu-latest

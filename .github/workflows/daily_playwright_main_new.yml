@@ -37,32 +37,30 @@ jobs:
           URL_ADMIN: https://chat.bluedropacademy.com/admin
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
         run: |
-          npx playwright test --reporter=json --output=playwright-report || true
-          mv playwright-report/report.json playwright-report/results.json || true
-          npx playwright test --reporter=html || true
+          npx playwright test --project=chromium --workers=1 --reporter=json,test-results.json,html | tee test-log.txt
+
       - name: Get current date with timestamp
         id: date
-        run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
+        run: echo "REPORT_TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
 
       - name: Extract test summary
         id: summary
         run: |
-          if [ ! -f "playwright-report/report.json" ]; then echo "Report file not found!" && exit 1; fi
-          TOTAL=$(jq '[.. | .status? | select(.)] | length' playwright-report/report.json)
-          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' playwright-report/report.json)
-          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' playwright-report/report.json)
-          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' playwright-report/report.json)
-          echo "total=$TOTAL" >> $GITHUB_OUTPUT
-          echo "passed=$PASSED" >> $GITHUB_OUTPUT
-          echo "failed=$FAILED" >> $GITHUB_OUTPUT
-          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+          if [ ! -f "test-results.json" ]; then echo "Report file not found!" && exit 1; fi
+          TOTAL=$(jq '.suites | map(.specs | length) | add' test-results.json)
+          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' test-results.json)
+          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)
+          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)
+          echo "TOTAL=$TOTAL" >> $GITHUB_ENV
+          echo "PASSED=$PASSED" >> $GITHUB_ENV
+          echo "FAILED=$FAILED" >> $GITHUB_ENV
+          echo "SKIPPED=$SKIPPED" >> $GITHUB_ENV
 
       - name: Prepare Report
         if: always()
         run: |
+          mkdir -p playwright-report
           mv playwright-report/index.html report.html
-          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-          echo "REPORT_TIMESTAMP=$TIMESTAMP" >> $GITHUB_ENV
 
       - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
@@ -76,28 +74,8 @@ jobs:
         env:
           REPORT_URL: ${{ env.REPORT_URL }}
           REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
-          GITHUB_REF_NAME: ${{ github.ref_name }}
           SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
           TO_EMAIL: ${{ env.TO_EMAIL }}
           FROM_EMAIL: ${{ env.FROM_EMAIL }}
-          PASSED: ${{ steps.summary.outputs.passed }}
-          FAILED: ${{ steps.summary.outputs.failed }}
-          SKIPPED: ${{ steps.summary.outputs.skipped }}
-          TOTAL: ${{ steps.summary.outputs.total }}
-          GITHUB_WORKSPACE: ${{ github.workspace }}
-
-  deploy:
-    needs: test-and-report
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
-
-    permissions:
-      pages: write
-      id-token: write
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deploy
-        uses: actions/deploy-pages@v4
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+          # We removed total/passed/failed/skipped env vars to avoid confusion since JS reads from file directly
