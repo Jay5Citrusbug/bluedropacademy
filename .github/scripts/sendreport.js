@@ -5,49 +5,43 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Format timestamp
 const reportDate = new Date(process.env.REPORT_TIMESTAMP || new Date()).toLocaleString();
+const envName = process.env.GITHUB_REF_NAME || 'Daily';
 
-// Get test counts - first from env vars, then fallback to parsing JSON
-let totalTests = parseInt(process.env.TOTAL) || 0;
-let passedTests = parseInt(process.env.PASSED) || 0;
-let failedTests = parseInt(process.env.FAILED) || 0;
-let skippedTests = parseInt(process.env.SKIPPED) || 0;
+// Initialize counts
+let totalTests = 0;
+let passedTests = 0;
+let failedTests = 0;
+let skippedTests = 0;
 
-// Fallback to parse JSON if counts are zero
-if (totalTests === 0 && passedTests === 0 && failedTests === 0 && skippedTests === 0) {
-  try {
-    const reportPath = path.join(process.env.GITHUB_WORKSPACE, 'playwright-report', 'report.json');
-    console.log(`Falling back to JSON parsing from: ${reportPath}`);
-    
-    if (fs.existsSync(reportPath)) {
-      const rawData = fs.readFileSync(reportPath, 'utf8');
-      const report = JSON.parse(rawData);
-      
-      // Reset counters
-      totalTests = 0;
-      passedTests = 0;
-      failedTests = 0;
-      skippedTests = 0;
+try {
+  const reportPath = path.join(process.env.GITHUB_WORKSPACE || __dirname, 'playwright-report', 'report.json');
+  console.log(`Reading test report from: ${reportPath}`);
 
-      // Parse test results
-      report.suites?.forEach((suite) => {
-        suite.specs?.forEach((spec) => {
-          spec.tests?.forEach((test) => {
-            test.results?.forEach((result) => {
-              totalTests++;
-              if (result.status === 'passed') passedTests++;
-              else if (result.status === 'failed') failedTests++;
-              else if (result.status === 'skipped') skippedTests++;
-            });
-          });
-        });
-      });
-    }
-  } catch (err) {
-    console.error('Error parsing JSON report:', err);
+  if (fs.existsSync(reportPath)) {
+    const rawData = fs.readFileSync(reportPath, 'utf8');
+    const report = JSON.parse(rawData);
+
+    const allTests = (report.suites || [])
+      .flatMap(suite =>
+        (suite.specs || []).flatMap(spec =>
+          (spec.tests || []).flatMap(test =>
+            (test.results || []).map(result => result.status)
+          )
+        )
+      );
+
+    totalTests = allTests.length;
+    passedTests = allTests.filter(status => status === 'passed').length;
+    failedTests = allTests.filter(status => status === 'failed').length;
+    skippedTests = allTests.filter(status => status === 'skipped').length;
+  } else {
+    console.error('❌ report.json not found.');
   }
+} catch (err) {
+  console.error('❌ Failed to parse report.json:', err);
 }
 
-console.log(`Final Test Counts - Total: ${totalTests}, Passed: ${passedTests}, Failed: ${failedTests}, Skipped: ${skippedTests}`);
+console.log(`✅ Final Test Counts - Total: ${totalTests}, Passed: ${passedTests}, Failed: ${failedTests}, Skipped: ${skippedTests}`);
 
 const msg = {
   to: process.env.TO_EMAIL,
@@ -75,7 +69,7 @@ Citrusbug QA Team`,
 
     <p>Hello <strong>Bluedrop Academy</strong>,</p>
 
-    <p>The automated <strong>Playwright test suite</strong> for the <strong>${process.env.GITHUB_REF_NAME || 'Staging'} environment</strong> has completed.</p>
+    <p>The automated <strong>Playwright test suite</strong> for the <strong>${envName}</strong> environment has completed.</p>
 
     <h3>🔍 Test Summary</h3>
     <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
@@ -112,8 +106,8 @@ Citrusbug QA Team`,
 
 sgMail
   .send(msg)
-  .then(() => console.log('Email sent successfully'))
+  .then(() => console.log('📧 Email sent successfully'))
   .catch((error) => {
-    console.error('Error sending email:', error);
+    console.error('❌ Error sending email:', error.toString());
     process.exit(1);
   });

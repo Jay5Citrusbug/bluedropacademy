@@ -29,17 +29,20 @@ jobs:
           npx playwright install --with-deps
           npm install @sendgrid/mail
 
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
       - name: Run Playwright tests
         id: run-tests
         continue-on-error: true
         run: |
           mkdir -p playwright-report
-          npx playwright test --reporter=json --output=playwright-report || true
+          npx playwright test --reporter=json > playwright-report/report.json || true
           npx playwright test --reporter=html || true
           TEST_EXIT_CODE=$?
           echo "TEST_STATUS=$(if [ $TEST_EXIT_CODE -eq 0 ]; then echo 'PASSED'; else echo 'FAILED'; fi)" >> $GITHUB_ENV
           echo "TEST_EXIT_CODE=$TEST_EXIT_CODE" >> $GITHUB_ENV
-          
+
           # Extract test counts and set as outputs
           echo "total=$(jq '[.. | .status?] | length' playwright-report/report.json)" >> $GITHUB_OUTPUT
           echo "passed=$(jq '[.. | .status? | select(. == "passed")] | length' playwright-report/report.json)" >> $GITHUB_OUTPUT
