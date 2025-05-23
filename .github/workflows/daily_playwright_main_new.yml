@@ -1,12 +1,12 @@
 name: Playwright Tests with Email Reports 
 on:
-  schedule:
-    - cron: '*/5 * * * *'  # Every 5 minutes
+ 
   push:
     branches: ['main']
   workflow_dispatch:
 
 env:
+  REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/report.html
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
   TO_EMAIL: jay5.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
@@ -34,8 +34,9 @@ jobs:
 
       - name: Clean previous test results
         run: |
-          echo "Cleaning previous Playwright reports..."
-          rm -rf playwright-report/ reports/ test-log.txt || true
+          echo "Cleaning previous Playwright report..."
+          rm -rf playwright-report/ report.html test-log.txt || true
+          
 
       - name: Run Playwright Tests
         id: run-tests
@@ -45,14 +46,15 @@ jobs:
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
         run: npx playwright test --project=chromium --reporter=html,json --workers=1
 
+      - name: Debug Playwright Report folder
+        run: ls -la playwright-report
+
+      - name: Generate standalone HTML report
+        run: cp playwright-report/index.html report.html
+
       - name: Get current date with timestamp
         id: date
-        run: echo "date=$(date '+%Y-%m-%d-%H-%M-%S')" >> $GITHUB_OUTPUT
-
-      - name: Generate timestamped report
-        run: |
-          mkdir -p "reports/${{ steps.date.outputs.date }}"
-          cp -r playwright-report/* "reports/${{ steps.date.outputs.date }}/"
+        run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
 
       - name: Extract test summary
         id: summary
@@ -76,34 +78,35 @@ jobs:
 
       - name: Prepare Report Timestamp
         if: always()
-        run: echo "REPORT_TIMESTAMP=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+        run: echo "REPORT_TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
 
-      - name: Upload Artifact
+      - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "reports/${{ steps.date.outputs.date }}"
+          path: .
           retention-days: 1
 
       - name: Send Email Report
         if: always()
         run: node .github/scripts/sendreport.js
         env:
-          REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/reports/${{ steps.date.outputs.date }}/
+          REPORT_URL: ${{ env.REPORT_URL }}
           REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
-          TOTAL: ${{ steps.summary.outputs.total }}
-          PASSED: ${{ steps.summary.outputs.passed }}
-          FAILED: ${{ steps.summary.outputs.failed }}
-          SKIPPED: ${{ steps.summary.outputs.skipped }}
           GITHUB_REF_NAME: ${{ github.ref_name }}
           SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
           TO_EMAIL: ${{ env.TO_EMAIL }}
           FROM_EMAIL: ${{ env.FROM_EMAIL }}
-
+          TOTAL: ${{ steps.summary.outputs.total }}
+          PASSED: ${{ steps.summary.outputs.passed }}
+          FAILED: ${{ steps.summary.outputs.failed }}
+          SKIPPED: ${{ steps.summary.outputs.skipped }}
+          GITHUB_WORKSPACE: ${{ github.workspace }}
   deploy:
     needs: test-and-report
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+
     permissions:
       pages: write
       id-token: write
