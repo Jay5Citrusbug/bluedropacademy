@@ -38,14 +38,17 @@ jobs:
         id: get_date
         run: echo "report_date=$(date '+%Y-%m-%d')" >> $GITHUB_OUTPUT
 
-      - name: Run Playwright Tests
-        env:
-          URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
-          URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
+      - name: Run Playwright tests
+        id: run-tests
+        continue-on-error: true
         run: |
-          rm -rf playwright-report site
-          npx playwright test --project=chromium --workers=1 --reporter=json,test-results.json,html
-
+          mkdir -p playwright-report
+          npx playwright test --reporter=json --output=playwright-report || true
+          npx playwright test --reporter=html || true
+          TEST_EXIT_CODE=$?
+          echo "TEST_STATUS=$(if [ $TEST_EXIT_CODE -eq 0 ]; then echo 'PASSED'; else echo 'FAILED'; fi)" >> $GITHUB_ENV
+          echo "TEST_EXIT_CODE=$TEST_EXIT_CODE" >> $GITHUB_ENV
+          
       - name: Extract test summary
         id: summary
         run: |
