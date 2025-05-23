@@ -1,6 +1,7 @@
-name: Playwright Tests with Email Reports
-
+name: Playwright Tests with Email Reports 
 on:
+  schedule:
+    - cron: '*/5 * * * *'  # Every 5 minutes
   push:
     branches: ['main']
   workflow_dispatch:
