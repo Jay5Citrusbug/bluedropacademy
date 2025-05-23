@@ -83,7 +83,7 @@ jobs:
 
       - name: Send Email Report
         if: always()
-        run: node .github/scripts/sendreport.js
+        run: node sendreport.js
         env:
           REPORT_URL: ${{ env.REPORT_URL }}
           REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
