@@ -3,6 +3,9 @@ const path = require('path');
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+const htmlReportPath = path.resolve(process.cwd(), 'playwright-report', 'index.html');
+const jsonReportPath = path.resolve(process.cwd(), 'playwright-report', 'report.json');
+
 // Format timestamp
 const reportDate = new Date(process.env.REPORT_TIMESTAMP || new Date()).toLocaleString();
 const envName = process.env.GITHUB_REF_NAME || 'Daily';

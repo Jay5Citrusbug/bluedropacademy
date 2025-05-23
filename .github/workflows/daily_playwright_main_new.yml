@@ -32,22 +32,24 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Run Playwright tests
+      - name: Run Playwright tests and generate reports
         id: run-tests
         continue-on-error: true
         run: |
           mkdir -p playwright-report
+          # Run tests with JSON reporter and output to file
           npx playwright test --reporter=json > playwright-report/report.json || true
+          # Run tests with HTML reporter (generates playwright-report/index.html)
           npx playwright test --reporter=html || true
           TEST_EXIT_CODE=$?
           echo "TEST_STATUS=$(if [ $TEST_EXIT_CODE -eq 0 ]; then echo 'PASSED'; else echo 'FAILED'; fi)" >> $GITHUB_ENV
           echo "TEST_EXIT_CODE=$TEST_EXIT_CODE" >> $GITHUB_ENV
 
-          # Extract test counts and set as outputs
-          echo "total=$(jq '[.. | .status?] | length' playwright-report/report.json)" >> $GITHUB_OUTPUT
-          echo "passed=$(jq '[.. | .status? | select(. == "passed")] | length' playwright-report/report.json)" >> $GITHUB_OUTPUT
-          echo "failed=$(jq '[.. | .status? | select(. == "failed")] | length' playwright-report/report.json)" >> $GITHUB_OUTPUT
-          echo "skipped=$(jq '[.. | .status? | select(. == "skipped")] | length' playwright-report/report.json)" >> $GITHUB_OUTPUT
+          # Extract test counts and set as outputs (optional)
+          echo "total=$(jq '[.. | .status?] | length' playwright-report/report.json)" >> $GITHUB_ENV
+          echo "passed=$(jq '[.. | .status? | select(. == \"passed\")] | length' playwright-report/report.json)" >> $GITHUB_ENV
+          echo "failed=$(jq '[.. | .status? | select(. == \"failed\")] | length' playwright-report/report.json)" >> $GITHUB_ENV
+          echo "skipped=$(jq '[.. | .status? | select(. == \"skipped\")] | length' playwright-report/report.json)" >> $GITHUB_ENV
 
       - name: Prepare Report
         if: always()
@@ -73,10 +75,10 @@ jobs:
           SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
           TO_EMAIL: ${{ env.TO_EMAIL }}
           FROM_EMAIL: ${{ env.FROM_EMAIL }}
-          TOTAL: ${{ steps.run-tests.outputs.total }}
-          PASSED: ${{ steps.run-tests.outputs.passed }}
-          FAILED: ${{ steps.run-tests.outputs.failed }}
-          SKIPPED: ${{ steps.run-tests.outputs.skipped }}
+          TOTAL: ${{ env.total }}
+          PASSED: ${{ env.passed }}
+          FAILED: ${{ env.failed }}
+          SKIPPED: ${{ env.skipped }}
           GITHUB_WORKSPACE: ${{ github.workspace }}
 
   deploy:
