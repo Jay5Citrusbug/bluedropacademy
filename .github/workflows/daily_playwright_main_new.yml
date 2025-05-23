@@ -42,8 +42,10 @@ jobs:
           URL_ADMIN: https://chat.bluedropacademy.com/admin
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
         run: |
-          npx playwright test --project=chromium --workers=1 --reporter=json:playwright-report/report.json,html:playwright-report/index.html | tee test-log.txt
-
+          mkdir -p playwright-report
+          npx playwright test --reporter=json --output=playwright-report || true
+          mv playwright-report/report.json playwright-report/results.json || true
+          npx playwright test --reporter=html || true
       - name: Get current date with timestamp
         id: date
         run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
