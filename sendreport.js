@@ -9,7 +9,6 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 //   process.exit(1);
 // }
 
-
 const TO_EMAIL = 'jay5.citrusbug@gmail.com';
 const FROM_EMAIL = 'bluedropacademy.aws@gmail.com'; // Ensure this is verified in SendGrid
 
