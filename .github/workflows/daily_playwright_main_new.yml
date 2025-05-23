@@ -37,7 +37,7 @@ jobs:
           URL_ADMIN: https://chat.bluedropacademy.com/admin
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
         run: |
-          npx playwright test --project=chromium --workers=1 --reporter=json=playwright-report/report.json,html=playwright-report/index.html | tee test-log.txt
+          npx playwright test --project=chromium --workers=1 --reporter=json:playwright-report/report.json,html:playwright-report/index.html | tee test-log.txt
 
       - name: Get current date with timestamp
         id: date
