@@ -1,13 +1,6 @@
-const sgMail = require('@sendgrid/mail');
 const fs = require('fs');
 const path = require('path');
-
-// Validate API key presence and format
-if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
-  console.error('❌ Invalid or missing SENDGRID_API_KEY.');
-  process.exit(1);
-}
-
+const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const TO_EMAIL = 'jay5.citrusbug@gmail.com';
