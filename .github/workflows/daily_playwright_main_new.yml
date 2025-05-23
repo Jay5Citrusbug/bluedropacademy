@@ -36,7 +36,7 @@ jobs:
         run: |
           echo "Cleaning previous Playwright report..."
           rm -rf playwright-report/ report.html test-log.txt || true
-      
+
       - name: Run Playwright Tests
         id: run-tests
         continue-on-error: true
@@ -44,7 +44,7 @@ jobs:
           URL_ADMIN: https://chat.bluedropacademy.com/admin
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
         run: npx playwright test --project=chromium --reporter=html
-      
+
       - name: Generate standalone HTML report
         run: cp playwright-report/index.html report.html
 
@@ -72,11 +72,9 @@ jobs:
           echo "failed=$FAILED" >> $GITHUB_OUTPUT
           echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
 
-      - name: Prepare Report
+      - name: Prepare Report Timestamp
         if: always()
-        run: |
-          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-          echo "REPORT_TIMESTAMP=$TIMESTAMP" >> $GITHUB_ENV
+        run: echo "REPORT_TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
 
       - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
@@ -112,5 +110,4 @@ jobs:
 
     steps:
       - name: Deploy to GitHub Pages
-        id: deploy
         uses: actions/deploy-pages@v4
