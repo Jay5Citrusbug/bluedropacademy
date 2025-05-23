@@ -2,10 +2,8 @@ const fs = require('fs');
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// Format timestamp
 const reportDate = new Date(process.env.REPORT_TIMESTAMP || new Date()).toLocaleString();
 
-// Parse test summary from JSON
 let totalTests = 0;
 let passedTests = 0;
 let failedTests = 0;
@@ -28,7 +26,7 @@ try {
     });
   });
 } catch (err) {
-  console.error('Failed to parse test report JSON:', err);
+  console.error('❌ Failed to parse test report JSON:', err.message);
 }
 
 const msg = {
@@ -62,26 +60,11 @@ Citrusbug QA Team
 
     <h3>🔍 Test Summary</h3>
     <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px;">📅 <strong>Date</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${reportDate}</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px;">🔢 <strong>Total Tests</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${totalTests}</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px;">✅ <strong>Passed</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px; color: green;">${passedTests}</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px;">❌ <strong>Failed</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px; color: red;">${failedTests}</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ddd; padding: 8px;">⏭️ <strong>Skipped</strong></td>
-        <td style="border: 1px solid #ddd; padding: 8px;">${skippedTests}</td>
-      </tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">📅 <strong>Date</strong></td><td style="border: 1px solid #ddd; padding: 8px;">${reportDate}</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">🔢 <strong>Total Tests</strong></td><td style="border: 1px solid #ddd; padding: 8px;">${totalTests}</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">✅ <strong>Passed</strong></td><td style="border: 1px solid #ddd; padding: 8px; color: green;">${passedTests}</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">❌ <strong>Failed</strong></td><td style="border: 1px solid #ddd; padding: 8px; color: red;">${failedTests}</td></tr>
+      <tr><td style="border: 1px solid #ddd; padding: 8px;">⏭️ <strong>Skipped</strong></td><td style="border: 1px solid #ddd; padding: 8px;">${skippedTests}</td></tr>
     </table>
 
     <div style="margin: 20px 0;">
@@ -95,8 +78,8 @@ Citrusbug QA Team
 
 sgMail
   .send(msg)
-  .then(() => console.log('Email sent successfully'))
+  .then(() => console.log('✅ Email sent successfully'))
   .catch((error) => {
-    console.error('Error sending email:', error);
+    console.error('❌ Error sending email:', error.message);
     process.exit(1);
   });
