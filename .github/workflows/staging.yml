@@ -2,13 +2,9 @@ name: Run Playwright Tests and Email Report
 
 on:
   push:
-    branches: [ 'main' ]
-
-env:
-  REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/report.html
-  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-  TO_EMAIL: jay5.citrusbug@gmail.com
-  FROM_EMAIL: bluedropacademy.aws@gmail.com
+    branches: [ main ]
+  schedule:
+    - cron: '20 20 * * *'  # 2:00 AM IST (UTC+5:30)
 
 jobs:
   build:
@@ -42,22 +38,13 @@ jobs:
         id: get_date
         run: echo "report_date=$(date '+%Y-%m-%d')" >> $GITHUB_OUTPUT
 
-      - name: Run Playwright tests
-        id: run-tests
-        continue-on-error: true
+      - name: Run Playwright Tests
+        env:
+          URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
+          URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site
         run: |
-          mkdir -p playwright-report
-          npx playwright test --reporter=json --output=playwright-report || true
-          npx playwright test --reporter=html || true
-          TEST_EXIT_CODE=$?
-          echo "TEST_STATUS=$(if [ $TEST_EXIT_CODE -eq 0 ]; then echo 'PASSED'; else echo 'FAILED'; fi)" >> $GITHUB_ENV
-          echo "TEST_EXIT_CODE=$TEST_EXIT_CODE" >> $GITHUB_ENV
-          
-          # Extract test counts and set as outputs
-          echo "total=$(jq '[.. | .status?] | length' playwright-report/report.json)" >> $GITHUB_OUTPUT
-          echo "passed=$(jq '[.. | .status? | select(. == "passed")] | length' playwright-report/report.json)" >> $GITHUB_OUTPUT
-          echo "failed=$(jq '[.. | .status? | select(. == "failed")] | length' playwright-report/report.json)" >> $GITHUB_OUTPUT
-          echo "skipped=$(jq '[.. | .status? | select(. == "skipped")] | length' playwright-report/report.json)" >> $GITHUB_OUTPUT
+          rm -rf playwright-report site
+          npx playwright test --project=chromium --workers=1 --reporter=json,test-results.json,html
 
       - name: Extract test summary
         id: summary
@@ -68,46 +55,62 @@ jobs:
           echo "failed=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)" >> $GITHUB_OUTPUT
           echo "skipped=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)" >> $GITHUB_OUTPUT
 
-      - name: Prepare Report
-        if: always()
+      - name: Prepare report for Pages
         run: |
-          mv playwright-report/index.html report.html
-          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-          echo "REPORT_TIMESTAMP=$TIMESTAMP" >> $GITHUB_ENV
+          mkdir -p site/staging-report-${{ steps.get_date.outputs.report_date }}
+          mv playwright-report/* site/staging-report-${{ steps.get_date.outputs.report_date }}
 
-      - name: Upload Report Artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
-          retention-days: 1
-
-      - name: Send Email Report
-        if: always()
-        run: node sendreport.js
-        env:
-          REPORT_URL: ${{ env.REPORT_URL }}
-          REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
-          TEST_STATUS: ${{ env.TEST_STATUS }}
-          GITHUB_REF_NAME: ${{ github.ref_name }}
-          SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
-          TO_EMAIL: ${{ env.TO_EMAIL }}
-          FROM_EMAIL: ${{ env.FROM_EMAIL }}
-          TOTAL: ${{ steps.run-tests.outputs.total }}
-          PASSED: ${{ steps.run-tests.outputs.passed }}
-          FAILED: ${{ steps.run-tests.outputs.failed }}
-          SKIPPED: ${{ steps.run-tests.outputs.skipped }}
-          GITHUB_WORKSPACE: ${{ github.workspace }}
+          path: site
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deploy.outputs.page_url }}
+
+    permissions:
+      pages: write
+      id-token: write
+
     steps:
       - name: Deploy to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4
+
+  notify:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Send Email Report
+        run: node sendreport.ts
+        env:
+          ENVIRONMENT: Staging
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          REPORT_DATE: ${{ needs.build.outputs.report_date }}
+          TOTAL: ${{ needs.build.outputs.total }}
+          PASSED: ${{ needs.build.outputs.passed }}
+          FAILED: ${{ needs.build.outputs.failed }}
+          SKIPPED: ${{ needs.build.outputs.skipped }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          REPORT_URL: ${{ needs.deploy.outputs.page_url }}staging-report-${{ needs.build.outputs.report_date }}/index.html
+          URL_ADMIN: https://stg.chat.bluedropacademy.com/admin
+          URL_CHATBOT: https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site

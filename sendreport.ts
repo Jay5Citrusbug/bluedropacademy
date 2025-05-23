@@ -1,13 +1,14 @@
-const sgMail = require('@sendgrid/mail');
-const fs = require('fs');
-const path = require('path');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+import sgMail from '@sendgrid/mail';
+import fs from 'fs';
+import path from 'path';
 
-// // Validate API key presence and format
-// if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
-//   console.error('❌ Invalid or missing SENDGRID_API_KEY.');
-//   process.exit(1);
-// }
+// Validate API key presence and format
+if (!process.env.SENDGRID_API_KEY || !process.env.SENDGRID_API_KEY.startsWith('SG.')) {
+  console.error('❌ Invalid or missing SENDGRID_API_KEY.');
+  process.exit(1);
+}
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const TO_EMAIL = 'jay5.citrusbug@gmail.com';
 const FROM_EMAIL = 'bluedropacademy.aws@gmail.com'; // Ensure this is verified in SendGrid
@@ -25,19 +26,23 @@ if (!fs.existsSync(htmlReportPath) || !fs.existsSync(jsonReportPath)) {
 const htmlContent = fs.readFileSync(htmlReportPath, 'utf8');
 
 // Generate summary table from JSON
+interface TestResult {
+  status: string;
+}
+
 let summaryTable = '';
 
 try {
   const rawJson = fs.readFileSync(jsonReportPath, 'utf8');
   const jsonData = JSON.parse(rawJson);
 
-  const allTests = (jsonData.suites || []).flatMap(suite =>
-    (suite.specs || []).flatMap(spec =>
-      (spec.tests || []).flatMap(test =>
-        (test.results || []).map(r => ({ status: r.status }))
+  const allTests: TestResult[] = jsonData.suites?.flatMap((suite: any) =>
+    suite.specs?.flatMap((spec: any) =>
+      spec.tests?.flatMap((test: any) =>
+        test.results?.map((r: any) => ({ status: r.status }))
       )
     )
-  ).filter(Boolean);
+  ).filter(Boolean) || [];
 
   const total = allTests.length;
   const passed = allTests.filter(t => t.status === 'passed').length;
@@ -79,11 +84,17 @@ const message = {
   `,
 };
 
-
-sgMail
-  .send(msg)
-  .then(() => console.log('Email sent successfully'))
-  .catch((error) => {
-    console.error('Error sending email:', error);
+async function sendEmail() {
+  try {
+    await sgMail.send(message);
+    console.log('✅ Report email sent successfully');
+  } catch (error: any) {
+    console.error('❌ Error sending report email:', error.toString());
+    if (error.response && error.response.body) {
+      console.error('SendGrid response error:', error.response.body);
+    }
     process.exit(1);
-  });
+  }
+}
+
+sendEmail();
