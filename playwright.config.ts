@@ -34,9 +34,9 @@ export default defineConfig({
   // ],
   // // 
   reporter: [
-  ['list'],                   // console output with test names & status
-  ['html', { outputFolder: 'playwright-report', open: 'never' }],
-  ['json', { outputFile: 'playwright-report/report.json' }],
+    ['list'],                   // console output with test names & status
+    ['json', { outputFile: 'playwright-report/report.json' }],
+    ['html', { outputFolder: 'playwright-report', open: 'never' }],
   ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */

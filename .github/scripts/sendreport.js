@@ -1,79 +1,24 @@
-const fs = require('fs');
-const path = require('path');
 const sgMail = require('@sendgrid/mail');
+const path = require('path');
+
+// Set SendGrid API key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// The reportDir and jsonReportPath variables are no longer used for counts,
-// but might be needed for other purposes if the script were expanded.
-// For now, they can remain or be removed if not needed elsewhere.
-const reportDir = path.join(process.env.GITHUB_WORKSPACE || process.cwd(), 'playwright-report');
-const jsonReportPath = path.join(reportDir, 'report.json'); // This path is no longer used for count extraction
-
-// Format timestamp from env or current date
+// Get report date and environment name
 const reportDate = process.env.REPORT_TIMESTAMP || new Date().toLocaleString();
-const envName = process.env.GITHUB_REF_NAME || 'Daily';
+const environment = process.env.ENVIRONMENT || process.env.GITHUB_REF_NAME || 'Unknown';
+const reportUrl = process.env.REPORT_URL || 'https://your-org.github.io/your-repo/report.html';
 
-// Initialize counts (these will be overridden by environment variables from GitHub Actions)
-let totalTests = 0;
-let passedTests = 0;
-let failedTests = 0;
-let skippedTests = 0;
+// Get test counts from environment variables
+const totalTests = Number(process.env.TOTAL || '0');
+const passedTests = Number(process.env.PASSED || '0');
+const failedTests = Number(process.env.FAILED || '0');
+const skippedTests = Number(process.env.SKIPPED || '0');
 
-// --- REMOVE THE ENTIRE TRY...CATCH BLOCK FOR JSON PARSING HERE ---
-// The following block should be removed:
-/*
-try {
-  if (fs.existsSync(jsonReportPath)) {
-    const rawData = fs.readFileSync(jsonReportPath, 'utf8');
-    const report = JSON.parse(rawData);
-
-    const allTests = (report.suites ||)
-    .flatMap(suite =>
-        (suite.specs ||).flatMap(spec =>
-          (spec.tests ||).flatMap(test =>
-            (test.results ||).map(result => result.status)
-          )
-        )
-      );
-
-    totalTests = allTests.length;
-    passedTests = allTests.filter(status => status === 'passed').length;
-    failedTests = allTests.filter(status => status === 'failed').length;
-    skippedTests = allTests.filter(status => status === 'skipped').length;
-  } else {
-    console.error('❌ report.json not found at:', jsonReportPath);
-  }
-} catch (err) {
-  console.error('❌ Failed to parse report.json:', err);
-}
-*/
-// --- END REMOVAL ---
-
-// Override counts from env (GitHub Actions output)
-// Ensure all environment variables are correctly parsed as numbers.
-// Using || '0' provides a safe default in case an env var is undefined,
-// though GitHub Actions should always provide '0' for zero counts.
-const totalEnv = process.env.TOTAL;
-const passedEnv = process.env.PASSED;
-const failedEnv = process.env.FAILED;
-const skippedEnv = process.env.SKIPPED;
-
-// Explicitly assign values from environment variables
-totalTests = Number(totalEnv || '0');
-passedTests = Number(passedEnv || '0');
-failedTests = Number(failedEnv || '0');
-skippedTests = Number(skippedEnv || '0');
-
-// The console.log statement remains valuable for debugging
+// Debug log
 console.log(`✅ Final Test Counts - Total: ${totalTests}, Passed: ${passedTests}, Failed: ${failedTests}, Skipped: ${skippedTests}`);
 
-// Environment and report URL
-const environment = process.env.ENVIRONMENT || envName;
-const repoOwner = process.env.REPO_OWNER || 'your-org';
-const repoName = process.env.REPO_NAME || 'your-repo';
-const reportUrl = process.env.REPORT_URL || `https://${repoOwner}.github.io/${repoName}/report.html`;
-
-// Email subject
+// Email content
 const subject = `${environment} Automation Test Report - ${reportDate}`;
 
 const msg = {
@@ -84,8 +29,10 @@ const msg = {
 
 The automated Playwright test suite has completed.
 
+Environment: ${environment}
 Date: ${reportDate}
-Total: ${totalTests}
+
+Total Tests: ${totalTests}
 Passed: ${passedTests}
 Failed: ${failedTests}
 Skipped: ${skippedTests}
@@ -128,7 +75,7 @@ Citrusbug QA Team`,
       </tr>
     </table>
 
-    <div style="margin: 20px 0;">
+    <div style="margin: 20px 0; text-align: center;">
       <a href="${reportUrl}" target="_blank" style="background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">📄 View Full Report</a>
     </div>
 
@@ -137,10 +84,13 @@ Citrusbug QA Team`,
   `
 };
 
+// Send the email
 sgMail
-.send(msg)
-.then(() => console.log('📧 Email sent successfully'))
-.catch((error) => {
+  .send(msg)
+  .then(() => {
+    console.log('📧 Email sent successfully');
+  })
+  .catch((error) => {
     console.error('❌ Error sending email:', error.toString());
     process.exit(1);
   });
