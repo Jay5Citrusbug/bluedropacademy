@@ -32,17 +32,12 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Clean previous reports
-        run: rm -rf playwright-report test-results
-
-      - name: Confirm test discovery
-        run: npx playwright list
-
       - name: Run Playwright Tests
         env:
           URL_ADMIN: https://chat.bluedropacademy.com/admin
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
-        run: npx playwright test --project=chromium --workers=1
+        run: |
+          npx playwright test --project=chromium --workers=1 --reporter=json:playwright-report/report.json,html:playwright-report/index.html | tee test-log.txt
 
       - name: Get current date with timestamp
         id: date
