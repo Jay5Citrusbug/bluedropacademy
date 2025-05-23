@@ -3,30 +3,35 @@ const path = require('path');
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+// The reportDir and jsonReportPath variables are no longer used for counts,
+// but might be needed for other purposes if the script were expanded.
+// For now, they can remain or be removed if not needed elsewhere.
 const reportDir = path.join(process.env.GITHUB_WORKSPACE || process.cwd(), 'playwright-report');
-const jsonReportPath = path.join(reportDir, 'report.json');
+const jsonReportPath = path.join(reportDir, 'report.json'); // This path is no longer used for count extraction
 
 // Format timestamp from env or current date
 const reportDate = process.env.REPORT_TIMESTAMP || new Date().toLocaleString();
 const envName = process.env.GITHUB_REF_NAME || 'Daily';
 
-// Initialize counts
+// Initialize counts (these will be overridden by environment variables from GitHub Actions)
 let totalTests = 0;
 let passedTests = 0;
 let failedTests = 0;
 let skippedTests = 0;
 
-// Try to read and parse the JSON report for counts
+// --- REMOVE THE ENTIRE TRY...CATCH BLOCK FOR JSON PARSING HERE ---
+// The following block should be removed:
+/*
 try {
   if (fs.existsSync(jsonReportPath)) {
     const rawData = fs.readFileSync(jsonReportPath, 'utf8');
     const report = JSON.parse(rawData);
 
-    const allTests = (report.suites || [])
-      .flatMap(suite =>
-        (suite.specs || []).flatMap(spec =>
-          (spec.tests || []).flatMap(test =>
-            (test.results || []).map(result => result.status)
+    const allTests = (report.suites ||)
+    .flatMap(suite =>
+        (suite.specs ||).flatMap(spec =>
+          (spec.tests ||).flatMap(test =>
+            (test.results ||).map(result => result.status)
           )
         )
       );
@@ -41,18 +46,26 @@ try {
 } catch (err) {
   console.error('❌ Failed to parse report.json:', err);
 }
+*/
+// --- END REMOVAL ---
 
-console.log(`✅ Final Test Counts - Total: ${totalTests}, Passed: ${passedTests}, Failed: ${failedTests}, Skipped: ${skippedTests}`);
-
-// Override counts from env if available (GitHub Actions output)
+// Override counts from env (GitHub Actions output)
+// Ensure all environment variables are correctly parsed as numbers.
+// Using || '0' provides a safe default in case an env var is undefined,
+// though GitHub Actions should always provide '0' for zero counts.
+const totalEnv = process.env.TOTAL;
 const passedEnv = process.env.PASSED;
 const failedEnv = process.env.FAILED;
 const skippedEnv = process.env.SKIPPED;
 
-if (passedEnv !== undefined) passedTests = Number(passedEnv);
-if (failedEnv !== undefined) failedTests = Number(failedEnv);
-if (skippedEnv !== undefined) skippedTests = Number(skippedEnv);
-totalTests = passedTests + failedTests + skippedTests;
+// Explicitly assign values from environment variables
+totalTests = Number(totalEnv || '0');
+passedTests = Number(passedEnv || '0');
+failedTests = Number(failedEnv || '0');
+skippedTests = Number(skippedEnv || '0');
+
+// The console.log statement remains valuable for debugging
+console.log(`✅ Final Test Counts - Total: ${totalTests}, Passed: ${passedTests}, Failed: ${failedTests}, Skipped: ${skippedTests}`);
 
 // Environment and report URL
 const environment = process.env.ENVIRONMENT || envName;
@@ -125,9 +138,9 @@ Citrusbug QA Team`,
 };
 
 sgMail
-  .send(msg)
-  .then(() => console.log('📧 Email sent successfully'))
-  .catch((error) => {
+.send(msg)
+.then(() => console.log('📧 Email sent successfully'))
+.catch((error) => {
     console.error('❌ Error sending email:', error.toString());
     process.exit(1);
   });
