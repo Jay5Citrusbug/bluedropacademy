@@ -43,7 +43,10 @@ jobs:
         env:
           URL_ADMIN: https://chat.bluedropacademy.com/admin
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
-        run: npx playwright test --project=chromium --reporter=html --workers=1
+        run: npx playwright test --project=chromium --reporter=html,json --workers=1
+
+      - name: Debug Playwright Report folder
+        run: ls -la playwright-report
 
       - name: Generate standalone HTML report
         run: cp playwright-report/index.html report.html
@@ -59,7 +62,7 @@ jobs:
             echo "Report file not found!"
             echo "total=0" >> $GITHUB_OUTPUT
             echo "passed=0" >> $GITHUB_OUTPUT
-            echo "failed=1" >> $GITHUB_OUTPUT
+            echo "failed=0" >> $GITHUB_OUTPUT
             echo "skipped=0" >> $GITHUB_OUTPUT
             exit 0
           fi

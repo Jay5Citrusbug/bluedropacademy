@@ -11,7 +11,7 @@ export class ChatbotLoginPage {
   }
 
   // Navigates to the chatbot login page
-   async goto() {
+   async  goto() {
     console.log('Navigating to the admin page...');
  const Chatboturl = process.env.URL_CHATBOT ?? 'https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site';
     if (!Chatboturl) {
