@@ -68,53 +68,22 @@ jobs:
           echo "failed=$(jq '[.. | .status? | select(. == "failed")] | length' test-results.json)" >> $GITHUB_OUTPUT
           echo "skipped=$(jq '[.. | .status? | select(. == "skipped")] | length' test-results.json)" >> $GITHUB_OUTPUT
 
-      - name: Prepare report for Pages
+      - name: Prepare Report
+        if: always()
         run: |
-          mkdir -p site/staging-report-${{ steps.get_date.outputs.report_date }}
-          mv playwright-report/* site/staging-report-${{ steps.get_date.outputs.report_date }}
+          mv playwright-report/index.html report.html
+          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
+          echo "REPORT_TIMESTAMP=$TIMESTAMP" >> $GITHUB_ENV
 
-      - name: Upload Pages artifact
+      - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
-    outputs:
-      page_url: ${{ steps.deploy.outputs.page_url }}
-
-    permissions:
-      pages: write
-      id-token: write
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deploy
-        uses: actions/deploy-pages@v4
-
-  notify:
-    needs: [build, deploy]
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm ci
+          path: .
+          retention-days: 1
 
       - name: Send Email Report
         if: always()
-        run: node sendreport.js
+        run: node .github/scripts/sendreport.js
         env:
           REPORT_URL: ${{ env.REPORT_URL }}
           REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
@@ -128,3 +97,17 @@ jobs:
           FAILED: ${{ steps.run-tests.outputs.failed }}
           SKIPPED: ${{ steps.run-tests.outputs.skipped }}
           GITHUB_WORKSPACE: ${{ github.workspace }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
