@@ -36,11 +36,8 @@ jobs:
         run: |
           echo "Cleaning previous Playwright report..."
           rm -rf playwright-report/ report.html test-log.txt || true
+          
 
-      - name: Clear Playwright JSON state (just in case)
-        run: rm -f playwright/.cache/test-results.json || true
-
-     
       - name: Run Playwright Tests
         id: run-tests
         continue-on-error: true
@@ -49,12 +46,11 @@ jobs:
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
         run: npx playwright test --project=chromium --reporter=html,json --workers=1
 
-      - name: Verify Playwright HTML report exists
-        run: |
-          if [ ! -f "playwright-report/index.html" ]; then
-            echo "❌ Report not generated!"
-            exit 1
-          fi
+      - name: Debug Playwright Report folder
+        run: ls -la playwright-report
+
+      - name: Generate standalone HTML report
+        run: cp playwright-report/index.html report.html
 
       - name: Get current date with timestamp
         id: date
