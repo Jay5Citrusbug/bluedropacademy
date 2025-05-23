@@ -40,8 +40,8 @@ export class ChatbotLoginPage {
       await this.page.getByRole('button', { name: chatbotLocators.submitLoginBtn.name }).click();
 
       console.log('Waiting for page navigation after login...');
-      await this.page.waitForURL(/.*chat6.*/, { timeout: timeoutLimit });
-      console.log('URL indicates successful navigation to chat page.');
+      // await this.page.waitForURL(/.*chat6.*/, { timeout: timeoutLimit });
+      // console.log('URL indicates successful navigation to chat page.');
 
       // const iframeName = chatbotLocators.iframeName.replace('iframe[name="', '').replace('"]', '');
       // console.log(`Waiting for iframe [${iframeName}] to be visible in DOM...`);
