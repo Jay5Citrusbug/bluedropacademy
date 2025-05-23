@@ -37,11 +37,9 @@ jobs:
           URL_ADMIN: https://chat.bluedropacademy.com/admin
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
         run: |
-          TIMESTAMP=$(date '+%Y%m%d_%H%M%S')
-          REPORT_DIR="playwright-report/$TIMESTAMP"
-          npx playwright test --project=chromium --workers=1 --reporter="json:$REPORT_DIR/report.json,html:$REPORT_DIR/index.html" | tee test-log.txt
-          echo "REPORT_PATH=$REPORT_DIR/index.html" >> $GITHUB_ENV
-
+          npx playwright test --reporter=json --output=playwright-report || true
+          mv playwright-report/report.json playwright-report/results.json || true
+          npx playwright test --reporter=html || true
       - name: Get current date with timestamp
         id: date
         run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
@@ -49,11 +47,11 @@ jobs:
       - name: Extract test summary
         id: summary
         run: |
-          if [ ! -f "$REPORT_PATH" ]; then echo "Report file not found!" && exit 1; fi
-          TOTAL=$(jq '[.. | .status? | select(.)] | length' "$(dirname "$REPORT_PATH")/report.json")
-          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' "$(dirname "$REPORT_PATH")/report.json")
-          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' "$(dirname "$REPORT_PATH")/report.json")
-          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' "$(dirname "$REPORT_PATH")/report.json")
+          if [ ! -f "playwright-report/report.json" ]; then echo "Report file not found!" && exit 1; fi
+          TOTAL=$(jq '[.. | .status? | select(.)] | length' playwright-report/report.json)
+          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' playwright-report/report.json)
+          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' playwright-report/report.json)
+          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' playwright-report/report.json)
           echo "total=$TOTAL" >> $GITHUB_OUTPUT
           echo "passed=$PASSED" >> $GITHUB_OUTPUT
           echo "failed=$FAILED" >> $GITHUB_OUTPUT
@@ -62,24 +60,21 @@ jobs:
       - name: Prepare Report
         if: always()
         run: |
-          echo "Moving latest report..."
-          LATEST_REPORT="playwright-report/latest"
-          rm -rf "$LATEST_REPORT"
-          ln -s "$REPORT_PATH" "$LATEST_REPORT"
+          mv playwright-report/index.html report.html
           TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
           echo "REPORT_TIMESTAMP=$TIMESTAMP" >> $GITHUB_ENV
 
       - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: playwright-report
+          path: .
           retention-days: 1
 
       - name: Send Email Report
         if: always()
         run: node .github/scripts/sendreport.js
         env:
-          REPORT_URL: ${{ env.REPORT_URL }}/latest
+          REPORT_URL: ${{ env.REPORT_URL }}
           REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
           GITHUB_REF_NAME: ${{ github.ref_name }}
           SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
