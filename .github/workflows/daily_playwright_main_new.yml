@@ -52,7 +52,13 @@ jobs:
         run: |
           ls -la playwright-report/
           test -f playwright-report/report.json || echo "Report file missing"
-
+      
+      - name: Generate JSON Report
+        if: always()
+        run: |
+          npx playwright test --reporter=json --output=playwright-report || true
+          ls -la playwright-report/
+          
       - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
         with:
