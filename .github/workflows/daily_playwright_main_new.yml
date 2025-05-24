@@ -46,9 +46,7 @@ jobs:
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
         run: |
           mkdir -p playwright-report
-          npx playwright test --project=chromium \
-            --reporter=html,json=playwright-report/report.json \
-            --workers=1
+          npx playwright test --project=chromium --reporter=html,json --workers=1
 
       - name: Debug Playwright Report folder
         run: ls -la playwright-report
@@ -75,10 +73,10 @@ jobs:
             exit 0
           fi
 
-          TOTAL=$(jq '[.suites[].specs[]?.tests[]?] | length' playwright-report/report.json)
-          PASSED=$(jq '[.suites[].specs[]?.tests[]? | select(.results[].status == "passed")] | length' playwright-report/report.json)
-          FAILED=$(jq '[.suites[].specs[]?.tests[]? | select(.results[].status == "failed")] | length' playwright-report/report.json)
-          SKIPPED=$(jq '[.suites[].specs[]?.tests[]? | select(.results[].status == "skipped")] | length' playwright-report/report.json)
+          TOTAL=$(jq '[.config.specs[]?.tests[]?.results[]?.status] | length' playwright-report/report.json)
+          PASSED=$(jq '[.config.specs[]?.tests[]?.results[]? | select(.status == "passed")] | length' playwright-report/report.json)
+          FAILED=$(jq '[.config.specs[]?.tests[]?.results[]? | select(.status == "failed")] | length' playwright-report/report.json)
+          SKIPPED=$(jq '[.config.specs[]?.tests[]?.results[]? | select(.status == "skipped")] | length' playwright-report/report.json)
 
           echo "total=${TOTAL}" >> $GITHUB_OUTPUT
           echo "passed=${PASSED}" >> $GITHUB_OUTPUT
