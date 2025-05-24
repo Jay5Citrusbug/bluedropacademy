@@ -71,10 +71,11 @@ jobs:
           PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' playwright-report/report.json)
           FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' playwright-report/report.json)
           SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' playwright-report/report.json)
-          echo "total=$TOTAL" >> $GITHUB_OUTPUT
-          echo "passed=$PASSED" >> $GITHUB_OUTPUT
-          echo "failed=$FAILED" >> $GITHUB_OUTPUT
-          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+
+          echo "total=${TOTAL}" >> "$GITHUB_OUTPUT"
+          echo "passed=${PASSED}" >> "$GITHUB_OUTPUT"
+          echo "failed=${FAILED}" >> "$GITHUB_OUTPUT"
+          echo "skipped=${SKIPPED}" >> "$GITHUB_OUTPUT"
 
       - name: Prepare Report Timestamp
         if: always()
