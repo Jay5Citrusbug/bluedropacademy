@@ -59,7 +59,7 @@ jobs:
         run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
 
       - name: Debug report.json
-        run: cat playwright-report/report.json || echo "report.json not found"
+        run: cat index.html || echo "report.json not found"
 
       - name: Extract test summary
         id: summary
