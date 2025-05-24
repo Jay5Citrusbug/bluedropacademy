@@ -46,7 +46,7 @@ jobs:
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
         run: |
           mkdir -p playwright-report
-          npx playwright test --project=chromium --reporter=html,json=playwright-report/report.json --workers=1
+          npx playwright test --project=chromium --workers=1
 
       - name: Debug Playwright Report folder
         run: ls -la playwright-report
