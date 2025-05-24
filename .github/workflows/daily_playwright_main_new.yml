@@ -49,7 +49,7 @@ jobs:
           npx playwright test --project=chromium --reporter=html,json --workers=1
 
       - name: Debug Playwright Report folder
-        run: tree
+        run: ls -la
 
       - name: Generate standalone HTML report
         run: cp playwright-report/index.html playwright-report/report.html
