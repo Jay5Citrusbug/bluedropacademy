@@ -85,10 +85,18 @@ jobs:
         with:
           path: .
           retention-days: 1
+      
+      - name: Debug Outputs
+        run: |
+          echo "Total Tests: ${{ steps.summary.outputs.total }}"
+          echo "Passed Tests: ${{ steps.summary.outputs.passed }}"
+          echo "Failed Tests: ${{ steps.summary.outputs.failed }}"
+          echo "Skipped Tests: ${{ steps.summary.outputs.skipped }}"
 
       - name: Send Email Report
         if: always()
-        run: node .github/scripts/sendreport.js
+        run: node -e "console.log('Total:', process.env.TOTAL, 'Passed:', process.env.PASSED, 'Failed:', process.env.FAILED, 'Skipped:', process.env.SKIPPED)"
+        # run: node .github/scripts/sendreport.js
         env:
           REPORT_URL: ${{ env.REPORT_URL }}
           REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
