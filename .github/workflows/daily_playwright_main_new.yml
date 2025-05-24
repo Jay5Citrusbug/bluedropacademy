@@ -49,17 +49,17 @@ jobs:
           npx playwright test --project=chromium --reporter=html,json --workers=1
 
       - name: Debug Playwright Report folder
-        run: ls -la playwright-report
+        run: tree
 
       - name: Generate standalone HTML report
-        run: cp playwright-report/index.html report.html
+        run: cp playwright-report/index.html playwright-report/report.html
 
       - name: Get current date with timestamp
         id: date
         run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
 
       - name: Debug report.json
-        run: cat index.html || echo "report.json not found"
+        run: cat report.html || echo "report.json not found"
 
       - name: Extract test summary
         id: summary
