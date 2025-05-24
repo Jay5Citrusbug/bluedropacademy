@@ -44,7 +44,7 @@ jobs:
         env:
           URL_ADMIN: https://chat.bluedropacademy.com/admin
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
-        run: 
+        run: |
           mkdir -p playwright-report
           npx playwright test --project=chromium --reporter=html,json --workers=1
 
