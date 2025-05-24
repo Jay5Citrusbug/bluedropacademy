@@ -8,7 +8,7 @@ on:
 env:
   REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/report.html
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-  TO_EMAIL: jay5.citrusbug@gmail.com
+  TO_EMAIL: nikunj.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
 
 jobs:
