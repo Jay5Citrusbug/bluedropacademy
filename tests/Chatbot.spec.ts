@@ -1,12 +1,11 @@
-import { BrowserContext, Page, test, expect } from '@playwright/test';
-import { ChatbotLoginPage } from './Pages/LoginChatbot';
-import { FillPersonalInfopage } from './Pages/FormPage';
-import { testUserData } from './Utils/testData';
+import { BrowserContext, Page, test } from '@playwright/test';
 import { adminCredentials, chatbotCredentials } from './Config/credentials';
 import { AdminPage } from './Pages/AdminPage';
 import { chatbotPage } from './Pages/chatbotPage';
+import { FillPersonalInfopage } from './Pages/FormPage';
 import { HamburgerMenuPage } from './Pages/HamburgerMenuPage';
-import { MenuLocator } from './Locators/HamburgerMenuLocator';
+import { ChatbotLoginPage } from './Pages/LoginChatbot';
+import { testUserData } from './Utils/testData';
 
 
 let page: Page;
