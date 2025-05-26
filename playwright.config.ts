@@ -35,8 +35,8 @@ export default defineConfig({
   // // 
   reporter: [
     ['list'],                   // console output with test names & status
-    ['json', { outputFile: 'playwright-report/report.json' }],
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ['json', { outputFile: 'playwright-report/report.json' }],
   ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -57,17 +57,18 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-      testMatch: ['**/tests/!(No_Activity).spec.ts'], // all tests except inactivity
+       name: 'chromium',
+      use: { browserName: 'chromium' },
+     // testMatch: ['**/tests/!(No_Activity).spec.ts'], // all tests except inactivity
+
 
     },
 
-    {
-      name: 'long-wait',
-      timeout: 80_000 , // 1 minutes and 20 seconds
-      testMatch: ['**/tests/No_Activity.spec.ts'], // only the inactivity test
-    },
+    // {
+    //   name: 'long-wait',
+    //   timeout: 80_000 , // 1 minutes and 20 seconds
+    //   testMatch: ['**/tests/No_Activity.spec.ts'], // only the inactivity test
+    // },
 
     // {
     //   name: 'firefox',

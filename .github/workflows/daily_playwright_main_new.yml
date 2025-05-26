@@ -1,5 +1,7 @@
 name: Playwright Tests with Email Reports 
 on:
+  schedule:
+    - cron: '*/15 * * * *'   # Every 15 minutes
  
   push:
     branches: ['main']
@@ -44,7 +46,7 @@ jobs:
         env:
           URL_ADMIN: https://chat.bluedropacademy.com/admin
           URL_CHATBOT: https://www.bluedropacademy.com/chatbot
-        run: npx playwright test --project=chromium --reporter=html,json --workers=1
+        run: npx playwright test --project=chromium --workers=1
 
       - name: Debug Playwright Report folder
         run: ls -la playwright-report

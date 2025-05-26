@@ -55,26 +55,26 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
       await chatbotscreen.verifyConfirmationElements();
     });
 
-    // test('TC_02: 🧠 Initial chatbot message is displayed', async () => {
-    //   await chatbotscreen.InitialbotMessage();
-    // });
+    test('TC_02: 🧠 Initial chatbot message is displayed', async () => {
+      await chatbotscreen.InitialbotMessage();
+    });
 
 
-    // test('TC_03: 🚫 Predefined buttons are not active', async () => {
-    //   await chatbotscreen.PredefinebuttonNotActive();
-    // });
+    test('TC_03: 🚫 Predefined buttons are not active', async () => {
+      await chatbotscreen.PredefinebuttonNotActive();
+    });
 
-    // test('TC_04: 🚫 Submit button is disabled initially', async () => {
-    //   await chatbotscreen.SubmitbtnNotActive();
-    // });
+    test('TC_04: 🚫 Submit button is disabled initially', async () => {
+      await chatbotscreen.SubmitbtnNotActive();
+    });
 
-    // test('TC_05: ✅ Submit button is enabled after input', async () => {
-    //   await chatbotscreen.SubmitbtnActive();
-    // });
+    test('TC_05: ✅ Submit button is enabled after input', async () => {
+      await chatbotscreen.SubmitbtnActive();
+    });
 
-    // test('TC_06: 📤 Submit query message', async ({}, testInfo) => {
-    //   await chatbotscreen.SubmitQuery(testInfo);
-    // });
+    test('TC_06: 📤 Submit query message', async ({}, testInfo) => {
+      await chatbotscreen.SubmitQuery(testInfo);
+    });
 
 //     test('TC_07: 🔽 Scroll to bottom of chat', async () => {
 //       await chatbotscreen.scrollToBottom();
