@@ -65,13 +65,14 @@ async SearchHistory(query: string) {
 
   async NoSearchHistory() {
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
-    const randomQuery = generateRandomQuestion();
+      const randomSearchText = faker.lorem.words(2); // e.g., "quick fox"
+
     await this.page.evaluate(() => {
   window.scrollTo(0, 0);
 });
-    console.log(`🔍 Searching for non-existent history: "${randomQuery}"`);
+  console.log(`🔎 Using random search text: "${randomSearchText}"`);
     await frameLocator.locator(MenuLocator.Searchbar).clear();
-    await frameLocator.locator(MenuLocator.Searchbar).fill(randomQuery);
+    await frameLocator.locator(MenuLocator.Searchbar).fill(randomSearchText);
     await this.page.waitForTimeout(2000); // Optional wait for results
     await expect(frameLocator.getByText('לא נמצאה שיחה')).toBeVisible();
   

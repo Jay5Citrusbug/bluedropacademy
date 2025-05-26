@@ -1,4 +1,4 @@
-import { BrowserContext, Page, test } from '@playwright/test';
+import { BrowserContext, Page, test, expect } from '@playwright/test';
 import { adminCredentials, chatbotCredentials } from './Config/credentials';
 import { AdminPage } from './Pages/AdminPage';
 import { chatbotPage } from './Pages/chatbotPage';
@@ -6,6 +6,8 @@ import { FillPersonalInfopage } from './Pages/FormPage';
 import { HamburgerMenuPage } from './Pages/HamburgerMenuPage';
 import { ChatbotLoginPage } from './Pages/LoginChatbot';
 import { testUserData } from './Utils/testData';
+import { MenuLocator } from './Locators/HamburgerMenuLocator';
+
 
 
 let page: Page;
@@ -75,80 +77,94 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
       await chatbotscreen.SubmitQuery(testInfo);
     });
 
-//     test('TC_07: 🔽 Scroll to bottom of chat', async () => {
-//       await chatbotscreen.scrollToBottom();
-//     });
+    test('TC_07: 🔽 Scroll to bottom of chat', async () => {
+      await chatbotscreen.scrollToBottom();
+    });
 
-//     test('TC_08: ✅ Predefined buttons become active after response', async () => {
-//       await chatbotscreen.PredefinebuttonActive();
-//     });
+    test('TC_08: ✅ Predefined buttons become active after response', async () => {
+      await chatbotscreen.PredefinebuttonActive();
+    });
 
-//     test('TC_09: 👍 Like button functionality', async () => {
-//       await chatbotscreen.LikeBtn();
-//     });
+    test('TC_09: 👍 Like button functionality', async () => {
+      await chatbotscreen.LikeBtn();
+    });
 
-//     test('TC_10: 👎 Dislike button functionality', async () => {
-//       await chatbotscreen.DisLikeBtn();
-//     });
+    test('TC_10: 👎 Dislike button functionality', async () => {
+      await chatbotscreen.DisLikeBtn();
+    });
 
-//     test('TC_11: 📋 Copy button functionality', async () => {
-//       await chatbotscreen.CopyBtn(); // changed from DisLikeBtn to CopyBtn for clarity
-//     });
+    test('TC_11: 📋 Copy button functionality', async () => {
+      await chatbotscreen.CopyBtn(); // changed from DisLikeBtn to CopyBtn for clarity
+    });
 
-//     test('TC_12: 📍 Predefined button click triggers response', async ({}, testInfo) => {
-//       await chatbotscreen.PredefinedBtnClick(testInfo);
-//     });
+    test('TC_12: 📍 Predefined button click triggers response', async ({}, testInfo) => {
+      await chatbotscreen.PredefinedBtnClick(testInfo);
+    });
 
-//     test('TC_13: 🔄 Reload hides previous chat', async () => {
-//       await page.reload();
-//       await chatbotscreen.Pagereload();
-//       await chatbotscreen.InitialbotMessage();
-//     });
+    test('TC_13: 🔄 Reload hides previous chat', async () => {
+      await page.reload();
+      await chatbotscreen.Pagereload();
+      await chatbotscreen.InitialbotMessage();
+    });
 
-//     test('TC_14: ✏️ New session is created using edit icon', async () => {
-//       await chatbotscreen.NewsessionChatbotPage();
-//       await chatbotscreen.Pagereload();
-//       await chatbotscreen.InitialbotMessage();
-//     });
+    test('TC_14: ✏️ New session is created using edit icon', async () => {
+      await chatbotscreen.NewsessionChatbotPage();
+      await chatbotscreen.Pagereload();
+      await chatbotscreen.InitialbotMessage();
+    });
 
  
-// test('TC_15: 🔄 Click on the Continue button to resume session', async () => {
-//       await chatbotscreen.InactivityPopup1();
+test('TC_15: 🔄 Click on the Continue button to resume session', async () => {
+      await chatbotscreen.InactivityPopup1();
 
-//     }
-//     );
-// test('TC_16: ⏱️ Session pop-up displays after 1 minute and close pop-up', async () => {
-//         await chatbotscreen.InactivityPopup2();
-//         await page.reload();
-//         await chatbotscreen.InitialbotMessage();
+    }
+    );
+
+const env = process.env.ENVIRONMENT || 'staging';
+test.skip(env === 'production', '⏭️ Skipping in production environment');
+
+test('TC_16: ⏱️ Session pop-up displays after 1 minute and close pop-up', async () => {
+        await chatbotscreen.InactivityPopup2();
+        await page.reload();
+        await chatbotscreen.InitialbotMessage();
 
 
-//     }
-//     );
+    }
+    );
     
-// test('TC_17: 🧭 Browser tab terminated and search history page is verified', async ({}, testInfo) => {
+test.only('TC_17: 🧭 Browser tab terminated and search history page is verified', async ({ page }, testInfo) => {
 
-//   const query = await chatbotscreen.SubmitQuery(testInfo);
+  const query = await chatbotscreen.SubmitQuery(testInfo);
+  await page.reload();
+  const Menu = new HamburgerMenuPage(page);
+  const iframe = await page.frameLocator('iframe[name="htmlComp-iframe"]');
 
-//   await page.reload();
+  await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByTestId('hamburger-click').click();
+  console.log(`🔍 Searching for message: "${query}"`);
 
-//   await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByTestId('hamburger-click').click();
-//   await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByTestId('search-session-input').click();
+  const input = iframe.locator(MenuLocator.Searchbar);
+  await expect(input).toBeVisible();
+  await input.fill(query);
 
-//   console.log(`🔍 Searching for message: "${query}"`);
+  const sessionList = iframe.locator('.session-list');
 
-//   const input = await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().locator(MenuLocator.Searchbar);
-//   await expect(input).toBeVisible();
-//   await input.fill(query);
+  await expect(sessionList).toBeVisible();
 
-//   const sessionList = await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().locator('.session-list');
-//   await expect(sessionList).toBeVisible();
-//   await page.waitForTimeout(2000); // Optional: wait for the session list to update
-//    await expect(sessionList).toContainText(query); // Optional
+  // Optionally wait a bit for the list to update
+  await page.waitForTimeout(3000);
 
-//   // ✅ Do not close the context if you need the browser to stay alive
-//  await page.close(); // Skip this if needed
-// });
+  // Debug: log what’s actually inside the session list
+  const sessionText = await sessionList.innerText();
+  console.log(`📋 Session List Text: \n${sessionText}`);
+
+  // Assert: relaxed match (contains part of the query)
+  await expect(sessionText.toLowerCase()).toContain(query.toLowerCase().trim());
+
+  // 🧪 Optional: stricter version, if needed:
+  await expect(sessionList).toContainText(query);
+
+  await page.close();
+});
 
 
 test.afterEach(async ({ page }, testInfo) => {

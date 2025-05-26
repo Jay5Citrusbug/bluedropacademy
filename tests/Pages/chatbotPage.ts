@@ -192,7 +192,14 @@ async InactivityPopup1() {
   const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
   console.log('⏳ Waiting for inactivity popup to appear...');
   const inactivityPopup = frameLocator.locator('role=heading[name="נראה שלא היית פעיל לאחרונה"]');
-  await expect(inactivityPopup).toBeVisible({ timeout: 70000  });
+  
+  const env = process.env.ENVIRONMENT || 'staging';
+  // staging = 70,000 ms (1 min 10 sec), production = 610,000 ms (10 min 10 sec)
+  const timeout = env === 'production' ? 610_000 : 70_000;
+
+  console.log(`⏳ Waiting for inactivity popup in ${env} with timeout ${timeout / 1000}s`);
+
+  await expect(inactivityPopup).toBeVisible({ timeout });
   await this.page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByText('היי! לא ראינו פעילות ב-10').isVisible();
   await this.page.locator('.anticon.anticon-close.ant-modal-close-icon').isVisible();
   console.log('✅ Inactivity popup is visible.');
@@ -200,6 +207,8 @@ async InactivityPopup1() {
   console.log('🔄 Clicking "Continue Chat" button...');
 
 }
+
+
 async InactivityPopup2(){
 
  const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);

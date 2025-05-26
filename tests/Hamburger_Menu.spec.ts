@@ -15,7 +15,7 @@ let adminPage: AdminPage;
 let Menu: HamburgerMenuPage;
 let chatbotscreen: chatbotPage;
 
-test.describe.skip('BlueDrop Hamburgermenu Test Suite', () => {
+test.describe('BlueDrop Hamburgermenu Test Suite', () => {
 
   test.beforeAll(async ({ browser }) => {
     const adminContext = await browser.newContext();
@@ -43,7 +43,7 @@ test.describe.skip('BlueDrop Hamburgermenu Test Suite', () => {
     await context.close();
   });
 
-  test.describe.skip('Hamburger Menu & 📜 Chat History', () => {
+  test.describe('Hamburger Menu & 📜 Chat History', () => {
 
   test('TC_18 🔍 Search in chat history', async ({}, testInfo) => {
   console.log('✅ TC_18: Search in chat history');
