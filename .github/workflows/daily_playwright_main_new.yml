@@ -8,7 +8,7 @@ on:
 env:
   REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/report.html
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-  TO_EMAIL: nikunj.citrusbug@gmail.com,jay5.citrusbug@gmail.com
+  TO_EMAIL: jay5.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
 
 jobs:
@@ -62,7 +62,6 @@ jobs:
       - name: Extract test summary
         id: summary
         continue-on-error: true
-
         run: |
           if [ ! -f "playwright-report/report.json" ]; then
             echo "Report file not found!"
@@ -73,15 +72,16 @@ jobs:
             exit 0
           fi
 
-          TOTAL=$(jq '[.config.specs[]?.tests[]?.results[]?.status] | length' playwright-report/report.json)
-          PASSED=$(jq '[.config.specs[]?.tests[]?.results[]? | select(.status == "passed")] | length' playwright-report/report.json)
-          FAILED=$(jq '[.config.specs[]?.tests[]?.results[]? | select(.status == "failed")] | length' playwright-report/report.json)
-          SKIPPED=$(jq '[.config.specs[]?.tests[]?.results[]? | select(.status == "skipped")] | length' playwright-report/report.json)
+          TOTAL=$(jq '.stats.expected // 0' playwright-report/report.json)
+          SKIPPED=$(jq '.stats.skipped // 0' playwright-report/report.json)
+          FAILED=$(jq '.stats.unexpected // 0' playwright-report/report.json)
+          PASSED=$(( TOTAL - FAILED - SKIPPED ))
 
           echo "total=${TOTAL}" >> $GITHUB_OUTPUT
           echo "passed=${PASSED}" >> $GITHUB_OUTPUT
           echo "failed=${FAILED}" >> $GITHUB_OUTPUT
           echo "skipped=${SKIPPED}" >> $GITHUB_OUTPUT
+
 
       - name: Prepare Report Timestamp
         if: always()
