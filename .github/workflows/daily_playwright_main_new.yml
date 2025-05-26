@@ -1,8 +1,6 @@
 name: Playwright Tests with Email Reports 
 on:
-  schedule:
-    - cron: '*/15 * * * *'   # Every 15 minutes
- 
+  
   push:
     branches: ['main']
   workflow_dispatch:
@@ -52,17 +50,19 @@ jobs:
         run: ls -la playwright-report
 
       - name: Generate standalone HTML report
-        run: cp playwright-report/index.html playwright-report/report.html
+        run: cp playwright-report/index.html playwright-report/report.html || true
 
       - name: Get current date with timestamp
         id: date
         run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
 
       - name: Debug report.json
-        run: cat report.html || echo "report.json not found"
+        run: cat playwright-report/report.json
 
       - name: Extract test summary
         id: summary
+        continue-on-error: true
+
         run: |
           if [ ! -f "playwright-report/report.json" ]; then
             echo "Report file not found!"
@@ -90,7 +90,8 @@ jobs:
       - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          name: playwright-html-report
+          path: playwright-report
           retention-days: 1
       
       - name: Debug Outputs
@@ -102,8 +103,8 @@ jobs:
 
       - name: Send Email Report
         if: always()
-        run: node -e "console.log('Total:', process.env.TOTAL, 'Passed:', process.env.PASSED, 'Failed:', process.env.FAILED, 'Skipped:', process.env.SKIPPED)"
-        # run: node .github/scripts/sendreport.js
+        #run: node -e "console.log('Total:', process.env.TOTAL, 'Passed:', process.env.PASSED, 'Failed:', process.env.FAILED, 'Skipped:', process.env.SKIPPED)"
+        run: node .github/scripts/sendreport.js
         env:
           REPORT_URL: ${{ env.REPORT_URL }}
           REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
@@ -124,6 +125,7 @@ jobs:
 
     permissions:
       pages: write
+      contents: read
       id-token: write
 
     steps:
