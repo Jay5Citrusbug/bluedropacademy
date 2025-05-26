@@ -132,7 +132,7 @@ test('TC_16: ⏱️ Session pop-up displays after 1 minute and close pop-up', as
     }
     );
     
-test.only('TC_17: 🧭 Browser tab terminated and search history page is verified', async ({ page }, testInfo) => {
+test('TC_17: 🧭 Browser tab terminated and search history page is verified', async ({ page }, testInfo) => {
 
   const query = await chatbotscreen.SubmitQuery(testInfo);
   await page.reload();
