@@ -4,7 +4,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  
+
 on:
   workflow_dispatch:
   push:
@@ -221,6 +221,8 @@ jobs:
   deploy-all-reports:
     needs: [run-tests-staging, run-tests-production]
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     name: Deploy Consolidated Reports to GitHub Pages
     steps:
       - uses: actions/checkout@v4
@@ -241,6 +243,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: all-reports
-        
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
