@@ -1,4 +1,3 @@
-# .github/workflows/unified-report.yml
 name: Playwright Tests - Staging and Production
 
 on:
@@ -237,3 +236,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: all-reports
+        
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
