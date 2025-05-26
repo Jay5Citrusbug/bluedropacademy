@@ -1,19 +1,22 @@
-name: Playwright Tests with Email Reports 
+# unified-report.yml
+name: Playwright Tests - Staging and Production
 on:
-  
-  push:
-    branches: ['main1']
   workflow_dispatch:
+  push:
+    branches: ['main']
 
 env:
-  REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/report.html
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
   TO_EMAIL: jay5.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
 
 jobs:
-  test-and-report:
+  run-tests:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        environment: [staging, production]
+    name: Run Playwright Tests - ${{ matrix.environment }}
     steps:
       - uses: actions/checkout@v4
 
@@ -36,14 +39,20 @@ jobs:
         run: |
           echo "Cleaning previous Playwright report..."
           rm -rf playwright-report/ report.html test-log.txt || true
-          
+
+      - name: Set environment URLs
+        run: |
+          if [[ "${{ matrix.environment }}" == "staging" ]]; then
+            echo "URL_ADMIN=https://staging.chat.bluedropacademy.com/admin" >> $GITHUB_ENV
+            echo "URL_CHATBOT=https://www.staging.bluedropacademy.com/chatbot" >> $GITHUB_ENV
+          else
+            echo "URL_ADMIN=https://chat.bluedropacademy.com/admin" >> $GITHUB_ENV
+            echo "URL_CHATBOT=https://www.bluedropacademy.com/chatbot" >> $GITHUB_ENV
+          fi
 
       - name: Run Playwright Tests
         id: run-tests
         continue-on-error: true
-        env:
-          URL_ADMIN: https://chat.bluedropacademy.com/admin
-          URL_CHATBOT: https://www.bluedropacademy.com/chatbot
         run: npx playwright test --project=chromium --workers=1
 
       - name: Debug Playwright Report folder
@@ -54,10 +63,7 @@ jobs:
 
       - name: Get current date with timestamp
         id: date
-        run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
-
-      - name: Debug report.json
-        run: cat playwright-report/report.json
+        run: echo "date=$(date '+%Y-%m-%d')-$(shuf -i 100-999 -n 1)" >> $GITHUB_OUTPUT
 
       - name: Extract test summary
         id: summary
@@ -82,31 +88,24 @@ jobs:
           echo "skipped=${SKIPPED}" >> $GITHUB_OUTPUT
           echo "total=${TOTAL}" >> $GITHUB_OUTPUT
 
-
       - name: Prepare Report Timestamp
-        if: always()
         run: echo "REPORT_TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
 
-      - name: Upload Report Artifact
+      - name: Move report to environment/date directory
+        run: |
+          mkdir -p all-reports/${{ matrix.environment }}/${{ steps.date.outputs.date }}
+          cp -r playwright-report/* all-reports/${{ matrix.environment }}/${{ steps.date.outputs.date }}/
+
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages  # This must match what deploy-pages expects
-          path: playwright-report
-          retention-days: 1
-      
-      - name: Debug Outputs
-        run: |
-          echo "Total Tests: ${{ steps.summary.outputs.total }}"
-          echo "Passed Tests: ${{ steps.summary.outputs.passed }}"
-          echo "Failed Tests: ${{ steps.summary.outputs.failed }}"
-          echo "Skipped Tests: ${{ steps.summary.outputs.skipped }}"
+          path: all-reports
 
       - name: Send Email Report
         if: always()
-        #run: node -e "console.log('Total:', process.env.TOTAL, 'Passed:', process.env.PASSED, 'Failed:', process.env.FAILED, 'Skipped:', process.env.SKIPPED)"
         run: node .github/scripts/sendreport.js
         env:
-          REPORT_URL: ${{ env.REPORT_URL }}
+          REPORT_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/all-reports/${{ matrix.environment }}/${{ steps.date.outputs.date }}/report.html
           REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
           GITHUB_REF_NAME: ${{ github.ref_name }}
           SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
@@ -117,17 +116,16 @@ jobs:
           FAILED: ${{ steps.summary.outputs.failed }}
           SKIPPED: ${{ steps.summary.outputs.skipped }}
           GITHUB_WORKSPACE: ${{ github.workspace }}
-  deploy:
-    needs: test-and-report
+
+  deploy-pages:
+    needs: run-tests
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     environment:
       name: github-pages
-
-    permissions:
-      pages: write
-      contents: read
-      id-token: write
-
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
