@@ -10,7 +10,7 @@ on:
 env:
   REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/report.html
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-  TO_EMAIL: jay5.citrusbug@gmail.com
+  TO_EMAIL: nikunj.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
 
 jobs:
@@ -52,11 +52,14 @@ jobs:
         run: ls -la playwright-report
 
       - name: Generate standalone HTML report
-        run: cp playwright-report/index.html report.html
+        run: cp playwright-report/index.html playwright-report/report.html
 
       - name: Get current date with timestamp
         id: date
         run: echo "date=$(date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
+
+      - name: Debug report.json
+        run: cat report.html || echo "report.json not found"
 
       - name: Extract test summary
         id: summary
@@ -69,14 +72,16 @@ jobs:
             echo "skipped=0" >> $GITHUB_OUTPUT
             exit 0
           fi
-          TOTAL=$(jq '[.. | .status? | select(.)] | length' playwright-report/report.json)
-          PASSED=$(jq '[.. | .status? | select(. == "passed")] | length' playwright-report/report.json)
-          FAILED=$(jq '[.. | .status? | select(. == "failed")] | length' playwright-report/report.json)
-          SKIPPED=$(jq '[.. | .status? | select(. == "skipped")] | length' playwright-report/report.json)
-          echo "total=$TOTAL" >> $GITHUB_OUTPUT
-          echo "passed=$PASSED" >> $GITHUB_OUTPUT
-          echo "failed=$FAILED" >> $GITHUB_OUTPUT
-          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+
+          TOTAL=$(jq '[.config.specs[]?.tests[]?.results[]?.status] | length' playwright-report/report.json)
+          PASSED=$(jq '[.config.specs[]?.tests[]?.results[]? | select(.status == "passed")] | length' playwright-report/report.json)
+          FAILED=$(jq '[.config.specs[]?.tests[]?.results[]? | select(.status == "failed")] | length' playwright-report/report.json)
+          SKIPPED=$(jq '[.config.specs[]?.tests[]?.results[]? | select(.status == "skipped")] | length' playwright-report/report.json)
+
+          echo "total=${TOTAL}" >> $GITHUB_OUTPUT
+          echo "passed=${PASSED}" >> $GITHUB_OUTPUT
+          echo "failed=${FAILED}" >> $GITHUB_OUTPUT
+          echo "skipped=${SKIPPED}" >> $GITHUB_OUTPUT
 
       - name: Prepare Report Timestamp
         if: always()
@@ -87,10 +92,18 @@ jobs:
         with:
           path: .
           retention-days: 1
+      
+      - name: Debug Outputs
+        run: |
+          echo "Total Tests: ${{ steps.summary.outputs.total }}"
+          echo "Passed Tests: ${{ steps.summary.outputs.passed }}"
+          echo "Failed Tests: ${{ steps.summary.outputs.failed }}"
+          echo "Skipped Tests: ${{ steps.summary.outputs.skipped }}"
 
       - name: Send Email Report
         if: always()
-        run: node .github/scripts/sendreport.js
+        run: node -e "console.log('Total:', process.env.TOTAL, 'Passed:', process.env.PASSED, 'Failed:', process.env.FAILED, 'Skipped:', process.env.SKIPPED)"
+        # run: node .github/scripts/sendreport.js
         env:
           REPORT_URL: ${{ env.REPORT_URL }}
           REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
