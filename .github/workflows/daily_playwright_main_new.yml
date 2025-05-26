@@ -8,7 +8,7 @@ on:
 env:
   REPORT_URL: https://jay5Citrusbug.github.io/bluedropacademy/report.html
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-  TO_EMAIL: nikunj.citrusbug@gmail.com
+  TO_EMAIL: nikunj.citrusbug@gmail.com,jay5.citrusbug@gmail.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
 
 jobs:
@@ -90,7 +90,7 @@ jobs:
       - name: Upload Report Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: playwright-html-report
+          name: github-pages  # This must match what deploy-pages expects
           path: playwright-report
           retention-days: 1
       
