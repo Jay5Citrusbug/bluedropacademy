@@ -43,8 +43,8 @@ jobs:
       - name: Set environment URLs
         run: |
           if [[ "${{ matrix.environment }}" == "staging" ]]; then
-            echo "URL_ADMIN=https://staging.chat.bluedropacademy.com/admin" >> $GITHUB_ENV
-            echo "URL_CHATBOT=https://www.staging.bluedropacademy.com/chatbot" >> $GITHUB_ENV
+            echo "URL_ADMIN=https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site" >> $GITHUB_ENV
+            echo "URL_CHATBOT=https://stg-chat.bluedropacademy.com/admin" >> $GITHUB_ENV
           else
             echo "URL_ADMIN=https://chat.bluedropacademy.com/admin" >> $GITHUB_ENV
             echo "URL_CHATBOT=https://www.bluedropacademy.com/chatbot" >> $GITHUB_ENV
@@ -96,10 +96,11 @@ jobs:
           mkdir -p all-reports/${{ matrix.environment }}/${{ steps.date.outputs.date }}
           cp -r playwright-report/* all-reports/${{ matrix.environment }}/${{ steps.date.outputs.date }}/
 
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload Environment Report as Artifact
+        uses: actions/upload-artifact@v4
         with:
-          path: all-reports
+          name: report-${{ matrix.environment }}
+          path: all-reports/${{ matrix.environment }}
 
       - name: Send Email Report
         if: always()
@@ -117,15 +118,26 @@ jobs:
           SKIPPED: ${{ steps.summary.outputs.skipped }}
           GITHUB_WORKSPACE: ${{ github.workspace }}
 
-  deploy-pages:
-    needs: run-tests
+  deploy-all-reports:
+    needs: test-and-report
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
     steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      - uses: actions/checkout@v4
+
+      - name: Download Staging Report
+        uses: actions/download-artifact@v4
+        with:
+          name: report-staging
+          path: all-reports/staging
+
+      - name: Download Production Report
+        uses: actions/download-artifact@v4
+        with:
+          name: report-production
+          path: all-reports/production
+
+      - name: Upload All Reports to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: all-reports
+
