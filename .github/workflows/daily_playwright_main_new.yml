@@ -72,15 +72,15 @@ jobs:
             exit 0
           fi
 
-          TOTAL=$(jq '.stats.expected // 0' playwright-report/report.json)
-          SKIPPED=$(jq '.stats.skipped // 0' playwright-report/report.json)
+          PASSED=$(jq '.stats.expected // 0' playwright-report/report.json)
           FAILED=$(jq '.stats.unexpected // 0' playwright-report/report.json)
-          PASSED=$(( TOTAL - FAILED - SKIPPED ))
+          SKIPPED=$(jq '.stats.skipped // 0' playwright-report/report.json)
+          TOTAL=$(( PASSED + FAILED + SKIPPED ))
 
-          echo "total=${TOTAL}" >> $GITHUB_OUTPUT
           echo "passed=${PASSED}" >> $GITHUB_OUTPUT
           echo "failed=${FAILED}" >> $GITHUB_OUTPUT
           echo "skipped=${SKIPPED}" >> $GITHUB_OUTPUT
+          echo "total=${TOTAL}" >> $GITHUB_OUTPUT
 
 
       - name: Prepare Report Timestamp
