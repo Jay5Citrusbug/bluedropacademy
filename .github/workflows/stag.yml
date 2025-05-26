@@ -1,5 +1,10 @@
 name: Playwright Tests - Staging and Production
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  
 on:
   workflow_dispatch:
   push:
@@ -238,4 +243,4 @@ jobs:
           path: all-reports
         
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
