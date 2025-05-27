@@ -91,12 +91,7 @@
                   "tests": [
                     {
                       "timeout": 180000,
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: 🌈 סלט גזר סגול: איך להפוך ירקות פשוטים למופע קרקס קולינרי! 🥕💜\nדמיין שאתה נכנס למטבח שלך, וקבוצת גזרים סגולים יושבת שם כמו אבני חן סודיות שחיכו רק לך. כן, גזר סגול הוא לא סתם עוד ירק – הוא כוכב על צבעוני שמגיע לקשט את הצלחת שלך! ✨ מוכן להתחיל? בוא נצא לדרך עם מתכון לסלט שיעשה מסיבה לחושים שלך.\n\nשלב 1: מה בתפריט? מצרכים 🛍️\nלפני שאתה שוטף את הידיים ונכנס לפעולה, וודא שיש לך את כל המרכיבים:\n\n4-5 גזרים סגולים (אם אין לך... טוב, תמיד אפשר לערבב עם כתום, אבל היי – בוא נשקיע בצבעים!)\n3 כפות שמן זית כתית מעולה (כזה שיביא טעם אגוזי ומפנק לסלט)\n2 כפות מיץ לימון טרי 🍋\n1 כף דבש טבעי או מייפל אמיתי 🍯\nמעט מלח ים וגסיס פלפל שחור גרוס\nחופן אגוזים קלויים (אגוזי מלך או שקדים פרוסים יעבדו נהדר!)\nחופן חמוציות מיובשות (לקצת מתיקות קופצנית 💃)\nאפשרות לשדרוג: מעט גבינת פטה מפוררת או גבינת עיזים רכה 🧀\n\n\nשלב 2: ניקיון וגילופים 🧼🔪\nהסיפור מתחיל בגזרים עצמם.\n\nשטוף היטב את הגזרים הסגולים תחת מים זורמים. אם הם אורגניים, אתה יכול להשאיר להם את הקליפה בשביל הטעם והבריאות.\nקלף בעזרת קולפן כמה שכבות עד שהגזרים נראים נוצצים ומוכנים לזרוח.\nעכשיו מגיע ההחלטה הגדולה: האם לחתוך אותם לרצועות דקות בעזרת פומפייה/מנדולינה או לקלף אותם לרצועות ארוכות עם הקולפן? שתי השיטות יעבדו – זה תלוי במצב הרוח שלך.\n\n💡 טיפ חלומי: אם השתמשת בקולפן כדי ליצור רצועות ארוכות וסרטים של גזר, הסלט שלך ייראה כמו יצירת אמנות במוזיאון!\n\nשלב 3: מרינדה קסומה 🌟\nפה הקסם מתחיל באמת:\n\nבקערה קטנה, ערבב את שמן הזית, מיץ הלימון והדבש (או המייפל).\nתבל עם מלח ופלפל לפי הטעם וטרוף הכל עד שהמרכיבים מתחברים לרוטב חלק ומבריק.\n\n🎩 טריק קטן: רוצה לשדרג עוד יותר? הוסף טיפונת גרידת לימון או חומץ בלסמי לתערובת!\n\nשלב 4: ערבוב עם אהבה 💕🥗\nעכשיו הגיע הזמן להכניס את הגזרים למסיבה:\n\nשים את רצועות הגזר בקערה גדולה.\nשפוך מעליהם את הרוטב בזהירות תוך כדי ערבוב עדין (עם כפות עץ או הידיים – כן, למה לא להרגיש קצת יצירתי?).\nהוסף חמוציות מיובשות ואגוזים קלויים מעל – הם יהפכו כל ביס לקרנבל קטן בפה.\n\n\nשלב 5: טאצ' אחרון 🎉✨\nאם אתה באמת רוצה להרשים – פורר מעט גבינת פטה מעל כל העסק הזה או הוסף כמה עלי נענע טריים לקישוט ורעננות.\n\nשלב 6: צלחת וטעם 🌟🍴\nעכשיו מגיע החלק הכי מספק! העבר לצלחת יפה וצור קומפוזיציה צבעונית שמתאימה לאינסטגרם 📸 (#SaladGoals). טעם ותראה איך כל המרכיבים משתלבים בצורה מדויקת – המתיקות מהדבש והחמוציות, החמצמצות מהלימון והריח האדמתי של הגזר הסגול... פשוט חגיגה בפה!\n\n🌟 ועכשיו נשאר רק דבר אחד לעשות... תהנה מהיצירה שלך! 🌟"
-                        }
-                      ],
+                      "annotations": [],
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
@@ -104,23 +99,34 @@
                         {
                           "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "timedOut",
-                          "duration": 180641,
+                          "status": "failed",
+                          "duration": 14228,
                           "error": {
-                            "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m",
-                            "stack": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m"
+                            "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByTestId('hamburger-click')\u001b[22m\n",
+                            "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByTestId('hamburger-click')\u001b[22m\n\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:142:102",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                              "column": 102,
+                              "line": 142
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 140 |\u001b[39m \u001b[36mawait\u001b[39m frame\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mlocator(\u001b[32m'button[data-testid=\"hamburger-click\"]'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m \u001b[36mawait\u001b[39m  console\u001b[33m.\u001b[39mlog(\u001b[32m'Visible Hamburger Menu'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m.\u001b[39mcontentFrame()\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'hamburger-click'\u001b[39m)\u001b[33m.\u001b[39mclick({force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m\n \u001b[90m 144 |\u001b[39m   \u001b[90m// const query = await chatbotscreen.SubmitQuery(testInfo);\u001b[39m\n \u001b[90m 145 |\u001b[39m   \u001b[90m// await page.reload();\u001b[39m\u001b[0m"
                           },
                           "errors": [
-                            {
-                              "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m"
-                            },
                             {
                               "location": {
                                 "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
                                 "column": 102,
                                 "line": 142
                               },
-                              "message": "Error: locator.click: Test timeout of 180000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByTestId('hamburger-click')\u001b[22m\n\n\n\u001b[0m \u001b[90m 140 |\u001b[39m   \u001b[36mconst\u001b[39m iframe \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mframeLocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m.\u001b[39mcontentFrame()\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'hamburger-click'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`🔍 Searching for message: \"${query}\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 144 |\u001b[39m\n \u001b[90m 145 |\u001b[39m   \u001b[36mconst\u001b[39m input \u001b[33m=\u001b[39m iframe\u001b[33m.\u001b[39mlocator(\u001b[33mMenuLocator\u001b[39m\u001b[33m.\u001b[39m\u001b[33mSearchbar\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:142:102\u001b[22m"
+                              "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByTestId('hamburger-click')\u001b[22m\n\n\n\u001b[0m \u001b[90m 140 |\u001b[39m \u001b[36mawait\u001b[39m frame\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mlocator(\u001b[32m'button[data-testid=\"hamburger-click\"]'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m \u001b[36mawait\u001b[39m  console\u001b[33m.\u001b[39mlog(\u001b[32m'Visible Hamburger Menu'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m.\u001b[39mcontentFrame()\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'hamburger-click'\u001b[39m)\u001b[33m.\u001b[39mclick({force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m\n \u001b[90m 144 |\u001b[39m   \u001b[90m// const query = await chatbotscreen.SubmitQuery(testInfo);\u001b[39m\n \u001b[90m 145 |\u001b[39m   \u001b[90m// await page.reload();\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:142:102\u001b[22m"
+                            },
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                                "column": 16,
+                                "line": 180
+                              },
+                              "message": "Error: page.screenshot: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 178 |\u001b[39m   \u001b[36mif\u001b[39m (testInfo\u001b[33m.\u001b[39mstatus \u001b[33m!==\u001b[39m testInfo\u001b[33m.\u001b[39mexpectedStatus) {\n \u001b[90m 179 |\u001b[39m     \u001b[36mconst\u001b[39m screenshotPath \u001b[33m=\u001b[39m \u001b[32m`screenshots/${testInfo.title.replace(/\\s+/g, '_')}.png`\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 180 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m screenshotPath\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 181 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`❌ Test failed: ${testInfo.title}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 182 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`📸 Screenshot saved at: ${screenshotPath}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 183 |\u001b[39m   }\u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:180:16\u001b[22m"
                             }
                           ],
                           "stdout": [
@@ -230,10 +236,10 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Dominick\n"
+                              "text": "Filling name: Brooke\n"
                             },
                             {
-                              "text": "Selecting gender: בן\n"
+                              "text": "Selecting gender: בת\n"
                             },
                             {
                               "text": "Checking visibility of \"Start\" button...\n"
@@ -248,19 +254,7 @@
                               "text": "✅ Chatbot login and form submitted\n"
                             },
                             {
-                              "text": "💬 Submitting query: \"איך להכין Purple Carrot Salad? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
-                            },
-                            {
-                              "text": "🕐 Waiting for AI response to complete (predefined button visible)...\n"
-                            },
-                            {
-                              "text": "✅ Bot response received: \"🌈 סלט גזר סגול: איך להפוך ירקות פשוטים למופע קרקס קולינרי! 🥕💜\nדמיין שאתה נכנס למטבח שלך, וקבוצת גזרים סגולים יושבת שם כמו אבני חן סודיות שחיכו רק לך. כן, גזר סגול הוא לא סתם עוד ירק – הוא כוכב על צבעוני שמגיע לקשט את הצלחת שלך! ✨ מוכן להתחיל? בוא נצא לדרך עם מתכון לסלט שיעשה מסיבה לחושים שלך.\n\nשלב 1: מה בתפריט? מצרכים 🛍️\nלפני שאתה שוטף את הידיים ונכנס לפעולה, וודא שיש לך את כל המרכיבים:\n\n4-5 גזרים סגולים (אם אין לך... טוב, תמיד אפשר לערבב עם כתום, אבל היי – בוא נשקיע בצבעים!)\n3 כפות שמן זית כתית מעולה (כזה שיביא טעם אגוזי ומפנק לסלט)\n2 כפות מיץ לימון טרי 🍋\n1 כף דבש טבעי או מייפל אמיתי 🍯\nמעט מלח ים וגסיס פלפל שחור גרוס\nחופן אגוזים קלויים (אגוזי מלך או שקדים פרוסים יעבדו נהדר!)\nחופן חמוציות מיובשות (לקצת מתיקות קופצנית 💃)\nאפשרות לשדרוג: מעט גבינת פטה מפוררת או גבינת עיזים רכה 🧀\n\n\nשלב 2: ניקיון וגילופים 🧼🔪\nהסיפור מתחיל בגזרים עצמם.\n\nשטוף היטב את הגזרים הסגולים תחת מים זורמים. אם הם אורגניים, אתה יכול להשאיר להם את הקליפה בשביל הטעם והבריאות.\nקלף בעזרת קולפן כמה שכבות עד שהגזרים נראים נוצצים ומוכנים לזרוח.\nעכשיו מגיע ההחלטה הגדולה: האם לחתוך אותם לרצועות דקות בעזרת פומפייה/מנדולינה או לקלף אותם לרצועות ארוכות עם הקולפן? שתי השיטות יעבדו – זה תלוי במצב הרוח שלך.\n\n💡 טיפ חלומי: אם השתמשת בקולפן כדי ליצור רצועות ארוכות וסרטים של גזר, הסלט שלך ייראה כמו יצירת אמנות במוזיאון!\n\nשלב 3: מרינדה קסומה 🌟\nפה הקסם מתחיל באמת:\n\nבקערה קטנה, ערבב את שמן הזית, מיץ הלימון והדבש (או המייפל).\nתבל עם מלח ופלפל לפי הטעם וטרוף הכל עד שהמרכיבים מתחברים לרוטב חלק ומבריק.\n\n🎩 טריק קטן: רוצה לשדרג עוד יותר? הוסף טיפונת גרידת לימון או חומץ בלסמי לתערובת!\n\nשלב 4: ערבוב עם אהבה 💕🥗\nעכשיו הגיע הזמן להכניס את הגזרים למסיבה:\n\nשים את רצועות הגזר בקערה גדולה.\nשפוך מעליהם את הרוטב בזהירות תוך כדי ערבוב עדין (עם כפות עץ או הידיים – כן, למה לא להרגיש קצת יצירתי?).\nהוסף חמוציות מיובשות ואגוזים קלויים מעל – הם יהפכו כל ביס לקרנבל קטן בפה.\n\n\nשלב 5: טאצ' אחרון 🎉✨\nאם אתה באמת רוצה להרשים – פורר מעט גבינת פטה מעל כל העסק הזה או הוסף כמה עלי נענע טריים לקישוט ורעננות.\n\nשלב 6: צלחת וטעם 🌟🍴\nעכשיו מגיע החלק הכי מספק! העבר לצלחת יפה וצור קומפוזיציה צבעונית שמתאימה לאינסטגרם 📸 (#SaladGoals). טעם ותראה איך כל המרכיבים משתלבים בצורה מדויקת – המתיקות מהדבש והחמוציות, החמצמצות מהלימון והריח האדמתי של הגזר הסגול... פשוט חגיגה בפה!\n\n🌟 ועכשיו נשאר רק דבר אחד לעשות... תהנה מהיצירה שלך! 🌟\"\n"
-                            },
-                            {
-                              "text": "❌ Test failed: TC_17: 🧭 Browser tab terminated and search history page is verified\n"
-                            },
-                            {
-                              "text": "📸 Screenshot saved at: screenshots/TC_17:_🧭_Browser_tab_terminated_and_search_history_page_is_verified.png\n"
+                              "text": "Visible Hamburger Menu\n"
                             },
                             {
                               "text": "🧹 Closing context\n"
@@ -268,30 +262,25 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-26T13:39:35.567Z",
-                          "annotations": [
-                            {
-                              "type": "info",
-                              "description": "Bot response: 🌈 סלט גזר סגול: איך להפוך ירקות פשוטים למופע קרקס קולינרי! 🥕💜\nדמיין שאתה נכנס למטבח שלך, וקבוצת גזרים סגולים יושבת שם כמו אבני חן סודיות שחיכו רק לך. כן, גזר סגול הוא לא סתם עוד ירק – הוא כוכב על צבעוני שמגיע לקשט את הצלחת שלך! ✨ מוכן להתחיל? בוא נצא לדרך עם מתכון לסלט שיעשה מסיבה לחושים שלך.\n\nשלב 1: מה בתפריט? מצרכים 🛍️\nלפני שאתה שוטף את הידיים ונכנס לפעולה, וודא שיש לך את כל המרכיבים:\n\n4-5 גזרים סגולים (אם אין לך... טוב, תמיד אפשר לערבב עם כתום, אבל היי – בוא נשקיע בצבעים!)\n3 כפות שמן זית כתית מעולה (כזה שיביא טעם אגוזי ומפנק לסלט)\n2 כפות מיץ לימון טרי 🍋\n1 כף דבש טבעי או מייפל אמיתי 🍯\nמעט מלח ים וגסיס פלפל שחור גרוס\nחופן אגוזים קלויים (אגוזי מלך או שקדים פרוסים יעבדו נהדר!)\nחופן חמוציות מיובשות (לקצת מתיקות קופצנית 💃)\nאפשרות לשדרוג: מעט גבינת פטה מפוררת או גבינת עיזים רכה 🧀\n\n\nשלב 2: ניקיון וגילופים 🧼🔪\nהסיפור מתחיל בגזרים עצמם.\n\nשטוף היטב את הגזרים הסגולים תחת מים זורמים. אם הם אורגניים, אתה יכול להשאיר להם את הקליפה בשביל הטעם והבריאות.\nקלף בעזרת קולפן כמה שכבות עד שהגזרים נראים נוצצים ומוכנים לזרוח.\nעכשיו מגיע ההחלטה הגדולה: האם לחתוך אותם לרצועות דקות בעזרת פומפייה/מנדולינה או לקלף אותם לרצועות ארוכות עם הקולפן? שתי השיטות יעבדו – זה תלוי במצב הרוח שלך.\n\n💡 טיפ חלומי: אם השתמשת בקולפן כדי ליצור רצועות ארוכות וסרטים של גזר, הסלט שלך ייראה כמו יצירת אמנות במוזיאון!\n\nשלב 3: מרינדה קסומה 🌟\nפה הקסם מתחיל באמת:\n\nבקערה קטנה, ערבב את שמן הזית, מיץ הלימון והדבש (או המייפל).\nתבל עם מלח ופלפל לפי הטעם וטרוף הכל עד שהמרכיבים מתחברים לרוטב חלק ומבריק.\n\n🎩 טריק קטן: רוצה לשדרג עוד יותר? הוסף טיפונת גרידת לימון או חומץ בלסמי לתערובת!\n\nשלב 4: ערבוב עם אהבה 💕🥗\nעכשיו הגיע הזמן להכניס את הגזרים למסיבה:\n\nשים את רצועות הגזר בקערה גדולה.\nשפוך מעליהם את הרוטב בזהירות תוך כדי ערבוב עדין (עם כפות עץ או הידיים – כן, למה לא להרגיש קצת יצירתי?).\nהוסף חמוציות מיובשות ואגוזים קלויים מעל – הם יהפכו כל ביס לקרנבל קטן בפה.\n\n\nשלב 5: טאצ' אחרון 🎉✨\nאם אתה באמת רוצה להרשים – פורר מעט גבינת פטה מעל כל העסק הזה או הוסף כמה עלי נענע טריים לקישוט ורעננות.\n\nשלב 6: צלחת וטעם 🌟🍴\nעכשיו מגיע החלק הכי מספק! העבר לצלחת יפה וצור קומפוזיציה צבעונית שמתאימה לאינסטגרם 📸 (#SaladGoals). טעם ותראה איך כל המרכיבים משתלבים בצורה מדויקת – המתיקות מהדבש והחמוציות, החמצמצות מהלימון והריח האדמתי של הגזר הסגול... פשוט חגיגה בפה!\n\n🌟 ועכשיו נשאר רק דבר אחד לעשות... תהנה מהיצירה שלך! 🌟"
-                            }
-                          ],
+                          "startTime": "2025-05-27T07:50:06.801Z",
+                          "annotations": [],
                           "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-9b416-ch-history-page-is-verified-chromium\\test-failed-2.png"
-                            },
                             {
                               "name": "screenshot",
                               "contentType": "image/png",
                               "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-9b416-ch-history-page-is-verified-chromium\\test-failed-1.png"
                             },
                             {
-                              "name": "_error-context-1",
+                              "name": "_error-context-0",
                               "contentType": "text/markdown",
                               "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-9b416-ch-history-page-is-verified-chromium\\error-context.md"
                             }
-                          ]
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                            "column": 102,
+                            "line": 142
+                          }
                         }
                       ],
                       "status": "unexpected"
@@ -299,7 +288,7 @@
                   ],
                   "id": "23335bb06d3df52af178-d341bd3b09fe8027bbd4",
                   "file": "Chatbot.spec.ts",
-                  "line": 135,
+                  "line": 136,
                   "column": 6
                 }
               ]
@@ -311,8 +300,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-26T13:39:32.917Z",
-    "duration": 219023.523,
+    "startTime": "2025-05-27T07:50:04.508Z",
+    "duration": 44724.133,
     "expected": 0,
     "skipped": 0,
     "unexpected": 1,

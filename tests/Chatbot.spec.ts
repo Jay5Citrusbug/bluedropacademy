@@ -74,13 +74,11 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
     });
 
     test('TC_06: 📤 Submit query message', async ({}, testInfo) => {
+      await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: 'icon' }).click();
       await chatbotscreen.SubmitQuery(testInfo);
     });
 
-    test('TC_07: 🔽 Scroll to bottom of chat', async () => {
-      await chatbotscreen.scrollToBottom();
-    });
-
+  
     test('TC_08: ✅ Predefined buttons become active after response', async () => {
       await chatbotscreen.PredefinebuttonActive();
     });
@@ -95,6 +93,11 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
 
     test('TC_11: 📋 Copy button functionality', async () => {
       await chatbotscreen.CopyBtn(); // changed from DisLikeBtn to CopyBtn for clarity
+    });
+
+    test('TC_07: 🔽 Scroll to bottom of chat', async ({},testInfo) => {
+      await chatbotscreen.SubmitQuery(testInfo);
+      await chatbotscreen.scrollToBottom();
     });
 
     test('TC_12: 📍 Predefined button click triggers response', async ({}, testInfo) => {
@@ -127,19 +130,23 @@ test('TC_16: ⏱️ Session pop-up displays after 1 minute and close pop-up', as
         await chatbotscreen.InactivityPopup2();
         await page.reload();
         await chatbotscreen.InitialbotMessage();
-
-
     }
     );
     
-test('TC_17: 🧭 Browser tab terminated and search history page is verified', async ({ page }, testInfo) => {
+test.only('TC_17: 🧭 Browser tab terminated and search history page is verified', async ({ page }, testInfo) => {
+  await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: 'icon' }).click();
+  await page.evaluate(() => window.scrollTo(0, 0));
+const frame = await page.frame({ name: 'htmlComp-iframe' });
+await frame?.locator('button[data-testid="hamburger-click"]').click({ force: true });
+await  console.log('Visible Hamburger Menu');
+  await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByTestId('hamburger-click').click({force: true});
 
   const query = await chatbotscreen.SubmitQuery(testInfo);
   await page.reload();
-  const Menu = new HamburgerMenuPage(page);
-  const iframe = await page.frameLocator('iframe[name="htmlComp-iframe"]');
+   const iframe = await page.frameLocator('iframe[name="htmlComp-iframe"]');
+    const menuButton = iframe.locator(MenuLocator.hamburgerMenuBtn);
 
-  await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByTestId('hamburger-click').click();
+  
   console.log(`🔍 Searching for message: "${query}"`);
 
   const input = iframe.locator(MenuLocator.Searchbar);

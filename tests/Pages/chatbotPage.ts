@@ -64,6 +64,7 @@ export class chatbotPage {
   }
 
  async SubmitQuery(testInfo: TestInfo): Promise<string> {
+
   this.userMessage = generateRandomQuestion();
   const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
   const input = frameLocator.getByTestId('seach-msg-input');
