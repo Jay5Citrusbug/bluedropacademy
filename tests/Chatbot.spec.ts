@@ -133,7 +133,7 @@ test('TC_16: ⏱️ Session pop-up displays after 1 minute and close pop-up', as
     }
     );
     
-test.only('TC_17: 🧭 Browser tab terminated and search history page is verified', async ({ page }, testInfo) => {
+test('TC_17: 🧭 Browser tab terminated and search history page is verified', async ({ page }, testInfo) => {
   await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: 'icon' }).click();
   await page.evaluate(() => window.scrollTo(0, 0));
 const frame = await page.frame({ name: 'htmlComp-iframe' });
