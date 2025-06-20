@@ -13,36 +13,36 @@ export class FillPersonalInfopage {
 
   // Fill personal info form with valid data
   async fillPersonalInfo(name: string, gender: string) {
-    const timeoutLimit = 3000; 
+  const timeoutLimit = 3000;
 
-    try {
-      console.log('Starting to fill personal information form...');
-      const frame = this.page.frameLocator(Chatbotlocator.iframeName);
+  try {
+    console.log('Starting to fill personal information form...');
 
-      console.log(`Filling name: ${name}`);
-      await this.frameLocator.locator(FormLocator.usernameField).fill(name);
+    const frame = this.page.frameLocator(Chatbotlocator.iframeName);
 
-      console.log(`Selecting gender: ${gender}`);
-      await this.frameLocator.getByRole(FormLocator.genderRadio(gender).role as "radio", {
-        name: FormLocator.genderRadio(gender).name,
-      }).check();
+    console.log(`Filling name: ${name}`);
+    await frame.locator(FormLocator.usernameField).fill(name);
 
-      console.log('Checking visibility of "Start" button...');
-      const startButton = this.frameLocator.getByRole('button', {
-        name: FormLocator.startButton.name,
-      });
-      await expect(startButton).toBeVisible({ timeout: timeoutLimit });
+    const genderLabel = FormLocator.genderRadio(gender).name;
+    console.log(`Selecting gender: ${genderLabel}`);
 
-      console.log('Clicking "Start" button...');
-      await startButton.click();
+    // Click the gender label by visible text (like "זכר 👨" or "נקבה 👩")
+    await frame.locator('label').filter({ hasText: genderLabel }).click();
 
-      console.log('✅ Personal info submitted successfully.');
-    } catch (error) {
-      console.error(`❌ Error in fillPersonalInfo: ${error}`);
-      console.error(`Test failed due to timeout after ${timeoutLimit} ms - check iframe load or form issues.`);
-      throw error;
-    }
+    console.log('Checking visibility of "Start" button...');
+    const startButton = frame.getByText(FormLocator.startButton.name, { exact: true });
+    await expect(startButton).toBeVisible({ timeout: timeoutLimit });
+
+    console.log('Clicking "Start" button...');
+    await startButton.click();
+
+    console.log('✅ Personal info submitted successfully.');
+  } catch (error) {
+    console.error(`❌ Error in fillPersonalInfo: ${error}`);
+    console.error(`Test failed due to timeout after ${timeoutLimit} ms - check iframe load or form issues.`);
+    throw error;
   }
+}
 
   // Attempt to submit form without required fields and validate error messages
   async fillinvalidPersonalInfo(name: string, gender: string) {

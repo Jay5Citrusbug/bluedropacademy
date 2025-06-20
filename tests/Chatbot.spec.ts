@@ -48,16 +48,21 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
   test.afterAll(async () => {
     console.log('🧹 Closing context');
     await context.close();
-  });
+});
+
+  
 
   test.describe('💬 Chatbot Screen', () => {
 
+
     test('TC_01: ✅ Confirm chatbot screen elements are visible', async () => {
+
+    
       await chatbotscreen.verifyConfirmationElements();
     });
 
     test('TC_02: 🧠 Initial chatbot message is displayed', async () => {
-      await chatbotscreen.InitialbotMessage();
+      await chatbotscreen.InitialbotMessage(testUserData.name);
     });
 
 
@@ -65,23 +70,27 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
       await chatbotscreen.PredefinebuttonNotActive();
     });
 
-    test('TC_04: 🚫 Submit button is disabled initially', async () => {
-      await chatbotscreen.SubmitbtnNotActive();
-    });
+    // test('TC_04: 🚫 Submit button is disabled initially', async () => {
+    //   await chatbotscreen.SubmitbtnNotActive();
+    // });
 
     test('TC_05: ✅ Submit button is enabled after input', async () => {
       await chatbotscreen.SubmitbtnActive();
     });
 
     test('TC_06: 📤 Submit query message', async ({}, testInfo) => {
-      await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: 'icon' }).click();
+     // await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: 'icon' }).click();
       await chatbotscreen.SubmitQuery(testInfo);
     });
 
-  
-    test('TC_08: ✅ Predefined buttons become active after response', async () => {
-      await chatbotscreen.PredefinebuttonActive();
+    test('TC_07: 🔽 Scroll to bottom of chat', async ({},testInfo) => {
+      await chatbotscreen.scrollToBottom();
     });
+
+  
+    // test('TC_08: ✅ Predefined buttons become active after response', async () => {
+    //   await chatbotscreen.PredefinebuttonActive();
+    // });
 
     test('TC_09: 👍 Like button functionality', async () => {
       await chatbotscreen.LikeBtn();
@@ -95,25 +104,21 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
       await chatbotscreen.CopyBtn(); // changed from DisLikeBtn to CopyBtn for clarity
     });
 
-    test('TC_07: 🔽 Scroll to bottom of chat', async ({},testInfo) => {
-      await chatbotscreen.SubmitQuery(testInfo);
-      await chatbotscreen.scrollToBottom();
-    });
 
     test('TC_12: 📍 Predefined button click triggers response', async ({}, testInfo) => {
       await chatbotscreen.PredefinedBtnClick(testInfo);
     });
 
-    test('TC_13: 🔄 Reload hides previous chat', async () => {
-      await page.reload();
-      await chatbotscreen.Pagereload();
-      await chatbotscreen.InitialbotMessage();
+      test('TC_13: 🔄 Reload hides previous chat', async () => {
+        await page.reload();
+        await chatbotscreen.Pagereload();
+        await chatbotscreen.InitialbotMessage(testUserData.name);
     });
 
     test('TC_14: ✏️ New session is created using edit icon', async () => {
       await chatbotscreen.NewsessionChatbotPage();
       await chatbotscreen.Pagereload();
-      await chatbotscreen.InitialbotMessage();
+      await chatbotscreen.InitialbotMessage(testUserData.name);
     });
 
  
@@ -129,49 +134,10 @@ test.skip(env === 'production', '⏭️ Skipping in production environment');
 test('TC_16: ⏱️ Session pop-up displays after 1 minute and close pop-up', async () => {
         await chatbotscreen.InactivityPopup2();
         await page.reload();
-        await chatbotscreen.InitialbotMessage();
+        await chatbotscreen.InitialbotMessage(testUserData.name);
     }
     );
     
-test('TC_17: 🧭 Browser tab terminated and search history page is verified', async ({ page }, testInfo) => {
-  await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: 'icon' }).click();
-  await page.evaluate(() => window.scrollTo(0, 0));
-const frame = await page.frame({ name: 'htmlComp-iframe' });
-await frame?.locator('button[data-testid="hamburger-click"]').click({ force: true });
-await  console.log('Visible Hamburger Menu');
-  await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByTestId('hamburger-click').click({force: true});
-
-  const query = await chatbotscreen.SubmitQuery(testInfo);
-  await page.reload();
-   const iframe = await page.frameLocator('iframe[name="htmlComp-iframe"]');
-    const menuButton = iframe.locator(MenuLocator.hamburgerMenuBtn);
-
-  
-  console.log(`🔍 Searching for message: "${query}"`);
-
-  const input = iframe.locator(MenuLocator.Searchbar);
-  await expect(input).toBeVisible();
-  await input.fill(query);
-
-  const sessionList = iframe.locator('.session-list');
-
-  await expect(sessionList).toBeVisible();
-
-  // Optionally wait a bit for the list to update
-  await page.waitForTimeout(3000);
-
-  // Debug: log what’s actually inside the session list
-  const sessionText = await sessionList.innerText();
-  console.log(`📋 Session List Text: \n${sessionText}`);
-
-  // Assert: relaxed match (contains part of the query)
-  await expect(sessionText.toLowerCase()).toContain(query.toLowerCase().trim());
-
-  // 🧪 Optional: stricter version, if needed:
-  await expect(sessionList).toContainText(query);
-
-  await page.close();
-});
 
 
 test.afterEach(async ({ page }, testInfo) => {

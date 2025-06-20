@@ -37,20 +37,26 @@ test('TC_26: 💰 Admin daily plan cost update and verify insufficient balance p
 
   await chatbotLogin.goto();
   await chatbotLogin.login(chatbotCredentials.email, chatbotCredentials.password);
-  // await chatbotInsufficientPopup.fillPersonalInfo(testUserData.name, testUserData.gender);
+  await chatbotInsufficientPopup.fillPersonalInfo(testUserData.name, testUserData.gender);
+  await chatbotInsufficientPopup.SubmitQuery2(testInfo);
+  await chatbotInsufficientPopup.SubmitQuery2(testInfo);
+  console.log('Insufficient Balance pop-up comming');
+  await chatbotPg.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('heading', { name: 'נראה שהגיע הזמן לעשות מנוי😊' }).isVisible();
+  await chatbotPg.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByText('הגעת לגבול השימוש היומי ב"בלו" ללא מנוי. תוכל להמשיך רק מחר. או שתוכל לרכוש אחד ').isVisible();
+
   await chatbotInsufficientPopup.Verify_insufficientBalance();
 
   await chatbotPg.close();
   await chatbotContext.close();
 
-   // ----- Admin: Reverse the balance change -----
+ //  ----- Admin: Reverse the balance change -----
   const adminReverseContext = await browser.newContext();
   const adminReversePage = await adminReverseContext.newPage();
   const adminReverse = new Edge_case(adminReversePage); // ✅ correct class
 
   await adminReverse.goto();
   await adminReverse.login(adminCredentials.email, adminCredentials.password);
-  await adminReverse.AdminreverseAmout();
+  await adminReverse.AdminreverseAmount();
   await adminReverseContext.close();
 
 const chatbotContext1 = await browser.newContext();
@@ -60,13 +66,11 @@ const chatbotscreen = new chatbotPage(chatbotPage1);
 const form1 = new FillPersonalInfopage(chatbotPage1);
 
 await chatbotLogin2.goto();
-await chatbotLogin2.login(chatbotCredentials.email, chatbotCredentials.password);
-await form1.fillPersonalInfo(testUserData.name, testUserData.gender);
+ await chatbotLogin2.login(chatbotCredentials.email, chatbotCredentials.password);
+// await form1.fillPersonalInfo(testUserData.name, testUserData.gender);
 await chatbotPage1.evaluate(() => {
   window.scrollTo(0, document.body.scrollHeight);
 });
-// await chatbotPage1.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: '📚 תשובה קצרה תשובה מפורטת 📄' }).isVisible();
-// await chatbotPage1.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: '📚 תשובה קצרה תשובה מפורטת 📄' }).click();
 await chatbotscreen.SubmitQuery(testInfo);
 
 });

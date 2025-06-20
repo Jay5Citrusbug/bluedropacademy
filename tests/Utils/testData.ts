@@ -17,10 +17,10 @@ export function generateRandomQuestion(): string {
 }
 
 // Map to Hebrew gender string for the chatbot
-const chatbotGender = gender === 'male' ? 'בן' : 'בת';
+const chatbotGender = gender === 'male' ? 'זכר 👨' : 'נקבה 👩';
 
 export const testUserData = {
-  email: 'qa@yopmail.com',
+  email: 'vivek.citrusbug@gmail.com',
   name,
   gender: chatbotGender,
 };

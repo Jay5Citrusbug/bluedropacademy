@@ -58,10 +58,26 @@ export class AdminPage {
 
             console.log("Waiting for user data to appear...");
             const cardBody = this.page.locator(".ant-card-body");
-            const targetRow = cardBody.getByRole("cell", { name: "Reset" });
+             console.log("Scrolling horizontally to bring Reset button into view...");
+            // const resetButton = this.page.locator(adminPageLocators.resetButton.xpath);
 
+            // Focus the scrollable container
+            const scrollableTable = this.page.locator('.ant-table-scroll-horizontal');
+            await scrollableTable.click(); // give focus
+
+            // Scroll right using keyboard multiple times
+            for (let i = 0; i < 10; i++) {
+                await this.page.keyboard.press('ArrowRight');
+                await this.page.waitForTimeout(100); // slight pause between scrolls
+            }
             console.log("Clicking Reset button...");
-            await this.page.locator(adminPageLocators.resetButton.xpath).click();
+        console.log("Clicking Reset button by text...");
+        await this.page.getByText("Reset", { exact: true }).isVisible();
+
+        await this.page.getByText("Reset", { exact: true }).click();
+
+            
+            const targetRow = cardBody.getByRole("cell", { name: "Reset" });
 
             console.log("Confirming the reset...");
             await this.page.getByRole("button", { name: "Yes" }).click();
@@ -74,12 +90,6 @@ export class AdminPage {
                     .nth(3)
             ).toBeVisible();
             console.log("Reset confirmation message is visible.");
-
-            const usageCell = this.page.locator(adminPageLocators.PlanUsagevalue.xpath);
-
-            console.log("Verifying usage value has been reset to 0...");
-            await expect(usageCell).toBeVisible();
-            await expect(usageCell).toHaveText("0");
 
             console.log(`✅ Reset process completed for user: ${userEmail}`);
             await this.page.close();

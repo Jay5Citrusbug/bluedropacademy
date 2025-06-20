@@ -18,8 +18,20 @@ export class HamburgerMenuPage {
 
   }
 
-  
-async OpenHamburgerMenu() {
+   get frameLocator() {
+    return this.page.frameLocator(MenuLocator.iframeName);
+  }
+
+  get menuButton() {
+    return this.frameLocator.locator(MenuLocator.hamburgerMenuBtn);
+  }
+
+  async openMenu() {
+    await expect(this.menuButton).toBeVisible();
+    await this.menuButton.click({ force: true });
+  }
+
+  async OpenHamburgerMenu() {
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
     const menuButton = frameLocator.locator(MenuLocator.hamburgerMenuBtn);
 
@@ -91,9 +103,9 @@ async SearchHistory(query: string) {
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
 
     console.log('🔁 Creating new session from hamburger menu...');
-    await frameLocator.getByRole('button', { name: 'icon' }).nth(2).click();
-    await expect(frameLocator.getByTestId('start-new-session')).toBeVisible();
-    await frameLocator.getByTestId('start-new-session').click();
+   // await frameLocator.getByRole('button', { name: 'icon' }).nth(2).click();
+await expect(frameLocator.getByTestId('new-session-click')).toBeVisible();
+await frameLocator.getByTestId('new-session-click').click();
   }
 
    async Pagereload() {
@@ -122,6 +134,8 @@ await frameLocator.getByTestId('edit-session-input').click();
 await frameLocator.getByTestId('edit-session-input').press('Enter');
 
 await frameLocator.getByText(name).isVisible();
+await frameLocator.getByRole('button', { name: 'Close' }).click();
+
 
     }
 
@@ -130,10 +144,14 @@ async OpenHistory_ContinueSession() {
     const frameLocator = this.page.frameLocator(MenuLocator.iframeName);
     await this.page.evaluate(() => window.scrollTo(0, 0));
 
-    await frameLocator.getByText(this.sessionName).isVisible();
-    await frameLocator.getByText(this.sessionName).click();
+await frameLocator.locator('ul.session-list > li >> .session-item').first().click();
+  
+// SCroll bottom of the page to ensure "המשך שיחה" button is visible
+await this.page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+
     await frameLocator.getByText('המשך שיחה').isVisible();
     await frameLocator.getByText('המשך שיחה').click();
+
 
 }
 

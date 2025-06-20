@@ -4,7 +4,7 @@ export const adminCredentials = {
   };
   
   export const chatbotCredentials = {
-    email: 'qa@yopmail.com',
-    password: 'Jayqa@1234',
+    email: 'vivek.citrusbug@gmail.com',
+    password: 'Citrusbug@89',
   };
   

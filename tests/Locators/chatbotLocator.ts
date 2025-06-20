@@ -15,5 +15,4 @@ export const Chatbotlocator = {
     DisLikeBtn:'[data-testid="dislike-thumb"]',
     Copybtn : '[data-testid="copy-response"]',
     Predefinebutton1 : '[data-test-id="predefined-button-0"]',
-    
-    };  
+ };  

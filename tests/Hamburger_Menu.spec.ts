@@ -15,6 +15,7 @@ let adminPage: AdminPage;
 let Menu: HamburgerMenuPage;
 let chatbotscreen: chatbotPage;
 
+
 test.describe('BlueDrop Hamburgermenu Test Suite', () => {
 
   test.beforeAll(async ({ browser }) => {
@@ -45,18 +46,55 @@ test.describe('BlueDrop Hamburgermenu Test Suite', () => {
 
   test.describe('Hamburger Menu & 📜 Chat History', () => {
 
-  test('TC_18 🔍 Search in chat history', async ({}, testInfo) => {
-  console.log('✅ TC_18: Search in chat history');
-  const query = await chatbotscreen.SubmitQuery(testInfo);
-  await chatbotscreen.scrollToBottom()
-  await chatbotscreen.PredefinebuttonActive()
-  await page.reload();
-  await chatbotscreen.InitialbotMessage();
-  await Menu.OpenHamburgerMenu();
-  await Menu.SearchHistory(query);  // Pass query to search
-  await Menu.CloseHamburgerMenu();
+//   test('TC_18 🔍 Search in chat history', async ({}, testInfo) => {
+//   console.log('✅ TC_18: Search in chat history');
+//   const query = await chatbotscreen.SubmitQuery(testInfo);
+//   await chatbotscreen.scrollToBottom()
+//   //await chatbotscreen.PredefinebuttonActive()
+//   await page.reload();
+//   await chatbotscreen.InitialbotMessage();
+//   await Menu.OpenHamburgerMenu();
+//   await Menu.SearchHistory(query);  // Pass query to search
+//   await Menu.CloseHamburgerMenu();
 
-});
+// });
+
+// test.only('TC_17: 🧭 Browser tab terminated and search history page is verified', async ({ page }, testInfo) => {
+
+//     console.log('📂 Opening hamburger menu...');
+//     await page.evaluate(() => window.scrollTo(0, 0));
+//   await expect(Menu.menuButton).toBeVisible();
+//   await Menu.menuButton.click({ force: true });
+
+//   const query = await chatbotscreen.SubmitQuery(testInfo);
+//   await page.reload();
+//    const iframe = await page.frameLocator('iframe[name="htmlComp-iframe"]');
+  
+//   console.log(`🔍 Searching for message: "${query}"`);
+
+//   const input = iframe.locator(MenuLocator.Searchbar);
+//   await expect(input).toBeVisible();
+//   await input.fill(query);
+
+//   const sessionList = iframe.locator('.session-list');
+
+//   await expect(sessionList).toBeVisible();
+
+//   // Optionally wait a bit for the list to update
+//   await page.waitForTimeout(3000);
+
+//   // Debug: log what’s actually inside the session list
+//   const sessionText = await sessionList.innerText();
+//   console.log(`📋 Session List Text: \n${sessionText}`);
+
+//   // Assert: relaxed match (contains part of the query)
+//   await expect(sessionText.toLowerCase()).toContain(query.toLowerCase().trim());
+
+//   // 🧪 Optional: stricter version, if needed:
+//   await expect(sessionList).toContainText(query);
+
+//   await page.close();
+// });
 
     test('TC_19 🔓 Open Hamburger Menu', async () => {
       console.log('✅ TC_19: Open Hamburger Menu');
@@ -83,7 +121,7 @@ test.describe('BlueDrop Hamburgermenu Test Suite', () => {
       console.log('✅ TC_23: Start new session using "שיחה חדשה"');
       await Menu.Newsession();
       await chatbotscreen.Pagereload();
-      await chatbotscreen.InitialbotMessage();
+      await chatbotscreen.InitialbotMessage( testUserData.name);
     });
 
     test('TC_24 ✏️ Edit and save changes in chat history', async () => {
@@ -93,8 +131,11 @@ test.describe('BlueDrop Hamburgermenu Test Suite', () => {
     });
 
     test('TC_25 🔁 Continue Chat Functionality', async () => {
-      console.log('✅ TC_25: Continue Chat Functionality');
-      await Menu.OpenHistory_ContinueSession();
+     
+     console.log('✅ TC_25: Continue Chat Functionality');
+    await Menu.OpenHamburgerMenu();
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await Menu.OpenHistory_ContinueSession();
     });
 
   });

@@ -46,7 +46,7 @@ jobs:
 
       - name: Set environment URLs
         run: |
-          echo "URL_CHATBOT=https://bluedropacademy.wixsite.com/website-1/chat6?rc=test-site" >> $GITHUB_ENV
+          echo "URL_CHATBOT=https://bluedropacademy.wixsite.com/website-1/chat6" >> $GITHUB_ENV
           echo "URL_ADMIN=https://stg-chat.bluedropacademy.com/admin" >> $GITHUB_ENV
 
       - name: Run Playwright Tests

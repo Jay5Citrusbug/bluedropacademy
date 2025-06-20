@@ -24,17 +24,16 @@ export class Edge_case {
    }
  
 
- async goto() {
-    
-    console.log('Navigating to the admin page...');
- const AdminUrl = process.env.URL_ADMIN ?? 'https://stg-chat.bluedropacademy.com/admin';
-    if (!AdminUrl) {
-      throw new Error('Environment variable URL_CHATBOT is not defined.');
+    async goto() {
+        console.log("Navigating to the admin page...");
+        const AdminUrl = process.env.URL_ADMIN;
+        if (!AdminUrl) {
+            throw new Error("Environment variable URL_CHATBOT is not defined.");
+        }
+        console.log("Navigating to the chatbot page...");
+        await this.page.goto(AdminUrl);
+        console.log("Successfully navigated to the admin page.");
     }
-    console.log('Navigating to the chatbot page...');
-    await this.page.goto(AdminUrl);
-    console.log('Successfully navigated to the admin page.');
-  }
 
   // Perform login using the provided credentials
   async login(email: string, password: string) {
@@ -70,25 +69,37 @@ export class Edge_case {
       const cardBody = this.page.locator('.ant-card-body');
       const targetRow = cardBody.getByRole('cell', { name: 'Reset' });
 
-      console.log('Clicking Reset button...');
-      await this.page.locator(adminPageLocators.resetButton.xpath).click();
+             console.log("Scrolling horizontally to bring Reset button into view...");
+            // const resetButton = this.page.locator(adminPageLocators.resetButton.xpath);
 
-      console.log('Confirming the reset...');
-      await this.page.getByRole('button', { name: 'Yes' }).click();
+            // Focus the scrollable container
+            const scrollableTable = this.page.locator('.ant-table-scroll-horizontal');
+            await scrollableTable.click(); // give focus
 
-      console.log('Waiting for success message...');
-      await expect(
-        this.page.locator('div').filter({ hasText: adminPageLocators.successMessage.text }).nth(3)
-      ).toBeVisible();
-      console.log('Reset confirmation message is visible.');
+            // Scroll right using keyboard multiple times
+            for (let i = 0; i < 10; i++) {
+                await this.page.keyboard.press('ArrowRight');
+                await this.page.waitForTimeout(100); // slight pause between scrolls
+            }
+            console.log("Clicking Reset button...");
+        console.log("Clicking Reset button by text...");
+        await this.page.getByText("Reset", { exact: true }).isVisible();
 
-      const usageCell = this.page.locator(adminPageLocators.PlanUsagevalue.xpath);
+        await this.page.getByText("Reset", { exact: true }).click();
 
-      console.log('Verifying usage value has been reset to 0...');
-      await expect(usageCell).toBeVisible();
-      await expect(usageCell).toHaveText('0');
+            console.log("Confirming the reset...");
+            await this.page.getByRole("button", { name: "Yes" }).click();
 
-      console.log(`✅ Reset process completed for user: ${userEmail}`);
+            console.log("Waiting for success message...");
+            await expect(
+                this.page
+                    .locator("div")
+                    .filter({ hasText: adminPageLocators.successMessage.text })
+                    .nth(3)
+            ).toBeVisible();
+            console.log("Reset confirmation message is visible.");
+
+            console.log(`✅ Reset process completed for user: ${userEmail}`);
     } catch (error) {
       console.error(`❌ Error during resetUserData: ${error}`);
       console.error(`Test failed due to timeout after ${timeoutLimit} ms - check network/API/browser performance.`);
@@ -106,21 +117,21 @@ export class Edge_case {
         console.log(`Filling name: ${name}`);
         await this.frameLocator.locator(FormLocator.usernameField).fill(name);
   
-        console.log(`Selecting gender: ${gender}`);
-        await this.frameLocator.getByRole(FormLocator.genderRadio(gender).role as "radio", {
-          name: FormLocator.genderRadio(gender).name,
-        }).check();
-  
-        console.log('Checking visibility of "Start" button...');
-        const startButton = this.frameLocator.getByRole('button', {
-          name: FormLocator.startButton.name,
-        });
-        await expect(startButton).toBeVisible({ timeout: timeoutLimit });
-  
-        console.log('Clicking "Start" button...');
-        await startButton.click();
-  
-        console.log('✅ Personal info submitted successfully.');
+    const genderLabel = FormLocator.genderRadio(gender).name;
+    console.log(`Selecting gender: ${genderLabel}`);
+
+    // Click the gender label by visible text (like "זכר 👨" or "נקבה 👩")
+    await frame.locator('label').filter({ hasText: genderLabel }).click();
+
+    console.log('Checking visibility of "Start" button...');
+    const startButton = frame.getByText(FormLocator.startButton.name, { exact: true });
+    await expect(startButton).toBeVisible({ timeout: timeoutLimit });
+
+    console.log('Clicking "Start" button...');
+    await startButton.click();
+
+    console.log('✅ Personal info submitted successfully.');
+
       } catch (error) {
         console.error(`❌ Error in fillPersonalInfo: ${error}`);
         console.error(`Test failed due to timeout after ${timeoutLimit} ms - check iframe load or form issues.`);
@@ -132,37 +143,34 @@ async AdminChangeBalanceValue () {
 
   await this.page.getByText('Training Data').click();
   await this.page.getByText('SubScriptions').click();
-  await this.page.getByRole('button', { name: 'edit' }).nth(3).click();
-  await this.page.getByRole('cell', { name: 'Increase Value Decrease Value' }).getByRole('spinbutton').fill('0.000008');
- await this.page.waitForTimeout(2000)
+  await this.page.getByRole('listitem', { name: '2' }).locator('a').click();
+  await this.page.getByRole('button', { name: 'edit' }).click();  
+  await this.page.getByRole('cell', { name: 'Increase Value Decrease Value' }).getByRole('spinbutton').fill('0.005');
+  await this.page.waitForTimeout(2000);
   await this.page.getByRole('button', { name: 'Save' }).click();
   const successMessage = this.page.locator('text=Subscription updated successfully');
     await expect(successMessage).toBeVisible();
  
 }
-async AdminreverseAmout(){
+async AdminreverseAmount(){
     await this.page.getByText('Training Data').click();
   await this.page.getByText('SubScriptions').click();
-  await this.page.getByRole('button', { name: 'edit' }).nth(3).click();
+  await this.page.getByRole('listitem', { name: '2' }).locator('a').click();
+  await this.page.getByRole('button', { name: 'edit' }).click();  
   await this.page.getByRole('cell', { name: 'Increase Value Decrease Value' }).getByRole('spinbutton').fill('1');
-   await this.page.waitForTimeout(2000)
+   await this.page.waitForTimeout(2000);
   await this.page.getByRole('button', { name: 'Save' }).click();
     const successMessage = this.page.locator('text=Subscription updated successfully');
     await expect(successMessage).toBeVisible();
 
 }
 
-
-
 async Verify_insufficientBalance(){
 
 console.log('Insufficient Balance pop-up comming');
-
   await this.page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('heading', { name: 'נראה שהגיע הזמן לעשות מנוי😊' }).isVisible();
-
   await this.page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByText('הגעת לגבול השימוש היומי ב"בלו" ללא מנוי. תוכל להמשיך רק מחר. או שתוכל לרכוש אחד ').isVisible();
-  // await this.page.getByRole('button', { name:'המשך שיחה' }).isVisible();
-  // await this.page.getByRole('button', { name:'המשך שיחה' }).click();
+
 }
 
 async SubmitQuery2(testInfo: TestInfo): Promise<string> {

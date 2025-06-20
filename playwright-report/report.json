@@ -65,246 +65,262 @@
   },
   "suites": [
     {
-      "title": "Chatbot.spec.ts",
-      "file": "Chatbot.spec.ts",
+      "title": "insufficient_balance.spec.ts",
+      "file": "insufficient_balance.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "BlueDrop Chatbot Test Suite",
-          "file": "Chatbot.spec.ts",
-          "line": 22,
-          "column": 6,
-          "specs": [],
-          "suites": [
+          "title": "TC_26: 💰 Admin daily plan cost update and verify insufficient balance popup",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "💬 Chatbot Screen",
-              "file": "Chatbot.spec.ts",
-              "line": 53,
-              "column": 8,
-              "specs": [
+              "timeout": 180000,
+              "annotations": [
                 {
-                  "title": "TC_17: 🧭 Browser tab terminated and search history page is verified",
-                  "ok": false,
-                  "tags": [],
-                  "tests": [
+                  "type": "info",
+                  "description": "Bot response: 🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו? מה לדעתך איינשטיין היה חושב על יסוד שנקרא על שמו?  \n איזה חומרים אחרים לדעתך מסתתרים ביקום שעדיין לא גילינו?"
+                },
+                {
+                  "type": "info",
+                  "description": "Bot response: 🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו?"
+                },
+                {
+                  "type": "info",
+                  "description": "Bot response: \"נחושת: המתכת שצובעת את ההיסטוריה ואת העתיד! 🧱⚡\"\nדמיין שאתה עומד בפאתי עיר קדומה, אלפי שנים אחורה בזמן. מסביבך, נפחים מכים בפטישים על מתכת אדמדמה ומבריקה – זו הנחושת! 🛠️ הנחושת (Copper), שסימולה הכימי הוא Cu, היא אחת המתכות הראשונות שהאדם למד לעבד. למה דווקא אותה? כי היא רכה יחסית (קל לעצב אותה!) ונמצאת בטבע בצורתה הכמעט טהורה. קסם אמיתי! ✨\n\nתכונות מיוחדות של נחושת 🌟\n\nמוליכות חשמלית מדהימה: הנחושת היא מוליך מעולה; זה הופך אותה לבחירה מספר אחת לכבלים וחוטי חשמל. ⚡\nעמידות גבוהה: היא לא מחלידה כמו ברזל – במקום זאת, היא מפתחת שכבה ירקרקה שנקראת \"פטינה\", שמגנה עליה.\nבעלת תכונות אנטיבקטריאליות: חיידקים פשוט לא אוהבים לשבת על נחושת (פחות מ-2 שעות והם כבר לא שורדים!). 🦠✨\n\n\nמהיכן מגיעה הנחושת? 🌍\nנחושת נמצאת במכרות בכל העולם – מכרייה באמריקה ועד מערות באפריקה הקדומה. הגדולה? צ'ילה! 🇨🇱 יש לה כמה מהמרבצים העשירים ביותר.\n\nבשימוש לאורך ההיסטוריה 📜\n\nתקופת הברונזה: כשערבבו נחושת עם בדיל נולד הברונזה – מהפכה טכנולוגית שאיפשרה יצירת כלי נשק וכלים חזקים במיוחד. ⚔️\nמטבעות: עד היום משתמשים בנחושת ליצירת מטבעות (כן, אותו צבע חום-זהוב במטבעות של אגורות).\nתכשיטים ואומנות: צבעה המיוחד הפך אותה לכוכבת ביצירות קישוט עתיקות.\n\n\nFun Fact מיוחד בשבילך! 🎉\nפסל החירות בניו יורק עשוי כולו מנחושת! נכון, הגוון הירוק שלו? זו השכבה המגנה שהזכרנו קודם – הפטינה! 🌿\n\nאז, Keith, עכשיו אתה יודע שלנחושת יש היסטוריה ענפה ותפקיד חשוב גם בעידן המודרני שלנו, ממש עד הסמארטפון בכיס שלך!\n איך לדעתך התכונה האנטיבקטריאלית של נחושת תשפיע על הרפואה בעתיד?  \n מעניין אותך לגלות איך כורים ומעבדים נחושת בעולם החדש? 🚀"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 141033,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "timeout": 180000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "failed",
-                          "duration": 14228,
-                          "error": {
-                            "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByTestId('hamburger-click')\u001b[22m\n",
-                            "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByTestId('hamburger-click')\u001b[22m\n\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:142:102",
-                            "location": {
-                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
-                              "column": 102,
-                              "line": 142
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 140 |\u001b[39m \u001b[36mawait\u001b[39m frame\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mlocator(\u001b[32m'button[data-testid=\"hamburger-click\"]'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m \u001b[36mawait\u001b[39m  console\u001b[33m.\u001b[39mlog(\u001b[32m'Visible Hamburger Menu'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m.\u001b[39mcontentFrame()\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'hamburger-click'\u001b[39m)\u001b[33m.\u001b[39mclick({force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m\n \u001b[90m 144 |\u001b[39m   \u001b[90m// const query = await chatbotscreen.SubmitQuery(testInfo);\u001b[39m\n \u001b[90m 145 |\u001b[39m   \u001b[90m// await page.reload();\u001b[39m\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
-                                "column": 102,
-                                "line": 142
-                              },
-                              "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByTestId('hamburger-click')\u001b[22m\n\n\n\u001b[0m \u001b[90m 140 |\u001b[39m \u001b[36mawait\u001b[39m frame\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mlocator(\u001b[32m'button[data-testid=\"hamburger-click\"]'\u001b[39m)\u001b[33m.\u001b[39mclick({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m \u001b[36mawait\u001b[39m  console\u001b[33m.\u001b[39mlog(\u001b[32m'Visible Hamburger Menu'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m.\u001b[39mcontentFrame()\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'hamburger-click'\u001b[39m)\u001b[33m.\u001b[39mclick({force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 143 |\u001b[39m\n \u001b[90m 144 |\u001b[39m   \u001b[90m// const query = await chatbotscreen.SubmitQuery(testInfo);\u001b[39m\n \u001b[90m 145 |\u001b[39m   \u001b[90m// await page.reload();\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:142:102\u001b[22m"
-                            },
-                            {
-                              "location": {
-                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
-                                "column": 16,
-                                "line": 180
-                              },
-                              "message": "Error: page.screenshot: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 178 |\u001b[39m   \u001b[36mif\u001b[39m (testInfo\u001b[33m.\u001b[39mstatus \u001b[33m!==\u001b[39m testInfo\u001b[33m.\u001b[39mexpectedStatus) {\n \u001b[90m 179 |\u001b[39m     \u001b[36mconst\u001b[39m screenshotPath \u001b[33m=\u001b[39m \u001b[32m`screenshots/${testInfo.title.replace(/\\s+/g, '_')}.png`\u001b[39m\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 180 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m screenshotPath\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 181 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`❌ Test failed: ${testInfo.title}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 182 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`📸 Screenshot saved at: ${screenshotPath}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 183 |\u001b[39m   }\u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:180:16\u001b[22m"
-                            }
-                          ],
-                          "stdout": [
-                            {
-                              "text": "Navigating to the admin page...\n"
-                            },
-                            {
-                              "text": "Navigating to the chatbot page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to the admin page.\n"
-                            },
-                            {
-                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
-                            },
-                            {
-                              "text": "Filling in email input...\n"
-                            },
-                            {
-                              "text": "Filling in password input...\n"
-                            },
-                            {
-                              "text": "Clicking on Sign In button...\n"
-                            },
-                            {
-                              "text": "Login submitted, waiting for dashboard to load...\n"
-                            },
-                            {
-                              "text": "Starting reset process for user: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "Clicking on User Data tab...\n"
-                            },
-                            {
-                              "text": "Searching for user with email: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "Waiting for user data to appear...\n"
-                            },
-                            {
-                              "text": "Clicking Reset button...\n"
-                            },
-                            {
-                              "text": "Confirming the reset...\n"
-                            },
-                            {
-                              "text": "Waiting for success message...\n"
-                            },
-                            {
-                              "text": "Reset confirmation message is visible.\n"
-                            },
-                            {
-                              "text": "Verifying usage value has been reset to 0...\n"
-                            },
-                            {
-                              "text": "✅ Reset process completed for user: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "✅ User reset complete\n"
-                            },
-                            {
-                              "text": "Navigating to the admin page...\n"
-                            },
-                            {
-                              "text": "Navigating to the chatbot page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to chatbot login page.\n"
-                            },
-                            {
-                              "text": "Clicking \"Login with Email\" button...\n"
-                            },
-                            {
-                              "text": "Filling in email: qa@yopmail.com\n"
-                            },
-                            {
-                              "text": "Filling in password...\n"
-                            },
-                            {
-                              "text": "Clicking \"Submit\" to log in...\n"
-                            },
-                            {
-                              "text": "Waiting for page navigation after login...\n"
-                            },
-                            {
-                              "text": "✅ Login process completed and iframe title located successfully.\n"
-                            },
-                            {
-                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button without filling fields...\n"
-                            },
-                            {
-                              "text": "Waiting for validation error messages...\n"
-                            },
-                            {
-                              "text": "Verified gender required validation message.\n"
-                            },
-                            {
-                              "text": "Verified name required validation message.\n"
-                            },
-                            {
-                              "text": "✅ Invalid input test completed with expected error validations.\n"
-                            },
-                            {
-                              "text": "Starting to fill personal information form...\n"
-                            },
-                            {
-                              "text": "Filling name: Brooke\n"
-                            },
-                            {
-                              "text": "Selecting gender: בת\n"
-                            },
-                            {
-                              "text": "Checking visibility of \"Start\" button...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button...\n"
-                            },
-                            {
-                              "text": "✅ Personal info submitted successfully.\n"
-                            },
-                            {
-                              "text": "✅ Chatbot login and form submitted\n"
-                            },
-                            {
-                              "text": "Visible Hamburger Menu\n"
-                            },
-                            {
-                              "text": "🧹 Closing context\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-27T07:50:06.801Z",
-                          "annotations": [],
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-9b416-ch-history-page-is-verified-chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "_error-context-0",
-                              "contentType": "text/markdown",
-                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-9b416-ch-history-page-is-verified-chromium\\error-context.md"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
-                            "column": 102,
-                            "line": 142
-                          }
-                        }
-                      ],
-                      "status": "unexpected"
+                      "text": "Navigating to the admin page...\n"
+                    },
+                    {
+                      "text": "Navigating to the chatbot page...\n"
+                    },
+                    {
+                      "text": "Successfully navigated to the admin page.\n"
+                    },
+                    {
+                      "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                    },
+                    {
+                      "text": "Filling in email input...\n"
+                    },
+                    {
+                      "text": "Filling in password input...\n"
+                    },
+                    {
+                      "text": "Clicking on Sign In button...\n"
+                    },
+                    {
+                      "text": "Login submitted, waiting for dashboard to load...\n"
+                    },
+                    {
+                      "text": "Starting reset process for user: vivek.citrusbug@gmail.com\n"
+                    },
+                    {
+                      "text": "Clicking on User Data tab...\n"
+                    },
+                    {
+                      "text": "Searching for user with email: vivek.citrusbug@gmail.com\n"
+                    },
+                    {
+                      "text": "Waiting for user data to appear...\n"
+                    },
+                    {
+                      "text": "Scrolling horizontally to bring Reset button into view...\n"
+                    },
+                    {
+                      "text": "Clicking Reset button...\n"
+                    },
+                    {
+                      "text": "Clicking Reset button by text...\n"
+                    },
+                    {
+                      "text": "Confirming the reset...\n"
+                    },
+                    {
+                      "text": "Waiting for success message...\n"
+                    },
+                    {
+                      "text": "Reset confirmation message is visible.\n"
+                    },
+                    {
+                      "text": "✅ Reset process completed for user: vivek.citrusbug@gmail.com\n"
+                    },
+                    {
+                      "text": "Navigating to the admin page...\n"
+                    },
+                    {
+                      "text": "Navigating to the chatbot page...\n"
+                    },
+                    {
+                      "text": "Successfully navigated to chatbot login page.\n"
+                    },
+                    {
+                      "text": "Clicking \"Login with Email\" button...\n"
+                    },
+                    {
+                      "text": "Filling in email: vivek.citrusbug@gmail.com\n"
+                    },
+                    {
+                      "text": "Filling in password...\n"
+                    },
+                    {
+                      "text": "Clicking \"Submit\" to log in...\n"
+                    },
+                    {
+                      "text": "Waiting for page navigation after login...\n"
+                    },
+                    {
+                      "text": "Starting to fill personal information form...\n"
+                    },
+                    {
+                      "text": "Filling name: Keith\n"
+                    },
+                    {
+                      "text": "Selecting gender: זכר 👨\n"
+                    },
+                    {
+                      "text": "Checking visibility of \"Start\" button...\n"
+                    },
+                    {
+                      "text": "Clicking \"Start\" button...\n"
+                    },
+                    {
+                      "text": "✅ Personal info submitted successfully.\n"
+                    },
+                    {
+                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Einsteinium.\"\n"
+                    },
+                    {
+                      "text": "🕐 Waiting for bot response...\n"
+                    },
+                    {
+                      "text": "✅ Bot response received: \"🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו? מה לדעתך איינשטיין היה חושב על יסוד שנקרא על שמו?  \n איזה חומרים אחרים לדעתך מסתתרים ביקום שעדיין לא גילינו?\"\n"
+                    },
+                    {
+                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Berkelium.\"\n"
+                    },
+                    {
+                      "text": "🕐 Waiting for bot response...\n"
+                    },
+                    {
+                      "text": "✅ Bot response received: \"🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו?\"\n"
+                    },
+                    {
+                      "text": "Insufficient Balance pop-up comming\n"
+                    },
+                    {
+                      "text": "Insufficient Balance pop-up comming\n"
+                    },
+                    {
+                      "text": "Navigating to the admin page...\n"
+                    },
+                    {
+                      "text": "Navigating to the chatbot page...\n"
+                    },
+                    {
+                      "text": "Successfully navigated to the admin page.\n"
+                    },
+                    {
+                      "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                    },
+                    {
+                      "text": "Filling in email input...\n"
+                    },
+                    {
+                      "text": "Filling in password input...\n"
+                    },
+                    {
+                      "text": "Clicking on Sign In button...\n"
+                    },
+                    {
+                      "text": "Login submitted, waiting for dashboard to load...\n"
+                    },
+                    {
+                      "text": "Navigating to the admin page...\n"
+                    },
+                    {
+                      "text": "Navigating to the chatbot page...\n"
+                    },
+                    {
+                      "text": "Successfully navigated to chatbot login page.\n"
+                    },
+                    {
+                      "text": "Clicking \"Login with Email\" button...\n"
+                    },
+                    {
+                      "text": "Filling in email: vivek.citrusbug@gmail.com\n"
+                    },
+                    {
+                      "text": "Filling in password...\n"
+                    },
+                    {
+                      "text": "Clicking \"Submit\" to log in...\n"
+                    },
+                    {
+                      "text": "Waiting for page navigation after login...\n"
+                    },
+                    {
+                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Copper.\"\n"
+                    },
+                    {
+                      "text": "🕐 Waiting for bot response to begin...\n"
+                    },
+                    {
+                      "text": "✅ Bot response received: \"\"נחושת: המתכת שצובעת את ההיסטוריה ואת העתיד! 🧱⚡\"\nדמיין שאתה עומד בפאתי עיר קדומה, אלפי שנים אחורה בזמן. מסביבך, נפחים מכים בפטישים על מתכת אדמדמה ומבריקה – זו הנחושת! 🛠️ הנחושת (Copper), שסימולה הכימי הוא Cu, היא אחת המתכות הראשונות שהאדם למד לעבד. למה דווקא אותה? כי היא רכה יחסית (קל לעצב אותה!) ונמצאת בטבע בצורתה הכמעט טהורה. קסם אמיתי! ✨\n\nתכונות מיוחדות של נחושת 🌟\n\nמוליכות חשמלית מדהימה: הנחושת היא מוליך מעולה; זה הופך אותה לבחירה מספר אחת לכבלים וחוטי חשמל. ⚡\nעמידות גבוהה: היא לא מחלידה כמו ברזל – במקום זאת, היא מפתחת שכבה ירקרקה שנקראת \"פטינה\", שמגנה עליה.\nבעלת תכונות אנטיבקטריאליות: חיידקים פשוט לא אוהבים לשבת על נחושת (פחות מ-2 שעות והם כבר לא שורדים!). 🦠✨\n\n\nמהיכן מגיעה הנחושת? 🌍\nנחושת נמצאת במכרות בכל העולם – מכרייה באמריקה ועד מערות באפריקה הקדומה. הגדולה? צ'ילה! 🇨🇱 יש לה כמה מהמרבצים העשירים ביותר.\n\nבשימוש לאורך ההיסטוריה 📜\n\nתקופת הברונזה: כשערבבו נחושת עם בדיל נולד הברונזה – מהפכה טכנולוגית שאיפשרה יצירת כלי נשק וכלים חזקים במיוחד. ⚔️\nמטבעות: עד היום משתמשים בנחושת ליצירת מטבעות (כן, אותו צבע חום-זהוב במטבעות של אגורות).\nתכשיטים ואומנות: צבעה המיוחד הפך אותה לכוכבת ביצירות קישוט עתיקות.\n\n\nFun Fact מיוחד בשבילך! 🎉\nפסל החירות בניו יורק עשוי כולו מנחושת! נכון, הגוון הירוק שלו? זו השכבה המגנה שהזכרנו קודם – הפטינה! 🌿\n\nאז, Keith, עכשיו אתה יודע שלנחושת יש היסטוריה ענפה ותפקיד חשוב גם בעידן המודרני שלנו, ממש עד הסמארטפון בכיס שלך!\n איך לדעתך התכונה האנטיבקטריאלית של נחושת תשפיע על הרפואה בעתיד?  \n מעניין אותך לגלות איך כורים ומעבדים נחושת בעולם החדש? 🚀\"\n"
                     }
                   ],
-                  "id": "23335bb06d3df52af178-d341bd3b09fe8027bbd4",
-                  "file": "Chatbot.spec.ts",
-                  "line": 136,
-                  "column": 6
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-06-20T14:21:37.752Z",
+                  "annotations": [
+                    {
+                      "type": "info",
+                      "description": "Bot response: 🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו? מה לדעתך איינשטיין היה חושב על יסוד שנקרא על שמו?  \n איזה חומרים אחרים לדעתך מסתתרים ביקום שעדיין לא גילינו?"
+                    },
+                    {
+                      "type": "info",
+                      "description": "Bot response: 🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו?"
+                    },
+                    {
+                      "type": "info",
+                      "description": "Bot response: \"נחושת: המתכת שצובעת את ההיסטוריה ואת העתיד! 🧱⚡\"\nדמיין שאתה עומד בפאתי עיר קדומה, אלפי שנים אחורה בזמן. מסביבך, נפחים מכים בפטישים על מתכת אדמדמה ומבריקה – זו הנחושת! 🛠️ הנחושת (Copper), שסימולה הכימי הוא Cu, היא אחת המתכות הראשונות שהאדם למד לעבד. למה דווקא אותה? כי היא רכה יחסית (קל לעצב אותה!) ונמצאת בטבע בצורתה הכמעט טהורה. קסם אמיתי! ✨\n\nתכונות מיוחדות של נחושת 🌟\n\nמוליכות חשמלית מדהימה: הנחושת היא מוליך מעולה; זה הופך אותה לבחירה מספר אחת לכבלים וחוטי חשמל. ⚡\nעמידות גבוהה: היא לא מחלידה כמו ברזל – במקום זאת, היא מפתחת שכבה ירקרקה שנקראת \"פטינה\", שמגנה עליה.\nבעלת תכונות אנטיבקטריאליות: חיידקים פשוט לא אוהבים לשבת על נחושת (פחות מ-2 שעות והם כבר לא שורדים!). 🦠✨\n\n\nמהיכן מגיעה הנחושת? 🌍\nנחושת נמצאת במכרות בכל העולם – מכרייה באמריקה ועד מערות באפריקה הקדומה. הגדולה? צ'ילה! 🇨🇱 יש לה כמה מהמרבצים העשירים ביותר.\n\nבשימוש לאורך ההיסטוריה 📜\n\nתקופת הברונזה: כשערבבו נחושת עם בדיל נולד הברונזה – מהפכה טכנולוגית שאיפשרה יצירת כלי נשק וכלים חזקים במיוחד. ⚔️\nמטבעות: עד היום משתמשים בנחושת ליצירת מטבעות (כן, אותו צבע חום-זהוב במטבעות של אגורות).\nתכשיטים ואומנות: צבעה המיוחד הפך אותה לכוכבת ביצירות קישוט עתיקות.\n\n\nFun Fact מיוחד בשבילך! 🎉\nפסל החירות בניו יורק עשוי כולו מנחושת! נכון, הגוון הירוק שלו? זו השכבה המגנה שהזכרנו קודם – הפטינה! 🌿\n\nאז, Keith, עכשיו אתה יודע שלנחושת יש היסטוריה ענפה ותפקיד חשוב גם בעידן המודרני שלנו, ממש עד הסמארטפון בכיס שלך!\n איך לדעתך התכונה האנטיבקטריאלית של נחושת תשפיע על הרפואה בעתיד?  \n מעניין אותך לגלות איך כורים ומעבדים נחושת בעולם החדש? 🚀"
+                    }
+                  ],
+                  "attachments": []
                 }
-              ]
+              ],
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "802b36f43135f9baf1c9-ddb6ff58911ea5b37713",
+          "file": "insufficient_balance.spec.ts",
+          "line": 11,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-27T07:50:04.508Z",
-    "duration": 44724.133,
-    "expected": 0,
+    "startTime": "2025-06-20T14:21:34.908Z",
+    "duration": 145273.837,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
