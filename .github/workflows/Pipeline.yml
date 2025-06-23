@@ -149,7 +149,7 @@ jobs:
       - name: Set environment URLs
         run: |
           echo "URL_ADMIN=https://chat.bluedropacademy.com/admin" >> $GITHUB_ENV
-          echo "URL_CHATBOT=https://www.bluedropacademy.com/chatbot" >> $GITHUB_ENV
+          echo "URL_CHATBOT=https://www.bluedropacademy.com/blue" >> $GITHUB_ENV
 
       - name: Run Playwright Tests
         id: run-tests

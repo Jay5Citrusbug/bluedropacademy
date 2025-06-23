@@ -123,10 +123,12 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
 
  
 test('TC_13: 🔄 Click on the Continue button to resume session', async () => {
-      await chatbotscreen.InactivityPopup1();
-
-    }
-    );
+ const env = process.env.ENVIRONMENT || 'staging';
+  if (env === 'production') {
+    test.setTimeout(610_000); // 10 min 10 sec
+  }
+  await chatbotscreen.InactivityPopup1();
+});
 
 const env = process.env.ENVIRONMENT || 'staging';
 

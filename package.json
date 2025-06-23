@@ -5,8 +5,8 @@
   "scripts": {
     "test:staging": "cross-env ENVIRONMENT=staging URL_CHATBOT=https://bluedropacademy.wixsite.com/website-1/chat6 URL_ADMIN=https://stg-chat.bluedropacademy.com/admin npx playwright test --workers=1",
      "test:staging:headed": "cross-env ENVIRONMENT=staging URL_CHATBOT=https://bluedropacademy.wixsite.com/website-1/chat6 URL_ADMIN=https://stg-chat.bluedropacademy.com/admin npx playwright test --workers=1 --headed",
-    "test:prod": "cross-env ENVIRONMENT=production URL_CHATBOT=https://www.bluedropacademy.com/chatbot URL_ADMIN=https://chat.bluedropacademy.com/admin npx playwright test --workers=1",
-    "test:prod:headed": "cross-env ENVIRONMENT=production URL_CHATBOT=https://www.bluedropacademy.com/chatbot URL_ADMIN=https://chat.bluedropacademy.com/admin npx playwright test --workers=1 --headed"
+    "test:prod": "cross-env ENVIRONMENT=production URL_CHATBOT=https://www.bluedropacademy.com/blue URL_ADMIN=https://chat.bluedropacademy.com/admin npx playwright test --workers=1",
+    "test:prod:headed": "cross-env ENVIRONMENT=production URL_CHATBOT=https://www.bluedropacademy.com/blue URL_ADMIN=https://chat.bluedropacademy.com/admin npx playwright test --workers=1 --headed"
 
   },
   "keywords": [],

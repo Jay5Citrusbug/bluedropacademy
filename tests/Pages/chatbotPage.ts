@@ -254,10 +254,11 @@ async InactivityPopup1() {
   const inactivityPopup = frameLocator.locator('role=heading[name="נראה שלא היית פעיל לאחרונה"]');
 
   const env = process.env.ENVIRONMENT || 'staging';
-  const timeout = env === 'production' ? 610_000 : 70_000; // 10m10s for prod, 1m10s for staging
+  const timeout = env === 'production' ? 610_000 : 70_000; // 10m10s or 1m10s
 
   console.log(`⏳ Waiting in ${env} with timeout: ${timeout / 1000}s`);
 
+  // Wait for popup to be visible with appropriate timeout
   await expect(inactivityPopup).toBeVisible({ timeout });
 
   const popupFrame = this.page.frameLocator('iframe[name="htmlComp-iframe"]');
@@ -271,7 +272,6 @@ async InactivityPopup1() {
 
   console.log('🔄 Clicked "Continue Chat" button.');
 }
-
 
 async InactivityPopup2(){
 
