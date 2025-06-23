@@ -122,11 +122,11 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
     });
 
  
-// test('TC_13: 🔄 Click on the Continue button to resume session', async () => {
-//       await chatbotscreen.InactivityPopup1();
+test('TC_13: 🔄 Click on the Continue button to resume session', async () => {
+      await chatbotscreen.InactivityPopup1();
 
-//     }
-//     );
+    }
+    );
 
 const env = process.env.ENVIRONMENT || 'staging';
 

@@ -99,9 +99,36 @@
                         {
                           "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 910,
-                          "errors": [],
+                          "status": "interrupted",
+                          "duration": 0,
+                          "error": {
+                            "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'התחברות עם כתובת מייל' })\u001b[22m\n",
+                            "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'התחברות עם כתובת מייל' })\u001b[22m\n\n    at ChatbotLoginPage.login (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\LoginChatbot.ts:33:18)\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:42:19",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\LoginChatbot.ts",
+                              "column": 18,
+                              "line": 33
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39mPages\\LoginChatbot.ts:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\n \u001b[90m 32 |\u001b[39m                 \u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m chatbotLocators\u001b[33m.\u001b[39mloginWithEmailBtn\u001b[33m.\u001b[39mname })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 \u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m             console\u001b[33m.\u001b[39mlog(\u001b[32m`Filling in email: ${email}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\LoginChatbot.ts",
+                                "column": 18,
+                                "line": 33
+                              },
+                              "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'התחברות עם כתובת מייל' })\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\LoginChatbot.ts:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\n \u001b[90m 32 |\u001b[39m                 \u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m chatbotLocators\u001b[33m.\u001b[39mloginWithEmailBtn\u001b[33m.\u001b[39mname })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m                 \u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m             console\u001b[33m.\u001b[39mlog(\u001b[32m`Filling in email: ${email}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m             \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[0m\n\u001b[2m    at ChatbotLoginPage.login (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\LoginChatbot.ts:33:18)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:42:19\u001b[22m"
+                            },
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                                "column": 5,
+                                "line": 50
+                              },
+                              "message": "Error: browserContext.close: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 48 |\u001b[39m   test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 49 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🧹 Closing context'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 50 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 51 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 52 |\u001b[39m\n \u001b[90m 53 |\u001b[39m   \u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:50:5\u001b[22m"
+                            }
+                          ],
                           "stdout": [
                             {
                               "text": "Navigating to the admin page...\n"
@@ -176,71 +203,35 @@
                               "text": "Clicking \"Login with Email\" button...\n"
                             },
                             {
-                              "text": "Filling in email: vivek.citrusbug@gmail.com\n"
-                            },
-                            {
-                              "text": "Filling in password...\n"
-                            },
-                            {
-                              "text": "Clicking \"Submit\" to log in...\n"
-                            },
-                            {
-                              "text": "Waiting for page navigation after login...\n"
-                            },
-                            {
-                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button without filling fields...\n"
-                            },
-                            {
-                              "text": "Waiting for validation error messages...\n"
-                            },
-                            {
-                              "text": "Verified gender required validation message.\n"
-                            },
-                            {
-                              "text": "Verified name required validation message.\n"
-                            },
-                            {
-                              "text": "✅ Invalid input test completed with expected error validations.\n"
-                            },
-                            {
-                              "text": "Starting to fill personal information form...\n"
-                            },
-                            {
-                              "text": "Filling name: Otis\n"
-                            },
-                            {
-                              "text": "Selecting gender: זכר 👨\n"
-                            },
-                            {
-                              "text": "Checking visibility of \"Start\" button...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button...\n"
-                            },
-                            {
-                              "text": "✅ Personal info submitted successfully.\n"
-                            },
-                            {
-                              "text": "✅ Chatbot login and form submitted\n"
-                            },
-                            {
-                              "text": "🔍 Waiting for confirmation iframe to appear...\n"
-                            },
-                            {
-                              "text": "✅ Verifying confirmation message and title...\n"
+                              "text": "🧹 Closing context\n"
                             }
                           ],
-                          "stderr": [],
+                          "stderr": [
+                            {
+                              "text": "❌ Error during login: Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'התחברות עם כתובת מייל' })\u001b[22m\n\n"
+                            },
+                            {
+                              "text": "Test failed due to timeout after 40000 ms - check network/API/browser performance.\n"
+                            }
+                          ],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:36:39.577Z",
+                          "startTime": "2025-06-23T13:04:43.576Z",
                           "annotations": [],
-                          "attachments": []
+                          "attachments": [
+                            {
+                              "name": "_error-context-0",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-22492-screen-elements-are-visible-chromium\\error-context.md"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\LoginChatbot.ts",
+                            "column": 18,
+                            "line": 33
+                          }
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-b1004f10ffc156eaa0a1",
@@ -261,30 +252,20 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 665,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "📨 Bot message received: \"הי Otis,\nהתגעגעתי אליך! על מה נדבר הפעם? 💙👋\nמה שבא לך – אני מקשיב ופה לעזור.\"\n"
-                            },
-                            {
-                              "text": "✅ Bot message contains expected name: \"Otis\"\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:37:09.512Z",
+                          "startTime": "2025-06-23T13:05:17.052Z",
                           "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-7a1143fd846f163b527d",
@@ -305,24 +286,20 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 454,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔒 Verifying predefined buttons are hidden...\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:37:10.193Z",
+                          "startTime": "2025-06-23T13:05:17.068Z",
                           "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-6a0676835a2727c1c3fa",
@@ -343,30 +320,20 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 601,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "💬 Typing message: איך להכין Poutine? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\n"
-                            },
-                            {
-                              "text": "✅ Verifying Submit button is enabled...\n"
-                            },
-                            {
-                              "text": "🔄 Clearing input field after verification...\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:37:10.661Z",
+                          "startTime": "2025-06-23T13:05:17.083Z",
                           "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-fd5584203e368791c369",
@@ -381,46 +348,26 @@
                   "tests": [
                     {
                       "timeout": 180000,
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: 🧪 סטרונציום: המתכת שמרקידה את הכוכבים! 🌟🔥\nדמיין שאתה מטייל בלילה חשוך במדבר, והשמיים מלאים בזיקוקים אדומים מרהיבים שמתפוצצים כמו כוכבים קטנים. 🎆 אז תדע: התצוגה הזאת היא מתנתו של סטרונציום (Strontium), אלמנט מפתיע שמשלב עדינות ודרמה בעוצמה אחת כימית.\n\n🎬 סיפורו של סטרונציום\nסטרונציום הוא יסוד כימי עם הסמל Sr והמספר האטומי 38, והוא שייך למשפחת המתכות האלקליות-עפרוריות שבטבלה המחזורית. 🌍 הוא נקרא על שם כפר קטן בסקוטלנד בשם Strontian, שבו התגלה לראשונה בשנת 1790! מדהים לחשוב שאבן קטנה מהמקום הזה שינתה את עולם המדע לנצח. 🏞️\n💡 איך סטרונציום נראה?\nבמצבו הטבעי, סטרונציום הוא מתכת כסופה מבריקה, אבל כשנחשף לאוויר – אופס! – הוא מתחמצן במהירות ומקבל גוון צהבהב מעניין. ⚡\n\n🔥 למה הוא כל כך מיוחד?\n\n\nזיקוקים ופירוטכניקה 🎇\nכששורפים תרכובות של סטרונציום, הן פולטות להבות בצבע אדום עז ומהפנט – בדיוק כמו אלו שתראה בזיקוקי דינור באירועים חגיגיים.\n\n\nבריאות העצמות? וגם רדיואקטיביות! 🦴☢️\nתרכובות מסוימות של סטרונציום משמשות ברפואה לחיזוק עצמות כחלק מטיפול באוסטאופורוזיס. מצד שני, האיזוטופ הרדיואקטיבי שלו, סטרונציום-90, נוצר מפיצוצים גרעיניים ונחשב למסוכן מאוד לבריאות (אז אל תתקרב אליו!). 😨\n\n\nשעונים אטומיים מדויקים בטירוף!⏱️\nאחד השימושים הכי מגניבים בסטרונציום הוא בשעונים אטומיים מתקדמים – כאלה שמסוגלים למדוד זמן בדיוק של... מיליארדיות שנייה!\n\n\n\n🎁 בונוס מפתיע!\nידעת שהאוקיינוסים שלנו מלאים בסטרונציום? 🌊 בקליפת כדור הארץ יש המון מינרלים שמכילים אותו, והוא אפילו עוזר למדענים להבין את הגיל של מאובנים ודגימות קרקע קדומות.\n\n✨ לסיכום: סטרונציום אולי נשמע כמו \"עוד מתכת\", אבל הוא ממש כמו שחקן משנה שגונב את ההצגה – בין אם זה בזיקוקים מדהימים או בשעונים סופר-מדויקים! איך לדעתך גילו שסטרונציום יוצר להבות אדומות?  \n איזה שימוש נוסף היית ממציא למתכת הזו?"
-                        }
-                      ],
+                      "annotations": [],
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 17653,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "💬 Submitting query: \"תסביר לי בפרטים על Strontium.\"\n"
-                            },
-                            {
-                              "text": "🕐 Waiting for bot response to begin...\n"
-                            },
-                            {
-                              "text": "✅ Bot response received: \"🧪 סטרונציום: המתכת שמרקידה את הכוכבים! 🌟🔥\nדמיין שאתה מטייל בלילה חשוך במדבר, והשמיים מלאים בזיקוקים אדומים מרהיבים שמתפוצצים כמו כוכבים קטנים. 🎆 אז תדע: התצוגה הזאת היא מתנתו של סטרונציום (Strontium), אלמנט מפתיע שמשלב עדינות ודרמה בעוצמה אחת כימית.\n\n🎬 סיפורו של סטרונציום\nסטרונציום הוא יסוד כימי עם הסמל Sr והמספר האטומי 38, והוא שייך למשפחת המתכות האלקליות-עפרוריות שבטבלה המחזורית. 🌍 הוא נקרא על שם כפר קטן בסקוטלנד בשם Strontian, שבו התגלה לראשונה בשנת 1790! מדהים לחשוב שאבן קטנה מהמקום הזה שינתה את עולם המדע לנצח. 🏞️\n💡 איך סטרונציום נראה?\nבמצבו הטבעי, סטרונציום הוא מתכת כסופה מבריקה, אבל כשנחשף לאוויר – אופס! – הוא מתחמצן במהירות ומקבל גוון צהבהב מעניין. ⚡\n\n🔥 למה הוא כל כך מיוחד?\n\n\nזיקוקים ופירוטכניקה 🎇\nכששורפים תרכובות של סטרונציום, הן פולטות להבות בצבע אדום עז ומהפנט – בדיוק כמו אלו שתראה בזיקוקי דינור באירועים חגיגיים.\n\n\nבריאות העצמות? וגם רדיואקטיביות! 🦴☢️\nתרכובות מסוימות של סטרונציום משמשות ברפואה לחיזוק עצמות כחלק מטיפול באוסטאופורוזיס. מצד שני, האיזוטופ הרדיואקטיבי שלו, סטרונציום-90, נוצר מפיצוצים גרעיניים ונחשב למסוכן מאוד לבריאות (אז אל תתקרב אליו!). 😨\n\n\nשעונים אטומיים מדויקים בטירוף!⏱️\nאחד השימושים הכי מגניבים בסטרונציום הוא בשעונים אטומיים מתקדמים – כאלה שמסוגלים למדוד זמן בדיוק של... מיליארדיות שנייה!\n\n\n\n🎁 בונוס מפתיע!\nידעת שהאוקיינוסים שלנו מלאים בסטרונציום? 🌊 בקליפת כדור הארץ יש המון מינרלים שמכילים אותו, והוא אפילו עוזר למדענים להבין את הגיל של מאובנים ודגימות קרקע קדומות.\n\n✨ לסיכום: סטרונציום אולי נשמע כמו \"עוד מתכת\", אבל הוא ממש כמו שחקן משנה שגונב את ההצגה – בין אם זה בזיקוקים מדהימים או בשעונים סופר-מדויקים! איך לדעתך גילו שסטרונציום יוצר להבות אדומות?  \n איזה שימוש נוסף היית ממציא למתכת הזו?\"\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:37:11.272Z",
-                          "annotations": [
-                            {
-                              "type": "info",
-                              "description": "Bot response: 🧪 סטרונציום: המתכת שמרקידה את הכוכבים! 🌟🔥\nדמיין שאתה מטייל בלילה חשוך במדבר, והשמיים מלאים בזיקוקים אדומים מרהיבים שמתפוצצים כמו כוכבים קטנים. 🎆 אז תדע: התצוגה הזאת היא מתנתו של סטרונציום (Strontium), אלמנט מפתיע שמשלב עדינות ודרמה בעוצמה אחת כימית.\n\n🎬 סיפורו של סטרונציום\nסטרונציום הוא יסוד כימי עם הסמל Sr והמספר האטומי 38, והוא שייך למשפחת המתכות האלקליות-עפרוריות שבטבלה המחזורית. 🌍 הוא נקרא על שם כפר קטן בסקוטלנד בשם Strontian, שבו התגלה לראשונה בשנת 1790! מדהים לחשוב שאבן קטנה מהמקום הזה שינתה את עולם המדע לנצח. 🏞️\n💡 איך סטרונציום נראה?\nבמצבו הטבעי, סטרונציום הוא מתכת כסופה מבריקה, אבל כשנחשף לאוויר – אופס! – הוא מתחמצן במהירות ומקבל גוון צהבהב מעניין. ⚡\n\n🔥 למה הוא כל כך מיוחד?\n\n\nזיקוקים ופירוטכניקה 🎇\nכששורפים תרכובות של סטרונציום, הן פולטות להבות בצבע אדום עז ומהפנט – בדיוק כמו אלו שתראה בזיקוקי דינור באירועים חגיגיים.\n\n\nבריאות העצמות? וגם רדיואקטיביות! 🦴☢️\nתרכובות מסוימות של סטרונציום משמשות ברפואה לחיזוק עצמות כחלק מטיפול באוסטאופורוזיס. מצד שני, האיזוטופ הרדיואקטיבי שלו, סטרונציום-90, נוצר מפיצוצים גרעיניים ונחשב למסוכן מאוד לבריאות (אז אל תתקרב אליו!). 😨\n\n\nשעונים אטומיים מדויקים בטירוף!⏱️\nאחד השימושים הכי מגניבים בסטרונציום הוא בשעונים אטומיים מתקדמים – כאלה שמסוגלים למדוד זמן בדיוק של... מיליארדיות שנייה!\n\n\n\n🎁 בונוס מפתיע!\nידעת שהאוקיינוסים שלנו מלאים בסטרונציום? 🌊 בקליפת כדור הארץ יש המון מינרלים שמכילים אותו, והוא אפילו עוזר למדענים להבין את הגיל של מאובנים ודגימות קרקע קדומות.\n\n✨ לסיכום: סטרונציום אולי נשמע כמו \"עוד מתכת\", אבל הוא ממש כמו שחקן משנה שגונב את ההצגה – בין אם זה בזיקוקים מדהימים או בשעונים סופר-מדויקים! איך לדעתך גילו שסטרונציום יוצר להבות אדומות?  \n איזה שימוש נוסף היית ממציא למתכת הזו?"
-                            }
-                          ],
+                          "startTime": "2025-06-23T13:05:17.103Z",
+                          "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-4712db0785b820507c5a",
@@ -441,24 +388,20 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 429,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔽 Scrolling to bottom...\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:37:28.934Z",
+                          "startTime": "2025-06-23T13:05:17.105Z",
                           "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-4a6df28aff25a1be11bd",
@@ -479,24 +422,20 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1178,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "👍 Clicking Like button...\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:37:29.368Z",
+                          "startTime": "2025-06-23T13:05:17.106Z",
                           "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-8e846a5e520fef6853c1",
@@ -517,24 +456,20 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1517,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "👎 Clicking Dislike button...\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:37:30.559Z",
+                          "startTime": "2025-06-23T13:05:17.108Z",
                           "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-76f750f7381218bdaea2",
@@ -555,24 +490,20 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 883,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "📋 Clicking Copy button...\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:37:32.096Z",
+                          "startTime": "2025-06-23T13:05:17.124Z",
                           "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-9d74935fab974177c929",
@@ -587,46 +518,26 @@
                   "tests": [
                     {
                       "timeout": 180000,
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: ⚠️ האזהרה החשובה בעולם הסטרונציום – אל תבלבל בין טוב לרע! 🦴☢️"
-                        }
-                      ],
+                      "annotations": [],
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2970,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔘 Clicking Predefined button...\n"
-                            },
-                            {
-                              "text": "🕐 Waiting for bot response to begin...\n"
-                            },
-                            {
-                              "text": "✅ Bot response received: \"⚠️ האזהרה החשובה בעולם הסטרונציום – אל תבלבל בין טוב לרע! 🦴☢️\"\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:37:32.996Z",
-                          "annotations": [
-                            {
-                              "type": "info",
-                              "description": "Bot response: ⚠️ האזהרה החשובה בעולם הסטרונציום – אל תבלבל בין טוב לרע! 🦴☢️"
-                            }
-                          ],
+                          "startTime": "2025-06-23T13:05:17.127Z",
+                          "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-88afacf66e17aee71fe1",
@@ -647,33 +558,20 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 7450,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "📨 Bot message received: \"הי Otis,\nאיזה כיף שחזרת! יש לך שאלה מעניינת בשבילי היום? 🤩\nאני כאן לכל דבר שתרצה לדבר עליו או ללמוד יחד! 💭\"\n"
-                            },
-                            {
-                              "text": "✅ Bot message contains expected name: \"Otis\"\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:37:35.979Z",
+                          "startTime": "2025-06-23T13:05:17.155Z",
                           "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-c7349090cf66965b4e05",
@@ -694,48 +592,60 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1966,
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
                           "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔁 Starting a new chatbot session...\n"
-                            },
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "📨 Bot message received: \"הי Otis,\nכל הכבוד שהגעת! רוצה שנחקור יחד משהו חדש? 😄🔍\nאני פה בשביל כל נושא שמעניין אותך.\"\n"
-                            },
-                            {
-                              "text": "✅ Bot message contains expected name: \"Otis\"\n"
-                            },
-                            {
-                              "text": "🧹 Closing context\n"
-                            }
-                          ],
+                          "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-06-23T10:37:43.441Z",
+                          "startTime": "2025-06-23T13:05:17.184Z",
                           "annotations": [],
                           "attachments": []
                         }
                       ],
-                      "status": "expected"
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-d49dcdb6cd1284bfff6a",
                   "file": "Chatbot.spec.ts",
                   "line": 118,
                   "column": 9
+                },
+                {
+                  "title": "TC_13: 🔄 Click on the Continue button to resume session",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T13:05:17.211Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-01de7975448265b3a412",
+                  "file": "Chatbot.spec.ts",
+                  "line": 125,
+                  "column": 5
                 }
               ]
             }
@@ -774,146 +684,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1019,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "Navigating to the admin page...\n"
-                            },
-                            {
-                              "text": "Navigating to the chatbot page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to the admin page.\n"
-                            },
-                            {
-                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
-                            },
-                            {
-                              "text": "Filling in email input...\n"
-                            },
-                            {
-                              "text": "Filling in password input...\n"
-                            },
-                            {
-                              "text": "Clicking on Sign In button...\n"
-                            },
-                            {
-                              "text": "Login submitted, waiting for dashboard to load...\n"
-                            },
-                            {
-                              "text": "Starting reset process for user: vivek.citrusbug@gmail.com\n"
-                            },
-                            {
-                              "text": "Clicking on User Data tab...\n"
-                            },
-                            {
-                              "text": "Searching for user with email: vivek.citrusbug@gmail.com\n"
-                            },
-                            {
-                              "text": "Waiting for user data to appear...\n"
-                            },
-                            {
-                              "text": "Scrolling horizontally to bring Reset button into view...\n"
-                            },
-                            {
-                              "text": "Clicking Reset button...\n"
-                            },
-                            {
-                              "text": "Clicking Reset button by text...\n"
-                            },
-                            {
-                              "text": "Confirming the reset...\n"
-                            },
-                            {
-                              "text": "Waiting for success message...\n"
-                            },
-                            {
-                              "text": "Reset confirmation message is visible.\n"
-                            },
-                            {
-                              "text": "✅ Reset process completed for user: vivek.citrusbug@gmail.com\n"
-                            },
-                            {
-                              "text": "Navigating to the admin page...\n"
-                            },
-                            {
-                              "text": "Navigating to the chatbot page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to chatbot login page.\n"
-                            },
-                            {
-                              "text": "Clicking \"Login with Email\" button...\n"
-                            },
-                            {
-                              "text": "Filling in email: vivek.citrusbug@gmail.com\n"
-                            },
-                            {
-                              "text": "Filling in password...\n"
-                            },
-                            {
-                              "text": "Clicking \"Submit\" to log in...\n"
-                            },
-                            {
-                              "text": "Waiting for page navigation after login...\n"
-                            },
-                            {
-                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button without filling fields...\n"
-                            },
-                            {
-                              "text": "Waiting for validation error messages...\n"
-                            },
-                            {
-                              "text": "Verified gender required validation message.\n"
-                            },
-                            {
-                              "text": "Verified name required validation message.\n"
-                            },
-                            {
-                              "text": "✅ Invalid input test completed with expected error validations.\n"
-                            },
-                            {
-                              "text": "Starting to fill personal information form...\n"
-                            },
-                            {
-                              "text": "Filling name: Otis\n"
-                            },
-                            {
-                              "text": "Selecting gender: זכר 👨\n"
-                            },
-                            {
-                              "text": "Checking visibility of \"Start\" button...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button...\n"
-                            },
-                            {
-                              "text": "✅ Personal info submitted successfully.\n"
-                            },
-                            {
-                              "text": "✅ TC_19: Open Hamburger Menu\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-06-23T10:37:45.783Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-d6400aac6d37aafe7d9d",
@@ -932,29 +704,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 561,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_20: Load More button functionality\n"
-                            },
-                            {
-                              "text": "📜 Clicking Load More button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-06-23T10:38:12.980Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-ee7aba365ae094c6e3ae",
@@ -973,29 +724,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2669,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_21: No result in chat history\n"
-                            },
-                            {
-                              "text": "🔎 Using random search text: \"perferendis succurro\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-06-23T10:38:13.549Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-5f03b36d312022c2d667",
@@ -1014,29 +744,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 711,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_22: Close Hamburger Menu\n"
-                            },
-                            {
-                              "text": "❌ Closing hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-06-23T10:38:16.231Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-2733a8bf55763ffe85b2",
@@ -1055,41 +764,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1972,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_23: Start new session using \"שיחה חדשה\"\n"
-                            },
-                            {
-                              "text": "🔁 Creating new session from hamburger menu...\n"
-                            },
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "📨 Bot message received: \"הי Otis,\nאני ממש שמח לראות אותך כאן! על מה בא לך לדבר? 😃💬\nאין חוקים – כל מה שמעניין אותך, מתאים.\"\n"
-                            },
-                            {
-                              "text": "✅ Bot message contains expected name: \"Otis\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-06-23T10:38:16.952Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-368e70807ff37c4900ea",
@@ -1108,29 +784,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1263,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_24: Edit and save changes in chat history\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-06-23T10:38:18.934Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-bec0605e2fc1c0706c44",
@@ -1149,29 +804,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2466,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_21: Continue Chat Functionality\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-06-23T10:38:20.204Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-2a01c3748576844eb9bf",
@@ -1198,35 +832,11 @@
           "tests": [
             {
               "timeout": 180000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "Skipping in production environment"
-                }
-              ],
-              "expectedStatus": "skipped",
+              "annotations": [],
+              "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "skipped",
-                  "duration": 8,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-06-23T10:38:22.986Z",
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "description": "Skipping in production environment"
-                    }
-                  ],
-                  "attachments": []
-                }
-              ],
+              "results": [],
               "status": "skipped"
             }
           ],
@@ -1240,10 +850,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-23T10:36:37.839Z",
-    "duration": 106086.706,
-    "expected": 19,
-    "skipped": 1,
+    "startTime": "2025-06-23T13:04:40.821Z",
+    "duration": 36789.37,
+    "expected": 0,
+    "skipped": 21,
     "unexpected": 0,
     "flaky": 0
   }

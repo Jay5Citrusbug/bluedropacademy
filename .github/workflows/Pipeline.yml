@@ -52,7 +52,7 @@ jobs:
       - name: Run Playwright Tests
         id: run-tests
         continue-on-error: true
-        run: npx playwright test --project=chromium --workers=1
+        run: npm run test:staging
 
       - name: Debug Playwright Report folder
         run: ls -la playwright-report
@@ -154,7 +154,8 @@ jobs:
       - name: Run Playwright Tests
         id: run-tests
         continue-on-error: true
-        run: npx playwright test --project=chromium --workers=1
+        run: npm run test:prod
+
 
       - name: Debug Playwright Report folder
         run: ls -la playwright-report
