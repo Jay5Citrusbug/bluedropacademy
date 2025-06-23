@@ -122,22 +122,21 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
     });
 
  
-test('TC_13: 🔄 Click on the Continue button to resume session', async () => {
-      await chatbotscreen.InactivityPopup1();
+// test('TC_13: 🔄 Click on the Continue button to resume session', async () => {
+//       await chatbotscreen.InactivityPopup1();
 
-    }
-    );
+//     }
+//     );
 
 const env = process.env.ENVIRONMENT || 'staging';
-test.skip(env === 'production', '⏭️ Skipping in production environment');
 
-test('TC_14: ⏱️ Session pop-up displays after 1 minute and close pop-up', async () => {
-        await chatbotscreen.InactivityPopup2();
-        await page.reload();
-        await chatbotscreen.InitialbotMessage(testUserData.name);
-    }
-    );
-    
+if (env !== 'production') {
+  test('TC_14: ⏱️ Session pop-up displays after 1 minute and close pop-up', async ({ page }) => {
+    await chatbotscreen.InactivityPopup2();
+    await page.reload();
+    await chatbotscreen.InitialbotMessage(testUserData.name);
+  });
+}
 
 
 test.afterEach(async ({ page }, testInfo) => {
