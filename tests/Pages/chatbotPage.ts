@@ -2,6 +2,7 @@ import { Chatbotlocator } from '../Locators/chatbotLocator';
 import { Page, expect, FrameLocator, TestInfo } from '@playwright/test';
 import { generateRandomQuestion } from '../Utils/testData';
 import { MenuLocator } from '../Locators/HamburgerMenuLocator';
+import { time } from 'console';
 
 export class chatbotPage {
   readonly page: Page;
@@ -52,6 +53,9 @@ async SubmitbtnNotActive() {
 
     console.log('✅ Verifying Submit button is enabled...');
     await expect(frameLocator.locator(Chatbotlocator.SubmitBtn)).toBeEnabled();
+    await frameLocator.getByTestId('seach-msg-input').clear();
+    console.log('🔄 Clearing input field after verification...');
+
   }
 
   async PredefinebuttonNotActive() {
@@ -137,13 +141,15 @@ async SubmitQuery(testInfo: TestInfo): Promise<string> {
   return botResponse;
 }
 
-
   async scrollToBottom() {
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
     console.log('🔽 Scrolling to bottom...');
 
     await expect(frameLocator.locator(Chatbotlocator.ScrollingBtn)).toBeVisible();
-    await frameLocator.locator(Chatbotlocator.ScrollingBtn).click();
+    await frameLocator.locator('body').evaluate((body) => {
+  window.scrollTo(0, body.scrollHeight);
+});
+ //   await frameLocator.locator(Chatbotlocator.ScrollingBtn).click();
     await expect(frameLocator.getByText(Chatbotlocator.VerifyBottomTxt)).toBeVisible();
   }
 

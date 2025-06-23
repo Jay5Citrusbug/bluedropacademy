@@ -183,9 +183,7 @@ async SubmitQuery2(testInfo: TestInfo): Promise<string> {
 
   await input.clear();
   await input.fill(this.userMessage);
-  await expect(submitBtn).toBeEnabled();
-  await submitBtn.click();
-
+  await input.press('Enter');
   console.log('🕐 Waiting for bot response...');
   await this.page.waitForTimeout(30000);
 

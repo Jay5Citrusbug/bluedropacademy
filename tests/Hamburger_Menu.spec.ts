@@ -96,45 +96,45 @@ test.describe('BlueDrop Hamburgermenu Test Suite', () => {
 //   await page.close();
 // });
 
-    test('TC_19 🔓 Open Hamburger Menu', async () => {
+    test('TC_15 🔓 Open Hamburger Menu', async () => {
       console.log('✅ TC_19: Open Hamburger Menu');
       await Menu.OpenHamburgerMenu();
     });
 
-    test('TC_20 ➕ Load More button functionality', async () => {
+    test('TC_16 ➕ Load More button functionality', async () => {
       console.log('✅ TC_20: Load More button functionality');
       await Menu.LoadmoreBtn();
     });
 
 
-    test('TC_21 ❌ No result in chat history', async () => {
+    test('TC_17 ❌ No result in chat history', async () => {
       console.log('✅ TC_21: No result in chat history');
       await Menu.NoSearchHistory();
     });
 
-    test('TC_22 ❎ Close Hamburger Menu', async () => {
+    test('TC_18 ❎ Close Hamburger Menu', async () => {
       console.log('✅ TC_22: Close Hamburger Menu');
       await Menu.CloseHamburgerMenu();
     });
 
-    test('TC_23 🆕 New session with "שיחה חדשה"', async () => {
+    test('TC_19 🆕 New session with "שיחה חדשה"', async () => {
       console.log('✅ TC_23: Start new session using "שיחה חדשה"');
       await Menu.Newsession();
       await chatbotscreen.Pagereload();
       await chatbotscreen.InitialbotMessage( testUserData.name);
     });
 
-    test('TC_24 ✏️ Edit and save changes in chat history', async () => {
+    test('TC_20 ✏️ Edit and save changes in chat history', async () => {
       console.log('✅ TC_24: Edit and save changes in chat history');
       await Menu.OpenHamburgerMenu();
       await Menu.Edithistory();
     });
 
-    test('TC_25 🔁 Continue Chat Functionality', async () => {
-     
-     console.log('✅ TC_25: Continue Chat Functionality');
-    await Menu.OpenHamburgerMenu();
-    await page.evaluate(() => window.scrollTo(0, 0));
+    test('TC_21 🔁 Continue Chat Functionality', async () => {
+
+      console.log('✅ TC_21: Continue Chat Functionality');
+      await Menu.OpenHamburgerMenu();
+      await page.evaluate(() => window.scrollTo(0, 0));
     await Menu.OpenHistory_ContinueSession();
     });
 

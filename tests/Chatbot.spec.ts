@@ -74,16 +74,16 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
     //   await chatbotscreen.SubmitbtnNotActive();
     // });
 
-    test('TC_05: ✅ Submit button is enabled after input', async () => {
+    test('TC_04: ✅ Submit button is enabled after input', async () => {
       await chatbotscreen.SubmitbtnActive();
     });
 
-    test('TC_06: 📤 Submit query message', async ({}, testInfo) => {
+    test('TC_05: 📤 Submit query message', async ({}, testInfo) => {
      // await page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('switch', { name: 'icon' }).click();
       await chatbotscreen.SubmitQuery(testInfo);
     });
 
-    test('TC_07: 🔽 Scroll to bottom of chat', async ({},testInfo) => {
+    test('TC_06: 🔽 Scroll to bottom of chat', async ({},testInfo) => {
       await chatbotscreen.scrollToBottom();
     });
 
@@ -92,37 +92,37 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
     //   await chatbotscreen.PredefinebuttonActive();
     // });
 
-    test('TC_09: 👍 Like button functionality', async () => {
+    test('TC_07: 👍 Like button functionality', async () => {
       await chatbotscreen.LikeBtn();
     });
 
-    test('TC_10: 👎 Dislike button functionality', async () => {
+    test('TC_08: 👎 Dislike button functionality', async () => {
       await chatbotscreen.DisLikeBtn();
     });
 
-    test('TC_11: 📋 Copy button functionality', async () => {
+    test('TC_09: 📋 Copy button functionality', async () => {
       await chatbotscreen.CopyBtn(); // changed from DisLikeBtn to CopyBtn for clarity
     });
 
 
-    test('TC_12: 📍 Predefined button click triggers response', async ({}, testInfo) => {
+    test('TC_10: 📍 Predefined button click triggers response', async ({}, testInfo) => {
       await chatbotscreen.PredefinedBtnClick(testInfo);
     });
 
-      test('TC_13: 🔄 Reload hides previous chat', async () => {
+      test('TC_11: 🔄 Reload hides previous chat', async () => {
         await page.reload();
         await chatbotscreen.Pagereload();
         await chatbotscreen.InitialbotMessage(testUserData.name);
     });
 
-    test('TC_14: ✏️ New session is created using edit icon', async () => {
+    test('TC_12: ✏️ New session is created using edit icon', async () => {
       await chatbotscreen.NewsessionChatbotPage();
       await chatbotscreen.Pagereload();
       await chatbotscreen.InitialbotMessage(testUserData.name);
     });
 
  
-test('TC_15: 🔄 Click on the Continue button to resume session', async () => {
+test('TC_13: 🔄 Click on the Continue button to resume session', async () => {
       await chatbotscreen.InactivityPopup1();
 
     }
@@ -131,7 +131,7 @@ test('TC_15: 🔄 Click on the Continue button to resume session', async () => {
 const env = process.env.ENVIRONMENT || 'staging';
 test.skip(env === 'production', '⏭️ Skipping in production environment');
 
-test('TC_16: ⏱️ Session pop-up displays after 1 minute and close pop-up', async () => {
+test('TC_14: ⏱️ Session pop-up displays after 1 minute and close pop-up', async () => {
         await chatbotscreen.InactivityPopup2();
         await page.reload();
         await chatbotscreen.InitialbotMessage(testUserData.name);

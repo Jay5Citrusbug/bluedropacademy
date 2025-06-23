@@ -65,6 +65,1224 @@
   },
   "suites": [
     {
+      "title": "Chatbot.spec.ts",
+      "file": "Chatbot.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "BlueDrop Chatbot Test Suite",
+          "file": "Chatbot.spec.ts",
+          "line": 22,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "💬 Chatbot Screen",
+              "file": "Chatbot.spec.ts",
+              "line": 55,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC_01: ✅ Confirm chatbot screen elements are visible",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 615,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: vivek.citrusbug@gmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: vivek.citrusbug@gmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Scrolling horizontally to bring Reset button into view...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button by text...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: vivek.citrusbug@gmail.com\n"
+                            },
+                            {
+                              "text": "✅ User reset complete\n"
+                            },
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: vivek.citrusbug@gmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            },
+                            {
+                              "text": "Waiting for validation error messages...\n"
+                            },
+                            {
+                              "text": "Verified gender required validation message.\n"
+                            },
+                            {
+                              "text": "Verified name required validation message.\n"
+                            },
+                            {
+                              "text": "✅ Invalid input test completed with expected error validations.\n"
+                            },
+                            {
+                              "text": "Starting to fill personal information form...\n"
+                            },
+                            {
+                              "text": "Filling name: Johnathan\n"
+                            },
+                            {
+                              "text": "Selecting gender: זכר 👨\n"
+                            },
+                            {
+                              "text": "Checking visibility of \"Start\" button...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button...\n"
+                            },
+                            {
+                              "text": "✅ Personal info submitted successfully.\n"
+                            },
+                            {
+                              "text": "✅ Chatbot login and form submitted\n"
+                            },
+                            {
+                              "text": "🔍 Waiting for confirmation iframe to appear...\n"
+                            },
+                            {
+                              "text": "✅ Verifying confirmation message and title...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:21:19.966Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-b1004f10ffc156eaa0a1",
+                  "file": "Chatbot.spec.ts",
+                  "line": 58,
+                  "column": 9
+                },
+                {
+                  "title": "TC_02: 🧠 Initial chatbot message is displayed",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1015,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "📨 Bot message received: \"הי Johnathan,\nיאללה, נתחיל בכיף! מה מעניין אותך ללמוד היום? 🎉📘\nאפשר לשאול על כל דבר שעולה לך לראש.\"\n"
+                            },
+                            {
+                              "text": "✅ Bot message contains expected name: \"Johnathan\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:21:51.034Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-7a1143fd846f163b527d",
+                  "file": "Chatbot.spec.ts",
+                  "line": 64,
+                  "column": 9
+                },
+                {
+                  "title": "TC_03: 🚫 Predefined buttons are not active",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 171,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔒 Verifying predefined buttons are hidden...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:21:52.054Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-6a0676835a2727c1c3fa",
+                  "file": "Chatbot.spec.ts",
+                  "line": 69,
+                  "column": 9
+                },
+                {
+                  "title": "TC_05: ✅ Submit button is enabled after input",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 292,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Typing message: תסביר לי בפרטים על Hydrogen.\n"
+                            },
+                            {
+                              "text": "✅ Verifying Submit button is enabled...\n"
+                            },
+                            {
+                              "text": "🔄 Clearing input field after verification...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:21:52.232Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-b35b2af01cf0d18b9281",
+                  "file": "Chatbot.spec.ts",
+                  "line": 77,
+                  "column": 9
+                },
+                {
+                  "title": "TC_06: 📤 Submit query message",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: Naomie's Special Extra Virgin Olive Oil – סיפור של זהב נוזלי 🌿✨\nדמיין רגע את הרגע שבו זית בשל, ירוק או שחור, נפרד מעץ הזית כאילו עמד על קצות אצבעותיו לעוף אל הידיים שלך. 🍈 עכשיו, בוא נצא למסע להפוך את הפלא הזה לשמן זית כתית מעולה! מוכנים? קדימה 🚀.\n\nשלב 1: בחירת הזיתים המושלמים 🍇\nהכל מתחיל בבחירה קפדנית של הזיתים. צריך זיתים טריים ורעננים, לא כאלו שראו יותר מדי שמש או נפלו לבד לקרקע. האם לבחור ירוקים? שחורים? זה תלוי בטעם האישי; ירוקים יתנו שמן עדין ופירותי, ושחורים יהיו עשירים יותר.\n💡 פיקנטיות שונה? ערבבו בין שניהם כמו אומן שמרכיב ציור.\n\nשלב 2: שטיפה רעננה כמו טל הבוקר 💧\nלפני שעושים משהו, שטפו היטב את הזיתים להסיר כל גרגר אבק או עלה חצוף שהשתחל פנימה.\nכאן אפשר לצחוק קצת על איך זיתים \"מתקלחים\" — רק בלי סבון! 🛁\n\nשלב 3: ריסוק – מסיבת סקוויז! 💥\nברגע שהזיתים נקיים, הגיע הזמן להכניס אותם למעוך ב-\"Crusher\".\nהמכונה הזו הופכת אותם לעיסה אחידה (ממש כמו להכין גוואקמולי לאבוקדו).\nזה השלב שבו השמנים מתחילים להשתחרר… והחדר מתמלא בניחוח נהדר 🌺.\nאגב, בימי קדם היו דורכים עליהם עם הרגליים! לא היגייני במיוחד אבל בהחלט דרמה היסטורית...\n\nשלב 4: ערבוב – (Malaxing) הזמן לתת לזיתים \"לנוח\" ⏳\nאת העיסה מערבלים בעדינות במשך כ-20–40 דקות בטמפרטורה מבוקרת (25–27 מעלות).\nהמטרה פה היא לשחרר את טיפות השמן ולתת להן להתאחד לזרם קסום אחד. ✨\n\nחשוב: שמרו על טמפרטורה נמוכה כדי לקבל את הסטטוס הנכסף של “כבישה קרה”!\n\n\nשלב 5: סחיטה – רגע הקסם 🎩🛠️\nעכשיו מגיע הדבר האמיתי — הפרדת השמן מהפסולת (שנקראת \"גפת\").\nזה נעשה בשיטות מודרניות עם צנטריפוגה שמסתובבת במהירות הבזק 🚀 ושולחת את הגפת לכיוון אחד ואת הזהב הנוזלי לכיוון השני.\n\nמחפשים אותנטיות? נסו להשתמש בשיטת הדחיסה העתיקה עם רשתות וסלעים כבדים 🪨!\n\n\nשלב 6: סינון ובקבוק – התכשיט נחשף 💎🍶\nכמעט סיימנו! את השמן המסונן מוזגים בעדינות לבקבוקי זכוכית כהים כדי לשמור עליו מהאויבים הכי גדולים שלו: אור ואוויר. ☀️🌬️\n👨‍🍳 טיפ של מקצוענים: תנו לשמן לנוח כמה ימים לפני הטעימה הראשונה — הטעמים מתאזנים ומשתפרים!\n\nבונוס מעניין:\nידעת ששמן זית הוא לא רק טעים אלא גם יכול להיות מרפא בזכות נוגדי החמצון שבו? אנשים קוראים לזה \"תרופה בבקבוק\"! 🩹🍃\n\n🎉 מזל טוב! הכנת בעצמך Naomie's Special Extra Virgin Olive Oil! עכשיו אפשר לטפטף אותו על לחם טרי, גבינות, או פשוט ליהנות ממנו בכפית (כי למה לא?). איזה סוג זית אתה הכי אוהב להכין ממנו שמן, ירוק או שחור?  \n רוצה שאשתף אותך במתכון סודי לרוטב שמן זית מושלם?"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 22464,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "💬 Submitting query: \"איך להכין Naomie's Special Extra Virgin Olive Oil? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                            },
+                            {
+                              "text": "🕐 Waiting for bot response to begin...\n"
+                            },
+                            {
+                              "text": "✅ Bot response received: \"Naomie's Special Extra Virgin Olive Oil – סיפור של זהב נוזלי 🌿✨\nדמיין רגע את הרגע שבו זית בשל, ירוק או שחור, נפרד מעץ הזית כאילו עמד על קצות אצבעותיו לעוף אל הידיים שלך. 🍈 עכשיו, בוא נצא למסע להפוך את הפלא הזה לשמן זית כתית מעולה! מוכנים? קדימה 🚀.\n\nשלב 1: בחירת הזיתים המושלמים 🍇\nהכל מתחיל בבחירה קפדנית של הזיתים. צריך זיתים טריים ורעננים, לא כאלו שראו יותר מדי שמש או נפלו לבד לקרקע. האם לבחור ירוקים? שחורים? זה תלוי בטעם האישי; ירוקים יתנו שמן עדין ופירותי, ושחורים יהיו עשירים יותר.\n💡 פיקנטיות שונה? ערבבו בין שניהם כמו אומן שמרכיב ציור.\n\nשלב 2: שטיפה רעננה כמו טל הבוקר 💧\nלפני שעושים משהו, שטפו היטב את הזיתים להסיר כל גרגר אבק או עלה חצוף שהשתחל פנימה.\nכאן אפשר לצחוק קצת על איך זיתים \"מתקלחים\" — רק בלי סבון! 🛁\n\nשלב 3: ריסוק – מסיבת סקוויז! 💥\nברגע שהזיתים נקיים, הגיע הזמן להכניס אותם למעוך ב-\"Crusher\".\nהמכונה הזו הופכת אותם לעיסה אחידה (ממש כמו להכין גוואקמולי לאבוקדו).\nזה השלב שבו השמנים מתחילים להשתחרר… והחדר מתמלא בניחוח נהדר 🌺.\nאגב, בימי קדם היו דורכים עליהם עם הרגליים! לא היגייני במיוחד אבל בהחלט דרמה היסטורית...\n\nשלב 4: ערבוב – (Malaxing) הזמן לתת לזיתים \"לנוח\" ⏳\nאת העיסה מערבלים בעדינות במשך כ-20–40 דקות בטמפרטורה מבוקרת (25–27 מעלות).\nהמטרה פה היא לשחרר את טיפות השמן ולתת להן להתאחד לזרם קסום אחד. ✨\n\nחשוב: שמרו על טמפרטורה נמוכה כדי לקבל את הסטטוס הנכסף של “כבישה קרה”!\n\n\nשלב 5: סחיטה – רגע הקסם 🎩🛠️\nעכשיו מגיע הדבר האמיתי — הפרדת השמן מהפסולת (שנקראת \"גפת\").\nזה נעשה בשיטות מודרניות עם צנטריפוגה שמסתובבת במהירות הבזק 🚀 ושולחת את הגפת לכיוון אחד ואת הזהב הנוזלי לכיוון השני.\n\nמחפשים אותנטיות? נסו להשתמש בשיטת הדחיסה העתיקה עם רשתות וסלעים כבדים 🪨!\n\n\nשלב 6: סינון ובקבוק – התכשיט נחשף 💎🍶\nכמעט סיימנו! את השמן המסונן מוזגים בעדינות לבקבוקי זכוכית כהים כדי לשמור עליו מהאויבים הכי גדולים שלו: אור ואוויר. ☀️🌬️\n👨‍🍳 טיפ של מקצוענים: תנו לשמן לנוח כמה ימים לפני הטעימה הראשונה — הטעמים מתאזנים ומשתפרים!\n\nבונוס מעניין:\nידעת ששמן זית הוא לא רק טעים אלא גם יכול להיות מרפא בזכות נוגדי החמצון שבו? אנשים קוראים לזה \"תרופה בבקבוק\"! 🩹🍃\n\n🎉 מזל טוב! הכנת בעצמך Naomie's Special Extra Virgin Olive Oil! עכשיו אפשר לטפטף אותו על לחם טרי, גבינות, או פשוט ליהנות ממנו בכפית (כי למה לא?). איזה סוג זית אתה הכי אוהב להכין ממנו שמן, ירוק או שחור?  \n רוצה שאשתף אותך במתכון סודי לרוטב שמן זית מושלם?\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:21:52.535Z",
+                          "annotations": [
+                            {
+                              "type": "info",
+                              "description": "Bot response: Naomie's Special Extra Virgin Olive Oil – סיפור של זהב נוזלי 🌿✨\nדמיין רגע את הרגע שבו זית בשל, ירוק או שחור, נפרד מעץ הזית כאילו עמד על קצות אצבעותיו לעוף אל הידיים שלך. 🍈 עכשיו, בוא נצא למסע להפוך את הפלא הזה לשמן זית כתית מעולה! מוכנים? קדימה 🚀.\n\nשלב 1: בחירת הזיתים המושלמים 🍇\nהכל מתחיל בבחירה קפדנית של הזיתים. צריך זיתים טריים ורעננים, לא כאלו שראו יותר מדי שמש או נפלו לבד לקרקע. האם לבחור ירוקים? שחורים? זה תלוי בטעם האישי; ירוקים יתנו שמן עדין ופירותי, ושחורים יהיו עשירים יותר.\n💡 פיקנטיות שונה? ערבבו בין שניהם כמו אומן שמרכיב ציור.\n\nשלב 2: שטיפה רעננה כמו טל הבוקר 💧\nלפני שעושים משהו, שטפו היטב את הזיתים להסיר כל גרגר אבק או עלה חצוף שהשתחל פנימה.\nכאן אפשר לצחוק קצת על איך זיתים \"מתקלחים\" — רק בלי סבון! 🛁\n\nשלב 3: ריסוק – מסיבת סקוויז! 💥\nברגע שהזיתים נקיים, הגיע הזמן להכניס אותם למעוך ב-\"Crusher\".\nהמכונה הזו הופכת אותם לעיסה אחידה (ממש כמו להכין גוואקמולי לאבוקדו).\nזה השלב שבו השמנים מתחילים להשתחרר… והחדר מתמלא בניחוח נהדר 🌺.\nאגב, בימי קדם היו דורכים עליהם עם הרגליים! לא היגייני במיוחד אבל בהחלט דרמה היסטורית...\n\nשלב 4: ערבוב – (Malaxing) הזמן לתת לזיתים \"לנוח\" ⏳\nאת העיסה מערבלים בעדינות במשך כ-20–40 דקות בטמפרטורה מבוקרת (25–27 מעלות).\nהמטרה פה היא לשחרר את טיפות השמן ולתת להן להתאחד לזרם קסום אחד. ✨\n\nחשוב: שמרו על טמפרטורה נמוכה כדי לקבל את הסטטוס הנכסף של “כבישה קרה”!\n\n\nשלב 5: סחיטה – רגע הקסם 🎩🛠️\nעכשיו מגיע הדבר האמיתי — הפרדת השמן מהפסולת (שנקראת \"גפת\").\nזה נעשה בשיטות מודרניות עם צנטריפוגה שמסתובבת במהירות הבזק 🚀 ושולחת את הגפת לכיוון אחד ואת הזהב הנוזלי לכיוון השני.\n\nמחפשים אותנטיות? נסו להשתמש בשיטת הדחיסה העתיקה עם רשתות וסלעים כבדים 🪨!\n\n\nשלב 6: סינון ובקבוק – התכשיט נחשף 💎🍶\nכמעט סיימנו! את השמן המסונן מוזגים בעדינות לבקבוקי זכוכית כהים כדי לשמור עליו מהאויבים הכי גדולים שלו: אור ואוויר. ☀️🌬️\n👨‍🍳 טיפ של מקצוענים: תנו לשמן לנוח כמה ימים לפני הטעימה הראשונה — הטעמים מתאזנים ומשתפרים!\n\nבונוס מעניין:\nידעת ששמן זית הוא לא רק טעים אלא גם יכול להיות מרפא בזכות נוגדי החמצון שבו? אנשים קוראים לזה \"תרופה בבקבוק\"! 🩹🍃\n\n🎉 מזל טוב! הכנת בעצמך Naomie's Special Extra Virgin Olive Oil! עכשיו אפשר לטפטף אותו על לחם טרי, גבינות, או פשוט ליהנות ממנו בכפית (כי למה לא?). איזה סוג זית אתה הכי אוהב להכין ממנו שמן, ירוק או שחור?  \n רוצה שאשתף אותך במתכון סודי לרוטב שמן זית מושלם?"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-c7d9a4d7c8379355269a",
+                  "file": "Chatbot.spec.ts",
+                  "line": 81,
+                  "column": 9
+                },
+                {
+                  "title": "TC_07: 🔽 Scroll to bottom of chat",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 193,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔽 Scrolling to bottom...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:22:15.004Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-30c38a51400fa5db62f0",
+                  "file": "Chatbot.spec.ts",
+                  "line": 86,
+                  "column": 9
+                },
+                {
+                  "title": "TC_09: 👍 Like button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1128,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "👍 Clicking Like button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:22:15.202Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-fb851d92181092d9ee02",
+                  "file": "Chatbot.spec.ts",
+                  "line": 95,
+                  "column": 9
+                },
+                {
+                  "title": "TC_10: 👎 Dislike button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 612,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "👎 Clicking Dislike button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:22:16.335Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-fe244b42414d3a15ab9a",
+                  "file": "Chatbot.spec.ts",
+                  "line": 99,
+                  "column": 9
+                },
+                {
+                  "title": "TC_11: 📋 Copy button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 196,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "📋 Clicking Copy button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:22:16.952Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-5b9d5ff26ae699e98514",
+                  "file": "Chatbot.spec.ts",
+                  "line": 103,
+                  "column": 9
+                },
+                {
+                  "title": "TC_12: 📍 Predefined button click triggers response",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: \"How?\" – The Tiny Word That Builds Universes! 🌌🛠️\nHow do birds fly? How does Wi-Fi work"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2541,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔘 Clicking Predefined button...\n"
+                            },
+                            {
+                              "text": "🕐 Waiting for bot response to begin...\n"
+                            },
+                            {
+                              "text": "✅ Bot response received: \"\"How?\" – The Tiny Word That Builds Universes! 🌌🛠️\nHow do birds fly? How does Wi-Fi work\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:22:17.154Z",
+                          "annotations": [
+                            {
+                              "type": "info",
+                              "description": "Bot response: \"How?\" – The Tiny Word That Builds Universes! 🌌🛠️\nHow do birds fly? How does Wi-Fi work"
+                            }
+                          ],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-f403e5035d0666c0b019",
+                  "file": "Chatbot.spec.ts",
+                  "line": 108,
+                  "column": 9
+                },
+                {
+                  "title": "TC_13: 🔄 Reload hides previous chat",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 6275,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "📨 Bot message received: \"הי Johnathan,\nחיכיתי לך! במה נעזור לך להצליח הפעם?\nאפשר לשאול, לגלות, להבין או לחקור כל דבר שתרצה. 😄🚀\"\n"
+                            },
+                            {
+                              "text": "✅ Bot message contains expected name: \"Johnathan\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:22:24.087Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-507e3eeff22d394f85bc",
+                  "file": "Chatbot.spec.ts",
+                  "line": 112,
+                  "column": 11
+                },
+                {
+                  "title": "TC_14: ✏️ New session is created using edit icon",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1557,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🔁 Starting a new chatbot session...\n"
+                            },
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "📨 Bot message received: \"הי Johnathan,\nאיזה כיף שחזרת! יש לך שאלה מעניינת בשבילי היום? 🤩\nאני כאן לכל דבר שתרצה לדבר עליו או ללמוד יחד! 💭\"\n"
+                            },
+                            {
+                              "text": "✅ Bot message contains expected name: \"Johnathan\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:22:30.373Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-408603e96cb3141402d5",
+                  "file": "Chatbot.spec.ts",
+                  "line": 118,
+                  "column": 9
+                },
+                {
+                  "title": "TC_15: 🔄 Click on the Continue button to resume session",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 60131,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "⏳ Waiting for inactivity popup to appear...\n"
+                            },
+                            {
+                              "text": "⏳ Waiting for inactivity popup in staging with timeout 70s\n"
+                            },
+                            {
+                              "text": "✅ Inactivity popup is visible.\n"
+                            },
+                            {
+                              "text": "🔄 Clicking \"Continue Chat\" button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:22:31.935Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-784478a8496cf5b0b919",
+                  "file": "Chatbot.spec.ts",
+                  "line": 125,
+                  "column": 5
+                },
+                {
+                  "title": "TC_16: ⏱️ Session pop-up displays after 1 minute and close pop-up",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 67260,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "⏳ Waiting for inactivity popup to appear for close...\n"
+                            },
+                            {
+                              "text": "✅ Inactivity popup is visible.\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "📨 Bot message received: \"הי Johnathan,\nמוכן לעוד הרפתקה של למידה? מה בא לך שנחקור הפעם? 🧭✨\nהדמיון שלך הוא הכיוון שלנו 🚀\"\n"
+                            },
+                            {
+                              "text": "✅ Bot message contains expected name: \"Johnathan\"\n"
+                            },
+                            {
+                              "text": "🧹 Closing context\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:23:32.063Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-5d4f81bc3f008b80e549",
+                  "file": "Chatbot.spec.ts",
+                  "line": 134,
+                  "column": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hamburger_Menu.spec.ts",
+      "file": "Hamburger_Menu.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "BlueDrop Hamburgermenu Test Suite",
+          "file": "Hamburger_Menu.spec.ts",
+          "line": 19,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Hamburger Menu & 📜 Chat History",
+              "file": "Hamburger_Menu.spec.ts",
+              "line": 47,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC_19 🔓 Open Hamburger Menu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 635,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "Filling in password input...\n"
+                            },
+                            {
+                              "text": "Clicking on Sign In button...\n"
+                            },
+                            {
+                              "text": "Login submitted, waiting for dashboard to load...\n"
+                            },
+                            {
+                              "text": "Starting reset process for user: vivek.citrusbug@gmail.com\n"
+                            },
+                            {
+                              "text": "Clicking on User Data tab...\n"
+                            },
+                            {
+                              "text": "Searching for user with email: vivek.citrusbug@gmail.com\n"
+                            },
+                            {
+                              "text": "Waiting for user data to appear...\n"
+                            },
+                            {
+                              "text": "Scrolling horizontally to bring Reset button into view...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button...\n"
+                            },
+                            {
+                              "text": "Clicking Reset button by text...\n"
+                            },
+                            {
+                              "text": "Confirming the reset...\n"
+                            },
+                            {
+                              "text": "Waiting for success message...\n"
+                            },
+                            {
+                              "text": "Reset confirmation message is visible.\n"
+                            },
+                            {
+                              "text": "✅ Reset process completed for user: vivek.citrusbug@gmail.com\n"
+                            },
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: vivek.citrusbug@gmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button without filling fields...\n"
+                            },
+                            {
+                              "text": "Waiting for validation error messages...\n"
+                            },
+                            {
+                              "text": "Verified gender required validation message.\n"
+                            },
+                            {
+                              "text": "Verified name required validation message.\n"
+                            },
+                            {
+                              "text": "✅ Invalid input test completed with expected error validations.\n"
+                            },
+                            {
+                              "text": "Starting to fill personal information form...\n"
+                            },
+                            {
+                              "text": "Filling name: Johnathan\n"
+                            },
+                            {
+                              "text": "Selecting gender: זכר 👨\n"
+                            },
+                            {
+                              "text": "Checking visibility of \"Start\" button...\n"
+                            },
+                            {
+                              "text": "Clicking \"Start\" button...\n"
+                            },
+                            {
+                              "text": "✅ Personal info submitted successfully.\n"
+                            },
+                            {
+                              "text": "✅ TC_19: Open Hamburger Menu\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:24:39.424Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-0bdac69ceb7b48cc00dc",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 99,
+                  "column": 9
+                },
+                {
+                  "title": "TC_20 ➕ Load More button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 637,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_20: Load More button functionality\n"
+                            },
+                            {
+                              "text": "📜 Clicking Load More button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:25:00.700Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-d24643ba24428cfadf40",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 104,
+                  "column": 9
+                },
+                {
+                  "title": "TC_21 ❌ No result in chat history",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2228,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_21: No result in chat history\n"
+                            },
+                            {
+                              "text": "🔎 Using random search text: \"stips tonsor\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:25:01.342Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-63ee410174dfddab9e3f",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 110,
+                  "column": 9
+                },
+                {
+                  "title": "TC_22 ❎ Close Hamburger Menu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 213,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_22: Close Hamburger Menu\n"
+                            },
+                            {
+                              "text": "❌ Closing hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:25:03.575Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-2190c0520e124b39d946",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 115,
+                  "column": 9
+                },
+                {
+                  "title": "TC_23 🆕 New session with \"שיחה חדשה\"",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1562,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_23: Start new session using \"שיחה חדשה\"\n"
+                            },
+                            {
+                              "text": "🔁 Creating new session from hamburger menu...\n"
+                            },
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "📨 Bot message received: \"הי Johnathan,\nכל הכבוד שהגעת! רוצה לגלות יחד משהו חדש היום? 👏🔍\nתכתוב לי מה מסקרן אותך – ונתחיל!\"\n"
+                            },
+                            {
+                              "text": "✅ Bot message contains expected name: \"Johnathan\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:25:03.793Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-8c7d68adebe27bbac4e5",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 120,
+                  "column": 9
+                },
+                {
+                  "title": "TC_24 ✏️ Edit and save changes in chat history",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 828,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_24: Edit and save changes in chat history\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:25:05.359Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-59a9ccad7051d101f55b",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 127,
+                  "column": 9
+                },
+                {
+                  "title": "TC_25 🔁 Continue Chat Functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 180000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2059,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_25: Continue Chat Functionality\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-06-23T09:25:06.191Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-83c37c807ca80fc2f2f9",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 133,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "insufficient_balance.spec.ts",
       "file": "insufficient_balance.spec.ts",
       "column": 0,
@@ -80,15 +1298,15 @@
               "annotations": [
                 {
                   "type": "info",
-                  "description": "Bot response: 🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו? מה לדעתך איינשטיין היה חושב על יסוד שנקרא על שמו?  \n איזה חומרים אחרים לדעתך מסתתרים ביקום שעדיין לא גילינו?"
+                  "description": "Bot response: 🐇🥖 Bunny Chow: הדרך הדרום-אפריקאית לטיול טעמים מושלם! 🍛✨\nדמיין את זה: אתה מחזיק כיכר לחם פריכה, ממולאת עד אפס מקום בקארי חם, מתובל ומשגע. זהו ה-Bunny Chow, המנה שכבשה את דרום אפריקה! איך מכינים אותה? בוא נקפוץ למטבח ונתחיל את ההרפתקה הקולינרית!\n\n🥕 מה נצטרך? (מצרכים להכנת 4 מנות)\n\nכיכר לחם: כיכר לבנה שלמה (או כמה קטנות אישיות).\nלמילוי הקארי:\n\n500 גרם בשר בקר/עוף חתוך לקוביות (או טופו לצמחונים 🌱).\n2 כפות שמן.\n2 בצלים קצוצים דק.\n3 שיני שום כתושות.\nכף ג'ינג'ר טרי מגורד.\nתבלינים: כף אבקת קארי, כפית פפריקה, חצי כפית כמון, חצי כפית כורכום.\nעגבנייה גדולה קצוצה 🍅.\nכוס מחית עגבניות או רסק עגבניות מדולל במים.\nכוס אפונה/עדשים מבושלות (לא חובה אבל מוסיף 😋).\nמלח ופלפל לפי הטעם.\n\n\n\n\n🔥 שלבי ההכנה\n1. הכנת בסיס הקארי\nבמחבת רחבה על אש בינונית, חמם את השמן. הוסף את הבצל הקצוץ וטגן עד שהוא הופך לזהוב ורך. עכשיו תוסיף את השום והג’ינג’ר – ותן לריח המסחרר לשטוף את המטבח שלך! 🌟\n2. תבלינים = קסמים\nפזר בעדינות את אבקת הקארי, הפפריקה, הכמון והכורכום למחבת. ערבב היטב למשך דקה כדי \"להעיר\" את התבלינים ולתת להם לשחרר את הארומה המדהימה שלהם.\n3. בשר או טופו נכנסים לזירה\nהוסף את החלבון שבחרת (בשר/עוף/טופו) וטגן אותו עם התבלינים עד שהוא מקבל צבע יפה מבחוץ. מגניב איך הכל מתחבר, אה? 😉\n4. המחית העסיסית\nעכשיו תשלב את העגבנייה הקצוצה ומחית העגבניות. ערבב הכל היטב ותן לזה להתבשל על אש נמוכה במשך כ-20 דקות. אם צריך – תוסיף מעט מים כדי לשמור על מרקם \"רטוב\" אך סמיך.\n5. הכנת הלחם\nחתוך בחלק העליון של כל כיכר לחם ריבוע קטן (זה יהיה המכסה!). רוקן בעדינות עם הידיים חלק מהפנים של הלחם כדי ליצור \"קערה\". אל תאכל הכול עכשיו... תחכה רגע! 😜\n\n🍴 הרכבת הגביע הקדוש\nמלא כל \"קערת לחם\" בכמות נדיבה של קארי לוהט. הנח מעליה כמה גרגרי אפונה ירוקה בשביל צבע וקישוט – אולי גם קצת עלים ירוקים אם בא לך פלצנות אלגנטית! 🥬\n\n🌟 סיום מרגש\nשים ליד מזלג... אבל האמת? הסוד הוא לאכול בידיים ולתת לכל הטעמים לחלחל ללחם הפריך! 🌈\n איזה טוויסט היית מוסיף לקארי שיהפוך אותו לשלך?  \n מה לדעתך הסיפור מאחורי השם המצחיק \"Bunny Chow\"? 🐇"
                 },
                 {
                   "type": "info",
-                  "description": "Bot response: 🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו?"
+                  "description": "Bot response: 🐇🥖 Bunny Chow: הדרך הדרום-אפריקאית לטיול טעמים מושלם! 🍛✨\nדמיין את זה: אתה מחזיק כיכר לחם פריכה, ממולאת עד אפס מקום בקארי חם, מתובל ומשגע. זהו ה-Bunny Chow, המנה שכבשה את דרום אפריקה! איך מכינים אותה? בוא נקפוץ למטבח ונתחיל את ההרפתקה הקולינרית!\n\n🥕 מה נצטרך? (מצרכים להכנת 4 מנות)\n\nכיכר לחם: כיכר לבנה שלמה (או כמה קטנות אישיות).\nלמילוי הקארי:\n\n500 גרם בשר בקר/עוף חתוך לקוביות (או טופו לצמחונים 🌱).\n2 כפות שמן.\n2 בצלים קצוצים דק.\n3 שיני שום כתושות.\nכף ג'ינג'ר טרי מגורד.\nתבלינים: כף אבקת קארי, כפית פפריקה, חצי כפית כמון, חצי כפית כורכום.\nעגבנייה גדולה קצוצה 🍅.\nכוס מחית עגבניות או רסק עגבניות מדולל במים.\nכוס אפונה/עדשים מבושלות (לא חובה אבל מוסיף 😋).\nמלח ופלפל לפי הטעם.\n\n\n\n\n🔥 שלבי ההכנה\n1. הכנת בסיס הקארי\nבמחבת רחבה על אש בינונית, חמם את השמן. הוסף את הבצל הקצוץ וטגן עד שהוא הופך לזהוב ורך. עכשיו תוסיף את השום והג’ינג’ר – ותן לריח המסחרר לשטוף את המטבח שלך! 🌟\n2. תבלינים = קסמים\nפזר בעדינות את אבקת הקארי, הפפריקה, הכמון והכורכום למחבת. ערבב היטב למשך דקה כדי \"להעיר\" את התבלינים ולתת להם לשחרר את הארומה המדהימה שלהם.\n3. בשר או טופו נכנסים לזירה\nהוסף את החלבון שבחרת (בשר/עוף/טופו) וטגן אותו עם התבלינים עד שהוא מקבל צבע יפה מבחוץ. מגניב איך הכל מתחבר, אה? 😉\n4. המחית העסיסית\nעכשיו תשלב את העגבנייה הקצוצה ומחית העגבניות. ערבב הכל היטב ותן לזה להתבשל על אש נמוכה במשך כ-20 דקות. אם צריך – תוסיף מעט מים כדי לשמור על מרקם \"רטוב\" אך סמיך.\n5. הכנת הלחם\nחתוך בחלק העליון של כל כיכר לחם ריבוע קטן (זה יהיה המכסה!). רוקן בעדינות עם הידיים חלק מהפנים של הלחם כדי ליצור \"קערה\". אל תאכל הכול עכשיו... תחכה רגע! 😜\n\n🍴 הרכבת הגביע הקדוש\nמלא כל \"קערת לחם\" בכמות נדיבה של קארי לוהט. הנח מעליה כמה גרגרי אפונה ירוקה בשביל צבע וקישוט – אולי גם קצת עלים ירוקים אם בא לך פלצנות אלגנטית! 🥬\n\n🌟 סיום מרגש\nשים ליד מזלג... אבל האמת? הסוד הוא לאכול בידיים ולתת לכל הטעמים לחלחל ללחם הפריך! 🌈"
                 },
                 {
                   "type": "info",
-                  "description": "Bot response: \"נחושת: המתכת שצובעת את ההיסטוריה ואת העתיד! 🧱⚡\"\nדמיין שאתה עומד בפאתי עיר קדומה, אלפי שנים אחורה בזמן. מסביבך, נפחים מכים בפטישים על מתכת אדמדמה ומבריקה – זו הנחושת! 🛠️ הנחושת (Copper), שסימולה הכימי הוא Cu, היא אחת המתכות הראשונות שהאדם למד לעבד. למה דווקא אותה? כי היא רכה יחסית (קל לעצב אותה!) ונמצאת בטבע בצורתה הכמעט טהורה. קסם אמיתי! ✨\n\nתכונות מיוחדות של נחושת 🌟\n\nמוליכות חשמלית מדהימה: הנחושת היא מוליך מעולה; זה הופך אותה לבחירה מספר אחת לכבלים וחוטי חשמל. ⚡\nעמידות גבוהה: היא לא מחלידה כמו ברזל – במקום זאת, היא מפתחת שכבה ירקרקה שנקראת \"פטינה\", שמגנה עליה.\nבעלת תכונות אנטיבקטריאליות: חיידקים פשוט לא אוהבים לשבת על נחושת (פחות מ-2 שעות והם כבר לא שורדים!). 🦠✨\n\n\nמהיכן מגיעה הנחושת? 🌍\nנחושת נמצאת במכרות בכל העולם – מכרייה באמריקה ועד מערות באפריקה הקדומה. הגדולה? צ'ילה! 🇨🇱 יש לה כמה מהמרבצים העשירים ביותר.\n\nבשימוש לאורך ההיסטוריה 📜\n\nתקופת הברונזה: כשערבבו נחושת עם בדיל נולד הברונזה – מהפכה טכנולוגית שאיפשרה יצירת כלי נשק וכלים חזקים במיוחד. ⚔️\nמטבעות: עד היום משתמשים בנחושת ליצירת מטבעות (כן, אותו צבע חום-זהוב במטבעות של אגורות).\nתכשיטים ואומנות: צבעה המיוחד הפך אותה לכוכבת ביצירות קישוט עתיקות.\n\n\nFun Fact מיוחד בשבילך! 🎉\nפסל החירות בניו יורק עשוי כולו מנחושת! נכון, הגוון הירוק שלו? זו השכבה המגנה שהזכרנו קודם – הפטינה! 🌿\n\nאז, Keith, עכשיו אתה יודע שלנחושת יש היסטוריה ענפה ותפקיד חשוב גם בעידן המודרני שלנו, ממש עד הסמארטפון בכיס שלך!\n איך לדעתך התכונה האנטיבקטריאלית של נחושת תשפיע על הרפואה בעתיד?  \n מעניין אותך לגלות איך כורים ומעבדים נחושת בעולם החדש? 🚀"
+                  "description": "Bot response: 🍛 Katsu Curry: המסע שלך אל ארץ הפלאות של הטעמים היפנים!\nדמיין את זה, Johnathan: אתה במרכז מטבח יפני, האוויר מלא בניחוחות של קארי עשיר וקציצות קריספיות. בוא נצא למסע להכנת Katsu Curry מושלם – מנה שהיא כמו חיבוק חם בקור. 🤗✨\n\n🥢 שלב 1: מה צריך? (הכנת רכיבים)\nלקארי:\n\n🧅 בצל (1 בינוני, פרוס דק)\n🥕 גזר (1 גדול, חתוך לקוביות)\n🥔 תפוח אדמה (1 בינוני, חתוך לקוביות קטנות)\n🍛 קוביות רוטב קארי יפני מוכן (או תערובת קארי יפנית אם יש לך).\n🍗 ציר עוף או מים (500 מ\"ל)\nשמן צמחי\n\nלקאטסו:\n\n🍗 חזות עוף/שניצל דק (2 יחידות)\n🍚 פירורי פנקו\n🥚 ביצה טרופה\n🌾 קמח רגיל\nמלח ופלפל לפי הטעם\n\n\n🔥 שלב 2: בישול הקארי\n\nחמם מעט שמן במחבת רחבה או סיר. טגן את הבצל עד שהוא שקוף וזהוב קלות. 🧅✨\nהוסף את הגזר ותפוח האדמה ובשל כ-5 דקות תוך כדי ערבוב – עד שהירקות מתחילים להתרכך.\nשופך פנימה את ציר העוף/מים ומביא לרתיחה בעדינות. 🫗💨\nמוסיף את קוביות רוטב הקארי ומערבב עד שהן מתמוססות ברוטב והופכות לסמיכות חמימה שתעטוף אותך בניחוח המושלם! 😍\n\n\n🍗 שלב 3: הכנת הקאטסו\n\nהנח את חזות העוף בין נייר אפייה ושטח בעדינות עם פטיש שניצל – אנחנו רוצים דקים ואחידים.\nתבל במלח ופלפל.\nטובל כל חזה לפי הסדר הבא:\n\nראשית: בקמח.\nשנית: בביצה טרופה.\nשלישית: בפירורי פנקו עד שהוא מכוסה לגמרי בציפוי פריך במיוחד! 💃\n\n\nטגן בשמן עמוק וחם (180°C) עד שהעוף זהוב ונוצץ מבחוץ – בערך כ-3 דקות לכל צד.\n\n\n🍚 שלב 4: הגשה כמו מומחה יפני\n\nהנח אורז לבן מבושל על הצלחת 📖🍚.\nמעליו שופך בעדינות מהרוטב הסמיך והעשיר שלך.\nחתוך באלגנטיות את שניצל הקאטסו לפרוסות והנח אותן על האורז והרוטב כמו יצירת אמנות.\n\n\n✨ טריק סודי: רוצה טוויסט? שים מעל מעט בצל ירוק או גרגרי שומשום קלויים לנגיעה אחרונה.\n איזה רוטב היית מוסיף לצד המנה כדי להכניס טוויסט משלך?  \n האם אי פעם שקלת להכין גרסה טבעונית לקאטסו קרי? 🌱"
                 }
               ],
               "expectedStatus": "passed",
@@ -99,7 +1317,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 141033,
+                  "duration": 146177,
                   "errors": [],
                   "stdout": [
                     {
@@ -187,7 +1405,7 @@
                       "text": "Starting to fill personal information form...\n"
                     },
                     {
-                      "text": "Filling name: Keith\n"
+                      "text": "Filling name: Johnathan\n"
                     },
                     {
                       "text": "Selecting gender: זכר 👨\n"
@@ -202,22 +1420,22 @@
                       "text": "✅ Personal info submitted successfully.\n"
                     },
                     {
-                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Einsteinium.\"\n"
+                      "text": "💬 Submitting query: \"איך להכין Bunny Chow? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
                     },
                     {
                       "text": "🕐 Waiting for bot response...\n"
                     },
                     {
-                      "text": "✅ Bot response received: \"🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו? מה לדעתך איינשטיין היה חושב על יסוד שנקרא על שמו?  \n איזה חומרים אחרים לדעתך מסתתרים ביקום שעדיין לא גילינו?\"\n"
+                      "text": "✅ Bot response received: \"🐇🥖 Bunny Chow: הדרך הדרום-אפריקאית לטיול טעמים מושלם! 🍛✨\nדמיין את זה: אתה מחזיק כיכר לחם פריכה, ממולאת עד אפס מקום בקארי חם, מתובל ומשגע. זהו ה-Bunny Chow, המנה שכבשה את דרום אפריקה! איך מכינים אותה? בוא נקפוץ למטבח ונתחיל את ההרפתקה הקולינרית!\n\n🥕 מה נצטרך? (מצרכים להכנת 4 מנות)\n\nכיכר לחם: כיכר לבנה שלמה (או כמה קטנות אישיות).\nלמילוי הקארי:\n\n500 גרם בשר בקר/עוף חתוך לקוביות (או טופו לצמחונים 🌱).\n2 כפות שמן.\n2 בצלים קצוצים דק.\n3 שיני שום כתושות.\nכף ג'ינג'ר טרי מגורד.\nתבלינים: כף אבקת קארי, כפית פפריקה, חצי כפית כמון, חצי כפית כורכום.\nעגבנייה גדולה קצוצה 🍅.\nכוס מחית עגבניות או רסק עגבניות מדולל במים.\nכוס אפונה/עדשים מבושלות (לא חובה אבל מוסיף 😋).\nמלח ופלפל לפי הטעם.\n\n\n\n\n🔥 שלבי ההכנה\n1. הכנת בסיס הקארי\nבמחבת רחבה על אש בינונית, חמם את השמן. הוסף את הבצל הקצוץ וטגן עד שהוא הופך לזהוב ורך. עכשיו תוסיף את השום והג’ינג’ר – ותן לריח המסחרר לשטוף את המטבח שלך! 🌟\n2. תבלינים = קסמים\nפזר בעדינות את אבקת הקארי, הפפריקה, הכמון והכורכום למחבת. ערבב היטב למשך דקה כדי \"להעיר\" את התבלינים ולתת להם לשחרר את הארומה המדהימה שלהם.\n3. בשר או טופו נכנסים לזירה\nהוסף את החלבון שבחרת (בשר/עוף/טופו) וטגן אותו עם התבלינים עד שהוא מקבל צבע יפה מבחוץ. מגניב איך הכל מתחבר, אה? 😉\n4. המחית העסיסית\nעכשיו תשלב את העגבנייה הקצוצה ומחית העגבניות. ערבב הכל היטב ותן לזה להתבשל על אש נמוכה במשך כ-20 דקות. אם צריך – תוסיף מעט מים כדי לשמור על מרקם \"רטוב\" אך סמיך.\n5. הכנת הלחם\nחתוך בחלק העליון של כל כיכר לחם ריבוע קטן (זה יהיה המכסה!). רוקן בעדינות עם הידיים חלק מהפנים של הלחם כדי ליצור \"קערה\". אל תאכל הכול עכשיו... תחכה רגע! 😜\n\n🍴 הרכבת הגביע הקדוש\nמלא כל \"קערת לחם\" בכמות נדיבה של קארי לוהט. הנח מעליה כמה גרגרי אפונה ירוקה בשביל צבע וקישוט – אולי גם קצת עלים ירוקים אם בא לך פלצנות אלגנטית! 🥬\n\n🌟 סיום מרגש\nשים ליד מזלג... אבל האמת? הסוד הוא לאכול בידיים ולתת לכל הטעמים לחלחל ללחם הפריך! 🌈\n איזה טוויסט היית מוסיף לקארי שיהפוך אותו לשלך?  \n מה לדעתך הסיפור מאחורי השם המצחיק \"Bunny Chow\"? 🐇\"\n"
                     },
                     {
-                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Berkelium.\"\n"
+                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Silver.\"\n"
                     },
                     {
                       "text": "🕐 Waiting for bot response...\n"
                     },
                     {
-                      "text": "✅ Bot response received: \"🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו?\"\n"
+                      "text": "✅ Bot response received: \"🐇🥖 Bunny Chow: הדרך הדרום-אפריקאית לטיול טעמים מושלם! 🍛✨\nדמיין את זה: אתה מחזיק כיכר לחם פריכה, ממולאת עד אפס מקום בקארי חם, מתובל ומשגע. זהו ה-Bunny Chow, המנה שכבשה את דרום אפריקה! איך מכינים אותה? בוא נקפוץ למטבח ונתחיל את ההרפתקה הקולינרית!\n\n🥕 מה נצטרך? (מצרכים להכנת 4 מנות)\n\nכיכר לחם: כיכר לבנה שלמה (או כמה קטנות אישיות).\nלמילוי הקארי:\n\n500 גרם בשר בקר/עוף חתוך לקוביות (או טופו לצמחונים 🌱).\n2 כפות שמן.\n2 בצלים קצוצים דק.\n3 שיני שום כתושות.\nכף ג'ינג'ר טרי מגורד.\nתבלינים: כף אבקת קארי, כפית פפריקה, חצי כפית כמון, חצי כפית כורכום.\nעגבנייה גדולה קצוצה 🍅.\nכוס מחית עגבניות או רסק עגבניות מדולל במים.\nכוס אפונה/עדשים מבושלות (לא חובה אבל מוסיף 😋).\nמלח ופלפל לפי הטעם.\n\n\n\n\n🔥 שלבי ההכנה\n1. הכנת בסיס הקארי\nבמחבת רחבה על אש בינונית, חמם את השמן. הוסף את הבצל הקצוץ וטגן עד שהוא הופך לזהוב ורך. עכשיו תוסיף את השום והג’ינג’ר – ותן לריח המסחרר לשטוף את המטבח שלך! 🌟\n2. תבלינים = קסמים\nפזר בעדינות את אבקת הקארי, הפפריקה, הכמון והכורכום למחבת. ערבב היטב למשך דקה כדי \"להעיר\" את התבלינים ולתת להם לשחרר את הארומה המדהימה שלהם.\n3. בשר או טופו נכנסים לזירה\nהוסף את החלבון שבחרת (בשר/עוף/טופו) וטגן אותו עם התבלינים עד שהוא מקבל צבע יפה מבחוץ. מגניב איך הכל מתחבר, אה? 😉\n4. המחית העסיסית\nעכשיו תשלב את העגבנייה הקצוצה ומחית העגבניות. ערבב הכל היטב ותן לזה להתבשל על אש נמוכה במשך כ-20 דקות. אם צריך – תוסיף מעט מים כדי לשמור על מרקם \"רטוב\" אך סמיך.\n5. הכנת הלחם\nחתוך בחלק העליון של כל כיכר לחם ריבוע קטן (זה יהיה המכסה!). רוקן בעדינות עם הידיים חלק מהפנים של הלחם כדי ליצור \"קערה\". אל תאכל הכול עכשיו... תחכה רגע! 😜\n\n🍴 הרכבת הגביע הקדוש\nמלא כל \"קערת לחם\" בכמות נדיבה של קארי לוהט. הנח מעליה כמה גרגרי אפונה ירוקה בשביל צבע וקישוט – אולי גם קצת עלים ירוקים אם בא לך פלצנות אלגנטית! 🥬\n\n🌟 סיום מרגש\nשים ליד מזלג... אבל האמת? הסוד הוא לאכול בידיים ולתת לכל הטעמים לחלחל ללחם הפריך! 🌈\"\n"
                     },
                     {
                       "text": "Insufficient Balance pop-up comming\n"
@@ -274,30 +1492,30 @@
                       "text": "Waiting for page navigation after login...\n"
                     },
                     {
-                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Copper.\"\n"
+                      "text": "💬 Submitting query: \"איך להכין Katsu Curry? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
                     },
                     {
                       "text": "🕐 Waiting for bot response to begin...\n"
                     },
                     {
-                      "text": "✅ Bot response received: \"\"נחושת: המתכת שצובעת את ההיסטוריה ואת העתיד! 🧱⚡\"\nדמיין שאתה עומד בפאתי עיר קדומה, אלפי שנים אחורה בזמן. מסביבך, נפחים מכים בפטישים על מתכת אדמדמה ומבריקה – זו הנחושת! 🛠️ הנחושת (Copper), שסימולה הכימי הוא Cu, היא אחת המתכות הראשונות שהאדם למד לעבד. למה דווקא אותה? כי היא רכה יחסית (קל לעצב אותה!) ונמצאת בטבע בצורתה הכמעט טהורה. קסם אמיתי! ✨\n\nתכונות מיוחדות של נחושת 🌟\n\nמוליכות חשמלית מדהימה: הנחושת היא מוליך מעולה; זה הופך אותה לבחירה מספר אחת לכבלים וחוטי חשמל. ⚡\nעמידות גבוהה: היא לא מחלידה כמו ברזל – במקום זאת, היא מפתחת שכבה ירקרקה שנקראת \"פטינה\", שמגנה עליה.\nבעלת תכונות אנטיבקטריאליות: חיידקים פשוט לא אוהבים לשבת על נחושת (פחות מ-2 שעות והם כבר לא שורדים!). 🦠✨\n\n\nמהיכן מגיעה הנחושת? 🌍\nנחושת נמצאת במכרות בכל העולם – מכרייה באמריקה ועד מערות באפריקה הקדומה. הגדולה? צ'ילה! 🇨🇱 יש לה כמה מהמרבצים העשירים ביותר.\n\nבשימוש לאורך ההיסטוריה 📜\n\nתקופת הברונזה: כשערבבו נחושת עם בדיל נולד הברונזה – מהפכה טכנולוגית שאיפשרה יצירת כלי נשק וכלים חזקים במיוחד. ⚔️\nמטבעות: עד היום משתמשים בנחושת ליצירת מטבעות (כן, אותו צבע חום-זהוב במטבעות של אגורות).\nתכשיטים ואומנות: צבעה המיוחד הפך אותה לכוכבת ביצירות קישוט עתיקות.\n\n\nFun Fact מיוחד בשבילך! 🎉\nפסל החירות בניו יורק עשוי כולו מנחושת! נכון, הגוון הירוק שלו? זו השכבה המגנה שהזכרנו קודם – הפטינה! 🌿\n\nאז, Keith, עכשיו אתה יודע שלנחושת יש היסטוריה ענפה ותפקיד חשוב גם בעידן המודרני שלנו, ממש עד הסמארטפון בכיס שלך!\n איך לדעתך התכונה האנטיבקטריאלית של נחושת תשפיע על הרפואה בעתיד?  \n מעניין אותך לגלות איך כורים ומעבדים נחושת בעולם החדש? 🚀\"\n"
+                      "text": "✅ Bot response received: \"🍛 Katsu Curry: המסע שלך אל ארץ הפלאות של הטעמים היפנים!\nדמיין את זה, Johnathan: אתה במרכז מטבח יפני, האוויר מלא בניחוחות של קארי עשיר וקציצות קריספיות. בוא נצא למסע להכנת Katsu Curry מושלם – מנה שהיא כמו חיבוק חם בקור. 🤗✨\n\n🥢 שלב 1: מה צריך? (הכנת רכיבים)\nלקארי:\n\n🧅 בצל (1 בינוני, פרוס דק)\n🥕 גזר (1 גדול, חתוך לקוביות)\n🥔 תפוח אדמה (1 בינוני, חתוך לקוביות קטנות)\n🍛 קוביות רוטב קארי יפני מוכן (או תערובת קארי יפנית אם יש לך).\n🍗 ציר עוף או מים (500 מ\"ל)\nשמן צמחי\n\nלקאטסו:\n\n🍗 חזות עוף/שניצל דק (2 יחידות)\n🍚 פירורי פנקו\n🥚 ביצה טרופה\n🌾 קמח רגיל\nמלח ופלפל לפי הטעם\n\n\n🔥 שלב 2: בישול הקארי\n\nחמם מעט שמן במחבת רחבה או סיר. טגן את הבצל עד שהוא שקוף וזהוב קלות. 🧅✨\nהוסף את הגזר ותפוח האדמה ובשל כ-5 דקות תוך כדי ערבוב – עד שהירקות מתחילים להתרכך.\nשופך פנימה את ציר העוף/מים ומביא לרתיחה בעדינות. 🫗💨\nמוסיף את קוביות רוטב הקארי ומערבב עד שהן מתמוססות ברוטב והופכות לסמיכות חמימה שתעטוף אותך בניחוח המושלם! 😍\n\n\n🍗 שלב 3: הכנת הקאטסו\n\nהנח את חזות העוף בין נייר אפייה ושטח בעדינות עם פטיש שניצל – אנחנו רוצים דקים ואחידים.\nתבל במלח ופלפל.\nטובל כל חזה לפי הסדר הבא:\n\nראשית: בקמח.\nשנית: בביצה טרופה.\nשלישית: בפירורי פנקו עד שהוא מכוסה לגמרי בציפוי פריך במיוחד! 💃\n\n\nטגן בשמן עמוק וחם (180°C) עד שהעוף זהוב ונוצץ מבחוץ – בערך כ-3 דקות לכל צד.\n\n\n🍚 שלב 4: הגשה כמו מומחה יפני\n\nהנח אורז לבן מבושל על הצלחת 📖🍚.\nמעליו שופך בעדינות מהרוטב הסמיך והעשיר שלך.\nחתוך באלגנטיות את שניצל הקאטסו לפרוסות והנח אותן על האורז והרוטב כמו יצירת אמנות.\n\n\n✨ טריק סודי: רוצה טוויסט? שים מעל מעט בצל ירוק או גרגרי שומשום קלויים לנגיעה אחרונה.\n איזה רוטב היית מוסיף לצד המנה כדי להכניס טוויסט משלך?  \n האם אי פעם שקלת להכין גרסה טבעונית לקאטסו קרי? 🌱\"\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-06-20T14:21:37.752Z",
+                  "startTime": "2025-06-23T09:25:08.369Z",
                   "annotations": [
                     {
                       "type": "info",
-                      "description": "Bot response: 🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו? מה לדעתך איינשטיין היה חושב על יסוד שנקרא על שמו?  \n איזה חומרים אחרים לדעתך מסתתרים ביקום שעדיין לא גילינו?"
+                      "description": "Bot response: 🐇🥖 Bunny Chow: הדרך הדרום-אפריקאית לטיול טעמים מושלם! 🍛✨\nדמיין את זה: אתה מחזיק כיכר לחם פריכה, ממולאת עד אפס מקום בקארי חם, מתובל ומשגע. זהו ה-Bunny Chow, המנה שכבשה את דרום אפריקה! איך מכינים אותה? בוא נקפוץ למטבח ונתחיל את ההרפתקה הקולינרית!\n\n🥕 מה נצטרך? (מצרכים להכנת 4 מנות)\n\nכיכר לחם: כיכר לבנה שלמה (או כמה קטנות אישיות).\nלמילוי הקארי:\n\n500 גרם בשר בקר/עוף חתוך לקוביות (או טופו לצמחונים 🌱).\n2 כפות שמן.\n2 בצלים קצוצים דק.\n3 שיני שום כתושות.\nכף ג'ינג'ר טרי מגורד.\nתבלינים: כף אבקת קארי, כפית פפריקה, חצי כפית כמון, חצי כפית כורכום.\nעגבנייה גדולה קצוצה 🍅.\nכוס מחית עגבניות או רסק עגבניות מדולל במים.\nכוס אפונה/עדשים מבושלות (לא חובה אבל מוסיף 😋).\nמלח ופלפל לפי הטעם.\n\n\n\n\n🔥 שלבי ההכנה\n1. הכנת בסיס הקארי\nבמחבת רחבה על אש בינונית, חמם את השמן. הוסף את הבצל הקצוץ וטגן עד שהוא הופך לזהוב ורך. עכשיו תוסיף את השום והג’ינג’ר – ותן לריח המסחרר לשטוף את המטבח שלך! 🌟\n2. תבלינים = קסמים\nפזר בעדינות את אבקת הקארי, הפפריקה, הכמון והכורכום למחבת. ערבב היטב למשך דקה כדי \"להעיר\" את התבלינים ולתת להם לשחרר את הארומה המדהימה שלהם.\n3. בשר או טופו נכנסים לזירה\nהוסף את החלבון שבחרת (בשר/עוף/טופו) וטגן אותו עם התבלינים עד שהוא מקבל צבע יפה מבחוץ. מגניב איך הכל מתחבר, אה? 😉\n4. המחית העסיסית\nעכשיו תשלב את העגבנייה הקצוצה ומחית העגבניות. ערבב הכל היטב ותן לזה להתבשל על אש נמוכה במשך כ-20 דקות. אם צריך – תוסיף מעט מים כדי לשמור על מרקם \"רטוב\" אך סמיך.\n5. הכנת הלחם\nחתוך בחלק העליון של כל כיכר לחם ריבוע קטן (זה יהיה המכסה!). רוקן בעדינות עם הידיים חלק מהפנים של הלחם כדי ליצור \"קערה\". אל תאכל הכול עכשיו... תחכה רגע! 😜\n\n🍴 הרכבת הגביע הקדוש\nמלא כל \"קערת לחם\" בכמות נדיבה של קארי לוהט. הנח מעליה כמה גרגרי אפונה ירוקה בשביל צבע וקישוט – אולי גם קצת עלים ירוקים אם בא לך פלצנות אלגנטית! 🥬\n\n🌟 סיום מרגש\nשים ליד מזלג... אבל האמת? הסוד הוא לאכול בידיים ולתת לכל הטעמים לחלחל ללחם הפריך! 🌈\n איזה טוויסט היית מוסיף לקארי שיהפוך אותו לשלך?  \n מה לדעתך הסיפור מאחורי השם המצחיק \"Bunny Chow\"? 🐇"
                     },
                     {
                       "type": "info",
-                      "description": "Bot response: 🌟 Einsteinium – היסוד שחוגג גאונות ומסתורין! 🧪✨\nדמיין את עצמך בחדר חשוך, ולפתע מולך מנצנצת מתכת זוהרת, כמו כוכב קטן בתוך הלילה. 🌌 זו לא מתכת רגילה – זה איינשטייניום (Einsteinium), יסוד כימי שמרגיש כאילו נלקח היישר ממעבדה של מדען מטורף! 🧠\n🔬 מה זה באמת?\nאיינשטייניום, הנושא את שמו של אלברט איינשטיין (כבוד גדול, אה?), הוא יסוד מלאכותי וסופר נדיר עם הסמל הכימי Es והמספר האטומי 99. 🧪 הוא נוצר רק במעבדות גרעיניות כשחלקיקים מתנגשים באנרגיה גבוהה מאוד. מדהים, לא? 🚀\n🌈 תכונות קסומות\n\nהוא מתכתי וכסוף, אבל לצערנו אי אפשר לגעת בו (הוא רדיואקטיבי בטירוף!). ☢️\nהחומר כל-כך נדיר שלא ניתן לראות אותו מחוץ למעבדות העל-סודיות ביותר. 🤫\nיש לו זמן חיים קצרצר – איזוטופים שלו מתפרקים תוך ימים בודדים! ⏳\n\n📜 איך גילו אותו?\nסיפור הגילוי מרגיש כמעט כמו עלילה של סרט ריגול מדעי 🎥: בשנת 1952, מדענים מצאו אותו במקרה בתוך פסולת רדיואקטיבית מניסוי פיצוץ גרעיני באוקיינוס השקט. הם קראו לו על שם איינשטיין לכבוד תרומתו האדירה למדע.\n🤩 למה הוא משמש?\nהאמת? בגלל שהוא כזה נדיר ומסוכן, אין לו הרבה שימושים מעשיים... אבל! הוא עוזר למדענים להבין יותר על תהליכים גרעיניים וייצור חומרים כבדים יותר ממנו.\n\n💡 ידעת שאם היית רוצה להחזיק אפילו גרם אחד של איינשטייניום, היית צריך מיליונים (!) של דולרים ומשאבים בלתי נגמרים כדי לייצר אותו?"
+                      "description": "Bot response: 🐇🥖 Bunny Chow: הדרך הדרום-אפריקאית לטיול טעמים מושלם! 🍛✨\nדמיין את זה: אתה מחזיק כיכר לחם פריכה, ממולאת עד אפס מקום בקארי חם, מתובל ומשגע. זהו ה-Bunny Chow, המנה שכבשה את דרום אפריקה! איך מכינים אותה? בוא נקפוץ למטבח ונתחיל את ההרפתקה הקולינרית!\n\n🥕 מה נצטרך? (מצרכים להכנת 4 מנות)\n\nכיכר לחם: כיכר לבנה שלמה (או כמה קטנות אישיות).\nלמילוי הקארי:\n\n500 גרם בשר בקר/עוף חתוך לקוביות (או טופו לצמחונים 🌱).\n2 כפות שמן.\n2 בצלים קצוצים דק.\n3 שיני שום כתושות.\nכף ג'ינג'ר טרי מגורד.\nתבלינים: כף אבקת קארי, כפית פפריקה, חצי כפית כמון, חצי כפית כורכום.\nעגבנייה גדולה קצוצה 🍅.\nכוס מחית עגבניות או רסק עגבניות מדולל במים.\nכוס אפונה/עדשים מבושלות (לא חובה אבל מוסיף 😋).\nמלח ופלפל לפי הטעם.\n\n\n\n\n🔥 שלבי ההכנה\n1. הכנת בסיס הקארי\nבמחבת רחבה על אש בינונית, חמם את השמן. הוסף את הבצל הקצוץ וטגן עד שהוא הופך לזהוב ורך. עכשיו תוסיף את השום והג’ינג’ר – ותן לריח המסחרר לשטוף את המטבח שלך! 🌟\n2. תבלינים = קסמים\nפזר בעדינות את אבקת הקארי, הפפריקה, הכמון והכורכום למחבת. ערבב היטב למשך דקה כדי \"להעיר\" את התבלינים ולתת להם לשחרר את הארומה המדהימה שלהם.\n3. בשר או טופו נכנסים לזירה\nהוסף את החלבון שבחרת (בשר/עוף/טופו) וטגן אותו עם התבלינים עד שהוא מקבל צבע יפה מבחוץ. מגניב איך הכל מתחבר, אה? 😉\n4. המחית העסיסית\nעכשיו תשלב את העגבנייה הקצוצה ומחית העגבניות. ערבב הכל היטב ותן לזה להתבשל על אש נמוכה במשך כ-20 דקות. אם צריך – תוסיף מעט מים כדי לשמור על מרקם \"רטוב\" אך סמיך.\n5. הכנת הלחם\nחתוך בחלק העליון של כל כיכר לחם ריבוע קטן (זה יהיה המכסה!). רוקן בעדינות עם הידיים חלק מהפנים של הלחם כדי ליצור \"קערה\". אל תאכל הכול עכשיו... תחכה רגע! 😜\n\n🍴 הרכבת הגביע הקדוש\nמלא כל \"קערת לחם\" בכמות נדיבה של קארי לוהט. הנח מעליה כמה גרגרי אפונה ירוקה בשביל צבע וקישוט – אולי גם קצת עלים ירוקים אם בא לך פלצנות אלגנטית! 🥬\n\n🌟 סיום מרגש\nשים ליד מזלג... אבל האמת? הסוד הוא לאכול בידיים ולתת לכל הטעמים לחלחל ללחם הפריך! 🌈"
                     },
                     {
                       "type": "info",
-                      "description": "Bot response: \"נחושת: המתכת שצובעת את ההיסטוריה ואת העתיד! 🧱⚡\"\nדמיין שאתה עומד בפאתי עיר קדומה, אלפי שנים אחורה בזמן. מסביבך, נפחים מכים בפטישים על מתכת אדמדמה ומבריקה – זו הנחושת! 🛠️ הנחושת (Copper), שסימולה הכימי הוא Cu, היא אחת המתכות הראשונות שהאדם למד לעבד. למה דווקא אותה? כי היא רכה יחסית (קל לעצב אותה!) ונמצאת בטבע בצורתה הכמעט טהורה. קסם אמיתי! ✨\n\nתכונות מיוחדות של נחושת 🌟\n\nמוליכות חשמלית מדהימה: הנחושת היא מוליך מעולה; זה הופך אותה לבחירה מספר אחת לכבלים וחוטי חשמל. ⚡\nעמידות גבוהה: היא לא מחלידה כמו ברזל – במקום זאת, היא מפתחת שכבה ירקרקה שנקראת \"פטינה\", שמגנה עליה.\nבעלת תכונות אנטיבקטריאליות: חיידקים פשוט לא אוהבים לשבת על נחושת (פחות מ-2 שעות והם כבר לא שורדים!). 🦠✨\n\n\nמהיכן מגיעה הנחושת? 🌍\nנחושת נמצאת במכרות בכל העולם – מכרייה באמריקה ועד מערות באפריקה הקדומה. הגדולה? צ'ילה! 🇨🇱 יש לה כמה מהמרבצים העשירים ביותר.\n\nבשימוש לאורך ההיסטוריה 📜\n\nתקופת הברונזה: כשערבבו נחושת עם בדיל נולד הברונזה – מהפכה טכנולוגית שאיפשרה יצירת כלי נשק וכלים חזקים במיוחד. ⚔️\nמטבעות: עד היום משתמשים בנחושת ליצירת מטבעות (כן, אותו צבע חום-זהוב במטבעות של אגורות).\nתכשיטים ואומנות: צבעה המיוחד הפך אותה לכוכבת ביצירות קישוט עתיקות.\n\n\nFun Fact מיוחד בשבילך! 🎉\nפסל החירות בניו יורק עשוי כולו מנחושת! נכון, הגוון הירוק שלו? זו השכבה המגנה שהזכרנו קודם – הפטינה! 🌿\n\nאז, Keith, עכשיו אתה יודע שלנחושת יש היסטוריה ענפה ותפקיד חשוב גם בעידן המודרני שלנו, ממש עד הסמארטפון בכיס שלך!\n איך לדעתך התכונה האנטיבקטריאלית של נחושת תשפיע על הרפואה בעתיד?  \n מעניין אותך לגלות איך כורים ומעבדים נחושת בעולם החדש? 🚀"
+                      "description": "Bot response: 🍛 Katsu Curry: המסע שלך אל ארץ הפלאות של הטעמים היפנים!\nדמיין את זה, Johnathan: אתה במרכז מטבח יפני, האוויר מלא בניחוחות של קארי עשיר וקציצות קריספיות. בוא נצא למסע להכנת Katsu Curry מושלם – מנה שהיא כמו חיבוק חם בקור. 🤗✨\n\n🥢 שלב 1: מה צריך? (הכנת רכיבים)\nלקארי:\n\n🧅 בצל (1 בינוני, פרוס דק)\n🥕 גזר (1 גדול, חתוך לקוביות)\n🥔 תפוח אדמה (1 בינוני, חתוך לקוביות קטנות)\n🍛 קוביות רוטב קארי יפני מוכן (או תערובת קארי יפנית אם יש לך).\n🍗 ציר עוף או מים (500 מ\"ל)\nשמן צמחי\n\nלקאטסו:\n\n🍗 חזות עוף/שניצל דק (2 יחידות)\n🍚 פירורי פנקו\n🥚 ביצה טרופה\n🌾 קמח רגיל\nמלח ופלפל לפי הטעם\n\n\n🔥 שלב 2: בישול הקארי\n\nחמם מעט שמן במחבת רחבה או סיר. טגן את הבצל עד שהוא שקוף וזהוב קלות. 🧅✨\nהוסף את הגזר ותפוח האדמה ובשל כ-5 דקות תוך כדי ערבוב – עד שהירקות מתחילים להתרכך.\nשופך פנימה את ציר העוף/מים ומביא לרתיחה בעדינות. 🫗💨\nמוסיף את קוביות רוטב הקארי ומערבב עד שהן מתמוססות ברוטב והופכות לסמיכות חמימה שתעטוף אותך בניחוח המושלם! 😍\n\n\n🍗 שלב 3: הכנת הקאטסו\n\nהנח את חזות העוף בין נייר אפייה ושטח בעדינות עם פטיש שניצל – אנחנו רוצים דקים ואחידים.\nתבל במלח ופלפל.\nטובל כל חזה לפי הסדר הבא:\n\nראשית: בקמח.\nשנית: בביצה טרופה.\nשלישית: בפירורי פנקו עד שהוא מכוסה לגמרי בציפוי פריך במיוחד! 💃\n\n\nטגן בשמן עמוק וחם (180°C) עד שהעוף זהוב ונוצץ מבחוץ – בערך כ-3 דקות לכל צד.\n\n\n🍚 שלב 4: הגשה כמו מומחה יפני\n\nהנח אורז לבן מבושל על הצלחת 📖🍚.\nמעליו שופך בעדינות מהרוטב הסמיך והעשיר שלך.\nחתוך באלגנטיות את שניצל הקאטסו לפרוסות והנח אותן על האורז והרוטב כמו יצירת אמנות.\n\n\n✨ טריק סודי: רוצה טוויסט? שים מעל מעט בצל ירוק או גרגרי שומשום קלויים לנגיעה אחרונה.\n איזה רוטב היית מוסיף לצד המנה כדי להכניס טוויסט משלך?  \n האם אי פעם שקלת להכין גרסה טבעונית לקאטסו קרי? 🌱"
                     }
                   ],
                   "attachments": []
@@ -309,16 +1527,16 @@
           "id": "802b36f43135f9baf1c9-ddb6ff58911ea5b37713",
           "file": "insufficient_balance.spec.ts",
           "line": 11,
-          "column": 6
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-20T14:21:34.908Z",
-    "duration": 145273.837,
-    "expected": 1,
+    "startTime": "2025-06-23T09:21:18.432Z",
+    "duration": 371939.592,
+    "expected": 22,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

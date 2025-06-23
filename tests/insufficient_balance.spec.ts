@@ -8,7 +8,7 @@ import { chatbotPage } from './Pages/chatbotPage';
 import { adminCredentials, chatbotCredentials } from './Config/credentials';
 
 
-test('TC_26: 💰 Admin daily plan cost update and verify insufficient balance popup', async ({ browser }, testInfo) => {
+test('TC_22: 💰 Admin daily plan cost update and verify insufficient balance popup', async ({ browser }, testInfo) => {
  
    const env = process.env.ENVIRONMENT || 'staging';
 
