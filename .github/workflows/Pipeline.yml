@@ -7,12 +7,15 @@ permissions:
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 23 * * *'  # Runs at 2:00 AM Israel time
   push:
     branches: ['main']
 
 env:
   SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-  TO_EMAIL: jay5.citrusbug@gmail.com
+  TO_EMAIL: noam@bluedropacademy.com
+  CC_EMAIL: jay5.citrusbug@gmail.com,jayshree@citrusbug.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
 
 jobs:

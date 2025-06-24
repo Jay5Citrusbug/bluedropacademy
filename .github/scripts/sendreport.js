@@ -97,7 +97,7 @@ Citrusbug QA Team`,
   html: `
   <div style="font-family: Arial, sans-serif; max-width: 650px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px;">
     <div style="text-align: center;">
-      <img src="https://i.imgur.com/dYcYQ7E.png" alt="Bluedrop Academy" width="180" style="margin-bottom: 20px;" />
+      <img src="https://postimg.cc/hzLH6djb" alt="Bluedrop Academy" width="180" style="margin-bottom: 20px;" />
     </div>
 
     <p>Hello <strong>Bluedrop Academy</strong>,</p>

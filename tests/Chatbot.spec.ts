@@ -122,7 +122,7 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
     });
 
  
-test('TC_13: 🔄 Click on the Continue button to resume session', async () => {
+test('TC_13: 🔄 Session pop-up displays after 10 minutes and Click on the Continue button to resume session', async () => {
  const env = process.env.ENVIRONMENT || 'staging';
   if (env === 'production') {
     test.setTimeout(610_000); // 10 min 10 sec
@@ -133,7 +133,7 @@ test('TC_13: 🔄 Click on the Continue button to resume session', async () => {
 const env = process.env.ENVIRONMENT || 'staging';
 
   // Skip this test in production
-  test('TC_14: ⏱️ Session pop-up displays after 1 minute and close pop-up', async ({ page }) => {
+  test('TC_14: ⏱️ Session pop-up displays after 10 minutes and close pop-up', async ({ page }) => {
   test.skip(env === 'production', 'Skipping in production environment');
 
     await chatbotscreen.InactivityPopup2();
