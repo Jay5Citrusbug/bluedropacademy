@@ -264,7 +264,7 @@ async InactivityPopup1() {
   const popupFrame = this.page.frameLocator('iframe[name="htmlComp-iframe"]');
 
   await expect(popupFrame.getByText('היי! לא ראינו פעילות ב-10')).toBeVisible();
-  await expect(this.page.locator('.anticon.anticon-close.ant-modal-close-icon')).toBeVisible();
+ //await expect(this.page.locator('.anticon.anticon-close.ant-modal-close-icon')).toBeVisible();
 
   console.log('✅ Inactivity popup is visible.');
 

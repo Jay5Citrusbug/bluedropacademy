@@ -132,13 +132,15 @@ test('TC_13: 🔄 Click on the Continue button to resume session', async () => {
 
 const env = process.env.ENVIRONMENT || 'staging';
 
-if (env !== 'production') {
+  // Skip this test in production
   test('TC_14: ⏱️ Session pop-up displays after 1 minute and close pop-up', async ({ page }) => {
+  test.skip(env === 'production', 'Skipping in production environment');
+
     await chatbotscreen.InactivityPopup2();
     await page.reload();
     await chatbotscreen.InitialbotMessage(testUserData.name);
   });
-}
+
 
 
 test.afterEach(async ({ page }, testInfo) => {
