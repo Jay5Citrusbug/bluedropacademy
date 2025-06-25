@@ -78,6 +78,7 @@ const subject = `${environment} Automation Test Report - ${reportDate}`;
 
 const msg = {
   to: process.env.TO_EMAIL.split(',').map(email => email.trim()),
+  cc: process.env.CC_EMAIL?.split(',').map(email => email.trim()),
   from: process.env.FROM_EMAIL,
   subject: subject,
   text: `Hello Bluedrop Academy,
