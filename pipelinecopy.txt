@@ -45,7 +45,7 @@ jobs:
       - name: Clean previous test results
         run: |
           echo "Cleaning previous Playwright report..."
-          rm -rf playwright-report/ report.html test-log.txt || true
+          rm -rf playwright-report/ report.html test-log.txt all-reports/staging || true
 
       - name: Set environment URLs
         run: |
@@ -97,12 +97,6 @@ jobs:
         run: |
           mkdir -p all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}
           cp -r playwright-report/* all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/
-
-      - name: Keep only the last 15 reports
-        run: |
-          REPORT_DIR=all-reports/${{ env.ENVIRONMENT }}
-          cd $REPORT_DIR
-          ls -1t | tail -n +16 | xargs -d '\n' rm -rf --
 
       - name: Upload Environment Report as Artifact
         uses: actions/upload-artifact@v4
