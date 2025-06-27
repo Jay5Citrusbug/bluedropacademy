@@ -98,11 +98,10 @@ jobs:
           mkdir -p all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}
           cp -r playwright-report/* all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/
 
-      - name: Keep only the last 15 reports
+      - name: Prune old reports (keep last 15)
         run: |
-          REPORT_DIR=all-reports/${{ env.ENVIRONMENT }}
-          cd $REPORT_DIR
-          ls -1t | tail -n +2 | xargs -d '\n' rm -rf --
+          cd all-reports/${{ env.ENVIRONMENT }}
+          ls -tp | grep '/$' | tail -n +16 | xargs -I {} rm -rf "{}"
 
       - name: Upload Environment Report as Artifact
         uses: actions/upload-artifact@v4
@@ -153,7 +152,7 @@ jobs:
       - name: Clean previous test results
         run: |
           echo "Cleaning previous Playwright report..."
-          rm -rf playwright-report/ report.html test-log.txt all-reports/production || true
+          rm -rf playwright-report/ report.html test-log.txt || true
 
       - name: Set environment URLs
         run: |
@@ -206,6 +205,11 @@ jobs:
         run: |
           mkdir -p all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}
           cp -r playwright-report/* all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/
+
+      - name: Prune old reports (keep last 15)
+        run: |
+          cd all-reports/${{ env.ENVIRONMENT }}
+          ls -tp | grep '/$' | tail -n +16 | xargs -I {} rm -rf "{}"
 
       - name: Upload Environment Report as Artifact
         uses: actions/upload-artifact@v4
