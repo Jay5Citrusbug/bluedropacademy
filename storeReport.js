@@ -1,6 +1,6 @@
 import { adminCredentials } from './tests/Config/credentials';
 
-BASE_URL = process.env.STORE_REPORT_API_ENDPOINT || 'https://stg-api-chat.bluedropacademy.com/api/admin/admin';
+BASE_URL = process.env.STORE_REPORT_API_ENDPOINT || 'https://stg-api-chat.bluedropacademy.com/api/admin';
 
 const get_admin_credentials = async () => {
     const response = await fetch(

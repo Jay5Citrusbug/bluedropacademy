@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ENVIRONMENT: staging
-      STORE_REPORT_API_ENDPOINT: https://stg-api-chat.bluedropacademy.com/api/admin/admin
+      STORE_REPORT_API_ENDPOINT: https://stg-api-chat.bluedropacademy.com/api/admin
     name: Run Playwright Tests - Staging
     steps:
       - uses: actions/checkout@v4
