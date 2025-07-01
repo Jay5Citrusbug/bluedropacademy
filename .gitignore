@@ -8,3 +8,4 @@ node_modules/
 /Playwright/bluedrop_academy/storageState.json
 D:\Playwright/Bluedrop_academy/tests/Videos
 D:\Playwright\Bluedrop_academy\allure-results
+.env

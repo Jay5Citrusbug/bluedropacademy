@@ -1,10 +1,10 @@
 export const adminCredentials = {
-    email: 'noam@bluedropacademy.com',
-    password: '1q:4lF1C',
+    email: process.env.ADMIN_EMAIL,
+    password: process.env.ADMIN_PASSWORD,
   };
   
   export const chatbotCredentials = {
-    email: 'vivek.citrusbug@gmail.com',
-    password: 'Citrusbug@89',
+    email: process.env.CHATBOT_EMAIL,
+    password: process.env.CHATBOT_PASSWORD,
   };
   

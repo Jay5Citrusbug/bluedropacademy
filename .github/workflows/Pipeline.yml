@@ -17,6 +17,7 @@ env:
   TO_EMAIL: noam@bluedropacademy.com
   CC_EMAIL: jay5.citrusbug@gmail.com,jayshree@citrusbug.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
+  
 
 jobs:
   run-tests-staging:
@@ -56,6 +57,11 @@ jobs:
         id: run-tests
         continue-on-error: true
         run: npm run test:staging
+        env:
+          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          CHATBOT_EMAIL: ${{ secrets.CHATBOT_EMAIL }}
+          CHATBOT_PASSWORD: ${{ secrets.CHATBOT_PASSWORD }}
 
       - name: Debug Playwright Report folder
         run: ls -la playwright-report
@@ -158,7 +164,11 @@ jobs:
         id: run-tests
         continue-on-error: true
         run: npm run test:prod
-
+        env:
+          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          CHATBOT_EMAIL: ${{ secrets.CHATBOT_EMAIL }}
+          CHATBOT_PASSWORD: ${{ secrets.CHATBOT_PASSWORD }}
 
       - name: Debug Playwright Report folder
         run: ls -la playwright-report
