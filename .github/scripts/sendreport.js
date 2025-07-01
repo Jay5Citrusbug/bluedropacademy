@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const sgMail = require('@sendgrid/mail');
-const store_automation_report = require('./storeReport');
+const { store_automation_report } = require('./storeReport');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -158,7 +158,11 @@ summaryTable = `
     </table>
     <br />
 `;
-store_automation_report(summaryTable, new Date());
+
+store_automation_report(summaryTable, new Date()).then(() => console.log('Report stored successfully'))
+.catch((error) => {
+    console.error('❌ Error while storeing report:', error.toString());
+});;
 
 sgMail
 .send(msg)

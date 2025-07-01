@@ -24,7 +24,7 @@ const get_admin_credentials = async () => {
     return response_data.token;
 };
 
-const store_automation_report = async (summery_html, report_date) => {
+module.exports.store_automation_report = async (summery_html, report_date) => {
     try {
         admin_token = await get_admin_credentials();
 
@@ -47,5 +47,3 @@ const store_automation_report = async (summery_html, report_date) => {
         console.log(err);
     }
 }
-
-module.export = store_automation_report
