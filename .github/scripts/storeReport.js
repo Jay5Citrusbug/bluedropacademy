@@ -37,7 +37,6 @@ module.exports.store_automation_report = async (summery_html, report_date) => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    report_html: report_html,
                     summery_html: summery_html,
                     report_date: report_date
                 }),
