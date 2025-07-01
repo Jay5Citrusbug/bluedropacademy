@@ -2,8 +2,8 @@ BASE_URL = process.env.STORE_REPORT_API_ENDPOINT || 'https://stg-api-chat.bluedr
 
 const get_admin_credentials = async () => {
     const adminCredentials = {
-        email: 'noam@bluedropacademy.com',
-        password: '1q:4lF1C',
+        email: process.env.ADMIN_EMAIL,
+        password: process.env.ADMIN_PASSWORD,
     };
 
     const response = await fetch(
