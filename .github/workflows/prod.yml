@@ -123,6 +123,7 @@ jobs:
           node sendreport.ts
         env:
           ENVIRONMENT: Production
+          STORE_REPORT_API_ENDPOINT: https://api-chat.bluedropacademy.com/api/admin
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           REPORT_DATE: ${{ needs.build.outputs.current_date }}
           TOTAL: ${{ needs.build.outputs.total }}

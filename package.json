@@ -21,12 +21,14 @@
     "cross-env": "^7.0.3",
     "gh-pages": "^6.3.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "node-fetch": "^3.3.2"
   },
   "dependencies": {
     "@faker-js/faker": "^9.7.0",
     "@sendgrid/mail": "^8.1.5",
     "allure": "^3.0.0-beta.12",
-    "ts-node": "^10.x"
+    "ts-node": "^10.x",
+    "node-fetch": "^3.3.2"
   }
 }
