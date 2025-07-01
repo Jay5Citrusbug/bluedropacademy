@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const sgMail = require('@sendgrid/mail');
+const store_automation_report = require('./storeReport');
+
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // The reportDir and jsonReportPath variables are no longer used for counts,
@@ -137,6 +139,26 @@ Citrusbug QA Team`,
   </div>
   `
 };
+
+summaryTable = `
+    <h3>🧪 Test Summary</h3>
+    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif;">
+      <tr style="background-color: #f2f2f2;">
+        <th>Total</th>
+        <th>Passed</th>
+        <th>Failed</th>
+        <th>Skipped</th>
+      </tr>
+      <tr>
+        <td>${totalTests}</td>
+        <td style="color: green;">${passedTests}</td>
+        <td style="color: red;">${failedTests}</td>
+        <td style="color: gray;">${skippedTests}</td>
+      </tr>
+    </table>
+    <br />
+`;
+store_automation_report(summaryTable, new Date());
 
 sgMail
 .send(msg)

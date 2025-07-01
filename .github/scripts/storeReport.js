@@ -1,4 +1,4 @@
-import { adminCredentials } from './tests/Config/credentials';
+import { adminCredentials } from '../../tests/Config/credentials';
 
 BASE_URL = process.env.STORE_REPORT_API_ENDPOINT || 'https://stg-api-chat.bluedropacademy.com/api/admin';
 
