@@ -1,6 +1,4 @@
-BASE_URL = process.env.STORE_REPORT_API_ENDPOINT || 'https://stg-api-chat.bluedropacademy.com/api/admin';
-
-const get_admin_credentials = async () => {
+const get_admin_credentials = async (BASE_URL) => {
     const adminCredentials = {
         email: process.env.ADMIN_EMAIL,
         password: process.env.ADMIN_PASSWORD,
@@ -24,9 +22,11 @@ const get_admin_credentials = async () => {
     return response_data.token;
 };
 
-module.exports.store_automation_report = async (summery_html, report_date) => {
+module.exports.store_automation_report = async (summery_html, report_date, environment) => {
     try {
-        admin_token = await get_admin_credentials();
+        BASE_URL = environment == 'staging' ? 'https://stg-api-chat.bluedropacademy.com/api/admin' : 'https://api-chat.bluedropacademy.com/api/admin';
+
+        admin_token = await get_admin_credentials(BASE_URL);
 
         await fetch(
             BASE_URL + '/create_report',

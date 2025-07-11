@@ -159,7 +159,7 @@ summaryTable = `
     <br />
 `;
 
-store_automation_report(summaryTable, new Date()).then(() => console.log('Report stored successfully'))
+store_automation_report(summaryTable, new Date(), environment).then(() => console.log('Report stored successfully'))
 .catch((error) => {
     console.error('❌ Error while storeing report:', error.toString());
 });;
