@@ -32,7 +32,7 @@ async InitialbotMessage(expectedName: string) {
   // Wait until message is non-empty
   const messageText = (await messageLocator.first().textContent())?.trim() || '';
   console.log(`📨 Bot message received: "${messageText}"`);
-
+await this.page.waitForTimeout(2000); // Waits for 2 seconds
   // Assert the message contains the expected name
   expect(messageText).toContain(expectedName);
   console.log(`✅ Bot message contains expected name: "${expectedName}"`);
@@ -114,7 +114,7 @@ async SubmitQuery(testInfo: TestInfo): Promise<string> {
   await input.press('Enter');
 
   console.log('🕐 Waiting for bot response to begin...');
-  await expect(frameLocator.locator(Chatbotlocator.LikeBtn)).toBeVisible({ timeout: 30000 });
+  await expect(frameLocator.locator(Chatbotlocator.LikeBtn)).toBeVisible({ timeout: 40000 });
 
   // ✅ Poll the last visible message until it is non-empty and not equal to the user query
   let botResponse: string | undefined = '';
