@@ -30,6 +30,7 @@ async InitialbotMessage(expectedName: string) {
   console.log('💬 Waiting for initial bot message...');
 
   // Wait until message is non-empty
+  await this.page.waitForTimeout(3000); // Waits for 3 seconds
   const messageText = (await messageLocator.first().textContent())?.trim() || '';
   console.log(`📨 Bot message received: "${messageText}"`);
 await this.page.waitForTimeout(2000); // Waits for 2 seconds
