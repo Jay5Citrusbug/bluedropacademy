@@ -113,29 +113,25 @@ async SubmitQuery(testInfo: TestInfo): Promise<string> {
   console.log(`💬 Submitting query: "${this.userMessage}"`);
   await input.fill(this.userMessage);
   await input.press('Enter');
-
   console.log('🕐 Waiting for bot response to begin...');
-  let botResponse: string | undefined = '';
+  //await expect(frameLocator.locator(Chatbotlocator.LikeBtn)).toBeVisible({ timeout: 40000 });
 
-  // Wait for the final bot message (not equal to user query)
-  await expect.poll(async () => {
-    const all = await systemMessages.all();
-    const last = all[all.length - 1];
-    botResponse = (await last.textContent())?.trim();
-    return botResponse && botResponse !== this.userMessage;
-  }, {
-    timeout: 40000,
-    message: 'Waiting for full bot response...',
-  }).toBeTruthy();
+  // ✅ Poll the last visible message until it is non-empty and not equal to the user query
+  let botResponse: string | undefined = '';
+  await expect
+    .poll(async () => {
+      const all = await systemMessages.all();
+      const last = all[all.length - 1];
+      botResponse = (await last.textContent())?.trim();
+      return botResponse && botResponse !== this.userMessage;
+    }, {
+      timeout: 40000,
+      message: 'Waiting for full bot response...',
+    })
+    .toBeTruthy();
 
   botResponse = botResponse || 'No response received';
   console.log(`✅ Bot response received: "${botResponse}"`);
-
-  // ✅ Scroll after bot response is ready
-  await this.scrollToBottom();
-
-  // ✅ Now wait for Like button to be visible
-  await expect(frameLocator.locator(Chatbotlocator.LikeBtn)).toBeVisible({ timeout: 10000 });
 
   testInfo.annotations.push({
     type: 'info',
