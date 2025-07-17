@@ -114,13 +114,12 @@ async SubmitQuery(testInfo: TestInfo): Promise<string> {
   await input.fill(this.userMessage);
   await input.press('Enter');
   console.log('🕐 Waiting for bot response to begin...');
-  //await expect(frameLocator.locator(Chatbotlocator.LikeBtn)).toBeVisible({ timeout: 40000 });
 
-  // ✅ Poll the last visible message until it is non-empty and not equal to the user query
   let botResponse: string | undefined = '';
   await expect
     .poll(async () => {
       const all = await systemMessages.all();
+      if (all.length === 0) return false;
       const last = all[all.length - 1];
       botResponse = (await last.textContent())?.trim();
       return botResponse && botResponse !== this.userMessage;
@@ -132,6 +131,11 @@ async SubmitQuery(testInfo: TestInfo): Promise<string> {
 
   botResponse = botResponse || 'No response received';
   console.log(`✅ Bot response received: "${botResponse}"`);
+
+  // ✅ Scroll to bottom before checking Like button
+  await frameLocator.locator(Chatbotlocator.ScrollingBtn).click(); // Or use scroll container method if it's not a button
+
+  await expect(frameLocator.locator(Chatbotlocator.LikeBtn)).toBeVisible({ timeout: 40000 });
 
   testInfo.annotations.push({
     type: 'info',
