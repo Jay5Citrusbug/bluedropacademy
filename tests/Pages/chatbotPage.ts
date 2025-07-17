@@ -115,7 +115,7 @@ async SubmitQuery(testInfo: TestInfo): Promise<string> {
   await input.press('Enter');
 
   console.log('🕐 Waiting for bot response to begin...');
- //await expect(frameLocator.locator(Chatbotlocator.LikeBtn)).toBeVisible({ timeout: 40000 });
+  await expect(frameLocator.locator(Chatbotlocator.LikeBtn)).toBeVisible({ timeout: 40000 });
 
   // ✅ Poll the last visible message until it is non-empty and not equal to the user query
   let botResponse: string | undefined = '';
