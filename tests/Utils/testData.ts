@@ -20,7 +20,7 @@ export function generateRandomQuestion(): string {
 const chatbotGender = gender === 'male' ? 'זכר 👨' : 'נקבה 👩';
 
 export const testUserData = {
-  email: 'vivek.citrusbug@gmail.com',
+  email: 'paras.citrusbug@gmail.com',
   name,
   gender: chatbotGender,
 };
