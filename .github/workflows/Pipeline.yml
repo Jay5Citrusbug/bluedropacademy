@@ -129,7 +129,7 @@ jobs:
         if: always()
         run: node .github/scripts/sendreport.js
         env:
-          REPORT_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html
+          REPORT_URL: https://${{ secrets.S3_BUCKET_NAME }}.s3.${{ secrets.S3_REGION }}.amazonaws.com/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html
           REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
           GITHUB_REF_NAME: ${{ github.ref_name }}
           SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
