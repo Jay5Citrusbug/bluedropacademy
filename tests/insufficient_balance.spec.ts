@@ -6,6 +6,9 @@ import { testUserData } from './Utils/testData';
 import { Edge_case } from './Pages/insufficient_balance';
 import { chatbotPage } from './Pages/chatbotPage';
 import { adminCredentials, chatbotCredentials } from './Config/credentials';
+import { generateRandomQuestion } from './Utils/testData';
+import { Chatbotlocator } from './Locators/chatbotLocator';
+
 
 
 test('TC_22: 💰 Admin daily plan cost update and verify insufficient balance popup', async ({ browser }, testInfo) => {
@@ -66,11 +69,21 @@ const chatbotscreen = new chatbotPage(chatbotPage1);
 const form1 = new FillPersonalInfopage(chatbotPage1);
 
 await chatbotLogin2.goto();
- await chatbotLogin2.login(chatbotCredentials.email, chatbotCredentials.password);
-// await form1.fillPersonalInfo(testUserData.name, testUserData.gender);
+await chatbotLogin2.login(chatbotCredentials.email, chatbotCredentials.password);
+
+const userMessage = generateRandomQuestion();
+console.log(`💬 Submitting query: "${userMessage}"`);
+
+const frameLocator = chatbotPage1.frameLocator(Chatbotlocator.iframeName);
+const input = frameLocator.getByTestId('seach-msg-input');
+
+// Scroll to bottom before typing
 await chatbotPage1.evaluate(() => {
   window.scrollTo(0, document.body.scrollHeight);
 });
-await chatbotscreen.SubmitQuery(testInfo);
 
+// Fill and submit the message
+await input.fill(userMessage);
+await input.press('Enter');
+await chatbotPage1.waitForTimeout(2000); // Wait for response
 });
