@@ -245,7 +245,7 @@ jobs:
       - name: Upload Report to S3
         run: |
           aws s3 cp playwright-report/report.html s3://${{ secrets.S3_BUCKET_NAME }}/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html --acl public-read
-
+      
       - name: Send Email Report
         if: always()
         run: node .github/scripts/sendreport.js
@@ -262,32 +262,3 @@ jobs:
           FAILED: ${{ steps.summary.outputs.failed }}
           SKIPPED: ${{ steps.summary.outputs.skipped }}
           GITHUB_WORKSPACE: ${{ github.workspace }}
-
-  deploy-all-reports:
-    needs: [run-tests-staging, run-tests-production]
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-    name: Deploy Consolidated Reports to GitHub Pages
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Download Staging Report Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: report-staging
-          path: all-reports/staging
-
-      - name: Download Production Report Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: report-production
-          path: all-reports/production
-
-      - name: Upload All Reports to GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: all-reports
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
