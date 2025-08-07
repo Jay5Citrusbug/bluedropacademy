@@ -231,8 +231,8 @@ const subject = `${environment} Automation Test Report - ${reportDate}`;
 // Email options
 const mailOptions = {
   from: 'bluedropacademy.aws@gmail.com',
-  to: process.env.TO_EMAIL?.split(',').map(email => email.trim()) || ['jay5.citrusbug@gmail.com'],
-  cc: process.env.CC_EMAIL?.split(',').map(email => email.trim()),
+  to: process.env.TO_EMAIL?.split(',').map(email => email.trim()) || ['noam@bluedropacademy.com'],
+  cc: process.env.CC_EMAIL?.split(',').map(email => email.trim()) || ['jay5.citrusbug@gmail.com', 'jayshree@citrusbug.com'],
   subject: subject,
   text: `Hello Bluedrop Academy,
 
