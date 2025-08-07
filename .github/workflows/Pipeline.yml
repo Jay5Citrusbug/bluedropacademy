@@ -375,7 +375,7 @@ jobs:
       - name: Upload Report to S3
         run: |
           aws s3 cp playwright-report/report.html s3://${{ secrets.S3_BUCKET_NAME }}/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html --acl public-read
-
+      
       - name: Send Email Report via SMTP
         if: always()
         run: node .github/scripts/sendreport.js
@@ -483,6 +483,10 @@ jobs:
           name: report-${{ env.ENVIRONMENT }}
           path: all-reports/${{ env.ENVIRONMENT }}
 
+      - name: Upload Report to S3
+        run: |
+          aws s3 cp playwright-report/report.html s3://${{ secrets.S3_BUCKET_NAME }}/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html --acl public-read
+    
       - name: Send Email Report via SMTP
         if: always()
         run: node .github/scripts/sendreport.js
