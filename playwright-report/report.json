@@ -10,7 +10,9 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 1
+    },
     "preserveOutput": "always",
     "reporter": [
       [
@@ -41,7 +43,9 @@
         "outputDir": "D:/Playwright/Bluedrop_academy/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "chromium",
         "name": "chromium",
         "testDir": "D:/Playwright/Bluedrop_academy/tests",
@@ -59,19 +63,944 @@
     "workers": 1,
     "webServer": null
   },
-  "suites": [],
-  "errors": [
+  "suites": [
     {
-      "message": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments.",
-      "stack": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments."
+      "title": "Chatbot.spec.ts",
+      "file": "Chatbot.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "BlueDrop Chatbot Test Suite",
+          "file": "Chatbot.spec.ts",
+          "line": 22,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "💬 Chatbot Screen",
+              "file": "Chatbot.spec.ts",
+              "line": 55,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC_01: ✅ Confirm chatbot screen elements are visible",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 0,
+                          "error": {
+                            "message": "Error: locator.fill: value: expected string, got undefined",
+                            "stack": "Error: locator.fill: value: expected string, got undefined\n    at AdminPage.login (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\AdminPage.ts:30:14)\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:31:17",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\AdminPage.ts",
+                              "column": 14,
+                              "line": 30
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39mPages\\AdminPage.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\n \u001b[90m 29 |\u001b[39m             \u001b[33m.\u001b[39mgetByRole(\u001b[32m\"textbox\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m adminPageLocators\u001b[33m.\u001b[39memailInput\u001b[33m.\u001b[39mname })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m             \u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m\"Filling in password input...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\AdminPage.ts",
+                                "column": 14,
+                                "line": 30
+                              },
+                              "message": "Error: locator.fill: value: expected string, got undefined\n\n\u001b[90m   at \u001b[39mPages\\AdminPage.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\n \u001b[90m 29 |\u001b[39m             \u001b[33m.\u001b[39mgetByRole(\u001b[32m\"textbox\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m adminPageLocators\u001b[33m.\u001b[39memailInput\u001b[33m.\u001b[39mname })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m             \u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m\"Filling in password input...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[0m\n\u001b[2m    at AdminPage.login (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\AdminPage.ts:30:14)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:31:17\u001b[22m"
+                            },
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                                "column": 19,
+                                "line": 50
+                              },
+                              "message": "TypeError: Cannot read properties of undefined (reading 'close')\n\n\u001b[0m \u001b[90m 48 |\u001b[39m   test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 49 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🧹 Closing context'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 50 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 51 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 52 |\u001b[39m\n \u001b[90m 53 |\u001b[39m   \u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:50:19\u001b[22m"
+                            }
+                          ],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: undefined\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            },
+                            {
+                              "text": "🧹 Closing context\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:34.630Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-22492-screen-elements-are-visible-chromium\\test-failed-1.png"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\AdminPage.ts",
+                            "column": 14,
+                            "line": 30
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-b1004f10ffc156eaa0a1",
+                  "file": "Chatbot.spec.ts",
+                  "line": 58,
+                  "column": 9
+                },
+                {
+                  "title": "TC_02: 🧠 Initial chatbot message is displayed",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.182Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-7a1143fd846f163b527d",
+                  "file": "Chatbot.spec.ts",
+                  "line": 64,
+                  "column": 9
+                },
+                {
+                  "title": "TC_03: 🚫 Predefined buttons are not active",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.194Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-6a0676835a2727c1c3fa",
+                  "file": "Chatbot.spec.ts",
+                  "line": 69,
+                  "column": 9
+                },
+                {
+                  "title": "TC_04: ✅ Submit button is enabled after input",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.205Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-fd5584203e368791c369",
+                  "file": "Chatbot.spec.ts",
+                  "line": 77,
+                  "column": 9
+                },
+                {
+                  "title": "TC_05: 📤 Submit query message",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.218Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-4712db0785b820507c5a",
+                  "file": "Chatbot.spec.ts",
+                  "line": 81,
+                  "column": 9
+                },
+                {
+                  "title": "TC_06: 🔽 Scroll to bottom of chat",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.220Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-4a6df28aff25a1be11bd",
+                  "file": "Chatbot.spec.ts",
+                  "line": 86,
+                  "column": 9
+                },
+                {
+                  "title": "TC_07: 👍 Like button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.221Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-8e846a5e520fef6853c1",
+                  "file": "Chatbot.spec.ts",
+                  "line": 95,
+                  "column": 9
+                },
+                {
+                  "title": "TC_08: 👎 Dislike button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.224Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-76f750f7381218bdaea2",
+                  "file": "Chatbot.spec.ts",
+                  "line": 99,
+                  "column": 9
+                },
+                {
+                  "title": "TC_09: 📋 Copy button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.236Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-9d74935fab974177c929",
+                  "file": "Chatbot.spec.ts",
+                  "line": 103,
+                  "column": 9
+                },
+                {
+                  "title": "TC_10: 📍 Predefined button click triggers response",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.238Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-88afacf66e17aee71fe1",
+                  "file": "Chatbot.spec.ts",
+                  "line": 108,
+                  "column": 9
+                },
+                {
+                  "title": "TC_11: 🔄 Reload hides previous chat",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.258Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-c7349090cf66965b4e05",
+                  "file": "Chatbot.spec.ts",
+                  "line": 112,
+                  "column": 11
+                },
+                {
+                  "title": "TC_12: ✏️ New session is created using edit icon",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.275Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-d49dcdb6cd1284bfff6a",
+                  "file": "Chatbot.spec.ts",
+                  "line": 118,
+                  "column": 9
+                },
+                {
+                  "title": "TC_13: 🔄 Session pop-up displays after 10 minutes and Click on the Continue button to resume session",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.288Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-60104c55377b10844297",
+                  "file": "Chatbot.spec.ts",
+                  "line": 125,
+                  "column": 5
+                },
+                {
+                  "title": "TC_14: ⏱️ Session pop-up displays after 10 minutes and close pop-up",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:41.304Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "23335bb06d3df52af178-4392dc67b87d4f84ea37",
+                  "file": "Chatbot.spec.ts",
+                  "line": 136,
+                  "column": 7
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hamburger_Menu.spec.ts",
+      "file": "Hamburger_Menu.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "BlueDrop Hamburgermenu Test Suite",
+          "file": "Hamburger_Menu.spec.ts",
+          "line": 19,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Hamburger Menu & 📜 Chat History",
+              "file": "Hamburger_Menu.spec.ts",
+              "line": 47,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "TC_15 🔓 Open Hamburger Menu",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 0,
+                          "error": {
+                            "message": "Error: locator.fill: value: expected string, got undefined",
+                            "stack": "Error: locator.fill: value: expected string, got undefined\n    at AdminPage.login (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\AdminPage.ts:30:14)\n    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:26:21",
+                            "location": {
+                              "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\AdminPage.ts",
+                              "column": 14,
+                              "line": 30
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39mPages\\AdminPage.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\n \u001b[90m 29 |\u001b[39m             \u001b[33m.\u001b[39mgetByRole(\u001b[32m\"textbox\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m adminPageLocators\u001b[33m.\u001b[39memailInput\u001b[33m.\u001b[39mname })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m             \u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m\"Filling in password input...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\AdminPage.ts",
+                                "column": 14,
+                                "line": 30
+                              },
+                              "message": "Error: locator.fill: value: expected string, got undefined\n\n\u001b[90m   at \u001b[39mPages\\AdminPage.ts:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\n \u001b[90m 29 |\u001b[39m             \u001b[33m.\u001b[39mgetByRole(\u001b[32m\"textbox\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m adminPageLocators\u001b[33m.\u001b[39memailInput\u001b[33m.\u001b[39mname })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m             \u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m\n \u001b[90m 32 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m\"Filling in password input...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[0m\n\u001b[2m    at AdminPage.login (D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\AdminPage.ts:30:14)\u001b[22m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:26:21\u001b[22m"
+                            },
+                            {
+                              "location": {
+                                "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts",
+                                "column": 19,
+                                "line": 44
+                              },
+                              "message": "TypeError: Cannot read properties of undefined (reading 'close')\n\n\u001b[0m \u001b[90m 42 |\u001b[39m\n \u001b[90m 43 |\u001b[39m   test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\n \u001b[90m 47 |\u001b[39m   test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Hamburger Menu & 📜 Chat History'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at D:\\Playwright\\Bluedrop_academy\\tests\\Hamburger_Menu.spec.ts:44:19\u001b[22m"
+                            }
+                          ],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to the admin page.\n"
+                            },
+                            {
+                              "text": "Starting login process for user: undefined\n"
+                            },
+                            {
+                              "text": "Filling in email input...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:43.187Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "D:\\Playwright\\Bluedrop_academy\\test-results\\Hamburger_Menu-BlueDrop-Ha-6368d-C-15-🔓-Open-Hamburger-Menu-chromium\\test-failed-1.png"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Playwright\\Bluedrop_academy\\tests\\Pages\\AdminPage.ts",
+                            "column": 14,
+                            "line": 30
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-d6400aac6d37aafe7d9d",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 99,
+                  "column": 9
+                },
+                {
+                  "title": "TC_16 ➕ Load More button functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:45.321Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-ee7aba365ae094c6e3ae",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 104,
+                  "column": 9
+                },
+                {
+                  "title": "TC_17 ❌ No result in chat history",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:45.332Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-5f03b36d312022c2d667",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 110,
+                  "column": 9
+                },
+                {
+                  "title": "TC_18 ❎ Close Hamburger Menu",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:45.344Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-2733a8bf55763ffe85b2",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 115,
+                  "column": 9
+                },
+                {
+                  "title": "TC_19 🆕 New session with \"שיחה חדשה\"",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:45.358Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-368e70807ff37c4900ea",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 120,
+                  "column": 9
+                },
+                {
+                  "title": "TC_20 ✏️ Edit and save changes in chat history",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:45.372Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-bec0605e2fc1c0706c44",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 127,
+                  "column": 9
+                },
+                {
+                  "title": "TC_21 🔁 Continue Chat Functionality",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 120000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "parallelIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-29T08:59:45.388Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "b55e7195d3b5536049bb-2a01c3748576844eb9bf",
+                  "file": "Hamburger_Menu.spec.ts",
+                  "line": 133,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "insufficient_balance.spec.ts",
+      "file": "insufficient_balance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC_22: 💰 Admin daily plan cost update and verify insufficient balance popup",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Skipping in production environment"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 13,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-07-29T08:59:47.456Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Skipping in production environment"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "802b36f43135f9baf1c9-498c8cf076dbd548debb",
+          "file": "insufficient_balance.spec.ts",
+          "line": 14,
+          "column": 5
+        }
+      ]
     }
   ],
+  "errors": [],
   "stats": {
-    "startTime": "2025-07-22T11:03:26.772Z",
-    "duration": 17.220000000000027,
+    "startTime": "2025-07-29T08:59:32.427Z",
+    "duration": 15458.452,
     "expected": 0,
-    "skipped": 0,
-    "unexpected": 0,
+    "skipped": 20,
+    "unexpected": 2,
     "flaky": 0
   }
 }

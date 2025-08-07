@@ -4,10 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test:staging": "cross-env ENVIRONMENT=staging URL_CHATBOT=https://bluedropacademy.wixsite.com/website-1/chat6 URL_ADMIN=https://stg-chat.bluedropacademy.com/admin npx playwright test --workers=1",
-     "test:staging:headed": "cross-env ENVIRONMENT=staging URL_CHATBOT=https://bluedropacademy.wixsite.com/website-1/chat6 URL_ADMIN=https://stg-chat.bluedropacademy.com/admin npx playwright test --workers=1 --headed",
+    "test:staging:headed": "cross-env ENVIRONMENT=staging URL_CHATBOT=https://bluedropacademy.wixsite.com/website-1/chat6 URL_ADMIN=https://stg-chat.bluedropacademy.com/admin npx playwright test --workers=1 --headed",
     "test:prod": "cross-env ENVIRONMENT=production URL_CHATBOT=https://www.bluedropacademy.com/blue URL_ADMIN=https://chat.bluedropacademy.com/admin npx playwright test --workers=1",
     "test:prod:headed": "cross-env ENVIRONMENT=production URL_CHATBOT=https://www.bluedropacademy.com/blue URL_ADMIN=https://chat.bluedropacademy.com/admin npx playwright test --workers=1 --headed"
-
   },
   "keywords": [],
   "author": "",
@@ -20,15 +19,16 @@
     "@types/node": "^22.15.2",
     "cross-env": "^7.0.3",
     "gh-pages": "^6.3.0",
+    "node-fetch": "^3.3.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3",
-    "node-fetch": "^3.3.2"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "@faker-js/faker": "^9.7.0",
     "@sendgrid/mail": "^8.1.5",
     "allure": "^3.0.0-beta.12",
-    "ts-node": "^10.x",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^7.0.5",
+    "ts-node": "^10.x"
   }
 }
