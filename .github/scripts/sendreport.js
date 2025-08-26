@@ -1,7 +1,6 @@
 // // const fs = require('fs');
 // // const path = require('path');
 // // const sgMail = require('@sendgrid/mail');
-const { store_automation_report } = require('./storeReport');
 // const nodemailer = require('nodemailer');
 
 
@@ -154,25 +153,6 @@ const { store_automation_report } = require('./storeReport');
 // //   `
 // // };
 
-// // summaryTable = `
-// //     <h3>🧪 Test Summary</h3>
-// //     <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif;">
-// //       <tr style="background-color: #f2f2f2;">
-// //         <th>Total</th>
-// //         <th>Passed</th>
-// //         <th>Failed</th>
-// //         <th>Skipped</th>
-// //       </tr>
-// //       <tr>
-// //         <td>${totalTests}</td>
-// //         <td style="color: green;">${passedTests}</td>
-// //         <td style="color: red;">${failedTests}</td>
-// //         <td style="color: gray;">${skippedTests}</td>
-// //       </tr>
-// //     </table>
-// //     <br />
-// // `;
-
 
 // // sgMail
 // // .send(msg)
@@ -196,18 +176,10 @@ const { store_automation_report } = require('./storeReport');
 //   }
 //   console.log('Email sent:', info.response);
 // });
-const nodemailer = require('nodemailer');
 
-// Setup SMTP transporter
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false, // true for 465
-  auth: {
-    user: 'bluedropacademy.aws@gmail.com',
-    pass: 'trkp qzii qiwi ecfu',
-  },
-});
+
+const { store_automation_report } = require('./storeReport');
+const nodemailer = require('nodemailer');
 
 // Environment-based data
 const totalTests = Number(process.env.TOTAL || '0');
@@ -221,6 +193,37 @@ const repoOwner = process.env.REPO_OWNER || 'your-org';
 const repoName = process.env.REPO_NAME || 'your-repo';
 const reportUrl = process.env.REPORT_URL || `https://${repoOwner}.github.io/${repoName}/report.html`;
 
+// Build summary table AFTER variables exist
+const summaryTable = `
+    <h3>🧪 Test Summary</h3>
+    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif;">
+      <tr style="background-color: #f2f2f2;">
+        <th>Total</th>
+        <th>Passed</th>
+        <th>Failed</th>
+        <th>Skipped</th>
+      </tr>
+      <tr>
+        <td>${totalTests}</td>
+        <td style="color: green;">${passedTests}</td>
+        <td style="color: red;">${failedTests}</td>
+        <td style="color: gray;">${skippedTests}</td>
+      </tr>
+    </table>
+    <br />
+`;
+
+// SMTP transporter
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 587,
+  secure: false, // true for 465
+  auth: {
+    user: 'bluedropacademy.aws@gmail.com',
+    pass: 'trkp qzii qiwi ecfu', // ⚠️ should be in GitHub Secret, not code
+  },
+});
+
 // Email subject
 const subject = `${environment} Automation Test Report - ${reportDate}`;
 
@@ -229,7 +232,7 @@ const mailOptions = {
   from: 'bluedropacademy.aws@gmail.com',
   to: process.env.TO_EMAIL?.split(',').map(email => email.trim()) || ['noam@bluedropacademy.com'],
   cc: process.env.CC_EMAIL?.split(',').map(email => email.trim()) || ['jay5.citrusbug@gmail.com', 'jayshree@citrusbug.com'],
-  subject: subject,
+  subject,
   text: `Hello Bluedrop Academy,
 
 The automated Playwright test suite has completed.
@@ -246,34 +249,9 @@ Best regards,
 Citrusbug QA Team`,
   html: `
     <div style="font-family: Arial, sans-serif; max-width: 650px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px;">
-      <div style="text-align: center;">
-        <img src="https://postimg.cc/hzLH6djb" alt="Bluedrop Academy" width="180" style="margin-bottom: 20px;" />
-      </div>
       <p>Hello <strong>Bluedrop Academy</strong>,</p>
       <p>The automated <strong>Playwright test suite</strong> for the <strong>${environment}</strong> environment has completed.</p>
-      <h3>🔍 Test Summary</h3>
-      <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
-        <tr>
-          <td style="border: 1px solid #ddd; padding: 8px;">📅 <strong>Date</strong></td>
-          <td style="border: 1px solid #ddd; padding: 8px;">${reportDate}</td>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #ddd; padding: 8px;">🔢 <strong>Total Tests</strong></td>
-          <td style="border: 1px solid #ddd; padding: 8px;">${totalTests}</td>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #ddd; padding: 8px;">✅ <strong>Passed</strong></td>
-          <td style="border: 1px solid #ddd; padding: 8px; color: green;">${passedTests}</td>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #ddd; padding: 8px;">❌ <strong>Failed</strong></td>
-          <td style="border: 1px solid #ddd; padding: 8px; color: red;">${failedTests}</td>
-        </tr>
-        <tr>
-          <td style="border: 1px solid #ddd; padding: 8px;">⏭️ <strong>Skipped</strong></td>
-          <td style="border: 1px solid #ddd; padding: 8px;">${skippedTests}</td>
-        </tr>
-      </table>
+      ${summaryTable}
       <div style="margin: 20px 0;">
         <a href="${reportUrl}" target="_blank" style="background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">📄 View Full Report</a>
       </div>
@@ -282,12 +260,12 @@ Citrusbug QA Team`,
   `,
 };
 
-
-store_automation_report(summaryTable, report_url ,new Date(), environment).then(() => console.log('Report stored successfully'))
-.catch((error) => {
-    console.error('❌ Error while storeing report:', error.toString());
-});;
-
+// Store report in backend
+store_automation_report(summaryTable, reportUrl, new Date(), environment)
+  .then(() => console.log('✅ Report stored successfully'))
+  .catch((error) => {
+    console.error('❌ Error while storing report:', error.toString());
+  });
 
 // Send the email
 transporter.sendMail(mailOptions, (error, info) => {
