@@ -1,5 +1,7 @@
 import { Page, expect } from "@playwright/test";
 import { adminPageLocators } from "../Locators/AdminpageLocator";
+require('dotenv').config();
+
 
 export class AdminPage {
     readonly page: Page;

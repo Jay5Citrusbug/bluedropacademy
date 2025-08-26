@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:staging": "cross-env ENVIRONMENT=staging URL_CHATBOT=https://bluedropacademy.wixsite.com/website-1/chat6 URL_ADMIN=https://stg-chat.bluedropacademy.com/admin npx playwright test --workers=1",
+    "test:staging": "cross-env ENVIRONMENT=staging URL_CHATBOT=https://bluedropacademy.wixsite.com/website-1/chat6 URL_ADMIN=https://stg-chat.bluedropacademy.com/admin npx playwright test --workers=4",
     "test:staging:headed": "cross-env ENVIRONMENT=staging URL_CHATBOT=https://bluedropacademy.wixsite.com/website-1/chat6 URL_ADMIN=https://stg-chat.bluedropacademy.com/admin npx playwright test --workers=1 --headed",
     "test:prod": "cross-env ENVIRONMENT=production URL_CHATBOT=https://www.bluedropacademy.com/blue URL_ADMIN=https://chat.bluedropacademy.com/admin npx playwright test --workers=1",
     "test:prod:headed": "cross-env ENVIRONMENT=production URL_CHATBOT=https://www.bluedropacademy.com/blue URL_ADMIN=https://chat.bluedropacademy.com/admin npx playwright test --workers=1 --headed"
@@ -27,6 +27,7 @@
     "@faker-js/faker": "^9.7.0",
     "@sendgrid/mail": "^8.1.5",
     "allure": "^3.0.0-beta.12",
+    "dotenv": "^17.2.1",
     "node-fetch": "^3.3.2",
     "nodemailer": "^7.0.5",
     "ts-node": "^10.x"

@@ -1,7 +1,7 @@
 // // const fs = require('fs');
 // // const path = require('path');
 // // const sgMail = require('@sendgrid/mail');
-// // const { store_automation_report } = require('./storeReport');
+const { store_automation_report } = require('./storeReport');
 // const nodemailer = require('nodemailer');
 
 
@@ -173,10 +173,6 @@
 // //     <br />
 // // `;
 
-// // store_automation_report(summaryTable, new Date(), environment).then(() => console.log('Report stored successfully'))
-// // .catch((error) => {
-// //     console.error('❌ Error while storeing report:', error.toString());
-// // });;
 
 // // sgMail
 // // .send(msg)
@@ -285,6 +281,13 @@ Citrusbug QA Team`,
     </div>
   `,
 };
+
+
+store_automation_report(summaryTable, report_url ,new Date(), environment).then(() => console.log('Report stored successfully'))
+.catch((error) => {
+    console.error('❌ Error while storeing report:', error.toString());
+});;
+
 
 // Send the email
 transporter.sendMail(mailOptions, (error, info) => {

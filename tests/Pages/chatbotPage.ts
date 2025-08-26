@@ -30,10 +30,10 @@ async InitialbotMessage(expectedName: string) {
   console.log('💬 Waiting for initial bot message...');
 
   // Wait until message is non-empty
-  await this.page.waitForTimeout(3000); // Waits for 3 seconds
+  await this.page.waitForTimeout(5000); // Waits for 5 seconds
   const messageText = (await messageLocator.first().textContent())?.trim() || '';
   console.log(`📨 Bot message received: "${messageText}"`);
-await this.page.waitForTimeout(2000); // Waits for 2 seconds
+await this.page.waitForTimeout(4000); // Waits for 4 seconds
   // Assert the message contains the expected name
   expect(messageText).toContain(expectedName);
   console.log(`✅ Bot message contains expected name: "${expectedName}"`);
@@ -104,6 +104,43 @@ async SubmitbtnNotActive() {
 //   // Return the message
 //   return this.userMessage;  // <-- ensure this line exists at the end
 // }
+// async SubmitQuery(testInfo: TestInfo): Promise<string> {
+//   this.userMessage = generateRandomQuestion();
+//   const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
+//   const input = frameLocator.getByTestId('seach-msg-input');
+//   const systemMessages = frameLocator.locator('.system-message-text');
+
+//   console.log(`💬 Submitting query: "${this.userMessage}"`);
+//   await input.fill(this.userMessage);
+//   await input.press('Enter');
+
+//   console.log('🕐 Waiting for bot response to begin...');
+//   await expect(frameLocator.locator(Chatbotlocator.LikeBtn)).toBeVisible({ timeout: 60000 });
+
+//   // ✅ Poll the last visible message until it is non-empty and not equal to the user query
+//   let botResponse: string | undefined = '';
+//   await expect
+//     .poll(async () => {
+//       const all = await systemMessages.all();
+//       const last = all[all.length - 1];
+//       botResponse = (await last.textContent())?.trim();
+//       return botResponse && botResponse !== this.userMessage;
+//     }, {
+//       timeout: 60000,
+//       message: 'Waiting for full bot response...',
+//     })
+//     .toBeTruthy();
+
+//   botResponse = botResponse || 'No response received';
+//   console.log(`✅ Bot response received: "${botResponse}"`);
+
+//   testInfo.annotations.push({
+//     type: 'info',
+//     description: `Bot response: ${botResponse}`,
+//   });
+
+//   return botResponse;
+// }
 async SubmitQuery(testInfo: TestInfo): Promise<string> {
   this.userMessage = generateRandomQuestion();
   const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
@@ -112,12 +149,35 @@ async SubmitQuery(testInfo: TestInfo): Promise<string> {
 
   console.log(`💬 Submitting query: "${this.userMessage}"`);
   await input.fill(this.userMessage);
+
+  // Start timer before sending
+  const startTime = Date.now();
   await input.press('Enter');
 
-  console.log('🕐 Waiting for bot response to begin...');
-  await expect(frameLocator.locator(Chatbotlocator.LikeBtn)).toBeVisible({ timeout: 60000 });
+  console.log('🕐 Waiting for first character of bot response...');
 
-  // ✅ Poll the last visible message until it is non-empty and not equal to the user query
+  // Wait until the first non-empty bot message appears
+  await expect
+    .poll(async () => {
+      const all = await systemMessages.all();
+      if (all.length === 0) return false;
+      const last = all[all.length - 1];
+      const text = (await last.textContent())?.trim() || '';
+      return text.length > 0 && text !== this.userMessage;
+    }, {
+      timeout: 90000,
+      message: 'Waiting for first bot character...',
+    })
+    .toBeTruthy();
+
+  const firstCharTime = Date.now();
+  const timeToFirstChar = ((firstCharTime - startTime) / 1000).toFixed(2);
+  console.log(`⏳ Time to first character: ${timeToFirstChar}s`);
+
+  // Wait for Like button (signals full response)
+  await expect(frameLocator.locator(Chatbotlocator.LikeBtn)).toBeVisible({ timeout: 90000 });
+
+  // Wait until the bot's message stops changing (final response)
   let botResponse: string | undefined = '';
   await expect
     .poll(async () => {
@@ -131,16 +191,32 @@ async SubmitQuery(testInfo: TestInfo): Promise<string> {
     })
     .toBeTruthy();
 
-  botResponse = botResponse || 'No response received';
-  console.log(`✅ Bot response received: "${botResponse}"`);
+  const endTime = Date.now();
+  const timeToFullResponse = ((endTime - startTime) / 1000).toFixed(2);
+  console.log(`✅ Time to full response: ${timeToFullResponse}s`);
+  console.log(`🤖 Bot response: "${botResponse}"`);
 
+  // Add both timings to Playwright's HTML report
+  // testInfo.annotations.push({
+  //   type: 'Performance',
+  //   description: `First char: ${timeToFirstChar}s | Full response: ${timeToFullResponse}s`
+  // });
+
+  //   // Add asked question to report
+  // testInfo.annotations.push({
+  //   type: 'AskedQuestion',
+  //   description: this.userMessage
+  // });
+
+  // Add bot's final response to report
   testInfo.annotations.push({
-    type: 'info',
-    description: `Bot response: ${botResponse}`,
+    type: 'BotResponse',
+    description: botResponse || 'No response received'
   });
 
-  return botResponse;
+  return botResponse || 'No response received';
 }
+
 
   async scrollToBottom() {
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);

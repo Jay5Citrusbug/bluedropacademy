@@ -1,4 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
+require('dotenv').config(); // Loads .env in local runs
+
 
 /**
  * Read environment variables from file.

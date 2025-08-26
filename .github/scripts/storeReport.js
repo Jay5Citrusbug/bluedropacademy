@@ -22,7 +22,7 @@ const get_admin_credentials = async (BASE_URL) => {
     return response_data.token;
 };
 
-module.exports.store_automation_report = async (summery_html, report_date, environment) => {
+module.exports.store_automation_report = async (summery_html, report_url, report_date, environment) => {
     try {
         BASE_URL = environment == 'staging' ? 'https://stg-api-chat.bluedropacademy.com/api/admin' : 'https://api-chat.bluedropacademy.com/api/admin';
 
@@ -38,6 +38,7 @@ module.exports.store_automation_report = async (summery_html, report_date, envir
                 },
                 body: JSON.stringify({
                     summery_html: summery_html,
+                    report_url: report_url,
                     report_date: report_date
                 }),
             }
