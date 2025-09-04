@@ -220,7 +220,7 @@ jobs:
 
       - name: Upload Report to S3
         run: |
-          aws s3 cp playwright-report/report.html s3://${{ secrets.S3_BUCKET_NAME }}/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html --acl public-read
+          aws s3 cp playwright-report s3://${{ secrets.S3_BUCKET_NAME }}/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/ --recursive --acl public-read
       
       - name: Send Email Report via SMTP
         if: always()
@@ -346,7 +346,7 @@ jobs:
 
       - name: Upload Report to S3
         run: |
-          aws s3 cp playwright-report/report.html s3://${{ secrets.S3_BUCKET_NAME }}/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html --acl public-read
+          aws s3 cp playwright-report s3://${{ secrets.S3_BUCKET_NAME }}/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/ --recursive --acl public-read
     
       - name: Send Email Report via SMTP
         if: always()
