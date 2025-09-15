@@ -260,6 +260,8 @@ Citrusbug QA Team`,
   `,
 };
 
+s3_store_date = process.env.REPORT_DATE
+
 // Store report in backend
 store_automation_report(summaryTable, reportUrl, new Date(), environment)
   .then(() => console.log('✅ Report stored successfully'))

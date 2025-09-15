@@ -33,7 +33,7 @@ module.exports.store_automation_report = async (summery_html, report_url, report
       },
       body: JSON.stringify({
         summery_html,
-        // report_url,
+        report_url,
         report_date,
       }),
     });
