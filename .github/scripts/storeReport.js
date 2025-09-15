@@ -16,7 +16,7 @@ const get_admin_credentials = async (BASE_URL) => {
   return json.data.token;
 };
 
-module.exports.store_automation_report = async (summary_html, report_url, report_date, environment) => {
+module.exports.store_automation_report = async (summery_html, report_url, report_date, environment) => {
   try {
     const BASE_URL =
       environment === 'staging'
@@ -32,7 +32,7 @@ module.exports.store_automation_report = async (summary_html, report_url, report
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        summary_html,
+        summery_html,
         // report_url,
         report_date,
       }),
