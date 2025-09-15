@@ -29,6 +29,7 @@
     "allure": "^3.0.0-beta.12",
     "dotenv": "^17.2.1",
     "nodemailer": "^7.0.5",
-    "ts-node": "^10.x"
+    "ts-node": "^10.x",
+    "node-fetch": "^3.3.2"
   }
 }

@@ -113,7 +113,7 @@ on:
     branches: ['main']
 
 env:
-  TO_EMAIL: noam@bluedropacademy.com
+  TO_EMAIL: jay5.citrusbug@gmail.com
   CC_EMAIL: jay5.citrusbug@gmail.com,jayshree@citrusbug.com
   FROM_EMAIL: bluedropacademy.aws@gmail.com
   ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}

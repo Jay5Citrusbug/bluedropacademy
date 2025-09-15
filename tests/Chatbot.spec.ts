@@ -55,7 +55,7 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
   test.describe('💬 Chatbot Screen', () => {
 
 
-    test('TC_01: ✅ Confirm chatbot screen elements are visible', async () => {
+    test.only('TC_01: ✅ Confirm chatbot screen elements are visible', async () => {
 
     
       await chatbotscreen.verifyConfirmationElements();
