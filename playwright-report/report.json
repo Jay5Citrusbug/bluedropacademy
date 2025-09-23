@@ -100,7 +100,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 718,
+                          "duration": 695,
                           "errors": [],
                           "stdout": [
                             {
@@ -209,10 +209,10 @@
                               "text": "Starting to fill personal information form...\n"
                             },
                             {
-                              "text": "Filling name: Elaine\n"
+                              "text": "Filling name: Dale\n"
                             },
                             {
-                              "text": "Selecting gender: נקבה 👩\n"
+                              "text": "Selecting gender: זכר 👨\n"
                             },
                             {
                               "text": "Checking visibility of \"Start\" button...\n"
@@ -235,7 +235,7 @@
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-08-26T06:30:58.735Z",
+                          "startTime": "2025-09-19T04:52:29.172Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -250,7 +250,7 @@
                 },
                 {
                   "title": "TC_02: 🧠 Initial chatbot message is displayed",
-                  "ok": true,
+                  "ok": false,
                   "tags": [],
                   "tests": [
                     {
@@ -263,28 +263,66 @@
                         {
                           "workerIndex": 0,
                           "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 9190,
-                          "errors": [],
+                          "status": "failed",
+                          "duration": 103395,
+                          "error": {
+                            "message": "Error: locator.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.system-message-text').first()\u001b[22m\n",
+                            "stack": "Error: locator.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.system-message-text').first()\u001b[22m\n\n    at chatbotPage.InitialbotMessage (D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:34:53)\n    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:65:7",
+                            "location": {
+                              "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                              "column": 53,
+                              "line": 34
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m   \u001b[90m// Wait until message is non-empty\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Waits for 5 seconds\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m   \u001b[36mconst\u001b[39m messageText \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m messageLocator\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mtextContent())\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mtrim() \u001b[33m||\u001b[39m \u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`📨 Bot message received: \"${messageText}\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m4000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Waits for 4 seconds\u001b[39m\n \u001b[90m 37 |\u001b[39m   \u001b[90m// Assert the message contains the expected name\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                                "column": 53,
+                                "line": 34
+                              },
+                              "message": "Error: locator.textContent: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('.system-message-text').first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:34\n\n\u001b[0m \u001b[90m 32 |\u001b[39m   \u001b[90m// Wait until message is non-empty\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m5000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Waits for 5 seconds\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m   \u001b[36mconst\u001b[39m messageText \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m messageLocator\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mtextContent())\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mtrim() \u001b[33m||\u001b[39m \u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m`📨 Bot message received: \"${messageText}\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m4000\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Waits for 4 seconds\u001b[39m\n \u001b[90m 37 |\u001b[39m   \u001b[90m// Assert the message contains the expected name\u001b[39m\u001b[0m\n\u001b[2m    at chatbotPage.InitialbotMessage (D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:34:53)\u001b[22m\n\u001b[2m    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:65:7\u001b[22m"
+                            },
+                            {
+                              "message": "Error: browser.newContext: Target page, context or browser has been closed"
+                            },
+                            {
+                              "location": {
+                                "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                                "column": 5,
+                                "line": 50
+                              },
+                              "message": "Error: browserContext.close: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 48 |\u001b[39m   test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 49 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'🧹 Closing context'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 50 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 51 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 52 |\u001b[39m\n \u001b[90m 53 |\u001b[39m   \u001b[0m\n\u001b[2m    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:50:5\u001b[22m"
+                            }
+                          ],
                           "stdout": [
                             {
                               "text": "💬 Waiting for initial bot message...\n"
                             },
                             {
-                              "text": "📨 Bot message received: \"הי Elaine,\nיאללה, נתחיל בכיף! מה מעניין אותך ללמוד היום? 🎉📘\nאפשר לשאול על כל דבר שעולה לך לראש.\"\n"
-                            },
-                            {
-                              "text": "✅ Bot message contains expected name: \"Elaine\"\n"
+                              "text": "🧹 Closing context\n"
                             }
                           ],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-08-26T06:31:29.787Z",
+                          "startTime": "2025-09-19T04:53:21.366Z",
                           "annotations": [],
-                          "attachments": []
+                          "attachments": [
+                            {
+                              "name": "_error-context-0",
+                              "contentType": "text/markdown",
+                              "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-0f6ad-hatbot-message-is-displayed-chromium\\error-context.md"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                            "column": 53,
+                            "line": 34
+                          }
                         }
                       ],
-                      "status": "expected"
+                      "status": "unexpected"
                     }
                   ],
                   "id": "23335bb06d3df52af178-7a1143fd846f163b527d",
@@ -303,26 +341,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 165,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔒 Verifying predefined buttons are hidden...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:31:38.994Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-6a0676835a2727c1c3fa",
@@ -341,32 +361,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 232,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "💬 Typing message: תסביר לי בפרטים על Carbon.\n"
-                            },
-                            {
-                              "text": "✅ Verifying Submit button is enabled...\n"
-                            },
-                            {
-                              "text": "🔄 Clearing input field after verification...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:31:39.167Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-fd5584203e368791c369",
@@ -381,52 +377,12 @@
                   "tests": [
                     {
                       "timeout": 120000,
-                      "annotations": [
-                        {
-                          "type": "BotResponse",
-                          "description": "אסטטין – היסוד הנדיר שמעולם לא פגשנו פנים אל פנים! 🖤✨\nדמייני שאת נכנסת למעבדה סודית, והמומחים מסביבך לוחשים על יסוד כה נדיר שאפילו המדענים הכי גדולים לא ראו אותו במלואו. ברוכה הבאה לעולם של אסטטין (Astatine) – היסוד הקסום ביותר בטבלה המחזורית 🌌!\nבואי נתחיל: מי את, אסטטין?\nאסטטין היא יסוד כימי עם הסמל At והמספר האטומי 85. היא שייכת לקבוצת ההלוגנים, יחד עם פלואור, כלור וברום... אבל בניגוד לחברותיה ה\"מפורסמות\", אסטטין היא כמו סלבריטאית מסתורית שמעולם לא הופיעה על הבמה 🎭.\nהיא נדירה ברמות בלתי נתפסות! בכל כדור הארץ כולו יש כנראה רק כ-30 גרם (!) של אסטטין בכל רגע נתון. כן, קראת נכון – זה פחות ממשקל של שוקולד קטן 🍫.\nאז למה כל כך קשה למצוא אותה?\nהסיבה לכך שאסטטין \"נעלמת\" קשורה לרדיואקטיביות שלה 💥. כל האיזוטופים שלה (צורות שונות של אותו יסוד) הם לא יציבים ומתפרקים במהירות. חייהם קצרצרים – חלקם חיים שניות בלבד! הזמן הזה קצר כל כך שרוב הניסויים על אסטטין נעשו בעקיפין, דרך התבוננות ב\"השפעות\" שלה ולא בה עצמה.\nמה מייחד אותה?\n\nהתנהגות מסתורית: מצד אחד, היא הלוגן... אז אולי נחשוב שהיא מתנהגת כמו יוד (ההלוגן הכי קרוב אליה). מצד שני, המדענים גילו שהיא גם מזכירה לנו מתכות 🔗.\nשימושים רפואיים פוטנציאליים: אחד השימושים האפשריים באסטטין הוא לטיפול בסרטן! איזוטופ מסוים שלה (At-211) יכול לשחרר קרינה ממוקדת לתאים סרטניים מבלי להרוס את הרקמות שמסביב 🏥.\n\nטריוויה קטנה שתפיל אותך מהרגליים:\nשם היסוד נובע מהמילה היוונית \"ἄστατος\" (אסטטוס), שמשמעותה \"לא יציב\". כלומר, אפילו השם שלה לוחש: \"אני כאן לזמן קצר...\" ⏳.\n🌟 מסר לסיום\nאסטטין היא תזכורת מדהימה ליופי ולמסתוריות של הטבע – אפילו הדברים הקטנים והבלתי נראים ביותר יכולים לשנות חיים ולהצית את הדמיון! אם היה לך כ-30 גרם קסומים של אסטטין בידייך, מה היית עושה איתם?  \n איך לדעתך רדיואקטיביות יכולה לשנות את המדע והרפואה בעתיד?"
-                        }
-                      ],
+                      "annotations": [],
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 9470,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "💬 Submitting query: \"תסביר לי בפרטים על Astatine.\"\n"
-                            },
-                            {
-                              "text": "🕐 Waiting for first character of bot response...\n"
-                            },
-                            {
-                              "text": "⏳ Time to first character: 2.15s\n"
-                            },
-                            {
-                              "text": "✅ Time to full response: 9.21s\n"
-                            },
-                            {
-                              "text": "🤖 Bot response: \"אסטטין – היסוד הנדיר שמעולם לא פגשנו פנים אל פנים! 🖤✨\nדמייני שאת נכנסת למעבדה סודית, והמומחים מסביבך לוחשים על יסוד כה נדיר שאפילו המדענים הכי גדולים לא ראו אותו במלואו. ברוכה הבאה לעולם של אסטטין (Astatine) – היסוד הקסום ביותר בטבלה המחזורית 🌌!\nבואי נתחיל: מי את, אסטטין?\nאסטטין היא יסוד כימי עם הסמל At והמספר האטומי 85. היא שייכת לקבוצת ההלוגנים, יחד עם פלואור, כלור וברום... אבל בניגוד לחברותיה ה\"מפורסמות\", אסטטין היא כמו סלבריטאית מסתורית שמעולם לא הופיעה על הבמה 🎭.\nהיא נדירה ברמות בלתי נתפסות! בכל כדור הארץ כולו יש כנראה רק כ-30 גרם (!) של אסטטין בכל רגע נתון. כן, קראת נכון – זה פחות ממשקל של שוקולד קטן 🍫.\nאז למה כל כך קשה למצוא אותה?\nהסיבה לכך שאסטטין \"נעלמת\" קשורה לרדיואקטיביות שלה 💥. כל האיזוטופים שלה (צורות שונות של אותו יסוד) הם לא יציבים ומתפרקים במהירות. חייהם קצרצרים – חלקם חיים שניות בלבד! הזמן הזה קצר כל כך שרוב הניסויים על אסטטין נעשו בעקיפין, דרך התבוננות ב\"השפעות\" שלה ולא בה עצמה.\nמה מייחד אותה?\n\nהתנהגות מסתורית: מצד אחד, היא הלוגן... אז אולי נחשוב שהיא מתנהגת כמו יוד (ההלוגן הכי קרוב אליה). מצד שני, המדענים גילו שהיא גם מזכירה לנו מתכות 🔗.\nשימושים רפואיים פוטנציאליים: אחד השימושים האפשריים באסטטין הוא לטיפול בסרטן! איזוטופ מסוים שלה (At-211) יכול לשחרר קרינה ממוקדת לתאים סרטניים מבלי להרוס את הרקמות שמסביב 🏥.\n\nטריוויה קטנה שתפיל אותך מהרגליים:\nשם היסוד נובע מהמילה היוונית \"ἄστατος\" (אסטטוס), שמשמעותה \"לא יציב\". כלומר, אפילו השם שלה לוחש: \"אני כאן לזמן קצר...\" ⏳.\n🌟 מסר לסיום\nאסטטין היא תזכורת מדהימה ליופי ולמסתוריות של הטבע – אפילו הדברים הקטנים והבלתי נראים ביותר יכולים לשנות חיים ולהצית את הדמיון! אם היה לך כ-30 גרם קסומים של אסטטין בידייך, מה היית עושה איתם?  \n איך לדעתך רדיואקטיביות יכולה לשנות את המדע והרפואה בעתיד?\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:31:39.405Z",
-                          "annotations": [
-                            {
-                              "type": "BotResponse",
-                              "description": "אסטטין – היסוד הנדיר שמעולם לא פגשנו פנים אל פנים! 🖤✨\nדמייני שאת נכנסת למעבדה סודית, והמומחים מסביבך לוחשים על יסוד כה נדיר שאפילו המדענים הכי גדולים לא ראו אותו במלואו. ברוכה הבאה לעולם של אסטטין (Astatine) – היסוד הקסום ביותר בטבלה המחזורית 🌌!\nבואי נתחיל: מי את, אסטטין?\nאסטטין היא יסוד כימי עם הסמל At והמספר האטומי 85. היא שייכת לקבוצת ההלוגנים, יחד עם פלואור, כלור וברום... אבל בניגוד לחברותיה ה\"מפורסמות\", אסטטין היא כמו סלבריטאית מסתורית שמעולם לא הופיעה על הבמה 🎭.\nהיא נדירה ברמות בלתי נתפסות! בכל כדור הארץ כולו יש כנראה רק כ-30 גרם (!) של אסטטין בכל רגע נתון. כן, קראת נכון – זה פחות ממשקל של שוקולד קטן 🍫.\nאז למה כל כך קשה למצוא אותה?\nהסיבה לכך שאסטטין \"נעלמת\" קשורה לרדיואקטיביות שלה 💥. כל האיזוטופים שלה (צורות שונות של אותו יסוד) הם לא יציבים ומתפרקים במהירות. חייהם קצרצרים – חלקם חיים שניות בלבד! הזמן הזה קצר כל כך שרוב הניסויים על אסטטין נעשו בעקיפין, דרך התבוננות ב\"השפעות\" שלה ולא בה עצמה.\nמה מייחד אותה?\n\nהתנהגות מסתורית: מצד אחד, היא הלוגן... אז אולי נחשוב שהיא מתנהגת כמו יוד (ההלוגן הכי קרוב אליה). מצד שני, המדענים גילו שהיא גם מזכירה לנו מתכות 🔗.\nשימושים רפואיים פוטנציאליים: אחד השימושים האפשריים באסטטין הוא לטיפול בסרטן! איזוטופ מסוים שלה (At-211) יכול לשחרר קרינה ממוקדת לתאים סרטניים מבלי להרוס את הרקמות שמסביב 🏥.\n\nטריוויה קטנה שתפיל אותך מהרגליים:\nשם היסוד נובע מהמילה היוונית \"ἄστατος\" (אסטטוס), שמשמעותה \"לא יציב\". כלומר, אפילו השם שלה לוחש: \"אני כאן לזמן קצר...\" ⏳.\n🌟 מסר לסיום\nאסטטין היא תזכורת מדהימה ליופי ולמסתוריות של הטבע – אפילו הדברים הקטנים והבלתי נראים ביותר יכולים לשנות חיים ולהצית את הדמיון! אם היה לך כ-30 גרם קסומים של אסטטין בידייך, מה היית עושה איתם?  \n איך לדעתך רדיואקטיביות יכולה לשנות את המדע והרפואה בעתיד?"
-                            }
-                          ],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-4712db0785b820507c5a",
@@ -445,26 +401,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 207,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔽 Scrolling to bottom...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:31:48.881Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-4a6df28aff25a1be11bd",
@@ -483,26 +421,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 669,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "👍 Clicking Like button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:31:49.095Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-8e846a5e520fef6853c1",
@@ -521,26 +441,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 585,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "👎 Clicking Dislike button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:31:49.773Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-76f750f7381218bdaea2",
@@ -559,26 +461,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 285,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "📋 Clicking Copy button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:31:50.364Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-9d74935fab974177c929",
@@ -593,46 +477,12 @@
                   "tests": [
                     {
                       "timeout": 120000,
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: **How Does Astatine Work Its Mysterious Magic? 🔮✨"
-                        }
-                      ],
+                      "annotations": [],
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2567,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔘 Clicking Predefined button...\n"
-                            },
-                            {
-                              "text": "🕐 Waiting for bot response to begin...\n"
-                            },
-                            {
-                              "text": "✅ Bot response received: \"**How Does Astatine Work Its Mysterious Magic? 🔮✨\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:31:50.654Z",
-                          "annotations": [
-                            {
-                              "type": "info",
-                              "description": "Bot response: **How Does Astatine Work Its Mysterious Magic? 🔮✨"
-                            }
-                          ],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-88afacf66e17aee71fe1",
@@ -651,35 +501,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 11357,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "📨 Bot message received: \"הי Elaine,\nהתגעגעתי אליך! על מה נדבר הפעם? 💙👋\nמה שבא לך – אני מקשיב ופה לעזור.\"\n"
-                            },
-                            {
-                              "text": "✅ Bot message contains expected name: \"Elaine\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:31:53.231Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-c7349090cf66965b4e05",
@@ -698,41 +521,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 9262,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "🔁 Starting a new chatbot session...\n"
-                            },
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "📨 Bot message received: \"הי Elaine,\nכל הכבוד שהגעת! רוצה לגלות יחד משהו חדש היום? 👏🔍\nתכתוב לי מה מסקרן אותך – ונתחיל!\"\n"
-                            },
-                            {
-                              "text": "✅ Bot message contains expected name: \"Elaine\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:32:04.593Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-d49dcdb6cd1284bfff6a",
@@ -751,35 +541,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 51916,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "⏳ Waiting for inactivity popup to appear...\n"
-                            },
-                            {
-                              "text": "⏳ Waiting in staging with timeout: 70s\n"
-                            },
-                            {
-                              "text": "✅ Inactivity popup is visible.\n"
-                            },
-                            {
-                              "text": "🔄 Clicked \"Continue Chat\" button.\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:32:13.860Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-60104c55377b10844297",
@@ -798,41 +561,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 70423,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "⏳ Waiting for inactivity popup to appear for close...\n"
-                            },
-                            {
-                              "text": "✅ Inactivity popup is visible.\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "📨 Bot message received: \"הי Elaine,\nיאללה, נתחיל בכיף! מה מעניין אותך ללמוד היום? 🎉📘\nאפשר לשאול על כל דבר שעולה לך לראש.\"\n"
-                            },
-                            {
-                              "text": "✅ Bot message contains expected name: \"Elaine\"\n"
-                            },
-                            {
-                              "text": "🧹 Closing context\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:33:05.783Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "23335bb06d3df52af178-4392dc67b87d4f84ea37",
@@ -877,146 +607,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1158,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "Navigating to the admin page...\n"
-                            },
-                            {
-                              "text": "Navigating to the chatbot page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to the admin page.\n"
-                            },
-                            {
-                              "text": "Starting login process for user: noam@bluedropacademy.com\n"
-                            },
-                            {
-                              "text": "Filling in email input...\n"
-                            },
-                            {
-                              "text": "Filling in password input...\n"
-                            },
-                            {
-                              "text": "Clicking on Sign In button...\n"
-                            },
-                            {
-                              "text": "Login submitted, waiting for dashboard to load...\n"
-                            },
-                            {
-                              "text": "Starting reset process for user: paras.citrusbug@gmail.com\n"
-                            },
-                            {
-                              "text": "Clicking on User Data tab...\n"
-                            },
-                            {
-                              "text": "Searching for user with email: paras.citrusbug@gmail.com\n"
-                            },
-                            {
-                              "text": "Waiting for user data to appear...\n"
-                            },
-                            {
-                              "text": "Scrolling horizontally to bring Reset button into view...\n"
-                            },
-                            {
-                              "text": "Clicking Reset button...\n"
-                            },
-                            {
-                              "text": "Clicking Reset button by text...\n"
-                            },
-                            {
-                              "text": "Confirming the reset...\n"
-                            },
-                            {
-                              "text": "Waiting for success message...\n"
-                            },
-                            {
-                              "text": "Reset confirmation message is visible.\n"
-                            },
-                            {
-                              "text": "✅ Reset process completed for user: paras.citrusbug@gmail.com\n"
-                            },
-                            {
-                              "text": "Navigating to the admin page...\n"
-                            },
-                            {
-                              "text": "Navigating to the chatbot page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to chatbot login page.\n"
-                            },
-                            {
-                              "text": "Clicking \"Login with Email\" button...\n"
-                            },
-                            {
-                              "text": "Filling in email: paras.citrusbug@gmail.com\n"
-                            },
-                            {
-                              "text": "Filling in password...\n"
-                            },
-                            {
-                              "text": "Clicking \"Submit\" to log in...\n"
-                            },
-                            {
-                              "text": "Waiting for page navigation after login...\n"
-                            },
-                            {
-                              "text": "Attempting to submit form with missing fields (invalid input)...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button without filling fields...\n"
-                            },
-                            {
-                              "text": "Waiting for validation error messages...\n"
-                            },
-                            {
-                              "text": "Verified gender required validation message.\n"
-                            },
-                            {
-                              "text": "Verified name required validation message.\n"
-                            },
-                            {
-                              "text": "✅ Invalid input test completed with expected error validations.\n"
-                            },
-                            {
-                              "text": "Starting to fill personal information form...\n"
-                            },
-                            {
-                              "text": "Filling name: Elaine\n"
-                            },
-                            {
-                              "text": "Selecting gender: נקבה 👩\n"
-                            },
-                            {
-                              "text": "Checking visibility of \"Start\" button...\n"
-                            },
-                            {
-                              "text": "Clicking \"Start\" button...\n"
-                            },
-                            {
-                              "text": "✅ Personal info submitted successfully.\n"
-                            },
-                            {
-                              "text": "✅ TC_19: Open Hamburger Menu\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:34:16.488Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-d6400aac6d37aafe7d9d",
@@ -1035,29 +627,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 681,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_20: Load More button functionality\n"
-                            },
-                            {
-                              "text": "📜 Clicking Load More button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:34:40.694Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-ee7aba365ae094c6e3ae",
@@ -1076,29 +647,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2218,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_21: No result in chat history\n"
-                            },
-                            {
-                              "text": "🔎 Using random search text: \"ter videlicet\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:34:41.380Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-5f03b36d312022c2d667",
@@ -1117,29 +667,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 344,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_22: Close Hamburger Menu\n"
-                            },
-                            {
-                              "text": "❌ Closing hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:34:43.604Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-2733a8bf55763ffe85b2",
@@ -1158,41 +687,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 9345,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_23: Start new session using \"שיחה חדשה\"\n"
-                            },
-                            {
-                              "text": "🔁 Creating new session from hamburger menu...\n"
-                            },
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "📨 Bot message received: \"הי Elaine,\nהתגעגעתי אליך! על מה נדבר הפעם? 💙👋\nמה שבא לך – אני מקשיב ופה לעזור.\"\n"
-                            },
-                            {
-                              "text": "✅ Bot message contains expected name: \"Elaine\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:34:43.958Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-368e70807ff37c4900ea",
@@ -1211,29 +707,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1387,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_24: Edit and save changes in chat history\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:34:53.311Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-bec0605e2fc1c0706c44",
@@ -1252,29 +727,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1595,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_21: Continue Chat Functionality\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-08-26T06:34:54.705Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-2a01c3748576844eb9bf",
@@ -1301,219 +755,12 @@
           "tests": [
             {
               "timeout": 120000,
-              "annotations": [
-                {
-                  "type": "info",
-                  "description": "Bot response: Lead: הגרעין שמפעיל את עולם המכירות! 🚀\nדמייני שאת גולשת באתר, ואת רואה פרסום למשהו מעניין – אולי סמארטפון חדש שמבטיח לטעון את עצמו ב-10 שניות (חלום, נכון? 📱⚡). את ממלאת טופס עם השם שלך והאימייל כדי לשמוע עוד. באותו הרגע, הפכת ל-Lead!\nאז מה זה בעצם Lead?\nLead הוא כל אדם או עסק שהביע עניין במוצר או שירות כלשהו. זהו לקוח פוטנציאלי 🎯!\n\nהוא עדיין לא קנה כלום, אבל הוא פתח דלת לשיחה עם העסק.\nלדוגמה: השארת פרטים בטופס, הורדת מדריך חינמי או אפילו שיחת טלפון קצרה כדי לשאול שאלות.\n\nלמה ה-Leads כל כך חשובים?\nהם כמו זרעים 🌱 – חלקם יצמחו להיות לקוחות משלמים, וחלקם... אולי לא. אבל בלי זרעים – אין צמיחה!\nעסקים משתמשים ב-Leads כדי לבנות קשרים, להכיר צרכים של לקוחות ולהמיר אותם למכירה 💰.\nאיך יוצרים Lead?\nבעולם הדיגיטלי 🎮:\n\nפרסומות ממוקדות 📣\nניוזלטרים 📬\nתוכן מפתה כמו מדריכים חינמיים 🧾\n\nובעולם האמיתי 🎭:\n\nירידי מכירות 🏢\nהצעות מיוחדות בחנויות 🌟\n\n💡 פקט מגניב: חברות מחלקות את ה-Leads לפי \"חום\" 🔥 – לקוח שכבר מתעניין מאוד ייחשב \"חם\", בעוד מישהו שאפילו לא בטוח מה המוצר ייחשב \"קר\". איך לדעתך אפשר להפוך Lead קר לחם?  \n אילו דרכים יצירתיות היית ממציאה כדי למשוך לקוחות חדשים?"
-                },
-                {
-                  "type": "info",
-                  "description": "Bot response: Lead: הגרעין שמפעיל את עולם המכירות! 🚀\nדמייני שאת גולשת באתר, ואת רואה פרסום למשהו מעניין – אולי סמארטפון חדש שמבטיח לטעון את עצמו ב-10 שניות (חלום, נכון? 📱⚡). את ממלאת טופס עם השם שלך והאימייל כדי לשמוע עוד. באותו הרגע, הפכת ל-Lead!\nאז מה זה בעצם Lead?\nLead הוא כל אדם או עסק שהביע עניין במוצר או שירות כלשהו. זהו לקוח פוטנציאלי 🎯!\n\nהוא עדיין לא קנה כלום, אבל הוא פתח דלת לשיחה עם העסק.\nלדוגמה: השארת פרטים בטופס, הורדת מדריך חינמי או אפילו שיחת טלפון קצרה כדי לשאול שאלות.\n\nלמה ה-Leads כל כך חשובים?\nהם כמו זרעים 🌱 – חלקם יצמחו להיות לקוחות משלמים, וחלקם... אולי לא. אבל בלי זרעים – אין צמיחה!\nעסקים משתמשים ב-Leads כדי לבנות קשרים, להכיר צרכים של לקוחות ולהמיר אותם למכירה 💰.\nאיך יוצרים Lead?\nבעולם הדיגיטלי 🎮:\n\nפרסומות ממוקדות 📣\nניוזלטרים 📬\nתוכן מפתה כמו מדריכים חינמיים 🧾\n\nובעולם האמיתי 🎭:\n\nירידי מכירות 🏢\nהצעות מיוחדות בחנויות 🌟\n\n💡 פקט מגניב: חברות מחלקות את ה-Leads לפי \"חום\" 🔥 – לקוח שכבר מתעניין מאוד ייחשב \"חם\", בעוד מישהו שאפילו לא בטוח מה המוצר ייחשב \"קר\"."
-                }
-              ],
+              "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 113276,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Navigating to the admin page...\n"
-                    },
-                    {
-                      "text": "Navigating to the chatbot page...\n"
-                    },
-                    {
-                      "text": "Successfully navigated to the admin page.\n"
-                    },
-                    {
-                      "text": "Starting login process for user: noam@bluedropacademy.com\n"
-                    },
-                    {
-                      "text": "Filling in email input...\n"
-                    },
-                    {
-                      "text": "Filling in password input...\n"
-                    },
-                    {
-                      "text": "Clicking on Sign In button...\n"
-                    },
-                    {
-                      "text": "Login submitted, waiting for dashboard to load...\n"
-                    },
-                    {
-                      "text": "Starting reset process for user: paras.citrusbug@gmail.com\n"
-                    },
-                    {
-                      "text": "Clicking on User Data tab...\n"
-                    },
-                    {
-                      "text": "Searching for user with email: paras.citrusbug@gmail.com\n"
-                    },
-                    {
-                      "text": "Waiting for user data to appear...\n"
-                    },
-                    {
-                      "text": "Scrolling horizontally to bring Reset button into view...\n"
-                    },
-                    {
-                      "text": "Clicking Reset button...\n"
-                    },
-                    {
-                      "text": "Clicking Reset button by text...\n"
-                    },
-                    {
-                      "text": "Confirming the reset...\n"
-                    },
-                    {
-                      "text": "Waiting for success message...\n"
-                    },
-                    {
-                      "text": "Reset confirmation message is visible.\n"
-                    },
-                    {
-                      "text": "✅ Reset process completed for user: paras.citrusbug@gmail.com\n"
-                    },
-                    {
-                      "text": "Navigating to the admin page...\n"
-                    },
-                    {
-                      "text": "Navigating to the chatbot page...\n"
-                    },
-                    {
-                      "text": "Successfully navigated to chatbot login page.\n"
-                    },
-                    {
-                      "text": "Clicking \"Login with Email\" button...\n"
-                    },
-                    {
-                      "text": "Filling in email: paras.citrusbug@gmail.com\n"
-                    },
-                    {
-                      "text": "Filling in password...\n"
-                    },
-                    {
-                      "text": "Clicking \"Submit\" to log in...\n"
-                    },
-                    {
-                      "text": "Waiting for page navigation after login...\n"
-                    },
-                    {
-                      "text": "Starting to fill personal information form...\n"
-                    },
-                    {
-                      "text": "Filling name: Elaine\n"
-                    },
-                    {
-                      "text": "Selecting gender: נקבה 👩\n"
-                    },
-                    {
-                      "text": "Checking visibility of \"Start\" button...\n"
-                    },
-                    {
-                      "text": "Clicking \"Start\" button...\n"
-                    },
-                    {
-                      "text": "✅ Personal info submitted successfully.\n"
-                    },
-                    {
-                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Lead.\"\n"
-                    },
-                    {
-                      "text": "🕐 Waiting for bot response...\n"
-                    },
-                    {
-                      "text": "✅ Bot response received: \"Lead: הגרעין שמפעיל את עולם המכירות! 🚀\nדמייני שאת גולשת באתר, ואת רואה פרסום למשהו מעניין – אולי סמארטפון חדש שמבטיח לטעון את עצמו ב-10 שניות (חלום, נכון? 📱⚡). את ממלאת טופס עם השם שלך והאימייל כדי לשמוע עוד. באותו הרגע, הפכת ל-Lead!\nאז מה זה בעצם Lead?\nLead הוא כל אדם או עסק שהביע עניין במוצר או שירות כלשהו. זהו לקוח פוטנציאלי 🎯!\n\nהוא עדיין לא קנה כלום, אבל הוא פתח דלת לשיחה עם העסק.\nלדוגמה: השארת פרטים בטופס, הורדת מדריך חינמי או אפילו שיחת טלפון קצרה כדי לשאול שאלות.\n\nלמה ה-Leads כל כך חשובים?\nהם כמו זרעים 🌱 – חלקם יצמחו להיות לקוחות משלמים, וחלקם... אולי לא. אבל בלי זרעים – אין צמיחה!\nעסקים משתמשים ב-Leads כדי לבנות קשרים, להכיר צרכים של לקוחות ולהמיר אותם למכירה 💰.\nאיך יוצרים Lead?\nבעולם הדיגיטלי 🎮:\n\nפרסומות ממוקדות 📣\nניוזלטרים 📬\nתוכן מפתה כמו מדריכים חינמיים 🧾\n\nובעולם האמיתי 🎭:\n\nירידי מכירות 🏢\nהצעות מיוחדות בחנויות 🌟\n\n💡 פקט מגניב: חברות מחלקות את ה-Leads לפי \"חום\" 🔥 – לקוח שכבר מתעניין מאוד ייחשב \"חם\", בעוד מישהו שאפילו לא בטוח מה המוצר ייחשב \"קר\". איך לדעתך אפשר להפוך Lead קר לחם?  \n אילו דרכים יצירתיות היית ממציאה כדי למשוך לקוחות חדשים?\"\n"
-                    },
-                    {
-                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Chlorine.\"\n"
-                    },
-                    {
-                      "text": "🕐 Waiting for bot response...\n"
-                    },
-                    {
-                      "text": "✅ Bot response received: \"Lead: הגרעין שמפעיל את עולם המכירות! 🚀\nדמייני שאת גולשת באתר, ואת רואה פרסום למשהו מעניין – אולי סמארטפון חדש שמבטיח לטעון את עצמו ב-10 שניות (חלום, נכון? 📱⚡). את ממלאת טופס עם השם שלך והאימייל כדי לשמוע עוד. באותו הרגע, הפכת ל-Lead!\nאז מה זה בעצם Lead?\nLead הוא כל אדם או עסק שהביע עניין במוצר או שירות כלשהו. זהו לקוח פוטנציאלי 🎯!\n\nהוא עדיין לא קנה כלום, אבל הוא פתח דלת לשיחה עם העסק.\nלדוגמה: השארת פרטים בטופס, הורדת מדריך חינמי או אפילו שיחת טלפון קצרה כדי לשאול שאלות.\n\nלמה ה-Leads כל כך חשובים?\nהם כמו זרעים 🌱 – חלקם יצמחו להיות לקוחות משלמים, וחלקם... אולי לא. אבל בלי זרעים – אין צמיחה!\nעסקים משתמשים ב-Leads כדי לבנות קשרים, להכיר צרכים של לקוחות ולהמיר אותם למכירה 💰.\nאיך יוצרים Lead?\nבעולם הדיגיטלי 🎮:\n\nפרסומות ממוקדות 📣\nניוזלטרים 📬\nתוכן מפתה כמו מדריכים חינמיים 🧾\n\nובעולם האמיתי 🎭:\n\nירידי מכירות 🏢\nהצעות מיוחדות בחנויות 🌟\n\n💡 פקט מגניב: חברות מחלקות את ה-Leads לפי \"חום\" 🔥 – לקוח שכבר מתעניין מאוד ייחשב \"חם\", בעוד מישהו שאפילו לא בטוח מה המוצר ייחשב \"קר\".\"\n"
-                    },
-                    {
-                      "text": "Insufficient Balance pop-up comming\n"
-                    },
-                    {
-                      "text": "Insufficient Balance pop-up comming\n"
-                    },
-                    {
-                      "text": "Navigating to the admin page...\n"
-                    },
-                    {
-                      "text": "Navigating to the chatbot page...\n"
-                    },
-                    {
-                      "text": "Successfully navigated to the admin page.\n"
-                    },
-                    {
-                      "text": "Starting login process for user: noam@bluedropacademy.com\n"
-                    },
-                    {
-                      "text": "Filling in email input...\n"
-                    },
-                    {
-                      "text": "Filling in password input...\n"
-                    },
-                    {
-                      "text": "Clicking on Sign In button...\n"
-                    },
-                    {
-                      "text": "Login submitted, waiting for dashboard to load...\n"
-                    },
-                    {
-                      "text": "Navigating to the admin page...\n"
-                    },
-                    {
-                      "text": "Navigating to the chatbot page...\n"
-                    },
-                    {
-                      "text": "Successfully navigated to chatbot login page.\n"
-                    },
-                    {
-                      "text": "Clicking \"Login with Email\" button...\n"
-                    },
-                    {
-                      "text": "Filling in email: paras.citrusbug@gmail.com\n"
-                    },
-                    {
-                      "text": "Filling in password...\n"
-                    },
-                    {
-                      "text": "Clicking \"Submit\" to log in...\n"
-                    },
-                    {
-                      "text": "Waiting for page navigation after login...\n"
-                    },
-                    {
-                      "text": "💬 Submitting query: \"איך להכין Vanilla-crusted Lamb? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-26T06:34:56.422Z",
-                  "annotations": [
-                    {
-                      "type": "info",
-                      "description": "Bot response: Lead: הגרעין שמפעיל את עולם המכירות! 🚀\nדמייני שאת גולשת באתר, ואת רואה פרסום למשהו מעניין – אולי סמארטפון חדש שמבטיח לטעון את עצמו ב-10 שניות (חלום, נכון? 📱⚡). את ממלאת טופס עם השם שלך והאימייל כדי לשמוע עוד. באותו הרגע, הפכת ל-Lead!\nאז מה זה בעצם Lead?\nLead הוא כל אדם או עסק שהביע עניין במוצר או שירות כלשהו. זהו לקוח פוטנציאלי 🎯!\n\nהוא עדיין לא קנה כלום, אבל הוא פתח דלת לשיחה עם העסק.\nלדוגמה: השארת פרטים בטופס, הורדת מדריך חינמי או אפילו שיחת טלפון קצרה כדי לשאול שאלות.\n\nלמה ה-Leads כל כך חשובים?\nהם כמו זרעים 🌱 – חלקם יצמחו להיות לקוחות משלמים, וחלקם... אולי לא. אבל בלי זרעים – אין צמיחה!\nעסקים משתמשים ב-Leads כדי לבנות קשרים, להכיר צרכים של לקוחות ולהמיר אותם למכירה 💰.\nאיך יוצרים Lead?\nבעולם הדיגיטלי 🎮:\n\nפרסומות ממוקדות 📣\nניוזלטרים 📬\nתוכן מפתה כמו מדריכים חינמיים 🧾\n\nובעולם האמיתי 🎭:\n\nירידי מכירות 🏢\nהצעות מיוחדות בחנויות 🌟\n\n💡 פקט מגניב: חברות מחלקות את ה-Leads לפי \"חום\" 🔥 – לקוח שכבר מתעניין מאוד ייחשב \"חם\", בעוד מישהו שאפילו לא בטוח מה המוצר ייחשב \"קר\". איך לדעתך אפשר להפוך Lead קר לחם?  \n אילו דרכים יצירתיות היית ממציאה כדי למשוך לקוחות חדשים?"
-                    },
-                    {
-                      "type": "info",
-                      "description": "Bot response: Lead: הגרעין שמפעיל את עולם המכירות! 🚀\nדמייני שאת גולשת באתר, ואת רואה פרסום למשהו מעניין – אולי סמארטפון חדש שמבטיח לטעון את עצמו ב-10 שניות (חלום, נכון? 📱⚡). את ממלאת טופס עם השם שלך והאימייל כדי לשמוע עוד. באותו הרגע, הפכת ל-Lead!\nאז מה זה בעצם Lead?\nLead הוא כל אדם או עסק שהביע עניין במוצר או שירות כלשהו. זהו לקוח פוטנציאלי 🎯!\n\nהוא עדיין לא קנה כלום, אבל הוא פתח דלת לשיחה עם העסק.\nלדוגמה: השארת פרטים בטופס, הורדת מדריך חינמי או אפילו שיחת טלפון קצרה כדי לשאול שאלות.\n\nלמה ה-Leads כל כך חשובים?\nהם כמו זרעים 🌱 – חלקם יצמחו להיות לקוחות משלמים, וחלקם... אולי לא. אבל בלי זרעים – אין צמיחה!\nעסקים משתמשים ב-Leads כדי לבנות קשרים, להכיר צרכים של לקוחות ולהמיר אותם למכירה 💰.\nאיך יוצרים Lead?\nבעולם הדיגיטלי 🎮:\n\nפרסומות ממוקדות 📣\nניוזלטרים 📬\nתוכן מפתה כמו מדריכים חינמיים 🧾\n\nובעולם האמיתי 🎭:\n\nירידי מכירות 🏢\nהצעות מיוחדות בחנויות 🌟\n\n💡 פקט מגניב: חברות מחלקות את ה-Leads לפי \"חום\" 🔥 – לקוח שכבר מתעניין מאוד ייחשב \"חם\", בעוד מישהו שאפילו לא בטוח מה המוצר ייחשב \"קר\"."
-                    }
-                  ],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "802b36f43135f9baf1c9-498c8cf076dbd548debb",
@@ -1526,11 +773,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-08-26T06:30:56.469Z",
-    "duration": 353682.12,
-    "expected": 22,
-    "skipped": 0,
-    "unexpected": 0,
+    "startTime": "2025-09-19T04:52:26.664Z",
+    "duration": 158817.79,
+    "expected": 1,
+    "skipped": 20,
+    "unexpected": 1,
     "flaky": 0
   }
 }
