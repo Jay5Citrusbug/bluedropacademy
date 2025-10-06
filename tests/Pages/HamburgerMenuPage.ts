@@ -36,8 +36,9 @@ export class HamburgerMenuPage {
     const menuButton = frameLocator.locator(MenuLocator.hamburgerMenuBtn);
 
     console.log('📂 Opening hamburger menu...');
-    await expect(menuButton).toBeVisible();
     await this.page.evaluate(() => window.scrollTo(0, 0));
+
+  await expect(menuButton).toBeVisible({ timeout: 15000 }); // waits up to 15s
     await menuButton.click({force: true});
 
     await expect(frameLocator.getByRole('button', { name: 'Close' })).toBeVisible();

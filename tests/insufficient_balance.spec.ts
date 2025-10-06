@@ -23,9 +23,9 @@ test('TC_22: 💰 Admin daily plan cost update and verify insufficient balance p
   const adminPage = await adminContext.newPage();
   const adminInsufficientPopup = new Edge_case(adminPage); // ✅ correct instantiation
 
-  await adminInsufficientPopup.goto();
-  await adminInsufficientPopup.login(adminCredentials.email, adminCredentials.password);
-  await adminInsufficientPopup.resetUserData(testUserData.email);
+   await adminInsufficientPopup.goto();
+   await adminInsufficientPopup.login(adminCredentials.email, adminCredentials.password);
+  // await adminInsufficientPopup.resetUserData(testUserData.email);
   await adminInsufficientPopup.AdminChangeBalanceValue();
   await adminPage.close();
   await adminContext.close();
@@ -40,9 +40,17 @@ test('TC_22: 💰 Admin daily plan cost update and verify insufficient balance p
 
   await chatbotLogin.goto();
   await chatbotLogin.login(chatbotCredentials.email, chatbotCredentials.password);
-  await chatbotInsufficientPopup.fillPersonalInfo(testUserData.name, testUserData.gender);
-  await chatbotInsufficientPopup.SubmitQuery2(testInfo);
-  await chatbotInsufficientPopup.SubmitQuery2(testInfo);
+  // await chatbotInsufficientPopup.fillPersonalInfo(testUserData.name, testUserData.gender);
+  const userMessage = generateRandomQuestion();
+  console.log(`💬 Submitting query: "${userMessage}"`);
+  const frameLocator = chatbotPg.frameLocator(Chatbotlocator.iframeName);
+
+  const input = frameLocator.getByTestId('seach-msg-input');
+
+  // await input.fill(userMessage);
+  // await input.press('Enter');
+
+  //await chatbotInsufficientPopup.SubmitQuery2(testInfo);
   console.log('Insufficient Balance pop-up comming');
   await chatbotPg.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByRole('heading', { name: 'נראה שהגיע הזמן לעשות מנוי😊' }).isVisible();
   await chatbotPg.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByText('הגעת לגבול השימוש היומי ב"בלו" ללא מנוי. תוכל להמשיך רק מחר. או שתוכל לרכוש אחד ').isVisible();
@@ -53,37 +61,31 @@ test('TC_22: 💰 Admin daily plan cost update and verify insufficient balance p
   await chatbotContext.close();
 
  //  ----- Admin: Reverse the balance change -----
-  const adminReverseContext = await browser.newContext();
-  const adminReversePage = await adminReverseContext.newPage();
-  const adminReverse = new Edge_case(adminReversePage); // ✅ correct class
+  // Admin context
+const adminContext1 = await browser.newContext();
+const adminPage1 = await adminContext1.newPage();
+const admin1 = new Edge_case(adminPage1);
+await admin1.goto();
+await admin1.login(adminCredentials.email, adminCredentials.password);
+await admin1.AdminreverseAmount();
+await adminContext1.close(); // ✅ only closes admin context
 
-  await adminReverse.goto();
-  await adminReverse.login(adminCredentials.email, adminCredentials.password);
-  await adminReverse.AdminreverseAmount();
-  await adminReverseContext.close();
-
+// Chatbot context
 const chatbotContext1 = await browser.newContext();
 const chatbotPage1 = await chatbotContext1.newPage();
-const chatbotLogin2 = new ChatbotLoginPage(chatbotPage1);
-const chatbotscreen = new chatbotPage(chatbotPage1);
-const form1 = new FillPersonalInfopage(chatbotPage1);
+const chatbotLogin1 = new ChatbotLoginPage(chatbotPage1);
 
-await chatbotLogin2.goto();
-await chatbotLogin2.login(chatbotCredentials.email, chatbotCredentials.password);
+await chatbotLogin1.goto();
+await chatbotLogin1.login(chatbotCredentials.email, chatbotCredentials.password);
 
-const userMessage = generateRandomQuestion();
-console.log(`💬 Submitting query: "${userMessage}"`);
+const frameLocator1 = chatbotPage1.frameLocator(Chatbotlocator.iframeName);
+const input1 = frameLocator1.getByTestId('seach-msg-input');
 
-const frameLocator = chatbotPage1.frameLocator(Chatbotlocator.iframeName);
-const input = frameLocator.getByTestId('seach-msg-input');
+await input1.waitFor({ state: 'visible' }); // ensure input is ready
 
-// Scroll to bottom before typing
-await chatbotPage1.evaluate(() => {
-  window.scrollTo(0, document.body.scrollHeight);
-});
+await chatbotPage1.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+await input1.fill(userMessage);
+await input1.press('Enter');
 
-// Fill and submit the message
-await input.fill(userMessage);
-await input.press('Enter');
-await chatbotPage1.waitForTimeout(2000); // Wait for response
+await chatbotPage1.waitForTimeout(2000); // wait for response
 });

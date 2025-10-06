@@ -6,9 +6,6 @@ import { FillPersonalInfopage } from './Pages/FormPage';
 import { HamburgerMenuPage } from './Pages/HamburgerMenuPage';
 import { ChatbotLoginPage } from './Pages/LoginChatbot';
 import { testUserData } from './Utils/testData';
-import { MenuLocator } from './Locators/HamburgerMenuLocator';
-
-
 
 let page: Page;
 let context: BrowserContext;
@@ -19,19 +16,27 @@ let adminPage: AdminPage;
 let Menu: HamburgerMenuPage;
 
 
+  test.afterAll(async () => {
+    await context.close();
+
+  });
+
 test.describe('BlueDrop Chatbot Test Suite', () => {
 
-  test.beforeAll(async ({ browser }) => {
+  test('TC_01: ✅ Confirm chatbot screen elements are visible', async ({ browser }) => {
+
+    // 🔹 Step 1: Reset user from Admin
     const adminContext = await browser.newContext();
     const adminPageInstance = await adminContext.newPage();
     const admin = new AdminPage(adminPageInstance);
-    Menu = new HamburgerMenuPage(page);
 
     await admin.goto();
     await admin.login(adminCredentials.email, adminCredentials.password);
     await admin.resetUserData(testUserData.email);
     await adminContext.close();
     console.log('✅ User reset complete');
+
+    // 🔹 Step 2: Login chatbot and fill form
     context = await browser.newContext();
     page = await context.newPage();
     chatbot = new ChatbotLoginPage(page);
@@ -43,23 +48,11 @@ test.describe('BlueDrop Chatbot Test Suite', () => {
     await form.fillinvalidPersonalInfo(testUserData.name, testUserData.gender);
     await form.fillPersonalInfo(testUserData.name, testUserData.gender);
     console.log('✅ Chatbot login and form submitted');
+
+    // 🔹 Step 3: Run main test
+    await chatbotscreen.verifyConfirmationElements();
+
   });
-
-  test.afterAll(async () => {
-    console.log('🧹 Closing context');
-    await context.close();
-});
-
-  
-
-  test.describe('💬 Chatbot Screen', () => {
-
-
-    test('TC_01: ✅ Confirm chatbot screen elements are visible', async () => {
-
-    
-      await chatbotscreen.verifyConfirmationElements();
-    });
 
     test('TC_02: 🧠 Initial chatbot message is displayed', async () => {
       await chatbotscreen.InitialbotMessage(testUserData.name);
@@ -151,10 +144,11 @@ test.afterEach(async ({ page }, testInfo) => {
     console.log(`📸 Screenshot saved at: ${screenshotPath}`);
   }
 
-  const videoPath = testInfo.attachments.find(a => a.name === 'video')?.path;
-  if (videoPath) {
-    testInfo.attach('video', { path: videoPath, contentType: 'video/webm' });
-  }
+  // const videoPath = testInfo.attachments.find(a => a.name === 'video')?.path;
+  // if (videoPath) {
+  //   testInfo.attach('video', { path: videoPath, contentType: 'video/webm' });
+  // }
 });
+
+
 });
-})

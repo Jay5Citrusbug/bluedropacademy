@@ -141,7 +141,7 @@ export class Edge_case {
 
 async AdminChangeBalanceValue () {
 
-  await this.page.getByText('Training Data').click();
+  //await this.page.getByText('Training Data').click();
   await this.page.getByText('SubScriptions').click();
   await this.page.getByRole('listitem', { name: '2' }).locator('a').click();
   await this.page.getByRole('button', { name: 'edit' }).click();  
@@ -153,14 +153,14 @@ async AdminChangeBalanceValue () {
  
 }
 async AdminreverseAmount(){
-    await this.page.getByText('Training Data').click();
+   // await this.page.getByText('Training Data').click();
   await this.page.getByText('SubScriptions').click();
   await this.page.getByRole('listitem', { name: '2' }).locator('a').click();
   await this.page.getByRole('button', { name: 'edit' }).click();  
   await this.page.getByRole('cell', { name: 'Increase Value Decrease Value' }).getByRole('spinbutton').fill('1');
-   await this.page.waitForTimeout(2000);
+  await this.page.waitForTimeout(2000);
   await this.page.getByRole('button', { name: 'Save' }).click();
-    const successMessage = this.page.locator('text=Subscription updated successfully');
+  const successMessage = this.page.locator('text=Subscription updated successfully');
     await expect(successMessage).toBeVisible();
 
 }
@@ -181,7 +181,7 @@ async SubmitQuery2(testInfo: TestInfo): Promise<string> {
 
   console.log(`💬 Submitting query: "${this.userMessage}"`);
 
-  await input.clear();
+  //await input.clear();
   await input.fill(this.userMessage);
   await input.press('Enter');
   console.log('🕐 Waiting for bot response...');

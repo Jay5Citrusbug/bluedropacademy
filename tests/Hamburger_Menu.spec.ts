@@ -1,4 +1,4 @@
-import { BrowserContext, Page, test, expect } from '@playwright/test';
+import { BrowserContext, Page, test } from '@playwright/test';
 import { ChatbotLoginPage } from './Pages/LoginChatbot';
 import { FillPersonalInfopage } from './Pages/FormPage';
 import { testUserData } from './Utils/testData';
@@ -11,40 +11,35 @@ let page: Page;
 let context: BrowserContext;
 let chatbot: ChatbotLoginPage;
 let form: FillPersonalInfopage;
-let adminPage: AdminPage;
 let Menu: HamburgerMenuPage;
 let chatbotscreen: chatbotPage;
 
-
-test.describe('BlueDrop Hamburgermenu Test Suite', () => {
+test.describe('BlueDrop Hamburger Menu Test Suite', () => {
 
   test.beforeAll(async ({ browser }) => {
-    const adminContext = await browser.newContext();
-    const adminPageInstance = await adminContext.newPage();
-    const adminPage = new AdminPage(adminPageInstance);
-    await adminPage.goto();
-    await adminPage.login(adminCredentials.email, adminCredentials.password);
-    await adminPage.resetUserData(testUserData.email);
-    await adminContext.close();
-
-    context = await browser.newContext();
+    // Create a new browser context and page
+    const context = await browser.newContext();
     page = await context.newPage();
+
+    // Initialize page objects
     chatbot = new ChatbotLoginPage(page);
-    form = new FillPersonalInfopage(page);
     Menu = new HamburgerMenuPage(page);
     chatbotscreen = new chatbotPage(page);
 
+    // Login once
     await chatbot.goto();
     await chatbot.login(chatbotCredentials.email, chatbotCredentials.password);
-    await form.fillinvalidPersonalInfo(testUserData.name, testUserData.gender);
-    await form.fillPersonalInfo(testUserData.name, testUserData.gender);
   });
 
   test.afterAll(async () => {
-    await context.close();
+    await page.context().close(); // closes browser after suite
   });
-
   test.describe('Hamburger Menu & 📜 Chat History', () => {
+
+    test('TC_15 🔓 Open Hamburger Menu', async () => {
+      console.log('✅ TC_15: Open Hamburger Menu');
+      await Menu.OpenHamburgerMenu();
+    });
 
 //   test('TC_18 🔍 Search in chat history', async ({}, testInfo) => {
 //   console.log('✅ TC_18: Search in chat history');
@@ -96,11 +91,6 @@ test.describe('BlueDrop Hamburgermenu Test Suite', () => {
 //   await page.close();
 // });
 
-    test('TC_15 🔓 Open Hamburger Menu', async () => {
-      console.log('✅ TC_19: Open Hamburger Menu');
-      await Menu.OpenHamburgerMenu();
-    });
-
     test('TC_16 ➕ Load More button functionality', async () => {
       console.log('✅ TC_20: Load More button functionality');
       await Menu.LoadmoreBtn();
@@ -118,14 +108,14 @@ test.describe('BlueDrop Hamburgermenu Test Suite', () => {
     });
 
     test('TC_19 🆕 New session with "שיחה חדשה"', async () => {
-      console.log('✅ TC_23: Start new session using "שיחה חדשה"');
+      console.log('✅ TC_19: Start new session using "שיחה חדשה"');
       await Menu.Newsession();
       await chatbotscreen.Pagereload();
       await chatbotscreen.InitialbotMessage( testUserData.name);
     });
 
     test('TC_20 ✏️ Edit and save changes in chat history', async () => {
-      console.log('✅ TC_24: Edit and save changes in chat history');
+      console.log('✅ TC_20: Edit and save changes in chat history');
       await Menu.OpenHamburgerMenu();
       await Menu.Edithistory();
     });
