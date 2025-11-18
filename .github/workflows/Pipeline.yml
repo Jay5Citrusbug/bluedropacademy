@@ -1,103 +1,3 @@
-#         run: npm run test:prod
-#         env:
-#           ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
-#           ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
-#           CHATBOT_EMAIL: ${{ secrets.CHATBOT_EMAIL }}
-#           CHATBOT_PASSWORD: ${{ secrets.CHATBOT_PASSWORD }}
-
-#       - name: Debug Playwright Report folder
-#         run: ls -la playwright-report
-
-#       - name: Generate standalone HTML report
-#         run: cp playwright-report/index.html playwright-report/report.html || true
-
-#       - name: Get current date with random suffix
-#         id: date
-#         run: echo "date=$(date '+%Y-%m-%d')-$(shuf -i 100-999 -n 1)" >> $GITHUB_OUTPUT
-
-#       - name: Extract test summary
-#         id: summary
-#         continue-on-error: true
-#         run: |
-#           if [ ! -f "playwright-report/report.json" ]; then
-#             echo "Report file not found!"
-#             echo "total=0" >> $GITHUB_OUTPUT
-#             echo "passed=0" >> $GITHUB_OUTPUT
-#             echo "failed=0" >> $GITHUB_OUTPUT
-#             echo "skipped=0" >> $GITHUB_OUTPUT
-#             exit 0
-#           fi
-
-#           PASSED=$(jq '.stats.expected // 0' playwright-report/report.json)
-#           FAILED=$(jq '.stats.unexpected // 0' playwright-report/report.json)
-#           SKIPPED=$(jq '.stats.skipped // 0' playwright-report/report.json)
-#           TOTAL=$(( PASSED + FAILED + SKIPPED ))
-
-#           echo "passed=${PASSED}" >> $GITHUB_OUTPUT
-#           echo "failed=${FAILED}" >> $GITHUB_OUTPUT
-#           echo "skipped=${SKIPPED}" >> $GITHUB_OUTPUT
-#           echo "total=${TOTAL}" >> $GITHUB_OUTPUT
-
-#       - name: Prepare Report Timestamp
-#         run: echo "REPORT_TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
-
-#       - name: Move report to environment/date directory
-#         run: |
-#           mkdir -p all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}
-#           cp -r playwright-report/* all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/
-
-#       - name: Upload Environment Report as Artifact
-#         uses: actions/upload-artifact@v4
-#         with:
-#           name: report-${{ env.ENVIRONMENT }}
-#           path: all-reports/${{ env.ENVIRONMENT }}
-
-#       - name: Send Email Report
-#         if: always()
-#         run: node .github/scripts/sendreport.js
-#         env:
-#           REPORT_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html
-#           STORE_REPORT_API_ENDPOINT: ${{ env.STORE_REPORT_API_ENDPOINT }}
-#           REPORT_TIMESTAMP: ${{ env.REPORT_TIMESTAMP }}
-#           GITHUB_REF_NAME: ${{ github.ref_name }}
-#           # SENDGRID_API_KEY: ${{ env.SENDGRID_API_KEY }}
-#           TO_EMAIL: ${{ env.TO_EMAIL }}
-#           FROM_EMAIL: ${{ env.FROM_EMAIL }}
-#           TOTAL: ${{ steps.summary.outputs.total }}
-#           PASSED: ${{ steps.summary.outputs.passed }}
-#           FAILED: ${{ steps.summary.outputs.failed }}
-#           SKIPPED: ${{ steps.summary.outputs.skipped }}
-#           GITHUB_WORKSPACE: ${{ github.workspace }}
-
-#   deploy-all-reports:
-#     needs: [run-tests-staging, run-tests-production]
-#     runs-on: ubuntu-latest
-#     environment:
-#       name: github-pages
-#     name: Deploy Consolidated Reports to GitHub Pages
-#     steps:
-#       - uses: actions/checkout@v4
-
-#       - name: Download Staging Report Artifact
-#         uses: actions/download-artifact@v4
-#         with:
-#           name: report-staging
-#           path: all-reports/staging
-
-#       - name: Download Production Report Artifact
-#         uses: actions/download-artifact@v4
-#         with:
-#           name: report-production
-#           path: all-reports/production
-
-#       - name: Upload All Reports to GitHub Pages
-#         uses: actions/upload-pages-artifact@v3
-#         with:
-#           path: all-reports
-
-#       - name: Deploy to GitHub Pages
-#         uses: actions/deploy-pages@v4
-
 name: Playwright Tests - Staging and Production
 
 permissions:
@@ -139,7 +39,6 @@ jobs:
         run: |
           npm ci
           npx playwright install --with-deps
-
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
@@ -150,23 +49,19 @@ jobs:
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
           unzip awscliv2.zip
           sudo ./aws/install --update
-
       - name: Configure AWS credentials
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws configure set default.region ${{ secrets.S3_REGION }}
-
       - name: Clean previous test results
         run: |
           echo "Cleaning previous Playwright report..."
           rm -rf playwright-report/ report.html test-log.txt all-reports/staging || true
-
       - name: Set environment URLs
         run: |
           echo "URL_CHATBOT=https://bluedropacademy.wixsite.com/website-1/chat6" >> $GITHUB_ENV
           echo "URL_ADMIN=https://stg-chat.bluedropacademy.com/admin" >> $GITHUB_ENV
-
       - name: Run Playwright Tests
         id: run-tests
         continue-on-error: true
@@ -199,17 +94,14 @@ jobs:
             echo "skipped=0" >> $GITHUB_OUTPUT
             exit 0
           fi
-
           PASSED=$(jq '.stats.expected // 0' playwright-report/report.json)
           FAILED=$(jq '.stats.unexpected // 0' playwright-report/report.json)
           SKIPPED=$(jq '.stats.skipped // 0' playwright-report/report.json)
           TOTAL=$(( PASSED + FAILED + SKIPPED ))
-
           echo "passed=${PASSED}" >> $GITHUB_OUTPUT
           echo "failed=${FAILED}" >> $GITHUB_OUTPUT
           echo "skipped=${SKIPPED}" >> $GITHUB_OUTPUT
           echo "total=${TOTAL}" >> $GITHUB_OUTPUT
-
       - name: Prepare Report Timestamp
         run: echo "REPORT_TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
 
@@ -217,7 +109,6 @@ jobs:
         run: |
           mkdir -p all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}
           cp -r playwright-report/* all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/
-
       - name: Upload Report to S3
         run: |
           aws s3 cp playwright-report s3://${{ secrets.S3_BUCKET_NAME }}/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/ --recursive --acl public-read
@@ -258,7 +149,6 @@ jobs:
         run: |
           npm ci
           npx playwright install --with-deps
-
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
@@ -269,24 +159,19 @@ jobs:
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
           unzip awscliv2.zip
           sudo ./aws/install --update
-
       - name: Configure AWS credentials
         run: |
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws configure set default.region ${{ secrets.S3_REGION }}
-
-
       - name: Clean previous test results
         run: |
           echo "Cleaning previous Playwright report..."
           rm -rf playwright-report/ report.html test-log.txt all-reports/production || true
-
       - name: Set environment URLs
         run: |
           echo "URL_ADMIN=https://chat.bluedropacademy.com/admin" >> $GITHUB_ENV
           echo "URL_CHATBOT=https://www.bluedropacademy.com/blue" >> $GITHUB_ENV
-
       - name: Run Playwright Tests
         id: run-tests
         continue-on-error: true
@@ -319,17 +204,14 @@ jobs:
             echo "skipped=0" >> $GITHUB_OUTPUT
             exit 0
           fi
-
           PASSED=$(jq '.stats.expected // 0' playwright-report/report.json)
           FAILED=$(jq '.stats.unexpected // 0' playwright-report/report.json)
           SKIPPED=$(jq '.stats.skipped // 0' playwright-report/report.json)
           TOTAL=$(( PASSED + FAILED + SKIPPED ))
-
           echo "passed=${PASSED}" >> $GITHUB_OUTPUT
           echo "failed=${FAILED}" >> $GITHUB_OUTPUT
           echo "skipped=${SKIPPED}" >> $GITHUB_OUTPUT
           echo "total=${TOTAL}" >> $GITHUB_OUTPUT
-
       - name: Prepare Report Timestamp
         run: echo "REPORT_TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
 
@@ -337,7 +219,6 @@ jobs:
         run: |
           mkdir -p all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}
           cp -r playwright-report/* all-reports/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/
-
       - name: Upload Environment Report as Artifact
         uses: actions/upload-artifact@v4
         with:

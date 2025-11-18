@@ -93,7 +93,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 26549,
+                      "duration": 27426,
                       "errors": [],
                       "stdout": [
                         {
@@ -130,28 +130,13 @@
                           "text": "Searching for user with email: paras.citrusbug@gmail.com\n"
                         },
                         {
-                          "text": "Waiting for user data to appear...\n"
-                        },
-                        {
                           "text": "Scrolling horizontally to bring Reset button into view...\n"
                         },
                         {
-                          "text": "Clicking Reset button...\n"
+                          "text": "Checking Reset button...\n"
                         },
                         {
-                          "text": "Clicking Reset button by text...\n"
-                        },
-                        {
-                          "text": "Confirming the reset...\n"
-                        },
-                        {
-                          "text": "Waiting for success message...\n"
-                        },
-                        {
-                          "text": "Reset confirmation message is visible.\n"
-                        },
-                        {
-                          "text": "✅ Reset process completed for user: paras.citrusbug@gmail.com\n"
+                          "text": "Reset button not found or disabled — skipping click.\n"
                         },
                         {
                           "text": "✅ User reset complete\n"
@@ -202,10 +187,10 @@
                           "text": "Starting to fill personal information form...\n"
                         },
                         {
-                          "text": "Filling name: Angie\n"
+                          "text": "Filling name: Guillermo\n"
                         },
                         {
-                          "text": "Selecting gender: נקבה 👩\n"
+                          "text": "Selecting gender: זכר 👨\n"
                         },
                         {
                           "text": "Checking visibility of \"Start\" button...\n"
@@ -228,7 +213,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-06T12:08:59.525Z",
+                      "startTime": "2025-11-18T07:00:59.498Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -257,22 +242,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9814,
+                      "duration": 9375,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "💬 Waiting for initial bot message...\n"
                         },
                         {
-                          "text": "📨 Bot message received: \"הי Angie,\nיש לי תחושה שהיום נגלה דברים מעניינים יחד! במה נתחיל? 🤔🔎\nכל רעיון, שאלה או מחשבה – אני כאן בשביל זה.\"\n"
+                          "text": "📨 Bot message received: \"הי Guillermo,\nהתגעגעתי אליך! על מה נדבר הפעם? 💙👋\nמה שבא לך – אני מקשיב ופה לעזור.\"\n"
                         },
                         {
-                          "text": "✅ Bot message contains expected name: \"Angie\"\n"
+                          "text": "✅ Bot message contains expected name: \"Guillermo\"\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-06T12:09:27.111Z",
+                      "startTime": "2025-11-18T07:01:27.395Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -301,7 +286,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 605,
+                      "duration": 334,
                       "errors": [],
                       "stdout": [
                         {
@@ -310,7 +295,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-06T12:09:36.953Z",
+                      "startTime": "2025-11-18T07:01:36.778Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -339,11 +324,11 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1077,
+                      "duration": 529,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "💬 Typing message: תסביר לי בפרטים על Scandium.\n"
+                          "text": "💬 Typing message: תסביר לי בפרטים על Technetium.\n"
                         },
                         {
                           "text": "✅ Verifying Submit button is enabled...\n"
@@ -354,7 +339,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-06T12:09:37.580Z",
+                      "startTime": "2025-11-18T07:01:37.121Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -374,12 +359,7 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [
-                    {
-                      "type": "BotResponse",
-                      "description": "Som Tam: הרפתקה טעמים מפוצצת מהרחובות של תאילנד! 🌶️🥭\nתארי לעצמך: רחוב שוק סואן בתאילנד, ריחות של ליים טרי 🍋, שום קצוץ, וצ'ילי חריף שמקפיץ לך את הלשון! 😋 עכשיו את עומדת במרכז הסצנה הזו, עם כל המרכיבים העתיקים שעומדים להפוך לסלט הכי מעניין שיצא לך לאכול. מוכנה לצלול לתוך עולם של טעמים, ריחות, ומרקמים? אז בואי נתחיל! 🎬\n\n🚀 ההתחלה – להצטייד במרכיבים קסומים 🧙‍♀️\nלפני שנטפס על המרכיב הבא, הנה רשימת הכוכבים שמשחקים בסלט שלכם:\n\nפפאיה ירוקה (לא הבשלה, כדי לקבל את הפריכות המהממת) 🥭\nעגבניות שרי אדומות וטריות 🍅\nשעועית ירוקה טרייה, חתוכה לחתיכות קטנות 🌱\nליים לסחוט עד טיפת הטעם האחרונה 🍋\nשום קלוף וכתוש 🧄\nצ'ילי חריף (ככל שאת אוהבת, המלצה: 2-3 חתיכות) 🌶️\nבוטנים קלויים למעטפת פריכה 🍂\nרוטב דגים (נוזל הזהב של המטבח התאילנדי) 🐟\nסוכר פחום או סוכר חום להמתקה מתאזנת 🍬\n\nאת חלק מהמרכיבים אולי תמצאי רק בשווקים מיוחדים, אבל אל דאגה – כל אחד מהם מוסיף קסם ייחודי! ✨\n\n🧩 שלב אחר שלב – בניית הפלא של סלט סום תאם! 🔄\n\n\nפורסים את הפפאיה הירוקה 🥭:\nהטריק הוא לקלף את הפפאיה ואז לגרד או לפרוס אותה לרצועות דקות דקיקות, כאילו את מכינה אמן קטן מפירות! התרשמתי כמה זה נעים לפרוס את זה בידיים – את מרגישה את הפריכות הזו כבר בשלב הזה.\n\n\nפועלים עם הכתישה 🧄🌶️:\nעכשיו לוקחים את הכתושה (כלי עץ קטן ומיוחד), ומכניסים לתוכה את השום, הצ'ילי, וסוכר הפחום. מתחילים לכתוש בעדינות, כמעט כמו ריקוד, עד שמתקבלת תערובת ריחנית שמתחילה להזמין אותך לטעום.\n\n\nעגבניות ושעועית 🍅🌱:\nמוסיפים עגבניות שרי חצויות וחלקי שעועית ירוקה, ומכתישים בעדינות כדי לשחרר טעמים אך לא לשבור אותם לגמרי. כאן כבר מרגישים איך הריחות משתלבים בכוח.\n\n\nמוסיפים את הפפאיה 🥭:\nמוסיפים את הפפאיה הירוקה המרוסקת וממשיכים לכתוש ולערבב, עד שהפירות מתכסים בטעם המיוחד של התבלינים.\n\n\nהשלמת הטעמים 🍋🐟:\nעכשיו זה הרגע להוסיף את מיץ הליים (חמוץ ורענן), רוטב הדגים המלוח, ולערבב היטב. פה נוצר איזון מושלם בין חמוץ, מלוח, מתוק, וחריף שמרגיש כמו מסיבת טעמים בפה.\n\n\nסיום עם הפיצוץ הקלוי 🍂:\nמפזרים בוטנים קלויים מעל, להוסיף קרנצ'יות שמסיימת את החוויה. אם תרצי, אפשר גם להוסיף כמה עלי כוסברה או נענע לקצת רעננות.\n\n\n\n🎉 עובדה מפתיעה!\nידעת שסלט סום תאם נחשב לאחד הסלטים הפופולריים ביותר בתאילנד, אבל למעשה יש לו מוצא לא רק תאילנדי? כן! הוא משלב טעמים מהמטבח הלואוזי (לואס), ושם הוא היה סלט פשוט יותר שנעשה עם פפאיה ירוקה כמובן. כך שהסלט הזה הוא בעצם גשר תרבותי בין מדינות, שכל ביס הוא טיול קטן בדרום מזרח אסיה. 🌏✨\n\n🌟 סיכום חגיגי\nועכשיו, Angie, כשאת עומדת עם קערת סום תאם טרייה, פריכה, וחריפה ביד, את לא רק עושה סלט – את יוצרת הרפתקה קולינרית! 🎉 כל ביס הוא מסע של טעמים שמחברים בין חמוץ, מתוק, מלוח וחריף כמו תזמורת מושלמת שמנגנת רק לשמוע אותך נהנית. אז קדימה, תתענגי, תשתפי את המשפחה והחברים, ותזכרי – סום תאם הוא לא רק אוכל, הוא חגיגה של החיים בתאילנד! 🌶️🥭🚀\n איך אפשר לשנות את סום תאם לטעם פחות חריף בלי לאבד את האיזון?  \n איזה תוספות מפתיעות אפשר להוסיף לסלט סום תאם?"
-                    }
-                  ],
+                  "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -387,39 +367,74 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 23260,
-                      "errors": [],
+                      "status": "interrupted",
+                      "duration": 3265,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\u001b[22m\n\n    at chatbotPage.SubmitQuery (D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:178:62)\n    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:76:7",
+                        "location": {
+                          "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                          "column": 62,
+                          "line": 178
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:178\n\n\u001b[0m \u001b[90m 176 |\u001b[39m\n \u001b[90m 177 |\u001b[39m   \u001b[90m// Wait for Like button (signals full response)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 178 |\u001b[39m   \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mlocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39m\u001b[33mLikeBtn\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m90000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 179 |\u001b[39m\n \u001b[90m 180 |\u001b[39m   \u001b[90m// Wait until the bot's message stops changing (final response)\u001b[39m\n \u001b[90m 181 |\u001b[39m   \u001b[36mlet\u001b[39m botResponse\u001b[33m:\u001b[39m string \u001b[33m|\u001b[39m undefined \u001b[33m=\u001b[39m \u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                            "column": 62,
+                            "line": 178
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:178\n\n\u001b[0m \u001b[90m 176 |\u001b[39m\n \u001b[90m 177 |\u001b[39m   \u001b[90m// Wait for Like button (signals full response)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 178 |\u001b[39m   \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mlocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39m\u001b[33mLikeBtn\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m90000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 179 |\u001b[39m\n \u001b[90m 180 |\u001b[39m   \u001b[90m// Wait until the bot's message stops changing (final response)\u001b[39m\n \u001b[90m 181 |\u001b[39m   \u001b[36mlet\u001b[39m botResponse\u001b[33m:\u001b[39m string \u001b[33m|\u001b[39m undefined \u001b[33m=\u001b[39m \u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at chatbotPage.SubmitQuery (D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:178:62)\u001b[22m\n\u001b[2m    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:76:7\u001b[22m"
+                        }
+                      ],
                       "stdout": [
                         {
-                          "text": "💬 Submitting query: \"איך להכין Som Tam? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
+                          "text": "💬 Submitting query: \"תסביר לי בפרטים על Thulium.\"\n"
                         },
                         {
                           "text": "🕐 Waiting for first character of bot response...\n"
                         },
                         {
-                          "text": "⏳ Time to first character: 2.26s\n"
+                          "text": "❌ Test failed: TC_05: 📤 Submit query message\n"
                         },
                         {
-                          "text": "✅ Time to full response: 22.63s\n"
+                          "text": "📸 Screenshot saved at: screenshots/TC_05:_📤_Submit_query_message.png\n"
                         },
                         {
-                          "text": "🤖 Bot response: \"Som Tam: הרפתקה טעמים מפוצצת מהרחובות של תאילנד! 🌶️🥭\nתארי לעצמך: רחוב שוק סואן בתאילנד, ריחות של ליים טרי 🍋, שום קצוץ, וצ'ילי חריף שמקפיץ לך את הלשון! 😋 עכשיו את עומדת במרכז הסצנה הזו, עם כל המרכיבים העתיקים שעומדים להפוך לסלט הכי מעניין שיצא לך לאכול. מוכנה לצלול לתוך עולם של טעמים, ריחות, ומרקמים? אז בואי נתחיל! 🎬\n\n🚀 ההתחלה – להצטייד במרכיבים קסומים 🧙‍♀️\nלפני שנטפס על המרכיב הבא, הנה רשימת הכוכבים שמשחקים בסלט שלכם:\n\nפפאיה ירוקה (לא הבשלה, כדי לקבל את הפריכות המהממת) 🥭\nעגבניות שרי אדומות וטריות 🍅\nשעועית ירוקה טרייה, חתוכה לחתיכות קטנות 🌱\nליים לסחוט עד טיפת הטעם האחרונה 🍋\nשום קלוף וכתוש 🧄\nצ'ילי חריף (ככל שאת אוהבת, המלצה: 2-3 חתיכות) 🌶️\nבוטנים קלויים למעטפת פריכה 🍂\nרוטב דגים (נוזל הזהב של המטבח התאילנדי) 🐟\nסוכר פחום או סוכר חום להמתקה מתאזנת 🍬\n\nאת חלק מהמרכיבים אולי תמצאי רק בשווקים מיוחדים, אבל אל דאגה – כל אחד מהם מוסיף קסם ייחודי! ✨\n\n🧩 שלב אחר שלב – בניית הפלא של סלט סום תאם! 🔄\n\n\nפורסים את הפפאיה הירוקה 🥭:\nהטריק הוא לקלף את הפפאיה ואז לגרד או לפרוס אותה לרצועות דקות דקיקות, כאילו את מכינה אמן קטן מפירות! התרשמתי כמה זה נעים לפרוס את זה בידיים – את מרגישה את הפריכות הזו כבר בשלב הזה.\n\n\nפועלים עם הכתישה 🧄🌶️:\nעכשיו לוקחים את הכתושה (כלי עץ קטן ומיוחד), ומכניסים לתוכה את השום, הצ'ילי, וסוכר הפחום. מתחילים לכתוש בעדינות, כמעט כמו ריקוד, עד שמתקבלת תערובת ריחנית שמתחילה להזמין אותך לטעום.\n\n\nעגבניות ושעועית 🍅🌱:\nמוסיפים עגבניות שרי חצויות וחלקי שעועית ירוקה, ומכתישים בעדינות כדי לשחרר טעמים אך לא לשבור אותם לגמרי. כאן כבר מרגישים איך הריחות משתלבים בכוח.\n\n\nמוסיפים את הפפאיה 🥭:\nמוסיפים את הפפאיה הירוקה המרוסקת וממשיכים לכתוש ולערבב, עד שהפירות מתכסים בטעם המיוחד של התבלינים.\n\n\nהשלמת הטעמים 🍋🐟:\nעכשיו זה הרגע להוסיף את מיץ הליים (חמוץ ורענן), רוטב הדגים המלוח, ולערבב היטב. פה נוצר איזון מושלם בין חמוץ, מלוח, מתוק, וחריף שמרגיש כמו מסיבת טעמים בפה.\n\n\nסיום עם הפיצוץ הקלוי 🍂:\nמפזרים בוטנים קלויים מעל, להוסיף קרנצ'יות שמסיימת את החוויה. אם תרצי, אפשר גם להוסיף כמה עלי כוסברה או נענע לקצת רעננות.\n\n\n\n🎉 עובדה מפתיעה!\nידעת שסלט סום תאם נחשב לאחד הסלטים הפופולריים ביותר בתאילנד, אבל למעשה יש לו מוצא לא רק תאילנדי? כן! הוא משלב טעמים מהמטבח הלואוזי (לואס), ושם הוא היה סלט פשוט יותר שנעשה עם פפאיה ירוקה כמובן. כך שהסלט הזה הוא בעצם גשר תרבותי בין מדינות, שכל ביס הוא טיול קטן בדרום מזרח אסיה. 🌏✨\n\n🌟 סיכום חגיגי\nועכשיו, Angie, כשאת עומדת עם קערת סום תאם טרייה, פריכה, וחריפה ביד, את לא רק עושה סלט – את יוצרת הרפתקה קולינרית! 🎉 כל ביס הוא מסע של טעמים שמחברים בין חמוץ, מתוק, מלוח וחריף כמו תזמורת מושלמת שמנגנת רק לשמוע אותך נהנית. אז קדימה, תתענגי, תשתפי את המשפחה והחברים, ותזכרי – סום תאם הוא לא רק אוכל, הוא חגיגה של החיים בתאילנד! 🌶️🥭🚀\n איך אפשר לשנות את סום תאם לטעם פחות חריף בלי לאבד את האיזון?  \n איזה תוספות מפתיעות אפשר להוסיף לסלט סום תאם?\"\n"
+                          "text": "⏳ Time to first character: 3.09s\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-06T12:09:38.680Z",
-                      "annotations": [
+                      "startTime": "2025-11-18T07:01:37.657Z",
+                      "annotations": [],
+                      "attachments": [
                         {
-                          "type": "BotResponse",
-                          "description": "Som Tam: הרפתקה טעמים מפוצצת מהרחובות של תאילנד! 🌶️🥭\nתארי לעצמך: רחוב שוק סואן בתאילנד, ריחות של ליים טרי 🍋, שום קצוץ, וצ'ילי חריף שמקפיץ לך את הלשון! 😋 עכשיו את עומדת במרכז הסצנה הזו, עם כל המרכיבים העתיקים שעומדים להפוך לסלט הכי מעניין שיצא לך לאכול. מוכנה לצלול לתוך עולם של טעמים, ריחות, ומרקמים? אז בואי נתחיל! 🎬\n\n🚀 ההתחלה – להצטייד במרכיבים קסומים 🧙‍♀️\nלפני שנטפס על המרכיב הבא, הנה רשימת הכוכבים שמשחקים בסלט שלכם:\n\nפפאיה ירוקה (לא הבשלה, כדי לקבל את הפריכות המהממת) 🥭\nעגבניות שרי אדומות וטריות 🍅\nשעועית ירוקה טרייה, חתוכה לחתיכות קטנות 🌱\nליים לסחוט עד טיפת הטעם האחרונה 🍋\nשום קלוף וכתוש 🧄\nצ'ילי חריף (ככל שאת אוהבת, המלצה: 2-3 חתיכות) 🌶️\nבוטנים קלויים למעטפת פריכה 🍂\nרוטב דגים (נוזל הזהב של המטבח התאילנדי) 🐟\nסוכר פחום או סוכר חום להמתקה מתאזנת 🍬\n\nאת חלק מהמרכיבים אולי תמצאי רק בשווקים מיוחדים, אבל אל דאגה – כל אחד מהם מוסיף קסם ייחודי! ✨\n\n🧩 שלב אחר שלב – בניית הפלא של סלט סום תאם! 🔄\n\n\nפורסים את הפפאיה הירוקה 🥭:\nהטריק הוא לקלף את הפפאיה ואז לגרד או לפרוס אותה לרצועות דקות דקיקות, כאילו את מכינה אמן קטן מפירות! התרשמתי כמה זה נעים לפרוס את זה בידיים – את מרגישה את הפריכות הזו כבר בשלב הזה.\n\n\nפועלים עם הכתישה 🧄🌶️:\nעכשיו לוקחים את הכתושה (כלי עץ קטן ומיוחד), ומכניסים לתוכה את השום, הצ'ילי, וסוכר הפחום. מתחילים לכתוש בעדינות, כמעט כמו ריקוד, עד שמתקבלת תערובת ריחנית שמתחילה להזמין אותך לטעום.\n\n\nעגבניות ושעועית 🍅🌱:\nמוסיפים עגבניות שרי חצויות וחלקי שעועית ירוקה, ומכתישים בעדינות כדי לשחרר טעמים אך לא לשבור אותם לגמרי. כאן כבר מרגישים איך הריחות משתלבים בכוח.\n\n\nמוסיפים את הפפאיה 🥭:\nמוסיפים את הפפאיה הירוקה המרוסקת וממשיכים לכתוש ולערבב, עד שהפירות מתכסים בטעם המיוחד של התבלינים.\n\n\nהשלמת הטעמים 🍋🐟:\nעכשיו זה הרגע להוסיף את מיץ הליים (חמוץ ורענן), רוטב הדגים המלוח, ולערבב היטב. פה נוצר איזון מושלם בין חמוץ, מלוח, מתוק, וחריף שמרגיש כמו מסיבת טעמים בפה.\n\n\nסיום עם הפיצוץ הקלוי 🍂:\nמפזרים בוטנים קלויים מעל, להוסיף קרנצ'יות שמסיימת את החוויה. אם תרצי, אפשר גם להוסיף כמה עלי כוסברה או נענע לקצת רעננות.\n\n\n\n🎉 עובדה מפתיעה!\nידעת שסלט סום תאם נחשב לאחד הסלטים הפופולריים ביותר בתאילנד, אבל למעשה יש לו מוצא לא רק תאילנדי? כן! הוא משלב טעמים מהמטבח הלואוזי (לואס), ושם הוא היה סלט פשוט יותר שנעשה עם פפאיה ירוקה כמובן. כך שהסלט הזה הוא בעצם גשר תרבותי בין מדינות, שכל ביס הוא טיול קטן בדרום מזרח אסיה. 🌏✨\n\n🌟 סיכום חגיגי\nועכשיו, Angie, כשאת עומדת עם קערת סום תאם טרייה, פריכה, וחריפה ביד, את לא רק עושה סלט – את יוצרת הרפתקה קולינרית! 🎉 כל ביס הוא מסע של טעמים שמחברים בין חמוץ, מתוק, מלוח וחריף כמו תזמורת מושלמת שמנגנת רק לשמוע אותך נהנית. אז קדימה, תתענגי, תשתפי את המשפחה והחברים, ותזכרי – סום תאם הוא לא רק אוכל, הוא חגיגה של החיים בתאילנד! 🌶️🥭🚀\n איך אפשר לשנות את סום תאם לטעם פחות חריף בלי לאבד את האיזון?  \n איזה תוספות מפתיעות אפשר להוסיף לסלט סום תאם?"
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-7bdf6--05-📤-Submit-query-message-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-7bdf6--05-📤-Submit-query-message-chromium\\test-failed-2.png"
+                        },
+                        {
+                          "name": "_error-context-0",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-7bdf6--05-📤-Submit-query-message-chromium\\error-context.md"
                         }
                       ],
-                      "attachments": []
+                      "errorLocation": {
+                        "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                        "column": 62,
+                        "line": 178
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-65413aac69216e0b1a8c",
@@ -438,26 +453,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 447,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "🔽 Scrolling to bottom...\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-10-06T12:10:01.966Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-8b259adfc2a0bcbdf89f",
@@ -476,26 +473,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 923,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "👍 Clicking Like button...\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-10-06T12:10:02.423Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-b2eca2bdee340bef34a3",
@@ -514,26 +493,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1302,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "👎 Clicking Dislike button...\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-10-06T12:10:03.354Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-fdb6ef78c2e7524cfe75",
@@ -552,26 +513,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 449,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "📋 Clicking Copy button...\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-10-06T12:10:04.665Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-88dbaaf8e57f797c1639",
@@ -586,46 +529,12 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [
-                    {
-                      "type": "info",
-                      "description": "Bot response: Som Tam: The Ultimate Green Papaya Salad Adventure from Thailand’s Streets! 🌶️🥭\nPicture this, Angie: you’re standing in a bustling Thai market, the air thick with the zesty aroma of fresh limes 🍋, the sharp bite of crushed garlic 🧄, and"
-                    }
-                  ],
+                  "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4018,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "🔘 Clicking Predefined button...\n"
-                        },
-                        {
-                          "text": "🕐 Waiting for bot response to begin...\n"
-                        },
-                        {
-                          "text": "✅ Bot response received: \"Som Tam: The Ultimate Green Papaya Salad Adventure from Thailand’s Streets! 🌶️🥭\nPicture this, Angie: you’re standing in a bustling Thai market, the air thick with the zesty aroma of fresh limes 🍋, the sharp bite of crushed garlic 🧄, and\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-10-06T12:10:05.125Z",
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: Som Tam: The Ultimate Green Papaya Salad Adventure from Thailand’s Streets! 🌶️🥭\nPicture this, Angie: you’re standing in a bustling Thai market, the air thick with the zesty aroma of fresh limes 🍋, the sharp bite of crushed garlic 🧄, and"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-d636973f51dd28beb538",
@@ -644,35 +553,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11892,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                        },
-                        {
-                          "text": "💬 Waiting for initial bot message...\n"
-                        },
-                        {
-                          "text": "📨 Bot message received: \"הי Angie,\nכל הכבוד שהגעת! רוצה לגלות יחד משהו חדש היום? 👏🔍\nתכתוב לי מה מסקרן אותך – ונתחיל!\"\n"
-                        },
-                        {
-                          "text": "✅ Bot message contains expected name: \"Angie\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-10-06T12:10:09.156Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-4e5983dfa70fc22eed81",
@@ -691,41 +573,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 10054,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "🔁 Starting a new chatbot session...\n"
-                        },
-                        {
-                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                        },
-                        {
-                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                        },
-                        {
-                          "text": "💬 Waiting for initial bot message...\n"
-                        },
-                        {
-                          "text": "📨 Bot message received: \"הי Angie,\nכל הכבוד שהגעת! רוצה לגלות יחד משהו חדש היום? 👏🔍\nתכתוב לי מה מסקרן אותך – ונתחיל!\"\n"
-                        },
-                        {
-                          "text": "✅ Bot message contains expected name: \"Angie\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-10-06T12:10:21.060Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-49ec378fc073adb83bd7",
@@ -744,35 +593,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 52673,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "⏳ Waiting for inactivity popup to appear...\n"
-                        },
-                        {
-                          "text": "⏳ Waiting in staging with timeout: 70s\n"
-                        },
-                        {
-                          "text": "✅ Inactivity popup is visible.\n"
-                        },
-                        {
-                          "text": "🔄 Clicked \"Continue Chat\" button.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-10-06T12:10:31.133Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-24718841e90bdca1eeea",
@@ -791,38 +613,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 72189,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "⏳ Waiting for inactivity popup to appear for close...\n"
-                        },
-                        {
-                          "text": "✅ Inactivity popup is visible.\n"
-                        },
-                        {
-                          "text": "💬 Waiting for initial bot message...\n"
-                        },
-                        {
-                          "text": "📨 Bot message received: \"הי Angie,\nיאללה, נתחיל בכיף! מה מעניין אותך ללמוד היום? 🎉📘\nאפשר לשאול על כל דבר שעולה לך לראש.\"\n"
-                        },
-                        {
-                          "text": "✅ Bot message contains expected name: \"Angie\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-10-06T12:11:23.839Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-347d83473fc5d81a4303",
@@ -865,53 +657,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 13221,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "Navigating to the admin page...\n"
-                            },
-                            {
-                              "text": "Navigating to the chatbot page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to chatbot login page.\n"
-                            },
-                            {
-                              "text": "Clicking \"Login with Email\" button...\n"
-                            },
-                            {
-                              "text": "Filling in email: paras.citrusbug@gmail.com\n"
-                            },
-                            {
-                              "text": "Filling in password...\n"
-                            },
-                            {
-                              "text": "Clicking \"Submit\" to log in...\n"
-                            },
-                            {
-                              "text": "Waiting for page navigation after login...\n"
-                            },
-                            {
-                              "text": "✅ TC_15: Open Hamburger Menu\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-10-06T12:12:38.374Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-fc8185bedbbc220639a5",
@@ -930,29 +677,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1174,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_20: Load More button functionality\n"
-                            },
-                            {
-                              "text": "📜 Clicking Load More button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-10-06T12:12:59.942Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-b7f57ec28ab5670b83d2",
@@ -971,29 +697,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 3002,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_21: No result in chat history\n"
-                            },
-                            {
-                              "text": "🔎 Using random search text: \"benigne spes\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-10-06T12:13:01.143Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-eb9d220291fc36e5bede",
@@ -1012,29 +717,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 979,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_22: Close Hamburger Menu\n"
-                            },
-                            {
-                              "text": "❌ Closing hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-10-06T12:13:04.164Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-c14a7b3680f8a9b403ae",
@@ -1053,41 +737,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 10950,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_19: Start new session using \"שיחה חדשה\"\n"
-                            },
-                            {
-                              "text": "🔁 Creating new session from hamburger menu...\n"
-                            },
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "📨 Bot message received: \"הי Angie,\nיאללה, נתחיל בכיף! מה מעניין אותך ללמוד היום? 🎉📘\nאפשר לשאול על כל דבר שעולה לך לראש.\"\n"
-                            },
-                            {
-                              "text": "✅ Bot message contains expected name: \"Angie\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-10-06T12:13:05.155Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-0a0e12da784e161efa2b",
@@ -1106,29 +757,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 3208,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_20: Edit and save changes in chat history\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-10-06T12:13:16.125Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-61144c9d99129cbecb8b",
@@ -1147,29 +777,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2831,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_21: Continue Chat Functionality\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-10-06T12:13:19.381Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-dcbd437c45ee70f23a65",
@@ -1200,128 +809,8 @@
               "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 52120,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Navigating to the admin page...\n"
-                    },
-                    {
-                      "text": "Navigating to the chatbot page...\n"
-                    },
-                    {
-                      "text": "Successfully navigated to the admin page.\n"
-                    },
-                    {
-                      "text": "Starting login process for user: noam@bluedropacademy.com\n"
-                    },
-                    {
-                      "text": "Filling in email input...\n"
-                    },
-                    {
-                      "text": "Filling in password input...\n"
-                    },
-                    {
-                      "text": "Clicking on Sign In button...\n"
-                    },
-                    {
-                      "text": "Login submitted, waiting for dashboard to load...\n"
-                    },
-                    {
-                      "text": "Navigating to the admin page...\n"
-                    },
-                    {
-                      "text": "Navigating to the chatbot page...\n"
-                    },
-                    {
-                      "text": "Successfully navigated to chatbot login page.\n"
-                    },
-                    {
-                      "text": "Clicking \"Login with Email\" button...\n"
-                    },
-                    {
-                      "text": "Filling in email: paras.citrusbug@gmail.com\n"
-                    },
-                    {
-                      "text": "Filling in password...\n"
-                    },
-                    {
-                      "text": "Clicking \"Submit\" to log in...\n"
-                    },
-                    {
-                      "text": "Waiting for page navigation after login...\n"
-                    },
-                    {
-                      "text": "💬 Submitting query: \"תסביר לי בפרטים על Livermorium.\"\n"
-                    },
-                    {
-                      "text": "Insufficient Balance pop-up comming\n"
-                    },
-                    {
-                      "text": "Insufficient Balance pop-up comming\n"
-                    },
-                    {
-                      "text": "Navigating to the admin page...\n"
-                    },
-                    {
-                      "text": "Navigating to the chatbot page...\n"
-                    },
-                    {
-                      "text": "Successfully navigated to the admin page.\n"
-                    },
-                    {
-                      "text": "Starting login process for user: noam@bluedropacademy.com\n"
-                    },
-                    {
-                      "text": "Filling in email input...\n"
-                    },
-                    {
-                      "text": "Filling in password input...\n"
-                    },
-                    {
-                      "text": "Clicking on Sign In button...\n"
-                    },
-                    {
-                      "text": "Login submitted, waiting for dashboard to load...\n"
-                    },
-                    {
-                      "text": "Navigating to the admin page...\n"
-                    },
-                    {
-                      "text": "Navigating to the chatbot page...\n"
-                    },
-                    {
-                      "text": "Successfully navigated to chatbot login page.\n"
-                    },
-                    {
-                      "text": "Clicking \"Login with Email\" button...\n"
-                    },
-                    {
-                      "text": "Filling in email: paras.citrusbug@gmail.com\n"
-                    },
-                    {
-                      "text": "Filling in password...\n"
-                    },
-                    {
-                      "text": "Clicking \"Submit\" to log in...\n"
-                    },
-                    {
-                      "text": "Waiting for page navigation after login...\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-10-06T12:13:22.962Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
+              "results": [],
+              "status": "skipped"
             }
           ],
           "id": "802b36f43135f9baf1c9-498c8cf076dbd548debb",
@@ -1334,10 +823,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-10-06T12:08:57.309Z",
-    "duration": 321157.317,
-    "expected": 22,
-    "skipped": 0,
+    "startTime": "2025-11-18T07:00:57.894Z",
+    "duration": 43512.531,
+    "expected": 4,
+    "skipped": 18,
     "unexpected": 0,
     "flaky": 0
   }
