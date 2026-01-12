@@ -237,7 +237,7 @@ export class chatbotPage {
     } else {
       console.log('⚠️ Scroll button not visible. Re-submitting query...');
 
-      await input.fill(this.userMessage);
+      await input.fill("Hello");
       await input.press('Enter');
 
       // wait for response to render
