@@ -93,7 +93,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 27426,
+                      "duration": 52161,
                       "errors": [],
                       "stdout": [
                         {
@@ -136,7 +136,19 @@
                           "text": "Checking Reset button...\n"
                         },
                         {
-                          "text": "Reset button not found or disabled — skipping click.\n"
+                          "text": "Reset button found & enabled — clicking...\n"
+                        },
+                        {
+                          "text": "Confirming the reset...\n"
+                        },
+                        {
+                          "text": "Waiting for success message...\n"
+                        },
+                        {
+                          "text": "Reset confirmation message is visible.\n"
+                        },
+                        {
+                          "text": "✅ Reset process completed for user: paras.citrusbug@gmail.com\n"
                         },
                         {
                           "text": "✅ User reset complete\n"
@@ -187,10 +199,10 @@
                           "text": "Starting to fill personal information form...\n"
                         },
                         {
-                          "text": "Filling name: Guillermo\n"
+                          "text": "Filling name: Joyce\n"
                         },
                         {
-                          "text": "Selecting gender: זכר 👨\n"
+                          "text": "Selecting gender: נקבה 👩\n"
                         },
                         {
                           "text": "Checking visibility of \"Start\" button...\n"
@@ -213,7 +225,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-18T07:00:59.498Z",
+                      "startTime": "2026-01-12T06:29:29.928Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -242,22 +254,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9375,
+                      "duration": 9603,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "💬 Waiting for initial bot message...\n"
                         },
                         {
-                          "text": "📨 Bot message received: \"הי Guillermo,\nהתגעגעתי אליך! על מה נדבר הפעם? 💙👋\nמה שבא לך – אני מקשיב ופה לעזור.\"\n"
+                          "text": "📨 Bot message received: \"הי Joyce,\nאני ממש שמח לראות אותך כאן! על מה בא לך לדבר? 😃💬\nאין חוקים – כל מה שמעניין אותך, מתאים.\"\n"
                         },
                         {
-                          "text": "✅ Bot message contains expected name: \"Guillermo\"\n"
+                          "text": "✅ Bot message contains expected name: \"Joyce\"\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-18T07:01:27.395Z",
+                      "startTime": "2026-01-12T06:30:24.363Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -286,7 +298,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 334,
+                      "duration": 544,
                       "errors": [],
                       "stdout": [
                         {
@@ -295,7 +307,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-18T07:01:36.778Z",
+                      "startTime": "2026-01-12T06:30:33.979Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -324,11 +336,11 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 529,
+                      "duration": 618,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "💬 Typing message: תסביר לי בפרטים על Technetium.\n"
+                          "text": "💬 Typing message: תסביר לי בפרטים על Silver.\n"
                         },
                         {
                           "text": "✅ Verifying Submit button is enabled...\n"
@@ -339,7 +351,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-18T07:01:37.121Z",
+                      "startTime": "2026-01-12T06:30:34.534Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -359,7 +371,12 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "BotResponse",
+                      "description": "פוטין: איך להפוך צ’יפס פשוט למנת הרחוב הכי מנחמת בקנדה? 🍟🧀\nדמייני צ’יפס חם, רוטב עשיר וסמיך, וגבינה שנמסה בקטעים – לא לגמרי, רק קצת 😏. זה פוטין. רוצה את גרסת הבית המושלמת? בואי נבשל את זה יחד, שלב־אחר־שלב.\n\n🥔 הכנת הצ’יפס\n\n\nקחי 4–5 תפוחי אדמה גדולים. 🥔\nקלפי (לא חובה) וחתכי לרצועות עבות יחסית. 🔪\nהשרי בקערת מים קרים 30 דקות כדי להוציא עמילן – זה עושה אותם יותר קריספים. 💧\nייבשי ממש טוב במגבת. 🧻\nטיגון ראשון: טגני בשמן חם בינוני (כ־160°) עד שהם מתרככים אבל לא משחימים. הוציאי לנייר סופג. 🍟\nטיגון שני: הגבירי ל־180–190° וטגני שוב עד זהוב וקריספי. מלח בסוף. 🌟\n\n\n🧀 הגבינה\n\n\nבמקור משתמשים ב־Cheese Curds – “גושי” גבינה צעירה. 🧀\nאם אין, אפשר לקצר דרך עם קוביות מוצרלה קשה, פרוסות גאודה צעירה, או חלומי רך חתוך קטן. לא מושלם – אבל טעים מאוד. 😉\n\n\n🍲 הרוטב (גרייבי בסגנון קל)\nבסיר קטן:\n\n\nכף–שתיים חמאה + כף–שתיים קמח, לערבב עד שזה מזהיב קלות (רוקס). 🧈\nלהוסיף לאט 1.5–2 כוסות ציר עוף/בקר/ירקות חם, תוך ערבוב, עד שמסמיך. 🥣\nלתבל: מלח, פלפל, מעט רוטב סויה או ווסטרשייר אם יש. לטעום. 😋\n\n\n🧩 הרכבה\n\n\nבקערה/צלחת עמוקה: לשים שכבת צ’יפס חם. 🍟\nלפזר מעל גושי גבינה. 🧀\nלשפוך מיד מעל רוטב חם, כך שהגבינה תתחיל להתרכך ולהימס חלקית. 🔥\n\nועכשיו – את מחזיקה בקערה קנדית רשמית של נחמה. 😌איזה סוג גבינה אני הכי נהנית איתו בפוטין – ומה שווה לנסות בפעם הבאה?  \nרוצה גרסה יצירתית לפוטין – למשל עם פטריות, בצל מקורמל או צ’ילי חריף?"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -367,74 +384,39 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "interrupted",
-                      "duration": 3265,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\u001b[22m\n\n    at chatbotPage.SubmitQuery (D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:178:62)\n    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:76:7",
-                        "location": {
-                          "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                          "column": 62,
-                          "line": 178
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:178\n\n\u001b[0m \u001b[90m 176 |\u001b[39m\n \u001b[90m 177 |\u001b[39m   \u001b[90m// Wait for Like button (signals full response)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 178 |\u001b[39m   \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mlocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39m\u001b[33mLikeBtn\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m90000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 179 |\u001b[39m\n \u001b[90m 180 |\u001b[39m   \u001b[90m// Wait until the bot's message stops changing (final response)\u001b[39m\n \u001b[90m 181 |\u001b[39m   \u001b[36mlet\u001b[39m botResponse\u001b[33m:\u001b[39m string \u001b[33m|\u001b[39m undefined \u001b[33m=\u001b[39m \u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                            "column": 62,
-                            "line": 178
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 90000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('[data-testid=\"like-thumb\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:178\n\n\u001b[0m \u001b[90m 176 |\u001b[39m\n \u001b[90m 177 |\u001b[39m   \u001b[90m// Wait for Like button (signals full response)\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 178 |\u001b[39m   \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mlocator(\u001b[33mChatbotlocator\u001b[39m\u001b[33m.\u001b[39m\u001b[33mLikeBtn\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m90000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 179 |\u001b[39m\n \u001b[90m 180 |\u001b[39m   \u001b[90m// Wait until the bot's message stops changing (final response)\u001b[39m\n \u001b[90m 181 |\u001b[39m   \u001b[36mlet\u001b[39m botResponse\u001b[33m:\u001b[39m string \u001b[33m|\u001b[39m undefined \u001b[33m=\u001b[39m \u001b[32m''\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at chatbotPage.SubmitQuery (D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:178:62)\u001b[22m\n\u001b[2m    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:76:7\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 13927,
+                      "errors": [],
                       "stdout": [
                         {
-                          "text": "💬 Submitting query: \"תסביר לי בפרטים על Thulium.\"\n"
+                          "text": "💬 Submitting query: \"איך להכין Poutine? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\"\n"
                         },
                         {
                           "text": "🕐 Waiting for first character of bot response...\n"
                         },
                         {
-                          "text": "❌ Test failed: TC_05: 📤 Submit query message\n"
+                          "text": "⏳ Time to first character: 3.13s\n"
                         },
                         {
-                          "text": "📸 Screenshot saved at: screenshots/TC_05:_📤_Submit_query_message.png\n"
+                          "text": "✅ Time to full response: 13.35s\n"
                         },
                         {
-                          "text": "⏳ Time to first character: 3.09s\n"
+                          "text": "🤖 Bot response: \"פוטין: איך להפוך צ’יפס פשוט למנת הרחוב הכי מנחמת בקנדה? 🍟🧀\nדמייני צ’יפס חם, רוטב עשיר וסמיך, וגבינה שנמסה בקטעים – לא לגמרי, רק קצת 😏. זה פוטין. רוצה את גרסת הבית המושלמת? בואי נבשל את זה יחד, שלב־אחר־שלב.\n\n🥔 הכנת הצ’יפס\n\n\nקחי 4–5 תפוחי אדמה גדולים. 🥔\nקלפי (לא חובה) וחתכי לרצועות עבות יחסית. 🔪\nהשרי בקערת מים קרים 30 דקות כדי להוציא עמילן – זה עושה אותם יותר קריספים. 💧\nייבשי ממש טוב במגבת. 🧻\nטיגון ראשון: טגני בשמן חם בינוני (כ־160°) עד שהם מתרככים אבל לא משחימים. הוציאי לנייר סופג. 🍟\nטיגון שני: הגבירי ל־180–190° וטגני שוב עד זהוב וקריספי. מלח בסוף. 🌟\n\n\n🧀 הגבינה\n\n\nבמקור משתמשים ב־Cheese Curds – “גושי” גבינה צעירה. 🧀\nאם אין, אפשר לקצר דרך עם קוביות מוצרלה קשה, פרוסות גאודה צעירה, או חלומי רך חתוך קטן. לא מושלם – אבל טעים מאוד. 😉\n\n\n🍲 הרוטב (גרייבי בסגנון קל)\nבסיר קטן:\n\n\nכף–שתיים חמאה + כף–שתיים קמח, לערבב עד שזה מזהיב קלות (רוקס). 🧈\nלהוסיף לאט 1.5–2 כוסות ציר עוף/בקר/ירקות חם, תוך ערבוב, עד שמסמיך. 🥣\nלתבל: מלח, פלפל, מעט רוטב סויה או ווסטרשייר אם יש. לטעום. 😋\n\n\n🧩 הרכבה\n\n\nבקערה/צלחת עמוקה: לשים שכבת צ’יפס חם. 🍟\nלפזר מעל גושי גבינה. 🧀\nלשפוך מיד מעל רוטב חם, כך שהגבינה תתחיל להתרכך ולהימס חלקית. 🔥\n\nועכשיו – את מחזיקה בקערה קנדית רשמית של נחמה. 😌איזה סוג גבינה אני הכי נהנית איתו בפוטין – ומה שווה לנסות בפעם הבאה?  \nרוצה גרסה יצירתית לפוטין – למשל עם פטריות, בצל מקורמל או צ’ילי חריף?\"\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-18T07:01:37.657Z",
-                      "annotations": [],
-                      "attachments": [
+                      "startTime": "2026-01-12T06:30:35.163Z",
+                      "annotations": [
                         {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-7bdf6--05-📤-Submit-query-message-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-7bdf6--05-📤-Submit-query-message-chromium\\test-failed-2.png"
-                        },
-                        {
-                          "name": "_error-context-0",
-                          "contentType": "text/markdown",
-                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-7bdf6--05-📤-Submit-query-message-chromium\\error-context.md"
+                          "type": "BotResponse",
+                          "description": "פוטין: איך להפוך צ’יפס פשוט למנת הרחוב הכי מנחמת בקנדה? 🍟🧀\nדמייני צ’יפס חם, רוטב עשיר וסמיך, וגבינה שנמסה בקטעים – לא לגמרי, רק קצת 😏. זה פוטין. רוצה את גרסת הבית המושלמת? בואי נבשל את זה יחד, שלב־אחר־שלב.\n\n🥔 הכנת הצ’יפס\n\n\nקחי 4–5 תפוחי אדמה גדולים. 🥔\nקלפי (לא חובה) וחתכי לרצועות עבות יחסית. 🔪\nהשרי בקערת מים קרים 30 דקות כדי להוציא עמילן – זה עושה אותם יותר קריספים. 💧\nייבשי ממש טוב במגבת. 🧻\nטיגון ראשון: טגני בשמן חם בינוני (כ־160°) עד שהם מתרככים אבל לא משחימים. הוציאי לנייר סופג. 🍟\nטיגון שני: הגבירי ל־180–190° וטגני שוב עד זהוב וקריספי. מלח בסוף. 🌟\n\n\n🧀 הגבינה\n\n\nבמקור משתמשים ב־Cheese Curds – “גושי” גבינה צעירה. 🧀\nאם אין, אפשר לקצר דרך עם קוביות מוצרלה קשה, פרוסות גאודה צעירה, או חלומי רך חתוך קטן. לא מושלם – אבל טעים מאוד. 😉\n\n\n🍲 הרוטב (גרייבי בסגנון קל)\nבסיר קטן:\n\n\nכף–שתיים חמאה + כף–שתיים קמח, לערבב עד שזה מזהיב קלות (רוקס). 🧈\nלהוסיף לאט 1.5–2 כוסות ציר עוף/בקר/ירקות חם, תוך ערבוב, עד שמסמיך. 🥣\nלתבל: מלח, פלפל, מעט רוטב סויה או ווסטרשייר אם יש. לטעום. 😋\n\n\n🧩 הרכבה\n\n\nבקערה/צלחת עמוקה: לשים שכבת צ’יפס חם. 🍟\nלפזר מעל גושי גבינה. 🧀\nלשפוך מיד מעל רוטב חם, כך שהגבינה תתחיל להתרכך ולהימס חלקית. 🔥\n\nועכשיו – את מחזיקה בקערה קנדית רשמית של נחמה. 😌איזה סוג גבינה אני הכי נהנית איתו בפוטין – ומה שווה לנסות בפעם הבאה?  \nרוצה גרסה יצירתית לפוטין – למשל עם פטריות, בצל מקורמל או צ’ילי חריף?"
                         }
                       ],
-                      "errorLocation": {
-                        "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                        "column": 62,
-                        "line": 178
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-65413aac69216e0b1a8c",
@@ -453,8 +435,29 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1071,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔽 Checking scroll button visibility...\n"
+                        },
+                        {
+                          "text": "✅ Scroll button visible. Scrolling to bottom...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T06:30:49.103Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-8b259adfc2a0bcbdf89f",
@@ -473,8 +476,26 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2559,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "👍 Clicking Like button...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T06:30:50.190Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-b2eca2bdee340bef34a3",
@@ -493,8 +514,26 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1027,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "👎 Clicking Dislike button...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T06:30:52.761Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-fdb6ef78c2e7524cfe75",
@@ -513,8 +552,26 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 677,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "📋 Clicking Copy button...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T06:30:53.798Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-88dbaaf8e57f797c1639",
@@ -529,12 +586,46 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "info",
+                      "description": "Bot response: המלכודת של הפוטין המושלם: איפה רוב האנשים נופלים? 🍟⚠️\nהטעות הכי נפוצה בפוטין ביתי? לחשוב"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5171,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔘 Clicking Predefined button...\n"
+                        },
+                        {
+                          "text": "🕐 Waiting for bot response to begin...\n"
+                        },
+                        {
+                          "text": "✅ Bot response received: \"המלכודת של הפוטין המושלם: איפה רוב האנשים נופלים? 🍟⚠️\nהטעות הכי נפוצה בפוטין ביתי? לחשוב\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T06:30:54.490Z",
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: המלכודת של הפוטין המושלם: איפה רוב האנשים נופלים? 🍟⚠️\nהטעות הכי נפוצה בפוטין ביתי? לחשוב"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-d636973f51dd28beb538",
@@ -553,7 +644,68 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "interrupted",
+                      "duration": 3477,
+                      "error": {
+                        "message": "Error: page.reload: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\u001b[2m    - navigated to \"https://www.bluedropacademy.com/blue\"\u001b[22m\n",
+                        "stack": "Error: page.reload: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\u001b[2m    - navigated to \"https://www.bluedropacademy.com/blue\"\u001b[22m\n\n    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:106:20",
+                        "location": {
+                          "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                          "column": 20,
+                          "line": 106
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 104 |\u001b[39m\n \u001b[90m 105 |\u001b[39m       test(\u001b[32m'TC_11: 🔄 Reload hides previous chat'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m         \u001b[36mawait\u001b[39m chatbotscreen\u001b[33m.\u001b[39m\u001b[33mPagereload\u001b[39m()\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m         \u001b[36mawait\u001b[39m chatbotscreen\u001b[33m.\u001b[39m\u001b[33mInitialbotMessage\u001b[39m(testUserData\u001b[33m.\u001b[39mname)\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                            "column": 20,
+                            "line": 106
+                          },
+                          "message": "Error: page.reload: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\u001b[2m    - navigated to \"https://www.bluedropacademy.com/blue\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 104 |\u001b[39m\n \u001b[90m 105 |\u001b[39m       test(\u001b[32m'TC_11: 🔄 Reload hides previous chat'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 106 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 107 |\u001b[39m         \u001b[36mawait\u001b[39m chatbotscreen\u001b[33m.\u001b[39m\u001b[33mPagereload\u001b[39m()\u001b[33m;\u001b[39m\n \u001b[90m 108 |\u001b[39m         \u001b[36mawait\u001b[39m chatbotscreen\u001b[33m.\u001b[39m\u001b[33mInitialbotMessage\u001b[39m(testUserData\u001b[33m.\u001b[39mname)\u001b[33m;\u001b[39m\n \u001b[90m 109 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:106:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "❌ Test failed: TC_11: 🔄 Reload hides previous chat\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved at: screenshots/TC_11:_🔄_Reload_hides_previous_chat.png\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-12T06:30:59.686Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-8b9f8--Reload-hides-previous-chat-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-8b9f8--Reload-hides-previous-chat-chromium\\test-failed-2.png"
+                        },
+                        {
+                          "name": "_error-context-0",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-8b9f8--Reload-hides-previous-chat-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                        "column": 20,
+                        "line": 106
+                      }
+                    }
+                  ],
                   "status": "skipped"
                 }
               ],
@@ -823,10 +975,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-11-18T07:00:57.894Z",
-    "duration": 43512.531,
-    "expected": 4,
-    "skipped": 18,
+    "startTime": "2026-01-12T06:29:27.417Z",
+    "duration": 96580.395,
+    "expected": 10,
+    "skipped": 12,
     "unexpected": 0,
     "flaky": 0
   }
