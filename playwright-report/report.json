@@ -92,145 +92,18 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 26771,
+                      "status": "skipped",
+                      "duration": 0,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Navigating to the admin page...\n"
-                        },
-                        {
-                          "text": "Navigating to the chatbot page...\n"
-                        },
-                        {
-                          "text": "Successfully navigated to the admin page.\n"
-                        },
-                        {
-                          "text": "Starting login process for user: noam@bluedropacademy.com\n"
-                        },
-                        {
-                          "text": "Filling in email input...\n"
-                        },
-                        {
-                          "text": "Filling in password input...\n"
-                        },
-                        {
-                          "text": "Clicking on Sign In button...\n"
-                        },
-                        {
-                          "text": "Login submitted, waiting for dashboard to load...\n"
-                        },
-                        {
-                          "text": "Starting reset process for user: paras.citrusbug@gmail.com\n"
-                        },
-                        {
-                          "text": "Clicking on User Data tab...\n"
-                        },
-                        {
-                          "text": "Searching for user with email: paras.citrusbug@gmail.com\n"
-                        },
-                        {
-                          "text": "Scrolling horizontally to bring Reset button into view...\n"
-                        },
-                        {
-                          "text": "Checking Reset button...\n"
-                        },
-                        {
-                          "text": "Reset button found & enabled — clicking...\n"
-                        },
-                        {
-                          "text": "Confirming the reset...\n"
-                        },
-                        {
-                          "text": "Waiting for success message...\n"
-                        },
-                        {
-                          "text": "Reset confirmation message is visible.\n"
-                        },
-                        {
-                          "text": "✅ Reset process completed for user: paras.citrusbug@gmail.com\n"
-                        },
-                        {
-                          "text": "✅ User reset complete\n"
-                        },
-                        {
-                          "text": "Navigating to the admin page...\n"
-                        },
-                        {
-                          "text": "Navigating to the chatbot page...\n"
-                        },
-                        {
-                          "text": "Successfully navigated to chatbot login page.\n"
-                        },
-                        {
-                          "text": "Clicking \"Login with Email\" button...\n"
-                        },
-                        {
-                          "text": "Filling in email: paras.citrusbug@gmail.com\n"
-                        },
-                        {
-                          "text": "Filling in password...\n"
-                        },
-                        {
-                          "text": "Clicking \"Submit\" to log in...\n"
-                        },
-                        {
-                          "text": "Waiting for page navigation after login...\n"
-                        },
-                        {
-                          "text": "Attempting to submit form with missing fields (invalid input)...\n"
-                        },
-                        {
-                          "text": "Clicking \"Start\" button without filling fields...\n"
-                        },
-                        {
-                          "text": "Waiting for validation error messages...\n"
-                        },
-                        {
-                          "text": "Verified gender required validation message.\n"
-                        },
-                        {
-                          "text": "Verified name required validation message.\n"
-                        },
-                        {
-                          "text": "✅ Invalid input test completed with expected error validations.\n"
-                        },
-                        {
-                          "text": "Starting to fill personal information form...\n"
-                        },
-                        {
-                          "text": "Filling name: Viola\n"
-                        },
-                        {
-                          "text": "Selecting gender: נקבה 👩\n"
-                        },
-                        {
-                          "text": "Checking visibility of \"Start\" button...\n"
-                        },
-                        {
-                          "text": "Clicking \"Start\" button...\n"
-                        },
-                        {
-                          "text": "✅ Personal info submitted successfully.\n"
-                        },
-                        {
-                          "text": "✅ Chatbot login and form submitted\n"
-                        },
-                        {
-                          "text": "🔍 Waiting for confirmation iframe to appear...\n"
-                        },
-                        {
-                          "text": "✅ Verifying confirmation message and title...\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-12T08:35:54.364Z",
+                      "startTime": "2026-01-16T05:03:38.287Z",
                       "annotations": [],
                       "attachments": []
                     }
                   ],
-                  "status": "expected"
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-d5358bcdc8dd90bf6389",
@@ -249,32 +122,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9381,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "💬 Waiting for initial bot message...\n"
-                        },
-                        {
-                          "text": "📨 Bot message received: \"הי Viola,\nכל הכבוד שהגעת! רוצה שנחקור יחד משהו חדש? 😄🔍\nאני פה בשביל כל נושא שמעניין אותך.\"\n"
-                        },
-                        {
-                          "text": "✅ Bot message contains expected name: \"Viola\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:36:21.626Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-4c4c12b2a4d2090ce7d0",
@@ -293,26 +142,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 388,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "🔒 Verifying predefined buttons are hidden...\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:36:31.015Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-df7826a0e6c892246899",
@@ -331,32 +162,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 389,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "💬 Typing message: איך להכין Caesar Salad? תסביר לי בפרטים, שלב אחר שלב מההתחלה ועד הסוף.\n"
-                        },
-                        {
-                          "text": "✅ Verifying Submit button is enabled...\n"
-                        },
-                        {
-                          "text": "🔄 Clearing input field after verification...\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:36:31.416Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-f110f111de3ced2d0794",
@@ -371,52 +178,12 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [
-                    {
-                      "type": "BotResponse",
-                      "description": "היסוד המסתורי שמסמן מופע בחושך: פרומתיום 🌌🧪\nדמייני יסוד שיכול להאיר בלי חשמל ⚡ – אבל גם כל‑כך רדיואקטיבי שאף אחד לא רוצה אותו בבית 🏠. זה פרומתיום (Promethium), אחד היסודות הכי \"נדירים ומוזרים\" בטבלה המחזורית 🧬.\nשאלה קטנה לפתיחה: אם היה לך עט שכותב בחושך בזכות קרינה – היית משתמשת בו? 🤔✨\nפרומתיום הוא יסוד מספר 616161 בטבלה 🧮, ממשפחת הלנתנידים (מתכות נדירות יחסית) 🌈. אבל בניגוד לרוב היסודות – אין לו אף איזוטופ יציב ❌. כל הצורות שלו רדיואקטיביות 📡. בטבע הוא כמעט לא מופיע, כי כשהוא נוצר (למשל בפיצול גרעיני בכוכבים או בכורים) הוא מתפרק מהר יחסית ⏳.\nאז איך בכלל משיגים אותו? 🏭\nבני אדם מייצרים פרומתיום בעיקר בתוך כורים גרעיניים – לוקחים יסודות אחרים, מקרינים בנייטרונים, ומקבלים איזוטופים של פרומתיום, במיוחד 147Pm^{147}Pm147Pm 🔁.\nומה עושים איתו? כאן נהיה מעניין 💡:\n\nיוצרים מקורות אור זעירים שלא צריכים סוללה – למשל בסקיילים מיוחדים או סימונים צבאיים 🕹️\nבונים סוללות גרעיניות זעירות (betavoltaic) שמספקות זרם חלש אבל לאורך שנים ארוכות ⏲️\nמשתמשים בו במחקר כ\"סמן\" רדיואקטיבי 🔬\n\nהשם \"פרומתיום\" בא מפרומתאוס מהמיתולוגיה היוונית 🔥 – זה שגנב את האש מהאלים. די מתאים ליסוד שמייצר אור וקרינה, נכון? 😉\nאת יכולה לחשוב עליו כמו \"פנס רדיואקטיבי זעיר\": מאיר יפה, אבל עדיף להשאיר אותו למעבדות ולא לכיס 😄.על מה היית רוצה לשמוע יותר, על קרינה רדיואקטיבית או על סוללות גרעיניות קטנות?  \nמעניינת אותך גם ההיסטוריה של גילוי פרומתיום ולמה כל כך קשה למצוא אותו בטבע?"
-                    }
-                  ],
+                  "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 14473,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "💬 Submitting query: \"תסביר לי בפרטים על Promethium.\"\n"
-                        },
-                        {
-                          "text": "🕐 Waiting for first character of bot response...\n"
-                        },
-                        {
-                          "text": "⏳ Time to first character: 3.06s\n"
-                        },
-                        {
-                          "text": "✅ Time to full response: 14.13s\n"
-                        },
-                        {
-                          "text": "🤖 Bot response: \"היסוד המסתורי שמסמן מופע בחושך: פרומתיום 🌌🧪\nדמייני יסוד שיכול להאיר בלי חשמל ⚡ – אבל גם כל‑כך רדיואקטיבי שאף אחד לא רוצה אותו בבית 🏠. זה פרומתיום (Promethium), אחד היסודות הכי \"נדירים ומוזרים\" בטבלה המחזורית 🧬.\nשאלה קטנה לפתיחה: אם היה לך עט שכותב בחושך בזכות קרינה – היית משתמשת בו? 🤔✨\nפרומתיום הוא יסוד מספר 616161 בטבלה 🧮, ממשפחת הלנתנידים (מתכות נדירות יחסית) 🌈. אבל בניגוד לרוב היסודות – אין לו אף איזוטופ יציב ❌. כל הצורות שלו רדיואקטיביות 📡. בטבע הוא כמעט לא מופיע, כי כשהוא נוצר (למשל בפיצול גרעיני בכוכבים או בכורים) הוא מתפרק מהר יחסית ⏳.\nאז איך בכלל משיגים אותו? 🏭\nבני אדם מייצרים פרומתיום בעיקר בתוך כורים גרעיניים – לוקחים יסודות אחרים, מקרינים בנייטרונים, ומקבלים איזוטופים של פרומתיום, במיוחד 147Pm^{147}Pm147Pm 🔁.\nומה עושים איתו? כאן נהיה מעניין 💡:\n\nיוצרים מקורות אור זעירים שלא צריכים סוללה – למשל בסקיילים מיוחדים או סימונים צבאיים 🕹️\nבונים סוללות גרעיניות זעירות (betavoltaic) שמספקות זרם חלש אבל לאורך שנים ארוכות ⏲️\nמשתמשים בו במחקר כ\"סמן\" רדיואקטיבי 🔬\n\nהשם \"פרומתיום\" בא מפרומתאוס מהמיתולוגיה היוונית 🔥 – זה שגנב את האש מהאלים. די מתאים ליסוד שמייצר אור וקרינה, נכון? 😉\nאת יכולה לחשוב עליו כמו \"פנס רדיואקטיבי זעיר\": מאיר יפה, אבל עדיף להשאיר אותו למעבדות ולא לכיס 😄.על מה היית רוצה לשמוע יותר, על קרינה רדיואקטיבית או על סוללות גרעיניות קטנות?  \nמעניינת אותך גם ההיסטוריה של גילוי פרומתיום ולמה כל כך קשה למצוא אותו בטבע?\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:36:31.812Z",
-                      "annotations": [
-                        {
-                          "type": "BotResponse",
-                          "description": "היסוד המסתורי שמסמן מופע בחושך: פרומתיום 🌌🧪\nדמייני יסוד שיכול להאיר בלי חשמל ⚡ – אבל גם כל‑כך רדיואקטיבי שאף אחד לא רוצה אותו בבית 🏠. זה פרומתיום (Promethium), אחד היסודות הכי \"נדירים ומוזרים\" בטבלה המחזורית 🧬.\nשאלה קטנה לפתיחה: אם היה לך עט שכותב בחושך בזכות קרינה – היית משתמשת בו? 🤔✨\nפרומתיום הוא יסוד מספר 616161 בטבלה 🧮, ממשפחת הלנתנידים (מתכות נדירות יחסית) 🌈. אבל בניגוד לרוב היסודות – אין לו אף איזוטופ יציב ❌. כל הצורות שלו רדיואקטיביות 📡. בטבע הוא כמעט לא מופיע, כי כשהוא נוצר (למשל בפיצול גרעיני בכוכבים או בכורים) הוא מתפרק מהר יחסית ⏳.\nאז איך בכלל משיגים אותו? 🏭\nבני אדם מייצרים פרומתיום בעיקר בתוך כורים גרעיניים – לוקחים יסודות אחרים, מקרינים בנייטרונים, ומקבלים איזוטופים של פרומתיום, במיוחד 147Pm^{147}Pm147Pm 🔁.\nומה עושים איתו? כאן נהיה מעניין 💡:\n\nיוצרים מקורות אור זעירים שלא צריכים סוללה – למשל בסקיילים מיוחדים או סימונים צבאיים 🕹️\nבונים סוללות גרעיניות זעירות (betavoltaic) שמספקות זרם חלש אבל לאורך שנים ארוכות ⏲️\nמשתמשים בו במחקר כ\"סמן\" רדיואקטיבי 🔬\n\nהשם \"פרומתיום\" בא מפרומתאוס מהמיתולוגיה היוונית 🔥 – זה שגנב את האש מהאלים. די מתאים ליסוד שמייצר אור וקרינה, נכון? 😉\nאת יכולה לחשוב עליו כמו \"פנס רדיואקטיבי זעיר\": מאיר יפה, אבל עדיף להשאיר אותו למעבדות ולא לכיס 😄.על מה היית רוצה לשמוע יותר, על קרינה רדיואקטיבית או על סוללות גרעיניות קטנות?  \nמעניינת אותך גם ההיסטוריה של גילוי פרומתיום ולמה כל כך קשה למצוא אותו בטבע?"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-65413aac69216e0b1a8c",
@@ -435,29 +202,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 356,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "🔽 Checking scroll button visibility...\n"
-                        },
-                        {
-                          "text": "✅ Scroll button visible. Scrolling to bottom...\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:36:46.294Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-8b259adfc2a0bcbdf89f",
@@ -476,26 +222,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1306,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "👍 Clicking Like button...\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:36:46.659Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-b2eca2bdee340bef34a3",
@@ -514,26 +242,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1291,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "👎 Clicking Dislike button...\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:36:47.975Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-fdb6ef78c2e7524cfe75",
@@ -552,26 +262,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 398,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "📋 Clicking Copy button...\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:36:49.272Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-88dbaaf8e57f797c1639",
@@ -586,46 +278,12 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [
-                    {
-                      "type": "info",
-                      "description": "Bot response: **המלכ"
-                    }
-                  ],
+                  "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 3597,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "🔘 Clicking Predefined button...\n"
-                        },
-                        {
-                          "text": "🕐 Waiting for bot response to begin...\n"
-                        },
-                        {
-                          "text": "✅ Bot response received: \"**המלכ\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:36:49.682Z",
-                      "annotations": [
-                        {
-                          "type": "info",
-                          "description": "Bot response: **המלכ"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-d636973f51dd28beb538",
@@ -644,35 +302,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 12475,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                        },
-                        {
-                          "text": "💬 Waiting for initial bot message...\n"
-                        },
-                        {
-                          "text": "📨 Bot message received: \"הי Viola,\nיאללה, נתחיל בכיף! מה מעניין אותך ללמוד היום? 🎉📘\nאפשר לשאול על כל דבר שעולה לך לראש.\"\n"
-                        },
-                        {
-                          "text": "✅ Bot message contains expected name: \"Viola\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:36:53.292Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-4e5983dfa70fc22eed81",
@@ -691,41 +322,8 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9427,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "🔁 Starting a new chatbot session...\n"
-                        },
-                        {
-                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                        },
-                        {
-                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                        },
-                        {
-                          "text": "💬 Waiting for initial bot message...\n"
-                        },
-                        {
-                          "text": "📨 Bot message received: \"הי Viola,\nכל הכבוד שהגעת! רוצה שנחקור יחד משהו חדש? 😄🔍\nאני פה בשביל כל נושא שמעניין אותך.\"\n"
-                        },
-                        {
-                          "text": "✅ Bot message contains expected name: \"Viola\"\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:37:05.774Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-49ec378fc073adb83bd7",
@@ -739,40 +337,13 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 610000,
+                  "timeout": 120000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 606235,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "⏳ Waiting for inactivity popup to appear...\n"
-                        },
-                        {
-                          "text": "⏳ Waiting in production with timeout: 610s\n"
-                        },
-                        {
-                          "text": "✅ Inactivity popup is visible.\n"
-                        },
-                        {
-                          "text": "🔄 Clicked \"Continue Chat\" button.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:37:15.209Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "23335bb06d3df52af178-24718841e90bdca1eeea",
@@ -787,35 +358,11 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "description": "Skipping in production environment"
-                    }
-                  ],
-                  "expectedStatus": "skipped",
+                  "annotations": [],
+                  "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 1399,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-01-12T08:47:21.490Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "description": "Skipping in production environment"
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
+                  "results": [],
                   "status": "skipped"
                 }
               ],
@@ -859,53 +406,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 12303,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "Navigating to the admin page...\n"
-                            },
-                            {
-                              "text": "Navigating to the chatbot page...\n"
-                            },
-                            {
-                              "text": "Successfully navigated to chatbot login page.\n"
-                            },
-                            {
-                              "text": "Clicking \"Login with Email\" button...\n"
-                            },
-                            {
-                              "text": "Filling in email: paras.citrusbug@gmail.com\n"
-                            },
-                            {
-                              "text": "Filling in password...\n"
-                            },
-                            {
-                              "text": "Clicking \"Submit\" to log in...\n"
-                            },
-                            {
-                              "text": "Waiting for page navigation after login...\n"
-                            },
-                            {
-                              "text": "✅ TC_15: Open Hamburger Menu\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-01-12T08:47:24.472Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-fc8185bedbbc220639a5",
@@ -924,29 +426,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 547,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_20: Load More button functionality\n"
-                            },
-                            {
-                              "text": "📜 Clicking Load More button...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-01-12T08:47:43.113Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-b7f57ec28ab5670b83d2",
@@ -965,29 +446,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2482,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_21: No result in chat history\n"
-                            },
-                            {
-                              "text": "🔎 Using random search text: \"demoror suscipio\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-01-12T08:47:43.674Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-eb9d220291fc36e5bede",
@@ -1006,29 +466,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 494,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_22: Close Hamburger Menu\n"
-                            },
-                            {
-                              "text": "❌ Closing hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-01-12T08:47:46.168Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-c14a7b3680f8a9b403ae",
@@ -1047,41 +486,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 9489,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_19: Start new session using \"שיחה חדשה\"\n"
-                            },
-                            {
-                              "text": "🔁 Creating new session from hamburger menu...\n"
-                            },
-                            {
-                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
-                            },
-                            {
-                              "text": "💬 Waiting for initial bot message...\n"
-                            },
-                            {
-                              "text": "📨 Bot message received: \"הי Viola,\nאיזה כיף שחזרת! יש לך שאלה מעניינת בשבילי היום? 🤩\nאני כאן לכל דבר שתרצה לדבר עליו או ללמוד יחד! 💭\"\n"
-                            },
-                            {
-                              "text": "✅ Bot message contains expected name: \"Viola\"\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-01-12T08:47:46.671Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-0a0e12da784e161efa2b",
@@ -1100,29 +506,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 1613,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_20: Edit and save changes in chat history\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-01-12T08:47:56.170Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-61144c9d99129cbecb8b",
@@ -1141,29 +526,8 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 2281,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "✅ TC_21: Continue Chat Functionality\n"
-                            },
-                            {
-                              "text": "📂 Opening hamburger menu...\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-01-12T08:47:57.791Z",
-                          "annotations": [],
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
+                      "results": [],
+                      "status": "skipped"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-dcbd437c45ee70f23a65",
@@ -1190,35 +554,11 @@
           "tests": [
             {
               "timeout": 120000,
-              "annotations": [
-                {
-                  "type": "skip",
-                  "description": "Skipping in production environment"
-                }
-              ],
-              "expectedStatus": "skipped",
+              "annotations": [],
+              "expectedStatus": "passed",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "skipped",
-                  "duration": 3,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-01-12T08:48:00.531Z",
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "description": "Skipping in production environment"
-                    }
-                  ],
-                  "attachments": []
-                }
-              ],
+              "results": [],
               "status": "skipped"
             }
           ],
@@ -1232,10 +572,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-01-12T08:35:52.707Z",
-    "duration": 728631.407,
-    "expected": 20,
-    "skipped": 2,
+    "startTime": "2026-01-16T05:03:35.377Z",
+    "duration": 2963.449,
+    "expected": 0,
+    "skipped": 22,
     "unexpected": 0,
     "flaky": 0
   }

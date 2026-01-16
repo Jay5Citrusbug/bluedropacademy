@@ -239,7 +239,6 @@ export class chatbotPage {
 
       await input.fill("Hello");
       await input.press('Enter');
-
       // wait for response to render
       await scrollBtn.waitFor({ state: 'visible', timeout: 10000 });
 
@@ -308,6 +307,11 @@ export class chatbotPage {
   }
 
   async PredefinedBtnClick(testInfo: TestInfo) {
+    const frame = this.page.frameLocator('iframe');
+
+    await frame.locator('body').evaluate(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    });
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
     const predefinedBtn = frameLocator.locator(Chatbotlocator.Predefinebutton1);
 
