@@ -307,14 +307,13 @@ export class chatbotPage {
   }
 
   async PredefinedBtnClick(testInfo: TestInfo) {
-    const frame = this.page.frameLocator('iframe');
 
-    await frame.locator('body').evaluate(() => {
-      window.scrollTo(0, document.body.scrollHeight);
-    });
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
     const predefinedBtn = frameLocator.locator(Chatbotlocator.Predefinebutton1);
 
+    await frameLocator.locator('body').evaluate(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    });
     await this.page.locator('iframe[name="htmlComp-iframe"]').contentFrame().getByTestId('suggest-message-button').first().click();
     const systemMessages = frameLocator.locator('.system-message-text');
 
