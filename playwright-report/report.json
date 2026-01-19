@@ -92,18 +92,145 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
+                      "status": "passed",
+                      "duration": 30879,
                       "errors": [],
-                      "stdout": [],
+                      "stdout": [
+                        {
+                          "text": "Navigating to the admin page...\n"
+                        },
+                        {
+                          "text": "Navigating to the chatbot page...\n"
+                        },
+                        {
+                          "text": "Successfully navigated to the admin page.\n"
+                        },
+                        {
+                          "text": "Starting login process for user: noam@bluedropacademy.com\n"
+                        },
+                        {
+                          "text": "Filling in email input...\n"
+                        },
+                        {
+                          "text": "Filling in password input...\n"
+                        },
+                        {
+                          "text": "Clicking on Sign In button...\n"
+                        },
+                        {
+                          "text": "Login submitted, waiting for dashboard to load...\n"
+                        },
+                        {
+                          "text": "Starting reset process for user: paras.citrusbug@gmail.com\n"
+                        },
+                        {
+                          "text": "Clicking on User Data tab...\n"
+                        },
+                        {
+                          "text": "Searching for user with email: paras.citrusbug@gmail.com\n"
+                        },
+                        {
+                          "text": "Scrolling horizontally to bring Reset button into view...\n"
+                        },
+                        {
+                          "text": "Checking Reset button...\n"
+                        },
+                        {
+                          "text": "Reset button found & enabled — clicking...\n"
+                        },
+                        {
+                          "text": "Confirming the reset...\n"
+                        },
+                        {
+                          "text": "Waiting for success message...\n"
+                        },
+                        {
+                          "text": "Reset confirmation message is visible.\n"
+                        },
+                        {
+                          "text": "✅ Reset process completed for user: paras.citrusbug@gmail.com\n"
+                        },
+                        {
+                          "text": "✅ User reset complete\n"
+                        },
+                        {
+                          "text": "Navigating to the admin page...\n"
+                        },
+                        {
+                          "text": "Navigating to the chatbot page...\n"
+                        },
+                        {
+                          "text": "Successfully navigated to chatbot login page.\n"
+                        },
+                        {
+                          "text": "Clicking \"Login with Email\" button...\n"
+                        },
+                        {
+                          "text": "Filling in email: paras.citrusbug@gmail.com\n"
+                        },
+                        {
+                          "text": "Filling in password...\n"
+                        },
+                        {
+                          "text": "Clicking \"Submit\" to log in...\n"
+                        },
+                        {
+                          "text": "Waiting for page navigation after login...\n"
+                        },
+                        {
+                          "text": "Attempting to submit form with missing fields (invalid input)...\n"
+                        },
+                        {
+                          "text": "Clicking \"Start\" button without filling fields...\n"
+                        },
+                        {
+                          "text": "Waiting for validation error messages...\n"
+                        },
+                        {
+                          "text": "Verified gender required validation message.\n"
+                        },
+                        {
+                          "text": "Verified name required validation message.\n"
+                        },
+                        {
+                          "text": "✅ Invalid input test completed with expected error validations.\n"
+                        },
+                        {
+                          "text": "Starting to fill personal information form...\n"
+                        },
+                        {
+                          "text": "Filling name: Olga\n"
+                        },
+                        {
+                          "text": "Selecting gender: נקבה 👩\n"
+                        },
+                        {
+                          "text": "Checking visibility of \"Start\" button...\n"
+                        },
+                        {
+                          "text": "Clicking \"Start\" button...\n"
+                        },
+                        {
+                          "text": "✅ Personal info submitted successfully.\n"
+                        },
+                        {
+                          "text": "✅ Chatbot login and form submitted\n"
+                        },
+                        {
+                          "text": "🔍 Waiting for confirmation iframe to appear...\n"
+                        },
+                        {
+                          "text": "✅ Verifying confirmation message and title...\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-16T05:03:38.287Z",
+                      "startTime": "2026-01-19T06:01:34.758Z",
                       "annotations": [],
                       "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-d5358bcdc8dd90bf6389",
@@ -122,8 +249,32 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9656,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "💬 Waiting for initial bot message...\n"
+                        },
+                        {
+                          "text": "📨 Bot message received: \"הי Olga,\nאיזה כיף שחזרת! יש לך שאלה מעניינת בשבילי היום? 🤩\nאני כאן לכל דבר שתרצה לדבר עליו או ללמוד יחד! 💭\"\n"
+                        },
+                        {
+                          "text": "✅ Bot message contains expected name: \"Olga\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:02:06.403Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-4c4c12b2a4d2090ce7d0",
@@ -142,8 +293,26 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 847,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔒 Verifying predefined buttons are hidden...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:02:16.083Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-df7826a0e6c892246899",
@@ -162,8 +331,32 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 736,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "💬 Typing message: ספר לי בהרחבה על New Caledonia.\n    בנוסף:\n    1. תרבות והיסטוריה\n    2. אתגרים כלכליים וחברתיים\n    \n    סקירה מפורטת עם כותרות.\n"
+                        },
+                        {
+                          "text": "✅ Verifying Submit button is enabled...\n"
+                        },
+                        {
+                          "text": "🔄 Clearing input field after verification...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:02:16.948Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-f110f111de3ced2d0794",
@@ -178,12 +371,52 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "BotResponse",
+                      "description": "הצ’יפ הזעיר שמנהל לך את החיים: מה זה בעצם מיקרוצ’יפ? 🔍🤏\nתדמייני קופסה קטנטנה, עשויה מסיליקון, שבתוכה יושבים מיליוני \"פועלים\" זעירים שנקראים טרנזיסטורים 🧱⚡. זה מיקרוצ’יפ (Microchip) – שבב אלקטרוני קטן שמבצע חישובים, שומר מידע ומנהל מכשירים שלמים: טלפון, מחשב, רכב, כרטיס אשראי ועוד 📱🚗💳.\nשאלה קטנה לפתיחה: אם היית צריכה לצמצם את המוח של מחשב לגודל ציפורן – מה היית משאירה בפנים? 🤔\n\n\nאיך זה עובד? 🧠⚙️\nהמיקרוצ’יפ בנוי משכבות דקות מאוד של חומרים מוליכים (בעיקר סיליקון) 🧱.\nבתוכו יש רשת עצומה של טרנזיסטורים שמסוגלים להיות במצב \"דלוק\" או \"כבוי\" – כלומר 1 או 0 💡0️⃣1️⃣.\nהשילובים של ה־1 וה־0 הם בעצם המידע והפקודות.\nכשזרם חשמלי עובר בשבב, הטרנזיסטורים \"מחליטים\" אם לאפשר לו לעבור או לחסום אותו – לפי התכנון של המעגל 🔄.\nמפה אפשר לבנות הכול: חיבור, חיסור, ניגון מוזיקה, ניווט, מצלמה – הכול זה רק מיליוני החלטות קטנות של 0 ו־1 במהירות מטורפת 🚀.\nאפשר לדמיין כביש ענק עם רמזורים – כל רמזור זה טרנזיסטור שמחליט כן/לא, וככה התנועה (המידע) זורמת או נעצרת 🚦.\n\n\nהשוואה לפתרונות דומים 🧩\nלפני מיקרוצ’יפים היו מעגלים עם רכיבים נפרדים – טרנזיסטורים, נגדים, קבלים – גדולים, איטיים ומלאי תקלות 📻.\nהמיקרוצ’יפ מאחד את כולם על חתיכת סיליקון אחת:\n\n\n\nהרבה יותר קטן 🤏\nהרבה יותר מהיר ⚡\nצורך הרבה פחות חשמל 🔋\nזול לייצור בכמויות גדולות 🏭\n\nלעומת מעגלים אנלוגיים (שעובדים עם אות רציף), מיקרוצ’יפים דיגיטליים הם \"קשוחים\": או 0 או 1 – מה שמאפשר דיוק, שיכפול בלי רעש, ועיבוד מידע מורכב 💽.\nפעם מחשב מילא חדר; היום – מיקרוצ’יפ בכיס שלך חזק יותר ממנו. את רשמית חיה בעידן של \"קסם זעיר\" 🎩✨.על איזה מכשיר ביום יום שלך היית רוצה \"לפתוח\" ולגלות מה עושה בו המיקרוצ’יפ?  \nרוצה שנצלול לפרטים של טרנזיסטור אחד ונבין איך הוא בונה את כל ה\"מוח\" הדיגיטלי?"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 47561,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "💬 Submitting query: \"תסביר מה זה microchip בטכנולוגיה.\n    בנוסף:\n    1. איך זה עובד?\n    2. השוואה לפתרונות דומים\n    \n    תשובה ארוכה עם דוגמאות.\"\n"
+                        },
+                        {
+                          "text": "🕐 Waiting for first character of bot response...\n"
+                        },
+                        {
+                          "text": "⏳ Time to first character: 5.23s\n"
+                        },
+                        {
+                          "text": "✅ Time to full response: 46.93s\n"
+                        },
+                        {
+                          "text": "🤖 Bot response: \"הצ’יפ הזעיר שמנהל לך את החיים: מה זה בעצם מיקרוצ’יפ? 🔍🤏\nתדמייני קופסה קטנטנה, עשויה מסיליקון, שבתוכה יושבים מיליוני \"פועלים\" זעירים שנקראים טרנזיסטורים 🧱⚡. זה מיקרוצ’יפ (Microchip) – שבב אלקטרוני קטן שמבצע חישובים, שומר מידע ומנהל מכשירים שלמים: טלפון, מחשב, רכב, כרטיס אשראי ועוד 📱🚗💳.\nשאלה קטנה לפתיחה: אם היית צריכה לצמצם את המוח של מחשב לגודל ציפורן – מה היית משאירה בפנים? 🤔\n\n\nאיך זה עובד? 🧠⚙️\nהמיקרוצ’יפ בנוי משכבות דקות מאוד של חומרים מוליכים (בעיקר סיליקון) 🧱.\nבתוכו יש רשת עצומה של טרנזיסטורים שמסוגלים להיות במצב \"דלוק\" או \"כבוי\" – כלומר 1 או 0 💡0️⃣1️⃣.\nהשילובים של ה־1 וה־0 הם בעצם המידע והפקודות.\nכשזרם חשמלי עובר בשבב, הטרנזיסטורים \"מחליטים\" אם לאפשר לו לעבור או לחסום אותו – לפי התכנון של המעגל 🔄.\nמפה אפשר לבנות הכול: חיבור, חיסור, ניגון מוזיקה, ניווט, מצלמה – הכול זה רק מיליוני החלטות קטנות של 0 ו־1 במהירות מטורפת 🚀.\nאפשר לדמיין כביש ענק עם רמזורים – כל רמזור זה טרנזיסטור שמחליט כן/לא, וככה התנועה (המידע) זורמת או נעצרת 🚦.\n\n\nהשוואה לפתרונות דומים 🧩\nלפני מיקרוצ’יפים היו מעגלים עם רכיבים נפרדים – טרנזיסטורים, נגדים, קבלים – גדולים, איטיים ומלאי תקלות 📻.\nהמיקרוצ’יפ מאחד את כולם על חתיכת סיליקון אחת:\n\n\n\nהרבה יותר קטן 🤏\nהרבה יותר מהיר ⚡\nצורך הרבה פחות חשמל 🔋\nזול לייצור בכמויות גדולות 🏭\n\nלעומת מעגלים אנלוגיים (שעובדים עם אות רציף), מיקרוצ’יפים דיגיטליים הם \"קשוחים\": או 0 או 1 – מה שמאפשר דיוק, שיכפול בלי רעש, ועיבוד מידע מורכב 💽.\nפעם מחשב מילא חדר; היום – מיקרוצ’יפ בכיס שלך חזק יותר ממנו. את רשמית חיה בעידן של \"קסם זעיר\" 🎩✨.על איזה מכשיר ביום יום שלך היית רוצה \"לפתוח\" ולגלות מה עושה בו המיקרוצ’יפ?  \nרוצה שנצלול לפרטים של טרנזיסטור אחד ונבין איך הוא בונה את כל ה\"מוח\" הדיגיטלי?\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:02:17.698Z",
+                      "annotations": [
+                        {
+                          "type": "BotResponse",
+                          "description": "הצ’יפ הזעיר שמנהל לך את החיים: מה זה בעצם מיקרוצ’יפ? 🔍🤏\nתדמייני קופסה קטנטנה, עשויה מסיליקון, שבתוכה יושבים מיליוני \"פועלים\" זעירים שנקראים טרנזיסטורים 🧱⚡. זה מיקרוצ’יפ (Microchip) – שבב אלקטרוני קטן שמבצע חישובים, שומר מידע ומנהל מכשירים שלמים: טלפון, מחשב, רכב, כרטיס אשראי ועוד 📱🚗💳.\nשאלה קטנה לפתיחה: אם היית צריכה לצמצם את המוח של מחשב לגודל ציפורן – מה היית משאירה בפנים? 🤔\n\n\nאיך זה עובד? 🧠⚙️\nהמיקרוצ’יפ בנוי משכבות דקות מאוד של חומרים מוליכים (בעיקר סיליקון) 🧱.\nבתוכו יש רשת עצומה של טרנזיסטורים שמסוגלים להיות במצב \"דלוק\" או \"כבוי\" – כלומר 1 או 0 💡0️⃣1️⃣.\nהשילובים של ה־1 וה־0 הם בעצם המידע והפקודות.\nכשזרם חשמלי עובר בשבב, הטרנזיסטורים \"מחליטים\" אם לאפשר לו לעבור או לחסום אותו – לפי התכנון של המעגל 🔄.\nמפה אפשר לבנות הכול: חיבור, חיסור, ניגון מוזיקה, ניווט, מצלמה – הכול זה רק מיליוני החלטות קטנות של 0 ו־1 במהירות מטורפת 🚀.\nאפשר לדמיין כביש ענק עם רמזורים – כל רמזור זה טרנזיסטור שמחליט כן/לא, וככה התנועה (המידע) זורמת או נעצרת 🚦.\n\n\nהשוואה לפתרונות דומים 🧩\nלפני מיקרוצ’יפים היו מעגלים עם רכיבים נפרדים – טרנזיסטורים, נגדים, קבלים – גדולים, איטיים ומלאי תקלות 📻.\nהמיקרוצ’יפ מאחד את כולם על חתיכת סיליקון אחת:\n\n\n\nהרבה יותר קטן 🤏\nהרבה יותר מהיר ⚡\nצורך הרבה פחות חשמל 🔋\nזול לייצור בכמויות גדולות 🏭\n\nלעומת מעגלים אנלוגיים (שעובדים עם אות רציף), מיקרוצ’יפים דיגיטליים הם \"קשוחים\": או 0 או 1 – מה שמאפשר דיוק, שיכפול בלי רעש, ועיבוד מידע מורכב 💽.\nפעם מחשב מילא חדר; היום – מיקרוצ’יפ בכיס שלך חזק יותר ממנו. את רשמית חיה בעידן של \"קסם זעיר\" 🎩✨.על איזה מכשיר ביום יום שלך היית רוצה \"לפתוח\" ולגלות מה עושה בו המיקרוצ’יפ?  \nרוצה שנצלול לפרטים של טרנזיסטור אחד ונבין איך הוא בונה את כל ה\"מוח\" הדיגיטלי?"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-65413aac69216e0b1a8c",
@@ -202,8 +435,29 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 659,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔽 Checking scroll button visibility...\n"
+                        },
+                        {
+                          "text": "✅ Scroll button visible. Scrolling to bottom...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:03:05.273Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-8b259adfc2a0bcbdf89f",
@@ -222,8 +476,26 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1589,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "👍 Clicking Like button...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:03:05.947Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-b2eca2bdee340bef34a3",
@@ -242,8 +514,26 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1470,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "👎 Clicking Dislike button...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:03:07.552Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-fdb6ef78c2e7524cfe75",
@@ -262,8 +552,26 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 671,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "📋 Clicking Copy button...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:03:09.035Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-88dbaaf8e57f797c1639",
@@ -278,12 +586,46 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "info",
+                      "description": "Bot response: המוח הקטן שעושה לך סדר בבלגן: צלילה עמוקה יותר למיקרוצ’יפ! 🤿🤏\nתלכי רגע על הדמיון: 🎨"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5138,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔘 Clicking Predefined button...\n"
+                        },
+                        {
+                          "text": "🕐 Waiting for bot response to begin...\n"
+                        },
+                        {
+                          "text": "✅ Bot response received: \"המוח הקטן שעושה לך סדר בבלגן: צלילה עמוקה יותר למיקרוצ’יפ! 🤿🤏\nתלכי רגע על הדמיון: 🎨\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:03:09.722Z",
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: המוח הקטן שעושה לך סדר בבלגן: צלילה עמוקה יותר למיקרוצ’יפ! 🤿🤏\nתלכי רגע על הדמיון: 🎨"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-d636973f51dd28beb538",
@@ -302,8 +644,35 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15729,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                        },
+                        {
+                          "text": "💬 Waiting for initial bot message...\n"
+                        },
+                        {
+                          "text": "📨 Bot message received: \"הי Olga,\nאני ממש שמח לראות אותך כאן! על מה בא לך לדבר? 😃💬\nאין חוקים – כל מה שמעניין אותך, מתאים.\"\n"
+                        },
+                        {
+                          "text": "✅ Bot message contains expected name: \"Olga\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:03:14.875Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-4e5983dfa70fc22eed81",
@@ -322,8 +691,41 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9626,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔁 Starting a new chatbot session...\n"
+                        },
+                        {
+                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                        },
+                        {
+                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                        },
+                        {
+                          "text": "💬 Waiting for initial bot message...\n"
+                        },
+                        {
+                          "text": "📨 Bot message received: \"הי Olga,\nמוכן לעוד הרפתקה של למידה? מה בא לך שנחקור הפעם? 🧭✨\nהדמיון שלך הוא הכיוון שלנו 🚀\"\n"
+                        },
+                        {
+                          "text": "✅ Bot message contains expected name: \"Olga\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:03:30.625Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-49ec378fc073adb83bd7",
@@ -342,7 +744,74 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "interrupted",
+                      "duration": 10294,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 70000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 70000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\u001b[22m\n\n    at chatbotPage.InactivityPopup1 (D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:352:35)\n    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:123:23",
+                        "location": {
+                          "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                          "column": 35,
+                          "line": 352
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:352\n\n\u001b[0m \u001b[90m 350 |\u001b[39m\n \u001b[90m 351 |\u001b[39m     \u001b[90m// Wait for popup to be visible with appropriate timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 352 |\u001b[39m     \u001b[36mawait\u001b[39m expect(inactivityPopup)\u001b[33m.\u001b[39mtoBeVisible({ timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 353 |\u001b[39m\n \u001b[90m 354 |\u001b[39m     \u001b[36mconst\u001b[39m popupFrame \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mframeLocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 355 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                            "column": 35,
+                            "line": 352
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 70000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().locator('role=heading[name=\"נראה שלא היית פעיל לאחרונה\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:352\n\n\u001b[0m \u001b[90m 350 |\u001b[39m\n \u001b[90m 351 |\u001b[39m     \u001b[90m// Wait for popup to be visible with appropriate timeout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 352 |\u001b[39m     \u001b[36mawait\u001b[39m expect(inactivityPopup)\u001b[33m.\u001b[39mtoBeVisible({ timeout })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 353 |\u001b[39m\n \u001b[90m 354 |\u001b[39m     \u001b[36mconst\u001b[39m popupFrame \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mframeLocator(\u001b[32m'iframe[name=\"htmlComp-iframe\"]'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 355 |\u001b[39m\u001b[0m\n\u001b[2m    at chatbotPage.InactivityPopup1 (D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:352:35)\u001b[22m\n\u001b[2m    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:123:23\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "⏳ Waiting for inactivity popup to appear...\n"
+                        },
+                        {
+                          "text": "⏳ Waiting in staging with timeout: 70s\n"
+                        },
+                        {
+                          "text": "❌ Test failed: TC_13: 🔄 Session pop-up displays after 10 minutes and Click on the Continue button to resume session\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved at: screenshots/TC_13:_🔄_Session_pop-up_displays_after_10_minutes_and_Click_on_the_Continue_button_to_resume_session.png\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-19T06:03:40.262Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-411c2-ue-button-to-resume-session-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-411c2-ue-button-to-resume-session-chromium\\test-failed-2.png"
+                        },
+                        {
+                          "name": "_error-context-0",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-411c2-ue-button-to-resume-session-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
+                        "column": 35,
+                        "line": 352
+                      }
+                    }
+                  ],
                   "status": "skipped"
                 }
               ],
@@ -572,10 +1041,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-01-16T05:03:35.377Z",
-    "duration": 2963.449,
-    "expected": 0,
-    "skipped": 22,
+    "startTime": "2026-01-19T06:01:31.492Z",
+    "duration": 139997.551,
+    "expected": 12,
+    "skipped": 10,
     "unexpected": 0,
     "flaky": 0
   }

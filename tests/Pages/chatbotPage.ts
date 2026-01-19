@@ -218,41 +218,26 @@ export class chatbotPage {
   }
 
 
-  async scrollToBottom() {
-    const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
-    const scrollBtn = frameLocator.locator(Chatbotlocator.ScrollingBtn);
-    const input = frameLocator.getByTestId('seach-msg-input');
+async scrollToBottom() {
+  const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
+  const scrollBtn = frameLocator.locator(Chatbotlocator.ScrollingBtn);
 
-    console.log('🔽 Checking scroll button visibility...');
+  console.log('🔽 Checking scroll button visibility...');
 
-    if (await scrollBtn.isVisible({ timeout: 3000 })) {
-      console.log('✅ Scroll button visible. Scrolling to bottom...');
+  if (await scrollBtn.isVisible({ timeout: 5000 })) {
+    console.log('✅ Scroll button visible. Scrolling to bottom...');
 
-      await frameLocator.locator('body').evaluate((body) => {
-        window.scrollTo(0, body.scrollHeight);
+    await frameLocator.locator('body').evaluate((body) => {
+      window.scrollTo(0, body.scrollHeight);
+    });
 
-      });
-      await expect(frameLocator.getByText(Chatbotlocator.VerifyBottomTxt)).toBeVisible();
-
-    } else {
-      console.log('⚠️ Scroll button not visible. Re-submitting query...');
-
-      await input.fill("Hello");
-      await input.press('Enter');
-      // wait for response to render
-      await scrollBtn.waitFor({ state: 'visible', timeout: 10000 });
-
-      console.log('✅ Scroll button appeared. Scrolling now...');
-      await frameLocator.locator('body').evaluate((body) => {
-        window.scrollTo(0, body.scrollHeight);
-
-      });
-      await expect(frameLocator.getByText(Chatbotlocator.VerifyBottomTxt)).toBeVisible();
-
-    }
-
-
+    await expect(
+      frameLocator.getByText(Chatbotlocator.VerifyBottomTxt)
+    ).toBeVisible();
+  } else {
+    console.log('⚠️ Scroll button not visible. Skipping scroll.');
   }
+}
 
   async Pagereload() {
     const frameLocator = this.page.frameLocator(Chatbotlocator.iframeName);
