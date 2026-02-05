@@ -79,7 +79,7 @@
           "specs": [
             {
               "title": "TC_01: ✅ Confirm chatbot screen elements are visible",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -92,28 +92,9 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 32726,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByText('שיחות עם בלו')\nExpected: visible\nReceived: undefined\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByText('שיחות עם בלו')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByText('שיחות עם בלו')\nExpected: visible\nReceived: undefined\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByText('שיחות עם בלו')\u001b[22m\n\n    at chatbotPage.verifyConfirmationElements (D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:23:58)\n    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:53:5",
-                        "location": {
-                          "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                          "column": 58,
-                          "line": 23
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'✅ Verifying confirmation message and title...'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mgetByText(\u001b[32m'תודה על מסירת הפרטים שלך'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mgetByText(\u001b[32m\"שיחות עם בלו\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m   }\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m   \u001b[36masync\u001b[39m \u001b[33mInitialbotMessage\u001b[39m(expectedName\u001b[33m:\u001b[39m string) {\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                            "column": 58,
-                            "line": 23
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByText('שיחות עם בלו')\nExpected: visible\nReceived: undefined\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('iframe[name=\"htmlComp-iframe\"]').contentFrame().getByText('שיחות עם בלו')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mPages\\chatbotPage.ts:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m'✅ Verifying confirmation message and title...'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mgetByText(\u001b[32m'תודה על מסירת הפרטים שלך'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(frameLocator\u001b[33m.\u001b[39mgetByText(\u001b[32m\"שיחות עם בלו\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m   }\n \u001b[90m 25 |\u001b[39m\n \u001b[90m 26 |\u001b[39m   \u001b[36masync\u001b[39m \u001b[33mInitialbotMessage\u001b[39m(expectedName\u001b[33m:\u001b[39m string) {\u001b[0m\n\u001b[2m    at chatbotPage.verifyConfirmationElements (D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts:23:58)\u001b[22m\n\u001b[2m    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:53:5\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 37690,
+                      "errors": [],
                       "stdout": [
                         {
                           "text": "Navigating to the admin page...\n"
@@ -155,7 +136,19 @@
                           "text": "Checking Reset button...\n"
                         },
                         {
-                          "text": "Reset button not found or disabled — skipping click.\n"
+                          "text": "Reset button found & enabled — clicking...\n"
+                        },
+                        {
+                          "text": "Confirming the reset...\n"
+                        },
+                        {
+                          "text": "Waiting for success message...\n"
+                        },
+                        {
+                          "text": "Reset confirmation message is visible.\n"
+                        },
+                        {
+                          "text": "✅ Reset process completed for user: paras.citrusbug@gmail.com\n"
                         },
                         {
                           "text": "✅ User reset complete\n"
@@ -206,7 +199,7 @@
                           "text": "Starting to fill personal information form...\n"
                         },
                         {
-                          "text": "Filling name: Antonio\n"
+                          "text": "Filling name: Clinton\n"
                         },
                         {
                           "text": "Selecting gender: זכר 👨\n"
@@ -228,38 +221,16 @@
                         },
                         {
                           "text": "✅ Verifying confirmation message and title...\n"
-                        },
-                        {
-                          "text": "❌ Test failed: TC_01: ✅ Confirm chatbot screen elements are visible\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved at: screenshots/TC_01:_✅_Confirm_chatbot_screen_elements_are_visible.png\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-02-04T05:33:21.198Z",
+                      "startTime": "2026-02-05T06:09:58.185Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-ddf59-screen-elements-are-visible-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "_error-context-0",
-                          "contentType": "text/markdown",
-                          "path": "D:\\Automation\\Playwright\\Bluedrop_academy\\test-results\\Chatbot-BlueDrop-Chatbot-T-ddf59-screen-elements-are-visible-chromium\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Pages\\chatbotPage.ts",
-                        "column": 58,
-                        "line": 23
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-d5358bcdc8dd90bf6389",
@@ -280,20 +251,30 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
+                      "status": "passed",
+                      "duration": 9236,
                       "errors": [],
-                      "stdout": [],
+                      "stdout": [
+                        {
+                          "text": "💬 Waiting for initial bot message...\n"
+                        },
+                        {
+                          "text": "📨 Bot message received: \"הי Clinton,\nמוכן לעוד הרפתקה של למידה? מה בא לך שנחקור הפעם? 🧭✨\nהדמיון שלך הוא הכיוון שלנו 🚀\"\n"
+                        },
+                        {
+                          "text": "✅ Bot message contains expected name: \"Clinton\"\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-02-04T05:33:58.389Z",
+                      "startTime": "2026-02-05T06:10:36.531Z",
                       "annotations": [],
                       "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-4c4c12b2a4d2090ce7d0",
@@ -312,8 +293,26 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 174,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔒 Verifying predefined buttons are hidden...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-05T06:10:45.773Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-df7826a0e6c892246899",
@@ -332,8 +331,32 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 230,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "💬 Typing message: איך להכין Peach And Papaya Tart?\n    בנוסף:\n    1. טעויות נפוצות בהכנה\n    2. שדרוגים וגרסה בריאה יותר\n    \n    תסביר שלב אחר שלב עם טיפים.\n"
+                        },
+                        {
+                          "text": "✅ Verifying Submit button is enabled...\n"
+                        },
+                        {
+                          "text": "🔄 Clearing input field after verification...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-05T06:10:45.956Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-f110f111de3ced2d0794",
@@ -352,7 +375,44 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "interrupted",
+                      "duration": 1959,
+                      "error": {
+                        "message": "Error: browser.newContext: Target page, context or browser has been closed",
+                        "stack": "Error: browser.newContext: Target page, context or browser has been closed"
+                      },
+                      "errors": [
+                        {
+                          "message": "Error: browser.newContext: Target page, context or browser has been closed"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
+                            "column": 5,
+                            "line": 20
+                          },
+                          "message": "Error: browserContext.close: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:20:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "💬 Submitting query: \"ספר לי בהרחבה על Turkmenistan.\n    בנוסף:\n    1. תרבות והיסטוריה\n    2. אתגרים כלכליים וחברתיים\n    \n    סקירה מפורטת עם כותרות.\"\n"
+                        },
+                        {
+                          "text": "🕐 Waiting for first character of bot response...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-05T06:10:46.191Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
                   "status": "skipped"
                 }
               ],
@@ -742,11 +802,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-04T05:33:18.863Z",
-    "duration": 39566.601,
-    "expected": 0,
-    "skipped": 21,
-    "unexpected": 1,
+    "startTime": "2026-02-05T06:09:55.744Z",
+    "duration": 52733.086,
+    "expected": 4,
+    "skipped": 18,
+    "unexpected": 0,
     "flaky": 0
   }
 }

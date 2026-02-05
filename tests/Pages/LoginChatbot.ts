@@ -10,6 +10,7 @@ export class ChatbotLoginPage {
         this.frameLocator = page.frameLocator(chatbotLocators.iframeName);
     }
 
+
     // Navigates to the chatbot login page
     async goto() {
         console.log("Navigating to the admin page...");
@@ -17,6 +18,12 @@ export class ChatbotLoginPage {
         if (!Chatboturl) {
             throw new Error("Environment variable URL_CHATBOT is not defined.");
         }
+        
+        await this.page.addInitScript(() => {
+    Object.defineProperty(navigator, 'webdriver', {
+      get: () => false,
+    });
+  });
         console.log("Navigating to the chatbot page...");
         await this.page.goto(Chatboturl);
         console.log("Successfully navigated to chatbot login page.");

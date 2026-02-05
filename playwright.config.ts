@@ -24,7 +24,7 @@ export default defineConfig({
 
   /* Retry on CI only */
   //retries: process.env.CI ? 2 : 0,
- // retries: 1, // retry once before marking as failed
+  // retries: 1, // retry once before marking as failed
 
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
@@ -41,12 +41,15 @@ export default defineConfig({
   ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-   //globalSetup: require.resolve('./globalsetup.ts'), // Path to your global setup file
+  //globalSetup: require.resolve('./globalsetup.ts'), // Path to your global setup file
 
   use: {
-  //  storageState: 'storageState.json', // This applies to all tests
+    //  storageState: 'storageState.json', // This applies to all tests
     screenshot: 'only-on-failure', // Automatically take screenshot on test failure
 
+    headless: true,
+    userAgent:
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
 
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
@@ -58,9 +61,9 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-       name: 'chromium',
+      name: 'chromium',
       use: { browserName: 'chromium' },
-     // testMatch: ['**/tests/!(No_Activity).spec.ts'], // all tests except inactivity
+      // testMatch: ['**/tests/!(No_Activity).spec.ts'], // all tests except inactivity
 
 
     },
