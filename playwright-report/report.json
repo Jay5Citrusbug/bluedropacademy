@@ -93,7 +93,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 37690,
+                      "duration": 45015,
                       "errors": [],
                       "stdout": [
                         {
@@ -199,7 +199,7 @@
                           "text": "Starting to fill personal information form...\n"
                         },
                         {
-                          "text": "Filling name: Clinton\n"
+                          "text": "Filling name: Archie\n"
                         },
                         {
                           "text": "Selecting gender: זכר 👨\n"
@@ -225,7 +225,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-02-05T06:09:58.185Z",
+                      "startTime": "2026-02-24T10:02:57.903Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -254,22 +254,22 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9236,
+                      "duration": 9507,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "💬 Waiting for initial bot message...\n"
                         },
                         {
-                          "text": "📨 Bot message received: \"הי Clinton,\nמוכן לעוד הרפתקה של למידה? מה בא לך שנחקור הפעם? 🧭✨\nהדמיון שלך הוא הכיוון שלנו 🚀\"\n"
+                          "text": "📨 Bot message received: \"הי Archie,\nיש לי תחושה שהיום נגלה דברים מעניינים יחד! במה נתחיל? 🤔🔎\nכל רעיון, שאלה או מחשבה – אני כאן בשביל זה.\"\n"
                         },
                         {
-                          "text": "✅ Bot message contains expected name: \"Clinton\"\n"
+                          "text": "✅ Bot message contains expected name: \"Archie\"\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-02-05T06:10:36.531Z",
+                      "startTime": "2026-02-24T10:03:43.451Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -298,7 +298,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 174,
+                      "duration": 264,
                       "errors": [],
                       "stdout": [
                         {
@@ -307,7 +307,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-02-05T06:10:45.773Z",
+                      "startTime": "2026-02-24T10:03:52.997Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -336,11 +336,11 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 230,
+                      "duration": 439,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "💬 Typing message: איך להכין Peach And Papaya Tart?\n    בנוסף:\n    1. טעויות נפוצות בהכנה\n    2. שדרוגים וגרסה בריאה יותר\n    \n    תסביר שלב אחר שלב עם טיפים.\n"
+                          "text": "💬 Typing message: ספר לי בהרחבה על Mayotte.\n    בנוסף:\n    1. תרבות והיסטוריה\n    2. אתגרים כלכליים וחברתיים\n    \n    סקירה מפורטת עם כותרות.\n"
                         },
                         {
                           "text": "✅ Verifying Submit button is enabled...\n"
@@ -351,7 +351,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-02-05T06:10:45.956Z",
+                      "startTime": "2026-02-24T10:03:53.274Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -371,7 +371,12 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "BotResponse",
+                      "description": "פיקסל: הריבוע הקטן ששולט בכל המסך שלך 🧊✨\nתדמיין שכל מסך שאתה מסתכל עליו הוא פסיפס ענק 🧩 – כל תמונה, סרטון או משחק מורכבים ממלא ריבועים זעירים. הריבוע הזה נקרא pixel 🧊. השאלה הקטנה: אם היית מתקרב אינסוף לתמונה במסך, באיזה שלב היא תתפרק לריבועים ברורים לגמרי? 🤔\nפיקסל הוא יחידת התצוגה הכי בסיסית במסך 💡. כל פיקסל הוא נקודה אחת בתמונה הדיגיטלית. כשמחברים מיליונים כאלה, נוצרת תמונה חלקה לעין 👀.\n\n1. איך זה עובד? 🛠️\nבמסך טיפוסי (LCD, LED, OLED) כל פיקסל מורכב משלושה תתי־פיקסלים: אדום, ירוק, כחול – RGB 🌈.\nלכל אחד מהם אפשר לתת ערך בהירוּת, למשל בין 0 ל־255 🔢.\n\nאם שלושתם 0 → הפיקסל כמעט שחור ⚫\nאם שלושתם 255 → לבן ⚪\nאם רק האדום גבוה → אדום חזק ❤️\nשילובים שונים → כל הצבעים שאתה מכיר 🎨\n\nכרטיס המסך מחשב איזה צבע צריך כל פיקסל לקבל בכל רגע, ושולח למסך \"מפה\" של צבעים – זו בעצם התמונה 🖼️. המסך מרענן את הפיקסלים עשרות או מאות פעמים בשנייה (60Hz, 120Hz וכו’) 🔁.\n\n2. השוואה לפתרונות דומים 🆚\n🔹 וקטור (Vector Graphics) – במקום פיקסלים, התמונה מתוארת כקווים, עקומות ומשוואות 📐.\nכשמגדילים לוגו וקטורי – הוא נשאר חד, כי המתמטיקה מתעדכנת 📈.\nכשמגדילים תמונת פיקסלים – היא \"מתפצפצת\", רואים ריבועים 🧱 (זה ה\"פיקסלציה\").\n🔹 DPI / PPI – מדדים של צפיפות פיקסלים:\n\nPPI – כמה פיקסלים לאינץ’ במסך 📺\nDPI – כמה נקודות דיו לאינץ’ במדפסת 🖨️\nככל שהצפיפות גבוהה יותר → התמונה נראית חדה יותר, כי הפיקסלים קטנים וצפופים 🔍.\n\n🔹 תמונת רסטר (Bitmap, כמו PNG/JPEG) – זוהי פשוט רשת של פיקסלים עם צבעים.\nכל עיבוד תמונה, פילטר, טשטוש או חידוד – הם פעולות על פיקסלים בודדים או קבוצות שלהם 🧪.\n\n🎁 בונוס קטן: בעין שלך יש תאים שרגישים לאדום, ירוק וכחול – בדיוק כמו RGB 👁️. המסך \"משחק\" עם התאים האלה כדי ליצור אשליה של כל הצבעים. קצת כמו קוסם דיגיטלי על הסטרואידים 🎩✨.\nאתה עכשיו יודע לדבר בפיקסלים – שזה בעצם לדבר בשפה הסודית של המסכים שלך 🚀.על איזה טכנולוגיית מסך הכי מעניין אותי להעמיק – LCD, OLED או מיקרו LED?  \nהאם אני רוצה להבין גם איך דחיסת תמונות (JPEG/PNG) מנצלת את רעיון הפיקסלים?"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
@@ -379,41 +384,39 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "interrupted",
-                      "duration": 1959,
-                      "error": {
-                        "message": "Error: browser.newContext: Target page, context or browser has been closed",
-                        "stack": "Error: browser.newContext: Target page, context or browser has been closed"
-                      },
-                      "errors": [
-                        {
-                          "message": "Error: browser.newContext: Target page, context or browser has been closed"
-                        },
-                        {
-                          "location": {
-                            "file": "D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts",
-                            "column": 5,
-                            "line": 20
-                          },
-                          "message": "Error: browserContext.close: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 18 |\u001b[39m\n \u001b[90m 19 |\u001b[39m   test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Automation\\Playwright\\Bluedrop_academy\\tests\\Chatbot.spec.ts:20:5\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 38579,
+                      "errors": [],
                       "stdout": [
                         {
-                          "text": "💬 Submitting query: \"ספר לי בהרחבה על Turkmenistan.\n    בנוסף:\n    1. תרבות והיסטוריה\n    2. אתגרים כלכליים וחברתיים\n    \n    סקירה מפורטת עם כותרות.\"\n"
+                          "text": "💬 Submitting query: \"תסביר מה זה pixel בטכנולוגיה.\n    בנוסף:\n    1. איך זה עובד?\n    2. השוואה לפתרונות דומים\n    \n    תשובה ארוכה עם דוגמאות.\"\n"
                         },
                         {
                           "text": "🕐 Waiting for first character of bot response...\n"
+                        },
+                        {
+                          "text": "⏳ Time to first character: 4.56s\n"
+                        },
+                        {
+                          "text": "✅ Time to full response: 38.17s\n"
+                        },
+                        {
+                          "text": "🤖 Bot response: \"פיקסל: הריבוע הקטן ששולט בכל המסך שלך 🧊✨\nתדמיין שכל מסך שאתה מסתכל עליו הוא פסיפס ענק 🧩 – כל תמונה, סרטון או משחק מורכבים ממלא ריבועים זעירים. הריבוע הזה נקרא pixel 🧊. השאלה הקטנה: אם היית מתקרב אינסוף לתמונה במסך, באיזה שלב היא תתפרק לריבועים ברורים לגמרי? 🤔\nפיקסל הוא יחידת התצוגה הכי בסיסית במסך 💡. כל פיקסל הוא נקודה אחת בתמונה הדיגיטלית. כשמחברים מיליונים כאלה, נוצרת תמונה חלקה לעין 👀.\n\n1. איך זה עובד? 🛠️\nבמסך טיפוסי (LCD, LED, OLED) כל פיקסל מורכב משלושה תתי־פיקסלים: אדום, ירוק, כחול – RGB 🌈.\nלכל אחד מהם אפשר לתת ערך בהירוּת, למשל בין 0 ל־255 🔢.\n\nאם שלושתם 0 → הפיקסל כמעט שחור ⚫\nאם שלושתם 255 → לבן ⚪\nאם רק האדום גבוה → אדום חזק ❤️\nשילובים שונים → כל הצבעים שאתה מכיר 🎨\n\nכרטיס המסך מחשב איזה צבע צריך כל פיקסל לקבל בכל רגע, ושולח למסך \"מפה\" של צבעים – זו בעצם התמונה 🖼️. המסך מרענן את הפיקסלים עשרות או מאות פעמים בשנייה (60Hz, 120Hz וכו’) 🔁.\n\n2. השוואה לפתרונות דומים 🆚\n🔹 וקטור (Vector Graphics) – במקום פיקסלים, התמונה מתוארת כקווים, עקומות ומשוואות 📐.\nכשמגדילים לוגו וקטורי – הוא נשאר חד, כי המתמטיקה מתעדכנת 📈.\nכשמגדילים תמונת פיקסלים – היא \"מתפצפצת\", רואים ריבועים 🧱 (זה ה\"פיקסלציה\").\n🔹 DPI / PPI – מדדים של צפיפות פיקסלים:\n\nPPI – כמה פיקסלים לאינץ’ במסך 📺\nDPI – כמה נקודות דיו לאינץ’ במדפסת 🖨️\nככל שהצפיפות גבוהה יותר → התמונה נראית חדה יותר, כי הפיקסלים קטנים וצפופים 🔍.\n\n🔹 תמונת רסטר (Bitmap, כמו PNG/JPEG) – זוהי פשוט רשת של פיקסלים עם צבעים.\nכל עיבוד תמונה, פילטר, טשטוש או חידוד – הם פעולות על פיקסלים בודדים או קבוצות שלהם 🧪.\n\n🎁 בונוס קטן: בעין שלך יש תאים שרגישים לאדום, ירוק וכחול – בדיוק כמו RGB 👁️. המסך \"משחק\" עם התאים האלה כדי ליצור אשליה של כל הצבעים. קצת כמו קוסם דיגיטלי על הסטרואידים 🎩✨.\nאתה עכשיו יודע לדבר בפיקסלים – שזה בעצם לדבר בשפה הסודית של המסכים שלך 🚀.על איזה טכנולוגיית מסך הכי מעניין אותי להעמיק – LCD, OLED או מיקרו LED?  \nהאם אני רוצה להבין גם איך דחיסת תמונות (JPEG/PNG) מנצלת את רעיון הפיקסלים?\"\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-02-05T06:10:46.191Z",
-                      "annotations": [],
+                      "startTime": "2026-02-24T10:03:53.723Z",
+                      "annotations": [
+                        {
+                          "type": "BotResponse",
+                          "description": "פיקסל: הריבוע הקטן ששולט בכל המסך שלך 🧊✨\nתדמיין שכל מסך שאתה מסתכל עליו הוא פסיפס ענק 🧩 – כל תמונה, סרטון או משחק מורכבים ממלא ריבועים זעירים. הריבוע הזה נקרא pixel 🧊. השאלה הקטנה: אם היית מתקרב אינסוף לתמונה במסך, באיזה שלב היא תתפרק לריבועים ברורים לגמרי? 🤔\nפיקסל הוא יחידת התצוגה הכי בסיסית במסך 💡. כל פיקסל הוא נקודה אחת בתמונה הדיגיטלית. כשמחברים מיליונים כאלה, נוצרת תמונה חלקה לעין 👀.\n\n1. איך זה עובד? 🛠️\nבמסך טיפוסי (LCD, LED, OLED) כל פיקסל מורכב משלושה תתי־פיקסלים: אדום, ירוק, כחול – RGB 🌈.\nלכל אחד מהם אפשר לתת ערך בהירוּת, למשל בין 0 ל־255 🔢.\n\nאם שלושתם 0 → הפיקסל כמעט שחור ⚫\nאם שלושתם 255 → לבן ⚪\nאם רק האדום גבוה → אדום חזק ❤️\nשילובים שונים → כל הצבעים שאתה מכיר 🎨\n\nכרטיס המסך מחשב איזה צבע צריך כל פיקסל לקבל בכל רגע, ושולח למסך \"מפה\" של צבעים – זו בעצם התמונה 🖼️. המסך מרענן את הפיקסלים עשרות או מאות פעמים בשנייה (60Hz, 120Hz וכו’) 🔁.\n\n2. השוואה לפתרונות דומים 🆚\n🔹 וקטור (Vector Graphics) – במקום פיקסלים, התמונה מתוארת כקווים, עקומות ומשוואות 📐.\nכשמגדילים לוגו וקטורי – הוא נשאר חד, כי המתמטיקה מתעדכנת 📈.\nכשמגדילים תמונת פיקסלים – היא \"מתפצפצת\", רואים ריבועים 🧱 (זה ה\"פיקסלציה\").\n🔹 DPI / PPI – מדדים של צפיפות פיקסלים:\n\nPPI – כמה פיקסלים לאינץ’ במסך 📺\nDPI – כמה נקודות דיו לאינץ’ במדפסת 🖨️\nככל שהצפיפות גבוהה יותר → התמונה נראית חדה יותר, כי הפיקסלים קטנים וצפופים 🔍.\n\n🔹 תמונת רסטר (Bitmap, כמו PNG/JPEG) – זוהי פשוט רשת של פיקסלים עם צבעים.\nכל עיבוד תמונה, פילטר, טשטוש או חידוד – הם פעולות על פיקסלים בודדים או קבוצות שלהם 🧪.\n\n🎁 בונוס קטן: בעין שלך יש תאים שרגישים לאדום, ירוק וכחול – בדיוק כמו RGB 👁️. המסך \"משחק\" עם התאים האלה כדי ליצור אשליה של כל הצבעים. קצת כמו קוסם דיגיטלי על הסטרואידים 🎩✨.\nאתה עכשיו יודע לדבר בפיקסלים – שזה בעצם לדבר בשפה הסודית של המסכים שלך 🚀.על איזה טכנולוגיית מסך הכי מעניין אותי להעמיק – LCD, OLED או מיקרו LED?  \nהאם אני רוצה להבין גם איך דחיסת תמונות (JPEG/PNG) מנצלת את רעיון הפיקסלים?"
+                        }
+                      ],
                       "attachments": []
                     }
                   ],
-                  "status": "skipped"
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-65413aac69216e0b1a8c",
@@ -432,8 +435,29 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 433,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔽 Checking scroll button visibility...\n"
+                        },
+                        {
+                          "text": "✅ Scroll button visible. Scrolling to bottom...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T10:04:32.315Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-8b259adfc2a0bcbdf89f",
@@ -452,8 +476,26 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1434,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "👍 Clicking Like button...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T10:04:32.763Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-b2eca2bdee340bef34a3",
@@ -472,8 +514,26 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1291,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "👎 Clicking Dislike button...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T10:04:34.208Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-fdb6ef78c2e7524cfe75",
@@ -492,8 +552,26 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 508,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "📋 Clicking Copy button...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T10:04:35.508Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-88dbaaf8e57f797c1639",
@@ -508,12 +586,46 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [],
+                  "annotations": [
+                    {
+                      "type": "info",
+                      "description": "Bot response: **הפיקס"
+                    }
+                  ],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5167,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔘 Clicking Predefined button...\n"
+                        },
+                        {
+                          "text": "🕐 Waiting for bot response to begin...\n"
+                        },
+                        {
+                          "text": "✅ Bot response received: \"**הפיקס\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T10:04:36.029Z",
+                      "annotations": [
+                        {
+                          "type": "info",
+                          "description": "Bot response: **הפיקס"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-d636973f51dd28beb538",
@@ -532,8 +644,35 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 18331,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                        },
+                        {
+                          "text": "💬 Waiting for initial bot message...\n"
+                        },
+                        {
+                          "text": "📨 Bot message received: \"הי Archie,\nאיזה כיף שחזרת! יש לך שאלה מעניינת בשבילי היום? 🤩\nאני כאן לכל דבר שתרצה לדבר עליו או ללמוד יחד! 💭\"\n"
+                        },
+                        {
+                          "text": "✅ Bot message contains expected name: \"Archie\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T10:04:41.223Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-4e5983dfa70fc22eed81",
@@ -552,8 +691,41 @@
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9642,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔁 Starting a new chatbot session...\n"
+                        },
+                        {
+                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                        },
+                        {
+                          "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                        },
+                        {
+                          "text": "💬 Waiting for initial bot message...\n"
+                        },
+                        {
+                          "text": "📨 Bot message received: \"הי Archie,\nאיזה כיף שחזרת! יש לך שאלה מעניינת בשבילי היום? 🤩\nאני כאן לכל דבר שתרצה לדבר עליו או ללמוד יחד! 💭\"\n"
+                        },
+                        {
+                          "text": "✅ Bot message contains expected name: \"Archie\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T10:04:59.579Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-49ec378fc073adb83bd7",
@@ -567,13 +739,40 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 120000,
+                  "timeout": 610000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
-                  "status": "skipped"
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 595588,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "⏳ Waiting for inactivity popup to appear...\n"
+                        },
+                        {
+                          "text": "⏳ Waiting in production with timeout: 610s\n"
+                        },
+                        {
+                          "text": "✅ Inactivity popup is visible.\n"
+                        },
+                        {
+                          "text": "🔄 Clicked \"Continue Chat\" button.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T10:05:09.240Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "23335bb06d3df52af178-24718841e90bdca1eeea",
@@ -588,11 +787,35 @@
               "tests": [
                 {
                   "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Skipping in production environment"
+                    }
+                  ],
+                  "expectedStatus": "skipped",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [],
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 478,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-24T10:15:04.883Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "Skipping in production environment"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
                   "status": "skipped"
                 }
               ],
@@ -636,8 +859,53 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 15075,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "Navigating to the admin page...\n"
+                            },
+                            {
+                              "text": "Navigating to the chatbot page...\n"
+                            },
+                            {
+                              "text": "Successfully navigated to chatbot login page.\n"
+                            },
+                            {
+                              "text": "Clicking \"Login with Email\" button...\n"
+                            },
+                            {
+                              "text": "Filling in email: paras.citrusbug@gmail.com\n"
+                            },
+                            {
+                              "text": "Filling in password...\n"
+                            },
+                            {
+                              "text": "Clicking \"Submit\" to log in...\n"
+                            },
+                            {
+                              "text": "Waiting for page navigation after login...\n"
+                            },
+                            {
+                              "text": "✅ TC_15: Open Hamburger Menu\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T10:15:05.862Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-fc8185bedbbc220639a5",
@@ -656,8 +924,29 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 1578,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_20: Load More button functionality\n"
+                            },
+                            {
+                              "text": "📜 Clicking Load More button...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T10:15:24.060Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-b7f57ec28ab5670b83d2",
@@ -676,8 +965,29 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2448,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_21: No result in chat history\n"
+                            },
+                            {
+                              "text": "🔎 Using random search text: \"vallum in\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T10:15:25.653Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-eb9d220291fc36e5bede",
@@ -696,8 +1006,29 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 332,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_22: Close Hamburger Menu\n"
+                            },
+                            {
+                              "text": "❌ Closing hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T10:15:28.124Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-c14a7b3680f8a9b403ae",
@@ -716,8 +1047,41 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 9368,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_19: Start new session using \"שיחה חדשה\"\n"
+                            },
+                            {
+                              "text": "🔁 Creating new session from hamburger menu...\n"
+                            },
+                            {
+                              "text": "🔄 Reloading and verifying bot session is cleared...\n"
+                            },
+                            {
+                              "text": "💬 Waiting for initial bot message...\n"
+                            },
+                            {
+                              "text": "📨 Bot message received: \"הי Archie,\nמוכן לעוד הרפתקה של למידה? מה בא לך שנחקור הפעם? 🧭✨\nהדמיון שלך הוא הכיוון שלנו 🚀\"\n"
+                            },
+                            {
+                              "text": "✅ Bot message contains expected name: \"Archie\"\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T10:15:28.463Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-0a0e12da784e161efa2b",
@@ -736,8 +1100,29 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 2962,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_20: Edit and save changes in chat history\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T10:15:37.840Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-61144c9d99129cbecb8b",
@@ -756,8 +1141,29 @@
                       "expectedStatus": "passed",
                       "projectId": "chromium",
                       "projectName": "chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 4124,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "✅ TC_21: Continue Chat Functionality\n"
+                            },
+                            {
+                              "text": "📂 Opening hamburger menu...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-02-24T10:15:40.815Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "b55e7195d3b5536049bb-dcbd437c45ee70f23a65",
@@ -784,11 +1190,35 @@
           "tests": [
             {
               "timeout": 120000,
-              "annotations": [],
-              "expectedStatus": "passed",
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Skipping in production environment"
+                }
+              ],
+              "expectedStatus": "skipped",
               "projectId": "chromium",
               "projectName": "chromium",
-              "results": [],
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 5,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-02-24T10:15:45.199Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Skipping in production environment"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
               "status": "skipped"
             }
           ],
@@ -802,10 +1232,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-05T06:09:55.744Z",
-    "duration": 52733.086,
-    "expected": 4,
-    "skipped": 18,
+    "startTime": "2026-02-24T10:02:54.470Z",
+    "duration": 771511.562,
+    "expected": 20,
+    "skipped": 2,
     "unexpected": 0,
     "flaky": 0
   }
