@@ -129,8 +129,8 @@ jobs:
           SKIPPED: ${{ steps.summary.outputs.skipped }}
           GITHUB_WORKSPACE: ${{ github.workspace }}
 
-      - name: Send Discord notification for Staging
-        if: always()
+      - name: Send Discord Success notification for Staging
+        if: always() && steps.summary.outputs.failed == 0
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           REPORT_URL: https://${{ secrets.S3_BUCKET_NAME }}.s3.${{ secrets.S3_REGION }}.amazonaws.com/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html
@@ -146,7 +146,7 @@ jobs:
             \"embeds\": [{
               \"title\": \"🎭 Bluedrop Academy - Staging Playwright Test Results\",
               \"description\": \"**Total:** ${TOTAL}\\n✅ Passed: ${PASSED}\\n❌ Failed: ${FAILED}\\n⚪ Skipped: ${SKIPPED}\",
-              \"color\": $(if [ ${FAILED} -gt 0 ]; then echo 15158332; else echo 3066993; fi),
+              \"color\": 3066993,
               \"fields\": [{
                 \"name\": \"📎 View Report\",
                 \"value\": \"${REPORT_URL}\"
@@ -155,6 +155,18 @@ jobs:
             }]
           }" \
           $DISCORD_WEBHOOK_URL
+
+      - name: Send Discord Failure notification for Staging (Tag User)
+        if: always() && steps.summary.outputs.failed > 0
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          REPORT_URL: https://${{ secrets.S3_BUCKET_NAME }}.s3.${{ secrets.S3_REGION }}.amazonaws.com/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html
+          TOTAL: ${{ steps.summary.outputs.total }}
+          PASSED: ${{ steps.summary.outputs.passed }}
+          FAILED: ${{ steps.summary.outputs.failed }}
+          SKIPPED: ${{ steps.summary.outputs.skipped }}
+          ENVIRONMENT: ${{ env.ENVIRONMENT }}
+        run: node .github/scripts/notify_discord.js
 
   run-tests-production:
     needs: run-tests-staging
@@ -274,8 +286,8 @@ jobs:
           GITHUB_WORKSPACE: ${{ github.workspace }}
 
           # # ✅ Discord notification
-      - name: Send Discord notification for Production
-        if: always()
+      - name: Send Discord Success notification for Production
+        if: always() && steps.summary.outputs.failed == 0
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           REPORT_URL: https://${{ secrets.S3_BUCKET_NAME }}.s3.${{ secrets.S3_REGION }}.amazonaws.com/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html
@@ -291,7 +303,7 @@ jobs:
             \"embeds\": [{
               \"title\": \"🎭 Bluedrop Academy - Production Playwright Test Results\",
               \"description\": \"**Total:** ${TOTAL}\\n✅ Passed: ${PASSED}\\n❌ Failed: ${FAILED}\\n⚪ Skipped: ${SKIPPED}\",
-              \"color\": $(if [ ${FAILED} -gt 0 ]; then echo 15158332; else echo 3066993; fi),
+              \"color\": 3066993,
               \"fields\": [{
                 \"name\": \"📎 View Report\",
                 \"value\": \"${REPORT_URL}\"
@@ -300,3 +312,15 @@ jobs:
             }]
           }" \
           $DISCORD_WEBHOOK_URL
+
+      - name: Send Discord Failure notification for Production (Tag User)
+        if: always() && steps.summary.outputs.failed > 0
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          REPORT_URL: https://${{ secrets.S3_BUCKET_NAME }}.s3.${{ secrets.S3_REGION }}.amazonaws.com/${{ env.ENVIRONMENT }}/${{ steps.date.outputs.date }}/report.html
+          TOTAL: ${{ steps.summary.outputs.total }}
+          PASSED: ${{ steps.summary.outputs.passed }}
+          FAILED: ${{ steps.summary.outputs.failed }}
+          SKIPPED: ${{ steps.summary.outputs.skipped }}
+          ENVIRONMENT: ${{ env.ENVIRONMENT }}
+        run: node .github/scripts/notify_discord.js
